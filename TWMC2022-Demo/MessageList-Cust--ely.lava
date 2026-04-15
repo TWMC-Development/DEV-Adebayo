@@ -1,0 +1,255 @@
+{% assign today =  'Now' | Date:'M/d/yyyy'  %}
+
+{% assign slug = '' %}
+{% assign slugS = '' %}
+{% assign slugM = '' %}
+{% assign series = '' %}
+{% assign messageFirst = '' %}
+{% assign itemId = '' %}
+{% assign message = '' %}
+
+{% contentchannelitem where:'ContentChannelId == 16 && StartDateTime < "{{today}}"' %}
+{% for item in contentchannelitemItems %}
+
+    {% assign slug = item.PrimarySlug %}
+    {% assign slugS = PageParameter.slugS %}
+    {% assign slugM = PageParameter.slugM %}
+
+    {% if slug == slugS %}
+        {% assign series = item %}
+    {% endif %}
+
+    {% for messages in item.ChildItems %}
+        {% assign slugMessages = messages.ChildContentChannelItem.PrimarySlug %}
+
+        {% if slugMessages == slugM %}
+            {% assign messageFirst = messages.ChildContentChannelItem %}
+        {% endif %}
+
+    {% endfor %}
+
+
+{% endfor %}
+{% endcontentchannelitem %}
+
+
+{% if messageFirst == '' %}
+    {% if series.Id and series.Id != '' %}
+    {% sql return:'newestItem' %}
+    Select top(1) FirstChild.Id
+    from ContentChannelItem i
+    inner join AttributeValue AvContentFilter on AvContentFilter.EntityId = i.id and AvContentFilter.AttributeId = 15590
+        outer apply (select top(1) iChild.StartDateTime, iChild.Guid, ichild.Id
+            from  ContentChannelItemAssociation a
+            inner join ContentChannelItem iChild on iChild.id = a.ChildContentChannelItemId
+            where a.ContentChannelItemId = i.id
+            and cast(iChild.StartDateTime as date) < getdate()
+            order by iChild.StartDateTime desc) as FirstChild
+    where i.Id = {{series.Id}}
+    and FirstChild.StartDateTime is not null
+    order by i.StartDateTime desc
+    {% endsql %}
+    {% endif %}
+    {% for item in newestItem %}
+        {% assign itemId = item.Id %}
+    {% endfor %}
+    {% if itemId and itemId != '' %}
+    {% contentchannelitem id:'{{ itemId }}' %}
+
+		{% assign messageFirst = contentchannelitem  %}
+
+    {% endcontentchannelitem %}
+    {% endif %}
+{% endif %}
+
+
+{% if messageFirst != ''  %}
+<!-- Latest Message -->
+<section id="traditional-latest-message" class="twmc-latest-message" >
+    {% assign message =  messageFirst %}
+	{{ message.Title | Prepend:'Message - ' | SetPageTitle }}
+
+    <div class="twmc-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="twmc-flex-container--2-col">
+                    {% assign messageSeries = message.ParentItems | First %}
+                    {% assign messageSeriesSlug = messageSeries.ContentChannelItem.PrimarySlug %}
+
+                    <!-- Latest message description -->
+                    <div class="twmc-flex-item--2-col twmc-latest-message__description">
+                    <h3 class="twmc-h3 twmc-latest-message__serries-title">{{ messageSeries.ContentChannelItem.Title }}</h3>
+                    <h3 class="twmc-h3 twmc-latest-message__title"><a href="/series/{{ messageSeriesSlug }}/{{ message.PrimarySlug }}" referrerpolicy="origin">{{ message.Title }}</a></h3>
+                    <p class="twmc-p twmc-latest-message__details">
+                        <span class="twmc-latest-message__date">{{ message.StartDateTime | Date:'MMMM d, yyyy' }}</span> &verbar;
+                        {% assign speakerText = message | Attribute:'SpeakerText'%}
+                        {% if speakerText and speakerText != '' %}
+                            <span class="twmc-latest-message__speaker">{{speakerText}}</span>
+                        {% else %}
+                        {% assign messageSpeaker = message | Attribute:"Speaker",'object' %}
+                        {% if messageSpeaker %}
+                            <span class="twmc-latest-message__speaker">{[formalname personid:'{{messageSpeaker.Id}}']}</span>
+                        {% endif %}
+                        {% endif %}
+                    </p>
+
+                    {% assign messageVimeoId = message | Attribute:'VideoID','RawValue' %}
+                    {% assign messageVideoUrl = message | Attribute:'VideoLink','RawValue' | Remove:'download=1' %}
+                    {% assign messageAudioUrl = message | Attribute:'AudioLink','RawValue' %}
+                    {% assign itunesAudio = message.ContentChannel | Attribute:'iTunesAudioLink','RawValue' %}
+                    {% assign itunesVideo = message.ContentChannel | Attribute:'iTunesVideoLink','RawValue' %}
+
+                    <a href="{{ messageAudioUrl }}" class="twmc--btn twmc--btn--traditional"><i class="fas fa-headphones twmc-icon-listen"></i><span class="twmc-mlxs">Listen</span></a>
+
+                    {% if messageAudioUrl != "" %}<li class="message-media__listen"><a href="{{ messageAudioUrl }}" target="_blank"><i class="tw-listen"></i> Listen</a></li>{% endif %}
+
+                    {% assign files = message | Attribute:'Files','RawValue' %}
+
+                    {% attributematrix where:'Guid == "{{files}}"' %}
+                        {% for attributesItems in attributematrix.AttributeMatrixItems %}
+
+                            {% assign externallink = attributesItems | Attribute:'ExternalLink','RawValue' %}
+
+                            {% if externallink and externallink != '' %}
+                                <a href="{{externallink}}" class="twmc--btn twmc--btn--traditional"><span>{{ attributesItems | Attribute:'ButtonTitle' }}</span></a>
+                            {% else %}
+                                <a href="/GetFile.ashx?guid={{ attributesItems | Attribute:'File','RawValue' }}" class="twmc--btn twmc--btn--traditional"><span>{{ attributesItems | Attribute:'ButtonTitle' }}</span></a>
+                            {% endif %}
+
+                        {% endfor %}
+                    {% endattributematrix %}
+
+                    </div>
+
+                    <!-- Latest message video -->
+                    <div class="twmc-flex-item--2-col twmc-latest-message__video">
+                        <div class='embed-container'>
+                            {% if messageVimeoId != "" %}
+                            <iframe src='https://player.vimeo.com/video/{{messageVimeoId}}?title=0&byline=0&portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            {% else %}
+                                {{ message | Attribute:'VideoLink' }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest Message -->
+
+<!-- Message list -->
+{% assign test = messageFirst.ParentItems | Last %}
+{% if series == null %}
+    {% assign series = test.ContentChannelItem %}
+{% endif %}
+
+<section class="twmc-connect">
+    <div class="twmc-container">
+        <div class="row">
+
+            <div class="col-sm-12 text-center">
+            <h2 class="twmc-h2 twmc-mblg">MESSAGES IN THIS SERIES</h2>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="twmc-flex-container--2-col-msg">
+                    {% contentchannelitem where:'Id == {{series.Id}}' %}
+                    {% for item in contentchannelitemItems %}
+                        {% assign childItems = item.ChildItems | Sort:'StartDateTime desc' %}
+                        {% for messages in childItems %}
+                            {% assign message = messages.ChildContentChannelItem %}
+
+                            {% if message.StartDateTime < today %}
+
+                                {% assign slugMessages = messages.ChildContentChannelItem.PrimarySlug %}
+                                {% assign current = 0 %}
+
+                                {% if slugMessages == slugM or slugMessages == slugS %}
+                                    {% assign current = 1 %}
+                                {% endif %}
+
+                                {% if current == 1 %}
+                                <div class="twmc-flex-item--2-col-msg twmc-message-list__card">
+                                    <h3 class="twmc-h3 twmc-latest-message__title--dark"><a href="/series/{{series.PrimarySlug}}/{{ message.PrimarySlug }}" referrerpolicy="origin">{{ message.Title }}</a></h3>
+                                    <p class="twmc-p twmc-latest-message__details--dark">
+                                        <span class="twmc-latest-message__date">{{ message.StartDateTime | Date:'MMMM d, yyyy'}}</span> &verbar;
+                                        {% assign speakerText = message | Attribute:'SpeakerText'%}
+							            {% if speakerText and speakerText != '' %}
+                                        <span class="twmc-latest-message__speaker">{{speakerText}}</span>
+                                        {% else %}
+							            {% assign messageSpeaker = message | Attribute:"Speaker",'object' %}
+							            {% if messageSpeaker %}
+                                            <span class="twmc-latest-message__speaker">{[formalname personid:'{{messageSpeaker.Id}}']}</span>
+							            {% endif %}
+							        {% endif %}
+                                    </p>
+                                    <a href="/series/{{series.PrimarySlug}}/{{ message.PrimarySlug }}" class="twmc--btn twmc--btn--traditional">View Now</a>
+                                </div>
+                                {% else %}
+                                <div class="twmc-flex-item--2-col-msg twmc-message-list__card">
+                                    <h3 class="twmc-h3 twmc-latest-message__title--dark"><a href="/series/{{series.PrimarySlug}}/{{ message.PrimarySlug }}" referrerpolicy="origin">{{ message.Title }}</a></h3>
+                                    <p class="twmc-p twmc-latest-message__details--dark">
+                                        <span class="twmc-latest-message__date">{{ message.StartDateTime | Date:'MMMM d, yyyy'}}</span> &verbar;
+                                        {% assign speakerText = message | Attribute:'SpeakerText'%}
+							            {% if speakerText and speakerText != '' %}
+                                        <span class="twmc-latest-message__speaker">{{speakerText}}</span>
+                                        {% else %}
+							            {% assign messageSpeaker = message | Attribute:"Speaker",'object' %}
+							            {% if messageSpeaker %}
+                                            <span class="twmc-latest-message__speaker">{[formalname personid:'{{messageSpeaker.Id}}']}</span>
+							            {% endif %}
+							        {% endif %}
+                                    </p>
+                                    <a href="/series/{{series.PrimarySlug}}/{{ message.PrimarySlug }}" class="twmc--btn twmc--btn--traditional">View Now</a>
+                                </div>
+                                {% endif %}
+
+                        {% endif %}
+
+                        {% endfor %}
+                    {% endfor %}
+                {% endcontentchannelitem %}
+
+                {% assign contentFilter =  series | Attribute:"ContentFilter","Object" %}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Archive -->
+        <div class="row twmc-mtlg">
+            <div class="col-sm-12">
+            <h2 class="twmc-h2 twmc-mbs">Archive</h2>
+            </div>
+
+            <div class="col-sm-12">
+            <div class="twmc-display-inline">
+                {% if contentFilter.Value == null %}
+                    {% for value in contentFilter %}
+                        <a href="/messages/{{ value.Value }}" class="twmc--btn twmc--btn--traditional twmc-mbxs">{{ value.Value }}</a>
+                    {% endfor %}
+                {% else %}
+                    <a href="/messages/{{ contentFilter.Value }}" class="twmc--btn twmc--btn--traditional twmc-mbxs">{{ contentFilter.Value }}</a>
+                {% endif %}
+
+
+                <a href="https://people.thewoodlandsmethodist.org/series/searching-for-christmas-traditional/searching-for-the-obscure" class="twmc--btn twmc--btn--traditional twmc-mbxs">Traditional</a>
+                <a href="https://people.thewoodlandsmethodist.org/series/searching-for-christmas-traditional/searching-for-the-obscure" class="twmc--btn twmc--btn--traditional twmc-mbxs">Chapel</a>
+                <a href="https://people.thewoodlandsmethodist.org/series/searching-for-christmas-traditional/searching-for-the-obscure" class="twmc--btn twmc--btn--traditional twmc-mbxs">Harvest</a>
+                <a href="https://people.thewoodlandsmethodist.org/series/searching-for-christmas-traditional/searching-for-the-obscure" class="twmc--btn twmc--btn--traditional twmc-mbxs">Loft</a>
+                <a href="https://people.thewoodlandsmethodist.org/series/searching-for-christmas-traditional/searching-for-the-obscure" class="twmc--btn twmc--btn--traditional twmc-mbxs">Woodforest</a>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- End of Message List -->
+
+{% else %}
+
+<div class="alert alert-warning">Something went wrong. <a href="https://thewoodlandsumc.org/messages">Back to messages</a></div>
+{% endif %}
+

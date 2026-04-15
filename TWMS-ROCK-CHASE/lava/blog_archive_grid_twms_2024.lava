@@ -1,0 +1,62 @@
+<!-- Blog -->
+
+
+{% assign itemCount = Items | Size %}
+{% assign campusCount = itemCount | Times:4 %}
+
+<section class="py-0">
+    <div class="container-fluid"><div class="row"><div class="col-sm-10 col-sm-offset-1">
+      <div class="twmcblog__flex-container-3col">
+        <!-- cards
+            <div class="twmcblog__flex-item-4col">
+              <div class="twmc-home-blog__info-title">
+                <h2 class="twmc-h2">Recent Blog</h2>
+              </div>
+              <div class="twmc-home-blog__info-text">
+                <p class="twmc-p">Read our most recent blogs and find message summaries, up-to-date information on the latest events around the church and reflections on personal faith journeys from our TWMC staff.</p>
+              </div>
+            <div class="twmc-home-blog__info-button">
+                <a href="/blog" class="twmc--btn twmc--btn--traditional" target="_blank" referrerpolicy="origin">Find more</a>
+            </div>
+            </div>
+          -->
+
+                        {% assign itemCount = Items | Size %}
+                        {% assign campusCount = itemCount | Times:4 %}
+
+                        {% if itemCount > 0 %}{% for item in Items %}
+
+                        {% assign image = item | Attribute:'Image','object' %}
+                        {% assign author = item | Attribute:'Author','object' %}
+
+                        <div class="twmcblog__flex-item-3col twmc-card">
+                            <a href="/twmsblog-test/{{item.PrimarySlug}}">
+                              <!-- card img -->
+                              <img src="/GetImage.ashx?id={{ image.Id }}&Width=600" alt="" class="twmc-card--img twmcblog__card-img">
+
+                              <!-- card body -->
+                              <div class="twmc-card-body">
+                                <h3 class="twmcblog__card-title">{{ item.Title }}</h3>
+                                <p class="twmcblog__card-text">{{ item | Attribute:'Excerpt' | StripHtml | Truncate:360,'...' }}</p>
+
+                                <!-- card info -->
+                                <div class="twmcblog__card-info-wrapper">
+                                  <img src="/GetImage.ashx?id={{ author.PhotoId }}&Width=200" alt="" class="twmcblog__card-info-img">
+                                  <div class="twmcblog__card-info">
+                                    <p class="twmcblog__card-info-text"><strong>{{ author.TitleValue.Value }} {{ author.FullName }}</strong></p>
+                                    <p class="twmcblog__card-info-text">{{ item.StartDateTime | Date:'MMMM d, yyyy'   }}</p>
+                                    <p class="twmcblog__card-info-text">{{ item.Content | ReadTime }}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+
+                          </div>
+
+                        {% endfor %}{% else %}<h3>There are no blog posts.</h3>{% endif %}
+
+
+                </div>
+
+    </div></div></div>
+</section>

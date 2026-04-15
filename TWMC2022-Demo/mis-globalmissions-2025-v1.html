@@ -1,0 +1,3136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Missions</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-main2023.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-navbar.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+    <script src="/js/twmc-counter.js"></script>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- Hero - Home Image -->
+    <style>
+      #twmc--globalmissions-hero {
+		  background-color: #7BA081;
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/MIS_Conference_FeatureBanner_BG.jpg");
+      }
+    </style>
+
+    <section id="twmc--globalmissions-hero" class="hero--img__align-center">
+      <div class="container-fluid hero--img-tagline-wrapper">
+        <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/MIS_Global+Missions+Trips+TEXT+overlay.png" alt="" class="img-responsive-center">
+        
+      </div>
+    </section>
+    <!-- End of Hero - Home Image-->
+
+    <!-- Content -->
+    <!-- Intro -->
+    <style>
+      #twmc-cta__mis-quiz {
+        /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, .15)), url("https://images.unsplash.com/photo-1530982011887-3cc11cc85693?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"); */
+        background-color: #6A8A6F;
+            background-image: linear-gradient(to bottom,rgba(106, 138, 111, 0.7), rgba(106, 138, 111, 0.7)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/natalia-blauth-5WNGdoxL8Vg-unsplash-lg.jpg");
+            background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: scroll;
+    
+        padding: 3rem 0;
+        text-align: center;
+      }
+      
+      .cta-h4 {
+        line-height: 1.4;
+      }
+    </style>
+
+    <section id="twmc-cta__mis-quiz" >
+      <div class="twmc-container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h4 class="twmc-h4 text-white mb-4 cta-h4">
+              One of the greatest ways we can share the gospel is to go to the places God&nbsp;sends us to be a tangible, physical expression of His love.
+            </h4>
+    
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    <!-- End of intro -->
+
+    <!-- Global Missions -->
+    <section id="twmc-globalmissions-mission" class="py-6">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="flex-container-2col">
+              
+
+             
+
+              <!-- Honduras: Men's and Women's Medical -->
+              <!-- <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container">
+                    <div class="embed-container"><iframe src="https://player.vimeo.com/video/870030023" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Honduras: Men's and Women's Medical (WGoReach)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>Jul 14&ndash;20, 2024</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>12:00 p.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Honduras</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,800 <i>(includes airfare, ground transportation, meals and lodging.)</i></span>
+                  </p>
+                  <p class="twmc-p mb-3">
+                    Partner with World Gospel Outreach (<a href="https://www.wgoreach.org/" class="a-missions25" target="_blank">wgoreach.org</a>) to meet the physical needs of some of the poorest people in Honduras.
+                  </p>
+                  <a href="#globalmissions-honduras-medical" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=4243" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Interested?</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=4795" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div> -->
+
+              <!-- Honduras: Women’s Medical Trip -->
+              <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container"><iframe src="https://player.vimeo.com/video/964840781" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Honduras: Women’s Medical Trip (WGoReach)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>February 4-8, 2025</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>8:00 a.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Honduras</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,600 <i>(includes airfare, ground transportation, meals, and lodging)</i></span>
+                  </p>
+                  <p class="twmc-p mb-3">Partner with World Gospel Outreach (<a href="https://www.wgoreach.org/" class="a-missions25" target="_blank">wgoreach.org</a>) to meet the physical needs of some of the poorest people in Honduras.</p>
+                  <a href="#globalmissions-honduras-women-medical" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=5097" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div>
+
+               <!-- Guatemala: Men's and Women's Trip (CASA Aleluya) -->
+              <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container">
+                    <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/casa-aleluya.jpg" alt="" class="img-responsive">
+                  </div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Guatemala: Men's and Women's Trip (Casa Aleluya)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>Jun 13-22, 2024</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>8:00 a.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Guatemala</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,800 <i>(includes airfare, ground transportation, meals, and lodging.)</i></span>
+                  </p>
+                  <p class="twmc-p mb-3">Love, encourage, and witness children and teens at an orphanage and work on construction projects. We are partnering with Casa Aleluya (<a  href="https://www.casaaleluya.org/" class="a-missions25" target="_blank">casaaleluya.org</a>).</p>
+                  <a href="#globalmissions-guatemala-casa" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=5381" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div>
+
+              <!-- Honduras: Men's Mission Trip -->
+              <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container"><iframe src="https://player.vimeo.com/video/964854106" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Honduras: Men's Mission Trip (Carpinteros para Cristo)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>March 20-23, 2025</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>12:00 p.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Honduras</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,650 <i>(includes airfare, ground transportation, meals and lodging)</i></span>
+                  </p>
+                  <!-- <p class="twmc-p mb-3">Partner with Carpinteros para Cristo (<a href="#" class="a-missions25" target="_blank">wgoreach.org</a>) to build houses for those families in need.</p> -->
+                  <p class="twmc-p mb-3">Partner with Carpinteros para Cristo to build houses for those families in need.</p>
+                  <a href="#globalmissions-honduras-men" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <!-- <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=4243" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Interested?</a> -->
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=5780" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div>
+
+              <!-- Honduras: Family Hope for Honduras -->
+              <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container"><iframe src="https://player.vimeo.com/video/1015376382" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Honduras: Family Hope for Honduras (Hope4Honduras)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>June 15-21, 2025</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>8:00 a.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Honduras</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,800 <i>(includes airfare, ground transportation, meals, and lodging.)</i></span>
+                  </p>
+                  <p class="twmc-p mb-3">Partner with Hope For Honduras (<a href="https://www.hope4honduras.org/" class="a-missions25" target="_blank">hope4honduras.org</a>), we will share the love of Christ, build a home and provide food for impoverished neighborhood.</p>
+                  <a href="#globalmissions-hope4honduras" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=5099" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div>
+
+              <!-- Ecuador: Family Soccer Ministry (Cumbre Alta) -->
+              <div class="flex-item-2col twmc-card-float mb-3">
+                <div>
+                  <div class="embed-container"><iframe src="https://www.youtube.com/embed/3mGl2FrStio" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                </div>
+                <div>
+                  <h3 class="twmc-h3">Ecuador: Family Soccer Ministry (Cumbre Alta)</h3>
+                  <p class="twmc-p">
+                    <i class="fas fa-calendar-alt twmc-mrxs" aria-hidden="true"></i><span>July 13-18, 2025</span>
+                    <br>
+                    <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i><span>8:00 a.m.</span>  
+                    <br>
+                    <i class="fas fa-map-marked twmc-mrxs" aria-hidden="true"></i><span>Ecuador</span>
+                    <br>
+                    <i class="fas fa-money-bill twmc-mrxs" aria-hidden="true"></i><span>$1,800 <i>(includes airfare, ground transportation, meals, and lodging)</i></span>
+                  </p>
+                  <p class="twmc-p mb-3">Partner with <a href="https://www.facebook.com/cdcumbrealta" class="a-missions25" target="_blank">Cumbre Alta</a> to share Christ through the highest levels of Ecuadorian sports. Participants will help run soccer camps with a VBS portion.</p>
+                  <a href="#globalmissions-ecuador" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2">FAQ</a>
+                  <a href="https://www.thewoodlandsmethodist.org/Registration?RegistrationInstanceId=5632" class="twmc--btn twmc--btn--miscon2025 twmc-letspac-2" target="_blank">Register</a>
+                </div>                
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Global Missions -->
+
+    <!-- FAQ -->
+		<section id="twmc-globalmissions-mission" class="py-6 background-lightgrey2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1 text-center mb-4">
+						<h2 class="twmc-h2 mt-0">FAQ</h2>
+					</div>
+				</div>
+
+				<!-- GENERAL -->
+				<div class="row mt-2">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">MISSION TRIPS</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-globalmissions" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions1" aria-expanded="false" aria-controls="collapse-globalmissions1"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is a passport required
+												for my trip? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions1" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you need a passport that
+											<strong>does not</strong> expire within six months of the
+											date of your return.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions2" aria-expanded="false" aria-controls="collapse-foundation2"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is this trip safe?
+											</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions2" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Safety is our number one concern. The ministries with
+											which we partner know their own culture well and do
+											everything possible to ensure we do not get into difficult
+											situations. It is important that we obey instructions from
+											the ministry staff at all times.
+											<a href="https://travel.state.gov/travel/" target="_blank">U.S. State Department Travel Information
+												and
+												Advisories</a>.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions3" aria-expanded="false" aria-controls="collapse-globalmissions3"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What travel
+												medications and/or immunizations do I need? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions3" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We advise you to contact your doctor or travel clinic for
+											accurate information. Your doctor will often consult the
+											<a href="https://www.cdc.gov/index.htm" target="_blank">Center for Disease Control and
+												Prevention</a>
+											to determine this information. You might consider asking
+											your physician about the possibility of prescribing a
+											traveler’s diarrhea regimen as a precautionary measure in
+											the unlikely event that you have issues with this malady
+											on the trip.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions4" aria-expanded="false" aria-controls="collapse-believe4"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What kind of
+												electrical appliances can I use? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions4" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Most countries use a 220- to 240-volt current for
+											electrical outlets (the U.S. has 110-volt outlets). First,
+											we recommend that you examine your appliances to determine
+											if they can be used with 220-240 volts. If the appliance
+											can safely tolerate the higher voltage, you will require a
+											plug adapter that will allow you to plug into a wall
+											socket. If your appliance cannot handle the alternative
+											power source, you can try a power converter. North America
+											and Central American countries typically have 110-volt,
+											type A prong outlets that do not need an adapter. However,
+											they rarely have three pronged outlets, so if your
+											appliance has three prongs, you will need an adapter.
+											<em>To be safe, you can purchase one adapter that can be
+												used in multiple countries with multiple configurations.
+											</em>
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions5" aria-expanded="false" aria-controls="collapse-globalmissions5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How much luggage can I
+												bring?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions5" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions5">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											It is best to pack lightly. You can bring one checked bag
+											under 50 pounds and, depending on the airline, sometimes a
+											carry-on bag is allowed in addition to a purse or
+											backpack.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions6" aria-expanded="false" aria-controls="collapse-globalmissions6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What should I wear?
+											</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions6" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions6">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Please wear comfortable clothing and shoes. Any modest
+											clothing is appropriate to wear (no shorts and low-cut or
+											revealing clothing). Bringing an extra pair of shoes is
+											recommended in case one pair gets muddy or wet. Most
+											people bring a change of clothing for each day. Men tend
+											to wear dress shirts for Sunday worship, and women tend to
+											wear nicer outfits or skirts for worship.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions7" aria-expanded="false" aria-controls="collapse-globalmissions7"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do I prepare
+												spiritually for the trip?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions7" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions7">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Pray</li>
+											<li>Devotional (centered on mission work)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions8" aria-expanded="false" aria-controls="collapse-globalmissions8"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will there be a
+												meeting prior to the trip?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions8" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions8">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will have at least one meeting. Some trips
+											require additional training as well.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions9" aria-expanded="false" aria-controls="collapse-globalmissions9"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Can I arrive ahead of
+												the group, leave the trip early,
+												or stay in-country longer than the group? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions9" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions9">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Most teams arrive together and leave together. On the
+											Kenya iReach, India, and Zoe Empowers Tanzania trips, you
+											will need to arrive together but can plan additional
+											travel at the end of the trip. Any alternate travel plans
+											must be communicated to
+											<a href="mailto:sbrady@twmc.org" target="_blank">Staci Brady</a>as soon as possible and definitely
+											prior to the trip
+											preparatory meeting.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions10" aria-expanded="false" aria-controls="collapse-globalmissions10"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do we get to and
+												from the airport?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions10" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											For departure and arrival at IAH, we will transport you to
+											and from the airport in the church vans from the Loft
+											Building parking lot.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-globalmissions11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-globalmissions"
+											href="#collapse-globalmissions11" aria-expanded="false" aria-controls="collapse-globalmissions11"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do participants need
+												to purchase travel
+												insurance?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-globalmissions11" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-globalmissions11">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The church purchases the following for each participant.
+										</p>
+										<ul class="twmc-p">
+											<li>
+												Accident & Sickness Medical Expenses up to $100,000
+											</li>
+											<li>
+												Emergency Medical Evacuation, Medical Repatriation &
+												Return of Remains up to $1,000,000
+											</li>
+											<li>Trip Cancellation Up to 100% of non-refundable</li>
+											<li>
+												Trip Cost Trip Interruption Up to 150% of non-refundable
+												Trip
+											</li>
+											<li>Cost Missed Connection up to $1,500</li>
+											<li>Travel Delay (Up to $150 Per Day) up to $750</li>
+											<li>Accidental Death & Dismemberment up to $50,000</li>
+											<li>Baggage and Personal Effects up to $1,500</li>
+											<li>Baggage Delay (Up to $150 Per Day) up to $750</li>
+											<li>
+												Political, Security & Natural Disaster Evacuation up to
+												$25,000
+											</li>
+										</ul>
+						
+										<p class="twmc-p">
+											The cost for this coverage is included in your trip fee.
+											If you feel the need for additional insurance, you are
+											welcome to investigate and purchase that on your own.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Men's Honduras -->
+				<div class="row mt-3" id="globalmissions-honduras-men">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">HONDURAS - MEN'S MISSION TRIP (WGOREACH)</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-hondurasmen" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen1" aria-expanded="false" aria-controls="collapse-hondurasmen1"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of ministry
+												will we do and who is our
+												ministry partner? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen1" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We partner with World Gospel Outreach and will build a
+											church alongside of Hondurans.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen2" aria-expanded="false" aria-controls="collapse-hondurasmen2"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do we get
+												there?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen2" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly via United Airlines from Bush International
+											Airport to Palmerola International Airport in Comayagua,
+											Honduras. We will be transported via ground transportation
+											to the mission house in Tegucigalpa, Honduras.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen3" aria-expanded="false" aria-controls="collapse-hondurasmen3"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we need a
+												passport or visa? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen3" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that
+											<strong>does not</strong> expire within six months from
+											the date of your return. There is no visa required;
+											however, three days before the trip you will need to
+											complete both the Honduras Immigration Pre-Check and
+											Custom Declaration online. Instructions for completing
+											these documents online will be given closer to the
+											departure date.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen4" aria-expanded="false" aria-controls="collapse-hondurasmen4"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there a minimum age
+												limit?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen4" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The minimum age requirement is 18 by the date the trip
+											leaves. A 16- or 17-year-old can join if a parent is
+											traveling with the team.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen5" aria-expanded="false" aria-controls="collapse-hondurasmen5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												itinerary/schedule?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen5" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen5">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												Day One
+												<ul>
+													<li>
+														Meet in front of the Loft Building at 6:00 a.m. to
+														take the church vans to airport
+													</li>
+													<li>Arrive in Tegucigalpa</li>
+													<li>Quick site visit</li>
+													<li>Settle in at the mission house</li>
+													<li>Instructional meeting/cultural training</li>
+												</ul>
+											</li>
+											<li>
+												Day Two and Three
+												<ul>
+													<li>Build the church</li>
+												</ul>
+											</li>
+											<li>
+												Day Four travel back to Houston, arriving around 4:30
+												p.m. and back at the church around 6:00 p.m.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen6" aria-expanded="false" aria-controls="collapse-hondurasmen6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will a typical
+												day be like?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen6" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen6">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Morning devotional and coffee</li>
+											<li>Breakfast at the mission house</li>
+											<li>Load supplies onto truck</li>
+											<li>Work on the church (sack lunch provided by WGO)</li>
+											<li>Dinner</li>
+											<li>Time of reflection and sharing</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen7" aria-expanded="false" aria-controls="collapse-hondurasmen7"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of
+												accommodation will we stay in? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen7" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Team members stay in WGO’s mission house in Tegucigalpa.
+											Each bedroom can accommodate up to 16 people and each is
+											adjoined to a shared bathroom with hot and cold water,
+											showers and toilet facilities. There are three showers in
+											each bedroom/bathroom unit.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen8" aria-expanded="false" aria-controls="collapse-hondurasmen8"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will we eat? What
+												if there are special dietary
+												needs? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen8" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen8">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											At the mission house, kitchen staff will prepare and serve
+											buffet-style meals for breakfast and dinner and prepare
+											lunches for teams to eat at the Serve Team site. Please
+											let us know of any dietary needs when prompted on the trip
+											registration form.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen9" aria-expanded="false" aria-controls="collapse-hondurasmen9"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do we need to speak
+												the language?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen9" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen9">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No. A translator will be provided for all events when
+											necessary.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen10" aria-expanded="false" aria-controls="collapse-hondurasmen10"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What do I need to
+												bring? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen10" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Bible, journal, comfortable work clothes, shoes, work
+											gloves, sunscreen and toiletries.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen11" aria-expanded="false" aria-controls="collapse-hondurasmen11"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we
+												evangelize?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen11" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen11">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No, you will work alongside the members of the church.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q12 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen12">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen12" aria-expanded="false" aria-controls="collapse-hondurasmen12"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												cost?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen12" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen12">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,650 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q13 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hondurasmen13">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hondurasmen"
+											href="#collapse-hondurasmen13" aria-expanded="false" aria-controls="collapse-hondurasmen13"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Requirements</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hondurasmen13" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hondurasmen13">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Attend the team meeting</li>
+											<li>
+												A passport that doesn’t expire within six months of the
+												date of your return
+											</li>
+											<li>
+												Notarized TWMC Medical and Liability Waiver (we have
+												TWMC Missions staff members who are notaries and can
+												provide this service at no cost)
+											</li>
+											<li>WGO Liability Waiver</li>
+											<li>Sign Code of Conduct</li>
+											<li>
+												Complete the online Honduras Immigration Check (3 days
+												prior to the trip)
+											</li>
+											<li>
+												Complete the online Customs Declaration (3 days prior to
+												trip)
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- End Men's Ho0nduras -->
+
+				<!-- HONDURAS: WOMEN'S MEDICAL TRIP -->
+				<div class="row mt-3" id="globalmissions-honduras-women-medical">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">HONDURAS: WOMEN'S MEDICAL TRIP (WGOREACH)</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-honduras-womenmed" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed1" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed1" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What type of ministry will we do and who is our
+												ministry partner? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed1" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Our team will serve in various ways. Primarily, we will
+											assist in a Medical Brigade alongside Honduran Medical
+											Professionals and World Gospel Outreach. No medical
+											experience is necessary although there will be doctors,
+											dentists, nurse practitioners and nurses on the team. RNs
+											may provide medical care, but LVNs, EMTs and other types
+											of healthcare workers are not approved by the Honduran
+											government to provide medical care. If you have a question
+											about whether your license to provide care is accepted by
+											the Honduran government, please contact Staci Brady
+											<a href="mailto:sbrady@twmc.org">sbrady@twmc.org</a>.
+											There are plenty of non-medical roles for team members as
+											the team will also assist in children’s programming, pray
+											with those seeking help, and work in the community to
+											install water filters and various other community
+											projects.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed2" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed2" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">How will we get there?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed2" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly via United Airlines from Bush International
+											Airport to Palmerola International Airport in Comayagua,
+											Honduras. We will be transported via ground transportation
+											to the mission house in Tegucigalpa, Honduras.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed3" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed3" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Will we need a passport or visa? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed3" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that
+											<strong>does not</strong> expire within six months from
+											the date of your return. There is no visa required;
+											however, three days before the trip you will need to
+											complete both the Honduras Immigration Pre-Check and
+											Custom Declaration online. Instructions for completing
+											these documents online will be given closer to the
+											departure date.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed4" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed4" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Is there a minimum age requirement?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed4" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Participants must be at least 18 years old by the trip’s
+											departure date to travel with the team without a parent. A
+											16- or 17-year-old can join the team if a parent is
+											traveling with the team.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed5" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed5" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What is the itinerary?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed5" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed5">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												Day One
+												<ul>
+													<li>
+														Meet in front of the Loft Building at 6:00 a.m. to
+														take the church vans to airport
+													</li>
+													<li>Arrive in Tegucigalpa</li>
+													<li>Settle in at Mission House</li>
+													<li>Kick-off meeting</li>
+												</ul>
+											</li>
+											<li>Day Two &mdash; Medical Brigade</li>
+											<li>Day There &mdash; Medical Brigade</li>
+											<li>Day Four &mdash; Medical Brigade</li>
+											<li>
+												Day Five &mdash; Arrive in Houston around 4:30 p.m. and
+												back at the church around 6:00 p.m.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed6" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed6" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What does a typical day look like? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed6" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed6">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Morning devotional</li>
+											<li>Breakfast at the mission house</li>
+											<li>Load equipment and medicine</li>
+											<li>Arrive at Medical Brigade</li>
+											<li>Set up clinic</li>
+											<li>
+												Medical clinic, children’s program and prayer station
+											</li>
+											<li>Break for lunch (WGO provides sack lunches)</li>
+											<li>
+												Medical clinic, children’s program and prayer station
+											</li>
+											<li>Pack up clinic and return to the mission house</li>
+											<li>Dinner</li>
+											<li>Evening debrief and sharing</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed7" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed7" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">In what type of accommodation will we stay in? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed7" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Team members stay in WGO’s mission house in Tegucigalpa.
+											Each bedroom can accommodate up to 16 people and each is
+											adjoined to a shared bathroom with hot and cold water,
+											showers and toilet facilities. There are three showers in
+											each bedroom/bathroom unit.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed8" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed8" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What will we eat? What if I have special dietary needs? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed8" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed8">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											At the mission house, kitchen staff will prepare and serve
+											buffet-style meals for breakfast and dinner and prepare
+											lunches for teams to eat at the Serve Team site. Please
+											let us know of any dietary needs when prompted on your
+											trip registration form.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed9" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed9" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Do we need to speak the language?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed9" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed9">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No. A translator will be provided for all events when
+											necessary.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- 10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed10" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed10" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What do I need to bring? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed10" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											WGO provides scrubs to be worn every day so pack lightly.
+											Comfortable conservative clothes are appropriate while at
+											the mission house. Bring your Bible and a journal.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed11" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed11" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Will we evangelize?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed11" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed11">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											You will pray with those who come to the clinic in need.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q12 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed12">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed12" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed12" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What is the cost?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed12" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed12">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,600 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q13 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honduras-womenmed13">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honduras-womenmed"
+											href="#collapse-honduras-womenmed13" aria-expanded="false"
+											aria-controls="collapse-honduras-womenmed13" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Requirements</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honduras-womenmed13" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-honduras-womenmed13">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												Attend the team meeting on January 16, 2024, 6:30 p.m.
+												in Otterbein Room
+											</li>
+											<li>
+												A passport that doesn’t expire within six months of your
+												return
+											</li>
+											<li>
+												Notarized TWMC Medical and Liability Waiver (we have
+												TWMC Missions staff members who are notaries and can
+												provide this service at no cost)
+											</li>
+											<li>WGO Liability Waiver</li>
+											<li>Sign Code of Conduct</li>
+											<li>
+												Complete the Honduras Immigration Pre-Check online three
+												days prior to your trip
+											</li>
+											<li>
+												Complete the Customs Declaration Form online three days
+												prior to trip
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--  Honduras: Family Hope for Honduras -->
+				<div class="row mt-3" id="globalmissions-hope4honduras">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">
+							HONDURAS: FAMILY HOPE FOR HONDURAS (HOPE4HONDURAS)
+						</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-hope4honduras" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras1" aria-expanded="false" aria-controls="collapse-hope4honduras1"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of ministry
+												will we do and who is our
+												ministry partner? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras1" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We partner with Hope 4 Honduras. The team will assist on
+											building of a home, mentoring students in the bilingual
+											school, packaging and distributing food, daily preparing
+											meals for the students, leading a women’s bible study,
+											helping with the crafts in pre-school age Bible class.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras2" aria-expanded="false" aria-controls="collapse-ireach2"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do we get
+												there?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras2" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly via United Airlines from Bush International
+											Airport to Palmerola International Airport in Comayagua,
+											Honduras. We will be transported via ground transportation
+											to the mission house in Tegicugalpa.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras3" aria-expanded="false" aria-controls="collapse-hope4honduras3"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we need a
+												passport or visa? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras3" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that <b>does not</b> expire
+											within six months from the date of your return. There is
+											no visa required; however, three days before the trip you
+											will need to complete both the Honduras Immigration
+											Pre-Check and Custom Declaration online. Instructions for
+											completing these documents online will be given closer to
+											the departure date.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras4" aria-expanded="false" aria-controls="collapse-hope4honduras4"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there a minimum age
+												limit?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras4" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The minimum age is more a measure of maturity and
+											willingness to work which is applicable to all team
+											members. Usually no one under 10, but 12 years old is a
+											good gauge. Under 18 must be accompanied by parent or
+											grandparent. It is a family friendly trip!
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras5" aria-expanded="false" aria-controls="collapse-ihope4honduras5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												itinerary/schedule? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras5" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras5">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											All the work ‘stations’ are going on simultaneously so
+											each teammate will have opportunity to do any or all of
+											the ministry items. Mid afternoon we gather back at the
+											mission and spend about an hour playing with the children
+											in the nearby playground.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras6" aria-expanded="false" aria-controls="collapse-ihope4honduras6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will a typical
+												day be like?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras6" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras6">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>6:30 a.m. &mdash; Leave for Mogote</li>
+											<li>
+												Morning Activities
+												<ul>
+													<li>8:00 a.m. &mdash; Devotional with staff</li>
+													<li>
+														8:45 – 11:00 a.m. &mdash; Help with English Tutoring
+														Program
+													</li>
+													<li>
+														9:00 a.m. &mdash; Team Project (2 – 6 team members
+														Monday – Wednesday)
+														<ul>
+															<li>
+																Kitchen helpers (1 – 3 team members daily)
+															</li>
+															<li>
+																Bag food for distribution (all available team
+																members)
+															</li>
+														</ul>
+													</li>
+													<li>
+														9:30 a.m. &mdash; Feeding in the streets (2 team
+														members daily)
+													</li>
+													<li>
+														9:00 – 11:00 a.m. &mdash; Desarrollo Infantil (Child
+														Development Class of 4 year olds)
+													</li>
+												</ul>
+											</li>
+											<li>Noon Lunch</li>
+											<li>
+												Afternoon Activities
+												<ul>
+													<li>
+														1:00 p.m. &mdash;Team Project (bag food for
+														distribution)
+													</li>
+													<li>
+														1:00 – 3:00 p.m. &mdash; Desarrollo Infantil (Child
+														Development Class of 4 year olds)
+													</li>
+													<li>
+														3:00 – 3:45 p.m. &mdash; Play in the street with the
+														kids!
+													</li>
+												</ul>
+											</li>
+											<li>4:00 p.m. &mdash; Leave mission site</li>
+											<li>6:00 p.m. &mdash; Dinner at the mission house</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras7" aria-expanded="false" aria-controls="collapse-ihope4honduras7"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of
+												accommodation will we stay in?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras7" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will stay in a mission house. Accommodation options
+											that will be assigned:
+										</p>
+										<ul class="twmc-p">
+											<li>Guest Room 1 (2 bunks with full bathroom)</li>
+											<li>Guest Room 2 (2 bunks with full bathroom)</li>
+											<li>Guest Room 3 (2 bunks with full bathroom)</li>
+											<li>
+												Guest Room 4 (1 queen bed and 2 single beds with full
+												bathroom)
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras8" aria-expanded="false" aria-controls="collapse-ihope4honduras8"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will we eat? What
+												if there are special dietary
+												needs? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras8" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras8">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Breakfast and dinner are awesome home cooked meals by
+											missionary Ron Jones and served at the mission house.
+											Lunch at mission site cooked by staff with our help.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras9" aria-expanded="false" aria-controls="collapse-ihope4honduras9"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What items do we need
+												to bring? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras9" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras9">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												Personal PPE for COVID protocols in sufficient quantity
+												for your entire stay (masks)
+											</li>
+											<li>1 personal bag/suitcase (50 lb. limit)</li>
+											<li>1 carry on/backpack</li>
+											<li>
+												Passport, tickets, money, credit card, prescription
+												medications
+											</li>
+											<li>Bible and journal</li>
+											<li>Sunscreen</li>
+											<li>Toiletries</li>
+											<li>
+												Clothing &mdash; Note: No laundry facility available for
+												teams to use
+												<ul>
+													<li>
+														Cool, comfortable clothes for during the day — long
+														shorts, capris, khakis, jeans, T-shirts, modest tank
+														tops
+													</li>
+													<li>Nothing too tight or short</li>
+													<li>
+														Enough clothes for the number of days that your team
+														will be there
+													</li>
+													<li>
+														Something to change into after you return from the
+														mission each day
+													</li>
+													<li>
+														Tennis shoes or other closed toe shoes comfortable
+														for walking and working. Flip flops and Chacos
+														(sandals) are fine for around the mission house.
+													</li>
+													<li>Journal</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras10" aria-expanded="false" aria-controls="collapse-ihope4honduras10"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do we need to speak
+												the language?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras10" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No. A translator will be provided for all events when
+											necessary.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras11" aria-expanded="false" aria-controls="collapse-ihope4honduras11"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we
+												evangelize?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras11" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras11">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											You will pray with the children and those you serve.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q12 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras12">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras12" aria-expanded="false" aria-controls="collapse-ihope4honduras12"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												cost?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras12" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras12">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,800 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q13 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-hope4honduras13">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-hope4honduras"
+											href="#collapse-hope4honduras13" aria-expanded="false" aria-controls="collapse-ihope4honduras13"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Requirements</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-hope4honduras13" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-hope4honduras13">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Attend the team meetings</li>
+											<li>
+												A passport that doesn’t expire within six months of the
+												date of your return
+											</li>
+											<li>
+												NotarizedTWMC Medical and Liability Waiver (we have TWMC
+												Missions staff members who are notaries and can provide
+												this service at no cost)
+											</li>
+											<li>Sign Code of Conduct</li>
+											<li>
+												Complete the Honduras Immigration Check online three
+												days prior to your trip
+											</li>
+											<li>
+												Complete the Customs Declaration Form online three days
+												prior to trip.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- #7 Guatemala: Men's and Women's Trip (CASA Orphanage) -->
+				<div class="row mt-3" id="globalmissions-guatemala-casa">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">
+							GUATEMALA: MEN'S AND WOMEN'S TRIP (CASA ALELUYA)
+						</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-casa" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa1"
+											aria-expanded="false" aria-controls="collapse-casa1" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What type of ministry will we do and who is our
+												ministry partner? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will have a team of 10-15 men and women who will lead
+											the children in games and/or activities. Our team focuses
+											on teenaged girls (and boys when there are enough men) and
+											will assist the CASA staff with building projects and
+											painting when the children are in school. All activities
+											and projects are planned as a group, and we serve together
+											as a group.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa2"
+											aria-expanded="false" aria-controls="collapse-casa2" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">How do we get there?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly into Guatemala City (2.5 hour flight) and take
+											a bus or van to Casa Aleluya, which is about an hour from
+											the airport.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa3"
+											aria-expanded="false" aria-controls="collapse-casa3" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Will we need a passport or visa? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that doesn’t expire within
+											six months of the date of your return. There is no visa
+											requirement for Guatemala.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa4"
+											aria-expanded="false" aria-controls="collapse-casa4" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Is there an age limit?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The minimum age requirement is 16 years of age if
+											traveling with a parent and 18 years of age if traveling
+											alone.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa5"
+											aria-expanded="false" aria-controls="collapse-ireach5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												Itinerary?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa5">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												In the mornings, we will complete projects around the
+												facilities and prepare for the afternoon and evening
+												activities.
+											</li>
+											<li>
+												We will spend time with the children doing various
+												activities in the afternoon and evenings.
+											</li>
+											<li>
+												On Friday, we will travel to La Antiqua Guatemala to
+												enjoy time together and sightseeing.
+											</li>
+											<li>On Sunday, we will return home.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa6"
+											aria-expanded="false" aria-controls="collapse-ireach6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is a typical
+												day?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa6">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>We start each day with personal devotional time.</li>
+											<li>
+												We share meals together, usually have free time during
+												the day to rest, read, spend time with kids, etc. The
+												team activities generally happen in the evenings.
+											</li>
+											<li>
+												Each day we take time to reflect as a group on the
+												activities and where we saw God at work that day.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa7"
+											aria-expanded="false" aria-controls="collapse-casa7" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What type of accommodation will we stay in?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will stay in the “gringo dorm” on the property of Casa
+											Aleluya. It is a bunk-style dorm with a common
+											room/kitchen area and separate bathrooms, showers and bunk
+											rooms for men and women.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa8"
+											aria-expanded="false" aria-controls="collapse-casa8" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What will we eat? What if there are special dietary
+												needs?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa8">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We cook our own meals and eat typical American food. Some
+											dietary needs can be accommodated, so make sure to note
+											those when prompted on your trip registration form.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa9"
+											aria-expanded="false" aria-controls="collapse-casa9" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Do we need to speak the language? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa9">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No. A translator will be provided if necessary.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa10"
+											aria-expanded="false" aria-controls="collapse-casa10" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">What is the cost?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,900 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-casa11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-casa" href="#collapse-casa11"
+											aria-expanded="false" aria-controls="collapse-casa11" class="collapsed twmc-panel-title__link"><span
+												class="twmc-panel-title__text">Requirements</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-casa11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-casa11">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Attend the team meetings.</li>
+											<li>
+												A passport that doesn’t expire within six months of the
+												date of your return.
+											</li>
+											<li>
+												Notarized TWMC Medical and Liability Waiver (we have
+												TWMC Missions staff members who are notaries and can
+												provide this service at no cost).
+											</li>
+											<li>Sign Code of Conduct</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Ecuador: Family Soccer Ministry (Cumbre Alta)-->
+				<div class="row mt-3" id="globalmissions-ecuador">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3 text-uppercase">
+							Ecuador: Family Soccer Ministry (Cumbre Alta)
+						</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-family-soccer" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer1" aria-expanded="false" aria-controls="collapse-family-soccer1"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of ministry
+												will we do? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer1" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will be partnering with Cumbre Alta, a professional
+											soccer club in Ecuador. Each morning we will be helping
+											them run one of their soccer camps that also has a VBS
+											component. In the afternoons, we will be doing a work
+											project to help out the same community where the soccer
+											camp is.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer2" aria-expanded="false" aria-controls="collapse-family-soccer2"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do we get
+												there?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer2" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly into Quito, Ecuador and take a van to the
+											housing.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q2-->
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer3" aria-expanded="false" aria-controls="collapse-family-soccer3"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we need a
+												passport or visa?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer3" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that doesn’t expire within
+											six months of the date of your return.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q3-->
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer4" aria-expanded="false" aria-controls="collapse-family-soccer4"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there an age
+												limit?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer4" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The minimum age requirement is 8 years of age if traveling
+											with a parent and 18 years of age if traveling alone.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q4-->
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer5" aria-expanded="false" aria-controls="collapse-family-soccer5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will we eat? What
+												if there are special dietary
+												needs?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer5" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer5">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Our hosts will be providing food for us each day. Meals
+											are made up of familiar American items. Some dietary needs
+											can be accommodated, so make sure to note those when
+											prompted on your trip registration form.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q5-->
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer6" aria-expanded="false" aria-controls="collapse-family-soccer6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do we need to speak
+												the language?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer6" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer6">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will have interpreters with us at all times.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q6-->
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer7" aria-expanded="false" aria-controls="collapse-family-soccer7"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												Cost?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer7" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,800 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q7-->
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-family-soccer8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-family-soccer"
+											href="#collapse-family-soccer8" aria-expanded="false" aria-controls="collapse-family-soccer8"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Requirements?</span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-family-soccer8" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-family-soccer8">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Attend the team meetings.</li>
+											<li>
+												A passport that doesn’t expire within six months of the
+												date of your return.
+											</li>
+											<li>
+												Notarized TWMC Medical and Liability Waiver (we have
+												TWMC Missions staff members who are notaries and can
+												provide this service at no cost).
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end of Q8-->
+						</div>
+					</div>
+				</div>
+				<!-- end of Soccer Family FAQ-->
+
+				<!--  Honduras: Men's and Women's Medical -->
+				<div class="row mt-3" id="globalmissions-honduras-medical">
+					<div class="col-sm-10 col-sm-offset-1 mb-2">
+						<h3 class="twmc-h3">HONDURAS: MEN'S AND WOMEN'S MEDICAL</h3>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="panel-group" id="accordion-honmed" role="tablist" aria-multiselectable="true">
+							<!-- Q1 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed1">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed1"
+											aria-expanded="false" aria-controls="collapse-honmed1"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What type of ministry
+												will we do and who is our
+												ministry partner? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed1">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Our team will serve in various ways. Primarily, we will
+											assist in a Medical Brigade alongside Honduran Medical
+											Professionals and World Gospel Outreach. No medical
+											experience is necessary although there will be doctors,
+											dentists, nurse practitioners and nurses on the team. RNs
+											may provide medical care, but LVNs, EMTs and other types
+											of healthcare workers are not approved by the Honduran
+											government to provide medical care. If you have a question
+											about whether your license to provide care is accepted by
+											the Honduran government, please contact Staci Brady (<a href="mailto:sbrady@twmc.org"
+												target="_blank">sbrady@twmc.org</a>). There are plenty of non-medical roles for team members
+											as the team will also assist in children’s programming,
+											pray with those seeking help, and work in the community to
+											install water filters and various other community
+											projects.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q2 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed2">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed2"
+											aria-expanded="false" aria-controls="collapse-honmed2"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How will we get
+												there?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed2">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly via United Airlines from Bush International
+											Airport to Palmerola International Airport in Comayagua,
+											Honduras. We will be transported via ground transportation
+											to the mission house in Tegucigalpa, Honduras.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q3 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed3">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed3"
+											aria-expanded="false" aria-controls="collapse-honmed3"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we need a
+												passport or visa? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed3">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that doesn’t expire within
+											six months from the date of your return. Three days before
+											the trip you will need to complete both the Honduras
+											Immigration Pre-Check and the Custom Declaration Form
+											online.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q4 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed4">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed4"
+											aria-expanded="false" aria-controls="collapse-honmed4"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there an age
+												limit?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed4">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The minimum age requirement is 18 by the date the trip
+											leaves if traveling alone, 15 if traveling with a parent.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q5 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed5">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed5"
+											aria-expanded="false" aria-controls="collapse-ireach5"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How will we get
+												there?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed5">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											We will fly via United Airlines from Bush International
+											Airport to Palmerola International Airport in Comayagua,
+											Honduras. We will be transported via ground transportation
+											to the mission house in Tegucigalpa, Honduras.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q6 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed6">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed6"
+											aria-expanded="false" aria-controls="collapse-honmed6"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we need a
+												passport or visa? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed6">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Yes, you will need a passport that
+											<strong>does not</strong> expire within six months from
+											the date of your return. There is no visa required;
+											however, three days before the trip you will need to
+											complete both the Honduras Immigration Pre-Check and
+											Custom Declaration Form online. Instructions for
+											completing these documents online will be given closer to
+											the departure date.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q7 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed7">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed7"
+											aria-expanded="false" aria-controls="collapse-honmed7"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there a minimum age
+												requirement?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed7">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Participants must be at least 18 years old by the trip’s
+											departure date to travel with the team without a parent. A
+											16- or 17-year-old can join the team if a parent is
+											traveling with the team.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q8 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed8">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed8"
+											aria-expanded="false" aria-controls="collapse-honmed8"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												itinerary?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed8">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>
+												Day One
+												<ul>
+													<li>
+														Meet in front of the Loft Building at 6:00 a.m. to
+														take the church vans to airport
+													</li>
+													<li>Arrive in Tegucigalpa</li>
+													<li>Settle in at the mission house</li>
+													<li>Kick-off meeting</li>
+												</ul>
+											</li>
+											<li>Day Two &mdash; Medical Brigade</li>
+											<li>Day Three &mdash; Medical Brigade</li>
+											<li>
+												Day Four &mdash; Sightseeing or trip to Ebenezer Ranch
+											</li>
+											<li>Day Four &mdash; Medical Brigade</li>
+											<li>Day Four &mdash; Medical Brigade</li>
+											<li>
+												Day Six — Arrive in Houston around 4:30 p.m. and back at
+												the church around 6:00 p.m.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q9 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed9">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed9"
+											aria-expanded="false" aria-controls="collapse-honmed9"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What does a typical
+												day look like? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed9">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Morning devotional</li>
+											<li>Breakfast at the mission house</li>
+											<li>Load equipment and medicine</li>
+											<li>Arrive at Brigade</li>
+											<li>Set up clinic</li>
+											<li>
+												Medical clinic, children’s program, and prayer station
+											</li>
+											<li>Break for lunch (WGO provides sack lunches)</li>
+											<li>
+												Medical clinic, children’s program, and prayer station
+											</li>
+											<li>Pack up clinic and return to the mission house</li>
+											<li>Dinner</li>
+											<li>Evening debrief and sharing</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q10 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed10">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed10"
+											aria-expanded="false" aria-controls="collapse-honmed10"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">In what type of
+												accommodation will we stay in? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed10">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											Team members stay in WGO’s mission house in Tegucigalpa.
+											Each bedroom can accommodate up to 16 people and each is
+											adjoined to a shared bathroom with hot and cold water,
+											showers and toilet facilities. There are three showers in
+											each bedroom/bathroom unit.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q11 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed11">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed11"
+											aria-expanded="false" aria-controls="collapse-honmed11"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What will we eat? What
+												if I have special dietary needs? </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed11">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											At the mission house, kitchen staff will prepare and serve
+											buffet-style meals for breakfast and dinner and prepare
+											lunches for teams to eat at the Serve Team site. Please
+											let us know of any dietary needs when prompted on your
+											trip registration form.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q12 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed12">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed12"
+											aria-expanded="false" aria-controls="collapse-honmed12"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do we need to speak
+												the language? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed12">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											No. A translator will be provided for all events when
+											necessary.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q13 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed13">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed13"
+											aria-expanded="false" aria-controls="collapse-honmed13"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What do I need to
+												bring? </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed13">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											WGO provides scrubs to be worn every day so pack lightly.
+											Comfortable conservative clothes are appropriate while at
+											the mission house. Bring your Bible and a journal.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q14 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed14">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed14"
+											aria-expanded="false" aria-controls="collapse-honmed14"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Will we
+												evangelize?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed14">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											You will pray with those who come to the clinic in need.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q15 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed15">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed15"
+											aria-expanded="false" aria-controls="collapse-honmed15"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the
+												cost?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+												aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed15">
+									<div class="panel-body twmc-panel-body">
+										<p class="twmc-p">
+											The cost is $1,800 and includes airfare, ground
+											transportation, meals and lodging.
+										</p>
+									</div>
+								</div>
+							</div>
+						
+							<!-- Q16 -->
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="heading-honmed16">
+									<h4 class="panel-title twmc-panel-title">
+										<a role="button" data-toggle="collapse" data-parent="#accordion-honmed" href="#collapse-honmed16"
+											aria-expanded="false" aria-controls="collapse-honmed16"
+											class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Requirements </span><i
+												class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon" aria-hidden="true"></i>
+										</a>
+									</h4>
+								</div>
+								<div id="collapse-honmed16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-honmed16">
+									<div class="panel-body twmc-panel-body">
+										<ul class="twmc-p">
+											<li>Attend the team meeting</li>
+											<li>
+												A passport that doesn’t expire within six months of your
+												return.
+											</li>
+											<li>
+												Notarized TWMC Medical and Liability Waiver (we have
+												TWMC Missions staff members who are notaries and can
+												provide this service at no cost)
+											</li>
+											<li>WGO Liability Waiver</li>
+											<li>Sign Code of Conduct</li>
+											<li>
+												Complete the Honduras Immigration Pre-Check online three
+												days prior to your trip
+											</li>
+											<li>
+												Complete the Customs Declaration Form online three days
+												prior to trip.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End of FAQ -->
+ 
+
+ 
+
+   
+
+    <!-- End of content -->
+
+
+  <!-- Footer -->
+  <style>
+    .footer-logo2 {
+        height: 50px;
+        margin-right: 10px;
+        max-width: 100%;
+    }
+
+    .footer-logo-gmc {
+        height: 30px;
+    }
+
+    .footer-text-gmc {
+        font-size: 0.7rem;
+    }
+
+    .footer-newlogo-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      align-items: center;
+    }
+
+    .footer-gmc-div {
+      border-left: 1px solid white;
+      padding-left: 14px;
+    }
+
+    .footer-infos-wrapper {
+      margin-top: 1.8rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .footer-infos-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .footer-newlogo-wrapper {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .footer-logo2 {
+        height: 50px;
+        width: auto;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+      }
+
+      .footer-gmc-div {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .footer-logo-gmc {
+        height: 25px;
+      }
+    }
+  </style>
+
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <!-- Footer logo wrapper -->
+              <div class="footer-newlogo-wrapper">
+                <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo2">
+                
+                <div class="mt-0 footer-gmc-div">
+                  <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="" class="footer-logo-gmc mb-1">
+                </div>
+              </div>
+              <!-- End of footer logo wrapper -->
+
+              <div class="footer-infos-wrapper">
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                    _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="my-3">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/indoor-playgrounds" class="footer-flex-item footer-link">Indoor Playgrounds</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
+
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <!-- fontawesome v6 -->
+  <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

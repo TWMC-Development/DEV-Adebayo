@@ -1,0 +1,488 @@
+<section id="twmc-summerspalsh2023__content" class="pb-3">
+    <div class="container">
+        <!-- Intro -->
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h2 class="twmc-h2 twxt-white mb-5">The Woodlands Methodist Church Camps and Activities
+                    <br>NextGen Ministries
+                </h2>
+                <h4 class="twmc-h4 summersplash25-intro-title">
+              Summer fun is on the way! NextGen Kids, Recreation Ministry and NextGen 56 have an amazing summer planned for your children. Register for the camps and activities listed below. Don’t miss out on good fun with great friends!
+            </h4>
+
+            <div class="mt-5 mb-3 summersplash25-intro2">
+              <h3 class="twmc-h3 mt-0">Registration Opens March 3</h3>
+              <p class="twmc-p mb-0">
+                <em>Age levels are for the upcoming 2025-2026 school year. Children must be age listed as of September 1, 2025.</em>
+              </p>
+            </div>
+
+            <h5 class="twmc-h5 summersplash25-intro-title mb-5">Children can attend activities on any campus — The Woodlands, Woodforest, Montgomery or Creekside — but they may participate in only one VBS. Campus locations are noted on each activity. </h5>
+
+            </div>
+        </div>
+        <!-- End of Intro -->
+
+    </div>
+</section>
+
+
+<!-- Events -->
+{% capture MonthMay %}{% endcapture %}
+{% capture MonthJune %}{% endcapture %}
+{% capture MonthJulyAugust %}{% endcapture %}
+
+{% for item in Items %}
+    {% assign Month = item | Attribute: 'Month' %}
+    {% assign CampusArr = item | Attribute: 'CampusTags' | Split: ',' %}
+    {% assign EventTime = item | Attribute: 'EventTime' %}
+    {% assign EventTime2 = item | Attribute: 'EventTime2' %}
+    {% assign AddressLink = item | Attribute: 'AddressLink' %}
+    {% assign ShortDescription = item | Attribute: 'ShortDescription' %}
+    {% assign LearnMoreLink = item | Attribute: 'LearnMoreLink' %}
+    {% assign AvailableSlots = item | Attribute: 'NumberOfAvailableSlots' %}
+    {% assign RegistrationLink = item | Attribute: 'RegistrationLink' %}
+    {% assign RegistrationId = item | Attribute: 'RegistrationId' %}
+    {% assign Age = item | Attribute: 'Age' %}
+    {% assign Price = item | Attribute: 'Price' %}
+    {% assign RegOpenDate = item | Attribute: 'RegOpenDate' %}
+    {% assign ButtonText = item | Attribute: 'ButtonText' %}
+    {% assign ButtonText2 = item | Attribute: 'ButtonText2' %}
+    {% assign RegOpenDate2 = item | Attribute: 'RegOpenDate2' %}
+    {% assign RegistrationId2 = item | Attribute: 'RegistrationId2' %}
+    {% assign RegistrationLink2 = item | Attribute: 'RegistrationLink2' %}
+    {% assign AvailableSlots2 = item | Attribute: 'NumberOfAvailableSlots2' %}
+    {% assign campusClass = '' %}
+
+    <!-- Slots 1 -->
+    {% assign regCount = 0 %}
+    {% if RegistrationId != empty %}
+        {% assign regIdInt = RegistrationId | AsInteger %}
+        {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{ regIdInt }}' count:'true' %}
+            {% assign regCount = count %}
+        {% endregistrationregistrant %}
+    {% endif %}
+    {% assign slotsLeft = AvailableSlots | Minus: regCount %}
+
+
+    <!-- Slots 2 -->
+    {% assign regCount2 = 0 %}
+    {% if RegistrationId2 != empty %}
+        {% assign regId2Int = RegistrationId2 | AsInteger %}
+        {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{ regId2Int }}' count:'true' %}
+            {% assign regCount2 = count %}
+        {% endregistrationregistrant %}
+    {% endif %}
+    {% assign slotsLeft2 = AvailableSlots2 | Minus: regCount2 %}
+
+
+    <!-- May Events -->
+    {% if Month == 'May' %}
+        {% capture MonthMay %}
+            {{ MonthMay }}
+
+            <div class="summersplash25-flex-item summersplash25--card">
+                <!-- Campus Title &  tag -->
+                {% if CampusArr %}
+                    {% for CampusTag in CampusArr %}
+                        {% assign CampusTag = CampusTag | Strip %}
+                        {% if CampusTag == 'The Woodlands' %}
+                            {% assign CampusClass = 'summersplash25-tag-thewoodlands' %}
+                            {% assign CampusTextColor = 'summersplash25-text-thewoodlands' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-thewoodlands' %}
+                        {% elsif CampusTag == 'Woodforest' %}
+                            {% assign CampusClass = 'summersplash25-tag-woodforest' %}
+                            {% assign CampusTextColor = 'summersplash25-text-woodforest' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-woodforest' %}
+                        {% elsif CampusTag == 'Creekside' %}
+                            {% assign CampusClass = 'summersplash25-tag-creekside' %}
+                            {% assign CampusTextColor = 'summersplash25-text-creekside' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-creekside' %}
+                        {% elsif CampusTag == 'Montgomery' %}
+                            {% assign CampusTextColor = 'summersplash25-text-montgomery' %}
+                            {% assign CampusClass = 'summersplash25-tag-montgomery' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-montgomery' %}
+                        {% elsif CampusTag == 'Off Campus' %}
+                            {% assign CampusTextColor = 'summersplash25-text-yellow' %}
+                            {% assign CampusClass = 'summersplash25-tag-other' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-yellow' %}
+                        {% endif %}
+
+                        <p class="{{ CampusClass }} mb-1"><span>{{ CampusTag }}</span></p>
+                        <p class="twmc-p mb-0">
+                            <strong class="summersplash25---card-title {{ CampusTextColor }}">{{ item.Title }}</strong>
+                        </p>
+
+                    {% endfor %}
+                {% endif %}
+                <!-- End of Campus Title &  tag -->
+
+                <!-- Card info -->
+                <p class="twmc-p my-3 twmc-textcard-info2">
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-school" aria-hidden="true"></i></span>{{ Age }}
+                    {% if ShortDescription != null and ShortDescription != ''%}
+                     <br>
+                    <span class="twmc-icon-wrapper3"><i class="fa-solid fa-note" aria-hidden="true"></i></span>{{ ShortDescription }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime }}
+                    {% if EventTime2 != null and EventTime2 != '' %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime2 }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-money-bill" aria-hidden="true"></i></span>{{ Price }}
+                </p>
+                <!-- End of Card info -->
+
+                <!-- Desc and reg open -->
+                <p class="twmc-p twmc-textcard-desc2">
+                    {{ item.Content }}
+                </p>
+                {% if RegOpenDate != null and RegOpenDate != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate }}</em></p>
+                {% endif %}
+                {% if RegOpenDate2 != null and RegOpenDate2 != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate2 }}</em></p>
+                {% endif %}
+                <!-- End of Desc and reg open -->
+
+                <!-- Slots & Registration links -->
+                {% if RegistrationLink %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <!-- Slots -->
+                        {% if AvailableSlots != null and AvailableSlots != '' %}
+                            <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft <= 0 %} 0 {% else %} {{ slotsLeft }} {% endif %}</p>
+                            <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                        {% endif %}
+                        <!-- Reg btn -->
+                        <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText }}</a>
+                    </div>
+                    {% else %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <p class="summersplash25-btn-inactive">Registration closed</p>
+                    </div>
+                {% endif %}
+
+                {% if RegistrationLink2 %}
+                <div class="summersplash25-slots-btn2 mb-3">
+                    <!-- Slots2 -->
+                    {% if AvailableSlots2 != null and AvailableSlots2 != '' %}
+                        <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft2 <= 0 %} 0 {% else %} {{ slotsLeft2 }} {% endif %}</p>
+                        <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                    {% endif %}
+
+                    <!-- Registration Button 2 -->
+                    {% if ButtonText2 != null and ButtonText2 != '' %}
+                        <a href="{{ RegistrationLink2 }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText2 }}</a>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="summersplash25-slots-btn mb-3 mt-4">
+                    <p class="summersplash25-btn-inactive">Registration closed</p>
+                </div>
+            {% endif %}
+
+
+
+                <!-- End of Slots & Registration links -->
+
+
+            </div>
+            <!-- End of flex-item -->
+
+        {% endcapture %}
+        <!-- End of May Events -->
+
+    <!-- June Events -->
+    {% elseif Month == 'June' %}
+        {% capture MonthJune %}
+            {{ MonthJune }}
+
+            <div class="summersplash25-flex-item summersplash25--card">
+                <!-- Campus Title &  tag -->
+                {% if CampusArr %}
+                    {% for CampusTag in CampusArr %}
+                        {% assign CampusTag = CampusTag | Strip %}
+                        {% if CampusTag == 'The Woodlands' %}
+                            {% assign CampusClass = 'summersplash25-tag-thewoodlands' %}
+                            {% assign CampusTextColor = 'summersplash25-text-thewoodlands' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-thewoodlands' %}
+                        {% elsif CampusTag == 'Woodforest' %}
+                            {% assign CampusClass = 'summersplash25-tag-woodforest' %}
+                            {% assign CampusTextColor = 'summersplash25-text-woodforest' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-woodforest' %}
+                        {% elsif CampusTag == 'Creekside' %}
+                            {% assign CampusClass = 'summersplash25-tag-creekside' %}
+                            {% assign CampusTextColor = 'summersplash25-text-creekside' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-creekside' %}
+                        {% elsif CampusTag == 'Montgomery' %}
+                            {% assign CampusTextColor = 'summersplash25-text-montgomery' %}
+                            {% assign CampusClass = 'summersplash25-tag-montgomery' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-montgomery' %}
+                        {% endif %}
+
+                        <p class="{{ CampusClass }} mb-1"><span>{{ CampusTag }}</span></p>
+                        <p class="twmc-p mb-0">
+                            <strong class="summersplash25---card-title {{ CampusTextColor }}">{{ item.Title }}</strong>
+                        </p>
+
+                    {% endfor %}
+                {% endif %}
+                <!-- End of Campus Title &  tag -->
+
+                <!-- Card info -->
+                <p class="twmc-p my-3 twmc-textcard-info2">
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-school" aria-hidden="true"></i></span>{{ Age }}
+                    {% if ShortDescription != null and ShortDescription != ''%}
+                     <br>
+                    <span class="twmc-icon-wrapper3"><i class="fa-solid fa-note" aria-hidden="true"></i></span>{{ ShortDescription }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime }}
+                    {% if EventTime2 != null and EventTime2 != '' %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime2 }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-money-bill" aria-hidden="true"></i></span>{{ Price }}
+                </p>
+                <!-- End of Card info -->
+
+                <!-- Desc and reg open -->
+                <p class="twmc-p twmc-textcard-desc2">
+                    {{ item.Content }}
+                </p>
+                {% if RegOpenDate != null and RegOpenDate != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate }}</em></p>
+                {% endif %}
+                {% if RegOpenDate2 != null and RegOpenDate2 != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate2 }}</em></p>
+                {% endif %}
+                <!-- End of Desc and reg open -->
+
+                <!-- Slots & Registration links -->
+                {% if RegistrationLink %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <!-- Slots -->
+                        {% if AvailableSlots != null and AvailableSlots != '' %}
+                            <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft <= 0 %} 0 {% else %} {{ slotsLeft }} {% endif %}</p>
+                            <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                        {% endif %}
+                        <!-- Reg btn -->
+                        <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText }}</a>
+                    </div>
+                    {% else %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <p class="summersplash25-btn-inactive">Registration closed</p>
+                    </div>
+
+                {% endif %}
+
+                {% if RegistrationLink2 %}
+                <div class="summersplash25-slots-btn2 mb-3">
+                    <!-- Slots2 -->
+                    {% if AvailableSlots2 != null and AvailableSlots2 != '' %}
+                        <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft2 <= 0 %} 0 {% else %} {{ slotsLeft2 }} {% endif %}</p>
+                        <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                    {% endif %}
+
+                    <!-- Registration Button 2 -->
+                    {% if ButtonText2 != null and ButtonText2 != '' %}
+                        <a href="{{ RegistrationLink2 }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText2 }}</a>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="summersplash25-slots-btn mb-3 mt-4">
+                    <p class="summersplash25-btn-inactive">Registration closed</p>
+                </div>
+                {% endif %}
+
+                <!-- End of Slots & Registration links -->
+
+
+            </div>
+            <!-- End of flex-item -->
+
+        {% endcapture %}
+        <!-- End of June Events -->
+    <!-- July and August Events -->
+    {% elseif Month == 'July' or Month == 'August' %}
+
+        {% capture MonthJulyAugust %}
+            {{ MonthJulyAugust }}
+
+            <div class="summersplash25-flex-item summersplash25--card">
+                <!-- Campus Title &  tag -->
+                {% if CampusArr %}
+                    {% for CampusTag in CampusArr %}
+                        {% assign CampusTag = CampusTag | Strip %}
+                        {% if CampusTag == 'The Woodlands' %}
+                            {% assign CampusClass = 'summersplash25-tag-thewoodlands' %}
+                            {% assign CampusTextColor = 'summersplash25-text-thewoodlands' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-thewoodlands' %}
+                        {% elsif CampusTag == 'Woodforest' %}
+                            {% assign CampusClass = 'summersplash25-tag-woodforest' %}
+                            {% assign CampusTextColor = 'summersplash25-text-woodforest' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-woodforest' %}
+                        {% elsif CampusTag == 'Creekside' %}
+                            {% assign CampusClass = 'summersplash25-tag-creekside' %}
+                            {% assign CampusTextColor = 'summersplash25-text-creekside' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-creekside' %}
+                        {% elsif CampusTag == 'Montgomery' %}
+                            {% assign CampusTextColor = 'summersplash25-text-montgomery' %}
+                            {% assign CampusClass = 'summersplash25-tag-montgomery' %}
+                            {% assign CampusBtnColor = 'summersplash25-btn-montgomery' %}
+                        {% endif %}
+
+                        <p class="{{ CampusClass }} mb-1"><span>{{ CampusTag }}</span></p>
+                        <p class="twmc-p mb-0">
+                            <strong class="summersplash25---card-title {{ CampusTextColor }}">{{ item.Title }}</strong>
+                        </p>
+
+                    {% endfor %}
+                {% endif %}
+                <!-- End of Campus Title &  tag -->
+
+
+
+                <!-- Card info -->
+                <p class="twmc-p my-3 twmc-textcard-info2">
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-school" aria-hidden="true"></i></span>{{ Age }}
+                    {% if ShortDescription != null and ShortDescription != ''%}
+                     <br>
+                    <span class="twmc-icon-wrapper3"><i class="fa-solid fa-note" aria-hidden="true"></i></span>{{ ShortDescription }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime }}
+                    {% if EventTime2 != null and EventTime2 != '' %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime2 }}
+                    {% endif %}
+                    <br>
+                    <span class="twmc-icon-wrapper3"><i class="fas fa-money-bill" aria-hidden="true"></i></span>{{ Price }}
+                </p>
+                <!-- End of Card info -->
+
+                <!-- Desc and reg open -->
+                <p class="twmc-p twmc-textcard-desc2">
+                    {{ item.Content }}
+                </p>
+                {% if RegOpenDate != null and RegOpenDate != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate }}</em></p>
+                {% endif %}
+                {% if RegOpenDate2 != null and RegOpenDate2 != ''%}
+                    <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate2 }}</em></p>
+                {% endif %}
+                <!-- End of Desc and reg open -->
+
+                <!-- Slots & Registration links -->
+                {% if RegistrationLink %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <!-- Slots -->
+                        {% if AvailableSlots != null and AvailableSlots != '' %}
+                            <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft <= 0 %} 0 {% else %} {{ slotsLeft }} {% endif %}</p>
+                            <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                        {% endif %}
+                        <!-- Reg btn -->
+                        <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText }}</a>
+                    </div>
+                    {% else %}
+                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                        <p class="summersplash25-btn-inactive">Registration closed</p>
+                    </div>
+
+                {% endif %}
+
+                {% if RegistrationLink2 %}
+                <div class="summersplash25-slots-btn2 mb-3">
+                    <!-- Slots2 -->
+                    {% if AvailableSlots2 != null and AvailableSlots2 != '' %}
+                        <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft2 <= 0 %} 0 {% else %} {{ slotsLeft2 }} {% endif %}</p>
+                        <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                    {% endif %}
+
+                    <!-- Registration Button 2 -->
+                    {% if ButtonText2 != null and ButtonText2 != '' %}
+                        <a href="{{ RegistrationLink2 }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText2 }}</a>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="summersplash25-slots-btn mb-3 mt-4">
+                    <p class="summersplash25-btn-inactive">Registration closed</p>
+                </div>
+            {% endif %}
+
+                <!-- End of Slots & Registration links -->
+
+
+            </div>
+            <!-- End of flex-item -->
+
+        {% endcapture %}
+        <!-- July and August Events -->
+    {% endif %}
+    <!-- End if -->
+
+
+{% endfor %}
+<!-- End of Events -->
+
+<!-- Render Captured Events -->
+<section class="summersplash25-section-blue">
+    <div class="container">
+        <div class="row mt-1">
+            <div class="col-sm-12">
+                <!-- intro -->
+                <div class="text-center mt-5 twmc-mbm summersplash25-may py-3">
+                    <h1 class="twmc-h1 summersplash25-section-title text-uppercase">&nbsp;</h1>
+                </div>
+
+                <!-- events -->
+                <div class="summersplash25-flex-container">
+                {{ MonthMay }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="summersplash25-section-blue">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <!-- intro -->
+                <div class="text-center twmc-mtlg twmc-mbm summersplash25-june py-3">
+                    <h1 class="twmc-h1 summersplash25-section-title text-uppercase">&nbsp;</h1>
+                </div>
+
+                <!-- events -->
+                <div class="summersplash25-flex-container">
+                {{ MonthJune }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="summersplash25-section-blue">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-sm-12 pb-6">
+                <!-- intro -->
+                <div class="text-center twmc-mtlg twmc-mbm summersplash25-julaug py-3">
+                    <h1 class="twmc-h1 summersplash25-section-title text-uppercase">&nbsp;</h1>
+                </div>
+
+
+                <!-- events -->
+                <div class="summersplash25-flex-container">
+                {{ MonthJulyAugust }}
+                </div
+            </div>
+        </div>
+
+    </div>
+</section>

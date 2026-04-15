@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section - CTA1 with single button</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+</head>
+<body>
+     <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+    
+    <!-- Main -->
+    <main>
+
+
+    <!-- Hurricane Melissa -->
+     <style>
+    #cta-melissa {
+    background-color: #6A8A6F;
+    background-image: linear-gradient(to bottom, rgba(106, 138, 111, 0.7), rgba(106, 138, 111, 0.7)), url(https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/natalia-blauth-5WNGdoxL8Vg-unsplash-lg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    padding: 1.2rem 0;
+    text-align: center;
+    height: max-content;
+}
+
+  .disaster-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+  }
+
+  @media only screen and (max-content: 768px) {
+    .disaster-wrapper {
+      flex-direction: column;
+    }
+  }
+  </style>
+  <section id="cta-melissa">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 text-center disaster-wrapper" >
+         <!-- <h4 class="twmc-h4 text-white">We are praying for all those in the path of Hurricane Melissa. Support recovery efforts by giving to the disaster relief fund.</h4> 
+         <a href="/givetodisasterrelief" class="twmc--btn twmc--btn--white twmc-letspac-2 mb-1" target="_blank">Give Now</a> -->
+
+         <h4 class="twmc-h4 text-white">Estamos orando por todas las personas que se encuentran en el paso del huracán Melissa. Apoye los esfuerzos de recuperación haciendo una donación al fondo de ayuda en casos de desastre.</h4> 
+         <a href="/givetodisasterrelief" class="twmc--btn twmc--btn--white twmc-letspac-2 mb-1" target="_blank">Done ahora</a>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+    <!-- End of Hurricane Melissa -->
+
+    <!-- CAW - Wake Up Call -->
+    <style>
+    #cta-wakeupcall {
+      /* background-color: #44646D; */
+      background-color: #365057;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: scroll;
+      padding: 1.2rem 0;
+      text-align: center;
+      height: max-content;
+
+      color: #FDFDEC;
+    }
+
+    .wakeupcall-btn {
+      background-color: rgba(251, 247, 183, 0.8);
+      color: #365057;
+      border: 3px solid #F7F072;
+      border-radius: 9.5px;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      min-width: 175px;
+      max-width: 255px;
+
+    }
+
+    .wakeupcall-btn:hover,
+    .wakeupcall-btn:focus {
+      background-color: rgba(251, 247, 183, 0.5);
+       color: #365057;
+      border: 3px solid #F7F072;
+      transform: scale(1.02);
+
+    }
+
+    @media only screen and (max-width: 576px) {
+      .questfeatban-btn {
+        padding: .4rem 0.9rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .wakeupcall-img {
+      height: 20px;
+    }
+    </style>
+    <section id="cta-wakeupcall">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 text-center d-flex flex-column justify-content-center align-items-center" >
+            <h3 class="twmc-h3 mb-1 mt-3">To get even more out of worship, subscribe to <span style="color: #f7f072;">Wake-Up Call</span></h3> 
+            <a href="https://seedbed.com/wakeupcall/#latest-episodes" class="wakeupcall-btn mb-3" target="_blank"><img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/wake-up-call-logo.png" alt="" class="img-responsive wakeupcall-img mr-2"> Subscribe Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EO CAW - Wake Up Call -->
+
+
+    <!-- Texas Hill Country Give + Prayer -->
+    <style>
+      #twmc-cta-francine {
+        background-color: #6A8A6F;
+        background-image: linear-gradient(to bottom,rgba(106, 138, 111, 0.7), rgba(106, 138, 111, 0.7)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/natalia-blauth-5WNGdoxL8Vg-unsplash-lg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: scroll;
+
+        padding: 1.2rem 0;
+        text-align: center;
+        height: max-content;
+      }
+
+      .twmc--btn-misquiz {
+        width: 210px;
+      }
+
+      .francine-container-3col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1%;
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      .francine-item-3col {
+        flex-basis: 32%;
+        /* border: 1px solid #fff; */
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.6rem 0.8rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .francine-container-3col {
+          gap: 0;
+        }
+
+        .francine-item-3col {
+          flex-basis: 100%;
+          margin-bottom: 0.6rem;
+          padding: 0.5rem;
+        }
+      }
+
+      /* Typography */
+      .p-francince {
+        font-weight: 800;
+        font-size: 1.8em;
+      }
+
+      .a-francine {
+        color: #fff;
+        transition: all .3s ease-in-out;
+      }
+
+      .a-francine:hover,
+      .a-francine:focus {
+        color: #fef6f6;
+        opacity: 0.6;
+      }
+    </style>
+
+    <section id="twmc-cta-francine" >
+      <div class="container-fluid text-white">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h5 class="twmc-h5 mt-2 mb-1">Our hearts are breaking for our neighbors. The floodwaters came swiftly, and with them, unimaginable loss. Families are grieving. Loved ones are still missing. Communities are overwhelmed.</h5>
+            <h4 class="twmc-h4 mt-0 mb-3 text-uppercase">What can you do? </h4>
+
+            <div class="francine-container-3col">
+              <div class="francine-item-3col">
+                <h5 class="twmc-h5 my-0"><span class="p-francince">Pray</span></h5>
+                <h5 class="twmc-h5 mt-1 text-small">Join our Hill Country Prayer Service
+                  <br>Wednesday, July 9 | Noon | Robb Chapel</h5>
+              </div>
+              <div class="francine-item-3col">
+                <a href="/givetodisasterrelief" target="_blank" class="a-francine">
+                  <h5 class="twmc-h5 my-0"><span class="p-francince">Give Now</span></h5>
+                  <h5 class="twmc-h5 mt-1 text-small">Support Texas Hill Country flooding recovery to our Disaster Relief Fund. &rarr;</h5>
+                </a>
+              </div>
+            </div>
+            <h5 class="twmc-h5 mt-3">Thank you for being a generous church as we seek to help those in need!
+            </h5>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Texas Hill Country Give + Prayer -->
+
+
+    <!-- Texas Hill Country -->
+    <style>
+    #cta-hillcountry-flooding {
+    background-color: #6A8A6F;
+    background-image: linear-gradient(to bottom, rgba(106, 138, 111, 0.7), rgba(106, 138, 111, 0.7)), url(https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/natalia-blauth-5WNGdoxL8Vg-unsplash-lg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    padding: 1.2rem 0;
+    text-align: center;
+    height: max-content;
+}
+
+  .hillcounty-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+  }
+
+  @media only screen and (max-content: 768px) {
+    .hillcounty-wrapper {
+      flex-direction: column;
+    }
+  }
+  </style>
+  <section id="cta-hillcountry-flooding">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 text-center hillcounty-wrapper" >
+         <h4 class="twmc-h4 text-white">Support Texas Hill Country flooding recovery to our Disaster Relief Fund</h4> 
+         <a href="/givetodisasterrelief" class="twmc--btn twmc--btn--white twmc-letspac-2 mb-1" target="_blank">Give Now</a>
+
+         <!-- <h4 class="twmc-h4 text-white">Apoye la recuperación tras las inundaciones de Hill Country: haga un donativo a nuestro Fondo de Ayuda para Catástrofes.</h4> 
+         <a href="/givetodisasterrelief" class="twmc--btn twmc--btn--white twmc-letspac-2 mb-1" target="_blank">Done ahora</a> -->
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  <!-- End of Texas Hill Country -->
+
+
+      <!-- HAR Based on A True Story - The Truth  -->
+      <!-- fontawesome v6 -->
+      <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+      <style>
+         #twmc-cta-thetruth {
+          background-color: #000;
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_harvest/HAR+Truth+BG2-tiny5.jpg");
+          background-size: auto 200px;
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-attachment: scroll;
+          background-repeat: no-repeat;
+
+          text-align: center;
+          height: 200px;
+        }
+
+        .thetruth-wrapper {
+          height:200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .thetruth-btn-wrapper {
+          margin-top: 3.3rem;
+        }
+
+        .thetruth-btn {
+          font-weight: 600;
+          color: #fff;
+          background-color: #D53B41;
+          border: 2px solid #D53B41;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          padding: .4rem 0.7rem;
+          font-size: .6rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-radius: .25rem;
+          transition: all .3s ease-in-out;
+      }
+
+      .thetruth-btn:hover,
+      .thetruth-btn:focus {
+          border: 2px solid transparent;
+          border-color: rgb(213, 59, 65);
+          background-color: rgba(213, 59, 65, .2) !important;
+          color: #D53B41;
+          text-decoration: none;
+
+          transform: scale(1.02);
+      }
+      </style>
+
+      <section id="twmc-cta-thetruth" class="py-2">
+        <div class="container-fluid text-white">
+          <div class="row">
+            <div class="col-sm-12 thetruth-wrapper">
+              <!-- <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_harvest/thetruth-logo.png" alt="Saturday Night Farewell" class="img-responsive thetruth-txtimg"> -->
+
+              <div class="thetruth-btn-wrapper">
+                <a href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_harvest/HAR_Based_On_a_True_Story_TRUTH_Card.pdf" class="thetruth-btn" download>Download Card</a>
+                 <a href="/podcast" class="thetruth-btn" target="_blank">Listen Now <i class="fa-regular fa-podcast"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of HAR Based on A True Story - The Truth  -->
+
+
+      <section style="height: 40px; background-color: rgb(95, 16, 16);"></section>
+
+      <!-- LOFT Farewell -->
+      <style>
+        #twmc-cta-loftfarewell {
+          background-color: #57b847;
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_loft/LOFT_Saturday+Night+Farewell_LOGO+Left.png");
+          
+          background-size: 250px auto;
+          background-repeat: no-repeat;
+          background-position: top left;
+          background-attachment: scroll;
+
+        
+          text-align: center;
+          height: 160px;
+        }
+
+        @media only screen and (max-width: 576px) {
+          #twmc-cta-loftfarewell {
+            background-size: 220px auto;
+          }
+        }
+
+        .loftfarewell-wrapper {
+          height: 160px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .loftfarewell-txtimg {
+          height: 60px;
+        }
+      </style>
+
+      <section id="twmc-cta-loftfarewell" >
+        <div class="container-fluid text-white">
+          <div class="row">
+            <div class="col-sm-12 loftfarewell-wrapper">
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_loft/Saturday+Night+Farewell_+TEXT.png" alt="Saturday Night Farewell" class="img-responsive loftfarewell-txtimg">
+
+              <div>
+                <p class="twmc-p mb-0 mt-1">Final Loft Saturday Night Worship</p>
+                <h5 class="twmc-h5 my-0">August 9 | 6:00 p.m.</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of LOFT Farewell -->
+
+      
+
+    </main>
+
+
+    <!-- JQuery -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a768a77f8f.js" crossorigin="anonymous"></script>
+    <script src="./js/twmc-scripts.js"></script>
+</body>
+</html>

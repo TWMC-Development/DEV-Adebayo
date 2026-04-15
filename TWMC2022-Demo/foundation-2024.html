@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation 2024</title>
+
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+   <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+   <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+   
+   <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="./css/nw-main2023.css">
+   <link rel="stylesheet" href="./css/nw-navbar.css">
+   <link rel="stylesheet" href="./css/nw-grow.css">
+   <link rel="stylesheet" href="./css/seasonal.css">
+   <link rel="stylesheet" href="./css/foundation.css">
+  
+   <!-- Script -->
+   <script src="/js/script2023.js"></script>
+   
+   <!-- fontawesome v6 -->
+   <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+    
+</head>
+<body>
+ <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- Hero -->
+    <section id="twmc-hero--foundation2024">
+      <div class="container-fluid hero--img__text-wrapper text-center">
+        <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/FND_TextOverlay_TXT.png" alt="TWMC Foundation" class="img-responsive">
+        <a class="twmc--btn twmc--btn--traditional mt-3" href="/foundation-give" target="_blank">Make a Donation</a>
+      </div>
+    </section>
+    <!-- End of Hero -->
+
+    <!-- Content -->
+    <!-- CTA Luncheon -->
+    <section id="twmc-cta--foundationluncheon">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 cta-foundationluncheon--flex-container">
+            <div class="cta-foundationluncheon--flex-img">
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/dr-todd-still-300x300.jpg" alt="Dr. Todd D. Still" class="img-circle cta-foundationluncheon-img">
+            </div>
+            <div class="cta-foundationluncheon--flex-info">
+              <h3 class="twmc-h3 mt-0 text-traditional text-uppercase">TWMC Foundation Luncheon</h3>
+              <p class="twmc-p cta-foundationluncheon-date">
+                <span class="twmc-icon-wrapper"><i class="fas fa-calendar-alt" aria-hidden="true"></i></span> Thursday, May 16 &verbar; 11:30 a.m. &verbar; Wesley Hall 
+                <br><span class="twmc-icon-wrapper"><i class="fa-solid fa-podium"></i></span> Dr. Todd D. Still &verbar; Dean of George W. Truett Theological Seminary Baylor University
+                <br><span class="twmc-icon-wrapper"><i class="fa-solid fa-money-bill"></i></span> No cost to attend
+              </p>
+              
+              <p class="twmc-p">Learn more about the Foundation and its impact.</p>
+              <a class="twmc--btn twmc--btn--traditional" href="https://thewoodlandsmethodist.org/Registration/foundationluncheon-may2024" target="_blank">Register now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of CTA Luncheon -->
+
+    <!-- Intro -->
+    <section class="py-6">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-sm-12">
+            <h3 class="twmc-h3 mb-4">ABOUT THE FOUNDATION</h3>
+            <p class="twmc-p text-justify">The Woodlands Methodist Church Foundation was established in 2000 as a pillar of support to our ministry and mission of <strong>reaching people for Jesus, discipling them in faith, and helping those in need</strong>.</p>
+            <p class="twmc-p text-justify">The Foundation is more than just a financial asset; it is a testament to our enduring dedication to faith, service and compassion. Established as a permanent fund, the principal amount of the endowment is preserved while the earnings generated from investments are distributed as scholarships and grants to support the mission of The Woodlands Methodist Church. This is distinct from the day-to-day operations budget and regular giving. The Foundation plays a pivotal role in funding new initiatives, missions, church multiplication, curriculum resources and education scholarships. <strong>Today’s</strong> gifts make an impact <strong>tomorrow</strong> and are invested <strong>forever</strong> for generations to come.</p>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-sm-6 mb-3">
+              <div class="embed-container twmc-mockup-video"></div>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <div class="embed-container twmc-mockup-video"></div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <!-- End of Intro -->
+
+    <!-- CTA Give Online -->
+    <section id="twmc-cta--give-online">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 cta-foundation--giveonline">
+            <h3 class="twmc-h3 mt-3 mb-2">GIVE ONLINE</h3>
+            <p class="twmc-p text-center"><strong>Easily make one-time or recurring gifts online as a business or as an individual.</strong></p>
+            <a class="twmc--btn twmc--btn--traditional my-2" href="/foundation-give" target="_blank">Make a Donation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of CTA Give Online -->
+
+    <!-- How to give -->
+    <section class="py-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="twmc-h3 mb-4 text-center">OTHER WAYS TO GIVE</h3>
+            <!-- Grid -->
+            <div class="twmc-foundation__grid-give mb-5">
+              <!-- Cash/Check -->
+              <div class="twmc-foundation__grid-give-card twmc-foundation__grid-give2">
+                <div>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/donation.png" alt="" class="twmc-foundation__grid-give-icon">
+                </div>
+                <h4 class="mt-3 mb-2 text-traditional">GIFTS OF CASH/CHECKS</h4>
+                <p class="twmc-p twmc-foundation__grid-give-text">Simplicity and ease of giving make cash/check contributions the most popular type of giving.</p>
+              </div>
+              <!-- Securities -->
+              <div class="twmc-foundation__grid-give-card twmc-foundation__grid-give3">
+                <div>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/bond.png" alt="" class="twmc-foundation__grid-give-icon">
+                </div>
+                <h4 class="mt-3 mb-2 text-traditional">GIFTS OF SECURITIES</h4>
+                <p class="twmc-p twmc-foundation__grid-give-text">Gifts of long-term securities generally result in several federal tax benefits. Please check with your tax advisor for more details.</p>
+              </div>
+              <!-- Property -->
+              <div class="twmc-foundation__grid-give-card twmc-foundation__grid-give4">
+                <div>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/land.png" alt="" class="twmc-foundation__grid-give-icon">
+                </div>
+                <h4 class="mt-3 mb-2 text-traditional">GIFTS OF PROPERTY</h4>
+                <p class="twmc-p twmc-foundation__grid-give-text">Real property may also be given to the Foundation provided it meets certain criteria.</p>
+              </div>
+              <!-- Will -->
+              <div class="twmc-foundation__grid-give-card twmc-foundation__grid-give5">
+                <div>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/contract.png" alt="" class="twmc-foundation__grid-give-icon">
+                </div>
+                <h4 class="mt-3 mb-2 text-traditional">A PERSONAL WILL OR ESTATE PLANNING</h4>
+                <p class="twmc-p twmc-foundation__grid-give-text">In your will you may decide to bequeath a percentage of your estate, a specific amount or the remainders after bequests to other beneficiaries are made. If you choose to make a gift to the Foundation in this way, please note that the legal name to include in a will or other legal document is “The Woodlands Methodist Church Foundation.” A bequest will be recorded as a gift in the year that the will is probated and the grant delivered to the Foundation.</p>
+                <p class="twmc-p twmc-foundation__grid-give-text">When a Christian writes a will, it should be more than a catalog of possessions, but rather a declaration of faith in the cause you believe in — a provision for that which you love. No person can tell you the will of God regarding the final disposition of your property. Only by prayerfully seeking God’s leadership can you know what He wants you to do.</p>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- End of how to give -->
+
+    <!-- Areas of support -->
+    <section id="twmc-cta--foundation-support" class="py-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="twmc-h3 mb-4">CURRENT AREAS OF SUPPORT</h3>
+            <p class="twmc-p text-justify mb-3">The Foundation currently focuses on five major areas of investment that are in support of TWMC’s mission: New Initiatives, Missions, Church Multiplication, Christian Education and Resources, and Scholarships. Giving to the enduring ministry of The Woodlands Methodist Church Foundation has had a profound impact on many lives. Learn more below.</p>
+            <a class="twmc--btn twmc--btn--traditional mb-4" href="/foundation-give" target="_blank">Make a Donation</a>
+          </div>
+
+          <div class="col-sm-12 mt-3">
+            <div class="flex-container-2col">
+              <!-- #1 -->
+              <div class="flex-item-2col twmc-card-foundation mb-3">
+                <div>
+                  <div class="embed-container twmc-mockup-video">
+                    <iframe src="https://player.vimeo.com/video/936445351?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FOU-20240418-Matt Harrelson Foundation V2"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="twmc-h4 twmc-foundation__inv-title">New Initiatives and Areas Most in Need</h4>
+                  <p class="twmc-p">This flexible cornerstone fund provides support for emerging opportunities as they arise. It allows us to channel general giving projects and initiatives that align with our mission to reach people for Jesus, disciple them in faith, and help those in need.</p>
+                </div>                
+              </div>
+              <!-- #2 -->
+              <div class="flex-item-2col twmc-card-foundation mb-3">
+                <div>
+                  <div class="embed-container twmc-mockup-video">
+                    <iframe src="https://player.vimeo.com/video/936445256?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FOU-20240418-Missy Herndon Foundation V2"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="twmc-h4 twmc-foundation__inv-title">Missions | Help Those in Need</h4>
+                  <p class="twmc-p">Our commitment to missions extends across three key areas: local missions, international missions and student missions. These funds empower us to serve and support communities near and far, spreading God’s message of hope and love through hands-on mission work.</p>
+                </div>                
+              </div>
+              <!-- #3 -->
+              <div class="flex-item-2col twmc-card-foundation mb-3">
+                <div>
+                  <div class="embed-container twmc-mockup-video">
+                    <iframe src="https://player.vimeo.com/video/936445393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FOU-20240417-Drew Essen Foundation V1"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="twmc-h4 twmc-foundation__inv-title">Church Multiplication | Reach People for Jesus Christ</h4>
+                  <p class="twmc-p">As our church family grows, so does our need for space and resources. Funds allocated to church multiplication go toward campus expansion and church growth, ensuring that we can continue to welcome and disciple new members.</p>
+                </div>                
+              </div>
+              <!-- #4 -->
+              <div class="flex-item-2col twmc-card-foundation mb-3">
+                <div>
+                  <div class="embed-container twmc-mockup-video">
+                    <iframe src="https://player.vimeo.com/video/935972262?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FOU-20240417-Daniel Lumpee Foundation V3"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="twmc-h4 twmc-foundation__inv-title">Christian Curriculum and Resources | Disciple Them in Faith</h4>
+                  <p class="twmc-p">We understand the importance of equipping both our congregation and other churches with the tools needed for spiritual growth. This category supports the development of curriculum, resources for classes and studies, and the creation of materials that empower churches to thrive in their ministries.</p>
+                </div>                
+              </div>
+              <!-- #5 -->
+              <div class="flex-item-2col twmc-card-foundation mb-3">
+                <div>
+                  <div class="embed-container twmc-mockup-video">
+                    <iframe src="https://player.vimeo.com/video/935972835?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FOU-20240417-Mark Swayze Foundation V3"></iframe>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="twmc-h4 twmc-foundation__inv-title">Education Scholarships | Disciple Them in Faith</h4>
+                  <p class="twmc-p">This is a powerful catalyst for personal and spiritual growth. These funds are dedicated to providing scholarships for pastors and seminary students, as well as financial assistance to students pursuing education at The Woodlands Methodist School. By investing in education, we invest in a brighter future.</p>
+                  <a class="twmc--btn twmc--btn--traditional mb-4" href="/seminary-scholarship" target="_blank">Seminary Scholarship</a>
+                </div>                
+              </div>
+
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- End of areas of support -->
+
+    <!-- CTA Grace Garden -->
+    <section id="twmc-featbanner--grace-garden">
+      <div class="container twmc-featbanner--grace-garden-wrapper">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/grace-garden-text.png" alt="Grace Garden Columbarium" class="img-responsive cta-grace-garden--textimg">
+          <p class="cta-grace-garden--text">A memorial garden and resting place for the cremated remains of our&nbsp;loved&nbsp;ones</p>
+          <a href="/gracegarden" class="twmc--btn twmc--btn--lightgrey mt-0" target="_blank">Learn more</a>
+      </div>
+    </section>
+    <!-- End of CTA Grace GArden -->
+
+    <!-- FAQ -->
+    <section class="pt-5 pb-6" style="background-color: #ddd;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="mb-3">FAQ</h3>
+
+            <!-- Panel group -->
+            <div class="panel-group" id="accordion-foundation-faq" role="tablist" aria-multiselectable="true">
+              <!-- Q1 -->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-foundation1">
+                      <h4 class="panel-title twmc-panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion-foundation-faq" href="#collapse-foundation1" aria-expanded="false" aria-controls="collapse-foundation1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the Foundation?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapse-foundation1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-foundation1">
+                      <div class="panel-body twmc-panel-body">
+                        <p>Founded in September 2000, The Woodlands United Methodist Church Foundation, Inc. was established to provide for the future of this congregation’s mission to bring Christ and His love to our local and global community.</p>
+                        <p>The decision to give to the Foundation is a spiritual commitment of loyalty and love. It is a way to continue giving and supporting The Woodlands Methodist Church now and into the future.</p>
+                        <p><em>“For the LORD is good and his love endures forever; his faithfulness continues through all generations.”&nbsp;—&nbsp;Psalm&nbsp;100:5</em></p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-foundation2">
+                      <h4 class="panel-title twmc-panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion-foundation-faq" href="#collapse-foundation2" aria-expanded="false" aria-controls="collapse-foundation2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Why do we have a church Foundation?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapse-foundation2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-foundation2">
+                      <div class="panel-body twmc-panel-body">
+                        <p>Most large churches, such as The Woodlands Methodist Church, have established foundations or endowment funds for the purpose of expanding and securing the future ministries of the church. The Foundation provides an opportunity for the current members to build for the future.</p>
+                        <p>The Foundation fund is a permanent fund which is invested to provide income that can be used to further the ministry of the church. The permanent fund also provides a degree of security in the event of unforeseen financial needs. Most of the goals for the Foundation are long-term.</p>
+                      </div>
+                      
+                  </div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-foundation3">
+                      <h4 class="panel-title twmc-panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion-foundation-faq" href="#collapse-foundation3" aria-expanded="false" aria-controls="collapse-foundation3" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What is the Foundation’s mission?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapse-foundation3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-foundation3">
+                      <div class="panel-body twmc-panel-body">
+                        <p>The mission of The Woodlands Methodist Church Foundation is to expand the ministry outreach of the church and safeguard its future through charitable gifts that provide long-term financial support and a living memorial.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q4 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-foundation4">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-foundation-faq" href="#collapse-foundation4" aria-expanded="false" aria-controls="collapse-foundation4" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How are the earnings of the fund to be used?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-foundation4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-foundation4">
+                    <div class="panel-body twmc-panel-body">
+                      <p>They will be used to expand the ministry of the church for years to come by providing supplemental funds to enhance the church’s programs, mission, operations and facilities.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q5 -->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-foundation5">
+                      <h4 class="panel-title twmc-panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion-foundation-faq" href="#collapse-foundation5" aria-expanded="false" aria-controls="collapse-foundation5" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Does the Foundation fund replace all other funds?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapse-foundation5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-foundation5">
+                      <div class="panel-body twmc-panel-body">
+                        <p>No, it does not replace other funds. Such funds as the church operating budget and faith promise fund for missions are separate. The Foundation fund is designed to permanently enrich the future life of our church.</p>
+                        <p>The annual budget of our church is all-important. It is the responsibility of the congregation every year to provide for the everyday bills, salaries and programs for the membership. </p>
+                      </div>
+                  </div>
+              </div>
+
+
+            </div>
+            <!-- End of panel group -->
+
+            <p><em>If you have questions about giving a donation to The Woodlands Methodist Church Foundation or would like to discuss further how you can include the Foundation in your will or estate plan, contact {[ emailform email:'finance@twmc.org' contactname:'the Finance office'  ]}.</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of FAQ -->   
+    <!-- End of Content-->
+
+
+    <!-- footer -->
+    <footer class="twmc-footer">
+      <div class="twmc-footer__cta">
+        <div class="twmc-container">
+          <div class="twmc-footer__button-container">
+            <a href="https://www.thewoodlandsumc.org/help" class="twmc--btn twmc--btn--outline-white twmc-footer__cta-button" target="_blank">Find Help &amp; Support</a>
+            <a href="https://thewoodlandsumc.org/myaccount" class="twmc--btn twmc--btn--outline-white twmc-footer__cta-button" target="_blank">My Account</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="twmc-footer__address">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="twmc-p">2200 Lake Woodlands Drive &#124; The Woodlands, Texas 77380 &#124; 281.297.5900 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    </footer>
+    <!-- end of footer -->
+
+
+
+    <!-- JQuery -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a768a77f8f.js" crossorigin="anonymous"></script>
+    <script src="./js/twmc-scripts2.js"></script>
+</body>
+</html>

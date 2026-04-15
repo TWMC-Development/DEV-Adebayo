@@ -1,0 +1,19 @@
+<section class="twmc-cta3 twmc-home-cta-feat">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="twmc-flex-container--3-col-feat">
+
+                {% for item in Items %}
+                <a href="{{ item | Attribute:'Link' }}" class="twmc-flex-item--3-col-feat twmc-home-cta-feat__link" style="background-color: #fff;">
+                                <img src="/GetImage.ashx?guid={{ item | Attribute:'Image','RawValue' }}" alt="" class="twmc-home-cta-adv__img">
+                                <div class="twmc-home-cta-adv__text">
+                                    <h4 class="twmc-h4">{{ item.Title }}</h4>
+                                    <p class="twmc-p-small">{{ item | Attribute:'Summary' | StripHtml | Truncate:120,'...' }}</p>
+                                </div>
+                            </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

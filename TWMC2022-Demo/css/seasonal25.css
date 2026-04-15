@@ -1,0 +1,176 @@
+/* ===== Ash Wednesday 2025 =====  */
+/* Typography */
+.twmc-lent--brown {
+    color: #524C4B;
+}
+/* End of Typography */
+
+
+/* Ash Wednesday Button  */
+.twmc--btn--lent  {
+    border: 2px solid #6E6967;
+    background-color: #6E6967;
+    color: #fff;
+    width: 200px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    transition: all .3s ease-in-out;
+}
+
+.twmc--btn--lent:hover,
+.twmc--btn--lent:focus {
+    background-color: rgba(110,105,103, .2) !important;
+    text-decoration: none;
+    color: #6E6967;
+
+    transform: scale(1.03);
+}
+
+@media only screen and (max-width: 576px){ 
+    .twmc--btn--lent  {
+        min-width: 100px;
+        margin-bottom: 5px;
+        /* margin-right: 5px; */
+        font-size: .7rem;
+    }
+}
+
+/* Ash Wednesday Hero */
+#twmc-hero-ashwednesday2025 {
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(240, 239, 238, .3)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/WOR_AshWednesday_Background.jpg"); */
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/WOR_AshWednesday_Background.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center left;
+    color: #fff ;
+    height: 650px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #twmc-hero-ashwednesday2025 {
+        background-image: linear-gradient(to bottom, rgba(229, 229, 229, 0.3), rgba(255, 255, 255, 0.8), rgba(229, 229, 229, 0.3)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/WOR_AshWednesday_Background.jpg");
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-hero-ashwednesday2025 {
+        background-image: linear-gradient(to bottom, rgba(229, 229, 229, 0.3), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(229, 229, 229, 0.3)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/WOR_AshWednesday_Background.jpg");
+        height: 500px;
+    }
+}
+
+.twmc-lent__hero-text-wrapper {
+    width: 55%;
+    float: right;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen  and (max-width: 991px) {
+    .twmc-lent__hero-text-wrapper {
+        width: 80%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen  and (max-width: 768px) {
+    .twmc-lent__hero-text-wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen  and (max-width: 576px) {
+    .twmc-lent__hero-text-wrapper {
+        height: 500px;
+    }
+}
+
+@media only screen  and (max-width: 300px) {
+    .twmc-lent__hero-text-wrapper {
+        width: 95%;
+    }
+}
+
+
+
+/* cards */
+.twmc-card--box-shadow {
+    padding:  1.5rem 2rem;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+}
+
+.twmc-card--box-shadow2 {
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 25%);
+}
+
+@media only screen and (max-width: 576px) {
+    .twmc-card--box-shadow {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* Utilities - 2 Columns Messages List */
+.twmc-flex-container--2-col-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+}
+
+.twmc-flex-item--2-col-center {
+    flex-basis: 49%;
+    overflow: visible;
+
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .twmc-flex-container--2-col-center {
+        gap: 0;
+    }
+    .twmc-flex-item--2-col-center {
+        flex-basis: 100%;
+    }
+}
+
+/* Christmas Services */
+.card-small-container--2-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+.card-small-item--2-col {
+    flex-basis: 49%;
+    overflow: visible;
+    /* flex-grow: 2; */
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-small-container--2-col {
+        gap: 0;
+    }
+
+    .card-small-item--2-col {
+        flex-basis: 100%;
+    }
+}
+
+.card-content-lightgrey {
+    background-color: #f6f6f6;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+/* ===== End of Ash Wednesday 2025 =====  */

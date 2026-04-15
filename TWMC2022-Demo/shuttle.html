@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Woodlands Campus Parking and Shuttle Information</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://rockcore2022.s3.us-east-2.amazonaws.com/css/bootstrap_s3.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://rockcore2022.s3.us-east-2.amazonaws.com/css/theme_s3.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      #modal-link-map {
+        display: none;
+      }
+    }
+
+    #mapModal .modal-dialog {
+      width: 100%;
+      max-width: 2200px;
+    }
+
+    .modal.fade.in {
+      top: 50%;
+    }
+
+    .modal {
+      width: 750px;
+    }
+  </style>
+
+  <body>
+    <section>
+      <div
+        class="container"
+        style="
+          background-image: URL('https://www.toptal.com/designers/subtlepatterns/uploads/crossword.png');
+        "
+      >
+        <div class="row">
+          <div class="col-xs-12" id="">
+            <!-- <h2 class="m-3 p-3 twmc-h2">Interactive Map</h2> -->
+            <p class="m-3 p-3"></p>
+            <div class="text-center">
+              <a
+                class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs"
+                href="#interactive-map"
+                >Shuttle Map
+              </a>
+              <a
+                class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs"
+                target="_blank"
+                href="https://twmc.formstack.com/forms/shuttle_experience_survey"
+                >Take a Survey</a
+              >
+            </div>
+          </div>
+          <div class="col-xs-12" id="">
+            <h2 class="m-3 p-3 twmc-h2 text-center">
+              Give the Gift of Parking this Christmas Eve!
+            </h2>
+            <p class="mx-3 px-3">
+              By choosing off-site parking, you're helping to make room for new
+              visitors on Christmas Eve. Together, we can share a simple act of
+              love and compassion with others during such a special time of
+              year.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="py-3 twmc-h2 text-center">What to Know</h2>
+            <p class="mx-3 px-3">
+              The holidays can be a busy time, so we've made parking as seamless
+              as possible for our Christmas Eve Services. Here is everything you
+              need to know to make your visit stress-free. Shuttle Service
+              Details
+            </p>
+          </div>
+          <div class="col-xs-12" id="">
+            <div class="col-xs-12 col-sm-4 my-3">
+              <a href="#mapModal" data-toggle="modal" data-target="#mapModal">
+                <img
+                  src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/_advent/CON_Campus%2BMap%2BParking%2BWeb%2BBlock.png"
+                  alt="Location Map"
+                  class="img-responsive center-block"
+                />
+              </a>
+              <div class="text-center" id="modal-link-map">
+                <a
+                  href="#mapModal"
+                  data-toggle="modal"
+                  data-target="#mapModal"
+                  style="display: inline-block; width: 100%"
+                  class="p-3 m-3"
+                >
+                  Click here to View Campus Map
+                </a>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="mapModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="mapModalLabel"
+            >
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1
+                      class="modal-title twmc-h2 text-center"
+                      id="mapModalLabel"
+                    >
+                      Campus Map
+                    </h1>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/_advent/CON_Campus%2BMap%2BParking%2BWeb%2BBlock.png"
+                      alt="Location Map"
+                      class="img-responsive center-block"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 py-3">
+              <div>
+                <div class="m-3 p-3">
+                  <strong>When do the shuttles run?</strong><br />
+                  <div class="d-flex">
+                    <span class="twmc-icon-wrapper">
+                      <i class="fa-solid fa-clock"></i>
+                    </span>
+                    <span class="px-1 mx-1">
+                      <em
+                        >Shuttles are available for
+                        <strong>3:00 PM to 9:00 PM Christmas Eve </strong
+                        >services on The Woodlands Campus.
+                      </em>
+                    </span>
+                  </div>
+                </div>
+                <!-- Drop end -->
+
+                <!-- Pickup start -->
+                <div class="m-3 p-3">
+                  <strong>Where do the shuttles run? </strong><br />
+                  <div class="d-flex">
+                    <span class="twmc-icon-wrapper">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </span>
+
+                    <span class="mx-1 px-1">
+                      <em
+                        >Off-site parking at
+                        <strong> Whole Foods</strong> parking garage, levels
+                        <strong>3 & 4</strong>, with shuttle drop-off at
+                        <strong>Atrium Entrance 1</strong>.</em
+                      >
+                    </span>
+                  </div>
+                </div>
+                <!-- Pickup end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container"
+        id="interactive-map"
+        style="
+          background-image: URL('https://www.toptal.com/designers/subtlepatterns/uploads/crossword.png');
+        "
+      >
+        <div class="row">
+          <div class="col-xs-12">
+            <iframe
+              src="https://buswhere.com/twmc/routes/christmas_eve"
+              width="100%"
+              height="900"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container"
+        style="
+          background-image: URL('https://www.toptal.com/designers/subtlepatterns/uploads/crossword.png');
+        "
+      ></div>
+      <div
+        class="container"
+        style="
+          background-image: URL('https://www.toptal.com/designers/subtlepatterns/uploads/crossword.png');
+        "
+      >
+        <div class="row">
+          <div class="col-xs-12 mb-5">
+            <div>
+              <div class="col-xs-12">
+                <h3 class="m-3 p-3 twmc-h2 text-center">
+                  Share Your Experience
+                </h3>
+                <p class="mx-3 px-3">
+                  Help us improve parking and shuttle services by sharing your
+                  experience with us in a survey.
+                </p>
+                <div class="text-center">
+                  <a
+                    href="https://twmc.formstack.com/forms/shuttle_experience_survey"
+                    class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150"
+                    >Take Survey</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+</html>
+
+<!-- 
+<div
+style="height: 2px; background-color: #872734"
+class="py-1"
+id=""
+></div>
+-->

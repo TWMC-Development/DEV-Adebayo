@@ -1,0 +1,85 @@
+<!-- Content -->
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="min-height: 75vh">
+                TWMS staffs a clinic at Elementary/Middle School. The
+                Elementary/Middle school clinic is staffed by a full-time RN.
+                <br />
+                Information regarding medical forms, student absences due to illness,
+                medications, allergies, immunizations, and health screenings can be
+                found in the Student/Parent Handbook.
+                <br /><br />
+                Contact information: <br />
+
+                Elementary/Middle School Clinic: 281-822-8220
+                <a href="mailto:schoolnurse@twmc.org">schoolnurse@twmc.org</a>
+                <br /><br />
+
+                <strong><u>Elementary/Middle School Medical Forms, Policies</u></strong>
+                <ul>
+                    {% for item in Items %}
+                        {% assign clinic = item | Attribute:'Clinic' %}
+                        {% assign filter = item | Attribute:'Filter' | Downcase %}
+                        {% if clinic == 'Yes' and (filter contains 'form' or filter contains 'policy') %}
+                            <li>
+                                <a href="{{ item | Attribute:'Asset','Url' }}" target="_blank">
+                                    {{ item | Attribute:'PublicName' }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <strong><u>Action Plan and Self Carry Forms</u></strong>
+                <ul>
+                    {% for item in Items %}
+                        {% assign clinic = item | Attribute:'Clinic' %}
+                        {% assign filter = item | Attribute:'Filter' | Downcase %}
+                        {% if clinic == 'Yes' and (filter contains 'action' or filter contains 'self') %}
+                            <li>
+                                <a href="{{ item | Attribute:'Asset','Url' }}" target="_blank">
+                                    {{ item | Attribute:'PublicName' }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <strong><u>Additional Information and Links</u></strong>
+                <ul>
+                    <li>
+                        <a href="https://www.cdc.gov/meningitis/about/index.html" target="_blank">
+                            Meningitis Information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.dshs.texas.gov/immunizations/school" target="_blank">
+                            Texas Department of State Health Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.nvic.org/" target="_blank">
+                            National Vaccine Information Center
+                        </a>
+                    </li>
+                </ul>
+
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            Looking for a different form?
+                            <a href="/parents/handbook" class="  ">
+                                Try our Handbook and Forms &#8594;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Content -->

@@ -1,0 +1,212 @@
+<section class="twms__section-pymed twms__content">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-sm-12">
+                {% group where:'Id == 221599' securityenabled:'false' %}
+                {% assign faculty_members = '' %}
+                {% assign admin_members = '' %}
+                {% assign leadership_members = '' %}
+
+                {% for member in group.Members %}
+                {% assign sgroup = member.Person | Attribute:'StaffGroup' %}
+                {% if sgroup == 'Faculty' %}
+                {% capture faculty_members %}
+                {{ faculty_members }}
+                <div class="twms-staff__flex-item-4col twms-staff__card">
+                    <a href="" data-toggle="modal" data-target="#facultyModal{{ forloop.index }}"><img
+                            src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                            class="twms-staff__img mb-3"></a>
+                    <a href="" class="twms-staff__card-name" data-toggle="modal"
+                        data-target="#facultyModal{{ forloop.index }}">{{ member.Person | Property:'FirstName' }} {{
+                        member.Person | Property:'LastName' }}</a>
+                    <p>
+                        Faculty
+                        <br><em>{{ member.Person | Attribute:'Position' }}</em>
+                        <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">{{ member.Person |
+                            Attribute: 'StaffWebsiteEmail' }}</a>
+                    </p>
+                    <div class="twms-staff-modal modal fade" id="facultyModal{{ forloop.index }}" tabindex="-1"
+                        role="dialog" aria-labelledby="facultyModalLabel{{ forloop.index }}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="facultyModalLabel{{ forloop.index }}">{{ member.Person |
+                                        Property:'FirstName' }} {{ member.Person | Property:'LastName' }}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                                        class="twms-staff__img-small">
+                                    <h4>{{ member.Person | Attribute:'Position' }}</h4>
+                                    <p class="mb-0 mt-3"><strong>Educational Philosophy</strong></p>
+                                    <p>{{ member.Person | Attribute:'Philosophy' }}</p>
+                                    <p class="mb-0"><strong>Education</strong></p>
+                                    <p>
+                                        {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                                        {% for item in ematrix.AttributeMatrixItems %}
+                                        {{ item | Attribute:'Education' }}<br>
+                                        {% endfor %}
+                                    </p>
+                                    <p class="mb-0"><strong>About</strong></p>
+                                    <p>{{ member.Person | Attribute:'About' }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ml-auto">
+                                        <button type="button"
+                                            class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endcapture %}
+                {% elsif sgroup == 'Admin' %}
+                {% capture admin_members %}
+                {{ admin_members }}
+                <div class="twms-staff__flex-item-4col twms-staff__card">
+                    <a href="" data-toggle="modal" data-target="#adminModal{{ forloop.index }}"><img
+                            src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                            class="twms-staff__img mb-3"></a>
+                    <a href="" class="twms-staff__card-name" data-toggle="modal"
+                        data-target="#adminModal{{ forloop.index }}">{{ member.Person | Property:'FirstName' }} {{
+                        member.Person | Property:'LastName' }}</a>
+                    <p>
+                        Admin
+                        <br><em>{{ member.Person | Attribute:'Position' }}</em>
+                        <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">{{ member.Person |
+                            Attribute: 'StaffWebsiteEmail' }}</a>
+                    </p>
+                    <div class="twms-staff-modal modal fade" id="adminModal{{ forloop.index }}" tabindex="-1"
+                        role="dialog" aria-labelledby="adminModalLabel{{ forloop.index }}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="adminModalLabel{{ forloop.index }}">{{ member.Person |
+                                        Property:'FirstName' }} {{ member.Person | Property:'LastName' }}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                                        class="twms-staff__img-small">
+                                    <h4>{{ member.Person | Attribute:'Position' }}</h4>
+
+                                    {% assign philosophy = member.Person | Attribute:'Philosophy' %}
+                                    {% if philosophy.size > 0 %}
+                                    <p class="mb-0 mt-3"><strong>Educational Philosophy: </strong>{{ philosophy }}</p>
+                                    {% endif %}
+
+                                    <p>
+                                        {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                                        {% if ematrix.size > 0 %}
+                                    <p><strong>Education</strong></p>
+                                    {% for item in ematrix.AttributeMatrixItems %}
+                                    {{ item | Attribute:'Education' }}<br>
+                                    {% endfor %}
+                                    {% endif %}
+                                    </p>
+
+                                    {% assign about = member.Person | Attribute:'About' %}
+                                    {% if about.size > 0 %}
+                                    <p class="mb-0 "><strong>About: </strong>{{ about }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ml-auto">
+                                        <button type="button"
+                                            class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endcapture %}
+                {% elsif sgroup == 'Leadership' %}
+                {% capture leadership_members %}
+                {{ leadership_members }}
+                <div class="twms-staff__flex-item-4col twms-staff__card">
+                    <a href="" data-toggle="modal" data-target="#leadershipModal{{ forloop.index }}"><img
+                            src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                            class="twms-staff__img mb-3"></a>
+                    <a href="" class="twms-staff__card-name" data-toggle="modal"
+                        data-target="#leadershipModal{{ forloop.index }}">{{ member.Person | Property:'FirstName' }} {{
+                        member.Person | Property:'LastName' }}</a>
+                    <p>
+                        Leadership
+                        <br><em>{{ member.Person | Attribute:'Position' }}</em>
+                        <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">{{ member.Person |
+                            Attribute: 'StaffWebsiteEmail' }}</a>
+                    </p>
+                    <div class="twms-staff-modal modal fade" id="leadershipModal{{ forloop.index }}" tabindex="-1"
+                        role="dialog" aria-labelledby="leadershipModalLabel{{ forloop.index }}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="leadershipModalLabel{{ forloop.index }}">{{
+                                        member.Person | Property:'FirstName' }} {{ member.Person | Property:'LastName'
+                                        }}</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="{{ member.Person | Attribute: 'WebsiteImage' }}" alt=""
+                                        class="twms-staff__img-small">
+                                    <h4>{{ member.Person | Attribute:'Position' }}</h4>
+                                    <p class="mb-0 mt-3"><strong>Educational Philosophy</strong></p>
+                                    <p>{{ member.Person | Attribute:'Philosophy' }}</p>
+                                    <p class="mb-0"><strong>Education</strong></p>
+                                    <p>
+                                        {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                                        {% for item in ematrix.AttributeMatrixItems %}
+                                        {{ item | Attribute:'Education' }}<br>
+                                        {% endfor %}
+                                    </p>
+                                    <p class="mb-0"><strong>About</strong></p>
+                                    <p>{{ member.Person | Attribute:'About' }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="ml-auto">
+                                        <button type="button"
+                                            class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endcapture %}
+                {% endif %}
+                {% endfor %}
+
+                {% if leadership_members %}
+                <h2 class="twms__subheader-blue mb-4 mt-4">LEADERSHIP</h2>
+                <div class="twms-staff__flex-container-4col">
+                    {{ leadership_members }}
+                </div>
+                {% endif %}
+
+                {% if admin_members %}
+                <h2 class="twms__subheader-blue mb-4 mt-4">ADMIN</h2>
+                <div class="twms-staff__flex-container-4col">
+                    {{ admin_members }}
+                </div>
+                {% endif %}
+
+                {% if faculty_members %}
+                <h2 class="twms__subheader-blue mb-4 mt-4">FACULTY</h2>
+                <div class="twms-staff__flex-container-4col">
+                    {{ faculty_members }}
+                </div>
+                {% endif %}
+
+                {% endgroup %}
+            </div>
+        </div>
+    </div>
+</section>

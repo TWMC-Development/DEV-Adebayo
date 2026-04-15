@@ -1,0 +1,227 @@
+<!-- Content -->
+<section class="py-5" style="color: #1A2134;" id="siu-w2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <!-- Saturday, October 11, 2025 -->
+                <div class="text-center twmc-mbm" >
+                    <h2 class="twmc-h2">October 11, 2025</h2>
+                </div>
+                <div class="grids--flex-container-siu">
+
+                    <!-- start loop for each  -->
+                    <!-- assign values -->
+                    {% for item in Items %}
+                    {% assign formattedDate = item.ModifiedDateTime | Date: 'dddd, MMMM dd' %}
+                    {% assign MinistryTags = item | Attribute: 'MinistryTags' %}
+                    {% assign OtherTags = item | Attribute: 'OtherTags' %}
+                    {% assign Age = item | Attribute: 'Age' %}
+                    {% assign EventTime = item | Attribute: 'EventTime' %}
+                    {% assign ArrivalTime = item | Attribute: 'ArrivalTime' %}
+                    {% assign ArrivalNote = item | Attribute: 'ArrivalNote' %}
+                    {% assign Site = item | Attribute: 'Site' %}
+                    {% assign Summary = item.Content %}
+                    {% assign Childcare = item | Attribute: 'Childcare' %}
+                    {% assign ShortDescription = item | Attribute: 'ShortDescription' %}
+                    {% assign Address = item | Attribute: 'Address' %}
+                    {% assign AddressLink = item | Attribute: 'AddressLink' %}
+                    {% assign RegistrationLink = item | Attribute: 'RegistrationLink' %}
+                    {% assign LearnMoreLink = item | Attribute: 'LearnMoreLink' %}
+                    {% assign NumOfAvailableSlots = item | Attribute: 'NumOfAvailableSlots' %}
+                    {% assign RegistrationId = item | Attribute: 'RegistrationId' %}
+
+                    <!-- start conditional on if registration IS NOT there -->
+
+                    {% if RegistrationId == '9999' or RegistrationId == '0' or RegistrationId == null or RegistrationId == '' %}
+
+                    <!-- Serve card -->
+
+                    <div class="grids--flex-item--siu twmc-card-float">
+                        <p class="twmc-serveitup2024--text mb-1 mt-1">
+                            <strong>{{item.Title}}</strong>
+                        </p>
+                        <p class="twmc--btn--tag-tan mb-0">{{MinistryTags}}</p>
+                        <p class="twmc--btn--tag-grey mb-0">{{OtherTags}}</p>
+                        <p class="twmc-p my-3 twmc-textcard-info">
+                            <span class="twmc-icon-wrapper3"><i class="fas fa-clock"></i></span>{{EventTime}}
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i
+                                    class="fa-solid fa-truck-clock"></i></span>{{ArrivalTime}} &mdash; {{ArrivalNote}}
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i class="fas fa-landmark"></i></span><a
+                                href="{{AddressLink}}" target="_blank" class="twmc-springserveday2024--link">{{Site}}
+                                &verbar; {{Address}}</a>
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i class="fa-solid fa-child"></i></span>{{Childcare}}
+                            <br>
+                            {% assign numericAge = Age | AsNumber %}
+                            {% if numericAge == 0 %}
+                                <span class="twmc-icon-wrapper3"><i class="fas fa-circle-exclamation"></i></span>All ages may participate
+                            {% else %}
+                                <span class="twmc-icon-wrapper3"><i class="fas fa-circle-exclamation"></i></span>Ages
+                            {{Age}} years and up may participate
+                            {% endif %}
+                        </p>
+                        <p class="twmc-p twmc-textcard-desc">Project Goal: {{ShortDescription}}</p>
+
+                        <!-- start slots avail -->
+                        {% comment %}
+                        <div class="twmc-seats-flex-container my-3">
+                            <div class="twmc-seats-flex-item">
+                                <p class="twmc-comdinner2024-seats--num mb-0">{{NumOfAvailableSlots}}</p>
+                                <p class="twmc-comdinner2024-seats--text mt-0">Total Slots</p>
+                            </div>
+                            <div class="twmc-seats-flex-item">
+                                <p class="twmc-comdinner2024-seats--num mb-0">
+                                <p class="twmc-comdinner2024-seats--text mt-0"></p>
+                            </div>
+                        </div>
+                        {% endcomment %}
+                         <!-- start conditional slots are unlimited aka 0 -->
+
+                         {% if NumOfAvailableSlots == 0 or NumOfAvailableSlots == '0' %}
+                            <div class="twmc-seats-flex-container my-3">
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0"></p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0"> </p>
+                                </div>
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0"></p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0"></p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="twmc-seats-flex-container my-3">
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0">{{NumOfAvailableSlots}}</p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0">Total Slots</p>
+                                </div>
+                                <div class="twmc-seats-flex-item">
+                                    {% assign slotsLeft = NumOfAvailableSlots | Minus: regCount %}
+                                    <p class="twmc-comdinner2024-seats--num mb-0">
+                                        {% if slotsLeft <= 0 %}
+                                        0
+                                        {% else %}
+                                        {{ slotsLeft }}
+                                        {% endif %}
+                                    </p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0">Slots Left</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <!-- end slots avail -->
+
+
+                        <!-- end slots avail -->
+                         <!-- start more links -->
+
+                        <a href="{{LearnMoreLink}}"
+                            class="twmc--btn twmc--btn--small twmc--btn--springserve2024 twmc-letspac-2 mb-1"
+                            target="_blank">Learn more</a>
+                        <a href="{{RegistrationLink}}"
+                            class="twmc--btn twmc--btn--small twmc--btn--springserve2024 twmc-letspac-2 mb-1"
+                            target="_blank">Register now</a>
+
+                         <!-- end more links -->
+
+                    </div>
+
+                    <!-- end serve card -->
+                    <!-- end conditional on if registration isn't there -->
+                    <!-- start conditional on if registration is there -->
+
+                    {% else %}
+                    {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{RegistrationId}}' count:'true' securityenabled:'false' %}
+                    {% assign regCount = count %}
+                    {% endregistrationregistrant %}
+
+                    <!-- Serve card -->
+
+                    <div class="grids--flex-item--siu twmc-card-float">
+                        <p class="twmc-serveitup2024--text mb-1 mt-1">
+                            <strong>{{item.Title}}</strong>
+                        </p>
+                        <p class="twmc--btn--tag-tan mb-0">{{MinistryTags}}</p>
+                        <p class="twmc--btn--tag-grey mb-0">{{OtherTags}}</p>
+                        <p class="twmc-p my-3 twmc-textcard-info">
+                            <span class="twmc-icon-wrapper3"><i class="fas fa-clock"></i></span>{{EventTime}}
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i
+                                    class="fa-solid fa-truck-clock"></i></span>{{ArrivalTime}} &mdash; {{ArrivalNote}}
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i class="fas fa-landmark"></i></span><a
+                                href="{{AddressLink}}" target="_blank" class="twmc-springserveday2024--link">{{Site}}
+                                &verbar; {{Address}}</a>
+                            <br>
+                            <span class="twmc-icon-wrapper3"><i class="fa-solid fa-child"></i></span>{{Childcare}}
+                            <br>
+                            {% assign numericAge = Age | AsNumber %}
+                            {% if numericAge == 0 %}
+                                <span class="twmc-icon-wrapper3"><i class="fas fa-circle-exclamation"></i></span>All ages may participate
+                            {% else %}
+                                <span class="twmc-icon-wrapper3"><i class="fas fa-circle-exclamation"></i></span>Ages
+                            {{Age}} years and up may participate
+                            {% endif %}
+                        </p>
+                        <p class="twmc-p twmc-textcard-desc">Project Goal: {{ShortDescription}}</p>
+
+                        <!-- start slots avail -->
+
+                        <!-- start conditional slots are unlimited aka 0 -->
+
+                        {% if NumOfAvailableSlots == 0 or NumOfAvailableSlots == '0' %}
+                            <div class="twmc-seats-flex-container my-3">
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0"></p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0"> </p>
+                                </div>
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0"></p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0"></p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="twmc-seats-flex-container my-3">
+                                <div class="twmc-seats-flex-item">
+                                    <p class="twmc-comdinner2024-seats--num mb-0">{{NumOfAvailableSlots}}</p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0">Total Slots</p>
+                                </div>
+                                <div class="twmc-seats-flex-item">
+                                    {% assign slotsLeft = NumOfAvailableSlots | Minus: regCount %}
+                                    <p class="twmc-comdinner2024-seats--num mb-0">
+                                        {% if slotsLeft <= 0 %}
+                                        0
+                                        {% else %}
+                                        {{ slotsLeft }}
+                                        {% endif %}
+                                    </p>
+                                    <p class="twmc-comdinner2024-seats--text mt-0">Slots Left</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                        <!-- end slots avail -->
+                        <!-- start more links -->
+
+                        <a href="{{ LearnMoreLink }}"
+                            class="twmc--btn twmc--btn--small twmc--btn--springserve2024 twmc-letspac-2 mb-1"
+                            target="_blank">Learn more</a>
+                        <a href="{{RegistrationLink}}"
+                            class="twmc--btn twmc--btn--small twmc--btn--springserve2024 twmc-letspac-2 mb-1"
+                            target="_blank">Register now</a>
+
+                          <!-- end more links -->
+
+                    </div>
+
+                    <!-- end serve card -->
+                    <!-- end conditional on if registration is there -->
+
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <!-- End of Saturday, September 30, 2023 -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of content -->

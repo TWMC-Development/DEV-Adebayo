@@ -1,0 +1,49 @@
+<script>
+    /*
+    Title: Run JS on Partial PostBack
+    Purpose: This JS allows you to run JS on every partial postback
+    Author: Joshua Maiorino
+    --------------------------------------------------------------------------------------------
+    05/17/2019 - JJM - Created Script
+    */
+
+    // Run Loadscript on Partial Post Backs.
+    var prm = Sys.WebForms.PageRequestManager.getInstance();
+    prm.add_endRequest(function() {
+        loadscript();
+    });
+
+    // Run Loadscript on Document Ready
+    $(document).ready(loadscript);
+
+    // This is where you create the magic
+    function loadscript() {
+        {% if PageParameter['GuestAccess'] and PageParameter['GuestAccess'] == 'True'  and PageParameter['returnurl'] and PageParameter['returnurl'] != '' %}
+            $('input[value*="Forgot Account"]').after('<div class="btn btn-primary" onclick="ContinueAsGuest()" style="margin-left: 3px;">Continue</div>')
+            let message = `<div class="alert alert-info">Make check-in easier by logging in below or <a class="btn btn-primary" onclick="ContinueAsGuest()">Continue As Guest.</a>`;
+            $('#GuestMessage').html(message);
+        {% endif %}
+
+        $('body').css('min-height', '100vh');
+        resetBtnPrimaryStyle();
+    }
+
+    // Function to handle guest login
+    function ContinueAsGuest() {
+        let redirectUrl = '{{ PageParameter['returnurl'] }}?Guest=true';
+        window.location = redirectUrl;
+    }
+
+    // Function to reset .btn-primary styles
+
+</script>
+
+<div id="GuestMessage"></div>
+
+ <style>
+
+
+
+</style>
+
+   

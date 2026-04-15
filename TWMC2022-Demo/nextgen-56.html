@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen 56</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <style>
+       #twmc-56-hero {
+        /* background-image: linear-gradient(to bottom, rgba(0, 125, 182, 0.4), rgba(255, 255, 255, .7),rgba(255, 255, 255, .65), rgba(0, 125, 182, 0.4)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_nextgen-56/56-Confirmation2-2000W.jpg"); */
+        background-image: linear-gradient(to bottom, rgba(0, 125, 182, 0.4), rgba(255, 255, 255, .7),rgba(255, 255, 255, .65), rgba(0, 125, 182, 0.4)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_nextgen-56/56-Confirmation2-2000W--Compressed.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: scroll;
+        height: 650px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .twmc-56-hero--img {
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        /* margin-top: 2rem; */
+      }
+
+      @media only screen and (max-width: 768px) {
+        #twmc-56-hero {
+          height: 450px;
+          background-image: linear-gradient(to bottom, rgba(0, 125, 182, 0.4), rgba(255, 255, 255, .7),rgba(255, 255, 255, .65), rgba(0, 125, 182, 0.4)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_nextgen-56/56-Confirmation2-mobile.jpg");
+          background-position: center bottom;
+        }
+      
+        .twmc-56-hero--img {
+          width: 80%;
+          height: auto;
+        }
+      }
+    </style>
+
+    <!-- Hero -->
+    <div id="twmc-56-hero" class="py-6">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 text-center mb-4">
+                <img class="img-responsive twmc-56-hero--img" src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_nextgen-56/CHI_56_Logo_CMYK_Text.png" alt="">
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- End of Hero -->
+
+    <!-- Intro -->
+    <section class="twmc-intro">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-10 col-lg-8 col-sm-offset-1 col-lg-offset-2">
+                <div class="row">
+                  <!-- Intro description -->
+                  <div class="col-md-6 twmc-intro__description">
+                    <p class="twmc-p twmc-mbxs">Welcome to 56 Ministry! This is home for 5th and 6th graders at The Woodlands Methodist Church. We strive to create a Christ-centered, safe and fun environment for students. Middle school kids are at such a transitional age, going from young children to teenagers. We want to help guide and shepherd our students to know Christ during this formative age. We gather each week in the Family Life Center for Sunday Service, 9:30 and 11:00 a.m., and Wednesday Bible Study, 5:30 – 7:00 p.m. We would love to see you there!</p>
+                  </div>
+  
+                  <!-- Contact -->
+                  <div class="col-md-6 twmc-intro__contact-container-bootstrap">
+                    <div class="twmc-intro__contact-header">
+                      <h3 class="twmc-h3 twmc-myzero">Contact</h3>
+                    </div>
+  
+                    <div class="twmc-intro__contact-body"> 
+                        <div class="twmc-intro__contact-info">
+                            <i class="fas fa-pen-square fa-2x twmc-icon__traditional" aria-hidden="true"></i>
+                            <p>{[ emailform class:'a-traditional twmc-mlxs' email:'jkropinak@twmc.org' contactname:'John Kropinak (Confirmation) ' ]}</p>
+                        </div>
+
+                        <div class="twmc-intro__contact-info">
+                          <i class="fas fa-pen-square fa-2x twmc-icon__traditional" aria-hidden="true"></i>
+                          <p>{[ emailform class:'a-traditional twmc-mlxs' email:'mpierce@twmc.org' contactname:'Meagan Pierce (56)' ]}</p>
+                        </div>
+
+                        <div class="twmc-intro__contact-info">
+                          <i class="fab fa-facebook-square fa-2x twmc-icon__traditional" aria-hidden="true"></i>
+                          <p><a href="https://www.facebook.com/56ministry" class="a-traditional twmc-mlxs" target="_blank">Like us on Facebook</a></p>
+                        </div>
+
+                        <div class="twmc-intro__contact-info">
+                          <i class="fab fa-instagram-square fa-2x twmc-icon__traditional" aria-hidden="true"></i>
+                          <p><a href="https://www.instagram.com/56ministry/" class="a-traditional twmc-mlxs" target="_blank">Follow us on Instagram</a></p>
+                        </div>
+                        
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    </section>
+      <!-- End of Intro -->
+
+   
+    <!-- E-news -->
+    <section class="twmc-cta twmc-cta__traditional-enews py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            
+            <div class="twmc-flex-container--cta2-enews">
+              <div class="twmc-flex-item--cta2-enews--left">
+                <h3 class="twmc-h3 mt-0">56’s e-News</h3>
+                <p class="twmc-p">Subscribe to the free ministry e-News! Get weekly updates about 5th and 6th graders’ activities sent to your inbox.</p>
+              </div>
+  
+              <div class="twmc-flex-item--cta2-enews--right">
+                <a href="https://mailchi.mp/twmc.org/56-ministry" class="twmc--btn twmc--btn--white-enews">Subscribe Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of E-news -->
+
+    <!-- Feature Banner -->
+    <!-- Summer Splash 2024 -->
+    <div id="twmc-chi__summersplash-featurebanner">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 text-center">
+                  <div class="twmc-feature-banner-1col__img-md twmc-mtzero ">
+                      <img class="twmc-feature-banner__img twmc-mbxs" src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_Text.png" alt="">
+                      <h4 class="twmc-summersplash2023--h4 twmc-letspac-1">Summer fun is on the way! NextGen Kids, NextGen 56 and Recreation Ministry have an amazing summer planned. Register and join us for exciting camps and activities. Don’t miss out on good fun with great friends!</h4>
+                  </div>
+                  <a class="twmc--btn twmc-btn-summersplash2023--yellow twmc-letspac-2 mt-3" href="/summersplash" target="_blank"><strong>Learn more</strong></a>
+                  
+              </div>
+          </div>
+
+      </div>
+    </div>
+    <!-- End of Summer Splash -->
+    <!-- End of Feature Banner -->
+
+    <!-- Connect Block -->
+    <section class="py-6" style="height: 300px; background-color: white;">
+      <div class="container">
+        <div class="row col-sm-12">
+          <h2>CONNECT BLOCK</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Connect Block -->
+
+    
+    <!-- Info -->
+      <section id="children-info" class="py-6 background-lightgrey2">
+        <div class="container-fluid twmc-p">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="twmc-section__info">
+                        <h2 class="twmc-h2 mb-3">Resources</h2>
+                        <!-- Panel group -->
+                        <div class="panel-group" id="accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" role="tablist" aria-multiselectable="true">
+                            <!-- Overview -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading1-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <h4 class="panel-title twmc-h4">
+                                        <a class="accordion-button" role="button" data-toggle="collapse" data-parent="#accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" href="#collapse1-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" aria-expanded="true" aria-controls="collapse1">Overview</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <div class="panel-body twmc-panel-body">
+                                        <p class="twmc-p">We want to reach and teach your children in such a way that they have the greatest opportunity to become devoted followers of Jesus. In NextGen 56 Sunday school, your kids will worship, learn and have fun at their own level.</p>
+                                        <p class="twmc-p">Volunteers are the backbone of NextGen 56 Ministry at The Woodlands Methodist Church. All of our volunteers go through a background check and a training process. We encourage our families to partner with us so that we are able to assist you in developing your child’s spiritual formation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sunday school -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading2-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <h4 class="panel-title twmc-h4">
+                                        <a class="accordion-button" role="button" data-toggle="collapse" data-parent="#accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" href="#collapse2-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" aria-expanded="false" aria-controls="collapse2">Sunday School</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <div class="panel-body py-4 twmc-panel-body">
+                                        <p class="twmc-p mb-0"><b>Sunday School Times</b><br></p>
+                                        <p class="twmc-p">Sundays &verbar; 9:30 and 11:00 a.m.</p>
+                                        
+                                        <p class="twmc-p mb-0"><b>Meeting Location</b></p>
+                                        <p class="twmc-p">Family Life Center across from Main Building</p>
+                                        
+                                        <p class="twmc-p mb-0"><b>Check In</b></p>
+                                        <p class="twmc-p">56 students can check themselves in at the computers close to their meeting areas.</p>
+                                       
+                                        <p class="twmc-p mb-0"><b>Meeting Format</b></p>
+                                        <p class="twmc-p">Each age group meets in a large group for worship and the main lesson and then they break up into small groups for discussion and activities.</p>
+                                        
+                                        <p class="twmc-p mb-0"><b>Children with Special Needs</b></p>
+                                        <p class="twmc-p">We have Sunday school classes for children with special needs in preschool through sixth grade on the Main Campus and in the Loft Building.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                           
+                            <!-- 56 (5th and 6th grade ) -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading7-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <h4 class="panel-title twmc-h4">
+                                        <a class="accordion-button" role="button" data-toggle="collapse" data-parent="#accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" href="#collapse7-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" aria-expanded="false" aria-controls="collapse7">56 (5th and 6th grade)</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse7-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <div class="panel-body py-4 twmc-panel-body">
+                                        <p class="twmc-p twmc-traditional__text"><em><b>The Woodlands Campus only</b></em></p>
+                                        <p class="twmc twmc-mts"><b>Sunday Mornings</b></p>
+                                        <p class="twmc-p">Sunday service for 5th and 6th grade is held in the Family Life Center at 9:30 and 11:00 a.m. Each week, we prepare a faith-based game, live worship and a lesson for our students. Our goal as a ministry on Sunday mornings is to create a safe and Jesus-centered environment for students to thrive. We want students to build their relationships with God, forge a community with their peers, and have fun while doing so.</p>
+                                        
+                                        <p class="twmc-p twmc-mts"><b>Roots Bible Study</b></p>
+                                        <p class="twmc-p">Wednesday night Bible study, called Roots, meets from 5:30 – 7:00 p.m. in the Family Life Center each Wednesday. Each week, we have dinner, live worship, a lesson and small group time. This setting cultivates a closer relationship with Christ and further strengthens one’s faith.</p>
+                                        <p class="twmc-p">If want to join the Supper Club for your student to receive dinner at Roots, click the link below.
+                                          If you have any questions, please contact <a href="mailto:mpierce@twmc.org">Meagan Pierce </a> or <a href="mailto:khaueter@twmc.org">Kylee Haueter </a>.</p>
+                                        
+                                        <a href="https://www.thewoodlandsmethodist.org/group-detail/288634" class="twmc--btn twmc--btn--traditional mb-2" target="_blank" referrerpolicy="origin">Roots Supper Club</a><br>
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Confirmation (6th grade) -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading8-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <h4 class="panel-title twmc-h4">
+                                        <a class="accordion-button" role="button" data-toggle="collapse" data-parent="#accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" href="#collapse8-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" aria-expanded="false" aria-controls="collapse8">Confirmation (6th grade)</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse8-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <div class="panel-body twmc-panel-body">
+                                        <p class="twmc-p twmc-mtxs">Confirmation is a big step in your child’s personal faith journey, preparing him or her for a life of discipleship and Christian service. Our confirmation program prepares your sixth grader to claim the Christian faith as his or her own. We typically have around 220 confirmands each year and celebrate 60 baptisms.</p>
+                        
+                                        <p class="twmc-p">The confirmation journey follows the school year calendar, beginning in August and ending in May. Classes meet on Sunday mornings at 9:30 or 11:15 a.m. at the Family Life Center on The Woodlands Campus and 12:30 &ndash; 1:00 p.m. in the Gymnasium at the Woodforest Campus. Within a small group, your student will develop a spiritual foundation while building valuable relationships with the other students and the adult leaders of their group.</p>
+                                        
+                                        <p class="twmc-p">In addition to weekly classes, your student will participate in service projects within the church and our community, as well as have the opportunity to attend both a fall and spring retreat which includes parents.</p>
+                                        
+                                        <p class="twmc-p mt-4"><a class="twmc--btn twmc--btn--traditional" href="https://www.thewoodlandsmethodist.org/confirmation">Find Out More and Register for Confirmation</a></p>
+                                        
+                                        <p class="twmc-p">If you have any questions, please contact <a>{[ emailform email:'jkropinak@twmc.org' contactname:' John Kropinak' ]}</a>.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Special Blessings -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading9-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <h4 class="panel-title twmc-h4">
+                                        <a class="accordion-button" role="button" data-toggle="collapse" data-parent="#accordion-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" href="#collapse9-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" aria-expanded="false" aria-controls="collapse9">Special Blessings</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse9-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9-id-5f25203d-9fe0-4ba3-9b3a-c8c1b692c7b2">
+                                    <div class="panel-body twmc-panel-body">
+                                        <p class="twmc-p twmc-mtxs">Special Blessings shares the love of Christ and serves children with special needs in preschool through sixth grade. Special Blessings Sunday school is offered at 9:30 and 11:15 a.m. for students in Pre-K – 6th grade on the Main Campus and at the Loft Building. Additional worship, social and recreational opportunities are offered for Special Blessings students and their families throughout the year.</p>
+                            
+                                        <p class="twmc-p">If you have any questions, please contact  <a>{[ emailform email:'kmanning@twmc.org' contactname:'Kelli Manning' ]}</a>, Children’s Special Needs Coordinator.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- End of panel group -->
+
+                        <!-- Learn more -->
+                        <h5 class="twmc-h5">Find out more about our other NextGen Ministries:  
+                          <br><a href="https://www.thewoodlandsmethodist.org/children" class="a-traditional" target="_blank">NextGen Kids (Pre-K &ndash; 4th Grade)</a>
+                          <!-- <br><a href="https://www.thewoodlandsmethodist.org/56" class="a-traditional" target="_blank">NextGen 56 (5th and 6th Grade)</a> -->
+                          <br><a href="https://www.thewoodlandsmethodist.org/students" class="a-traditional" target="_blank">NextGen Students (7th &ndash; 12th Grade)</a>
+                        </h5>
+                        <!-- End of Learn more -->
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Info -->
+
+  <!-- Footer -->
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo mb-3">
+              <div>
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                  _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="mt-3">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+              
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/foundation" class="footer-flex-item footer-link">TWMC Foundation</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/safari-stop" class="footer-flex-item footer-link">Safari Stop</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals & Memorial Services</a>
+              
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

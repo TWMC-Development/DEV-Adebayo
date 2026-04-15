@@ -1,0 +1,26 @@
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <p style="text-align: left">Download our handbooks and forms:</p>
+        {% for item in Items %}
+        {% assign filter = item | Attribute:'Filter' | Downcase %}
+
+        {% if filter contains 'handbook' %}
+        <strong>TWMS HANDBOOKS</strong>
+        <ul>
+          <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank" > {{ item | Attribute:'PublicName' }}</a>
+          </li>
+        </ul>
+        {% elsif filter contains 'form' %}
+        <strong>ATHLETICS PARTICIPATION FORMS</strong>
+        <ul>
+          <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank"> {{ item | Attribute:'PublicName' }}</a>
+          </li>
+        </ul>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

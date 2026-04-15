@@ -1,0 +1,87 @@
+{% comment %} TIME FOR FUN PAGE {% endcomment %}
+<section class="twmc-py3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mb-4">
+                <h2>EVENTS CALENDAR 2025</h2>
+            </div>
+            <div class="col-sm-12">
+                <div class="twmc-55-timeforfun--flex-container">
+                    {% for item in Items %}
+                    <div class="twmc-55-timeforfun--flex-item twmc-55-timeforfun__card">
+                        <h4 class="twmc-h4 twmc-55-timeforfun__text-blue text-uppercase">
+                            {{ item.Title }}
+                        </h4>
+                        <p class="twmc-p twmc-55-timeforfun__text-small">
+                            <strong>
+                                {% assign Note = item | Attribute:'Note' %}
+                                {% assign Icon = item | Attribute:'EventIcon' %}
+                                {% assign NoteLength = Note | Size %}
+                                {% if NoteLength > 1 %}
+                                <span class="twmc-icon-wrapper2">
+                                    <i class="fa-solid fa-{{ Icon }}"></i>
+                                </span>{{ Note }}
+                                {% endif %}
+
+                                {% assign iDate = item | Attribute:'Date' %}
+                                {% assign today = 'Now' | Date | AsDateTime %}
+                                {% assign eDate = item | Attribute:'Date' | AsDateTime %}
+                                {% if eDate >= today %}
+                                <span class="twmc-icon-wrapper2">
+                                    <i class="fas fa-calendar-days"></i>
+                                </span>
+                                {{ iDate }}
+                                &verbar; {{ item | Attribute:'Time' }}
+                                {% endif %}
+                                {% assign DepartureNote = item | Attribute:'DepartureNote' %}
+                                {% if DepartureNote != null and DepartureNote != '' %}
+                                ({{ DepartureNote }})
+                                {% endif %}
+                                <br />
+                                <span class="twmc-icon-wrapper2">
+                                    <i class="fas fa-landmark"></i>
+                                </span> {{ item | Attribute:'Venue' }}, {{ item | Attribute:'CityState' }}
+                                <br />
+                                <span class="twmc-icon-wrapper2">
+                                    <i class="fas fa-money-bill"></i>
+                                </span>
+                                {% assign Price = item | Attribute:'Price' %}
+                                {% if Price == 'Free' %}
+                                {{ Price }}
+                                {% else %}
+                                {{ Price }} per person
+                                {% endif %}
+
+                                {% assign ExtraInfo = item | Attribute:'ExtraInfo' %}
+                                {% assign ExtraInfoSize = ExtraInfo | Size %}
+                                {% assign ExtraInfoIcon = item | Attribute:'ExtraInfoIcon' %}
+                                {% if ExtraInfoSize > 1 %}
+                                <br />
+                                <span class="twmc-icon-wrapper2">
+                                    <i class="fa-solid fa-{{ ExtraInfoIcon }}"></i>
+                                </span>{{ ExtraInfo }}
+                                {% else %}
+                                {% endif %}
+                            </strong>
+                        </p>
+                        <!-- Closing the paragraph tag here -->
+
+                        <p class="twmc-p">{{ item.Content }}</p>
+
+                        {% assign SoldOut = item | Attribute:'SoldOut' | AsBoolean %}
+                        {% unless SoldOut %}
+                        {% assign URL = item | Attribute:'URLString' %}
+                        <a href="{{ URL }}" class="twmc--btn twmc--btn--small twmc-letspac-2 mb-3 twmc--btn--tff-blue"
+                            target="_blank">{{ item | Attribute:'ButtonText' }}</a>
+                        {% else %}
+                        <p class="twmc--btn twmc--btn--small twmc--btn__inactive twmc-letspac-2 mb-3">
+                            SOLD OUT
+                        </p>
+                        {% endunless %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

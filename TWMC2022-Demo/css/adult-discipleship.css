@@ -1,0 +1,728 @@
+/* ===== Adult Discipleship 2024 ===== */
+/* CTA General */
+.twmc-cta {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.twmc-cta--content-wrapper {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 2%;
+}
+
+.twmc-cta--content-text {
+flex-basis: 80%;
+text-align: left;
+}
+
+.twmc-cta--content-button {
+flex-basis: 18%;
+min-width: 150px;
+}
+
+@media only screen and (max-width: 992px) {
+.twmc-cta--content-wrapper {
+  flex-direction: column;
+  gap: 0;
+}
+
+.twmc-cta--content-text {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+}
+/* End of CTA General */
+
+
+/* MODAL */
+.twmc-modal-body-adultdisc2024 {
+    padding: 1.5rem 2rem;
+    background-color: #f2f2f2;
+    color: #fff;
+    min-height: max-content !important;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.twmc-modal-header-adultdisc2024 {
+    background-color: #333;
+    color: #D9EEF1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* END OF MODAL */
+
+
+/* HERO */
+#twmc-adultdiscipleship24--hero {
+    background-image: linear-gradient(to bottom, rgba(72, 66, 61, .4), rgba(72, 66, 61, 0.4)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HeroImage_1270x600.png");
+    /* background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HeroImage_1270x600.png"); */
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+
+    height: 650px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-featbanner--adultdiscipleship24-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .twmc-featbanner--adultdiscipleship24-wrapper > img {
+    max-width: 80%;
+    /* margin-bottom: 2rem; */
+  }
+
+  @media only screen and (max-width: 768px) {
+    .twmc-featbanner--adultdiscipleship24-wrapper > img {
+        width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    #twmc-adultdiscipleship24--hero {
+        height: 450px;
+        padding: 4rem 0;
+    }
+  }
+
+/* END OF HERO */
+
+/* INTRO */
+/* Flex */
+.adultdisc-flex-container--2-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+.adultdisc-flex-item--2-col {
+    flex-basis: 48%;
+    overflow: visible;
+}
+
+.adultdisc-flex--left {
+    max-width: 90%;
+}
+
+@media only screen and (max-width:992px) {
+    .adultdisc-flex-container--2-col {
+        /* flex-direction: column; */
+        gap: 0;
+    }
+
+    .adultdisc-flex-item--2-col {
+        flex-basis: 100%;
+        height: max-content;
+    }
+
+}
+/* End of flex */
+
+.adultdisc-hero {
+    padding: 7rem 0;
+ }
+ 
+ .adultdisc-hero--title {
+     color: #333;
+     /* text-transform: uppercase; */
+     margin-top: 0;
+ }
+ 
+ .adultdisc-hero--text-wrapper {
+     width: 100%;
+     text-align: center;
+     /* text-align: justify; */
+ 
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+ }
+ 
+ .adultdisc-hero--text {
+     color: #333;
+     font-size: 1.1rem;
+     line-height: 1.3;
+     text-align: left;
+ }
+
+@media only screen and (max-width: 992px) {
+    #transition2024--hero {
+        height: max-content;
+    }
+
+    .adultdisc-hero {
+        padding: 5rem 0;
+    }
+
+    .adultdisc-hero--video-wrapper,
+    .adultdisc-hero--text-wrapper {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .adultdisc-hero--video-wrapper {
+        text-align: center;
+    }
+
+    .adultdisc-hero--text {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .adultdisc-hero {
+        padding: 4rem 0;
+    }
+
+    .adultdisc-hero--video-wrapper,
+    .adultdisc-hero--text-wrapper {
+        max-width: 90%;
+    }
+} 
+/* END OF INTRO */
+
+/* CTA */
+#twmc-cta__adultdiscipleship24 {
+    background-color: #862633;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .twmc-cta--text {
+    color: #EEF0E5;
+  }
+
+  .twmc--btn-misquiz {
+    width: 210px;
+  }
+/* END OF CTA */
+
+/* FORMATION */
+#twmc-adultdisc--formation {
+    background-color: #f2f2f2;
+}
+
+
+/* Flex */
+.twmc-formation--flex-container {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    
+    gap: 2%;
+  }
+
+  .twmc-formation--flex-item {
+    flex-basis: 49%;
+    padding: 60px 40px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .twmc-formation--flex-item{
+      padding: 50px 30px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .twmc-formation--flex-container {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .twmc-formation--flex-item {
+      flex-basis: 100%;
+    }
+  }
+
+  /* End of flex */
+  
+  /* Cards */
+  .twmc-formation--card-img {
+    height: 130px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .twmc-formation--card-img {
+      height: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .twmc-formation--card-img {
+      height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .twmc-formation--card-img {
+      height: 110px;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .twmc-formation--card-img {
+      height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .twmc-formation--card-img {
+      height: 80px;
+    }
+  }
+
+    .twmc-adultdisc--card-homegroups {
+        background-color: #f3f3f3;
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HomeGroups_FeatureBanner_BKG-NoStripe.png");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f2f2f2;
+    }
+
+    .twmc-adultdisc--card-band {
+        background-color: #f3f3f3;
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Banding_FeatureBanner_BKG-NoStripe.png");
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f2f2f2;
+    }
+
+    .twmc-adultdisc--card-mentors {
+        background-color: #f3f3f3;
+        background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_SpiritualMentorships_FeatureBanner_BKG-NoStripe.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f2f2f2;
+    }
+
+    .twmc-adultdisc--card-societies {
+        background-color: #f3f3f3;
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Societies_FeatureBanner_BKG-NoStripe.png");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f2f2f2;
+    }
+
+    @media only screen and (max-width: 992px) {
+      .twmc-adultdisc--card-homegroups {
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HomeGroups_FeatureBanner_BKG-NoStripe_800x600.png");
+        background-position: center center;
+    }
+
+    .twmc-adultdisc--card-band {
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Banding_FeatureBanner_BKG-NoStripe_800x600.png");
+        background-position: center right;
+    }
+
+    .twmc-adultdisc--card-mentors {
+        background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_SpiritualMentorships_FeatureBanner_BKG-NoStripe_800x600.png');
+        background-position: center center;
+    }
+
+    .twmc-adultdisc--card-societies {
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Societies_FeatureBanner_BKG-NoStripe_800x600.png");
+        background-position: center center;
+    }
+    }
+
+    
+  /* End of cards */
+
+
+  /* Buttons */
+  .twmc-adultdisc--btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .twmc-adultdisc--btn-wrapper {
+      flex-direction: column;
+    }
+  }
+
+  .btn-default-dark {
+      background-color: #000;
+      color: #fff;
+      border: 2px solid #000;
+      border-radius: 9.5px;
+      padding: .5rem 1.2rem;
+      font-size: .8rem;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.5rem;
+      min-width: 175px;
+      max-width: max-content;
+      text-transform: uppercase;
+    }
+
+    .btn-default-dark:hover,
+    .btn-default-dark:focus{
+        background-color: #111;
+        transform: scale(1.02);
+        color: #fff;
+    }
+
+    .btn-default-maroon {
+        background-color: #6B1E28;
+        color: #fff;
+        border: 2px solid #6B1E28;
+        border-radius: 9.5px;
+        padding: .5rem 1.2rem;
+        font-size: .8rem;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5rem;
+        min-width: 175px;
+        max-width: max-content;
+        text-transform: uppercase;
+    }
+
+    .btn-default-maroon:hover,
+    .btn-default-maroon:focus{
+        background-color: #7a3338;
+        transform: scale(1.02);
+        color: #fff;
+    }
+
+  /* End of buttons */
+
+    /* END OF FORMATION */
+
+  /* DISCIPLESHIP */
+  #twmc-adultdisc--discipleship {
+    /* background-color: #333; */
+    background: linear-gradient(to bottom, #48000b, #350000);
+  }
+
+  .twmc-adultdisc--text-light {
+    color: #fbf7f7;
+  }
+
+  /* Flex */
+  .twmc-adultdisc--flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    gap: 2%;
+  }
+
+  .twmc-adultdisc--flex-item {
+    flex-basis: 49%;
+    padding: 40px 40px 60px;
+    min-height: 400px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .twmc-adultdisc--flex-item{
+      padding: 30px 30px 50px;
+      min-height: 450px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .twmc-adultdisc--flex-item {
+      flex-basis: 100%;
+      min-height: 400px;
+    }
+  }
+
+  /* End of flex */
+
+  /* Cards */
+  .twmc-adultdisc--card-innercontent {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: space-between;
+    height: 100%;
+  }
+
+  .twmc-adultdisc--card-innercontent > p.twmc-p {
+    font-weight: 600;
+  }
+
+  .twmc-adultdisc--card-img {
+    height: 130px;
+    width: max-content;
+    margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .twmc-adultdisc--card-img {
+      height: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .twmc-adultdisc--card-img {
+      height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .twmc-adultdisc--card-img {
+      height: 110px;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .twmc-adultdisc--card-img {
+      height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .twmc-adultdisc--card-img {
+      height: 80px;
+    }
+  }
+
+  .twmc-adultdisc--card-studiesclasses {
+    background-color: #f3f3f3;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Studies_1920x1080.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+  }
+
+  .twmc-adultdisc--card-singles {
+      background-color: #f3f3f3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Singles_1920x1080.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }  
+
+  .twmc-adultdisc--card-men {
+      background-color: #f3f3f3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Men_1920x1080.png');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }  
+
+  .twmc-adultdisc--card-women {
+      background-color: #f3f3f3;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Women_1920x1080.png');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }  
+
+  @media only screen and (max-width: 992px) {
+    .twmc-adultdisc--card-studiesclasses {
+      background-image: linear-gradient(to bottom, rgba(114, 106, 98, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Studies_1067x600.png');
+    }
+
+    .twmc-adultdisc--card-singles {
+      background-image: linear-gradient(to bottom, rgba(114, 106, 98, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Singles_1067x600.jpg');
+    }
+
+  .twmc-adultdisc--card-men {
+      background-image: linear-gradient(to bottom, rgba(114, 106, 98, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Men_1067x600.png');
+  }  
+
+  .twmc-adultdisc--card-women {
+      background-image: linear-gradient(to bottom, rgba(114, 106, 98, 0.7), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Women_1067x600.png');
+  }  
+
+  }
+
+
+  /* ENd of cards */
+  /* END OF DISCIPLESHIP */
+
+
+
+/* ===== End of Adult Discipleship 2024 ===== */
+
+
+/* ===== Homegroups 2024 ===== */
+#twmc-homegroups24--hero {
+    background-color: #5F5650;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HomeGroups_FeatureBanner_BKG.png");
+    text-align: center;
+    background-position: bottom left;
+    background-size: cover;
+
+    height: 650px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  @media only screen and (max-width: 576px) {
+    #twmc-homegroups24--hero {
+        height: 450px;
+        padding: 4rem 0;
+    }
+  }
+
+/* ===== End of Homegroups 2024 ===== */
+
+/* ===== Mentoring 2024 ===== */
+#twmc-mentor24--hero {
+    background-color: #5F5650;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_SpiritualMentorships_FeatureBanner_BKG.png");
+    text-align: center;
+    background-position: bottom right;
+    background-size: cover;
+
+    height: 650px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  @media only screen and (max-width: 576px) {
+    #twmc-mentor24--hero {
+        height: 450px;
+        padding: 4rem 0;
+    }
+  }
+/* ===== End of Mentoring 2024 ===== */
+
+
+/* ===== DIS - Formational Banding ===== */
+#twmc-banding24--hero {
+  background-color: #5F5650;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Banding_FeatureBanner_BKG.png");
+    text-align: center;
+    background-position: bottom right;
+    background-size: cover;
+
+    height: 650px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-mentor24--hero {
+        height: 450px;
+        padding: 4rem 0;
+    }
+}
+
+.dis-banding-intro-text {
+  text-align: center;
+  font-weight: 600;
+}
+
+.dis-banding-intro-text2 {
+  text-align: left;
+}
+
+.dis-banding-testimony-textwrapper {
+  width: 100%;
+  text-align: center;
+  /* text-align: justify; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .dis-banding-intro-text {
+    text-align: center;
+  }
+
+  .dis-banding-intro-text2 {
+    text-align: center;
+    /* margin-top: 1.5rem; */
+  }
+
+  .dis-banding-testimony-textwrapper > h4.twmc-h4 {
+    margin-top: 1.7rem;
+  }
+}
+/* ===== End of DIS - Formational Banding ===== */
+
+
+/* ===== DIS - Societies ===== */
+#twmc-societies24--hero {
+    background-color: #5F5650;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Societies_FeatureBanner_BKG.png");
+    text-align: center;
+    background-position: bottom right;
+    background-size: cover;
+
+    height: 650px;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-mentor24--hero {
+        height: 450px;
+        padding: 4rem 0;
+    }
+}
+/* ===== DIS - Societies ===== */

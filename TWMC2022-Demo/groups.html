@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://rockcore2022.s3.us-east-2.amazonaws.com/css/bootstrap_s3.css">
+    <link rel="stylesheet" href="https://rockcore2022.s3.us-east-2.amazonaws.com/css/theme_s3.css">
+    <link rel="stylesheet" href="./css/main.css">
+   
+    <!--  Datepicker -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+
+    
+</head>
+<body>
+    <!-- Navigation -->
+  <header class="twmc-header--white-bg">
+    <div class="twmc-container twmc-header__container ">
+        <a href="#">
+            <!-- color logo -->
+            <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo-fullcolor.png" alt="" class="twmc-nav__logo3">
+        </a>
+        <nav class="twmc-header-nav--white-bg">
+            <a href="https://www.thewoodlandsumc.org/im-new" class="twmc-header__link--dark"><b>I'm New</b></a>
+            <a href="https://www.thewoodlandsumc.org/messages" class="twmc-header__link--dark"><b>Messages</b></a>
+            <a href="#" class="twmc-header__link--dark"><b>Serve</b></a>
+            <a href="https://www.thewoodlandsumc.org/give" class="twmc-header__link--dark"><b>Give</b></a>
+            <a href="https://www.thewoodlandsumc.org/login" class="twmc-header__link--dark"><i class="fas fa-user"></i></a>
+            <a href="https://www.thewoodlandsumc.org/Find" class="twmc-header__link--dark"><i class="fa fa-search"></i></a>
+
+            <!-- hamburger menu -->
+            <button class="twmc-hamburger--dark">
+                <div class="twmc-bar--dark"></div>
+            </button>
+        </nav>
+
+        
+      </div>
+  </header>
+
+  <!-- Mega nav -->
+  <!-- Mega nav after hamburger button is clicked -->
+  <nav class="twmc-container twmc-mega-nav ">
+      <!-- Mega nav grid -->
+      <div class="twmc-mega-nav--white-bg__container twmc-mega-nav__grid">
+
+          <!-- About -->
+          <div class="twmc-mega-nav__about">
+              <h3 class="twmc-mega-nav__h3">About</h3>
+              <a href="https://www.thewoodlandsumc.org/what-we-believe" class="twmc-nav__link2">What We Believe</a>
+              <a href="https://www.thewoodlandsumc.org/baptism" class="twmc-nav__link2">Baptism</a>
+              <a href="https://www.thewoodlandsumc.org/our-story" class="twmc-nav__link2">Our Story</a>
+              <a href="https://www.thewoodlandsumc.org/membership" class="twmc-nav__link2">Membership</a>
+              <a href="https://www.thewoodlandsumc.org/staff" class="twmc-nav__link2">Staff</a>
+              <a href="https://www.thewoodlandsumc.org/facilities" class="twmc-nav__link2">Facilities</a>
+              <a href="https://www.thewoodlandsumc.org/employment" class="twmc-nav__link2">Employment</a>
+              <a href="https://www.thewoodlandsumc.org/venues" class="twmc-nav__link2">Venues &amp; Bookings</a>
+              <a href="https://www.thewoodlandsumc.org/foundation" class="twmc-nav__link2">TWUMC Foundation</a>
+              <a href="https://www.thewoodlandsumc.org/gracegarden" class="twmc-nav__link2">Grace Garden - Columbarium</a>
+              <a href="https://www.thewoodlandsumc.org/seminary-scholarship" class="twmc-nav__link2">Seminary Scholarship Program</a>
+              <a href="https://www.thewoodlandsumc.org/cafe" class="twmc-nav__link2">Fireside Cafe</a>
+              <a href="https://www.thewoodlandsumc.org/funerals" class="twmc-nav__link2">Funerals and Memorial Services</a>
+              <a href="https://www.thewoodlandsumc.org/live" class="twmc-nav__link2">Church Online</a>
+          </div>
+
+          <!-- Services & Connect -->
+          <div class="twmc-mega-nav--white-bg__services-connect">
+              <!-- Services -->
+              <h3 class="twmc-mega-nav--white-bg__h3">Services</h3>
+              <a href="https://www.thewoodlandsumc.org/chapel" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="twmc-nav__services-img" class="twmc-nav__link2"><span class="twmc-mega-nav--white-bg__services--ml-small">Chapel</span></a>
+              <a href="https://www.thewoodlandsumc.org/harvest" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Harvest</span></a>
+              <a href="https://www.thewoodlandsumc.org/loft" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Loft</span></a>
+              <a href="https://www.thewoodlandsumc.org/traditional" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Traditional</span></a>
+              <a href="https://www.thewoodlandsumc.org/woodforest" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=2700fc35-6eaf-413a-a7c6-1609ae585648" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Woodforest</span></a>
+
+              
+              <!-- Connect -->
+              <h3 class="twmc-mega-nav__h3 pt-3">Connect</h3>
+              <a href="#" class="twmc-nav__link2">G.R.O.W.</a>
+              <a href="#" class="twmc-nav__link2">Events</a>
+              <a href="https://www.thewoodlandsumc.org/support-groups" class="twmc-nav__link2">Support groups</a>
+              <a href="https://www.thewoodlandsumc.org/recovery-groups" class="twmc-nav__link2">Recovery Groups</a>
+          </div>
+          <!-- End of Services -->
+
+          <!-- Ministries -->
+          <div class="twmc-mega-nav--white-bg__ministries">
+              <h3 class="twmc-mega-nav--white-bg__h3">Ministries</h3>
+              <a href="https://www.thewoodlandsumc.org/adult-discipleship" class="twmc-nav__link2">Adult Discipleship</a>
+              <a href="https://www.thewoodlandsumc.org/children" class="twmc-nav__link2">Children</a>
+              <a href="https://www.thewoodlandsumc.org/help" class="twmc-nav__link2">Prayer &amp; Care</a>
+              <a href="https://www.thewoodlandsumc.org/marriage" class="twmc-nav__link2">Marriage</a>
+              <a href="https://www.thewoodlandsumc.org/men" class="twmc-nav__link2">Men</a>
+              <a href="https://www.thewoodlandsumc.org/missions" class="twmc-nav__link2">Missions</a>
+              <a href="https://www.thewoodlandsumc.org/music-fine-arts" class="twmc-nav__link2">Music &amp; Fine Arts</a>
+              <a href="https://www.thewoodlandsumc.org/recreation" class="twmc-nav__link2">Recreation</a>
+              <a href="https://www.thewoodlandsumc.org/senior-adults" class="twmc-nav__link2">Senior Adults</a>
+              <a href="https://www.thewoodlandsumc.org/singles" class="twmc-nav__link2">Singles</a>
+              <a href="https://www.thewoodlandsumc.org/special-needs" class="twmc-nav__link2">Special Needs</a>
+              <a href="https://www.thewoodlandsumc.org/students" class="twmc-nav__link2">Students</a>
+              <a href="https://www.thewoodlandsumc.org/women" class="twmc-nav__link2">Women</a>
+              <a href="https://www.thewoodlandsumc.org/school" class="twmc-nav__link2">Woodlands Methodist School</a>
+              <a href="https://www.thewoodlandsumc.org/page/866" class="twmc-nav__link2">Woodlands Music</a>
+          </div>
+          <!-- End of Ministries -->
+
+          <!-- Navigation Buttons -->
+          <div class="twmc-mega-nav--white-bg__buttons">
+              <a href="https://www.thewoodlandsumc.org/im-new" class="twmc--btn twmc--btn--outline-mega">I'm New</a>
+              <a href="https://www.thewoodlandsumc.org/messages" class="twmc--btn twmc--btn--outline-mega">Messages</a>
+              <a href="#" class="twmc--btn twmc--btn--outline-mega">Serve</a>
+              <a href="https://www.thewoodlandsumc.org/give" class="twmc--btn twmc--btn--outline-mega">Give</a>
+              <a href="https://www.thewoodlandsumc.org/login" class="twmc--btn twmc--btn--outline-mega"><i class="fas fa-user"></i></a>
+              <a href="https://www.thewoodlandsumc.org/find" class="twmc--btn twmc--btn--outline-mega"><i class="fa fa-search"></i></a>
+
+              <!-- Socmed -->
+              <div class="twmc-mega-nav--white-bg__socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.thewoodlandsumc.org/podcast"><i class="fas fa-podcast fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+              </div>
+              <!-- End of Socmed -->
+          </div>
+          <!-- End of navigation buttons -->
+
+      </div>
+      <!-- End of mega nav grid -->
+  </nav>
+  <!-- End of mega nav -->
+  <!-- End of Navigation -->
+
+  <!-- Back to top button -->
+  <a href="#" id="backtotop-button"></a>
+
+    <main>
+        <!-- page title -->
+        <section class="twmc-title-stripe twmc-grow-g-bg">
+            <div class="twmc-container">
+                <h1 class="twmc-h1 grow-g__page-title">Gather in Community</h1>
+            </div>
+        </section>
+        <!-- end of page title -->
+
+
+        <!-- ===== GROUPS section ===== -->
+        <section>
+            <!-- filter section -->
+            <section class="twmc-filter-section--light-grey">
+                <div class="container">
+                    <!-- title -->
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="grow-g__title">
+                                <h2 class="twmc-h2">Group Finder</h2>
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-3">
+                            <div id="filter-button">
+                                <a class="twmc--btn__grow twmc--btn__grow-traditional" role="button" data-toggle="collapse" href="#filter-content2" aria-expanded="false" aria-controls="filter-content">Filter &darr;</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- filter -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- grow-g__filter -->
+                            <div class="grow-g__filter">
+    
+                                <!-- #filter-content -->
+                                <div class="collapse" id="filter-content2">
+                                    <!-- first filter row -->
+                                    <div class="row">
+                                        <!-- Audience -->
+                                        <div class="col-md-4">
+                                            <select name="grow-audience-filter" id="grow-g__filter-audience" class="grow__form-select">
+                                                <option value="" selected="selected">Audience</option>
+                                                <option value="148">All Church</option>
+                                                <option value="24">Adults</option>
+                                                <option value="23">Children</option>
+                                                <option value="984">Couples</option>
+                                                <option value="989">Family Friendly</option>
+                                                <option value="988">High School</option>
+                                                <option value="147">Junior High</option>
+                                                <option value="151">Men</option>
+                                                <option value="1067">Missions</option>
+                                                <option value="1023">Music &amp; Fine Arts</option>
+                                                <option value="1018">Newcomer</option>
+                                                <option value="987">Parents</option>
+                                                <option value="1022">Recreation</option>
+                                                <option value="985">Senior Adults</option>
+                                                <option value="986">Singles</option>
+                                                <option value="997">Special Needs</option>
+                                                <option value="1019">Students</option>
+                                                <option value="152">Women</option>
+                                                <option value="3167">Young Adults</option>
+                                            </select>
+                                        </div>
+    
+                                        <!-- Day -->
+                                        <div class="col-md-4">
+                                            <select name="grow-day-filter" id="grow-g__filter-day" class="grow__form-select">
+                                                <option value="" selected="selected">Day Of The Week</option>
+                                                <option value="0">Sunday</option>
+                                                <option value="1">Monday</option>
+                                                <option value="2">Tuesday</option>
+                                                <option value="3">Wednesday</option>
+                                                <option value="4">Thursday</option>
+                                                <option value="5">Friday</option>
+                                                <option value="6">Saturday</option>
+                                            </select>
+                                        </div>
+    
+                                        <!-- Group type -->
+                                        <div class="col-md-4">
+                                            <select name="grow-topic-filter" id="grow-g__filter-topic" class="grow__form-select">
+                                                <option value="" selected="selected">GROW Group Type</option>
+                                                <option value="3291">Gather in Community: Study</option>
+                                                <option value="3453">Gather in Community: Formation</option>
+                                                <option value="3454">Gather in Community: Fellowship</option>
+                                                <option value="3292">Raise Up: Share</option>
+                                                <option value="3455">Raise Up: Mentor</option>
+                                                <option value="3456">Raise Up: Lead</option>
+                                                <option value="3293">Outward Focus: Serve</option>
+                                                <option value="3457">Outward Focus: Local Missions</option>
+                                                <option value="3458">Outward Focus: Global Missions</option>
+                                                <option value="3294">Walk with God: Worship</option>
+                                                <option value="3459">Walk with God: Prayer</option>
+                                                <option value="3460">Walk with God: Generosity</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- end of first filter row -->
+    
+                                    <!-- second filter row -->
+                                    <div class="row mt-2">
+                                        <div class="col-md-8 grow__filter-date">
+                                            <div class="grow__input-group">
+                                                <input type="text" class="grow__form-control" placeholder="mm/dd/yyyy" id="datepicker1">
+                                                <span class="grow__input-group-text" ><i class="fas fa-calendar-alt"></i></span>
+                                            </div>
+                                            <div class="grow__filter-to">
+                                                <p> to </p>
+                                            </div>
+                                            <div class="grow__input-group">
+                                                <input type="text" class="grow__form-control" placeholder="mm/dd/yyyy" id="datepicker2">
+                                                <span class="grow__input-group-text" ><i class="fas fa-calendar-alt"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="button" class="twmc--btn__grow twmc--btn__grow-traditional grow__filter-date-button">Filter by date</button>
+                                        </div>
+                                    </div>
+                                    <!-- end of second filter row -->
+                                </div>
+                                <!-- end of #filter-content -->
+    
+                            </div>
+                            <!-- end of .grow-g__filter -->
+                        </div>
+                        <!-- end of .cool-sm-12 -->
+                    </div>
+                    <!-- end of .row -->
+                </div>
+                <!-- end of container -->
+                       
+            </section>
+            <!-- end of filter section  -->
+
+            <!-- Gather groups cards -->
+            <section class="twmc-groups-section--light-grey">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="twmc-flex-container--3-col">
+                                <!-- Card v1 -->
+                                <div class="twmc-flex-item--3-col grow__card">
+                                    <div class="grow__card-strip--traditional"></div>
+                                    <div class="grow__card-content">
+                                        <h3 class="grow__card-title4 text-traditional">
+                                            <a href="#" class="grow__card-title4 text-traditional">Abba, Father, Daddy!</a>
+                                        </h3>
+                                        <div class="grow__card-tag4">
+                                            <span>Adults</span>
+                                        </div>
+                                        <div class="grow__card-info">
+                                            <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                            <p> Sundays</p>
+                                        </div>
+                                        <div class="grow__card-info">
+                                            <i class="far fa-clock grow__card-icon"></i>
+                                            <p> 09:30 AM</p>
+                                        </div>
+                                        <div class="grow__card-description">
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus, officiis sed cum reprehenderit quia! Quae itaque nam iste nostrum? Magnam sapiente voluptatibus tenetur vitae.</p>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="twmc--btn__grow twmc--btn__grow-traditional grow-g__details">Details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of card v1 -->
+                                
+                                <!-- Card v1 -->
+                                <div class="twmc-flex-item--3-col grow__card">
+                                    <div class="grow__card-strip--traditional"></div>
+                                    <div class="grow__card-content">
+                                        <h3 class="grow__card-title4 text-traditional">
+                                            <a href="#" class="grow__card-title4 text-traditional">Ask, Seek & Knock</a>
+                                        </h3>
+                                        <div class="grow__card-tag4">
+                                            <!-- <i class="fas fa-tag"></i> -->
+                                            <span>Adults,</span>
+                                            <span>Children,</span>
+                                            <span>Family Friendly,</span>
+                                            <span>Parents</span>
+                                        </div>
+                                        
+                                        <div class="grow__card-description">
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus, officiis sed cum reprehenderit quia! Quae itaque nam iste nostrum? Magnam sapiente voluptatibus tenetur vitae.</p>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="twmc--btn__grow twmc--btn__grow-traditional grow-g__details">Details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of card v1 -->
+
+                                <!-- Card v1 -->
+                                <div class="twmc-flex-item--3-col grow__card">
+                                    <div class="grow__card-strip--traditional"></div>
+                                    <div class="grow__card-content">
+                                        <h3 class="grow__card-title4 text-traditional">
+                                            <a href="#" class="grow__card-title4 text-traditional">BEYOND the Daniel Plan</a>
+                                        </h3>
+                                        <div class="grow__card-tag4">
+                                            <!-- <i class="fas fa-tag"></i> -->
+                                            <span>Adults,</span>
+                                            <span>Recreation,</span>
+                                            <span>Women</span>
+                                        </div>
+                                        
+                                        <div class="grow__card-description">
+                                            <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum necessitatibus, officiis sed cum reprehenderit quia! Quae itaque nam iste nostrum? Magnam sapiente voluptatibus tenetur vitae.</p>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="twmc--btn__grow twmc--btn__grow-traditional grow-g__details">Details &raquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of card v1 -->
+
+                                
+                                
+                            </div>
+                            <!-- end of .twmc-flex-container--3-col -->
+                        </div>
+                        <!-- end of .col-sm-12 -->
+                    </div>
+                    <!-- end of row -->
+
+                    <!-- pagination -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="grow-traditional__pagination">
+                                <a href="#">&laquo;</a>
+                                <a href="#" class="grow-traditional__page-active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">&raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of pagination -->
+                </div>
+                <!-- end of .container -->
+            </section>
+            <!-- end of gather groups cards -->
+
+        </section>
+        <!-- ===== end of GROUPS section ===== -->
+    </main>
+
+    <!-- JQuery -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a768a77f8f.js" crossorigin="anonymous"></script>
+    <script src="./js/twmc-scripts2.js"></script>
+
+     <!-- datepicker -->
+     <script>
+         $(document).ready(function () {
+            $('#datepicker1').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+            $('#datepicker2').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+            $('#datepicker3').datepicker({
+                format: 'mm-dd-yyyy'
+            }); 
+            $('#datepicker4').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+        });
+     </script>
+
+</body>
+</html>

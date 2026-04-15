@@ -1,0 +1,376 @@
+/* ------------------------------------------------------------ */
+/* Author: Ely Febriyanti */
+/* Page: Dissability Ministry, Special Blessings, Special Needs */
+/* ------------------------------------------------------------ */
+
+
+/* ===== BUTTON ===== */
+/* ================== */
+.tw25-btn-outline-whtsm {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .4rem 0.7rem;
+    font-size: .7rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+}
+
+.tw25-btn-outline-whtsm:hover,
+.tw25-btn-outline-whtsm:focus {
+    border: 2px solid transparent;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, .2) !important;
+    color: #fff;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+.spndis25-btn-purple {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff;
+    background-color: #632E6C;
+    border: 2px solid #632E6C;
+    margin-bottom: 4px;
+    padding: .65rem 1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+    text-align: center;
+}
+
+.spndis25-btn-purple:hover,
+.spndis25-btn-purple:focus {
+    border: 2px solid transparent;
+    border-color: rgb(99, 46, 108);
+    background-color: rgba(99, 46, 108, .2) !important;
+    color: #632E6C;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+
+.tw25-btn-trad {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff;
+    background-color: #862633;
+    border: 2px solid #862633;
+    margin-bottom: 4px;
+    padding: .65rem 1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+}
+
+.tw25-btn-trad:hover,
+.tw25-btn-trad:focus {
+    border: 2px solid transparent;
+    border-color: rgb(134, 38, 51);
+    background-color: rgba(134, 38, 51, .2) !important;
+    color: #862633;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+.tw25-btn-wht {
+    display: inline-block;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #fff;
+    margin-bottom: 4px;
+    padding: .65rem 1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    min-width: 160px;
+    max-width: 100%;
+}
+
+.tw25-btn-wht:hover,
+.tw25-btn-wht:focus {
+    border: 2px solid transparent;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, .2) !important;
+    color: #fff;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+
+
+
+
+.twmc25-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-minwd-160 {
+    min-width: 160px;
+    max-width: 100%;
+}
+/* ===== END OF BUTTON ===== */
+/* ========================= */
+
+
+ /* ===== HERO ===== */
+ /* ================ */
+ /* DISSABILITY MINISTRY PAGE */
+ /* Mobile first */
+ #spndis25-hero {
+    background-color: #f2f2f2;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/getty-images-f8Tj_oybW8w-unsplash.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 450px;
+
+    /* border-bottom: 20px solid #994297; */
+    border-bottom: 20px solid #862633;
+  }
+
+  @media only screen and (min-width: 576px) {
+    #spndis25-hero {
+      height: 500px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #spndis25-hero {
+      height: 700px;
+    }
+  }
+
+/* SPECIAL BLESSINGS */
+#spbless25-hero {
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/jakub-sofranko-RoYujmHrdxA-unsplash.jpg");
+
+    /* border-bottom: 20px solid #994297; */
+    border-bottom: 20px solid #862633;
+    
+}
+
+.ministry25-hero {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center top;
+    height: 450px;
+
+    color: #fff;
+    text-align: left;
+}
+
+@media only screen and (min-width: 576px) {
+    .ministry25-hero {
+        height: 650px;
+    }
+}
+ /* ===== END OF HERO ===== */
+ /* ======================= */
+
+
+/* ===== INTRO ===== */
+/* ================= */
+/* DISSABILITY MINISTRY PAGE */
+#spndis25-intro {
+    background-color: #FCF2FA;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/AdobeStock_1289439920_A25.jpg");
+    text-align: center;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.spndis25-intro--description {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .twmc25-intro--header {
+    margin-top: 2rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .spndis25-intro--description {
+      margin-top: 0;
+      padding-left: 1.5rem;
+    }
+
+    .twmc25-intro--header {
+      margin-top: 0 !important;
+    }
+
+  }
+
+/* SPECIAL BLESSINGS */
+#spbless25-intro {
+    background-color: #FCF2FA;
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/AdobeStock_1289439920_A25.jpg");
+    text-align: center;
+    background-position: bottom center;
+    background-size: cover;
+}
+/* ===== END OF INTRO ===== */
+/* ======================== */
+
+
+/* ===== IMG NAVIGATION 1 ===== */
+/* ========================== */
+/* Mobile first */
+#spndis25-imgnav {
+    height: max-content;
+}
+
+.spndis25-imgnav-bg1 {
+    /* background-color: rgb(99, 46, 108);
+    background-image: linear-gradient(to bottom, rgba(99, 46, 108, 0.8), rgba(99, 46, 108, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/ashton-bingham-SAHBl2UpXco-unsplash.jpg"); */
+
+    background-color: rgb(134, 38, 51);
+    background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.8), rgba(134, 38, 51, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/ashton-bingham-SAHBl2UpXco-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.spndis25-imgnav-bg2 {
+    /* background-color: rgb(99, 46, 108);
+    background-image: linear-gradient(to bottom, rgba(99, 46, 108, 0.8), rgba(99, 46, 108, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/tim-mossholder-hOF1bWoet_Q-unsplash.jpg"); */
+
+    background-color: rgb(134, 38, 51);
+    background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.8), rgba(134, 38, 51, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/tim-mossholder-hOF1bWoet_Q-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.spndis25-imgnav-bg3 {
+    /* background-color: rgb(99, 46, 108);
+    background-image: linear-gradient(to bottom, rgba(99, 46, 108, 0.8), rgba(99, 46, 108, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/andy-quezada-ljqLQIts0sE-unsplash.jpg"); */
+
+    background-color: rgb(134, 38, 51);
+    background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.8), rgba(134, 38, 51, 0.9)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/andy-quezada-ljqLQIts0sE-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Custom flex item */
+.spndis25-imgnav-item {
+    flex-basis: 100%;
+    min-height: 200px;
+
+    /* border-top: 2px solid #632e6c;
+    border-bottom: 2px solid #632e6c;
+    border-left: 1px solid #632e6c;
+    border-right: 1px solid #632e6c; */
+
+     border-top: 2px solid #862633;
+    border-bottom: 2px solid #862633;
+    border-left: 1px solid #862633;
+    border-right: 1px solid #862633;
+}
+
+@media only screen and (min-width: 768px) {
+    .spndis25-imgnav-item {
+        flex-basis: 50%;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .spndis25-imgnav-item {
+        flex-basis: 33.33%;
+        /* min-height: 180px; */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .spndis25-imgnav-item {
+        flex-basis: 20%;
+    }
+}
+
+/* End of custom flex item */
+
+.hm25-imgnav-text {
+    line-height: 1.3;
+}
+
+/* ===== END OF IMG NAVIGATION 1 ===== */
+/* ================================= */
+
+
+/* ===== CONTACT CTA ===== */
+/* ======================= */
+/* SPECIAL BLESSINGS */
+.spndis25-cta {
+    /* background: linear-gradient(45deg, #994297, #632e6c); */
+    background: linear-gradient(45deg, #862633, #6B1E29);
+    padding: 1.5rem;
+}
+
+.twmc-icon-wrapper {
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+}
+
+.spbless-ct-flexcont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+
+@media only screen and (max-width: 576px) {
+    .spbless-ct-flexcont {
+        gap: 5%;
+    }
+}
+
+.cta-contact-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* ===== END OF CONTACT ====== */
+/* =========================== */

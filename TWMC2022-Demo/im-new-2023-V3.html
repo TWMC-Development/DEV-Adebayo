@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm New Page - V3</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="./js/twmc-scripts.js"></script>
+  
+    
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    
+    <main>
+        <!-- Hero -->
+        <section id="twmc-im-new__hero2023" class="twmc-hero-background--650h-center twmc-hero__text">
+          <h1 class="twmc-h1">VISIT</h1>
+                  <h3 class="twmc-h3">Let Us Know You're Coming</h3>
+                  <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional-lg twmc-mbxs twmc--btn--w150 mt-3">Plan Now</a>
+        </section>
+        <!-- End of Hero -->
+
+        <!-- Intro -->
+        <section class="twmc-section__pymed-lightgrey">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                  <div class="row">
+                     <!-- Intro video -->
+                    <div class="col-md-6">
+                      <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                      </style>
+                      <div class="embed-container"><iframe src="https://player.vimeo.com/video/755253246" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+                      </div>
+        
+                    <!-- Intro description -->
+                    <div class="col-md-6 twmc-intro__description-bootstrap">
+                      <h2 class="twmc-h2 twmc-intro__h2">Welcome!</h2>
+                      <p class="twmc-p">Welcome to The Woodlands Methodist Church! We’re so glad you found us! Like most families, life is probably busy and a little chaotic these days. Our church is here to help you navigate the many challenges facing individuals and families. You’ll find worship to be uplifting as our pastors share stories about a loving God full of peace and hope. We also have many people who can’t wait to show you around. They want to help your family find a place to connect and develop deeper relationships so life, even a busy one, is full of meaning and purpose.</p>
+                      <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                      <a href="https://thewoodlandsmethodist.org/what-we-believe" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">What we believe</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+        </section>
+        <!-- End of intro -->
+
+        <!-- What's next? -->
+        <section id="twmc-im-new__steps" class="py-5">     
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center twmc-text-color--white">
+                <h2 class="twmc-h2 mb-4 ">WHAT'S NEXT?</h2>
+                <div>
+                  <a href="#twmc-im-new__section-map" class="twmc--btn twmc--btn--outline-white twmc--btn--w260 mb-2">Choose your location</a>
+                  <div><i class="fa-solid fa-arrow-down fa-2x twmc-text-color--white mb-2"></i></div>
+                  <a href="#twmc-im-new__findyourservice" class="twmc--btn twmc--btn--outline-white twmc--btn--w260 mb-2">Find your service</a>
+                  <div><i class="fa-solid fa-arrow-down fa-2x twmc-text-color--white mb-2"></i></div>
+                  <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--outline-white twmc--btn--w260 mb-2">Plan your visit</a>
+                </div>
+  
+                <h4 class="twmc-h4 mt-4">Do you have any questions? Check our <a href="#twmc-im-new__faq" class="twmc-link--lightred">FAQ</a>.</h4>
+  
+              </div>
+            </div> 
+          </div>   
+        </section>
+        <!-- End of what's next? -->
+
+
+        <!-- Map -->
+        <section id="twmc-im-new__section-map">
+          <div class="row">
+            <!-- Address -->
+            <div class="col-md-6 twmc-im-new__map-text">
+                <h2 class="twmc-h2">CHOOSE YOUR LOCATION</h2>
+
+                <!-- TWMC -->
+                <h4 class="mb-1 mt-4">1.<span class="twmc-mlxs"></span>The Woodlands Methodist Church</h4>
+                <p class="mb-0 twmc-p"><i class="fas fa-map-marker-alt"></i><span class="twmc-mlxs"> <a href="https://goo.gl/maps/mZmN3nQsbhiyoUq27" class="twmc-link--red" target="_blank">2200 Lake Woodlands Drive, The Woodlands, Texas 77380</a></span></p>
+                <p class="mb-0 twmc-p"><i class="fas fa-phone"></i><span class="twmc-mlxs"><a href="tel:281.297.5900" class="twmc-link--red" target="_blank">281.297.5900</a></span></p>
+                <p class="twmc-p"><i class="fas fa-envelope"></i><span class="twmc-mlxs"><a class="twmc-link--red">{[ emailform email:'info@twmc.org' contactname:'Contact The Woodlands Methodist Church' ]}</a></span></p>
+
+                <!-- CAW -->
+                <h4 class="mb-1 mt-4">2.<span class="twmc-mlxs"></span>The Church at Woodforest</h4>
+                <p class="mb-0 twmc-p"><i class="fas fa-map-marker-alt"></i><span class="twmc-mlxs"> <a href="https://goo.gl/maps/rC8u1k4JxDXyCmSy7" class="twmc-link--red" target="_blank">Woodforest Worship Center, 700 Fish Creek Thoroughfare, Montgomery, TX 77316-6842</a></span></p>
+                <p class="mb-0 twmc-p"><i class="fas fa-phone"></i><span class="twmc-mlxs"><a href="tel:281.822.8182" class="twmc-link--red" target="_blank">281.822.8182</a></span></p>
+                <p class="mb-4 twmc-p"><i class="fas fa-envelope"></i><span class="twmc-mlxs"><a class="twmc-link--red">{[ emailform email:'pbroussard@twmc.org' contactname:'Contact The Church at Woodforest' ]}</a></span></p>
+
+                <!-- CAM -->
+                <h4 class="mb-1 mt-4">3.<span class="twmc-mlxs"></span>The Church at Montgomery</h4>
+                <p class="mb-0 twmc-p"><i class="fas fa-map-marker-alt"></i><span class="twmc-mlxs"> <a href="https://goo.gl/maps/rC8u1k4JxDXyCmSy7" class="twmc-link--red" target="_blank">Oak Hills Junior High, 19190 Keenan Cut Off Rd, Montgomery, TX 77316</a></span></p>
+                <p class="mb-0 twmc-p"><i class="fas fa-phone"></i><span class="twmc-mlxs"><a href="tel:281.822.8182" class="twmc-link--red" target="_blank">281.297.5900</a></span></p>
+                <p class="mb-4 twmc-p"><i class="fas fa-envelope"></i><span class="twmc-mlxs"><a class="twmc-link--red">{[ emailform email:'cmatthews@twmc.org' contactname:'Contact The Church at Montgomery' ]}</a></span></p>
+
+                <!-- CTA -->
+                <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc-mbs">Plan your visit</a>
+            </div>
+            <!-- Map -->
+            <div class="col-md-6" id="twmc-im-new__map"></div>
+
+        </div>
+        </section>        
+        <!-- End of map -->
+
+        <!-- Find your service tabs -->
+        <section id="twmc-im-new__findyourservice" class="twmc-section__pymed-lightgrey">
+          <div class="container">
+              <div class="row">
+                <div class="col-sm-12 mb-4">
+                  <h2 class="twmc-h2">FIND YOUR SERVICE</h2>
+
+                  <!-- Navigation Tab -->
+                  <ul class="nav nav-pills nav-pills--trad mt-4 mb-2">
+                    <li class="active"><a data-toggle="pill" href="#loc-thewoodlands">The Woodlands</a></li>
+                    <li><a data-toggle="pill" href="#loc-woodforest">Woodforest</a></li>
+                    <li><a data-toggle="pill" href="#loc-montgomery">Montgomery</a></li>
+                  </ul>
+                  <!-- End of Navigation Tab -->
+
+                  <p class="twmc-p">At The Woodlands Methodist Church, we value being one church with one mission and multiple expressions of worship. We are comprised of four worship communities that offer a distinctive, unique expression of worship. Traditional, Harvest, Loft, and the Church at Woodforest combine biblical teaching, prayer, worship through music and song, communion and baptism to offer many opportunities to worship in community.</p>
+                </div>
+
+                <!-- Services -->
+                <div class="col-sm-12">
+                  
+                  
+                  <!-- Tab Content -->
+                  <div class="tab-content">
+                      <!-- Location - The Woodlands -->
+                      <div id="loc-thewoodlands" class="tab-pane fade in active">
+                          <div class="bh-single--chord">
+                              <h3 class="twmc-h3 mt-2 mb-3 text-uppercase">The Woodlands Campus</h3>
+                             
+                              
+                              <!-- Flex -->
+                              <div class="twmc-im-new__flex-container--2-col">
+                                <!-- Traditional -->
+                                <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                  <div class="embed-container">
+                                      <iframe src="https://player.vimeo.com/video/646149190" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                  </div>
+                                  <div class="mt-2">
+                                      <h3 class="twmc-h3 mt-4">TRADITIONAL</h3>
+                                      <p class="twmc-im-new__p-small">
+                                          <strong>
+                                              <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 8:30 and 11:00 a.m.
+                                              <br><i class="fa-solid fa-music twmc-mrxs"></i> Choirs, traditional music
+                                              <br><i class="fas fa-tshirt twmc-mrxs"></i>Formal, modest casual
+                                              <br><i class="fa-regular fa-baby twmc-mrxs"></i>  Nursing room available
+                                              <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available
+                                              <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lots  A, B, C, D, E, F and G. <em>Parking lot A is reserved for senior adults and persons requiring special accessibility.</em>
+                                              <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                          </strong>
+                                      </p>
+                                      <p class="twmc-p mt-2">We offer an inspirational, Biblical message combined with your favorite classic hymns to create a beautiful traditional worship service. Add in a large choir and full orchestra and you’ll leave the morning feeling uplifted and inspired... <a href="https://thewoodlandsmethodist.org/traditional" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+  
+                                      <div class="mt-3">
+                                          <a href="#mapModalTraditional" data-toggle="modal" data-target="#mapModalTraditional" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                          <a href="https://www.youtube.com/@TheWoodlandsMethodistChurch" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                          <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                      </div>
+                                      
+                                      </div>
+                                  </div>
+
+                                   <!-- traditional map modal -->
+                                   <div class="modal fade" id="mapModalTraditional" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelTraditional">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelTraditional">Traditional Worship</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=e24cbba4-6993-46e0-8749-9ab8c8a8fe9d" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <!-- Chapel -->
+                                <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                  <div class="embed-container">
+                                      <iframe src="https://player.vimeo.com/video/646149190" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                  </div>
+                                  <div class="mt-2">
+                                      <h3 class="twmc-h3 mt-4">CHAPEL</h3>
+                                      <p class="twmc-im-new__p-small">
+                                          <strong>
+                                              <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 8:30 a.m.
+                                              <br><i class="fa-solid fa-music twmc-mrxs"></i> Choirs, traditional music
+                                              <br><i class="fas fa-tshirt twmc-mrxs"></i>Formal, modest casual
+                                              <br><i class="fa-regular fa-baby twmc-mrxs"></i>  Nursing room available
+                                              <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available
+                                              <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lots  A, B, C, D, E, F and G. <em>Parking lot A is reserved for senior adults and persons requiring special accessibility.</em>
+                                              <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                          </strong>
+                                      </p>
+                                      <p class="twmc-p mt-2">Our Chapel Services follow a formal order of worship on Sunday mornings, offering traditional Methodist liturgy and an inspirational message accompanied by a variety of classical and contemporary music in a smaller, more intimate setting... <a href="https://thewoodlandsmethodist.org/chapel" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+  
+                                      <div class="mt-3">
+                                          <a href="#mapModalChapel" data-toggle="modal" data-target="#mapModalChapel" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                          <a href="https://www.youtube.com/@TheWoodlandsMethodistChurch" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                          <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                      </div>
+                                      
+                                      </div>
+                                  </div>
+
+                                  <!-- chapel map modal -->
+                                  <div class="modal fade" id="mapModalChapel" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelChapel">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelChapel">Chapel Worship</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=e24cbba4-6993-46e0-8749-9ab8c8a8fe9d" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+    
+
+                                  <!-- Contemporary at Harvest -->
+                                  <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                    <div class="embed-container">
+                                        <iframe src="https://player.vimeo.com/video/646154854" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="twmc-h3 mt-4">CONTEMPORARY AT HARVEST</h3>
+                                        <p class="twmc-im-new__p-small">
+                                            <strong>
+                                                <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 9:30 and 11:00 a.m.
+                                                <br><i class="fa-solid fa-music twmc-mrxs"></i> Contemporary music
+                                                <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                                <br><i class="fa-regular fa-baby twmc-mrxs"></i>  Nursing room available
+                                                <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available
+                                                <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lots K, L, M and N
+                                                <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                            </strong>
+                                        </p>
+
+                                        <p class="twmc-p mt-2">You’ll be moved by this contemporary worship service. Our pastor specializes in encouraging Bible teaching to give you the lift you need to face the week. Prayer and a worshipful praise team add to this inspiring service... <a href="https://thewoodlandsmethodist.org/harvest" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+    
+                                        <div class="mt-3">
+                                            <a href="#mapModalHarvest" data-toggle="modal" data-target="#mapModalHarvest"  class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                            <a href="https://www.youtube.com/@HarvestTWMC" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                            <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+    
+                                <!-- Contemporary at Harvest map modal -->
+                                <div class="modal fade" id="mapModalHarvest" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelHarvest">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelHarvest">Harvest Worship Center</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsumc.org:443/GetImage.ashx?guid=4cad2999-f5f0-4cc4-bd03-1bf9412eb67f" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                  <!-- Modern at Loft -->
+                                  <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                    <div class="embed-container">
+                                        <iframe src="https://player.vimeo.com/video/710423883" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="twmc-h3 mt-4">MODERN AT LOFT</h3>
+                                        <p class="twmc-im-new__p-small">
+                                            <strong>
+                                                <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Saturdays at 6:00 p.m.
+                                                <br><i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 9:30 and 11:00 a.m.
+                                                <br><i class="fa-solid fa-music twmc-mrxs"></i> Modern music
+                                                <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                                <br><i class="fa-regular fa-baby twmc-mrxs"></i> Nursing room available
+                                                <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available
+                                                <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lots J, I, P, O, Q, R and S. <em>Parking lot S is reserved for persons with special needs and persons requiring special accessibility.</em>
+                                                <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                            </strong>
+                                        </p>
+
+                                        <p class="twmc-p mt-2">Looking for a place to ask questions and explore life with Jesus? Our service features relevant teaching about faith and culture with energetic music and innovative media. At the Loft, your past doesn’t matter; you’re welcome here... <a href="https://thewoodlandsmethodist.org/loft" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+    
+                                        <div class="mt-3">
+                                            <a href="#mapModalLoft" data-toggle="modal" data-target="#mapModalLoft"  class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                            <a href="https://www.youtube.com/@LoftTWMC" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                            <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Modern map modal -->
+                                <div class="modal fade" id="mapModalLoft" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelLoft">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelLoft">Loft Worship</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=322bdd45-e284-48d4-a622-906d3c4c3cb9" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- ESPAÑOL -->
+                                  <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                    <div class="embed-container">
+                                        <iframe src="https://player.vimeo.com/video/850592470" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="twmc-h3 mt-4">ESPAÑOL</h3>
+                                        <p class="twmc-im-new__p-small">
+                                            <strong>
+                                                <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Domingo a las 10:00 a.m.
+                                                <br><i class="fa-solid fa-music twmc-mrxs"></i> Modern music
+                                                <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                                <br><i class="fa-regular fa-baby twmc-mrxs"></i> Nursing room available???
+                                                <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available???
+                                                <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lots J, I, P, O, Q, R and S. <em>Parking lot S is reserved for persons with special needs and persons requiring special accessibility. ???</em>
+                                                <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                            </strong>
+                                        </p>
+
+                                        <p class="twmc-p mt-2">Bienvenido a The Woodlands Methodist Church en Español. Estamos contentos que quiera unirse a nuestra iglesia. Todos fuimos creados para adorar y glorificar a Dios y esa es nuestra misión en cada servicio. Venga listo/a para cantar alabanzas y gozarse en Su presencia, orar juntos, aprender de Su palabra y asi cada día poder acercárnos más a Cristo.... <a href="https://thewoodlandsmethodist.org/loft" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+    
+                                        <div class="mt-3">
+                                            <a href="#mapModalEspanol" data-toggle="modal" data-target="#mapModalEspanol"  class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                            <a href="https://www.youtube.com/@LoftTWMC" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                            <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- Modern map modal -->
+                                <div class="modal fade" id="mapModalEspanol" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelEspanol">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelEspanol">Espanol Worship</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=322bdd45-e284-48d4-a622-906d3c4c3cb9" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                  
+                                  <!-- Students -->
+                                  <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                    <div class="embed-container">
+                                        <iframe src="https://player.vimeo.com/video/646149120" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="twmc-h3 mt-4">STUDENTS</h3>
+                                        <p class="twmc-im-new__p-small">
+                                          <strong>
+                                            <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 9:30 and 11:00 a.m.
+                                            <br><i class="fa-solid fa-music twmc-mrxs"></i> Modern music
+                                            <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                            <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lot P, Q, R
+                                            <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                          </strong>
+                                        </p>
+                                        
+                                        <p class="twmc-p mt-2">In Rebelbase Student Ministry, we go deeper into what it means to be His followers. We’re ready to move beyond the basics — we want to help students answer the question, “What’s next?” We want them to grow in their faith, take ownership of their relationships with Jesus and honor God with their lives... <a href="https://thewoodlandsmethodist.org/students" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+    
+                                        <div class="mt-3">
+                                            <a href="#mapModalStudents" data-toggle="modal" data-target="#mapModalStudents"  class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                            <a href="https://www.youtube.com/@RebelbaseStudentMinistry" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank" >Watch Online</a>
+                                            <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                        </div>             
+                                    </div>
+                                </div>
+
+                                <!-- Students map modal -->
+                                <div class="modal fade" id="mapModalStudents" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelStudents">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelStudents">Rebelbase | Students Ministry</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=322bdd45-e284-48d4-a622-906d3c4c3cb9" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Children -->
+                                  <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                    <div class="embed-container">
+                                        <iframe src="https://player.vimeo.com/video/646149021" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h3 class="twmc-h3 mt-4">CHILDREN</h3>
+                                        <p class="twmc-im-new__p-small">
+                                          <strong>
+                                            <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Main building: Sundays at 9:30 and 11:00 a.m.
+                                            <br><i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Loft building: Saturdays at 6:00 p.m. &verbar; Sundays at 9:30 and 11:00 a.m.
+                                            <br><i class="fa-solid fa-music twmc-mrxs"></i> Modern music
+                                            <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                            <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking lot X, Y, Z
+                                            <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                            <br><i class="fas fa-smile-beam twmc-mrxs"></i> Special Needs classes available
+                                          </strong>
+                                        </p>
+                                       
+
+                                        <p class="twmc-p mt-2">Greetings from Children’s Ministry! We couldn’t be more excited that you are looking for a church home, and we hope that your family can find a place here! God calls us to walk alongside parents of all children. Our vision is to excellently engage children with biblically missional principles in a safe environment... <a href="https://thewoodlandsmethodist.org/children" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+    
+                                        <div class="mt-3">
+                                            <a href="#mapModalChildrenMain" data-toggle="modal" data-target="#mapModalChildrenMain"  class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Main buidling</a>
+                                            <a href="#mapModalChildrenLoft" data-toggle="modal" data-target="#mapModalChildrenLoft" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Loft building</a>
+                                            <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                        </div>             
+                                    </div>
+                                </div>
+
+                                <!-- Children map modal - main-->
+                                <div class="modal fade" id="mapModalChildrenMain" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelChildrenMain">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                          <h3 class="twmc-h3" id="mapModalLabelChildrenMain">Children Ministry</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                          <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=e24cbba4-6993-46e0-8749-9ab8c8a8fe9d" alt="Worship Community Location Map" class="img-responsive">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <!-- Children map modal - loft-->
+                                <div class="modal fade" id="mapModalChildrenLoft" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelChildrenLoft">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <h3 class="twmc-h3" id="mapModalLabelChildrenLoft">Children Ministry</h3>
+                                      </div>
+                                      <div class="modal-body">
+                                        <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=e24cbba4-6993-46e0-8749-9ab8c8a8fe9d" alt="Worship Community Location Map" class="img-responsive">
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+
+
+                              </div>
+
+
+
+
+                          </div>
+                      </div>
+
+                       <!-- Location - Woodforest -->
+                      <div id="loc-woodforest" class="tab-pane fade">
+                          <div class="bh-single--chord">
+                              <h3 class="twmc-h3 mt-2 mb-3 text-uppercase">Woodforest Campus</h3>
+                             
+                              
+                              <!-- Flex -->
+                              <div class="twmc-im-new__flex-container--2-col">
+                                <!-- Woodforest -->
+                                <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                                  <div class="embed-container">
+                                      <iframe src="https://player.vimeo.com/video/646148987" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
+                                  </div>
+                                  <div class="mt-2">
+                                      <h3 class="twmc-h3 mt-4">CONTEMPORARY AT WOODFOREST</h3>
+                                      <p class="twmc-im-new__p-small">
+                                          <strong>
+                                              <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 9:30 and 11:00 a.m.
+                                              <br><i class="fa-solid fa-music twmc-mrxs"></i> Contemporary music
+                                              <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual
+                                              <br><i class="fa-regular fa-baby twmc-mrxs"></i> Nursing room available
+                                              <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available
+                                              <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking available
+                                              <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                          </strong>
+                                      </p>
+
+                                      <p class="twmc-p mt-2">You’re invited to worship with this “front porch” community of believers at the Church at Woodforest. We love to share our uplifting worship music and engaging Bible teaching with families and individuals of all ages. Join us on Sunday morning and be inspired for the rest of your week... <a href="https://thewoodlandsmethodist.org/woodforest" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+  
+                                      <div class="mt-3">
+                                          <a href="#mapModalWoodforest" data-toggle="modal" data-target="#mapModalWoodforest" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                          <a href="https://www.youtube.com/@TheChurchatWoodforest" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                          <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                      </div>             
+                                    </div>
+                                  </div>
+
+                                  <!-- Contemporary/Woodforest map modal -->
+                                  <div class="modal fade" id="mapModalWoodforest" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelWoodforest">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <h3 class="twmc-h3" id="mapModalLabelWoodforest">Woodforest</h3>
+                                          </div>
+                                          <div class="modal-body">
+                                            <img src="https://www.thewoodlandsmethodist.org/themes/TWUMC2018/Assets/images/CAW_RockMap_Update.png" alt="Worship Community Location Map" class="img-responsive">
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                             
+
+
+                            
+                          </div>
+                      </div>
+
+                       <!-- Location - Montgomery -->
+                       <div id="loc-montgomery" class="tab-pane fade">
+                        <div class="bh-single--chord">
+                          <h3 class="twmc-h3 mt-4 mb-3 text-uppercase">Montgomery Campus</h3>
+                             
+                              
+                          <!-- Flex -->
+                          <div class="twmc-im-new__flex-container--2-col">
+                            <!-- Montgomery -->
+                            <div class="twmc-im-new__flex-item--2-col twmc-im-new__card">
+                              <div class="embed-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cam-montgomery/CAM_I'm+New.jpg" alt="" class="img-responsive">
+                              </div>
+                              <div class="mt-2">
+                                  <h3 class="twmc-h3 mt-4">MONTGOMERY</h3>
+                                  <p class="twmc-im-new__p-small">
+                                      <strong>
+                                          <i class="fas fa-clock twmc-mrxs" aria-hidden="true"></i> Sundays at 10:30 a.m.
+                                          <br><i class="fa-solid fa-music twmc-mrxs"></i> Contemporary music ???
+                                          <br><i class="fas fa-tshirt twmc-mrxs"></i>Modest casual ???
+                                          <br><i class="fa-regular fa-baby twmc-mrxs"></i> Nursing room available ???
+                                          <br><i class="fa-solid fa-children twmc-mrxs"></i>Child care available??
+                                          <br><i class="fa-solid fa-circle-parking twmc-mrxs"></i> Parking available
+                                          <br><i class="fa-solid fa-hands-praying twmc-mrxs"></i>Prayer request available
+                                      </strong>
+                                  </p>
+
+                                  <p class="twmc-p mt-2">The Church at Montgomery is a campus of the Woodlands Methodist Church. Worship gatherings are held in the Worship Center at Oak Hills Junior High at 19190 Keenan Cut Off Rd.in Montgomery, TX. Worship services are filled with live worship music and engaging Bible teaching. Families and individuals of all ages are invited to join this community of believers... <a href="https://thewoodlandsmethodist.org/montgomery" class="twmc-nav__link3">Learn&nbsp;more&nbsp;→</a></p>
+
+                                  <div class="mt-3">
+                                      <a href="#mapModalWoodforest" data-toggle="modal" data-target="#mapModalWoodforest" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Locate venue</a>
+                                      <a href="https://www.youtube.com/@TheChurchatWoodforest" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150" target="_blank">Watch Online</a>
+                                      <a href="https://thewoodlandsmethodist.org/visit" class="twmc--btn twmc--btn--traditional twmc--btn--small twmc-mbxs twmc--btn--w150">Plan your visit</a>
+                                  </div>             
+                                </div>
+                              </div>
+
+                              <!-- Contemporary/Woodforest map modal -->
+                              <div class="modal fade" id="mapModalWoodforest" tabindex="-1" role="dialog" aria-labelledby="mapModalLabelWoodforest">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        <h3 class="twmc-h3" id="mapModalLabelWoodforest">Woodforest</h3>
+                                      </div>
+                                      <div class="modal-body">
+                                        <img src="https://www.thewoodlandsmethodist.org/themes/TWUMC2018/Assets/images/CAW_RockMap_Update.png" alt="Worship Community Location Map" class="img-responsive">
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                         
+                          
+                        </div>
+                    </div>
+                  </div>
+                  <!-- End of Tab Content -->
+                </div>
+
+              </div>
+          </div>
+        </section>
+        <!-- End of Find your service tabs -->
+
+
+        <!-- FAQ -->
+        <section class="twmc-section__pymed-white" id="twmc-im-new__faq">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="twmc-h2 mb-4">FAQ</h2>
+
+                <!-- Panel group -->
+                <div class="panel-group mb-0" id="accordion-faq" role="tablist" aria-multiselectable="true">
+                  <!-- Q1 -->
+                  <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-faq1">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq1" aria-expanded="true" aria-controls="collapse-faq1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Where do I start?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-faq1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-faq1">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p twmc-myxs">Welcome to The Woodlands Methodist Church! We are glad you are here. Please take time to explore our website to see all the worship services, Bible studies, classes, outreach activities and events we have to offer. Once you decide to visit one of our two campuses, stop by Connection Point, located outside each worship venue, on The Woodlands Campus to meet our members, find out more information and receive a gift. If visiting our Woodforest Campus, stop by the First Timer table to connect with church volunteers who are there to help.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Q2 -->
+                  <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-faq2">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq2" aria-expanded="false" aria-controls="collapse-foundation2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">What style of worship do you offer?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-faq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq2">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                               <strong>THE WOODLANDS CAMPUS</strong>
+                               <br>We have three distinct worship communities on our campus in The Woodlands. 
+                            </p>
+                            
+
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <a href="https://twmc.org/traditional" target="_blank"><strong>Traditional Worship</strong></a>
+                              <br>
+                              This service takes place in our beautiful sanctuary. Worship includes favorite hymns and Christ-centered messages for anyone who longs for timeless traditions. 
+                            </p>
+
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <a href="https://twmc.org/harvest" target="_blank"><strong>Contemporary Worship</strong></a>
+                              <br>
+                              Our contemporary worship in the Harvest Worship Center is fresh and modern with an uplifting biblical message and soul-satisfying worship music. 
+                            </p>
+
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <a href="https://twmc.org/loft" target="_blank"><strong>Modern Worship</strong></a>
+                              <br>
+                              The Loft Worship Center is an inviting renovated warehouse space. This modern worship service offers energetic music and relevant teaching for those who desire a less traditional setting.
+                            </p>
+
+                            <p class="twmc-p twmc-mts">
+                              <strong>WOODFOREST CAMPUS</strong>
+                              <br>Our Woodforest Campus offers family-friendly worship with contemporary music and engaging Bible teaching. Worship with your neighbors in a welcoming worship center that overlooks the natural beauty of the community. 
+                           </p>
+                           
+                          </div>
+                          
+                      </div>
+                  </div>
+
+                  <!-- Q3 -->
+                  <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-faq3">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq3" aria-expanded="false" aria-controls="collapse-faq3" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Where do I park?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-faq3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq3">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <strong>THE WOODLANDS CAMPUS</strong>
+                              <br>We have numerous parking lots convenient to each of our worship communities. 
+                           </p>
+
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <strong>Traditional Worship: </strong>Parking lots A, B, C, D, E, F and G are closest to the Sanctuary. <em>Parking lot A is reserved for senior adults and persons requiring special accessibility.</em>
+                            </p>
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <strong>Contemporary Worship: </strong>Parking lots K, L, M and N are closest to the Harvest Worship Center.
+                            </p>
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              <strong>Modern Worship: </strong>Parking lots J, I, P, O, Q, R and S are closest to the Loft Worship Center. <em>Parking lot S is reserved for persons with special needs and persons requiring special accessibility.</em>
+                            </p>
+
+                            <p class="twmc-p twmc-mbzero twmc-mtxs">
+                              Reference our online maps <a href="https://twmc.org/facilities" target="_blank">here</a>.
+                            </p>
+
+                            <p class="twmc-p twmc-mbzero twmc-mts">
+                              <strong>WOODFOREST CAMPUS</strong>
+                              <br>You may enter the parking lot from Woodforest Parkway North or from Fish Creek Thoroughfare. If you have a special need to be close to the building, those parking spots are at the front. On Sundays when our lot is full, you are invited to park across the street in the Stewart Elementary School lot. In instances when we anticipate large overflow parking needs, we typically have golf carts available to safely transport you to the building.
+                           </p>
+                           <p class="twmc-p twmc-mtxs">
+                            Reference the map <a href="https://twmc.org/woodforest" target="_blank">here</a>.
+                          </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Q4 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq4">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq4" aria-expanded="false" aria-controls="collapse-faq4" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do you offer child care on Sunday morning?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq4">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mbzero twmc-mtxs">
+                            <strong>THE WOODLANDS CAMPUS</strong>
+                            <br>Our Noah’s Nook Nursery, for ages 6 weeks through 2 years, is open during worship services in the main building, no reservations necessary. Nursery facilities are also open in the Loft Building. Our nursery is staffed by paid, experienced workers who are trained in the areas of child care, child development, safety and sanitation, and are certified by the American Heart Association in CPR and First Aid. 
+                         </p>
+
+                         <p class="twmc-p twmc-mtxs">
+                          <strong>WOODFOREST CAMPUS</strong>
+                          <br>Nursery is available for ages 6 weeks through 2 years. When you arrive, you will see the children’s check-in area. You can sign up your child for nursery at one of the kiosks.
+                       </p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Q5 -->
+                  <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-faq5">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq5" aria-expanded="false" aria-controls="collapse-faq5" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there programming for my children on Sunday morning?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-faq5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq5">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p twmc-mtxs">
+                              <strong>THE WOODLANDS CAMPUS</strong>
+                           </p>
+                           <p class="twmc-p twmc-mtxs">
+                            We have a vibrant, active children’s program with classes and activities for children of all ages. In Sunday school, your kids will worship, learn and have fun at their own level. Visit our <a href="https://www.twmc.org/children" target="_blank">NextGen Kids page</a> to learn more about what a Sunday morning looks like and what activities we have available for each age-level.
+                           </p>
+                           <p class="twmc-p">
+                            On months with five Sundays, we celebrate 5th Sunday Weekend Family Worship. On Family Worship days, children attend worship services with their families. NextGen Kids staff are on hand with activities for children to get the most out of their worship experience.
+                           </p>
+
+                           <p class="twmc-p twmc-mts">
+                            <strong>WOODFOREST CAMPUS</strong>
+                          </p>
+                          <p class="twmc-p">
+                            We worship as a family, inviting all ages to join us. After a time of singing, praying, giving offering and sharing in Communion (the first Sunday of each month), we invite children, preschool through fifth grade, to attend Children’s Church. When you arrive to our building, you will see our children’s check-in area. You can sign up your child for Children’s Church at one of the kiosks.
+                          </p>
+
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Q6 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq6">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq6" aria-expanded="false" aria-controls="collapse-faq6" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do you offer any resources for my child with special needs?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq6">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mtxs">
+                            On our campus in The Woodlands, we have an active <a href="https://www.twmc.org/special-needs" target="_blank">Special Needs Ministry </a>for children, youth and adults. We offer worship, discipleship and social and recreational opportunities for those with special needs. We also strive to provide care and support for their family members and caregivers. 
+                          </p>
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q7 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq7">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq7" aria-expanded="false" aria-controls="collapse-faq7" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Do you offer adult Sunday school classes?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq7">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mtxs">
+                            Whether you’re a new Christian or you’d like to go deeper into the faith you’ve had for years, we have studies and groups available for all ages, life stages and spiritual journeys, not just on Sunday but throughout the week. Explore our <a href="https://www.twmc.org/gather" target="_blank">classes and studies</a> to find the fit that’s right for you. Use the filter button to search classes that are specific to your needs.
+                          </p>
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q8 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq8">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq8" aria-expanded="false" aria-controls="collapse-faq8" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Is there student ministry on Sunday morning?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq8">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mbzero twmc-mtxs">
+                            <strong>THE WOODLANDS CAMPUS</strong>
+                            <br>Our student ministry serves students in 5th – 12th grades. Students in 5th and 6th grade meet in the Family Life Center at either 9:30 or 11:00 for <a href="https://twmc.org/children" target="_blank">Sunday morning worship</a>. Sixth grade students also have the opportunity to participate in <a href="https://twmc.org/confirmation" target="_blank">Confirmation</a>. <a href="https://twmc.org/students" target="_blank">Junior high and high school students</a> meet at 11:00 a.m. in the Student Ministry Building for a time of fellowship and worship.
+                         </p>
+
+                         <p class="twmc-p twmc-mts">
+                          <strong>WOODFOREST CAMPUS</strong>
+                          <br>The student ministry at Woodforest serves students in grades 6 – 12. Our Sunday morning services are geared for family worship; however, our <a href="https://twmc.org/students" target="_blank">junior high and high school students</a> have their own additional meeting times. Junior high students gather on Wednesday nights for fellowship, games and interactive Bible study. Senior high students worship God and dive into His Word together in an intimate worship gathering on Sunday nights. 
+                       </p>
+
+                         
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q9 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq9">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq9" aria-expanded="false" aria-controls="collapse-faq9" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How long is a normal service?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq9">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mtxs">
+                            Services in all worship communities on both campuses last about an hour. 
+                          </p>
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q10 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq10">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq10" aria-expanded="false" aria-controls="collapse-faq10" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Where can I find more information about how TWMC serves the community?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq10">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mtxs">
+                            Our church mission statement is <em>Reach People for Jesus Christ, Disciple Them in Faith, and Help Those in Need</em>. That last part &mdash; <em>Help Those in Need </em> &mdash; is the heartbeat of our church. It is interwoven in and throughout all our ministries and driven by our <a href="https://www.twmc.org/missions" target="_blank">Missions Ministry</a>. Because we love Jesus Christ, we have hearts of compassion to help those in need. 
+                          </p>
+
+                          <p class="twmc-p">
+                            We have many local and global partners who help us faithfully serve God’s people. Our <a href="https://www.twmc.org/mission-partners" target="_blank">local partners</a> in Montgomery County, the Houston area and Texas provide <a href="https://www.twmc.org/outward" target="_blank">opportunities to serve our neighbors</a>. Our <a href="https://www.twmc.org/global-partners" target="_blank">global partners</a> work with us to provide <a href="https://www.twmc.org/outward" target="_blank">mission trip opportunities</a> for us to be the hands and feet of Jesus around the world.
+                          </p>
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q11 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-faq11">
+                        <h4 class="panel-title twmc-panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion-faq" href="#collapse-faq11" aria-expanded="false" aria-controls="collapse-faq11" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">How do I let someone know I have a prayer request?</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-faq11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-faq11">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p twmc-mtxs">
+                            Prayer is a powerful thing, and we have a committed group of clergy and trusted prayer leaders that will lift up your prayer request throughout the week. Call Caring Ministries at <a href="tel:281.297.5900">281.297.5900</a> or <a href="https://www.twmc.org/prayer" target="_blank">request prayer online</a>.
+                          </p>
+
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Q12 -->
+
+
+                </div>
+                <!-- End of panel group -->
+
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of FAQ -->
+  
+
+      <!-- Footer -->
+      <section class="footer-wrapper-twmc py-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="row">
+                <!-- Left -->
+                <div class="col-sm-7 footer-info-wrapper">
+                  <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo mb-3">
+                  <div>
+                    <p class="footer-info align-center">
+                      <i class="fas fa-church mr-1"></i>
+                      <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                      _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                    </p>
+                    <p class="footer-info">
+                      <i class="fas fa-phone mr-1"></i>
+                      <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                    </p>
+                  </div>
+
+                  <div class="mt-3">
+                    <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                    <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+                  </div>
+                  
+                  
+                </div>
+
+                <div class="col-sm-1"></div>
+
+                <!-- Right -->
+                <div class="col-sm-4 footer-flex-container">
+                  <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+                  <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+                  <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+                  <a href="/foundation" class="footer-flex-item footer-link">TWMC Foundation</a>
+                  <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+                  <a href="/safari-stop" class="footer-flex-item footer-link">Safari Stop</a>
+                  <a href="/funerals" class="footer-flex-item footer-link">Funerals & Memorial Services</a>
+                  
+                  <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+                  <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+                </div>
+            
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- End of Footer -->
+    </main>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+    
+    <!-- Map -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJh-Qa8yz2jIfkI5ZwNohdtW3oU403gc0&callback=initMap&v=weekly"
+      defer
+    ></script>
+</body>
+</html>

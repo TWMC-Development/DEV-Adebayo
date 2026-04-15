@@ -1,0 +1,229 @@
+/* ===== VARIABLES ===== */
+/* ===================== */
+:root {
+    /* Colors */
+    --color-light-grey-whisper: #E5E5E5;
+    --color-light-grey-whitesmoke: #f6f6f6;
+    --color-light-grey-porcelain: #e2e0de;
+    --color-light-grey-hintofred: #f0efee;
+    --color-light-grey-snow: #FAFAFA;
+
+    --color-dark-grey-nightrider: #333;
+    --color-dark-grey-zambezi: #5C5C5C;
+
+    --color-dark-brown-dorado: #6e6259;
+
+    /* Services Color */
+    --color-chapel: #4f758b;
+    --color-chapel-light: #7291A2;
+    --color-chapel-dark: #3F5E6F;
+    --color-chapel3: #203039;
+    --color-loft: #64a70b;
+    --color-loft-dark: #508609;
+    --color-loft2: #508609;
+    --color-loft3: #213704;
+    --color-harvest: #c05131;
+    --color-harvest-light: #CD745A;
+    --color-harvest-dark: #974027;
+    --color-harvest3: #6e6259;
+    --color-traditional: #862633;
+    --color-traditional-light: #B1747D;
+    --color-traditional-dark: #5e1b24;
+    --color-traditional-dark2: #2C0C11;
+    --color-traditional3: #6e6259;
+
+    --color-woodforest: #6ba3b7;
+    --color-woodforest-green: #658d3d;
+    --color-woodforest-warm-grey: #6f6359;
+    --color-woodforest-dark-blue: #0b3c5d;
+    --color-woodforest-dark: #568393;
+    --color-woodforest2: #568393;
+    --color-woodforest3: #23363C;
+
+    /* grow */
+    --color-periwinkle: #504aa0;
+	--color-periwinkle-dark: #353595;
+    --color-periwinkle-light: rgba(80, 74, 160, .1);
+	--color-watermelon: #ed3664;
+	--color-watermelon-dark: #ee1b46;
+	--color-paris-green: #60c3a6;
+	--color-paris-green-dark: #09b17d;
+    --color-paris-green-light: #E9F7F3;
+	--color-canary-yellow: #fcca0b;
+	--color-canary-yellow-dark: #f6a91b;
+    --color-canary-yellow-light: #FDF8DE;
+}
+
+/* ===== END OF VARIABLES ===== */
+/* ===================== */
+
+
+/* ===== BUTTONS ===== */
+/* =================== */
+.btn-outline-lightgrey-grow {
+    font-weight: 600;
+    color: var(--color-dark-grey-nightrider);
+    border: 2px solid var(color-light-grey-porcelain);
+    background-color: var(--color-light-grey-whisper);
+    
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline-lightgrey-grow:hover,
+.btn-outline-lightgrey-grow:focus {
+    background-color: var(--color-light-grey-whisper);
+    text-decoration: none;
+    color: var(--color-dark-grey-nightrider);
+
+    transform: scale(1.02);
+}
+/* ===== END OF BUTTONS ===== */
+/* ========================== */
+
+/* ===== GROW CTA SECTION ===== */
+/* ============================ */
+.grow--square-container {
+	padding: 0 0 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grow--square-link,
+.grow--square-link:hover {
+	text-decoration: none !important;
+}
+
+.grow--square {
+	width: 125px;
+	height: 125px;
+	text-transform: uppercase;
+	color: white;
+	margin: 10px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+    transition: all .4s ease-in-out; 
+}
+
+@media only screen and (max-width: 991px) {
+    .grow--square {
+        width: 100px;
+        height: 100px;
+        margin: 8px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .grow--square {
+        width: 90px;
+        height: 90px;
+        margin: 6px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grow--square {
+        width: 70px;
+        height: 70px;
+        margin: 4px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .grow--square {
+        width: 56px;
+        height: 56px;
+        margin: 2px;
+    }
+}
+
+.grow--square:hover {
+	cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* Square colors */
+.grow--square-g {
+	background-color: var(--color-periwinkle);
+}
+
+.grow--square-g:hover {
+	background-color: var(--color-periwinkle-dark);
+}
+
+.grow--square-r {
+	background-color: var(--color-watermelon);
+}
+
+.grow--square-r:hover {
+	background-color: var(--color-watermelon-dark);
+}
+
+.grow--square-o {
+	background-color: var(--color-paris-green);
+}
+
+.grow--square-o:hover {
+	background-color: var(--color-paris-green-dark);
+}
+
+.grow--square-w {
+	background-color: var(--color-canary-yellow);
+}
+
+.grow--square-w:hover {
+	background-color: var(--color-canary-yellow-dark);
+}
+
+.grow--square-active {
+    pointer-events: none;
+}
+
+.grow--square-g > h2,
+.grow--square-r > h2, 
+.grow--square-o > h2, 
+.grow--square-w > h2,
+.grow--square-active > h2  {
+    font-size: 56px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .grow--square-g > h2,
+    .grow--square-r > h2, 
+    .grow--square-o > h2, 
+    .grow--square-w > h2 {
+        font-size: 48px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grow--square-g > h2,
+    .grow--square-r > h2, 
+    .grow--square-o > h2, 
+    .grow--square-w > h2  {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .grow--square-g > h2,
+    .grow--square-r > h2, 
+    .grow--square-o > h2, 
+    .grow--square-w > h2  {
+        font-size: 26px;
+    }
+}
+
+
+/* ===== END OF GROW CTA SECTION ===== */
+/* ============================ */

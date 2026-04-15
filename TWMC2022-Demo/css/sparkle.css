@@ -1,0 +1,525 @@
+#twmc-advent2024--hero {
+    z-index: 3;
+}
+
+.adv-hero-img {
+  position: absolute;
+  top: 250px;
+  z-index: 2;
+
+  height: 550px;
+  width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .adv-hero-img {
+    top: 200px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .adv-hero-img {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .adv-hero-img {
+    top: 220px;
+    height: 250px;
+    width: auto;
+  }
+}
+
+svg#twinkle-container {
+  position: absolute;
+  /* top: 62%; */
+  top: 500px;
+  right: 46%; 
+  z-index: 5;
+}
+
+svg #twinkle {
+	position: relative;
+  z-index: 5;
+}
+
+/* svg #twinkle {
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+} */
+
+.group {
+    transform: translate(42.5px, 42.5px);
+}
+path {
+    transform: translate(-42.50px,-42.50px);
+}
+.large {
+  opacity: 0;
+	animation: large 3s linear infinite;
+}
+.large-2 {
+  opacity: 0;
+	animation: large-2 3s linear infinite;
+}
+.small {
+  opacity: 0;
+	animation: small 3s linear infinite;
+}
+
+@keyframes large {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg) scale(0);
+	}
+	16.667% {
+		opacity: 1;
+	}
+	33.333% {
+		opacity: 0;
+		transform: rotate(360deg) scale(1.5);
+	}
+  100% {
+		opacity: 0;
+		transform: rotate(0deg) scale(0);
+	}
+}
+@keyframes large-2 {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) scale(0);
+	}
+	16.667% {
+		opacity: 1;
+	}
+	33.333% {
+		opacity: 0;
+		transform: rotate(405deg) scale(1.1);
+	}
+  100% {
+		opacity: 0;
+		transform: rotate(45deg) scale(0);
+	}
+}
+@keyframes small {
+	0% {
+		opacity: 0;
+		transform: rotate(0deg) scale(0);
+	}
+	16.667% {
+		opacity: 1;
+	}
+	33.333% {
+		opacity: 0;
+		transform: rotate(-360deg) scale(1.5);
+	}
+  100% {
+		opacity: 0;
+		transform: rotate(0deg) scale(0);
+	}
+}
+
+/* twinkle 2 */
+/* Apply absolute positioning to the second SVG container */
+svg#twinkle2-container {
+  position: absolute;
+  top: 35.5%; 
+  right: 31.5%; 
+  z-index: 5;
+}
+  
+svg #twinkle2 {
+  position: relative;
+  z-index: 5;
+}
+
+.large2, .large2-2, .small2 {
+  opacity: 0;
+  animation: large 3s linear infinite;
+  animation-delay: 0.4s;
+}
+/* 
+  .large3, .large3-2, .small3 {
+    opacity: 0;
+    animation: large 3s linear infinite;
+    animation-delay: 0.8s;
+  } */
+
+/* twinkle 3 */
+  .large3 {
+    opacity: 0;
+    animation: large 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+  .large3-2 {
+    opacity: 0;
+    animation: large-2 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+  .small3 {
+    opacity: 0;
+    animation: small 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+
+  /* twinkle 4 */
+  .large4, .large4-2, .small4 {
+    opacity: 0;
+    animation: large 3s linear infinite;
+    animation-delay: 1.2s;
+  }
+
+  /* twinkle 5 */
+  .large5 {
+    opacity: 0;
+    animation: large 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+  .large5-2 {
+    opacity: 0;
+    animation: large-2 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+  .small5 {
+    opacity: 0;
+    animation: small 3s linear infinite;
+    animation-delay: 0.8s;
+  }
+
+  /* TWINKLE 3 */
+  svg#twinkle3-container {
+    position: absolute;
+    top: 27.5%; 
+    right: 61.5%;
+    z-index: 5;
+  }
+  
+  /* TWINKLE 4 */
+  svg#twinkle4-container {
+    position: absolute;
+    top: 48%; 
+    right: 61%;
+    z-index: 5;
+  }
+
+  /* TWINKLE 5 */
+  svg#twinkle5-container {
+    position: absolute;
+    top: 47.5%; 
+    right: 44.5%;
+    z-index: 5;
+  }
+
+  @media only screen and (max-width: 1800px) {
+    svg#twinkle-container {
+      right: 45%; 
+    }
+
+    svg#twinkle2-container {
+      right: 32%; 
+    }
+
+    svg#twinkle3-container {
+      right: 62%; 
+    }
+
+    svg#twinkle4-container {
+      right: 62.5%; 
+    }
+
+    svg#twinkle5-container {
+      right: 43.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    svg#twinkle-container {
+      right: 44.5%; 
+    }
+
+    svg#twinkle2-container {
+      right: 30%; 
+    }
+
+    svg#twinkle3-container {
+      right: 64%; 
+    }
+
+    svg#twinkle4-container {
+      right: 64.5%; 
+    }
+
+    svg#twinkle5-container {
+      right: 42.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    svg#twinkle-container {
+      right: 44%; 
+    }
+
+    svg#twinkle2-container {
+      right: 27%; 
+    }
+
+    svg#twinkle3-container {
+      right: 66%; 
+    }
+
+    svg#twinkle4-container {
+      right: 66%; 
+    }
+
+    svg#twinkle5-container {
+      right: 41.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    svg#twinkle-container {
+      right: 43%; 
+    }
+
+    svg#twinkle2-container {
+      right: 23%; 
+    }
+
+    svg#twinkle3-container {
+      right: 68.5%; 
+    }
+
+    svg#twinkle4-container {
+      right: 68%; 
+    }
+
+    svg#twinkle5-container {
+      right: 39.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    svg#twinkle-container {
+      right: 42.5%; 
+    }
+  }
+  
+
+  @media only screen and (max-width: 992px) {
+    svg#twinkle-container {
+      right: 42%; 
+    }
+
+    svg#twinkle2-container {
+      right: 18%; 
+    }
+
+    svg#twinkle3-container {
+      right: 73%; 
+    }
+
+    svg#twinkle4-container {
+      right: 73%; 
+    }
+
+    svg#twinkle5-container {
+      right: 37.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    svg#twinkle-container {
+      top: 375px;
+      right: 38%; 
+    }
+
+    svg#twinkle2-container {
+      top: 26.5%; 
+      right: 18%; 
+    }
+
+    svg#twinkle3-container {
+      top: 20.5%; 
+      right: 68%; 
+    }
+
+    svg#twinkle4-container {
+      top: 36%; 
+      right: 68.5%; 
+    }
+
+    svg#twinkle5-container {
+      top: 35.5%; 
+      right: 37%; 
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    svg#twinkle-container {
+      top: 375px;
+      right: 36%; 
+    }
+
+    svg#twinkle2-container {
+      top: 26.5%; 
+      right: 11%; 
+    }
+
+    svg#twinkle3-container {
+      top: 20.5%; 
+      right: 71%; 
+    }
+
+    svg#twinkle4-container {
+      top: 36%; 
+      right: 72%; 
+    }
+
+    svg#twinkle5-container {
+      top: 35.5%; 
+      right: 33.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    svg#twinkle-container {
+      top: 320px;
+      right: 34%; 
+    }
+
+    svg#twinkle2-container {
+      top: 24%; 
+      right: 14%; 
+    }
+
+    svg#twinkle3-container {
+      top: 20%; 
+      right: 64.5%; 
+    }
+
+    svg#twinkle4-container {
+      top: 31%; 
+      right: 65.5%; 
+    }
+
+    svg#twinkle5-container {
+      top: 31.5%; 
+      right: 33.5%; 
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    svg#twinkle-container {
+      top: 320px;
+      right: 30%; 
+    }
+
+    svg#twinkle2-container {
+      top: 24%; 
+      right: 7%; 
+    }
+
+    svg#twinkle3-container {
+      top: 20%; 
+      right: 67.5%; 
+    }
+
+    svg#twinkle4-container {
+      top: 31%; 
+      right: 68.5%; 
+    }
+
+    svg#twinkle5-container {
+      top: 31.5%; 
+      right: 30%; 
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    svg#twinkle-container {
+      top: 310px;
+      right: 25%; 
+    }
+
+    svg#twinkle2-container {
+      top: 26%; 
+      right: 7%; 
+    }
+
+    svg#twinkle3-container {
+      top: 23%; 
+      right: 67.5%; 
+    }
+
+    svg#twinkle4-container {
+      top: 32%; 
+      right: 67%; 
+    }
+
+    svg#twinkle5-container {
+      top: 33%; 
+      right: 28%; 
+    }
+  }
+
+/*   
+  @keyframes large {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0);
+    }
+    16.667% {
+      opacity: 1;
+    }
+    33.333% {
+      opacity: 0;
+      transform: rotate(360deg) scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0);
+    }
+  }
+  
+  @keyframes large-2 {
+    0% {
+      opacity: 0;
+      transform: rotate(45deg) scale(0);
+    }
+    16.667% {
+      opacity: 1;
+    }
+    33.333% {
+      opacity: 0;
+      transform: rotate(405deg) scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(45deg) scale(0);
+    }
+  }
+  
+  @keyframes small {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0);
+    }
+    16.667% {
+      opacity: 1;
+    }
+    33.333% {
+      opacity: 0;
+      transform: rotate(-360deg) scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(0deg) scale(0);
+    }
+  }
+  
+   */

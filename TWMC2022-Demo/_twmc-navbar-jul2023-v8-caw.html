@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar 2023 - V8 Woodforest</title>
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+ 
+     <!-- CSS -->
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+     <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+     
+     <link rel="stylesheet" href="./css/nw-main2023.css">
+     <link rel="stylesheet" href="./css/nw-navbar.css">
+     <link rel="stylesheet" href="./css/nw-grow.css">
+     <link rel="stylesheet" href="./css/seasonal.css">
+ 
+     <!-- Script -->
+     <script src="/js/script2023.js"></script>
+     
+     <!-- fontawesome v6 -->
+     <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+  <!-- on Lava: {[mainnav2023]} -->
+
+    <!-- ===== NAVBAR WOODFOREST ===== -->
+    <style>
+      .megamenu-socmed {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+
+      @media only screen and (max-width: 991px) {
+          .navbar-bottom-mobile--socmed {
+            justify-content: flex-start;
+            gap: 10px;
+          }
+
+      }
+     </style>
+     
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/creekside" class="navbar-top-flex-item navbar-top-link">Creekside</a>   
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/creekside" class="navbar-top-flex-item">Creekside</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/CAW_Logo_2024_Red.png" alt="TWMC logo" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/times-locations" class="navbar-bottom-link"><b>Times &amp; Locations</b></a>
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+              <a href="/messages/Woodforest?ContentFilter=Woodforest" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/times-locations" class="megamenu-link">Times &amp; Locations</a>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/gather" class="megamenu-link">Grow</a>
+                    <a href="/messages/Woodforest?ContentFilter=Woodforest" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/thechurchatwoodforest/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/churchatwoodforest/"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/@TheChurchatWoodforest"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Connect Nextgen -->
+                  <div class="megamenu-services">
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                    <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/times-locations" class="megamenu-link">Times &amp; Locations</a>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/gather" class="megamenu-link">Grow</a>
+              <a href="/messages/Woodforest?ContentFilter=Woodforest" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/thechurchatwoodforest/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/churchatwoodforest/"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/@TheChurchatWoodforest"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+              <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR WOODFOREST ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+
+    <!-- [lava code: {[hero2023]} ] -->
+    <!-- Hero - Video | 800H  -->
+    <style>
+      /* Hero Video */
+      .hero--video-section-800h {
+          height: 800px;
+          text-align: center;
+          position: relative;
+      }
+
+      .hero--video-section-800h > video {
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+          z-index: 11;
+      }
+
+      .hero--video__text-wrapper-800h {
+          z-index: 12;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+
+          height: 800px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+      }
+
+      .hero--video__text-wrapper-800h > img.img-responsive {
+          max-width: 100%;
+      }
+
+      @media only screen and (max-width: 576px) {
+          .hero--video-section-800h,
+          .hero--video-section-800h > video,
+          .hero--video__text-wrapper-800h {
+              height: 550px;
+          }
+
+          .hero--video-section-800h > video {
+                width: 100%;
+                height: 550px;
+                object-fit: cover;
+            }
+
+            .hero--video__text-wrapper-800h > img.img-responsive {
+                max-width: 100%;
+                width: 95%;
+            }
+      }
+
+    </style>
+
+    <section class="hero--video-section-800h">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/FND_TextOverlay_BKG.png">
+        <source src="https://player.vimeo.com/progressive_redirect/playback/868865769/rendition/720p/file.mp4?loc=external&signature=08f201bcaeb42d85ce548a7886fce14662874b14d0ef0b1db7413045fd17e457" type="video/mp4">
+      </video>
+
+      <div class="container hero--video__text-wrapper-800h">
+        <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png" alt="" class="img-responsive">
+      </div>
+    </section>
+    <!-- End of Hero - Video | 800H -->
+
+  
+
+    <!-- Hero - Video [lava code: {[hero2023]} ] -->
+    <style>
+      /* CTA Campus closed */
+      #campus-closed {
+        background-color: #E0794D;
+        
+      }
+    
+     .campus-closed--text {
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 0;
+        line-height: 1.3;
+      }
+
+      .campus-closed--text2 {
+        font-weight: 600;
+        font-size: 16px;
+        color: white;
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    
+      @media only screen and (max-width: 992px) {
+        .campus-closed--text {
+          font-size: 18px;
+        }
+
+        .campus-closed--text2 {
+          font-size: 15px;
+        }
+      }
+    
+      @media only screen and (max-width: 576px) {
+        .campus-closed--text {
+          font-size: 16px;
+        }
+
+        .campus-closed--text2 {
+          font-size: 14px;
+        }
+      }
+    </style>
+
+    <section id="campus-closed" class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <p class="campus-closed--text">All TWMC campuses will be closed December 25-28 and January 1.
+            </p>
+            <p class="campus-closed--text2">The main reception on The Woodlands Campus will be open December 30 and 31 with limited hours from 8:30 a.m.–noon.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero--video-section">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/FND_TextOverlay_BKG2.png">
+          <source src="https://player.vimeo.com/progressive_redirect/playback/868865769/rendition/720p/file.mp4?loc=external&signature=08f201bcaeb42d85ce548a7886fce14662874b14d0ef0b1db7413045fd17e457" type="video/mp4">
+      </video>
+
+      <div class="container hero--video__text-wrapper">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png" alt="" class="img-responsive">
+        </div>
+    </section>
+
+    <!-- <section class="hero--video-section">
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/header_poster.jpg">
+          <source src="https://player.vimeo.com/external/554479144.sd.mp4?s=1218405d21c5c4826b0a22f0c097bc84cfc82cce&amp;profile_id=165" data-src="https://player.vimeo.com/external/554479144.sd.mp4?s=1218405d21c5c4826b0a22f0c097bc84cfc82cce&amp;profile_id=165" type="video/mp4">
+      </video>
+
+      <div class="container hero--video__text-wrapper">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png" alt="" class="img-responsive">
+        </div>
+    </section> -->
+    <!-- End of Hero - Video -->
+
+    <!-- CTA Orange Banner -->
+    <style>
+      /* CTA Campus closed */
+      #campus-closed {
+        background-color: #E0794D;
+        
+      }
+
+       .twmc-cta--transition2024-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .twmc-cta--transition2024-wrapper a.btn.btn-trans-hero {
+          margin: 0 auto;
+        }
+
+        .twmc-cta--transition2024 {
+          padding: 2.2rem 0;
+          text-align: center;
+          background-color: var(--color-traditional);
+          /* background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/_new_WOR_VenueTransition_Hero_2000x800.jpg'); */
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/_new_WOR_VenueTransition_Hero_2000x800.jpg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: #f2f2f2;
+      }
+
+      .twmc-cta--transition2024-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          text-align: center;
+      }
+
+      .btn-trans-hero {
+          background-color: white;
+          color: #333;
+          border: 2px solid #333;
+          border-radius: 9.5px;
+          padding: .5rem 1.2rem;
+          font-size: .8rem;
+          font-weight: 700;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5rem;
+          min-width: 175px;
+          max-width: max-content;
+          text-transform: uppercase;
+        }
+
+      .btn-trans-hero:hover {
+          background-color: #eee;
+          transform: scale(1.02);
+          color: #333;
+      }
+
+      @media only screen and (max-width:768px) {
+          .btn-trans-hero {
+              margin-top: 10px;
+          }
+      }
+
+
+      .twmc-cta--transition2024-wrapper a.btn.btn-trans-hero {
+        margin: 0 auto;
+      }
+    </style>
+
+    <section id="campus-closed" class="py-4">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-12  align-center twmc-cta--transition2024-wrapper">
+            <h4 class="twmc-h4 mb-2 text-white">
+              Starting August 11, Traditional worship and Harvest Contemporary worship, along with The Church at Woodforest, will have an updated worship schedule.
+            </h4>
+            <a href="/worship" class="btn btn-trans-hero mb-2" target="_blank">Check Updated Schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of CTA orange banner -->
+
+    <!-- CTA Transition -->
+    <style>
+      .twmc-cta--transition2024 {
+          padding: 2.2rem 0;
+          text-align: center;
+          background-color: var(--color-traditional);
+          /* background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/_new_WOR_VenueTransition_Hero_2000x800.jpg'); */
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/_new_WOR_VenueTransition_Hero_2000x800.jpg");
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: #f2f2f2;
+      }
+
+      .twmc-cta--transition2024-wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          text-align: center;
+      }
+
+      .btn-trans-hero {
+          background-color: white;
+          color: #333;
+          border: 2px solid #333;
+          border-radius: 9.5px;
+          padding: .5rem 1.2rem;
+          font-size: .8rem;
+          font-weight: 700;
+          transition: all 0.3s ease-in-out;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 0.5rem;
+          min-width: 175px;
+          max-width: max-content;
+          text-transform: uppercase;
+        }
+
+      .btn-trans-hero:hover {
+          background-color: #eee;
+          transform: scale(1.02);
+          color: #333;
+      }
+
+      @media only screen and (max-width:768px) {
+          .btn-trans-hero {
+              margin-top: 10px;
+          }
+      }
+
+
+      .twmc-cta--transition2024-wrapper a.btn.btn-trans-hero {
+        margin: 0 auto;
+      }
+    </style>
+    <section class="twmc-cta--transition2024" >
+      <div class="twmc-container">
+        <div class="row">
+          <div class="col-sm-12 align-center twmc-cta--transition2024-wrapper">
+            <h4 class="twmc-h4 mb-2">
+              Starting August 11, Traditional worship and Harvest Contemporary worship, along with The Church at Woodforest, will have an updated worship schedule.
+            </h4>
+            <a href="/worship" class="btn btn-trans-hero" target="_blank">Check Updated Schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of CTA transition -->
+
+
+    <!-- Hero - Home Image -->
+    <section id="twmc-hero__home-misconference2023">
+      <div class="container-fluid hero--img__text-wrapper">
+        <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/MIS_ConferenceHeaderBannerTEXT3.png" alt="Until The Whole World Knows" class="img-responsive">
+      </div>
+    </section>
+
+    <section id="montgomery--home-hero-img" class="hero--img__align-center">
+      <div class="container-fluid hero--img__text-wrapper">
+        <h2 class="mt-0">Be a part of something bigger than yourself.
+
+        </h2>
+      </div>
+    </section>
+    <!-- End of Hero - Home Image-->
+
+    
+    
+      <section style="height: 800px; background-color: cornflowerblue;">
+
+      </section>
+
+
+
+  <!-- Footer -->
+  <style>
+    .footer-logo2 {
+        height: 50px;
+        margin-right: 10px;
+        max-width: 100%;
+    }
+
+    .footer-logo-gmc {
+        height: 30px;
+    }
+
+    .footer-text-gmc {
+        font-size: 0.7rem;
+    }
+
+    .footer-newlogo-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      align-items: center;
+    }
+
+    .footer-gmc-div {
+      border-left: 1px solid white;
+      padding-left: 14px;
+    }
+
+    .footer-infos-wrapper {
+      margin-top: 1.8rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .footer-infos-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .footer-newlogo-wrapper {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .footer-logo2 {
+        height: 50px;
+        width: auto;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+      }
+
+      .footer-gmc-div {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .footer-logo-gmc {
+        height: 25px;
+      }
+    }
+  </style>
+
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <!-- Footer logo wrapper -->
+              <div class="footer-newlogo-wrapper">
+                <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo2">
+                
+                <div class="mt-0 footer-gmc-div">
+                  <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="" class="footer-logo-gmc mb-1">
+                </div>
+              </div>
+              <!-- End of footer logo wrapper -->
+
+              <div class="footer-infos-wrapper">
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                    _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="my-3">
+                <a href="https://www.instagram.com/thechurchatwoodforest/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/churchatwoodforest/" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/@TheChurchatWoodforest" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/indoor-playgrounds" class="footer-flex-item footer-link">Indoor Playgrounds</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
+
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <!-- fontawesome v6 -->
+  <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

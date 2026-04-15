@@ -1,0 +1,93 @@
+<!-- Restaurant -->
+<section>
+    <!-- List -->
+    <div class="row mt-3">
+        <div class="col-sm-10 col-sm-offset-1 text-center">
+            <!-- Flex -->
+            <div class="twmc-comdinner2024--flex3col-container">
+                {% for item in Items %}
+                    {% assign formattedDate = item.ModifiedDateTime | Date: 'dddd, MMMM dd' %}
+                    {% assign restaurantName = item | Attribute: 'RestaurantName' %}
+                    {% assign Price = item | Attribute: 'Price' %}
+                    {% assign Notes = item | Attribute: 'Notes' %}
+                    {% assign Date = item | Attribute: 'Date' %}
+                    {% assign Summary = item.Content %}
+                    {% assign Address = item | Attribute: 'Address' %}
+                    {% assign RegistrationLink = item | Attribute: 'RegistrationLink' %}
+                    {% assign AddressLink = item | Attribute: 'AddressLink' %}
+                    {% assign GroupName = item | Attribute: 'GroupName' %}
+                    {% assign Host = item | Attribute: 'Host' %}
+                    {% assign NumOfTotalSeats = item | Attribute: 'NumOfTotalSeats' %}
+                    {% assign ImageURL = item | Attribute: 'ImageURL' %}
+                    {% assign PriceInt = Price | Round %}
+                    {% assign RegistrationId = item | Attribute: 'RegistrationId' %}
+
+                    {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{RegistrationId}}' count:'true' %}
+                    {% assign regCount = count %}
+                    {% endregistrationregistrant %}
+
+                    <div class="twmc-comdinner2024--flex3col-item twmc-comdinner2024-ribbon-card--wrapper">
+                        <div class="twmc-comdinner2024--ribbon twmc-comdinner2024--ribbon1 py-2" style="background-image: url('{{ImageURL}}');">
+                            <div class="twmc-comdinner2024--ribbon-inner"></div>
+                        </div>
+                        <div class="twmc-comdinner2024-ribbon-card--inner-wrapper">
+                            <p class="twmc-comdinner2024-card--title mb-1 mt-2"><strong>{{ restaurantName }}</strong></p>
+                            <a href="{{AddressLink}}" class="twmc-comdinner2024-card--address" target="_blank"><p>{{Address}}</p></a>
+
+                            <p class="mb-0 mt-2"><strong>
+                                    <span class="twmc-card-icon--inline">
+                                        <span class="twmc-icon-wrapper"><i class="fa-light fa-calendar-check twmc-card-icon-md mb-0 mt-1"></i></span>
+                                        <span class="twmc-card-icon--inline-text ml-2">
+
+                                           Sunday, July 28 | 5:30 p.m.
+                                            {%comment %} {{ Date | Date:'dddd, MMMM dd, yyyy' }} | {{ Date | Date:'h:mm' }} p.m. {%endcomment %}
+                                            </span>
+                                    </span>
+                                    <span class="twmc-card-icon--inline">
+                                        <span class="twmc-icon-wrapper"><i class="fa-light fa-money-bill twmc-card-icon-md mb-0 mt-1"></i></span>
+                                        <span class="twmc-card-icon--inline-text ml-2">
+                                            {% for i in (1..PriceInt) %}
+                                                $
+                                            {% endfor %}
+                                        </span>
+                                    </span>
+                                </strong></p>
+
+                            <div class="twmc-seats-flex-container mt-2">
+                            <div class="twmc-seats-flex-item">
+                                <p class="twmc-comdinner2024-seats--num mb-0">{{ NumOfTotalSeats }}</p>
+                                <p class="twmc-comdinner2024-seats--text mt-0">Total seats available</p>
+                            </div>
+                            <div class="twmc-seats-flex-item">
+                            {% assign seatsLeft = NumOfTotalSeats | Minus: regCount %}
+                                <p class="twmc-comdinner2024-seats--num mb-0">
+                                {% if seatsLeft <= 0 %}
+                                    0
+                                    {% else %}
+                                    {{ seatsLeft }}
+                                    {% endif %}
+                                </p>
+                                <p class="twmc-comdinner2024-seats--text mt-0">Seats left</p>
+                            </div>
+                        </div>
+
+
+                            {% assign availableSeats = NumOfTotalSeats | Minus: regCount %}
+                            <div class="twmc-seats-flex-item">
+                                {% if availableSeats >= 1 %}
+                                    <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--comdinner2024-outline twmc--btn--small mt-3 mb-3" target="_blank" referrerpolicy="origin">Reserve here</a>
+                                {% else %}
+                                    <p class="twmc--btn twmc--btn--small twmc--btn--summerspalsh2023-inactive twmc-letspac-2 mt-3 mb-3" target="_blank" referrerpolicy="origin">Sold Out</p>
+                                {% endif %}
+                            </div>
+
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- End of flex -->
+        </div>
+    </div>
+</section>
+<!-- End of Restaurant -->

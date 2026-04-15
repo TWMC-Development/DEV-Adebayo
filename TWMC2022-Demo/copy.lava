@@ -1,0 +1,26 @@
+{% for event in Events %}
+
+    {{ event.Name }}
+
+    {{ event.Detail }}
+
+    {% if event.SoldOut %}
+    <span class="color: red">
+        *SOLD OUT*
+    </span>
+    {% endif %}
+
+    {{ event.Day }} &verbar; {{ event.Time }}
+    {{ event.Location }} &verbar; {{ event.City }}
+    {{ event.description }}
+
+    {% if not event.SoldOut %}
+    <a href="{{event.ButtonURL}}">
+        {{ event.ButtonText }}
+    </a>
+    {% else %}
+    SOLD OUT
+    {% endif %}
+    {% endfor %}
+
+

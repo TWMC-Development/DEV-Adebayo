@@ -1,0 +1,115 @@
+{% assign today =  'Now' | Date:'M/d/yyyy'  %}
+
+{% if itemId == 0 %}
+    {% sql return:'newestItem' %}
+    Select top(1) FirstChild.Id
+    from ContentChannelItem i
+    inner join AttributeValue AvContentFilter on AvContentFilter.EntityId = i.id and AvContentFilter.AttributeId = 15590
+        outer apply (select top(1) iChild.StartDateTime, iChild.Guid, ichild.Id
+            from  ContentChannelItemAssociation a
+            inner join ContentChannelItem iChild on iChild.id = a.ChildContentChannelItemId
+            where a.ContentChannelItemId = i.id
+            and cast(iChild.StartDateTime as date) < getdate()
+            order by iChild.StartDateTime desc) as FirstChild
+    where AvContentFilter.Value like '%{{communityGuid}}%'
+    and FirstChild.StartDateTime is not null
+    order by i.StartDateTime desc
+    {% endsql %}
+
+    {% for item in newestItem %}
+        {% assign itemId = item.Id %}
+    {% endfor %}
+{% endif %}
+
+{% contentchannelitem id:'{{ itemId }}' %}
+
+		{% assign message =  contentchannelitem  %}
+
+{% endcontentchannelitem %}
+
+<style>
+iframe {
+    border:none;
+}
+</style>
+
+
+<img src="/GetImage.ashx?guid={{ message | Attribute:'MessageImage','RawValue' }}&width=1600&height=674&mode=crop" style="display: none;">
+<section id="harvest-latest-message" class="twmc-latest-message" style="background-image:linear-gradient( to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url('/GetImage.ashx?guid={{ message | Attribute:'MessageImage','RawValue' }}&width=1600&height=674&mode=crop');">
+
+	<!-- title -->
+	<div class="twmc-container">
+		{% if showSermonsTitle == True %}
+		<div class="row">
+			<div class="col-sm-12">
+			<h2 class="twmc-section-title--dark" style="text-align: center !important">Latest Message</h2>
+			</div>
+		</div>
+		{% endif %}
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div>
+					<!-- Latest message description -->
+					<div class="twmc-latest-message__description text-center">
+						{% assign messageSeries = message.ParentItems | First %}
+						{% assign messageSeriesSlug = messageSeries.ContentChannelItem.PrimarySlug %}
+						<h3 class="twmc-h3 twmc-latest-message__serries-title">{{ messageSeries.ContentChannelItem.Title }}</h3>
+						<h3 class="twmc-h3 twmc-latest-message__title text-uppercase"><a href="/series/{{ messageSeriesSlug }}/{{ message.PrimarySlug }}" referrerpolicy="origin">{{ message.Title }}</a></h3>
+						<p class="twmc-p twmc-latest-message__details">
+							<span class="twmc-latest-message__date">{{ message.StartDateTime | Date:'MMMM d, yyyy' }}</span> &verbar;
+							{% assign speakerText = message | Attribute:'SpeakerText'%}
+							{% if speakerText and speakerText != '' %}
+							<span class="twmc-latest-message__speaker">{{speakerText}}</span>
+							{% else %}
+							{% assign messageSpeaker = message | Attribute:"Speaker",'object' %}
+							{% if messageSpeaker %}
+							<span class="twmc-latest-message__speaker">{[formalname personid:'{{messageSpeaker.Id}}']}</span>
+							{% endif %}
+							{% endif %}
+						</p>
+
+						{% assign messageVimeoId = message | Attribute:'VideoID','RawValue' %}
+						{% assign messageVideoUrl = message | Attribute:'VideoLink','RawValue' | Remove:'download=1' %}
+						{% assign messageAudioUrl = message | Attribute:'AudioLink','RawValue' %}
+						{% assign itunesAudio = message.ContentChannel | Attribute:'iTunesAudioLink','RawValue' %}
+						{% assign itunesVideo = message.ContentChannel | Attribute:'iTunesVideoLink','RawValue' %}
+
+						<a href="/series/{{ messageSeriesSlug }}/{{ message.PrimarySlug }}" class="btn btn-white" target="_blank">View Series</a>
+
+						{% assign files = message | Attribute:'Files','RawValue' %}
+
+						{% attributematrix where:'Guid == "{{files}}"' %}
+							{% for attributesItems in attributematrix.AttributeMatrixItems %}
+
+								{% assign externallink = attributesItems | Attribute:'ExternalLink','RawValue' %}
+
+								{% if externallink and externallink != '' %}
+									<a href="{{externallink}}" class="btn btn-white" target="_blank">{{ attributesItems | Attribute:'ButtonTitle' }}</a>
+								{% else %}
+									<a href="/GetFile.ashx?guid={{ attributesItems | Attribute:'File','RawValue' }}" class="btn btn-white" target="_blank">{{ attributesItems | Attribute:'ButtonTitle' }}</a>
+								{% endif %}
+
+							{% endfor %}
+						{% endattributematrix %}
+
+						{% if messageAudioUrl != "" %}
+						<a href="{{ messageAudioUrl }}" class="btn btn-traditional twmc-btn__right"><i class="fas fa-headphones twmc-icon-listen"></i><span class="twmc-mlxs">Listen</span></a>
+						{% endif %}
+					</div>
+
+					<!-- Latest message video -->
+					<div class="twmc-flex-item--2-col xtwmc-latest-message__videox">
+						{% if messageVimeoId != "" %}
+						<div class='embed-container'>
+							<iframe src='https://player.vimeo.com/video/{{messageVimeoId}}?title=0&byline=0&portrait=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+						</div>
+						{% else %}
+							{{ message | Attribute:'VideoLink' }}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

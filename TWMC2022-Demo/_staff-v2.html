@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff - V2</title>
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+ 
+     <!-- CSS -->
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+     <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+     
+     <link rel="stylesheet" href="./css/main.css">
+     <link rel="stylesheet" href="./css/nw-main2023.css">
+     <link rel="stylesheet" href="./css/nw-navbar.css">
+     <link rel="stylesheet" href="./css/nw-grow.css">
+     <link rel="stylesheet" href="./css/seasonal.css">
+ 
+     <!-- Script -->
+     <script src="/js/script2023.js"></script>
+     <!-- <script defer src="/js/twmc-accordion.js"></script> -->
+     
+     <!-- fontawesome v6 -->
+     <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+
+                    <!-- Services -->
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Connect Nextgen -->
+                  <div class="megamenu-services">
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- Title stripe -->
+    <section class="twmc-title-stripe">
+      <div class="container-fluid"><div class="row"><div class="col-sm-12 text-center">
+        <h1 class="twmc-h1">Staff</h1>
+      </div></div></div>
+    </section>
+    <!-- End of title stripe -->
+
+    <!-- Pastors -->
+    <section id="staff-pastors" class="pt-5 pb-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                  <h1 class="twmc-h1 twmc-section-title--light">Pastors</h1>
+              </div>
+  
+              <!-- use caption and figcaption -->
+              <div class="col-sm-12">
+                  <div class="twmc-flex-container--4-col twmc-flex-pastors">
+  
+                      <!-- Mark Sorensen -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/marksorensen" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/MarkSorensen_200x200.jpg" alt="Rev. Mark Sorensen" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Mark Sorensen</p>
+                          <p class="twmc-p twmc-pastors__title">Senior Pastor</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Pierce Drake -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/piercedrake" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/Pierce_Headshot_200x200.jpg" alt="Rev. Pierce Drake" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Pierce Drake</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Formation</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Drew Essen -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/drewessen" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/Drew_Headshot_200x200.jpg" alt="Rev. Drew Essen" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Drew Essen</p>
+                          <p class="twmc-p twmc-pastors__title">Executive Pastor</p>
+                      </div>
+                  </div>
+
+                  <!-- Dr. Ashley Goad -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                    <figure class="">
+                        <a href="/ashleygoad" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                            <div class="twmc-pastors__img-container">
+                                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/Ashley+Goad+-+200x200.png" alt="Dr. Stew Grant" class="twmc-pastors__img">
+                            </div>
+                            <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                        </a>
+                    </figure>
+                    
+                    <div class="twmc-pastors__name-title-container">
+                        <p class="twmc-p twmc-pastors__name">Rev. Dr. Ashley Goad</p>
+                        <p class="twmc-p twmc-pastors__title">Pastor of Missions</p>
+                    </div>
+                </div>
+
+
+                  <!-- Dr. Stew Grant -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/drstewgrant" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Dr.+Stew+Grant+-+200x200.png" alt="Dr. Stew Grant" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Dr. Stew Grant</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Marriage and Family Ministries</p>
+                      </div>
+                  </div>
+
+                  <!-- Dr. Bob Hayes -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/drbobhayes" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Dr.+Bob+Hayes+-+200x200.png" alt="Dr. Bob Hayes" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Dr. Bob Hayes</p>
+                          <p class="twmc-p twmc-pastors__title">Bishop Emeritus</p>
+                      </div>
+                  </div>
+
+                  <!-- Aaron Laird -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/aaronlaird" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/Aaron+Laird+200x200.png" alt="Rev. Aaron Laird" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Aaron Laird</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor, The Church at Montgomery</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. David Lindwall -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/davidlindwall" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/david-lindwall-200x200.jpg" alt="Rev. David Lindwall" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. David Lindwall</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of The Church at Montgomery and Caring Ministry</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Daniel Lumpee -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/daniellumpee" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/DanielLumpee_200x200.jpg" alt="Rev. Daniel Lumpee" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Daniel Lumpee</p>
+                          <p class="twmc-p twmc-pastors__title">Loft Lead Pastor</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Cabe Matthews -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/cabematthews" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/cabe-matthews-200x200.jpg" alt="Rev. Cabe Matthews" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Cabe Matthews</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Campus Discipleship</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Margarita McCarthy -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/margaritamccarthy" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Rev.+Margarita+McCarthy+-+200x200.png" alt="Rev. Margarita McCarthy" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Margarita McCarthy</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Caring & Prayer Ministry</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Chris McLain -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/chrismclain" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/ChrisMcLain_200x200.jpg" alt="Rev. Chris McLain" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Chris McLain</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Caring and Adults 55+ Ministry</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Dr. Jeff Olive -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/jeffolive" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/BUS_Jeff+Olive+Atrium+200x200.jpg" alt="Rev. Dr. Jeff Olive" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Dr. Jeff Olive</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Church Multiplication</p>
+                      </div>
+                  </div>
+
+
+                  <!-- Rev. Brent Parker -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/brentparker" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/BrentParker_200x200.jpg" alt="Rev. Brent Parker" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Brent Parker</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor, The Church at Woodforest</p>
+                      </div>
+                  </div>
+
+                  <!-- Sarah Payne -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/sarahpayne" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/Sarah+Payne+200x200.png" alt="Rev. Sarah Payne" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Sarah Payne</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Caring and Special Needs</p>
+                      </div>
+                  </div>
+
+                   <!-- Rev. Luann Riley -->
+                   <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/luannriley" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/LuannRiley_200x200.jpg" alt="Rev. Luanne Riley" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Luann Riley</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Discipleship</p>
+                      </div>
+                  </div>
+
+                  <!-- Dr. Ed Robb III-->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/dredmundwrobbiii" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Dr.+Robb+-+200x200.png" alt="Dr. Ed Robb III" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Dr. Ed Robb III</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor Emeritus</p>
+                      </div>
+                  </div>
+
+                  <!-- Enrique Sanchez -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/enriquesanchez" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/enrique-sanchez-200x200.png" alt="Rev. Enrique Sanchez" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Enrique Sanchez</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Spanish Ministry</p>
+                      </div>
+                  </div>
+
+
+                  <!-- Rev. Mark Swayze -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/markswayze" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Mark+Swayze+200x200.jpg" alt="Rev. Mark Swayze" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Mark Swayze</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of NextGen Ministries</p>
+                      </div>
+                  </div>
+
+                  <!-- Rev. Karen Tyler -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/karentyler" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/pastors/2023+Rev.+Karen+Tyler+-+200x200.png" alt="Rev. Karen Tyler" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Karen Tyler</p>
+                          <p class="twmc-p twmc-pastors__title">Pastor of Worship and Evangelism</p>
+                      </div>
+                  </div>
+
+                  <!-- === COV === -->
+                  <!-- Zach Anderson -->
+                   <div class="twmc-flex-item--4-col twmc-pastors">
+                      <figure class="">
+                          <a href="/zachanderson" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                              <div class="twmc-pastors__img-container">
+                                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/zach-anderson-200x200.jpg" alt="Rev. Zach Anderson" class="twmc-pastors__img">
+                              </div>
+                              <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                          </a>
+                      </figure>
+                      
+                      <div class="twmc-pastors__name-title-container">
+                          <p class="twmc-p twmc-pastors__name">Rev. Zach Anderson</p>
+                          <p class="twmc-p twmc-pastors__title">Discipleship Pastor at Covenant Church at Creekside</p>
+                      </div>
+                  </div>
+
+                  <!-- Jason Burnham -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                    <figure class="">
+                        <a href="/jasonburnham" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                            <div class="twmc-pastors__img-container">
+                                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/jason-burnham-200x200.jpg" alt="Rev. Zach Anderson" class="twmc-pastors__img">
+                            </div>
+                            <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                        </a>
+                    </figure>
+                    
+                    <div class="twmc-pastors__name-title-container">
+                        <p class="twmc-p twmc-pastors__name">Rev. Jason Burnham</p>
+                        <p class="twmc-p twmc-pastors__title">Founder in Residence at Covenant Church at Creekside</p>
+                    </div>
+                </div>
+
+                  <!-- Dario Vargas -->
+                  <div class="twmc-flex-item--4-col twmc-pastors">
+                    <figure class="">
+                        <a href="/dariovargas" class="twmc-pastors__link" referrerpolicy="origin" target="_blank">
+                            <div class="twmc-pastors__img-container">
+                                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/dario-vargas-200x200.jpg" alt="Rev. Zach Anderson" class="twmc-pastors__img">
+                            </div>
+                            <figcaption class="twmc-pastors__caption">Learn more</figcaption>
+                        </a>
+                    </figure>
+                    
+                    <div class="twmc-pastors__name-title-container">
+                        <p class="twmc-p twmc-pastors__name">Rev. Dario Vargas</p>
+                        <p class="twmc-p twmc-pastors__title">Spanish Ministries Pastor at Covenant Church at Creekside</p>
+                    </div>
+                </div>
+
+  
+  
+                  </div>
+                  <!-- end .col-sm-12 -->
+  
+              </div>
+          </div>
+  </section>
+  <!-- End of Pastors -->
+
+ 
+    
+
+  <!-- Staff page accordion -->
+  <section id="staff-info" class="twmc-connect">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="twmc-section__info">
+             <!-- Panel group -->
+            <div class="panel-group" id="accordion-staff" role="tablist" aria-multiselectable="true">
+
+              <!-- Administration -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff1">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff1" aria-expanded="false" aria-controls="collapse-staff1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Administration</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff1">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                    <!-- Rev. Drew Essen -->
+                                    <div class="mb-3">
+                                      <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Rev. Drew Essen </strong></p>
+                                      <p class="twmc-p twmc-staff__details-title twmc-mbzero">Executive Pastor</p>
+                                      <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                          <a>{[ emailform email:'sguthrie@twmc.org' contactname:'Contact Rev. Drew Essen ' ]}</a>
+                                      </p>
+                                      <p class="twmc-p twmc-staff__details-phone">(281) 466-8677</p>
+                                    </div>
+
+                                    <!-- Shelley Guthrie -->
+                                    <div class="mb-3">
+                                      <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Shelley Guthrie</strong></p>
+                                      <p class="twmc-p twmc-staff__details-title twmc-mbzero">Assistant to the Executive Pastor</p>
+                                      <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                          <a>{[ emailform email:'sguthrie@twmc.org' contactname:'Contact Shelley Guthrie' ]}</a>
+                                      </p>
+                                      <p class="twmc-p twmc-staff__details-phone">(281) 466-8677</p>
+                                    </div>
+
+                                    <!-- Julia Jordan -->
+                                    <div class="mb-3">
+                                      <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Julia Jordan</strong></p>
+                                      <p class="twmc-p twmc-staff__details-title twmc-mbzero">Project Manager</p>
+                                      <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                          <a>{[ emailform email:'jjordan@twmc.org' contactname:'Contact Julia Jordan' ]}</a>
+                                      </p>
+                                    </div>
+
+                                    <!-- Ruth Witchet -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Ruth Witchet</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Receptionist</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'rwitchet@twmc.org' contactname:'Contact Ruth Witchet' ]}</a>
+                                        </p>
+                                      </div>
+                                    
+                                </div>
+                               
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                   <!-- Joanie Scott -->
+                                  <div class="mb-3">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Joanie Scott</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">HR Director</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jscott@twmc.org' contactname:'Contact Joanie Scott' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8165</p>
+                                  </div>
+
+                                  <!-- Connie Kelley  -->
+                                  <div class="mb-3">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Connie Kelley</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">HR Generalist</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ckelley@twmc.org' contactname:'Contact Connie Kelley' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5954</p>
+                                  </div>
+
+                                  <!-- Sarah Lewis -->
+                                  <div class="mb-3">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sarah Lewis</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">HR Administrator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'slewis@twmc.org' contactname:'Contact Sarah Lewis' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8675</p>
+                                  </div>
+
+                                  <!-- Victoria Wood -->
+                                  <div class="mb-3">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Victoria Wood</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">HR Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'vwood@twmc.org' contactname:'Contact Victoria Wood' ]}</a>
+                                    </p>
+                                  </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of administration -->
+
+            <!-- Adults 55+ -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff22">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff22" aria-expanded="false" aria-controls="collapse-staff22" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Adults 55+</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff22">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Chris McLain -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Chris McLain</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Caring and Adults 55+ Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cmclain@twmc.org' contactname:'Contact Rev. Chris McLain' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8621</p>
+                                </div>
+
+                                <!-- Teri Rossi -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Teri Rossi</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Caring Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'trossi@twmc.org' contactname:'Contact Teri Rossi' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5935</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Adults 55+ -->
+
+             <!-- Bristol House -->
+             <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff2">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff2" aria-expanded="false" aria-controls="collapse-staff2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Bristol House </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff2">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                
+
+                                <!-- Brenna Bullock -->
+                                <div class="twmc-flex-item--2-col-accordion ">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Brenna Bullock</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Contemporary Music</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'bbullock@twmc.org' contactname:'Contact Brenna Bullock' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(291) 597-5900</p>
+                                </div>
+
+                                <!-- Matthew Kerley -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Matthew Kerley</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Modern Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mkerley@twmc.org' contactname:'Contact Matthew Kerley' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Nathan Guerry -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Nathan Guerry</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Students  Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'nguerry@twmc.org' contactname:'Contact Nathan Guerry' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Michael Rafferty -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Michael Rafferty</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Contemporary Music Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mrafferty@twmc.org' contactname:'Contact Michael Rafferty' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8182</p>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Bristol House -->
+
+            <!-- Caring -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff3">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff3" aria-expanded="false" aria-controls="collapse-staff3" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Caring</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff3">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Margarita McCarthy -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Margarita McCarthy</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Caring and Prayer Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mmccarthy@twmc.org' contactname:'Contact Rev. Margarita McCarthy' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8250</p>
+                                </div>
+
+                                <!-- Rev. Chris McLain -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Chris McLain</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Caring and Adults 55+ Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cmclain@twmc.org' contactname:'Contact Rev. Chris McLain' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8621</p>
+                                </div>
+
+                                <!-- Sarah Payne -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Sarah Payne</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Caring and Special Needs</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'spayne@twmc.org' contactname:'Contact Rev. Sarah Payne' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5928</p>
+                                </div>
+
+                                <!-- Rev. David Lindwall -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. David Lindwall</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of The Church at Montgomery and Caring Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dlindwall@twmc.org' contactname:'Contact Rev. David Lindwall' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Teri Rossi -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Teri Rossi</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Caring and Adults 55+ Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'trossi@twmc.org' contactname:'Contact Teri Rossi' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5935</p>
+                                </div>
+
+                                <!-- Susan Goldsmith-->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Susan Goldsmith</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Caring Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'sgoldsmith@twmc.org' contactname:'Contact Susan Goldsmith' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5953</p>
+                                </div>
+
+                                <!-- Dora Marquez -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium  twmc-staff__details-name twmc-mbzero"><strong>Dora Marquez</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Caring Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dmarquez@twmc.org' contactname:'Contact Dora Marquez' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Dylan Meeker -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Dylan Meeker</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Caring Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dmeeker@twmc.org' contactname:'Contact Dylan Meeker' ]}</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Caring -->
+
+            <!-- Children of The Woodlands -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff5">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff5" aria-expanded="false" aria-controls="collapse-staff5" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Children of The Woodlands</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff5">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Charla McCoy -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Charla McCoy</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director, Children of The Woodlands</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cmccoy@twmc.org' contactname:'Contact Charla McCoy' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5959</p>
+                                </div>
+
+                                <!-- Sara Jackson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sara Jackson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Preschool Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email">
+                                        <a>{[ emailform email:'sarajackson@twmc.org' contactname:'Contact Sara Jackson' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Kim Schlesinger -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Kim Schlesinger</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Enrollment &amp; Resource Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email">
+                                        <a>{[ emailform email:'preschoolenrollment@twmc.org' contactname:'Contact Kim Schlesinger' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Laurie Galiunas -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Laurie Galiunas</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Classroom Advisor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'lgaliunas@twmc.org' contactname:'Contact Laurie Galiunas' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Deb Minter -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Deb Minter</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Curriculum &amp; Classroom Advisor</p>
+                                    <p class="twmc-p twmc-staff__details-email">
+                                        <a>{[ emailform email:'dminter@twmc.org' contactname:'Contact Deb Minter' ]}</a>
+                                    </p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Children of The Woodlands -->
+
+            <!-- Church Multiplication -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff32">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff32" aria-expanded="false" aria-controls="collapse-staff32" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Church Multiplication</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff32">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Rev. Jeff Olive -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Jeff Olive</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Church Multiplication</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jolive@twmc.org' contactname:'Contact Rev. Jeff Olive' ]}</a>
+                                    </p>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Church Multiplication -->
+
+            <!-- Connecting -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff6">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff6" aria-expanded="false" aria-controls="collapse-staff6" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Connecting</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff6">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Michelle DeCantillon -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Michelle DeCantillon</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Connecting Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mdecantillon@twmc.org' contactname:'Contact Michelle DeCantillon' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(832) 381-3021</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Connecting -->
+
+            <!-- Creative Services -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff7">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff7" aria-expanded="false" aria-controls="collapse-staff7" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Creative Services</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff7">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Jonathan Gentry -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jonathan Gentry</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Creative Services</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jgentry@twmc.org' contactname:'Contact Jonathan Gentry' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8616</p>
+                                </div>
+
+                                <!-- Conrad Aleshire -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Conrad Aleshire</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Design Director</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'caleshire@twmc.org' contactname:'Contact Conrad Aleshire' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8687</p>
+                                </div>
+
+                                <!-- Derrick Dedmon -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Derrick Dedmon</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Digital Communications</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ddedmon@twmc.org' contactname:'Contact Derrick Dedmon' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Micki Mensio -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Micki Mensio</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Creative Service Project Manager</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mmensio@twmc.org' contactname:'Contact Micki Mensio' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Kim Walters -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Kim Walters</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Creative Services Traffic Manager</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'kwalters@twmc.org' contactname:'Contact Kim Walters' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5974</p>
+                                </div>
+
+                                <!-- Ailyn Guerra -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Ailyn Guerra</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Creative Services Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'aguerra@twmc.org' contactname:'Contact Ailyn Guerra' ]}</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Creative Services -->
+
+            <!-- Discipleship -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff8">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff8" aria-expanded="false" aria-controls="collapse-staff8" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Discipleship</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff8">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                    <!-- Luann Riley -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Luann Riley</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Discipleship</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'lriley@twmc.org' contactname:'Contact Rev. Luann Riley' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 466-8693</p>
+                                    </div>
+
+                                     <!-- Rev. Cabe Matthews -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Cabe Matthews</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Campus Discipleship</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'cmatthews@twmc.org' contactname:'Contact Rev. Cabe Matthews' ]}</a>
+                                        </p>
+                                    </div>
+
+                                    <!-- Rev. Pierce Drake -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Pierce Drake</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Formation</p>
+                                        <p class="twmc-p twmc-staff__details-email">
+                                            <a>{[ emailform email:'pdrake@twmc.org' contactname:'Contact Rev. Pierce Drake' ]}</a>
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                               
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                    
+                                    <!-- Tori Ward -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Tori Ward</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Formation Coordinator</p>
+                                        <p class="twmc-p twmc-staff__details-email">
+                                            <a>{[ emailform email:'tward@twmc.org' contactname:'Contact Tori Ward' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5913</p>
+                                    </div>
+
+                                    <!-- Bethany Johnson -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Bethany Johnson</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero"> Discipleship Administrative Assistant</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'bjohnson@twmc.org' contactname:'Contact Bethany Johnson' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5958</p>
+                                    </div>
+
+                                    <!-- Terry Loughridge -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Terry Loughridge</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Adult Discipleship Ministry Assistant</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'tloughridge@twmc.org' contactname:'Contact Terry Loughridge' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5932</p>
+                                    </div>
+
+                                  
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Discipleship -->
+
+            <!-- Facilities -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff10">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff10" aria-expanded="false" aria-controls="collapse-staff10" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Facilities</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff10">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                    <!-- Steven Rector -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Steven Rector</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Operations</p>
+                                        <p class="twmc-p twmc-staff__details-email">
+                                            <a>{[ emailform email:'srector@twmc.org' contactname:'Contact Steven Rector' ]}</a>
+                                        </p>
+                                    </div>
+                                     <!-- Lester Dickson -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Lester Dickson</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Facilities Maintenance Manager</p>
+                                        <p class="twmc-p twmc-staff__details-email">
+                                            <a>{[ emailform email:'ldickson@twmc.org' contactname:'Contact Lester Dickson' ]}</a>
+                                        </p>
+                                    </div>
+                                    <!-- Dana Spencer -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Dana Spencer</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Facilities Scheduling Manager</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'dspencer@twmc.org' contactname:'Contact Dana Spencer' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5930</p>
+                                    </div>
+                                    <!-- Sole Watkins -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sole Watkins</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Facilities Administrative Assistant</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'swatkins@twmc.org' contactname:'Contact Sole Watkins' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5933</p>
+                                    </div>
+                                </div>
+
+                                <div class="twmc-flex-item--2-col-accordion twmc-staff__group">
+                                    <!-- Guillermo Rivera  -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Guillermo Rivera</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Technical Director</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'grivera@twmc.org' contactname:'Contact Guillermo Rivera' ]}</a>
+                                        </p>
+                                    </div>
+                                    <!-- Nick Ragle -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Nick Ragle</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">Media Scheduling Manager</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'nragle@twmc.org' contactname:'Contact Nick Ragle' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5971</p>
+                                    </div>
+
+                                    <!-- Zach Grant -->
+                                    <div class="mb-3">
+                                        <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Zach Grant</strong></p>
+                                        <p class="twmc-p twmc-staff__details-title twmc-mbzero">IT Manager</p>
+                                        <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                            <a>{[ emailform email:'zgrant@twmc.org' contactname:'Contact Zach Grant' ]}</a>
+                                        </p>
+                                        <p class="twmc-p twmc-staff__details-phone">(281) 297-5971</p>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Facilities -->
+
+            <!-- Finance  -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff9">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff9" aria-expanded="false" aria-controls="collapse-staff9" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Finance</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff9">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Dani Johnson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Dani Johnson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Controller</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'djohnson@twmc.org' contactname:'Contact Dani Johnson' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5927</p>
+                                </div>
+
+                                <!-- Daniel Cantu -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Daniel Cantu</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Senior Accountant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dcantu@twmc.org' contactname:'Contact Daniel Cantu' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5962</p>
+                                </div>
+
+                                <!-- Brandon Bludau -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Brandon Bludau</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Assistant Controller</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'bbludau@twmc.org' contactname:'Contact Brandon Bludau' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5972</p>
+                                </div>
+
+                                <!-- Heather Barnes -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Heather Barnes</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Accountant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'hbarnes@twmc.org' contactname:'Contact Heather Barnes' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8604</p>
+                                </div>
+
+                                <!-- Melissa Reneau -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Melissa Reneau</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Accounting Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mreneau@twmc.org' contactname:'Contact Melissa Reneau' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5915</p>
+                                </div>
+
+                                <!-- Mandy Batson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Amanda Batson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Accounts Payable</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'abatson@twmc.org' contactname:'Contact Amanda Batson' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8632</p>
+                                </div>
+
+                                <!-- Donor Services -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Donor Services</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Finance Inquiries</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'finance@twmc.org' contactname:'Contact Donor Services' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5934</p>
+                                </div>
+
+                                <!-- Shannon Logan -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Shannon Logan</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Contributions</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'slogan@twmc.org' contactname:'Contact Shannon Logan' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8615</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Finance -->
+
+            <!-- Fireside Books -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff11">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff11" aria-expanded="false" aria-controls="collapse-staff11" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Fireside Books</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff11">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Penny Schwartzkopf -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Penny Schwartzkopf</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Bookstore Managers</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero"> <a>{[ emailform email:'pschwartzkopf@twmc.org' contactname:'Contact Penny Schwartzkopf' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone mb-zero">(281) 297-5914</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Fireside Books -->
+
+            <!-- Fireside Cafe -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff12">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff12" aria-expanded="false" aria-controls="collapse-staff12" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Fireside Cafe</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff12">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Stephen Gasaway -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Stephen Gasaway</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Food Services</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero"> <a>{[ emailform email:'slgasaway@twmc.org' contactname:'Contact Stephen Gasaway' ]}</a>
+                                </div>
+
+                                <!-- Maureen Hamric -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Maureen Hamric</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Kitchen Manager</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero"> <a>{[ emailform email:'mhamric@twmc.org' contactname:'Contact Maureen Hamric' ]}</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Fireside Cafe -->
+
+            <!-- Harvest -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff13">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff13" aria-expanded="false" aria-controls="collapse-staff13" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Harvest</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff13">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Mark Sorensen -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Mark Sorensen</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Senior Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shall@twmc.org' contactname:'Contact Rev. Mark Sorensen' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5943</p>
+                                </div>
+
+                                
+                                <!-- Rev. Pierce Drake -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Pierce Drake</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Formation</p>
+                                    <p class="twmc-p twmc-staff__details-email">
+                                        <a>{[ emailform email:'pdrake@twmc.org' contactname:'Contact Rev. Pierce Drake' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Sonya Hall -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sonya Hall</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Administrative Assistant to the Senior Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shall@twmc.org' contactname:'Contact Sonya Hall' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5943</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <!-- End of Harvest -->
+
+            <!-- Loft -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff14">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff14" aria-expanded="false" aria-controls="collapse-staff14" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Loft</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff14">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Rev. Daniel Lumpee -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Daniel Lumpee</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Loft Lead Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dlumpee@twmc.org' contactname:'Contact Rev. Daniel Lumpee' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!--Luann Riley -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Luann Riley</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Discipleship</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'lriley@twmc.org' contactname:'Contact Rev. Luann Riley' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8693</p>
+                                </div>
+
+                                <!-- Matthew Kerley -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Matthew Kerley</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Modern Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mkerley@twmc.org' contactname:'Contact Matthew Kerley' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Connie Wilson-->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Connie Wilson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Loft Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cwilson@twmc.org' contactname:'Contact Connie Wilson' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8660</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Loft -->
+
+            <!-- Marriage -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff15">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff15" aria-expanded="false" aria-controls="collapse-staff15" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Marriage</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff15">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Dr. Stew Grant -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Dr. Stew Grant</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Marriage and Family Ministries</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'sgrant@twmc.org' contactname:'Contact Dr. Stew Grant' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8692</p>
+                                </div>
+                                
+                                <!-- Sabrina Horne -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sabrina Horne</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Marriage & Parenting Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shorne@twmc.org' contactname:'Contact Sabrina Horne' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5917</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Marriage -->
+
+            <!-- Men -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff16">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff16" aria-expanded="false" aria-controls="collapse-staff16" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Men</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff16">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Pierce Drake -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Pierce Drake</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Formation</p>
+                                    <p class="twmc-p twmc-staff__details-email">
+                                        <a>{[ emailform email:'pdrake@twmc.org' contactname:'Contact Rev. Pierce Drake' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Tiffany Weber -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Tiffany Weber</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Formation Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'tweber@twmc.org' contactname:'Contact Tiffany Weber' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone"> (281) 297-5911</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Men -->
+
+            <!-- Missions -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff17">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff17" aria-expanded="false" aria-controls="collapse-staff17" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Missions</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff17">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Dr Ashley Goad -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Dr. Ashley Goad
+                                    </strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Missions</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'agoad@twmc.org' contactname:'Contact Rev. Dr. Ashley Goad' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8210</p>
+                                </div>
+
+                                <!-- Jonah Robson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jonah Robson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Local Missions</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jrobson@twmc.org' contactname:'Contact Jonah Robson' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Lauren Burnham -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Lauren Burnham</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">International Missions Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'lburnham@twmc.org' contactname:'Contact Lauren Burnham' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Alba Cowles -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Alba Cowles</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'acowles@twmc.org' contactname:'Contact Alba Cowles' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8627</p>
+                                </div>
+
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Missions -->
+
+            <!-- Music -->
+            <!-- Music -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff18">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff18" aria-expanded="false" aria-controls="collapse-staff18" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Music</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff18">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Dr. Bob Horton -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Dr. Bob Horton</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Traditional Music</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'rhorton@twmc.org' contactname:'Contact Dr. Bob Horton' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5903</p>
+                                </div>
+
+                                <!-- Brenna Bullock  -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Brenna Bullock</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Contemporary Music</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'bbullock@twmc.org' contactname:'Contact Brenna Bullock' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Matthew Kerley -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Matthew Kerley</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Modern Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mkerley@twmc.org' contactname:'Contact Matthew Kerley' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Michael Rafferty -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Michael Rafferty</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Contemporary Music Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mrafferty@twmc.org' contactname:'Contact Michael Rafferty' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8182</p>
+                                </div>
+
+                                <!-- Everett Wilson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Everett Wilson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Contemporary Worship Department Coordinator </p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ewilson@twmc.org' contactname:'Contact Everett Wilson' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Giny Gonzalez -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Giny Gonzalez</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Music Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ggonzalez@twmc.org' contactname:'Contact Giny Gonzalez' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5904</p>
+                                </div>
+
+                                <!-- David McKenery -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>David McKenery</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Music Associate/Organist</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'DMcKenery@twmc.org' contactname:'Contact David McKenery' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5961</p>
+                                </div>
+
+                                <!-- Cliff Rabon -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Cliff Rabon</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Music Associate/Choral</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'crabon@twmc.org' contactname:'Contact Cliff Rabon' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5964</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Music -->
+
+            <!-- NextGen Kids -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff4">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff4" aria-expanded="false" aria-controls="collapse-staff4" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">NextGen Kids</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff4">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Mark Swayze -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Mark Swayze</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of NextGen Ministries</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mswayze@twmc.org' contactname:'Contact Rev. Mark Swayze' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Alyssa Porter -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Alyssa Porter</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids Director</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'aporter@twmc.org' contactname:'Contact Alyssa Porter' ]}</a>
+                                    </p>
+                                </div>
+
+
+                                <!-- Tori Cherry-->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Tori Cherry</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids Lead Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'tcherry@twmc.org' contactname:'Contact Tori Cherry' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 466-8634</p>
+                                </div>
+                                
+
+                                <!-- Pepper Dombroski -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Pepper Dombroski</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Lead Shepherd – Church at Woodforest</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ldombroski@twmc.org' contactname:'Contact Pepper Dombroski' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(832) 208-5547</p>
+                                </div>
+
+                                <!-- Meagan Pierce -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Meagan Pierce</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen 56 Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mpierce@twmc.org' contactname:'Contact Meagan Pierce' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Jenny Chaney -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jenny Chaney</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids - Lead Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jchaney@twmc.org' contactname:'Contact Jenny Chaney' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Anna Alexander -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Anna Alexander</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids Events Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'abalexander@twmc.org' contactname:'Contact Anna Alexander' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-8668</p>
+                                </div>
+
+                                <!-- Anna Cianflone -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Anna Cianflone</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'acianflone@twmc.org' contactname:'Contact Anna Cianflone' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5950</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of NextGen Kids -->
+
+            <!-- NextGen Students -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff20">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff20" aria-expanded="false" aria-controls="collapse-staff20" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">NextGen Students</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff20">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Mark Swayze -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Mark Swayze</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of NextGen Ministries</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mswayze@twmc.org' contactname:'Contact Rev. Mark Swayze' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                                </div>
+
+                                <!-- Shawn Gray -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Shawn Gray</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Lead Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'sgray@twmc.org' contactname:'Contact Shawn Gray' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5940</p>
+                                </div>
+
+                                <!-- Becca Brown -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Becca Brown</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Youth Missions Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'bbrown@twmc.org' contactname:'Contact Becca Brown' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Nathan Guerry -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Nathan Guerry</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Worship Shepherd</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'nguerry@twmc.org' contactname:'Contact Nathan Guerry' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Diego Mercado -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Diego Mercado</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Shepherd of Discipleship and Spiritual Formation</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dmercado@twmc.org' contactname:'Contact Diego Mercado' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Jose Palacios -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jose Palacios</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Shepherd of Teaching</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jpalacios@twmc.org' contactname:'Contact Jose Palacios' ]}</a>
+                                    </p>
+                                </div>
+
+                                 <!-- Evan Wait -->
+                                 <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Evan Wait</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Students Shepherd - Woodforest </p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ewait@twmc.org' contactname:'Contact Evan Wait' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- John Kropinak -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>John Kropinak</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero"> Confirmation Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'JKropinak@twmc.org' contactname:'Contact John Kropinak' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Ellen Bailey-->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Ellen Bailey</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Communications Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ebailey@twmc.org' contactname:'Contact Ellen Bailey' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Julia Loughridge -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Julia Loughridge</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Event Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jloughridge@twmc.org ' contactname:'Contact Julia Loughridge' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5938</p>
+                                </div>
+
+                                <!-- Karen Kemp -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Karen Kemp</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Student Ministry Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'kkemp@twmc.org' contactname:'Contact Karen Kemp' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5940</p>
+                                </div>
+
+                              
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of NextGen Students -->
+
+            <!-- Nursery -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff19">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff19" aria-expanded="false" aria-controls="collapse-staff19" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Nursery</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff19">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Jan Estes -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jan Estes</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Nursery Co-Director, Scheduling and Events</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jestes@twmc.org' contactname:'Contact Jan Estes' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5949</p>
+                                </div>
+
+                                <!-- Chris Swenson -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Chris Swenson</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Nursery Co-Director, Operations</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cswenson@twmc.org' contactname:'Contact Chris Swenson' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5949</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Nursery -->
+
+            <!-- Recreation -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff21">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff21" aria-expanded="false" aria-controls="collapse-staff21" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Recreation</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff21">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Garrett Ritter -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Garrett Ritter</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Athletic Director</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'gritter@twmc.org' contactname:'Contact Garrett Ritter' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5944</p>
+                                </div>
+
+                                <!-- Meredith Covell -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Meredith Covell</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Associate Athletic Director</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'mcovell@twmc.org' contactname:'Contact Meredith Covell' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Caitlin Dale -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Caitlin Dale</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Recreation Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'cdale@twmc.org' contactname:'Contact Caitlin Dale' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5947</p>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Recreation -->
+
+            <!-- Senior Pastor -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff23">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff23" aria-expanded="false" aria-controls="collapse-staff23" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Senior Pastor</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff23">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Mark Sorensen -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Mark Sorensen</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Senior Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shall@twmc.org' contactname:'Contact Rev. Mark Sorensen' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5943</p>
+                                </div>
+
+                                <!-- Sonya Hall -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sonya Hall</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Administrative Assistant to the Senior Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shall@twmc.org' contactname:'Contact Sonya Hall' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5943</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Senior Pastor -->
+
+            <!-- Singles -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff24">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff24" aria-expanded="false" aria-controls="collapse-staff24" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Singles</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff24">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Terry Loughridge -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Terry Loughridge</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Single Life Ministry Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'tloughridge@twmc.org' contactname:'Contact Terry Loughridge' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5932</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Singles -->
+
+            <!-- Special Needs -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff25">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff25" aria-expanded="false" aria-controls="collapse-25" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Special Needs</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff25">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                                <!-- Sarah Payne -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Sarah Payne</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Caring and Special Needs</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'spayne@twmc.org' contactname:'Contact Rev. Sarah Payne' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5928</p>
+                                </div>
+
+                                <!-- Laura Dinnin -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Laura Dinnin</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Associate Director of Special Needs Youth and Adult Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ldinnin@twmc.org' contactname:'Contact Laura Dinnin' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8237</p>
+                                </div>
+
+                                <!-- Sarah Kountz -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sarah Kountz</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Special Needs Youth/Adults Ministry Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'skountz@twmc.org' contactname:'Contact Sarah Kountz' ]}</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Special Needs -->
+
+            <!-- The Church at Montgomery -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff31">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff31" aria-expanded="false" aria-controls="collapse-staff31" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">The Church at Montgomery</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff31">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Aaron Laird -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Aaron Laird</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor, The Church at Montgomery</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'alaird@twmc.org' contactname:'Contact Rev. Aaron Laird' ]}</a>
+                                    </p>
+                                </div>
+ 
+                                <!-- Rev. David Lindwall -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. David Lindwall</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of The Church at Montgomery and Caring Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dlindwall@twmc.org' contactname:'Contact Rev. David Lindwall' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- John Arensdorf -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>John Arensdorf</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jarensdorf@twmc.org' contactname:'Contact John Arensdorf' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Jenny Chaney -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Jenny Chaney</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Kids - Lead Shepherds</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jchaney@twmc.org' contactname:'Contact Jenny Chaney' ]}</a>
+                                    </p>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of The Church at Montgomery -->
+
+            <!-- The Church at Woodforest -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff26">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff26" aria-expanded="false" aria-controls="collapse-26" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">The Church at Woodforest</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff26">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Brent Parker -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Brent Parker</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor, The Church at Woodforest</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'bparker@twmc.org' contactname:'Contact Rev. Brent Parker' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8183</p>
+                                </div>
+
+                                <!-- Josh Masters -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Josh Masters</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Worship Leader</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jmasters@twmc.org' contactname:'Contact Josh Masters' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Doc Holiday -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Doc Holiday</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Coordinator of Community Life</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dholiday@twmc.org' contactname:'Contact Doc Holiday' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Pepper Dombroski -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Pepper Dombroski</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Lead Shepherd – Church at Woodforest</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ldombroski@twmc.org' contactname:'Contact Pepper Dombroski' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(832) 208-5547</p>
+                                </div>
+
+                                <!-- Evan Wait -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Evan Wait</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">NextGen Students Shepherd - Woodforest </p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ewait@twmc.org' contactname:'Contact Evan Wait' ]}</a>
+                                    </p>
+                                </div>
+
+                                <!-- Pam Broussard -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Pam Broussard</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Woodforest Ministry Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'pbroussard@twmc.org' contactname:'Contact Pam Broussard' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8184</p>
+                                </div>
+
+                                <!-- Amy Lovett -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Amy Lovett</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Woodforest Administrative Assistant</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'alovett@twmc.org' contactname:'Contact Amy Lovett' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8182</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of The Church at Woodforest -->
+
+            <!-- The Woodlands Methodist School -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff27">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff27" aria-expanded="false" aria-controls="collapse-27" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">The Woodlands Methodist School</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff27">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Ken West -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Ken West</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Head of School</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'kwest@twmc.org' contactname:'Contact Ken West' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8220</p>
+                                </div>
+
+                                <!-- Rebecca Coates -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rebecca Coates</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Admission and Community Relations</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'rcoates@twmc.org' contactname:'Contact Rebecca Coates' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8212</p>
+                                </div>
+
+                                <!-- Scott Crosby -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Scott Crosby</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Athletic Director/Teacher</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'scrosby@twmc.org' contactname:'Contact Scott Crosby' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8220</p>
+                                </div>
+
+                                <!-- Rhonda Sumpter -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rhonda Sumpter</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Educational Technology</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'rsumpter@twmc.org' contactname:'Contact Rhonda Sumpter' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8220</p>
+                                </div>
+
+                                <!-- Debi VerPloeg -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Debi VerPloeg</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Director of Finance</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'dverploeg@twmc.org' contactname:'Contact Debi VerPloeg' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5908</p>
+                                </div>
+
+                                <!-- John Kropinak -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>John Kropinak</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Chaplain</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'jkropinak@twmc.org' contactname:'Contact John Kropinak' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8220</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of The Woodlands Methodist School -->
+
+            <!-- Women -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff28">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff28" aria-expanded="false" aria-controls="collapse-28" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Women</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff28">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                
+                                <!-- Whitney Mertz -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Whitney Mertz</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Coordinator of Women’s Ministry</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'wmertz@twmc.org' contactname:'Contact Whitney Mertz' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 822-8248</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Women -->    
+
+            <!-- Worship -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff29">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff29" aria-expanded="false" aria-controls="collapse-29" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Worship</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff29">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+                                <!-- Rev. Karen Tyler -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Karen Tyler</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of Worship and Evangelism</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'ktyler@twmc.org' contactname:'Contact Rev. Karen Tyler' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5924</p>
+                                </div>
+                                
+                                <!-- Sonya Hall -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Sonya Hall</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Administrative Assistant to the Senior Pastor</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'shall@twmc.org' contactname:'Contact Sonya Hall' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5943</p>
+                                </div>
+
+                                <!-- Lisa Blanchard -->
+                                <div class="twmc-flex-item--2-col-accordion">
+                                    <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Lisa Blanchard</strong></p>
+                                    <p class="twmc-p twmc-staff__details-title twmc-mbzero">Worship Ministry Coordinator</p>
+                                    <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                        <a>{[ emailform email:'lblanchard@twmc.org' contactname:'Contact Lisa Blanchard' ]}</a>
+                                    </p>
+                                    <p class="twmc-p twmc-staff__details-phone">(281) 297-5979</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Worship -->
+
+            <!-- Young Adults -->
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-staff30">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-staff" href="#collapse-staff30" aria-expanded="false" aria-controls="collapse-30" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">Young Adults</span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-staff30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-staff30">
+                    <div class="panel-body twmc-panel-body">
+                        <div class="twmc-staff__list">
+                            <div class="twmc-flex-container--2-col-accordion twmc-staff__details">
+
+                            <!-- Mark Swayze -->
+                            <div class="twmc-flex-item--2-col-accordion">
+                                <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Rev. Mark Swayze</strong></p>
+                                <p class="twmc-p twmc-staff__details-title twmc-mbzero">Pastor of NextGen Ministries</p>
+                                <p class="twmc-p twmc-staff__details-email twmc-mbzero">
+                                    <a>{[ emailform email:'mswayze@twmc.org' contactname:'Contact Rev. Mark Swayze' ]}</a>
+                                </p>
+                                <p class="twmc-p twmc-staff__details-phone">(281) 297-5900</p>
+                            </div>
+
+                            <!-- Kelley Reilly -->
+                            <div class="twmc-flex-item--2-col-accordion">
+                                <p class="twmc-p-medium twmc-staff__details-name twmc-mbzero"><strong>Kelley Reilly</strong></p>
+                                <p class="twmc-p twmc-staff__details-title twmc-mbzero"> NextGen College and Young Adults Shepherd</p>
+                                <p class="twmc-p twmc-staff__details-email">
+                                    <a>{[ emailform email:'kreilly@twmc.org' contactname:'Contact Kelley Reilly' ]}</a>
+                                </p>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Young Adults -->
+
+            </div>
+            <!-- End of panel group -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- End of staff page accordion -->
+
+
+
+  <!-- Footer -->
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo mb-3">
+              <div>
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                  _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="mt-3">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+              
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/foundation" class="footer-flex-item footer-link">TWMC Foundation</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/safari-stop" class="footer-flex-item footer-link">Safari Stop</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals & Memorial Services</a>
+              
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            // When any accordion panel is shown
+            $('.panel.panel-default').on('shown.bs.collapse', function (e) {
+                // Target the specific panel that was opened and change its icon to 'minus'
+                var panelHeading = $(e.target).prev('.panel-heading');
+                panelHeading.find('.fa-plus').removeClass('fa-plus').addClass('fa-minus');
+            });
+        
+            // When any accordion panel is hidden
+            $('.panel.panel-default').on('hidden.bs.collapse', function (e) {
+                // Target the specific panel that was closed and change its icon to 'plus'
+                var panelHeading = $(e.target).prev('.panel-heading');
+                panelHeading.find('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
+            });
+        });
+    </script>
+</body>
+</html>

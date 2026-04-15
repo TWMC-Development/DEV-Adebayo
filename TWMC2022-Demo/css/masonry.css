@@ -1,0 +1,33 @@
+.fdn-masonry-card {
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 1rem; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    margin-bottom: 15px;
+}
+
+.fdn-blockquote {
+    border-left: none;
+    font-size: .97rem;
+    margin-bottom: 0;
+}
+
+.fdn-blockquote--text {
+    margin: 0.3rem 0.5rem;
+}
+
+.fdn-blockquote-footer {
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+@media only screen and (max-width: 991px) {
+    .fdn-masonry-card {
+        padding: 0.7rem;
+    }
+    
+    .fdn-blockquote {
+        font-size: 0.9rem;
+    }
+}

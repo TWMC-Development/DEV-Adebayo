@@ -1,0 +1,264 @@
+<!-- Content -->
+    <style>
+    /* ===== SINGLE LIFE - GATHER IN COMMUNITY ===== */
+    /* HERO */
+    #twmc-singlelife--hero {
+        background-color: #87948C;
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_singlelife/DIS_Single+Life_Gather+in+Community_FeatureBannerBG.png");
+        text-align: center;
+        background-position: center;
+        background-size: cover;
+
+        height: 650px;
+        padding: 6rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twmc-featbanner--singlelife-wrapper {
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .twmc-featbanner--singlelife-wrapper > img {
+        max-width: 80%;
+        /* margin-bottom: 2rem; */
+      }
+
+      @media only screen and (max-width: 768px) {
+        .twmc-featbanner--singlelife-wrapper > img {
+            width: 90%;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        #twmc-singlelife--hero {
+            height: 450px;
+            padding: 4rem 0;
+        }
+    }
+
+    /* END OF HERO */
+
+    /* ===== END OF SINGLE LIFE - GATHER IN COMMUNITY ===== */
+
+    /* ==== TAGS ==== */
+    .singlelife-tag-allsingle {
+      display: inline-block;
+      color: #333;
+      font-size: .53rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #F3E4DD;
+      border: 1px solid #F3E4DD;
+      border-radius: .25rem;
+      padding: .3rem .45rem .2rem;
+      letter-spacing: 2px;
+      cursor: not-allowed;
+
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .singlelife-tag-widows {
+      display: inline-block;
+      color: #333;
+      font-size: .53rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #bdb3d6;
+      border: 1px solid #bdb3d6;
+      border-radius: .25rem;
+      padding: .3rem .45rem .2rem;
+      letter-spacing: 2px;
+      cursor: not-allowed;
+
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .singlelife-tag-singlemom {
+      display: inline-block;
+      color: #333;
+      font-size: .53rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #B9D4AA;
+      border: 1px solid #B9D4AA;
+      border-radius: .25rem;
+      padding: .3rem .45rem .2rem;
+      letter-spacing: 2px;
+      cursor: not-allowed;
+
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    /* ===== EO TAGS ===== */
+    </style>
+
+    <section class="py-6">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+
+            <!-- Single Life Game Night -->
+             <div class="text-center twmc-mbm">
+              <h3 class="twmc-h3 text-uppercase">Single Life Game Nights</h3>
+              <h5 class="twmc-h5">(Open to All Singles)</h5>
+            </div>
+
+            <div class="flex-container-2col">
+                {% assign today = 'Now' | Date | AsDateTime %}
+
+                {% for item in Items %}
+
+                {% assign eventDate = item | Attribute:'EventDate' | AsDateTime %}
+                {% assign timeInfo = item | Attribute:'TimeInfo' %}
+                {% assign location = item | Attribute:'Location' %}
+                {% assign address = item | Attribute:'Address' %}
+                {% assign mapLink = item | Attribute:'MapLink' %}
+                {% assign childcare = item | Attribute:'ChildcareNote' %}
+                {% assign price = item | Attribute:'PriceNote' %}
+                {% assign btnText = item | Attribute:'ButtonText' %}
+                {% assign regLink = item | Attribute:'RegistrationLink' %}
+
+                {% if eventDate >= today %}
+
+                <div class="flex-item-2col twmc-card-float mb-3">
+
+                    <h4 class="twmc-h4 text-uppercase text-traditional mb-2">
+                        <strong>{{ item.Title }}</strong>
+                    </h4>
+
+                    {% assign singlesCats = item | Attribute:'SinglesCategory' | Split:',' %}
+                    {% for cat in singlesCats %}
+
+                    {% if cat == 'All Singles' %}
+                    <p class="singlelife-tag-allsingle mb-0">All Singles</p>
+
+                    {% elsif cat == 'Widows' %}
+                    <p class="singlelife-tag-widows mb-0">Widows</p>
+
+                    {% elsif cat == 'Single Moms' %}
+                    <p class="singlelife-tag-singlemom mb-0">Single Moms</p>
+
+                    {% endif %}
+
+                    {% endfor %}
+
+                    <p class="twmc--btn--tag-grey mb-0">
+                        {{ item | Attribute:'EventLocationType' }}
+                    </p>
+
+                    <p class="twmc-p my-3 twmc-text-09"><strong>
+
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            {{ eventDate | Date:'dddd, MMMM d, yyyy' }}
+
+                            <br>
+
+                            {% if timeInfo != '' %}
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fas fa-clock"></i>
+                            </span>
+                            {{ timeInfo }}
+                            <br>
+                            {% endif %}
+
+                            {% if location != '' %}
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fas fa-landmark"></i>
+                            </span>
+                            {{ location }}
+                            <br>
+                            {% endif %}
+
+                            {% if address != '' %}
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </span>
+
+                            {% if mapLink != '' %}
+                            <a href="{{ mapLink }}" class="a-traditional" target="_blank">
+                                {{ address }} →
+                            </a>
+                            {% else %}
+                            {{ address }}
+                            {% endif %}
+
+                            <br>
+                            {% endif %}
+
+                            {% if childcare != '' %}
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fa-solid fa-children"></i>
+                            </span>
+                            {{ childcare }}
+                            <br>
+                            {% endif %}
+
+                            {% if price != '' %}
+                            <span class="twmc-icon-wrapper2">
+                                <i class="fas fa-money-bill"></i>
+                            </span>
+                            {{ price }}
+                            {% endif %}
+
+                        </strong></p>
+
+                    {% if item.Content != '' %}
+                    <div>
+                        <p class="twmc-p">{{ item.Content }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if regLink != '' %}
+                    <a href="{{ regLink }}" class="twmc--btn twmc--btn--small twmc--btn--traditional twmc-letspac-2 my-2"
+                        target="_blank">
+                        {% if btnText != '' %}
+                        {{ btnText }}
+                        {% else %}
+                        Register
+                        {% endif %}
+                    </a>
+                    {% endif %}
+
+                </div>
+
+                {% endif %}
+                {% endfor %}
+
+              <!--  -->
+              <!--  -->
+
+
+
+            </div>
+            <!-- EO Single Life Game Night -->
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End of content -->

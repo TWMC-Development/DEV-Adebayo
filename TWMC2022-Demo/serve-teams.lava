@@ -1,0 +1,174 @@
+<!-- page content -->
+<section id="grow-o-serve__page-content">
+    <!-- inline filter -->
+    <section id="grow-o-serve__title-filter">
+        <div class="container">
+            <div id="filters" class="row">
+                <div class="col-sm-12">
+                    <div class="twmc-vertical-align--middle-flex-container">
+                        <!-- ministry -->
+                        <div class="twmc-vertical-align--middle-flex-item-45">
+                            <select id="ministryFilter" class="grow__form-select">
+                                <option value="" selected="selected">Select a Ministry</option>
+                            </select>
+                        </div>
+                        <!-- community -->
+                        <div class="twmc-vertical-align--middle-flex-item-45">
+                            <select id="worshipCommunityFilter" class="grow__form-select">
+                                <option selected="selected" value="">Select a Worship Community</option>
+                            </select>
+                        </div>
+                        <!-- filter button -->
+                        <div class="twmc-vertical-align--middle-flex-item-10">
+                            <button id="resetfilter" type="button" class="twmc--btn__grow twmc--btn__grow-o  grow__filter-date-button2 ">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of inline filter -->
+
+
+    <!-- cards -->
+    <section id="grow-o-serve__ministries">
+        <div class="container">
+            {% assign ministriesList = '' %}
+            {% assign worshipCommunityList = '' %}
+
+            {% connectionopportunity where:'ConnectionTypeId == "3" && IsActive == "true"' sort:'Name' %}
+            {% for co in connectionopportunityItems %}
+            {% assign ministryList = '' %}
+            {% assign communityList = '' %}
+            {% assign ministries = co | Attribute:'Ministry' | Split:',' %}
+                {% for ministry in ministries %}
+                {% if ministry and ministry != '' %}
+                    {% assign AddList = ministry | Trim %}
+                    {% assign ministryList = ministryList | Append:AddList | Append:',' %}
+                    {% assign ministriesList = ministriesList | Append:AddList | Append:',' %}
+                {% endif %}
+                {% endfor %}
+
+            {% assign communities = co | Attribute:'WorshipCommunity' | Split:',' %}
+                {% for community in communities %}
+                {% if community and community != '' %}
+                    {% assign AddCList = community | Trim %}
+                    {% assign communityList = communityList | Append:AddCList | Append:',' %}
+                    {% assign worshipCommunityList = worshipCommunityList | Append:AddCList | Append:',' %}
+                {% endif %}
+                {% endfor %}
+
+
+            <div class="row m- w- m-{{ ministryList | Replace:' ','_' | Split:',' | Join:' m-' | Replace:'_','' }} w-{{ communityList | Replace:' ','_' | Split:',' | Join:' w-' | Replace:'_','' }}" data-worship-community="{{ co | Attribute:'WorshipCommunity'}}">
+                <div class="col-sm-12">
+                    <div class="twmc-flex-container--1-col">
+                        <!-- Card v2 -->
+                                <div class="twmc-flex-item--1-col grow__card">
+                                    <div class="grow__card-strip--paris-green"></div>
+                                    <div class="grow__card-content">
+                                        <div class="row">
+                                            <div class="col-sm-5 col-md-4">
+                                                <img src="{{ co.PhotoUrl }}" alt="" class="twmc-serve__img twmc-mts">
+                                            </div>
+                                            <div class="col-sm-7 col-md-8">
+                                                <h3 class="grow__card-title4 text-paris-green">{{ co.Name}}</h3>
+                                                <div class="grow__card-tag4 twmc-mbxs">
+                                                    <span>{{ co | Attribute:'Ministry'}}</span>
+                                                </div>
+
+                                                <div class="grow__card-description">
+                                                    <p class="mb-3">{{co.Summary}}</p>
+                                                </div>
+                                                <div class="grow__card-info">
+                                                    <i class="fas fa-church grow__card-icon"></i>
+
+                                                    {% for community in communities%}
+                                                        <span>{{ community }}{% unless forloop.last %},{% endunless %} </span>
+                                                    {% endfor %}
+                                                </div>
+                                                <div>
+                                                    <a href="/volunteersignup?OpportunityId={{co.Id}}" class="twmc--btn__grow twmc--btn__grow-o grow-g__details">Serve now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of card v2 -->
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of row -->
+            {% endfor %}
+            {% endconnectionopportunity %}
+
+
+        </div>
+    </section>
+    <!-- end of cards -->
+
+</section>
+<!-- end of page content -->
+
+<script>
+let ministryList = ['{{ ministriesList | Split:',' | Uniq | Join:"','" }}']
+let worshipCommunityList = ['{{ worshipCommunityList | Split:',' | Uniq | Join:"','" }}']
+ministryList = ministryList.sort((a, b) =>
+   a.localeCompare(b)//using String.prototype.localCompare()
+);
+let mFilter = document.getElementById('ministryFilter')
+let wFilter = document.getElementById('worshipCommunityFilter')
+let mValue = ""
+let wValue = ""
+
+ministryList.map(e => {
+
+    let option = document.createElement("option");
+    option.text = e.toString();
+    option.value = e.toString().replace(' ','');
+    mFilter.add(option);
+})
+
+worshipCommunityList.map(e => {
+
+    let option = document.createElement("option");
+    option.text = e.toString();
+    option.value = e.toString().replace(' ','');
+    wFilter.add(option);
+})
+
+
+mFilter.addEventListener('change', function() {
+    mValue = this.value;
+    filterResults();
+});
+
+wFilter.addEventListener('change', function() {
+    wValue = this.value;
+    filterResults();
+});
+
+document.getElementById('resetfilter').addEventListener('click', function() {
+    console.log("fired")
+    mValue = ""
+    wValue = ""
+    $("#ministryFilter").val("");
+    $("#worshipCommunityFilter").val("");
+    $('.volunteer-opportunity').fadeIn()
+})
+
+function filterResults() {
+    let allElements = $('.volunteer-opportunity')
+    allElements.each(function() {
+
+        if($(this).hasClass('m-'+mValue) && $(this).hasClass('w-'+wValue) ) {
+            $(this).fadeIn()
+        } else {
+            $(this).fadeOut();
+        }
+    })
+
+}
+
+</script>

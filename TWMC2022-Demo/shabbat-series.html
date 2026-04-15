@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabbat Series</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-main2023.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-navbar.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- Hero - Home Image -->
+    <section id="twmc--shabbat2023-hero" class="hero--img__align-center">
+      <div class="container-fluid hero--img__text-wrapper">
+        <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/HAR_Shabbat_Message_Text.png" alt="" class="img-responsive-center">
+      </div>
+    </section>
+    <!-- End of Hero - Home Image-->
+
+    <!-- Content -->
+    <!-- Intro -->
+    <section class="py-6 background-lightgrey2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-justify">
+            <p><strong>In our current series, “Shabbat,” we’re looking at the tradition of Sabbath and what it holds for us in our lives today. In a fast-paced culture that often leaves us feeling overwhelmed and disconnected, the practice of Sabbath holds profound relevance for us all. From the creation account in Genesis to the teachings of Jesus and the early Christian community, we’ll explore how Sabbath holds a central place in God’s plan for humanity. Don’t miss this opportunity to experience the blessings of Sabbath as we learn to take a set 24-hour period to stop the busyness and hustle and, instead, invite rest, delight and worship to take precedence in our lives and calendars.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of intro -->
+
+    <!-- Videos -->
+    <section class="py-6">
+      <div class="container">
+
+        <!-- <div class="row">         
+          <div class="col-sm-8 col-sm-offset-2 twmc-card__bg-lightgrey-rectangle mb-4">
+            <h2 class="twmc-h2 twmc-vid__title mb-3">Shabbat Practice: Week One</h2>
+            <div class="embed-container">
+              <iframe src="https://player.vimeo.com/video/856217547?h=0551ddbb27" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            </div>
+
+            <div class="mt-4">
+              
+              <p class="twmc-p">This week we begin our new series, "Shabbat: Learning To Rest With Jesus." Rev. Sorensen kicked off with the foundation of the series, reminding us that Adam and Eve’s first experience with God was resting together. We serve a God who created the weekend, but not the weekend so many of us think about so often. The weekend for so many of us is a time to catch up on all the life stuff we didn’t get to finish that week because of the work stuff we were working on. The great thing about our weekend is that it’s not just one day but two; therefore, choose one to rest and to do what is needed.</p>
+              <p class="twmc-p">This week, as we begin practicing shabbat and learn to rest with Jesus, we start by simply establishing our 24 hours of rest. When will it be? It’s a Holy Day, so may we do our best to set aside this time as holy time with God.</p>
+              <p class="twmc-p">"The seventh day God had finished the work he had been doing; so on the seventh day he rested from all his work. Then God blessed the seventh day and made it holy, because on it he rested from all the work of creating that he had done." - Genesis 2:2-3</p>
+              <p class="twmc-p">One thing we have learned over the years of practicing shabbat on and off is that it’s not hard work, but it does take intentionality. You need a soft plan. We don’t get legalistic in it like in the Old Testament, but we do come with an idea of what we will do.</p>
+              <p class="twmc-p">In conclusion, this week you are choosing a 24-hour period. Maybe dinner from one day to dinner the next. Then choose how you can rest with God, family and friends.</p>
+              <p class="twmc-p">This may feel strange as we enter into this Shabbat, but it’s not because we aren’t supposed to enter in but because we have failed to enter this Holy Day.  </p>
+              <p class="twmc-p">We are praying that you will find time to rest with God and community this week.</p>
+              <p class="twmc-p">Blessings</p>
+
+
+              <div class="mt-4">
+                <hr>
+                <h4 class="twmc-h4">Resources</h4>
+                <a href="https://www.amazon.com/Subversive-Sabbath-Surprising-Power-Nonstop/dp/1587434059/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1692703596&sr=8-1-spons" class="twmc--btn twmc--btn--traditional" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i>Subversive Sabbath</a>
+              </div>
+              
+            </div>
+
+          </div>
+
+
+        </div> -->
+
+
+        <!-- Accordion -->
+        <div class="row">
+          <div class="col-sm-12">
+           
+
+            <!-- Panel group -->
+            <div class="panel-group" id="accordion-shabbat" role="tablist" aria-multiselectable="true">
+              <!-- Week #6 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-shabbat6">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat6" aria-expanded="false" aria-controls="collapse-shabbat6" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK SIX
+                        </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-shabbat6" class="panel-collapse collapse in background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat6">
+                    <div class="panel-body twmc-panel-body">
+                      <div class="py-3 px-3 mb-4">
+                        <div class="embed-container">
+                          <iframe src="https://player.vimeo.com/video/867718380?h=50a090d5b0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        </div>
+            
+                        <div class="mt-5">
+                          <p class="twmc-p">It’s just the beginning. </p>
+                          <p class="twmc-p">As we end our series on Shabbat, I am reminded about the words Mark Sorensen so often says: </p>
+                          <p class="twmc-p">“This isn’t a benediction but a call to worship.” </p>
+                          <p class="twmc-p">Just like a marriage is not over after the wedding, but only beginning, so we now step into a life of Sabbath together. We have learned so much in this series and look forward to continuing to learn our best rhythms for the season of life we currently find ourselves. </p>
+                          <p class="twmc-p">These are the things we must do: 
+                            <br>Stop
+                            <br>Rest
+                            <br>Delight
+                            <br>Worship
+                          </p>
+                          <p class="twmc-p">Be creative. Remember the cost is too high not to step into these practices of Sabbath. </p>
+                          
+                          <p class="twmc-p">Blessings </p>
+
+                          <div class="mt-4 text-left">
+                            <hr>
+                            <p class="twmc-p">P.S. Don’t forget to grab the new Bristol House album, “Altars,” wherever you stream music. May it be the playlist to start your Sabbath!</p>
+                            <a href="https://bristolhousemusic.org/bh#music" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-music twmc-mrxs"></i>Listen to Bristol House</a>
+                          </div>
+                          
+                        </div>
+            
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Week #5 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-shabbat5">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat5" aria-expanded="false" aria-controls="collapse-shabbat5" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK FIVE
+                        </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-shabbat5" class="panel-collapse collapse background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat5">
+                    <div class="panel-body twmc-panel-body">
+                      <div class="py-3 px-3 mb-4">
+                        <div class="embed-container">
+                          <iframe src="https://player.vimeo.com/video/865358984?h=a2097ee996" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        </div>
+            
+                        <div class="mt-5">
+                          <p class="twmc-p"><strong>Hello Harvest Friends, </strong> </p>
+                          <p class="twmc-p">I can’t believe we are heading into our last week of our Shabbat series.</p>
+                          <p class="twmc-p">I pray this series has given you a vision of what it means to rest with Jesus. A call to stop from everything that the world brings and spend time with God the Father, Son and Holy Spirit. </p>
+                          <p class="twmc-p">We have looked at 
+                            <br><span class="ml-4">Stopping</span>
+                            <br><span class="ml-4">Resting</span>
+                            <br><span class="ml-4">Delighting</span>
+                          </p>
+                          <p class="twmc-p">And this past week we jumped into worship as a part of our Sabbath practice. </p>
+                          <p class="twmc-p">There is a difference in giving a framework and being overproduced. These four things — stopping, resting, delighting, worshipping — are the framework into which we build our 24 hours of Shabbat. </p>
+                         
+                          <p class="twmc-p mb-0">I want to pose a few questions for you today.</p>
+                          <ol class="ml-5 twmc-p">
+                            <li>How are you leaning into Shabbat?</li>
+                            <li>Where do you feel the tension in these 24 hours of intentionally stepping away from the world?</li>
+                            <li>Is there a place God is speaking to you in this practice?</li>
+                            <li>Do you feel a call into the deeper waters with Him?</li>
+                          </ol>
+
+                          <p class="twmc-p">This week as you practice Shabbat, find ways to bring worship into the equation. 
+                          <br>Remember, this is a framework, not a hardline how-to guide. </p>
+                          <p class="twmc-p">Shabbat could be a day where worship music is all that you listen to when having music on, whether in the car or in the kitchen while cooking. </p>
+                          <p class="twmc-p mb-0">John Mark Comer gives this to help you identify what you could do for the practice of worship: 
+                          </p>
+                          <p class="twmc-p ml-4"><em>Does this activity connect me more deeply to God and his goodness and beauty? Do I find myself coming alive to the wonder of his nature and spontaneously bursting into praise?</em></p>
+                          <p class="twmc-p">Continue to put God at the center of the day and rest with Him, delight in Him, and worship Him. </p>
+                          <p class="twmc-p">Blessings </p>
+
+                          <div class="mt-4 text-left">
+                            <hr>
+                            <h4 class="twmc-h4">Extra Reading:</h4>
+                            <a href="https://www.amazon.com/Keeping-Sabbath-Wholly-Embracing-Feasting/dp/0802804578/ref=sr_1_1?crid=1YEOLXIN7YL8L&keywords=keeping+the+sabbath+wholly+marva+dawn&qid=1695305169&sprefix=keeping+the+sa%2Caps%2C115&sr=8-1" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i><i>Keeping the Sabbath Wholly: Ceasing, Resting, Embracing, Feasting </i>by Marva J. Dawn</a>
+                          </div>
+                          
+                        </div>
+            
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Week #4 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-shabbat4">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat4" aria-expanded="false" aria-controls="collapse-shabbat4" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK FOUR
+                        </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-shabbat4" class="panel-collapse collapse background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat4">
+                    <div class="panel-body twmc-panel-body">
+                      <div class="py-3 px-3 mb-4">
+                        <div class="embed-container">
+                          <iframe src="https://player.vimeo.com/video/862948405?h=72bc20cc63" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        </div>
+            
+                        <div class="mt-5">
+                          <p class="twmc-p"><strong>Hey Harvest Family,</strong> </p>
+                          <p class="twmc-p">This past week as we continued our series, Shabbat, we looked at “Delight.” We were reminded that first and foremost, from His love towards us and for us, God delights in us. </p>
+                          <p class="twmc-p"><i>“The Lord your God …takes great delight in you. He will quiet you with his love. He will rejoice over you with singing.”</i> &mdash; Zephaniah 3:17 (EHV)</p>
+                          <p class="twmc-p">Our God not only delights in us, but He also uniquely created us. Therefore, when it comes to Shabbat and looking at how we get to delight in Him, this will look different for each of us. </p>
+                          <p class="twmc-p">This is where you get to be the artist with your Shabbat. As you stop, as you rest, how will you delight with God, with how He created you, and with your community? </p>
+                          <p class="twmc-p">Remember that the things you try should produce in you the fruit of the Spirit of God. I love the way Eugene Peterson translated this passage in Galatians. </p>
+                          <p class="twmc-p"><i>But what happens when we live God’s way? He brings gifts into our lives, much the same way that fruit appears in an orchard — things like affection for others, exuberance about life, serenity. We develop a willingness to stick with things, a sense of compassion in the heart, and a conviction that a basic holiness permeates things and people. We find ourselves involved in loyal commitments, not needing to force our way in life, able to marshal and direct our energies wisely.</i> &mdash; from Galatians 5:22-24</p>
+                          <p class="twmc-p">When we delight in God, this should be the outcome and fruit of that time with Him. </p>
+                          <p class="twmc-p">Two final things: </p>
+                          <p class="twmc-p">First, this will be a trial and error kind of thing. Try different things and ways to delight with God. There’s not one special, exact, specific way to delight with God, and this can change depending on the season of life you are in right now. Have fun with it. </p>
+                          <p class="twmc-p mb-0">Secondly, we recommend you follow a basic Sabbath ritual: </p>
+                          <ol class="ml-5">
+                            <li>Light two candles.</li>
+                            <li>Read a psalm.</li>
+                            <li>Bless the kids if they are there; bless one another.</li>
+                            <li>Pray.</li>
+                            <li>Feast.</li>
+                            <li>Share highlights of the week.</li>
+                            <li>Share what you are grateful for — “It would have been enough, but …”</li>
+                            <li>And then just celebrate life together.</li>
+                          </ol>
+
+                          <p class="twmc-p mb-0">For ways to delight, here are some options: </p>
+                          <ol class="ml-5">
+                            <li>Make pancakes.</li>
+                            <li>Play a game.  </li>
+                            <li>Have a dance party.</li>
+                            <li>Play music.</li>
+                            <li>Get coffee with your best friend.</li>
+                            <li>Call a friend or family member who lives far away.</li>
+                            <li>Take a walk.</li>
+                            <li>Nap.</li>
+                            <li>Eat delicious food.</li>
+                            <li>Do your nails or favorite self-care activity. </li>
+                            <li>Go fishing or surfing or swimming.</li>
+                            <li>Be in nature.</li>
+                            <li>Watch the sun rise or set.</li>
+                            <li>Make a fire.</li>
+                            <li>Read fiction or poetry.</li>
+                            <li>Sing.</li>
+                            <li>Go to an art museum.</li>
+                            <li>Go on a picnic in a beautiful park.</li>
+                          </ol>
+
+                          <p class="twmc-p">We look forward to you embracing your Shabbat and continuing to learn to delight in and with God. </p>
+                          <p class="twmc-p">Blessings </p>
+
+                          <div class="mt-4 text-left">
+                            <hr>
+                            <h4 class="twmc-h4">Extra Resource:</h4>
+                            <a href="https://www.amazon.com/Garden-City-Work-Being-Human/dp/0310337348/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1694616882&sr=8-1" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i><i>Garden City: Work, Rest, and the Art of Being Human </i>by John Mark Comer</a>
+                          </div>
+                          
+                        </div>
+            
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Week #3 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-shabbat3">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat3" aria-expanded="false" aria-controls="collapse-shabbat3" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK THREE
+                        </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-shabbat3" class="panel-collapse collapse background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat3">
+                    <div class="panel-body twmc-panel-body">
+                      <div class="py-3 px-3 mb-4">
+                        <div class="embed-container">
+                          <iframe src="https://player.vimeo.com/video/860701155?h=3ffb760c40" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        </div>
+            
+                        <div class="mt-5">
+                          <p class="twmc-p">I said this in a meeting the other day, but this Shabbat series truly is becoming my favorite series we have done since I have arrived 18 months ago. It’s not one thing either, but the combination of multiple things. I love having the table weekly as a rhythm for us. The worship has been beautiful, and the content in the sermons has been so good.  </p>
+                          <p class="twmc-p">It’s been a reminder to me of the deep cry of my soul for not simply rest, but rest in and with Jesus.  </p>
+                          <p class="twmc-p">Brenna was reminding me of a saying on how we should rest:  </p>
+                          <p class="twmc-p ml-3">If you work with your hands, rest with your mind. 
+                            <br>If you work with your mind, rest with your hands.  </p>
+                          <p class="twmc-p">When we started this journey of Shabbat together, we worked on picking our 24 hours of rest. Then last week the practice looked at how we need to prep and plan for Sabbath itself. We needed a plan.  </p>
+                          <p class="twmc-p">This week we look at planning our rest first and foremost with Jesus.  </p>
+                          <p class="twmc-p">I loved the story of the statue that Rev. Sorensen talked about on Sunday. The line that gripped my heart was that you could only see the eyes of Jesus in the statue if you were kneeling at His feet. This is the goal of Shabbat or Sabbath: to rest with Jesus at His feet. </p>
+                          <p class="twmc-p">This week we look at practicing resting with Jesus in Scripture. I find this is best done in the morning after you have gotten up and had your coffee, tea or soda (lol). </p>
+                          <p class="twmc-p">This week on Sabbath, I want us to look at Psalm 23.  </p>
+                          <p class="twmc-p">Read it a few times. I am strategic in picking this psalm because it is familiar to most of us. We are resting with God and being reminded of His truth and goodness. Ask the following questions:  </p>
+                          <ul class="ml-3">
+                            <li>What do you love about this chapter?</li>
+                            <li>Is there anything that jumped out to you in reading it?</li>
+                            <li>What could God be speaking to you in this chapter today?</li>
+                          </ul>
+                          <p class="twmc-p">Keep resting with Jesus for the Sabbath is holy.  </p>
+
+                          
+                          <div class="mt-4 text-left">
+                            <hr>
+                            <h4 class="twmc-h4">Extra Resource:</h4>
+                            <a href="https://www.amazon.com/dp/0374529752?psc=1&smid=ATVPDKIKX0DER&ref_=chk_typ_imgToDp" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i><i>The Sabbath </i>by Abraham Joshua Heschel</a>
+                          </div>
+                        </div>
+            
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+              <!-- Week #2 -->
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-shabbat2">
+                    <h4 class="panel-title twmc-panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat2" aria-expanded="false" aria-controls="collapse-shabbat2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK TWO
+                        </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse-shabbat2" class="panel-collapse collapse background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat2">
+                    <div class="panel-body twmc-panel-body">
+                      <div class="py-3 px-3 mb-4">
+                        <div class="embed-container">
+                          <iframe src="https://player.vimeo.com/video/858455990?h=0d7ecd0638" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        </div>
+            
+                        <div class="mt-5">
+                          <!-- <h2 class="twmc-h2 twmc-vid__title mb-3">Shabbat Practice: Week One</h2> -->
+                          <p class="twmc-p">As we jumped into week two of our Shabbat series, I could not stop thinking about one quote from Pastor Mark’s message: </p>
+                          <p class="twmc-p"><i><strong>If you don’t learn to come apart, you’ll come apart. -Vance Havner</strong></i> </p>
+                          <p class="twmc-p">That was one of those lines that, if I’m honest, shocked me in a good way. It was a deep reminder that I need to come apart from the rush of this world and abide with God. We are looking at how Sabbath is a 24-hour period where you STOP with the busy and, instead, focus on the following: REST, DELIGHT and WORSHIP. </p>
+                          <p class="twmc-p">Last week in our practice, we looked at simply finding our time, when our 24-hour period of rest would be. This week we add to it with the word “prepping.”  </p>
+                          <p class="twmc-p">I have found through the years, the seasons in which I practice Sabbath well is when I prep for Sabbath well. When I’m not practicing Sabbath well, I fill the day with chores around the house or running errands that I hadn’t gotten to during the week or 10 other things needed.  </p>
+                          <p class="twmc-p">The prep practice that has helped me the most in my entering into Sabbath well is grocery shopping before Sabbath. Pastor Mark talked about starting Sabbath, or Shabbat, with a meal. This week, as you get ready for your 24-hours of stopping, take time to go shopping and run the errands you need to. That way, when you enter into Sabbath, you can simply enter in. </p>
+                          <p class="twmc-p">Practice Week Two: Pick a meal to start your Sabbath, create the shopping list and pick up everything you need. Then, with family and/or friends, cook a meal together to start your Shabbat.  </p>
+            
+                          <div class="mt-4 text-left">
+                            <hr>
+                            <h4 class="twmc-h4">Extra Resources:</h4>
+                            <a href="https://www.amazon.com/24-Prescription-Healthier-Happier-Life/dp/1414372280/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1693406954&sr=8-1" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i>24/6: A Prescription for a Healthier, Happier Life by Matthew Sleeth, M.D.</a>
+                            <a href="https://vimeo.com/859786614/0bf610f948" class="twmc--btn twmc--btn--traditional btn--shabbat2023 mb-2" target="_blank"><i class="fas fa-video twmc-mrxs"></i>I Am Second by Pete Briscoe</a>
+                          </div>
+                          
+                        </div>
+            
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+
+              <!-- Week #1-->
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-shabbat1">
+                      <h4 class="panel-title twmc-panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion-shabbat" href="#collapse-shabbat1" aria-expanded="false" aria-controls="collapse-shabbat1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text">SHABBAT PRACTICE: WEEK ONE
+                          </span><i class="fas fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapse-shabbat1" class="panel-collapse collapse background-lightgrey2" role="tabpanel" aria-labelledby="heading-shabbat1">
+                      <div class="panel-body twmc-panel-body">
+                        <div class="py-3 px-3 mb-4">
+                          <!-- <h2 class="twmc-h2 twmc-vid__title mb-3">Shabbat Practice: Week One</h2> -->
+                          <div class="embed-container">
+                            <iframe src="https://player.vimeo.com/video/856217547?h=0551ddbb27" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                          </div>
+
+                          <div class="mt-4">
+                            
+                            <p class="twmc-p">This week we begin our new series, "Shabbat: Learning To Rest With Jesus." Rev. Sorensen kicked off with the foundation of the series, reminding us that Adam and Eve’s first experience with God was resting together. We serve a God who created the weekend, but not the weekend so many of us think about so often. The weekend for so many of us is a time to catch up on all the life stuff we didn’t get to finish that week because of the work stuff we were working on. The great thing about our weekend is that it’s not just one day but two; therefore, choose one to rest and to do what is needed.</p>
+                            <p class="twmc-p">This week, as we begin practicing shabbat and learn to rest with Jesus, we start by simply establishing our 24 hours of rest. When will it be? It’s a Holy Day, so may we do our best to set aside this time as holy time with God.</p>
+                            <p class="twmc-p">"The seventh day God had finished the work he had been doing; so on the seventh day he rested from all his work. Then God blessed the seventh day and made it holy, because on it he rested from all the work of creating that he had done." - Genesis 2:2-3</p>
+                            <p class="twmc-p">One thing we have learned over the years of practicing shabbat on and off is that it’s not hard work, but it does take intentionality. You need a soft plan. We don’t get legalistic in it like in the Old Testament, but we do come with an idea of what we will do.</p>
+                            <p class="twmc-p">In conclusion, this week you are choosing a 24-hour period. Maybe dinner from one day to dinner the next. Then choose how you can rest with God, family and friends.</p>
+                            <p class="twmc-p">This may feel strange as we enter into this Shabbat, but it’s not because we aren’t supposed to enter in but because we have failed to enter this Holy Day.  </p>
+                            <p class="twmc-p">We are praying that you will find time to rest with God and community this week.</p>
+                            <p class="twmc-p">Blessings</p>
+
+
+                            <div class="mt-4">
+                              <hr>
+                              <h4 class="twmc-h4">Extra Resource:</h4>
+                              <a href="https://www.amazon.com/Subversive-Sabbath-Surprising-Power-Nonstop/dp/1587434059/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1692703596&sr=8-1-spons" class="twmc--btn twmc--btn--traditional btn--shabbat2023" target="_blank"><i class="fas fa-book-open twmc-mrxs"></i>Subversive Sabbath</a>
+                            </div>
+                            
+                          </div>
+              
+                        </div>
+                      </div>
+                  </div>
+              </div>
+
+              
+              
+
+             
+             
+
+          </div>
+          <!-- End of panel group -->
+
+
+          </div>
+        </div>
+        <!-- End of Accordion -->
+
+      </div>
+    </section>
+    <!-- End of Videos -->
+
+    <!-- End of content -->
+
+
+  <!-- Footer -->
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo mb-3">
+              <div>
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                  _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="mt-3">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+              
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/foundation" class="footer-flex-item footer-link">TWMC Foundation</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/safari-stop" class="footer-flex-item footer-link">Safari Stop</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals & Memorial Services</a>
+              
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+        
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

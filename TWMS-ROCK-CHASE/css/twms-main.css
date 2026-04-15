@@ -1,0 +1,2439 @@
+/* +++++ VARIABLES +++++ */
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #212529;
+
+  --color-dark-blue: #007fa3;
+  --color-dark-blue2: #007fa3;
+  --color-dark-blue3: #3399b5;
+  --color-light-blue: #5cadc4;
+  --color-light-green: #77be20;
+  --color-dark-green: #198754;
+  --color-light-grey: #e7e7e7;
+}
+
+/* +++++ END OF VARIABLES +++++ */
+
+/* +++++ BASE +++++ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  color: var(--color-black);
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-white);
+
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  font-weight: 900;
+}
+
+a {
+  color: var(--color-dark-blue2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* social media icon link colors */
+
+.sm-link {
+  color: #ffffff;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-dark-blue3);
+  text-decoration: underline;
+}
+/* +++++ END OF BASE +++++ */
+
+/* +++++ TYPOGRAPHY +++++ */
+.twms__header-blue {
+  color: var(--color-dark-blue);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.twms__subheader-blue {
+  color: var(--color-dark-blue);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.twms__header-white {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.twms__subheader-white {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 576px) {
+  .twms__header-blue,
+  .twms__header-white {
+    font-size: 2.5rem;
+  }
+
+  .twms__subheader-blue,
+  .twms__subheader-white {
+    font-size: 1.8rem;
+  }
+}
+
+.twms__text-white {
+  color: var(--color-white);
+}
+
+.twms__text-blue {
+  color: var(--color-dark-blue);
+}
+
+.twms__text-green {
+  color: var(--color-light-green);
+}
+
+.twms__text-dark-green {
+  color: var(--color-dark-green);
+}
+/* +++++ END OF TYPOGRAPHY +++++ */
+
+/* +++++ UTILITIES +++++ */
+.twms__section-pymed {
+  padding: 3rem 0;
+}
+
+.twms__section-pylg {
+  padding: 5rem 0;
+}
+
+.twms__section-pymed-blue {
+  padding: 3rem 0;
+  background-color: var(--color-dark-blue);
+}
+
+.twms__section-pylg-blue {
+  padding: 5rem 0;
+  background-color: var(--color-dark-blue);
+}
+
+.twms__section-pymed-white {
+  padding: 3rem 0;
+  background-color: var(--color-white);
+}
+
+.twms__content {
+  min-height: 500px;
+}
+/* +++++ END OF UTILITIES +++++ */
+
+/* +++++ BUTTONS +++++ */
+.twms__button {
+  display: inline-block;
+  line-height: 1.3;
+  text-align: center !important;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media only screen and (min-width: 576px) {
+  .twms__button {
+    font-size: 1rem;
+  }
+}
+
+.twms__button-dark-blue {
+  background-color: var(--color-dark-blue);
+  border: 1px solid var(--color-dark-blue);
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.twms__button-dark-blue:hover,
+.twms__button-dark-blue:focus {
+  background-color: var(--color-dark-blue2);
+  border: 1px solid var(--color-dark-blue2);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.twms__button-outline-dark-blue {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-dark-blue);
+  color: var(--color-dark-blue);
+  transition: all 0.3s ease-in-out;
+}
+
+.twms__button-outline-dark-blue:hover,
+.twms__button-outline-dark-blue:focus {
+  background-color: rgba(0, 127, 163, 0.1);
+  border: 2px solid var(--color-dark-blue2);
+  color: var(--color-dark-blue);
+  text-decoration: none;
+}
+
+.twms__button-outline-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.twms__button-outline-white:hover,
+.twms__button-outline-white:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.twms__button-outline-green {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--color-light-green);
+  color: var(--color-light-green);
+  transition: all 0.3s ease-in-out;
+}
+
+.twms__button-outline-green:hover,
+.twms__button-outline-green:focus {
+  background-color: rgba(25, 135, 84, 0.1);
+  border: 2px solid var(--color-light-green);
+  color: var(--color-light-green);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.twms__button-w200 {
+  width: 200px;
+  max-width: 100%;
+}
+
+/* +++++ END OF BUTTONS +++++ */
+
+/* +++++ NAVIGATION +++++ */
+nav.navbar.navbar-default.navbar-expand-lg.twms__navbar {
+  z-index: 13;
+  position: relative;
+}
+.twms__navbar {
+  background-color: var(--color-dark-blue);
+  margin-bottom: 0;
+  border-radius: 0;
+  border-color: transparent;
+  padding: 20px;
+}
+
+.twms__navbar-header {
+  height: auto;
+}
+
+#bs-example-navbar-collapse-1.collapse.navbar-collapse.twms__navbar-collapse.in,
+.navbar-default.twms__navbar .navbar-collapse {
+  border-top: 1px solid var(--color-dark-blue);
+}
+
+.navbar-collapse.twms__navbar-collapse {
+  box-shadow: none;
+}
+
+.twms__nav-link {
+  transition: all 0.4s ease-in-out;
+  font-weight: 600;
+  font-size: 15px;
+
+  color: var(--color-white) !important;
+}
+
+.twms__logo {
+  /* height: 50px; */
+  height: 44px;
+}
+
+.icon-bar.twms__icon-bar {
+  background-color: var(--color-white) !important;
+}
+
+a.dropdown-toggle.twms__nav-link,
+a.twms__nav-link.twms__text-white {
+  color: var(--color-white) !important;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+a.dropdown-toggle.twms__nav-link:hover,
+a.twms__nav-link:hover,
+a.dropdown-toggle.twms__nav-link:focus,
+a.twms__nav-link:focus {
+  color: var(--color-light-blue) !important;
+}
+
+ul.nav.navbar-nav.navbar-right.twms__navbar-right {
+  margin-top: 10px;
+}
+
+/* ul.dropdown-menu.twms__dropdown-menu {
+    margin-top: 32px;
+    border-radius: 0;
+    border-color: var(--color-light-grey);
+    padding: 7px 5px;
+} */
+
+.dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link:hover,
+.dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 991px) {
+  .dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link {
+    color: var(--color-black) !important;
+  }
+
+  .dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link:hover,
+  .dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link:focus {
+    background-color: #f5f5f5;
+    color: var(--color-light-blue) !important;
+  }
+}
+
+/* Toggle to hamburger icon on small device */
+@media only screen and (max-width: 991px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    /* Remove border top from dropdown menu */
+    /* box-shadow: inset 0 1px 0 rgba(255,255,255,0.1); */
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-text {
+    float: none;
+    margin: 15px 0;
+  }
+  /* since 3.1.0 */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+  .collapsing {
+    overflow: hidden !important;
+  }
+
+  /* Dropdown */
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  /* ------------ */
+  /* button hover */
+  .navbar-default .navbar-toggle.twms__navbar-toggle {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .navbar-default .navbar-toggle.twms__navbar-toggle:hover,
+  .navbar-default .navbar-toggle.twms__navbar-toggle:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .navbar-nav .open .dropdown-menu.twms__dropdown-menu > li > a.twms__nav-link {
+    padding: 5px 15px 5px 20px;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .twms__logo {
+    height: 70px;
+    width: max-content;
+  }
+
+  ul.dropdown-menu.twms__dropdown-menu {
+    margin-top: 31px;
+    border-radius: 0;
+    border-color: var(--color-light-grey);
+    padding: 7px 5px;
+  }
+
+  .twms__nav-link {
+    color: var(--color-black);
+  }
+}
+
+/* +++++ END OF NAVIGATION +++++ */
+
+/* +++++ FOOTER +++++ */
+#twms__footer {
+  background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms-footer-bg.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+
+  color: var(--color-white);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.twms__footer-wrapper {
+  padding: 3rem 0;
+}
+
+.twms__footer-logo {
+  height: 50px;
+}
+
+.twms__footer-header {
+  margin-top: 2rem;
+}
+
+.twms__footer-subheader {
+  line-height: 2;
+}
+
+a.twms__footer-link {
+  color: var(--color-white);
+}
+
+a.twms__footer-link:hover,
+a.twms__footer-link:focus {
+  color: #5cadc4;
+}
+
+@media only screen and (min-width: 768px) {
+  .twms__footer-logo {
+    height: 45px;
+  }
+
+  .twms__footer-header {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .twms__footer-logo {
+    height: 50px;
+  }
+}
+/* +++++ END OF FOOTER +++++ */
+
+/* +++++ HOME PAGE +++++ */
+/* HOME - HERO */
+#twms-home__hero {
+  height: 450px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+#twms-home__hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(221, 221, 221, 0.2),
+    rgba(134, 38, 51, 0.2)
+  );
+  z-index: 11; /* Make sure the overlay is above the video */
+}
+
+#twms-home__hero > video {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10; /* Ensure the video is below the overlay */
+}
+
+.twms__hero-text {
+  z-index: 12;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.twms__hero-text > h2 {
+  color: var(--color-white);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+.twms__hero-text > a {
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 576px) {
+  .twms__hero-text > h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-home__hero {
+    height: 600px;
+  }
+
+  #twms-home__hero > video {
+    height: 600px;
+  }
+
+  .twms__hero-text {
+    height: 600px;
+  }
+
+  .twms__hero-text > h2 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+  }
+}
+/* HOME - HERO */
+
+/* HOME - WELCOME */
+
+/* ===== START: HOME PAGE Featured Event Banner ===== */
+/* Shared home page event card shell */
+#twms-home__featured-event {
+  margin: 24px auto 0;
+  padding: 0;
+}
+
+.twms-home__event-banner {
+  position: relative;
+  width: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 226, 168, 0.28);
+  box-shadow: 0 24px 60px rgba(9, 17, 56, 0.24);
+}
+
+.twms-home__event-copy,
+.twms-home__event-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.twms-home__event-banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 3rem 1.5rem;
+}
+
+.twms-home__event-eyebrow {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.twms-home__event-description {
+  margin-bottom: 1rem;
+  max-width: 48rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.twms-home__event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.twms-home__event-meta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.twms-home__event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.twms-home__event-actions .twms__button {
+  min-width: 190px;
+}
+
+/* Home page variant: Celestial Floral Banner */
+.twms-home__event-banner--fiesta-night {
+  background-image:
+    linear-gradient(180deg, rgba(9, 17, 56, 0.2) 0%, rgba(9, 17, 56, 0.2) 100%),
+    url("../images/TWMS_PEO-Fundraising-Event-CUSTOM-LOOK-b.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff6df;
+}
+
+.twms-home__event-banner--fiesta-night::before {
+  content: none;
+}
+
+.twms-home__event-banner--fiesta-night::after {
+  content: none;
+}
+
+.twms-home__event-banner--fiesta-night .twms-home__event-banner-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 70px;
+  justify-content: center;
+}
+
+.twms-home__event-banner--fiesta-night .twms-home__event-eyebrow {
+  color: #ffe2a8;
+}
+
+.twms-home__event-title-image-wrap {
+  margin-bottom: 1rem;
+}
+
+.twms-home__event-title-image {
+  display: block;
+  width: min(100%, 460px);
+  height: auto;
+}
+
+.twms-home__event-banner--fiesta-night .twms-home__event-description {
+  color: rgba(255, 246, 223, 0.96);
+}
+
+.twms-home__event-banner--fiesta-night .twms-home__event-meta span {
+  border-color: rgba(255, 217, 110, 0.45);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff6df;
+}
+
+.twms-home__event-banner--fiesta-night .twms__button-dark-blue {
+  background-color: #ffb65c;
+  border-color: #ffb65c;
+  color: #132a69;
+  font-weight: 800;
+}
+
+.twms-home__event-banner--fiesta-night .twms__button-dark-blue:hover,
+.twms-home__event-banner--fiesta-night .twms__button-dark-blue:focus {
+  background-color: #ffd779;
+  border-color: #ffd779;
+  color: #10245f;
+}
+
+.twms-home__event-banner--fiesta-night .twms__button-outline-dark-blue {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 226, 168, 0.85);
+  color: #fff2cf;
+}
+
+.twms-home__event-banner--fiesta-night .twms__button-outline-dark-blue:hover,
+.twms-home__event-banner--fiesta-night .twms__button-outline-dark-blue:focus {
+  background-color: rgba(255, 226, 168, 0.14);
+  border-color: #ffe2a8;
+  color: #fff9ed;
+}
+
+@media only screen and (min-width: 992px) {
+  .twms-home__event-banner-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.25rem 6rem 2rem;
+  }
+
+  .twms-home__event-actions {
+    justify-content: flex-end;
+  }
+
+  .twms-home__event-banner--fiesta-night .twms-home__event-banner-inner {
+    min-height: 70px;
+  }
+}
+/* ===== END: HOME PAGE Featured Event Banner ===== */
+
+/* ===== START: PEO PAGE Featured Event Banner ===== */
+/* Scoped only to peo.html via .twms-peo__featured-event */
+.twms-peo__featured-event#twms-home__featured-event {
+  margin: 40px auto 80px !important;
+  padding: 0;
+}
+
+.twms-peo__featured-event .twms-home__event-banner {
+  width: 100%;
+}
+
+.twms-peo__featured-event .twms-home__event-banner-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 900px;
+  justify-content: flex-start;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.twms-peo__featured-event .twms-home__event-content-row,
+.twms-peo__featured-event .twms-home__event-details-row,
+.twms-peo__featured-event .twms-home__event-actions-row {
+  width: 100%;
+}
+
+.twms-peo__featured-event .twms-home__event-banner--fiesta-night {
+  background-image:
+    linear-gradient(180deg, rgba(9, 17, 56, 0.2) 0%, rgba(9, 17, 56, 0.2) 100%),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/PEO+Event+Banners/TWMS_PEO_FF_tall.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.twms-peo__featured-event .twms-home__event-copy {
+  max-width: none;
+}
+
+.twms-peo__featured-event .twms-home__event-details-slot {
+  flex: 1 1 auto;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-self: stretch;
+  min-height: 320px;
+  padding-bottom: clamp(1.25rem, 3vw, 2.5rem);
+  border-radius: 20px;
+  background-color: rgba(9, 17, 56, 0.18);
+  color: rgba(255, 242, 207, 0.9);
+}
+
+.twms-peo__featured-event .twms-home__event-video {
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 226, 168, 0.5);
+  background-color: rgba(7, 12, 40, 0.92);
+  box-shadow:
+    0 24px 48px rgba(2, 6, 24, 0.38),
+    0 0 0 8px rgba(7, 12, 40, 0.45);
+  overflow: hidden;
+}
+
+.twms-peo__featured-event .twms-home__event-video iframe {
+  border: 0;
+}
+
+.twms-peo__featured-event .twms-home__event-details-slot p {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.twms-peo__featured-event .twms-home__event-details-slot p:last-child {
+  margin-bottom: 0;
+}
+
+.twms-peo__featured-event .twms-home__event-details-note {
+  font-weight: 900;
+  color: #ffe2a8;
+}
+
+.twms-peo__featured-event .twms-home__event-title-image {
+  width: min(100%, 760px);
+}
+
+.twms-peo__featured-event .twms-home__event-actions {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: clamp(4.25rem, 7vw, 5.5rem);
+  gap: 1rem;
+}
+
+.twms-peo__featured-event .twms-home__event-actions .twms__button {
+  min-width: 220px;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.twms-peo__featured-event .twms-home__event-meta {
+  padding: 1.5rem 0;
+}
+
+.twms-peo__featured-event .twms-home__event-meta > span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  color: inherit !important;
+}
+
+.twms-peo__featured-event .twms-home__event-meta-label {
+  border: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: rgba(255, 226, 168, 0.8) !important;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.twms-peo__featured-event .twms-home__event-meta-value {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem 0.8rem !important;
+  border: 1px solid rgba(255, 217, 110, 0.45) !important;
+  border-radius: 999px !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff6df !important;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media only screen and (min-width: 992px) {
+  .twms-peo__featured-event .twms-home__event-banner-inner {
+    flex-direction: column;
+    min-height: 900px;
+    padding: 8rem 6.5rem;
+  }
+}
+/* ===== END: PEO PAGE Featured Event Banner ===== */
+
+
+#twms__home-welcome p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+/* END OF HOME - WELCOME */
+
+/* HOME - INFO */
+#twms-home__info {
+  background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms-info-box-right.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+
+  color: var(--color-white);
+  text-align: center;
+}
+/* END OF HOME - INFO */
+
+/* HOME - STATS */
+.twms-home__stats-icon-bg {
+  background-color: var(--color-white);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twms-home__stats-item {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 576px) {
+  .twms-home__stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+
+  .twms-home__stats-item {
+    flex-basis: 49%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-home__stats-container {
+    gap: 2%;
+  }
+
+  .twms-home__stats-item {
+    flex-basis: 23%;
+    margin-bottom: 0;
+  }
+}
+/* END OF HOME - STATS */
+/* +++++ END OF HOME PAGE +++++ */
+
+/* +++ COTW CTA +++ */
+#twms__cotw-cta {
+  background-color: var(--color-light-green);
+}
+/* +++++ END OF COTW CTA +++++ */
+
+/* +++++ WELCOME PAGE ++++++ */
+#twms-welcome__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/Discover_Welcome-1600x800.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+/* Flex */
+.twms-hero__text-wrapper {
+  height: 450px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.twms-hero__text-wrapper > .container {
+  margin-left: 0;
+}
+
+.twms-hero__text {
+  margin: 0 auto 4rem 0;
+  color: var(--color-white);
+  text-align: left;
+  font-size: 32px;
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-hero__text-wrapper > .container {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-welcome__hero,
+  .twms-hero__text-wrapper {
+    height: 600px;
+  }
+
+  .twms-hero__text {
+    font-size: 38px;
+  }
+}
+
+.twms-welcome__img {
+  border-radius: 4px;
+  width: 150px;
+  float: left;
+  margin: 5px 10px 5px 0;
+}
+
+.twms-welcome__text {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-welcome__img {
+    float: left;
+    margin: 0 20px 5px 0;
+    width: 200px;
+  }
+
+  .twms-welcome__text {
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .twms-welcome__img {
+    margin: 0 25px 5px 0;
+    width: max-content;
+  }
+}
+/* +++++ END OF WELCOME PAGE +++++ */
+
+/* +++++ ABOUT +++++ */
+#twms-about__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms--hero-about.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-about__hero {
+    height: 600px;
+  }
+}
+
+.twms-card--white {
+  padding: 1.5rem 1.5rem 2rem;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+}
+
+.twms-flex-container--2col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.twms-flex-item--2col {
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .twms-flex-container--2col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+
+  .twms-flex-item--2col {
+    flex-basis: 49%;
+  }
+}
+/* +++++ END OF ABOUT +++++ */
+
+/* +++++ VISIT +++++ */
+#twms-visit__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Admision-visit-scaled.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-visit__hero {
+    height: 600px;
+  }
+}
+
+/* +++++ END OF VISIT+++++ */
+
+/* +++++ PROFILE +++++ */
+#twms-profile__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms--hero-profile.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-profile__hero {
+    height: 600px;
+  }
+}
+
+/* +++++ END OF PROFILE +++++ */
+
+/* +++++ FACILITIES +++++ */
+#twms-facilities__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms--hero-facilities.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-facilities__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF FACILITIES +++++ */
+
+/* +++++ FACULTY & STAFF +++++ */
+#twms-staff__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms--hero-faculty-staff.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-staff__hero {
+    height: 600px;
+  }
+}
+
+.twms-staff-modal.modal.fade,
+.twms-staff-modal.modal.fade.in {
+  padding-right: 0 !important;
+}
+
+.twms-staff-modal.modal.fade {
+  left: 50%;
+  transform: translate(-50%);
+  max-height: 97%;
+  width: 98%;
+  margin-left: 1%;
+  border-radius: 0;
+}
+
+.twms-staff-modal.modal.fade.in {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 97%;
+  width: 90% !important;
+  margin-left: 1%;
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-staff-modal.modal.fade.in {
+    width: 90% !important;
+    max-height: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px !important;
+  }
+
+  .twms-staff-modal.modal.fade {
+    width: 90% !important;
+    max-height: 95%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+/* Flex */
+.twms-staff__flex-container-4col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: flex-start;
+}
+
+.twms-staff__flex-item-4col {
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+
+/* staff img */
+.twms-staff__img {
+  height: 300px;
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.twms-staff__img-small {
+  width: 125px;
+  border-radius: 4px;
+  /* float: left;
+    margin: 0 .7rem 0 0; */
+}
+
+@media only screen and (min-width: 360px) {
+  .twms-staff__img {
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .twms-staff__img {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .twms-staff__flex-container-4col {
+    gap: 1%;
+  }
+
+  .twms-staff__flex-item-4col {
+    flex-basis: 49%;
+  }
+
+  .twms-staff__img {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-staff__flex-item-4col {
+    flex-basis: 32%;
+  }
+
+  .twms-staff__img {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .twms-staff__flex-item-4col {
+    flex-basis: 24%;
+  }
+}
+
+.twms-staff__card {
+  padding: 1rem;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+}
+
+.twms-staff__card-name {
+  color: var(--color-dark-blue);
+  font-size: 18px;
+  font-weight: 800;
+}
+/* +++++ END OF FACULTY & STAFF +++++ */
+
+/* +++++ SCHOOL NEWS +++++ */
+.twms-news__blog-flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.twms-news__blog-flex-item {
+  /* padding: 1.5rem; */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.twms-news__blog-img-wrapper {
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.twms-news__blog-img-wrapper > img {
+  width: 100%;
+}
+
+.twms-news__blog-desc {
+  padding: 1.5rem;
+}
+/* +++++ END OF SCHOOL NEWS +++++ */
+
+/* +++++ EMPLOYMENT +++++ */
+#twms-employment__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms--hero-employment.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-employment__hero {
+    height: 600px;
+  }
+}
+
+/* Employment - accordion */
+.twms-float-left {
+  float: left;
+}
+
+.twms-float-right {
+  float: right;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+}
+
+.twms-panel-title {
+  padding: 5px;
+  line-height: 1.5;
+  background-color: none;
+}
+
+.twms-panel-title:hover,
+.twms-panel-title:focus,
+.twms-panel-title__link:hover,
+.twms-panel-title__link:focus {
+  text-decoration: none;
+}
+
+.twms-panel-title__link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.twms-panel-title__text {
+  flex-basis: 96%;
+}
+
+.twms-panel-title__icon {
+  flex-basis: 2%;
+}
+
+.twms-accordion-plus-minus {
+  padding: 5px;
+  line-height: 1.5;
+}
+
+.panel-heading > h4.panel-title > a.twms-panel-title__link {
+  border-bottom: none;
+}
+
+.panel-heading > h4.panel-title > a.twms-panel-title__link > span {
+  width: 80%;
+}
+/* End of employment - accordion */
+
+/* +++++ END OF EMPLOYMENT +++++ */
+
+/* +++++ parentPEO Hero+++++ */
+#twms-parentPEO__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_PEO.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-parentPEO__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF eagle Hero +++++ */
+
+
+/* +++++ enrichment Hero+++++ */
+#twms-enrichment__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Enrichment.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-enrichment__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF enrichment Hero +++++ */
+
+/* +++++ eagle Hero+++++ */
+#twms-eagle__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Eagle-club-scaled.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-eagle__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF eagle Hero +++++ */
+
+/* +++++ uniforms Hero+++++ */
+#twms-uniforms__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Parents_Uniforms-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-uniforms__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF uniforms Hero +++++ */
+
+/* +++++ supplies Hero+++++ */
+#twms-supplies__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Parents_SchoolSupplyList-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-supplies__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF supplies Hero +++++ */
+
+/* +++++ meal Hero+++++ */
+#twms-meal__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_MealPlan-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-meal__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF meal Hero +++++ */
+
+/* +++++ academic Hero+++++ */
+#twms-academic__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMC_Academics_Enrichment-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-academic__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF academic Hero +++++ */
+
+/* +++++ donate Hero+++++ */
+#twms-donate__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Donate.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-donate__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF donate Hero +++++ */
+
+/* +++++ clinic Hero+++++ */
+#twms-clinic__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Clinic.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-clinic__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF clinic Hero +++++ */
+
+/* +++++ uniform Hero+++++ */
+#twms-uniform__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Uniform.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-uniform__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF uniform Hero +++++ */
+
+
+
+/* +++++ apply Hero+++++ */
+#twms-apply__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_admission-Apply.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-apply__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF apply Hero +++++ */
+
+/* +++++ tuition Hero+++++ */
+#twms-tuition__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Admissions-tuition.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-tuition__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF tuition Hero +++++ */
+
+/* +++++ program-overview Hero+++++ */
+#twms-program-overview__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Academics-Program.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-program-overview__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF program-overview Hero +++++ */
+
+/* +++++ elementary Hero+++++ */
+#twms-elementary__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_academics-elementary.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-elementary__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF elementary Hero +++++ */
+
+/* +++++ middle Hero+++++ */
+#twms-middle__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Academics-middle.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-middle__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF middle Hero +++++ */
+
+/* +++++ yearbook Hero+++++ */
+#twms-yearbook__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/yearbook.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-yearbook__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF yearbook Hero +++++ */
+
+/* +++++ chess Hero+++++ */
+#twms-chess__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/chess.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-chess__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF chess Hero +++++ */
+
+/* +++++ studentlife Hero+++++ */
+#twms-studentlife__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-studentlife__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF studentlife Hero +++++ */
+
+/* +++++ fa Hero+++++ */
+#twms-fa__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Fine%20Arts%20%282%29.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-fa__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF fa Hero +++++ */
+
+/* +++++ tech Hero+++++ */
+#twms-tech__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Technology.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-tech__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF tech Hero +++++ */
+
+/* +++++ discovery Hero+++++ */
+#twms-discovery__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_DiscoveryWelcome.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-discovery__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF guide Hero +++++ */
+
+/* +++++ guide Hero+++++ */
+#twms-guide__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_MissionandGuiding.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-guide__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF guide Hero +++++ */
+
+/* +++++ athletics Hero+++++ */
+#twms-athletics__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_Athletics-1600x800.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-athletics__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF athletics Hero +++++ */
+
+/* +++++ arts Hero+++++ */
+#twms-arts__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_Arts.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-arts__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF arts Hero +++++ */
+
+/* +++++ drama Hero+++++ */
+#twms-drama__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/drama.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-drama__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF drama Hero +++++ */
+
+/* +++++ community Hero+++++ */
+#twms-community__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_CommunityService.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-community__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF community Hero +++++ */
+
+/* +++++ handbook Hero+++++ */
+#twms-handbook__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_Handbook-scaled.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-handbook__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF handbook Hero +++++ */
+
+.custom-button-width-modal-close {
+  width: auto;
+  min-width: 80px; /* Adjust this value as needed */
+}
+
+/* start Modal "X" Close */
+.modal-header {
+  position: relative;
+}
+
+.close-right {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transform: translateY(-50%); /* Vertically center the button */
+}
+/* end Modal "X" Close */
+
+/*  Calendar  */
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 0px;
+}
+.event {
+  border: 0px solid #030303;
+  padding: 2.5rem;
+  border-radius: 9px;
+  box-sizing: border-box;
+  background-color: rgb(227, 241, 255);
+  /* width: calc(100% / 3 - 20px); */
+  /* max-width: calc(33.3333% - 2rem); */
+  width: calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  flex: 1 0 auto;
+}
+.event h3 {
+  margin-top: 0.01rem;
+}
+
+@media (max-width: 991px) {
+  /* For medium screens (tablets), display 2 cards per row */
+  .event {
+    /* width: calc(50% - 20px);
+      max-width: calc(50% - 20px); */
+  }
+}
+
+@media (max-width: 767px) {
+  /* For small screens (phones), display 1 card per row */
+  .event {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* end calendar */
+
+/* Custom cards for student overview page */
+
+.custom-card {
+  background-color: rgb(227, 241, 255);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.custom-btn {
+  background-color: #007fa3;
+  border-color: #007fa3;
+  color: white;
+  border: 0px solid #ffffff;
+}
+
+.custom-btn:hover {
+  background-color: #005f7f;
+  border-color: #005f7f;
+  color: white;
+  border: 0px solid #ffffff;
+}
+
+.flex-fill {
+  flex: 1;
+}
+
+.card-title {
+  font-size: x-large; /* or 18px depending on preference */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.btn.custom-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.row.equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 0px;
+}
+
+/* End custom cards for student overview page */
+
+/* 
+Board img */
+.twms-board__img {
+  height: auto;
+  width: auto;
+  border-radius: 4px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+
+.twms-board__img-small {
+  width: 125px;
+  border-radius: 4px;
+  /* float: left;
+    margin: 0 .7rem 0 0; */
+}
+
+@media only screen and (min-width: 360px) {
+  .twms-board__img {
+    height: 450px;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .twms-board__img {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .twms-board__flex-container-4col {
+    gap: 1%;
+  }
+
+  .twms-board__flex-item-4col {
+    flex-basis: 49%;
+  }
+
+  .twms-board__img {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .twms-board__flex-item-4col {
+    flex-basis: 32%;
+  }
+
+  .twms-board__img {
+    height: 250px;
+  }
+}
+
+/* end board img */
+
+/* label styling for TAGS */
+
+.label-custom {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*  end label styling for TAGS */
+
+/* bottom-nav-container for the middle school academics */
+
+#bottom-nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+#bottom-nav-container a {
+  margin: 5px;
+}
+@media (max-width: 767px) {
+  #bottom-nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #bottom-nav-container a {
+    margin: 10px 0;
+  }
+}
+
+/* END bottom-nav-container for the middle school academics */
+
+/*  overlay on Hero  */
+
+#twms-home__hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#twms-home__hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15); /* Adjust the opacity as needed */
+  z-index: 1; /* Place the overlay above the video */
+}
+
+#twms-home__hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Ensure the video is below the overlay */
+}
+
+.twms__hero-text {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+  color: white; /* Adjust text color as needed */
+  text-align: center;
+  padding: 20px;
+}
+
+/*  end overlay on hero  */
+
+/* family portal design start */
+
+.border-chip {
+  border-radius: 6px;
+  border: 3px solid whitesmoke;
+  color: var(--color-dark-blue);
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.twms_align-center {
+  align-items: center;
+}
+
+#nav-login > a:hover {
+  /* color: var(--color-dark-blue) !important;
+  background-color: whitesmoke; */
+   
+}
+
+.border-chip:hover {
+  border-radius: 6px;
+}
+
+/* family portal design end */
+
+/* photo grid  */
+.photo_grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: auto;
+  margin: -0.5rem; 
+}
+
+.photo_grid .large-image {
+  grid-row: 1 / 3;
+  
+}
+
+.photo_grid .large-image img,
+.photo_grid .small-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: .5rem;
+ 
+}
+
+.photo_grid .small-images {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+ 
+}
+
+.photo_grid .small-images img {
+  width: 100%;
+  object-fit: cover;
+ 
+}
+
+/*  end photo grid  */

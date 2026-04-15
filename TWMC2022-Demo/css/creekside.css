@@ -1,0 +1,167 @@
+/* ===== CHURCH AT CREEKSIDE ===== */
+/* =============================== */
+
+/* HERO */
+#twmc-cac-home--hero {
+    /* background-image: linear-gradient(to bottom, rgba(72, 66, 61, .5), rgba(72, 66, 61, 0.6)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/JasonBurnham-BG.jpg"); */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/JasonBurnham-BG.jpg");
+    
+    background-color: #eee;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+
+    /* height: 650px; */
+    min-height: 650px;
+    height: 90vh;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-featbanner--cac-home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .twmc-featbanner--cac-home-wrapper > img {
+    width: 100px;
+    height: auto;
+    
+    margin-top: 5rem;
+    margin-bottom: 0;
+  }
+
+  .cov-hero--title {
+    color: #fff;
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .cov-hero--subtitle {
+    color: #fff;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .cov-hero--title {
+      font-size: 5.5rem;
+    }
+
+    .cov-hero--subtitle {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    #twmc-cac-home--hero {
+      height: 85vh;
+      padding: 2.5rem 0;
+    }
+
+    .twmc-featbanner--cac-home-wrapper > img {
+        max-width: 60%;
+    }
+
+    .cov-hero--title {
+      font-size: 4.5rem;
+    }
+
+    .cov-hero--subtitle {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    #twmc-cac-home--hero {
+        height: 450px;
+        padding: 2rem 0;
+    }
+
+    .twmc-featbanner--cac-home-wrapper > img {
+      max-width: 30%;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .twmc-featbanner--cac-home-wrapper > img {
+      max-width: 20%;
+    }
+
+    .cov-hero--title {
+      font-size: 4rem;
+    }
+
+    .cov-hero--subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+/* END OF HERO */
+
+/* CTA */
+.twmc-cta--text-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-cta-whiteoutline {
+  background-color: white;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 9.5px;
+  padding: .5rem 1.2rem;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  min-width: 175px;
+  max-width: max-content;
+  text-transform: uppercase;
+}
+
+.btn-cta-whiteoutline:hover {
+  background-color: #eee;
+  transform: scale(1.02);
+  color: #333;
+}
+
+@media only screen and (max-width:768px) {
+  .btn-trans-hero {
+      margin-top: 10px;
+  }
+}
+
+
+.twmc-cta--text-wrapper a.btn.btn-cta-whiteoutline {
+margin: 0 auto;
+}
+
+.buttons-wrap {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+.btn-cta-whiteoutline {
+min-width: 218px;
+}
+/* END OF CTA */

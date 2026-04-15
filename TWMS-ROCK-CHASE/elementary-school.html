@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template - Inner Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.22"
+    />
+    <link
+      rel="stylesheet"
+      href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.22"
+    />
+    <link rel="stylesheet" href="./css/twms-main.css" />
+  </head>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-expand-lg twms__navbar">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header twms__navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed twms__navbar-toggle"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar twms__icon-bar"></span>
+          <span class="icon-bar twms__icon-bar"></span>
+          <span class="icon-bar twms__icon-bar"></span>
+        </button>
+        <a href="/home.html">
+          <img
+            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms-logo-white.png"
+            alt=""
+            class="twms__logo"
+          />
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div
+        class="collapse navbar-collapse twms__navbar-collapse"
+        id="bs-example-navbar-collapse-1"
+      >
+        <ul class="nav navbar-nav navbar-right twms__navbar-right">
+          <!-- Discovery -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle twms__nav-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Discovery <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu twms__dropdown-menu">
+              <li><a href="welcome.html" class="twms__nav-link">Welcome</a></li>
+              <li>
+                <a href="about.html" class="twms__nav-link">About Our School</a>
+              </li>
+              <li>
+                <a href="mission-guiding-principles.html" class="twms__nav-link"
+                  >Mission &amp; Guiding Principles</a
+                >
+              </li>
+              <li>
+                <a href="profile.html" class="twms__nav-link">School Profile</a>
+              </li>
+              <li>
+                <a href="facilities.html" class="twms__nav-link">Facilities</a>
+              </li>
+              <li>
+                <a href="staff.html" class="twms__nav-link"
+                  >Faculty &amp; Staff</a
+                >
+              </li>
+              <li>
+                <a href="news.html" class="twms__nav-link">School News</a>
+              </li>
+              <li>
+                <a href="employment.html" class="twms__nav-link">Employment</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Admission -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle twms__nav-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Admission <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu twms__dropdown-menu">
+              <li><a href="visit.html" class="twms__nav-link">Visit</a></li>
+              <li><a href="apply.html" class="twms__nav-link">Apply</a></li>
+              <li>
+                <a href="tuition.html" class="twms__nav-link"
+                  >Tuition &amp; Fees</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Academics -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle twms__nav-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Academics <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu twms__dropdown-menu">
+              <li>
+                <a href="program-overview.html" class="twms__nav-link"
+                  >Program Overview</a
+                >
+              </li>
+              <li>
+                <a href="elementary-school.html" class="twms__nav-link"
+                  >Elementary School (Grades Pre-K - 4)</a
+                >
+              </li>
+              <li>
+                <a href="middle-school.html" class="twms__nav-link"
+                  >Middle School (Grades 5 - 8)</a
+                >
+              </li>
+              <li>
+                <a href="religious-studies.html" class="twms__nav-link"
+                  >Religious Studies</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Student Life -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle twms__nav-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Student Life <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu twms__dropdown-menu">
+              <li>
+                <a href="student-life-overview.html" class="twms__nav-link"
+                  >Student Life Overview</a
+                >
+              </li>
+              <li>
+                <a href="athletics.html" class="twms__nav-link">Athletics</a>
+              </li>
+              <li>
+                <a href="fine-arts.html" class="twms__nav-link">Fine Arts</a>
+              </li>
+              <li>
+                <a href="community-service.html" class="twms__nav-link"
+                  >Community Service</a
+                >
+              </li>
+              <li>
+                <a href="enrichment-activities.html" class="twms__nav-link"
+                  >Enrichment Activities</a
+                >
+              </li>
+              <li>
+                <a href="meal-plan.html" class="twms__nav-link">Meal Plan</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Parents -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle twms__nav-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Parents <span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu twms__dropdown-menu">
+              <li>
+                <a href="handbook.html" class="twms__nav-link">Handbook</a>
+              </li>
+              <li>
+                <a href="school-board.html" class="twms__nav-link"
+                  >School Board</a
+                >
+              </li>
+              <li><a href="peo.html" class="twms__nav-link">P.E.O.</a></li>
+              <li>
+                <a
+                  href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms_2022-23_Calendar.pdf"
+                  class="twms__nav-link"
+                  target="_blank"
+                  >Academic Calendar</a
+                >
+              </li>
+              <li>
+                <a href="eagle-club.html" class="twms__nav-link">Eagle Club</a>
+              </li>
+              <li>
+                <a href="uniforms.html" class="twms__nav-link"
+                  >Elementary & Middle School Uniforms</a
+                >
+              </li>
+              <li>
+                <a href="school-supply.html" class="twms__nav-link"
+                  >School Supply List</a
+                >
+              </li>
+              <li><a href="clinic.html" class="twms__nav-link">Clinic</a></li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="https://logins2.renweb.com/logins/ParentsWeb-Login.aspx"
+              class="twms__nav-link twms__text-white"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.thewoodlandsumc.org/give-now"
+              class="twms__nav-link twms__text-white"
+              >Donate</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- End of Navigation -->
+
+  <!-- Hero -->
+  <section id="twms-elementary__hero" class="twms-hero__text-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="twms-hero__text">ELEMENTARY SCHOOL (GRADES PRE-K - 4)</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Hero -->
+
+  <!-- Content -->
+  <section class="twms__section-pymed twms__content">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <h3 class="my-3 twms__subheader-blue">
+            GENERAL INTRODUCTION TO COURSES
+          </h3>
+
+          <p style="text-align: left">
+            Our curriculum aligns with the Texas Essential Knowledge and Skills
+            (TEKS) for all content areas. Low student-staff ratios allow The
+            Woodlands Methodist School to provide an enriching learning
+            environment that meets the needs of each student at his or her
+            developmental level. This is crucial, especially in the primary
+            grades when more formal learning begins. Students are afforded many
+            opportunities for individualized and small group learning.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <h4 class="mb-3">Core Subjects</h4>
+        </div>
+      </div>
+      <!-- begin accordion -->
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <!-- Panel group -->
+          <div
+            class="panel-group"
+            id="accordion"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <!-- accordion 1-->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading1"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Language</span
+                    ><i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+              <div
+                id="collapse1"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading1"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Children receive a balanced literacy program that includes
+                    reading, writing, listening, and speaking. Teachers work
+                    with students to build independent reading skills using an
+                    explicit, sequential, and systematic phonics curriculum and
+                    through ongoing opportunities to practice building reading
+                    skills through scaffolded small group instruction with
+                    leveled books. Periodically, each student’s instructional
+                    level for reading is assessed using the Benchmark Assessment
+                    System (BAS).
+                  </p>
+                  <p>
+                    Students participate in the writing process daily through
+                    journal writing, writer’s workshop, and other writing
+                    activities. Weekly spelling patterns are introduced, through
+                    Scientific Spelling, reinforced with word work activities
+                    and incorporated into the writer’s workshop. We use the
+                    Handwriting Without Tears and Keyboarding Without Tears
+                    curriculum, which provide a multi-sensory approach to
+                    handwriting and typing. In addition, we use the Neuhaus
+                    curriculum for phonics and grammar skills. Our 1st through
+                    4th grade students participate in the Iowa Assessment each
+                    year during the spring semester. This assessment measures
+                    students’ growth from year to year and provides data on how
+                    students are progressing in their learning.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion 2 -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading2"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Mathematics</span
+                    ><i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+              <div
+                id="collapse2"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading2"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    In mathematics, students have opportunities to practice math
+                    skills in an appropriate developmental sequence. The math
+                    curriculum incorporates hands-on learning experiences with
+                    manipulatives and continually reinforces and extends math
+                    skills. The children learn about relationships,
+                    classification, patterning, one-to-one correspondences,
+                    numeration, shapes, measurement, time, money, fractions,
+                    addition, subtraction, multiplication and division using the
+                    Saavas enVision Math curriculum in K-4th. Instruction is
+                    differentiated based on student needs and focuses on problem
+                    solving and thinking skills to inspire children to become
+                    critical thinkers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion  3 block start -->
+
+            <!-- accordion 3 block end  -->
+            <!-- accordion  4 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading4"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse4"
+                    aria-expanded="false"
+                    aria-controls="collapse4"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Science</span>
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse4"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading4"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Science instruction encourages the development of scientific
+                    inquiry and critical thinking. Students compare, classify,
+                    chart, graph, hypothesize, observe changes and record
+                    findings. The curriculum provides experiential activities
+                    for students to have a hands-on learning experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 4 block end  -->
+            <!-- accordion  5 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading5"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse5"
+                    aria-expanded="false"
+                    aria-controls="collapse5"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Social Studies</span>
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse5"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading5"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Children explore our world through geography, history,
+                    government, economics, culture and citizenship. Students
+                    read biographies and present information, interpret and
+                    create their own maps, identify functions of government,
+                    examine free enterprise, compare various cultures, and
+                    identify characteristics of good citizenship. Our focus on
+                    Christian ideals allows us to model these characteristics,
+                    which are supplemented with daily Bible instruction.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 5 block end  -->
+            <!-- accordion 6 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading6"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse6"
+                    aria-expanded="false"
+                    aria-controls="collapse6"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Bible</span>
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse6"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading6"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Students participate daily in activities to help them grow
+                    in awareness of the love of God. Activities include thanking
+                    God for His many blessings, praying, attending weekly
+                    chapel, reciting Bible verses and singing Christian songs.
+                    Students listen to Bible stories or engage in Bible study
+                    and instruction, depending on their age level, and also
+                    participate in age-appropriate mission projects. Weekly
+                    chapel lessons are presented by The Woodlands Methodist
+                    Church Children’s Ministry staff.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 6 block end  -->
+          </div>
+          <!-- End of panel group -->
+        </div>
+      </div>
+
+      <!-- end of core -->
+
+      <!-- begin programs -->
+
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <h4 class="mb-3">Programs</h4>
+        </div>
+      </div>
+      <!-- begin accordions -->
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <!-- Panel group -->
+          <div
+            class="panel-group"
+            id="accordion"
+            role="tablist"
+            aria-multiselectable="true"
+          >
+            <!-- accordion 7-->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading7"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse7"
+                    aria-expanded="false"
+                    aria-controls="collapse7"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Chapel</span
+                    ><i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+              <div
+                id="collapse7"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading7"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Our students attend chapel each week on Thursday. The
+                    Woodlands Methodist Church Children’s Ministry team presents
+                    age-appropriate Bible stories with songs and activities.
+                    Classes use the Biblical Choices curriculum throughout the
+                    week. Details are posted in each class’s newsletter for
+                    continued learning and family communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion 8 -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading8"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse8"
+                    aria-expanded="false"
+                    aria-controls="collapse8"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Music and Arts</span
+                    ><i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+              <div
+                id="collapse8"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading8"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Many opportunities are given within classroms for students
+                    to express themselves through art. Additionally, all K-4th
+                    grade students attend weekly art classes with a certified
+                    art teacher. In these weekly lessons, they explore different
+                    artists, techniques, and mediums and grow in their artistic
+                    knowledge and skills.
+                  </p>
+                  <p>
+                    The elementary school music program is designed to stimulate
+                    natural creativity and an appreciation for the arts.
+                    Students learn fundamentals of music theory and history
+                    while developing proper vocal technique, playing various
+                    instruments, and participating in creative hands-on projects
+                    and performances. 4th grade students also extend their
+                    musical instrument instruction by learning to play
+                    recorders.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- accordion  9 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading9"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse9"
+                    aria-expanded="false"
+                    aria-controls="collapse9"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Library</span>
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse9"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading9"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    The library strives to promote the mission of the school and
+                    provides a welcoming environment where students, faculty,
+                    staff, and parents can locate information in a variety of
+                    formats to assist in their academic, spiritual, and
+                    recreational pursuits. Library goals and objectives target
+                    activities that develop lifelong learners, encourage love of
+                    literature, and promote independent seekers of information.
+                  </p>
+                  <p>
+                    Weekly visits to the school library provide opportunities
+                    for the children to select additional literature for
+                    pleasure reading. Students check out books, participate in
+                    story time and receive intentional, TEKS-based lessons that
+                    teach students the skills necessary to be effective users of
+                    information in all its forms. Additional time for individual
+                    class research and projects is also provided.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 9block end  -->
+            <!-- accordion  10 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading10"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse10"
+                    aria-expanded="false"
+                    aria-controls="collapse10"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text"
+                      >Physical Education</span
+                    >
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse10"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading10"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Students attend scheduled, organized physical education
+                    class and recess. Students develop healthy habits and
+                    lifelong fitness skills in class. Teamwork, sportsmanship,
+                    and fun are emphasized every day. Students learn about a
+                    variety of fitness-related activities, basketball, jump
+                    rope, soccer, and other sports skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 10 block end  -->
+
+            <!-- accordion 12 block start -->
+            <div class="panel panel-default twms-panel-default">
+              <div
+                class="panel-heading twms-panel-heading"
+                role="tab"
+                id="heading12"
+              >
+                <h4 class="panel-title twms-panel-title">
+                  <a
+                    role="button"
+                    data-toggle="collapse"
+                    data-parent="#accordion"
+                    href="#collapse12"
+                    aria-expanded="false"
+                    aria-controls="collapse12"
+                    class="collapsed twms-panel-title__link"
+                    ><span class="twms-panel-title__text">Spanish</span>
+
+                    <i
+                      class="fas fa-plus twms-float-right twms-accordion-plus-minus"
+                    ></i>
+                  </a>
+                </h4>
+              </div>
+
+              <div
+                id="collapse12"
+                class="panel-collapse collapse"
+                role="tabpanel"
+                aria-labelledby="heading12"
+              >
+                <div class="panel-body py-4 px-4">
+                  <p>
+                    Students are exposed to a developmentally appropriate
+                    Spanish curriculum from Pre-K through 4th grade. We use
+                    diverse and hands on activities to reach every students'
+                    preferred learning style. The goal of elementary Spanish
+                    instruction is to provide exposure to the Spanish language
+                    while also learning about differing cultures and traditions.
+                    We promote the interest in learning a second language and
+                    also learn about different cultures and traditions. Lessons
+                    include circle time, story time, music, art, games, and
+                    prayers in Spanish.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- accordion 12 block end  -->
+          </div>
+          <!-- End of panel group -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Content -->
+
+  <!-- Footer -->
+  <section id="twms__footer">
+    <div class="container">
+      <div class="row twms__footer-wrapper">
+        <div class="col-sm-3">
+          <img
+            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twms/twms-logo-white.png"
+            alt=""
+            class="twms__footer-logo"
+          />
+        </div>
+        <div class="col-sm-9">
+          <h4 class="twms__footer-header">
+            ELEMENTARY & MIDDLE SCHOOL INFORMATION
+          </h4>
+          <div class="row">
+            <div class="col-md-3">
+              <p>
+                <strong class="twms__footer-subheader"
+                  >Regular Office Hours</strong
+                >
+                <br />8:30 a.m. &dash; 3:45 p.m., M&dash;F
+              </p>
+              <p>
+                <strong class="twms__footer-subheader"
+                  >Summer Office Hours</strong
+                >
+                <br />9:00 a.m. – 2:00 p.m., M–F
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p>
+                <strong class="twms__footer-subheader">Address</strong> <br /><a
+                  href="https://goo.gl/maps/z1LHcGoMtHaSbVAFA"
+                  target="_blank"
+                  class="twms__footer-link"
+                  >1915 Lake Front Cir The Woodlands, Texas 77380</a
+                >
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p>
+                <strong class="twms__footer-subheader">Contact</strong>
+                <br />Ken West <br />Head of School <br /><a
+                  href="mailto:info@twmschool.org"
+                  class="twms__footer-link"
+                  >info@twmschool.org</a
+                >
+                <br /><a href="tel:281.822.8220" class="twms__footer-link"
+                  >281.822.8220</a
+                >
+                <br /><a href="tel:832.381.3035" class="twms__footer-link"
+                  >832.381.3035 (fax)</a
+                >
+              </p>
+            </div>
+            <div class="col-md-3">
+              <p>
+                <strong class="twms__footer-subheader">Social Media</strong>
+                <br /><i
+                  class="fab fa-facebook-square fa-2x"
+                  style="margin-top: 0.1rem"
+                  aria-hidden="true"
+                ></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+  <!-- Scripts -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"
+  ></script>
+  <!-- fontawesome -->
+  <script
+    src="https://kit.fontawesome.com/a768a77f8f.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/twms.js"></script>
+  <body></body>
+</html>

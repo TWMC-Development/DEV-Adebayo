@@ -1,0 +1,221 @@
+/* MOBILE FIRST APPROACH */
+
+/* ===== TYPOGRAPHY ===== */
+/* ====================== */
+a.twmc25-a-white,
+a.twmc25-a-white * {
+    background-image: linear-gradient(
+        to right,
+        #E5E5E5,
+        #E5E5E5 50%,
+        #fff 50%
+    ) !important;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 1px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    overflow: visible !important;
+}
+
+a.twmc25-a-white:before {
+  content: '';
+  background: #E5E5E5;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+  }
+
+a:hover::before {
+    width: 100%;
+}
+
+/* ===== END OF TYPOGRAPHY ===== */
+/* ============================= */
+
+
+/* ===== BUTTON ===== */
+/* ================== */
+.tw25-btn-outline-whtsm {
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .4rem 0.7rem;
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+}
+
+.tw25-btn-outline-whtsm:hover,
+.tw25-btn-outline-whtsm:focus {
+    border: 2px solid transparent;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, .2) !important;
+    color: #fff;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+/* ===== END OF BUTTON ===== */
+/* ========================= */
+
+
+ /* ===== HERO ===== */
+ /* ================ */
+ #home25-hero {
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/getty-images-f8Tj_oybW8w-unsplash.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 450px;
+
+    /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+  }
+
+  @media only screen and (min-width: 576px) {
+    #home25-hero {
+      height: 500px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #home25-hero {
+      height: 700px;
+    }
+  }
+
+ /* ===== END OF HERO ===== */
+ /* ======================= */
+
+ /* ===== IMG NAVIGATION 1 ===== */
+ /* ========================== */
+ #home25-imgnav {
+    height: max-content;
+  }
+
+  .hm25-imgnav-bg1 {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hm25-imgnav-bg2 {
+    background-color: #0000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodforest.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hm25-imgnav-bg3 {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Montgomery.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hm25-imgnav-bg4 {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Creekside.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hm25-imgnav-bg5 {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Custom flex item */
+  .tw25-imgnav-item {
+    flex-basis: 100%;
+    min-height: 200px;
+    /* border-top: 4px solid #2C0C11;
+    border-bottom: 4px solid #2C0C11;
+    border-left: 2px solid #2C0C11;
+    border-right: 2px solid #2C0C11; */
+
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .tw25-imgnav-item {
+      flex-basis: 50%;
+    }
+  }
+
+
+  @media only screen and (min-width: 992px) {
+    .tw25-imgnav-item {
+      flex-basis: 33.33%;
+      /* min-height: 180px; */
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .tw25-imgnav-item {
+      flex-basis: 20%;
+    }
+  }
+
+  /* End of custom flex item */
+
+  .tw25-imgnav-logo {
+    height: 50px;
+  }
+
+  .tw25-white-link {
+    color: white;
+  }
+
+  .tw25-white-link:hover {
+    color: red;
+  }
+
+  .tw25-imgnav-title {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .hm25-imgnav-text {
+    /* font-size: 0.85rem; */
+    line-height: 1.3;
+    /* font-weight: 600; */
+  }
+
+  p.twmc-p>a.tw25-white-link {
+    font-size: 0.8rem !important;
+  }
+
+ /* ===== END OF IMG NAVIGATION 1 ===== */
+ /* ================================= */

@@ -1,0 +1,133 @@
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p style="text-align: left">Download our handbooks and forms:</p>
+                <strong>TWMS HANDBOOKS</strong>
+                <ul>
+                    {% for item in Items %}
+                    {% assign filter = item | Attribute:'Filter' | Downcase %}
+                    {% if filter contains 'handbook' %}
+                    <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank"> {{ item | Attribute:'PublicName'
+                            }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <strong>ATHLETICS PARTICIPATION FORMS</strong>
+                <ul>
+                    {% for item in Items %}
+                    {% assign filter = item | Attribute:'Filter' | Downcase %}
+                    {% if filter contains 'form' %}
+                    <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank"> {{ item | Attribute:'PublicName'
+                            }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div>
+                    Looking for a different form? <a href="/parents/clinic" class="  "> Try our Clinic &#8594; </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Content FOR ATHLETICS PAGE-->
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h4 style="text-align: left">WELCOME TO EAGLE ATHLETICS!</h4>
+
+                <p style="text-align: left">
+                    TWMS Athletics is a partial member of Houston Area Private Schools
+                    (HAPS), through which we compete with other private schools and
+                    organizations.
+                </p>
+                TWMS offers Boys and Girls Cross Country/ Boys and Girls Track; Boys
+                Basketball; Girls Basketball; Girls Volleyball; Boys and Girls Golf
+                <p style="text-align: left">
+                    Through Athletics and its innate challenges, TWMS coaches and staff
+                    a powerful tool to reach students in valuable ways including their
+                    spiritual, social, mental, physical, and emotional health. Through
+                    these components we instill in our athletes foundational elements
+                    necessary to lead healthy, productive, and successful lives.
+                </p>
+                <p style="text-align: left">
+                    We believe that school athletics can provide life-long benefits to
+                    individuals, including a greater sense of purpose in one’s self,
+                    developing positive and strong work ethic, enhanced self-esteem and
+                    self-confidence, opportunities to balance leadership with humility,
+                    enriched social interaction skills, and the lasting benefits of
+                    making healthy lifestyle choices.
+                </p>
+                <p style="text-align: left">
+                    We also believe that through Athletics our school, families,
+                    athletes, and staff can serve our greater purpose – to reach others
+                    for Jesus.
+                </p>
+
+                <p style="text-align: left">
+                    Thank you for supporting TWMS Eagle Athletics.
+                </p>
+
+                <strong>HANDBOOKS</strong>
+                {% for item in Items %}
+                {% assign filter = item | Attribute:'Filter' | Downcase %}
+                {% if filter contains 'handbook' %}
+                <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank"> {{ item | Attribute:'PublicName'}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+                <strong>ATHLETICS PARTICIPATION FORMS</strong>
+
+                    {% for item in Items %}
+                    {% assign filter = item | Attribute:'Filter' | Downcase %}
+                    {% if filter contains 'form' %}
+                    <li><a href="{{ item | Attribute:'Asset','Url' }}" target="_blank"> {{ item | Attribute:'PublicName'}}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                    <!-- End Content -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div >
+                    Looking for a different form? <a href="/parents/clinic" class="  "> Try our Clinic &#8594; </a>
+                </div>
+            </div></div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Some header tag here</h3>
+                <!-- photo grid start  -->
+                <div class="photo_grid">
+                    <div class="large-image">
+                        <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_Athletics-1600x800.jpg"
+                            alt="Large Image" />
+                    </div>
+                    <div class="small-images">
+                        <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_Athletics-1600x800.jpg"
+                            alt="Small Image 1" />
+                        <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/schools-demo/TWMS-Rock/images/TWMS_StudentLife_Athletics-1600x800.jpg"
+                            alt="Small Image 2" />
+                    </div>
+                </div>
+                <!-- end photo grid   -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Content -->

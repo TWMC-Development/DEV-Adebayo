@@ -1,0 +1,317 @@
+/* ===== Day 0 ===== */
+/* button inactive */
+.twmc--btn__inactive {
+    border: 2px solid var(--color-dark-grey);
+    color: white;
+    background-color: var(--color-dark-grey);
+    border-color: var(--color-dark-grey);
+    cursor: not-allowed;
+}
+
+.twmc--btn__inactive-outline-white  {
+    border: 2px solid white;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+/* Icon wrapper */
+.twmc-icon-wrapper {
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+} 
+
+.twmc-section__pymed-lightgrey2 {
+    padding: 5rem 0 !important;
+    background-color: #FAFAFA;
+}
+
+/* Hero */
+#twmc-day0__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .6)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_Traditional_venue-32-1200x800.jpg");
+    text-align: center;
+}
+
+.twmc-hero-background--650h-center {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center top;
+    height: 650px;
+
+    color: var(--color-white);
+}
+
+@media only screen and (max-width: 575px) {
+    .twmc-hero-background--650h-center {
+        height: 450px;
+    }
+}
+
+.twmc-hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-hero__text h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.twmc-hero__text h3 {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 576px) {
+    .twmc-hero__text h1 {
+        font-size: 3rem !important;
+    }
+
+    .twmc-hero__text h3 {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .twmc-hero__text h1 {
+        font-size: 2.5rem;
+    }
+
+    .twmc-hero__text h3 {
+        font-size: 0.9rem;
+        letter-spacing: normal;
+    }
+}
+
+.twmc-day0__intro-desc {
+    margin-top: 0;
+    text-align: justify;
+}
+
+.twmc-day0__info-title {
+    margin-top: 0;
+}
+
+.intro-verbar {
+    border: 0.1rem solid #ddd;
+    margin: 0 8px;
+}
+
+.twmc-day0__intro-img-wrapper2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .twmc-day0__intro-img-wrapper {
+        width: 100%;
+    }
+    
+    .twmc-day0__intro-img-wrapper > img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .twmc-day0__intro-desc {
+        margin-top: 1rem;
+    }
+
+    .twmc-day0__intro-img-wrapper2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .twmc-day0__info-title {
+        margin-top: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .twmc-day0__intro-img-wrapper2 > img {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .twmc-day0__intro-img-wrapper2 > img {
+        max-width: 120px;
+    }
+}
+
+.twmc-day0__info-img {
+    transition: all .3s ease-in-out;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* image-rendering: crisp-edges; */
+    image-rendering: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .twmc-day0__info-img {
+        height: 300px;
+    }
+}
+
+.twmc-day0__info-img:hover {
+    transform: scale(1.02);
+}
+
+.twmc-day0__message-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.twmc-day0__message-title-thin {
+    font-weight: 400;
+}
+
+.twmc-day0__message-btn {
+    min-width: 200px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+    .twmc-day0__message-title {
+        font-size: 1.5rem;
+    }
+
+    .twmc-day0__message-btn {
+        padding: 0.4rem 0.7rem;
+    }
+}
+
+/* CTA */
+.twmc-section__cta-small-traditional {
+    padding: 2rem 0;
+    background-color: var(--color-traditional);
+}
+
+.twmc-day0__cta-text {
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Button */
+.twmc--btn--cta-white {
+    border: 2px solid var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-traditional);
+
+    transition: all .3s ease-in-out;
+}
+
+.twmc--btn--cta-white:hover,
+.twmc--btn--cta-white:focus {
+    transform: scale(1.02);
+}
+
+/* button inactive */
+.twmc--btn__inactive {
+    border: 2px solid var(--color-dark-grey);
+    color: white;
+    background-color: var(--color-dark-grey);
+    border-color: var(--color-dark-grey);
+    cursor: not-allowed;
+}
+
+.twmc--btn__inactive-outline-white  {
+    border: 2px solid white;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+/* Socmed */
+.twmc-day0__socmed-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.twmc-day0__socmed-icon {
+    font-size: 1.7rem;
+    line-height: 1.2;
+}
+
+.twmc-day0__socmed-icon > a > i {
+    color: var(--color-traditional);
+    margin-right: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.twmc-day0__socmed-icon > a > i:hover,
+.twmc-day0__socmed-icon > a > i:focus {
+    transform: scale(1.05);
+}
+
+/* Day 0 - Traditional */
+#twmc-day0-trad__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/TRAD_DayOf_Hero_1270x800_comp.jpg");
+    text-align: center;
+    background-position: left center;
+}
+
+/* Day 0 - Chapel */
+#twmc-day0-chapel__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/Chapel_hero2.jpg");
+    text-align: center;
+    background-position: bottom center;
+}
+
+/* Day 0 - Harvest */
+#twmc-day0-har__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/HAR_DayOf_Hero_1270x800_comp.jpg");
+    text-align: center;
+    background-position: left center;
+}
+
+/* Day 0 - Loft */
+#twmc-day0-loft__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/Loft_DayOf_Hero_1270x800_comp.jpg");
+    text-align: center;
+    background-position: center center;
+}
+
+/* Day 0 - ESP */
+#twmc-day0-esp__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/ESP_20240505_0108-Enhanced-NR-1500w.jpg");
+    text-align: center;
+    background-position: center center;
+}
+
+
+/* Day 0 - Woodforest */
+#twmc-day0-caw__hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/CAW_DayOf_Hero_1270x800_comp.jpg");
+    text-align: center;
+    background-position: center top;
+}
+
+/* Day 0 -  Montgomery */
+#montgomery--home-hero-img {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cam-montgomery/CAM_I'm+New.jpg");
+    text-align: center;
+    background-position: center center;
+}
+
+
+/* Icon wrapper */
+.twmc-icon-wrapper {
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* ===== Day 0 ===== */

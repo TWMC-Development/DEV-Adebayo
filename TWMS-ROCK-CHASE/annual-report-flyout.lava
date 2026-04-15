@@ -1,0 +1,425 @@
+<style>
+  a {
+    color: var(--color-dark-blue2);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .twms__subheader-blue {
+    font-size: 1rem;
+  }
+
+  .content-section {
+    min-height: 100vh;
+  }
+
+  /* Desktop sidebar sticky */
+  #sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    min-height: 100vh;
+    background-color: #0180a326;
+  }
+
+  #sidebar-sticky a:hover {
+    color: #0180a3;
+  }
+
+  /* Active link styling */
+  #year-nav a.active {
+    background-color: #007fa3;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  /* Mobile flyout */
+  #mobileSidenav {
+    width: 0;
+    /* important so JS toggle works reliably */
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    background-color: #deecf2;
+    color: #007fa3;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 30px;
+    margin-top: 138px;
+    border-radius: 0 12px 12px 0;
+  }
+
+  /* Mobile sidenav links */
+  #mobileSidenav a {
+    padding: 1rem 2rem;
+    margin: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  /* Hover effect */
+  #mobileSidenav a:hover {
+    background-color: #ffffff;
+    /* background highlight */
+    color: #007fa3;
+    /* inverse text color */
+  }
+
+  /* Active state */
+  #mobileSidenav a.active {
+    background-color: #007fa3;
+    /* same as desktop */
+    color: #fff;
+    font-weight: bold;
+  }
+
+
+  #mobileSidenav .closebtn {
+    position: absolute;
+    top: -28px;
+    right: -32px;
+    font-size: 36px;
+    transition: 0.3s;
+  }
+
+
+
+  /* Hide mobile flyout toggle on desktop */
+  @media (min-width: 768px) {
+    #mobileSidenav {
+      display: none;
+    }
+
+    #mobileMenuBtn {
+      display: none;
+    }
+
+  }
+
+  /* Hide desktop sidebar on mobile */
+  @media (max-width: 767px) {
+    .desktop-sidebar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #mobileMenuBtn {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: whitesmoke;
+      padding: 0 10px;
+      font-size: 30px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    /* Prevent sticky bar from overlapping section headings */
+    .content-section--mobile {
+      padding-top: 48px !important;
+    }
+  }
+
+
+  /* copiable section */
+  pre {
+    display: block;
+    padding: 3rem 1rem 0rem;
+    background-color: #deecf2;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+    color: var(--color-black);
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  /* copy to clipboard */
+  .share-buttons button {
+    margin-right: 0.5rem;
+    padding: 0.4em 0.8em;
+    cursor: pointer;
+    border: 1px solid #027fa3;
+    border-radius: 4px;
+    background: white;
+    color: #027fa3;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .share-buttons button:hover {
+    background: #027fa3;
+    color: white;
+  }
+
+  .copy-clipboard-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.3em 0.6em;
+    font-size: 0.8em;
+    cursor: pointer;
+    border: 1px solid #027fa3;
+    border-radius: 5px;
+    background: white;
+    color: #027fa3;
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .copy-clipboard-button:hover {
+    background: #027fa3;
+    color: white;
+  }
+
+  .share-buttons button {
+    margin-right: 0.5rem;
+    padding: 0.4em 0.8em;
+    cursor: pointer;
+    border: 1px solid #027fa3;
+    border-radius: 4px;
+    background: white;
+    color: #027fa3;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .share-buttons button:hover {
+    background: #027fa3;
+    color: white;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Desktop Sidebar -->
+    <div class="col-sm-2   desktop-sidebar" id="sidebar-sticky">
+      <ul class="nav nav-pills nav-stacked text-center" id="year-nav">
+        <p class="text-uppercase text-muted twms__subheader-blue   ">Proof of Excellence</p>
+        {% for item in Items %}
+        {% assign year = item | Attribute:'Year' %}
+        <li>
+          <a href="#year-{{ year }}">{{ year }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div id="mobileMenuBtn" class="text-uppercase text-muted twms__subheader-blue   " onclick="toggleNav()">
+      Toggle Years
+    </div>
+
+    <!-- Mobile Flyout -->
+    <div id="mobileSidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <p class="text-uppercase text-muted twms__subheader-blue  mt-4 text-center ">Proof of Excellence</p>
+      <ul class="nav nav-pills nav-stacked m-3 text-center ">
+        {% for item in Items %}
+        {% assign year = item | Attribute:'Year' %}
+        <li><a href="#year-{{ year }}" onclick="closeNav()">{{ year }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="col-sm-10  ">
+      {% for item in Items %}
+      {% assign year = item | Attribute:'Year' %}
+      {% assign pdfGuid = item | Attribute:'PDF', 'RawValue' %}
+      {% assign url = item | Attribute:'VideoURL' %}
+      {% assign parts = url | Split:'/' %}
+      {% assign videoId = parts | Last %}
+      <section id="year-{{ year }}" class="p-1 m-1 content-section content-section--mobile">
+        <!-- Content -->
+        <h1 class="twms__header-blue mt-5 mb-3">{{ item.Title }}</h1>
+        <div class="report-block">
+          {{ item.Content }}
+        </div>
+        <!-- video -->
+        <h2 class="twms__header-blue mt-5 mb-3">{{ year }} Accomplishment Video</h2>
+        <div class="embed-responsive embed-responsive-16by9 ">
+          <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/{{ videoId }}" allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Sharable Resources -->
+
+        <h1 class="mt-5 mb-3 twms__header-blue">Resources </h1>
+
+        <div class="suggested-copy-section d-block justify-content-center  p-4 position-relative"
+          style="background-color:whitesmoke">
+
+          <!-- Suggested copy -->
+          <h4 class="mt-4 mb-1">Suggested and Sharable for Social Media</h4>
+           <!-- Copy button -->
+        <button type="button" class="copy-clipboard-button" onclick="copySuggestedCopy(this)">
+          Copy to Clipboard!
+        </button>
+          <p id="suggestedCopy">
+            I love sharing these wins with you as I know you'll appreciate it! We are finishing the season strong and
+            demonstrating incredible leadership! Celebrate these successes with us and watching their {{ year }} Proof
+            of Excellence video and make sure to dig into the {{ year }} Proof of Excellence PDF with friends and
+            family. Let's inspire others together!
+          </p>
+           <!-- Share buttons -->
+        <h4 class="mt-4 mb-1">Share this article on</h4>
+        <div class="share-buttons mb-3 d-flex">
+          <button onclick="shareEmail()">
+            <i class="fas fa-envelope"></i>
+          </button>
+          <button onclick="shareFacebook()">
+            <i class="fab fa-facebook"></i>
+          </button>
+          <button onclick="shareTwitter()">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button onclick="shareLinkedIn()">
+            <i class="fab fa-linkedin"></i>
+          </button>
+        </div>
+
+          <!-- Video embed -->
+        {% if url != "" %}
+        <div class="my-2">
+          <a href="{{ url }}" target="_blank" class="  mb-2  ">
+            Watch the {{ year }} Proof of Excellence on Vimeo →
+          </a>
+        </div>
+        {% endif %}
+
+        <!-- PDF -->
+        {% if pdfGuid != "" %}
+        <div class="pdf-block my-2">
+          <a href="/GetFile.ashx?guid={{ pdfGuid }}" target="_blank" class="  mb-2  ">
+            Download {{ year }} Proof of Excellence (PDF) →
+          </a>
+        </div>
+        {% endif %}
+        </div>
+
+        <script>
+          function copySuggestedCopy(button) {
+            event.preventDefault()
+            const copyText = document.getElementById('suggestedCopy').innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+              button.innerText = 'Copied!';
+              setTimeout(() => button.innerText = 'Copy to Clipboard', 10000);
+            });
+          }
+
+          const suggestedCopy = document.getElementById('suggestedCopy').innerText;
+          const pageUrl = window.location.href;
+
+          function shareEmail() {
+            event.preventDefault()
+            const subject = encodeURIComponent("Celebrate Our Students!");
+            const body = encodeURIComponent(suggestedCopy + "\n\nSee more here: " + pageUrl);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+          }
+
+          function shareFacebook() {
+            event.preventDefault()
+            const url = encodeURIComponent(pageUrl);
+            const text = encodeURIComponent(suggestedCopy);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, "_blank");
+          }
+
+          function shareTwitter() {
+            event.preventDefault()
+            const text = encodeURIComponent(suggestedCopy + " " + pageUrl);
+            window.open(`https://twitter.com/intent/tweet?text=${text}`, "_blank");
+          }
+
+          function shareLinkedIn() {
+            event.preventDefault()
+            const url = encodeURIComponent(pageUrl);
+            const summary = encodeURIComponent(suggestedCopy);
+            const title = encodeURIComponent("Proof of Excellence");
+            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}`, "_blank");
+          }
+        </script>
+
+
+
+      </section>
+      <!-- end 100vh -->
+      <hr>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+  function toggleNav() {
+    const sidenav = document.getElementById("mobileSidenav");
+    if (sidenav.style.width === "250px") {
+      sidenav.style.width = "0";
+    } else {
+      sidenav.style.width = "250px"
+    }
+  }
+
+  function closeNav() {
+    document.getElementById("mobileSidenav").style.width = "0";
+  }
+
+  // Active state on click
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLinks = document.querySelectorAll("#year-nav a, #mobileSidenav a");
+
+    allLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        allLinks.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  });
+
+  // Active state on scroll
+  document.addEventListener("DOMContentLoaded", function () {
+    const allLinks = document.querySelectorAll("#year-nav a, #mobileSidenav a");
+    const sections = Array.from(allLinks).map(link => {
+      const id = link.getAttribute("href").replace("#", "");
+      return document.getElementById(id);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          allLinks.forEach(link => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === "#" + id
+            );
+          });
+        }
+      });
+    }, {
+      rootMargin: "-50% 0px -49% 0px",
+      threshold: 0
+    });
+
+    sections.forEach(section => {
+      if (section) observer.observe(section);
+    });
+  });
+
+</script>

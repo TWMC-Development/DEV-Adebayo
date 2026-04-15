@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* ===== Transition -  Venue Change 2024 ===== */
+      .twmc-icon-wrapper {
+        width: 35px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      /* HERO */
+      #transition2024--hero {
+        background-color: var(--color-dark-grey2);
+        /* background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Hero_2000x800.png");   */
+        /* background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Hero_2000x800.png");  */
+        background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.3)
+          ),
+          url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Hero_2000x800.png");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: top center;
+        /* height: 600px; */
+
+        border-bottom: 7px solid var(--color-traditional);
+      }
+
+      .trans-hero {
+        padding: 7rem 0;
+      }
+
+      .trans-hero--title {
+        color: #333;
+        /* text-transform: uppercase; */
+        margin-top: 0;
+      }
+
+      .trans-hero--text-wrapper {
+        width: 100%;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .trans-hero--text {
+        color: #333;
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      @media only screen and (max-width: 992px) {
+        #transition2024--hero {
+          height: max-content;
+        }
+
+        .trans-hero {
+          padding: 5rem 0;
+        }
+
+        .trans-hero--video-wrapper,
+        .trans-hero--text-wrapper {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .trans-hero--video-wrapper {
+          text-align: center;
+        }
+
+        .trans-hero--title {
+          margin-top: 2rem;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .trans-hero {
+          padding: 4rem 0;
+        }
+
+        .trans-hero--video-wrapper,
+        .trans-hero--text-wrapper {
+          max-width: 90%;
+        }
+      }
+
+      /* Flex */
+      .trans-flex-container--2-col {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4%;
+      }
+
+      .trans-flex-item--2-col {
+        flex-basis: 48%;
+        overflow: visible;
+      }
+
+      .trans-flex--left {
+        max-width: 90%;
+      }
+
+      @media only screen and (max-width: 992px) {
+        .trans-flex-container--2-col {
+          /* flex-direction: column; */
+          gap: 0;
+        }
+
+        .trans-flex-item--2-col {
+          flex-basis: 100%;
+          height: max-content;
+        }
+      }
+      /* End of flex */
+
+      /* Button */
+      .trans-hero--buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4%;
+
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-trans-hero {
+        background-color: white;
+        color: #333;
+        border: 2px solid #333;
+        border-radius: 9.5px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5rem;
+        min-width: 175px;
+        max-width: max-content;
+        text-transform: uppercase;
+      }
+
+      .btn-trans-hero:hover {
+        background-color: #eee;
+        transform: scale(1.02);
+        color: #333;
+      }
+
+      @media only screen and (min-width: 1500px) {
+        .trans-hero--buttons-wrapper {
+          width: 80%;
+        }
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .trans-hero--buttons-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        /* .btn-trans-hero {
+                        width: 150px;
+                    } */
+      }
+
+      @media only screen and (max-width: 768px) {
+        .trans-hero--buttons-wrapper {
+          gap: 1%;
+        }
+
+        .btn-trans-hero {
+          margin-top: 10px;
+          /* width: 175px; */
+        }
+      }
+      /* End of button */
+      /* END OF HERO */
+
+      /* INTRO */
+      #transition2024--intro {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      /* END OF INTRO */
+
+      /* SCHEDULE */
+      /* #transition2024--schedule {
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Background_2000x800.png');
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            } */
+      #transition2024--schedule {
+        height: max-content;
+        position: relative;
+      }
+
+      .transition2024--schedule-bg {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+      }
+
+      .transition2024--schedule-wrapper {
+        z-index: 3;
+        position: relative;
+      }
+
+      /* Masonry */
+      .trans-masonry-card {
+        background: #fff;
+        border: 2px solid #333;
+        /* border: 2px solid var(--color-traditional); */
+        border-radius: 8px;
+        padding: 1.5rem 1.5rem 0.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 0 2px 5px rgba(134,38,51,0.1);  */
+        margin-bottom: 15px;
+      }
+
+      .trans-flex-container--masonry {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 2%;
+      }
+
+      .trans-flex-item--masonry {
+        flex-basis: 49%;
+        overflow: visible;
+      }
+
+      .trans-inner-flex {
+        padding: 0 1rem 0.5rem;
+      }
+
+      .trans-masonry-card--stripe {
+        background-color: #eee;
+        padding: 1.5rem 1.2rem;
+        margin: -1.5rem;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center;
+        /* border-top: 5px solid var(--color-traditional); */
+        border-bottom: 5px solid var(--color-traditional);
+      }
+
+      .trans-schedule-title {
+        margin-top: 1.5rem;
+        /* margin-bottom: 0.5rem; */
+      }
+
+      @media only screen and (max-width: 992px) {
+        .trans-flex-item--masonry p.twmc-p {
+          font-size: 0.8rem;
+        }
+
+        .trans-flex-container--masonry {
+          gap: 1%;
+        }
+
+        .trans-flex-item--masonry {
+          flex-basis: 49.5%;
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        .trans-flex-container--masonry {
+          gap: 0;
+          justify-content: center;
+        }
+
+        .trans-flex-item--masonry {
+          flex-basis: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .trans-masonry-card {
+          padding: 1rem 1rem 0.5rem;
+        }
+
+        .trans-masonry-card--stripe {
+          background-color: #eee;
+          padding: 1rem;
+          margin: -1rem;
+        }
+      }
+      /* End of masonry */
+
+      .trans-livestream {
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+        letter-spacing: 1px;
+        font-weight: 600;
+        width: fit-content;
+        padding: 2px 30px;
+        margin: 0 auto;
+      }
+
+      /* END OF SCHEDULE */
+
+      /* FAQ */
+      #transition2024--faq {
+        background-color: #862633;
+        /* background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/mockaroon-YqUeLG7fMr4-unsplash-A15.jpg"); */
+      }
+
+      /* END OF FAQ */
+
+      /* ===== End of Transition -  Venue Change 2024 ===== */
+    </style>
+    <!-- Schedule -->
+    <section id="transition2024--schedule" class="pt-4 pb-6">
+      <section class="transition2024--schedule-wrapper">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div
+              class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center"
+            >
+              <h2 class="twmc-h2">
+                Service Times and Locations
+              </h2>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+              <!-- The Woodlands Campus -->
+              <div class="col-sm-12">
+                <!-- Masonry card -->
+                <div class="trans-masonry-card">
+                  <div class="mb-2 trans-masonry-card--stripe">
+                    <h4 class="twmc-h4 text-uppercase my-0">
+                      The Woodlands Campus
+                    </h4>
+                  </div>
+
+                  <div class="row">
+                    <!-- Inner flex -->
+                    <div class="trans-flex-container--masonry">
+                      <!-- Inner card left -->
+                      <div class="trans-flex-item--masonry trans-inner-flex">
+                        <!-- Traditional Worship -->
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Traditional Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar;
+                            <span class=""
+                              >7:45<sup style="color: #333"></sup> a.m.</span
+                            >
+                            &verbar; Robb Chapel
+                            <br />
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar;
+                            <span class="">9:00 a.m.</span>
+                            &verbar; Robb Chapel
+                            <br />
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 11:00<sup
+                              style="color: #333"
+                            ></sup>
+                            a.m. &verbar; Sanctuary
+                          </strong>
+                        </p>
+
+                        <!-- Modern Worship -->
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Loft Modern Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Saturdays &verbar; 6:00<sup
+                              style="color: #333"
+                            ></sup>
+                            p.m. &verbar; Loft Worship Center
+                            <br />
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 9:30 a.m.&verbar; Loft Worship
+                            Center
+                            <br />
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 11:00<sup
+                              style="color: #333"
+                            ></sup>
+                            a.m.&verbar; Loft Worship Center
+                          </strong>
+                        </p>
+                      </div>
+
+                      <!-- Inner card right -->
+                      <div class="trans-flex-item--masonry trans-inner-flex">
+                        <!-- Harvest Contemporary Worship -->
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Harvest Contemporary Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar;
+                            <span class=""
+                              >9:00<sup style="color: #333"></sup> a.m.</span
+                            >
+                            &verbar;
+                            <span class="">Sanctuary</span>
+                            <br />
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 11:00 a.m. &verbar; Harvest
+                            Worship Center
+                          </strong>
+                        </p>
+
+                        <!-- Adoración Español -->
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Adoración Español
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 10:00 a.m. &verbar; Recreation
+                            Center
+                          </strong>
+                        </p>
+
+                        <!-- Chinese Worship -->
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Chinese Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i
+                                class="fas fa-clock"
+                                aria-hidden="true"
+                              ></i></span
+                            >Sundays &verbar; 11:00 a.m. &verbar; Aldersgate
+                            Hall
+                          </strong>
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Map -->
+                    <style>
+                      #worship-twmcmap {
+                        padding: 1rem 1rem 2rem;
+                        background-color: lightgrey;
+                        background: linear-gradient(
+                          to bottom,
+                          rgba(255, 255, 255, 0),
+                          rgba(238, 238, 238, 1),
+                          rgba(255, 255, 255, 0)
+                        );
+                      }
+                    </style>
+
+                    <div class="col-sm-12 text-center" id="worship-twmcmap">
+                      <div class="trans-hero--buttons-wrapper">
+                        <a
+                          href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOR_VenueTransition_InteriorMap_Minimal_2000w.png"
+                          class="twmc--btn twmc--btn--traditional mb-1"
+                          target="_blank"
+                          >Building Map</a
+                        >
+                        <a
+                          href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOR_VenueTransition_ParkingMap_2000w.png"
+                          class="twmc--btn twmc--btn--traditional mb-1"
+                          target="_blank"
+                          >Parking Map</a
+                        >
+                      </div>
+                    </div>
+                    <!-- End of map -->
+                  </div>
+                </div>
+                <!-- End of masonry card -->
+              </div>
+
+              <div class="col-sm-12">
+                <!-- Masonry card -->
+                <div class="trans-masonry-card">
+                  <div class="mb-2 trans-masonry-card--stripe">
+                    <h4 class="twmc-h4 text-uppercase my-0">
+                      Covenant Church at Creekside
+                    </h4>
+                  </div>
+
+                  <div class="row">
+                    <!-- Inner flex container for English and Spanish worship sections -->
+                    <div class="trans-flex-container--masonry">
+                      <!-- Inner card left - English Worship -->
+                      <div class="trans-flex-item--masonry trans-inner-flex">
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          English Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i class="fas fa-clock" aria-hidden="true"></i>
+                            </span>
+                            Sundays &verbar; 10:00 a.m. &verbar; Covenant
+                            Worship Center
+                          </strong>
+                        </p>
+                      </div>
+
+                      <!-- Inner card right - Spanish Worship -->
+                      <div class="trans-flex-item--masonry trans-inner-flex">
+                        <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                          Spanish Worship
+                        </h5>
+                        <p class="twmc-p">
+                          <strong>
+                            <span class="twmc-icon-wrapper">
+                              <i class="fas fa-clock" aria-hidden="true"></i>
+                            </span>
+                            Sundays &verbar; 12:30 p.m. &verbar; Covenant
+                            Worship Center
+                          </strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end creekside -->
+
+              <!-- Woodforest Card -->
+
+              <div class="col-sm-12">
+                <!-- Flex -->
+                <div class="trans-flex-container--masonry">
+                  <div class="trans-flex-item--masonry trans-masonry-card">
+                    <div class="mb-4 text-center trans-masonry-card--stripe">
+                      <h4 class="twmc-h4 text-uppercase my-0">
+                        Woodforest Campus
+                      </h4>
+                    </div>
+
+                    <!-- Family worship -->
+                    <h5 class="twmc-h5 text-uppercase mt-3 mb-1">
+                      Family Worship
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar;
+                        <span class=""
+                          >9:00<sup style="color: #333"></sup> a.m.</span
+                        >
+                        &verbar; Woodforest Worship Center
+                        <br />
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 11:00 a.m. &verbar; Woodforest Worship
+                        Center
+                      </strong>
+                    </p>
+
+                    <!-- Nursery (birth – 2 years) -->
+                    <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                      Nursery (birth – 2 years)
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; <span class="">9:00</span> and 11:00
+                        a.m.
+                      </strong>
+                    </p>
+
+                    <!-- NextGen Kids -->
+                    <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                      NextGen Kids (3 years – 5th Grade)
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; <span class="">9:00</span> and 11:00
+                        a.m.
+                      </strong>
+                    </p>
+
+                    <!-- Confirmation -->
+                    <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                      Confirmation
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 12:30 &ndash; 1:45 p.m.
+                      </strong>
+                    </p>
+                  </div>
+
+                  <!-- End of Woo -->
+
+                  <div class="trans-flex-item--masonry trans-masonry-card">
+                    <div class="mb-4 text-center trans-masonry-card--stripe">
+                      <h4 class="twmc-h4 text-uppercase my-0">
+                        Montgomery Campus
+                      </h4>
+                    </div>
+
+                    <!-- Contemporary Worship -->
+                    <h5 class="twmc-h5 text-uppercase mt-3 mb-1">
+                      Contemporary Worship
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 10:30 a.m. &verbar; Oak Hills Junior
+                        High
+                      </strong>
+                    </p>
+
+                    <!-- NextGen Kids -->
+                    <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                      NextGen Kids (3 years – 5th Grade)
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 9:00 a.m. &verbar; Sunday School
+                        <br />
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 10:30 a.m. &verbar; Children’s Church
+                        <br />
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >1st Sundays &verbar; 10:30 a.m. &verbar; Family Worship
+                      </strong>
+                    </p>
+
+                    <!-- Connect Class -->
+                    <h5 class="twmc-h5 text-uppercase trans-schedule-title">
+                      Adult Discipleship Connect Class
+                    </h5>
+                    <p class="twmc-p">
+                      <strong>
+                        <span class="twmc-icon-wrapper">
+                          <i class="fas fa-clock" aria-hidden="true"></i></span
+                        >Sundays &verbar; 9:00 a.m.
+                      </strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BG IMG -->
+      <img
+        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Background_2000x800.png"
+        alt=""
+        class="img-responsive transition2024--schedule-bg"
+      />
+    </section>
+    <!-- End of schedule -->
+  </body>
+</html>

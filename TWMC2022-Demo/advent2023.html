@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advent Page 2023</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-main2023.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-navbar.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+    
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/85947205a9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+     <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+        <div class="navbar-top-flex-container desktop-top-menu">
+          <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+          <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+          <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+          <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+          <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+        </div>
+  
+        <div class="mobile-dropdown-menu navbar-top-flex-container">
+          <div class="dropdown navbar-top-flex-item">
+            <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Locations
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+              <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+              <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+              <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+              <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+  
+      <!-- Navbar bottom -->
+      <nav class="navbar navbar-twmc-bottom">
+        <div class="navbar-container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar navbar-bottom-icon-bar"></span>
+              <span class="icon-bar navbar-bottom-icon-bar"></span>
+              <span class="icon-bar navbar-bottom-icon-bar"></span>
+            </button>
+            <a href="/home">
+                <!-- color logo -->
+                <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+            </a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+  
+            <!-- Nav desktop -->
+            <div class="nav navbar-nav navbar-right navbar-bottom-right">
+                <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+                <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+                <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+                <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+  
+                <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+                
+                <!-- dropdown -->
+                <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+  
+                <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                  <!-- Mega menu -->
+                  <div class="nav navbar-nav navbar-bottom-megamenu">
+                    <!--  buttons -->
+                    <div class="megamenu-main-menu">
+                      <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                      <a href="/im-new" class="megamenu-link">Visit</a>
+                      <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                      <a href="/outward" class="megamenu-link">Serve</a>
+                      <a href="/give" class="megamenu-link">Give</a>
+                      <a href="/login" class="megamenu-link">Login</a>
+                      <a href="/Find" class="megamenu-link">Search</a>
+      
+                      <!-- Connect -->
+                      <h3 class="megamenu-h3">Connect</h3>
+                      <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                      <a href="/events" class="megamenu-link">Events</a>
+                      <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                      <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                      <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                       
+                      <!-- Socmed -->
+                      <div class="megamenu-socmed">
+                         <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                         <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                         <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                         <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                       </div>
+                    </div>
+      
+      
+                    <!-- About -->
+                    <div class="megamenu-about">
+                      <h3 class="megamenu-h3">About</h3>
+                      <a href="/baptism" class="megamenu-link">Baptism</a>
+                      <a href="/our-story" class="megamenu-link">Our Stories</a>
+                      <a href="/membership" class="megamenu-link">Membership</a>
+                      <a href="/staff" class="megamenu-link">Staff</a>
+                      <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+                      <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                      <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                      <a href="/live" class="megamenu-link">Church Online</a>
+                    </div>
+                    <!-- End of About -->
+      
+                      <!-- Services Connect -->
+                    <div class="megamenu-services">
+                      <h3 class="megamenu-h3">Services</h3>
+                      <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                      <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                      <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                      <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                      
+  
+                      <!-- NextGen -->
+                      <h3 class="megamenu-h3">NextGen</h3>
+                      <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                      <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                      <p>NextGen 56 (Ages 10-11)</p>
+                      <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                      <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                      <p> NextGen College (Ages 18-23)</p>
+                    </div>
+                    <!-- End of Services Connect -->
+      
+                    <!-- Ministries -->
+                    <div class="megamenu-ministries">
+                      <h3 class="megamenu-h3">Ministries</h3>
+                      <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                      <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                      <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                      <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                      <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+                      <a href="/marriage" class="megamenu-link">Marriage</a>
+                      <a href="/men" class="megamenu-link">Men</a>
+                      <a href="/missions" class="megamenu-link">Missions</a>
+                      <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+                      <a href="/recreation" class="megamenu-link">Recreation</a>
+                      <a href="/singles" class="megamenu-link">Singles</a>
+                      <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                      <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                      <a href="/women" class="megamenu-link">Women</a>
+                      <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                    </div>
+                    <!-- End of Ministries -->
+      
+                  </div>
+                </div>
+                
+            </div>
+            <!-- End of nav desktop -->
+  
+            <!-- Nav mobile -->
+            <div class="dropdown-menu navbar-bottom-mobile">
+              <!--  Buttons -->
+              <div class="navbar-bottom-mobile--main-menu">
+                <h3 class="megamenu-h3">Main Menu</h3>
+                <a href="/im-new" class="megamenu-link">Visit</a>
+                <a href="/messages" class="megamenu-link">Messages</a>
+                <a href="/outward" class="megamenu-link">Serve</a>
+                <a href="/give" class="megamenu-link">Give</a>
+                <a href="/login" class="megamenu-link">Login</a>
+                <a href="/Find" class="megamenu-link">Search</a>
+  
+                <h3 class="megamenu-h3">Connect</h3>
+                <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                <a href="/events" class="megamenu-link">Events</a>
+                <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+  
+                <div class="navbar-bottom-mobile--socmed">
+                    <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                    <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                    <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                    <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                </div>
+              </div>
+              <!--  End of Buttons -->
+  
+              <!-- About -->
+              <div class="navbar-bottom-mobile--about">
+                <h3 class="megamenu-h3">About</h3>
+                <a href="/baptism" class="megamenu-link">Baptism</a>
+                <a href="/our-story" class="megamenu-link">Our Stories</a>
+                <a href="/membership" class="megamenu-link">Membership</a>
+                <a href="/staff" class="megamenu-link">Staff</a>
+                <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+                <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                <a href="/live" class="megamenu-link">Church Online</a>
+              </div>
+              <!-- End of About -->
+  
+              <!-- Services Connect -->
+              <div class="navbar-bottom-mobile--services">
+                <h3 class="megamenu-h3">Services</h3>
+                <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                
+  
+                <!-- NextGen -->
+                <h3 class="megamenu-h3">NextGen</h3>
+                <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                <p>NextGen 56 (Ages 10-11)</p>
+                <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                <p> NextGen College (Ages 18-23)</p>
+              </div>
+              <!-- End of Services Connect -->
+  
+              <!-- Ministries -->
+              <div class="navbar-bottom-mobile--ministries">
+                <h3 class="megamenu-h3">Ministries</h3>
+                <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+                <a href="/marriage" class="megamenu-link">Marriage</a>
+                <a href="/men" class="megamenu-link">Men</a>
+                <a href="/missions" class="megamenu-link">Missions</a>
+                <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+                <a href="/recreation" class="megamenu-link">Recreation</a>              
+                <a href="/singles" class="megamenu-link">Singles</a>
+                <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                <a href="/women" class="megamenu-link">Women</a>
+                <a href="/youngadults" class="megamenu-link">Young Adults</a>
+              </div>
+              <!-- End of Ministries -->
+  
+            </div>
+            <!-- End of Nav mobile -->
+          </div>
+          <!-- End of Navabr collapse -->
+        </div>
+        <!-- End of .contatiner -->
+      </nav>
+      <!-- ===== NAVBAR ===== -->
+  
+      <!-- Add margin below navbar, remove if needed -->
+      <section class="margin-below-navbar"></section>
+
+
+
+    <!-- Hero -->
+    <section id="twmc-advent2023--hero" class="hero--img__align-center">
+        <div class="snow">
+            <div class="container-fluid hero--img-tagline-wrapper-lg twmc-advent2023--hero-text">
+                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/WOR_Advent+Banner+TEXT.png" alt="" class="img-responsive-center">
+                
+              </div>
+        </div>        
+    </section>
+    <!-- End of hero -->
+
+    <!-- Christmas intro -->
+    <section class="twmc-advent2023--intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="twmc-p">Children spend the weeks leading up to Christmas in a state of excitement, anticipating all the joys Christmas Day will bring. However, in the hustle and bustle of our fast-paced lives, it has become all too easy to overlook the wonder that should fill this special time. We speed through the season rather than anticipate and celebrate it. In the waiting, the hopeful expectation of what is to come, we uncover the true miracle of the season — the realization of the promise of love and joy captured in Jesus’ birth. </p>
+                    <p class="twmc-p">Anticipation is not only a countdown to a day on the calendar, but a journey of the heart. This holiday season, we invite you to join us at The Woodlands Methodist Church as we pause, take a deep breath and rediscover the awe of this holy season. Bring your family and friends as we embrace the divine wonder of Christmas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of advent christmas intro -->
+
+    <!-- Advent Activities -->
+    <section id="twmc-advent__events" class="twmc-section__pymed-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="twmc-section-title--light mt-0 mb-5 twmc-advent22__red">Christmas Events</h1>
+                    <div class="twmc-flex-container--3-col">
+                        <!-- #1 Christmas Worship Featuring Christine Caine and Bristol House -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/Caine+Worship+feat+Bristolhouse+-+Square+.png" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">Christmas Worship Featuring Christine Caine and Bristol House</h3>
+                                <p>A Dessert and Worship Experience</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Friday, December 1
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>7:00 p.m. 
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Sanctuary</strong>
+                                </p>
+                                <a href="/caine" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+
+                        <!-- #2 Christmas Fest and Night of Carols -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/WOR_Christmas+Fest+Connect+Block.png" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">Christmas Fest and Night of Carols</h3>
+                                <p>Fun for the Whole Family</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Sunday, December 3
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>Christmas Fest &verbar; 3:30 p.m.
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>Bristol House Night of Carols &verbar; 6:00 p.m.
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Fairway and Robb Plaza</strong>
+                                </p>
+                                <a href="#" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+
+                        <!-- #3 Lessons and Carols -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/MUS_Lessons+and+Carols+Connect+Block.png" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">Lessons and Carols</h3>
+                                <p>Beautiful Service of Scripture and Music</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Sunday, December 10
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>5:00 p.m. 
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Sanctuary</strong>
+                                </p>
+                                <a href="#" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+
+                        <!-- #4 Wonderfest -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/Caine+Worship+feat+Bristolhouse+-+Square+.png" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">Wonderfest</h3>
+                                <p>Crafts, Food and Fun at Woodforest</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Sunday, December 10
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>5:00 p.m. 
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Woodforest Gym</strong>
+                                </p>
+                                <a href="#" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+
+                        <!-- #5 Woodlands Men’s Chorus Christmas Concert -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/MUS_Mens-Chorus-Christmas-Concert-Connect-Block.jpg" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">Woodlands Men’s Chorus Christmas Concert</h3>
+                                <p>Enjoy Seasonal Favorites</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Monday, December 18
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>7:00 p.m. 
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Robb Chapel</strong>
+                                </p>
+                                <a href="#" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+
+                        <!-- #6 NextGen Kids Christmas Service -->
+                        <div class="twmc-flex-item--3-col twmc-pbsmall twmc-advent23__card">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/CHI_Christmas+Service_ConnectBlock.png" alt="" class="twmc-flex-img-square">
+                            <div class="mt-2">
+                                <h3 class="twmc-advent22__red">NextGen Kids Christmas Service</h3>
+                                <p>A Family Worship Time</p>
+                                <p class="twmc-advent-event__info">
+                                    <strong><i class="fas fa-calendar-alt twmc-mrxs"></i>Friday, December 22
+                                        <br><i class="fas fa-clock twmc-mrxs"></i>4:00 p.m.  
+                                        <br><i class="fas fa-landmark twmc-mrxs"></i>Sanctuary</strong>
+                                </p>
+                                <a href="#" class="twmc--btn twmc--btn--advent2022__red mt-2" target="_blank">More Info</a>
+                            </div>
+                        </div>
+                        
+                        
+                     
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Advent Activities -->
+
+
+    <!-- Volunteer -->
+    <section id="twmc-advent__volunteer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="twmc-h2 mb-2 twmc-text--white">Volunteer to Usher and Greet for our Guests</h2>
+                    <p class="twmc-p">Christmas Eve is a time when we have many visitors who are coming through our doors for the first time. We would love for you to help us welcome them. We have opportunities for greeters and ushers for all services.</p>
+                    <a href="/serve" class="twmc--btn twmc--btn--advent2022__red" target="_blank">Sign Up Now</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- End of volunteer -->
+
+
+    <!-- Christmas services -->
+    <section class="twmc-section__pymed-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="twmc-h1 twmc-section-title--light mt-0 mb-2 twmc-advent22__green">Christmas Services</h1>
+                    <p class="text-center"><em>Christmas Eve/Eve and Christmas Eve services will be candlelight services and will include Communion. </em></p>
+                    <p class="text-center twmc-text--traditional mt-1">*These services that will be live streamed at <a href="https://twmc.org/live">twmc.org/live</a></p>
+
+                    <!-- Traditional -->
+                    <div class="twmc-advent23__card mt-5">
+                        <h3 class="twmc-advent22__green">TRADITIONAL WORSHIP</h3>
+                        <p>This service takes place in our beautiful sanctuary bathed in the warmth of Christmas lights and holiday greenery. Worship includes favorite Christmas hymns and Christ-centered messages for anyone who longs for the timeless traditions of the season. </p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <!-- TRAD Special Needs Family Worship -->
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 17<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 11:15 a.m. <br>
+                                        <i class="fas fa-landmark twmc-mrxs"></i> Wesley Hall
+                                         <br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Special Needs Family Worship<br>
+                                    </strong>
+                                    Designed for families caring for an individual with special needs. Communion served.
+                                </p>
+                            </div>
+
+                            <!-- TRAD Christmas Without Them  -->
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 17<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 6:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Robb Chapel<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Without Them<br>
+                                    </strong>
+                                    A service for those who have experienced a loss during the past year. Communion served.
+                                </p>
+                            </div>
+
+                            <!-- TRAD -->
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 7:00* and 9:00 p.m <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Sanctuary<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>
+                                    </strong>
+                                </p>
+                            </div>
+
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 11:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Robb Chapel<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Harvest -->
+                    <div class="twmc-advent23__card mt-3">
+                        <h3 class="twmc-advent22__green">HARVEST CONTEMPORARY WORSHIP</h3>
+                        <p>Our contemporary worship is fresh and modern with an uplifting biblical message and soul satisfying music. The natural beauty of the space is enhanced with soft lighting to bring the joy and love of the season into your heart and home.</p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Saturday, December 23<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 6:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Sanctuary<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve/Eve Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 1:00, 3:00* and 5:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Sanctuary<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <!-- Loft -->
+                    <div class="twmc-advent23__card mt-3">
+                        <h3 class="twmc-advent22__green">LOFT MODERN WORSHIP</h3>
+                        <p>An inviting renovated warehouse space decorated with rustic greenery and lights is the setting for this modern worship service. Christmas is celebrated with energetic music and relevant teaching about Christ and the culture for those who desire a less traditional setting.</p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Saturday, December 23<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 4:00 and 6:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Loft Worship Center<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve/Eve Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 3:00, 5:00* and 7:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Loft Worship Center<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Espanol -->
+                    <div class="twmc-advent23__card mt-3">
+                        <h3 class="twmc-advent22__green">MINISTERIO EN ESPAÑOL &verbar; SPANISH-SPEAKING WORSHIP</h3>
+                        <p>Worship with your Spanish-speaking neighbors in a welcoming environment on The Woodlands Campus. Our Christmas service is family focused with contemporary worship music and engaging Bible teaching that focuses on the reason we celebrate — Jesus Christ.</p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 10:00 a.m.<br>                        
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Harvest Worship Center???<br> 
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>               
+                                    </strong>                                   
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Woodforest -->
+                    <div class="twmc-advent22__card2 mt-3">
+                        <h3 class="twmc-advent22__green">THE CHURCH AT WOODFOREST &verbar; FAMILY WORSHIP</h3>
+                        <p>Worship with your neighbors in a welcoming worship center that overlooks the natural beauty of the community. Our Christmas service is family focused with contemporary music and engaging Bible teaching that bring hope and joy to the season. </p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 3:00 and 5:00 p.m. <br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>The Church at Woodforest Lawn<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Outdoor Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Montgomery -->
+                    <div class="twmc-advent22__card2 mt-3">
+                        <h3 class="twmc-advent22__green">THE CHURCH AT MONTGOMERY &verbar; MODERN LITURGICAL WORSHIP</h3>
+                        <p>Families and individuals of all ages are invited to join this community of believers. Our Christmas service is filled with live music and engaging Bible teaching that bring hope and joy to the season. </p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Sunday, December 24<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 6:00 p.m.<br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Oak Hills Junior High<br>
+                                        <i class="fa-solid fa-tree-christmas twmc-mrxs"></i> Christmas Eve Service<br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CHRISTMAS DAY SERVICE -->
+                    <div class="twmc-advent22__card2 mt-3">
+                        <h3 class="twmc-advent22__green">CHRISTMAS DAY SERVICE</h3>
+                        <p>We will have one churchwide service on Christmas morning, joining all worship communities together in the Sanctuary on The Woodlands Campus for a simple, joyous gathering. ???</p>
+
+                        <div class="card-xmas2023-container--2-col mt-4">
+                            <div class="card-xmas2023-item--2-col card-xmas2023-green">
+                                <p class="twmc-mtxs twmc-advent-event__info">
+                                    <strong>
+                                        <i class="fas fa-calendar-alt twmc-mrxs"></i> Monday, December 25<br>
+                                        <i class="fas fa-clock twmc-mrxs"></i> 10:00 a.m.* ???<br>
+                                        <i class="fa-solid fa-church twmc-mrxs"></i>Sanctuary ???
+                                         <br>
+                                    </strong>                                   
+                                </p>
+                            </div>
+                        </div>
+    
+                       
+                    </div>
+
+                     <!-- Nursery information -->
+                     <div class="mt-5">
+                        <h3 class="twmc-h4 mt-1 mb-0">Nursery Information </h3>
+                        <p><em>Limited child care will be provided for children 2 and under at the following services.</em></p>
+                        <p class="twmc-mtxs twmc-advent-event__info">
+                            <strong>Friday, December 22 ???</strong> <br> 
+                            NextGen Kids Service &verbar; 4:00 p.m. ???
+                        </p>
+                        <p class="twmc-advent-event__info">
+                            <strong>Saturday, December 23</strong> <br> 
+                            Harvest &verbar; 6:00 p.m.<br>
+                            Loft &verbar; 4:00 and 6:00 p.m.
+                        </p>
+                        <p class="twmc-advent-event__info">
+                            <strong>Sunday, December 24</strong> <br> 
+                            Harvest &verbar; 1:00, 3:00 and 5:00 p.m. <br>
+                            Loft &verbar; 3:00 and 5:00 p.m. <br>
+                            Woodforest &verbar; 3:00 and 5:00 p.m. ???<br>
+                            Montgomery | ??? 
+                        </p>
+
+                        <p class="twmc-advent-event__info">
+                            <strong>Monday, December 25</strong> <br> 
+                            Christmas Day Service &verbar;10:00 a.m. ???
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Christmas services -->
+
+
+    <!-- Emotional support -->
+    <section class="twmc-section__pymed-lightgrey">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="twmc-h1 twmc-section-title--light mt-0 mb-4">Emotional Support</h1>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <div class="twmc-flex-container--2-col-2percent twmc-gap-1">
+                        <div class="twmc-flex-item--2-col-2percent">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/transly-translation-agency-KQfxVDHGCUg-unsplash+BW.jpg" alt="" class="twmc-flex-img--2-col">
+                            <h2 class="twmc-h2">Counseling</h2>
+                            <p>The holidays bring out different emotions in each of us. Sometimes it can be a time when we struggle to feel festive like those around us. We want to walk beside you and assure you of God’s presence as you navigate the holiday season.  </p>
+                            <a href="/help" class="twmc--btn twmc--btn--advent2022__red" target="_blank">Find out more</a>
+                        </div>
+
+                        <div class="twmc-flex-item--2-col-2percent">
+                            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_advent2023/priscilla-du-preez-YFC9Aky2rUg-unsplash+BW.jpg" alt="" class="twmc-flex-img--2-col">
+                            <h3 class="twmc-h3">Prayer Ministry</h3>
+                            <p>If you’re experiencing some difficult days during this holiday season because you’ve lost a loved one, or life is just hard right now, we’re here to support you. We offer pastoral counseling, support groups and prayer teams to help you find the hope of Christ. </p>
+                            <a href="/help" class="twmc--btn twmc--btn--advent2022__red" target="_blank">Find out more</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of emotional support -->
+
+  
+
+
+
+  <!-- JQuery -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/a768a77f8f.js" crossorigin="anonymous"></script>
+  <script src="./js/twmc-scripts.js"></script>
+</body>
+</html>

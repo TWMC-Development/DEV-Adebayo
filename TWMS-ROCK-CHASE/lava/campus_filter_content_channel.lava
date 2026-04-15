@@ -1,0 +1,77 @@
+<!-- Toggle -->
+<section id="section-toggle-template" class="py-6">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h1 class="twmc-h1 twmc-section-title--light mb-3">Connect</h1>
+            </div>
+
+            <div class="col-sm-10 col-sm-offset-1">
+                <!-- Toggle nav -->
+                <div class="nav-pills--twmctoggle-connectblock3">
+                    <ul class="nav nav-pills mt-4 mb-0 nav-pills--twmctoggle-connectblock3-ul">
+                        {% campus where:'CampusStatusValueId == 1217' %}
+                        {% for campus in campusItems %}
+                        <li class="{% if forloop.first %}active{% endif %}">
+                            <a data-toggle="pill" href="#campus-{{ campus.Id }}" class="twmc--btn--toggle-navtab3">{{ campus.Name }}</a>
+                        </li>
+                        {% endfor %}
+                        {% endcampus %}
+                    </ul>
+                </div>
+                <!-- End of toggle nav -->
+
+                <!-- Tab Content -->
+                <div class="tab-content tab-content--twmctoggle-connectblock3">
+                    {% campus where:'CampusStatusValueId == 1217' %}
+                    {% for campus in campusItems %}
+                    <div id="campus-{{ campus.Id }}" class="twmctoggleconnect-tab tab-pane fade {% if forloop.first %}in active{% endif %}">
+                        <div class="twmc-flex-container--3-col">
+                            {% for item in Items %}
+                            {% assign campName = campus.Name %}
+                            {% assign contcampName = item | Attribute: 'Campuses' %}
+                            {% if contcampName contains campName %}
+                            <div class="twmc-flex-item--3-col twmc-pbsmall">
+                               <a href="https://www.thewoodlandsmethodist.org/{{ item | Attribute: 'LinkURL'}}">
+                                   {{ item | Attribue: 'Image' }}
+                                <img src="{{ item | Attribute: 'Image'}}" alt="{{item.Title}}" class="twmc-flex-img-square">
+                            </a>
+
+                                <h3 class="twmc-h3">{{ item.Title }}</h3>
+                                <p class="twmc-p">{{ item.Content }}</p>
+                                <a href="#" class="twmc--btn twmc--btn--traditional twmc--btn--connect twmc-mbxs" title="Find Out More" target="_blank">{{ item | Attribute: 'ButtonText' }}</a>
+                                <p class="font-size-xs"><em>{{ item | Attribute: 'Audience' }}</em></p>
+                                <p>Campus: {{ item | Attribute: 'Campuses' }}</p>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endcampus %}
+                </div>
+                <!-- End of Tab Content -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Toggle -->
+
+<!-- JavaScript to manage tab activation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.nav-link');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show', 'active'));
+
+                // Add active class to clicked tab and corresponding content
+                this.classList.add('active');
+                const targetPane = document.querySelector(this.getAttribute('href'));
+                targetPane.classList.add('show', 'active');
+            });
+        });
+    });
+</script>

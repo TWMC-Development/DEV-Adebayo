@@ -1,0 +1,873 @@
+/* ===== CONNECT BLOCK 2025 ===== */
+/* ===== Flex Connect 2025 ==== */
+.connect25--flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* justify-content: center; */
+    gap: 2%;
+  }
+
+  .connect25--flex-item {
+      flex-basis: 23.5%;
+      overflow: visible;
+      margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (max-width: 1900px) {
+    .connect25--flex-container {
+      gap: 3%;
+    }
+
+      .connect25--flex-item {
+          flex-basis: 31.33%;
+      }
+  }
+
+  /* @media only screen and (max-width: 1500px) {
+      .connect25--flex-container {
+          flex-direction: row;
+          gap: 1%;
+      }
+
+      .connect25--flex-item {
+          flex-basis: 32%;
+      }
+  } */
+
+  @media only screen and (max-width: 1400px) {
+      .connect25--flex-container {
+          flex-direction: row;
+          gap: 2%;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .connect25--flex-item {
+          flex-basis: 49%;
+      }
+  }
+
+  @media only screen and (max-width: 1300px) {
+      .connect25--flex-container {
+          width: 90%;
+      }
+  }
+
+  @media only screen and (max-width: 1200px) {
+      .connect25--flex-container {
+          width: 100%;
+      }
+  }
+
+  @media only screen and (max-width: 992px) {
+      .connect25--flex-container {
+          flex-direction: row;
+          gap: 0;
+          width: 65%;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .connect25--flex-item {
+          flex-basis: 100%
+      }
+  }
+
+  @media only screen and (max-width: 900px) {
+      .connect25--flex-container {
+          width: 75%;
+      }
+  }
+
+  @media only screen and (max-width: 700px) {
+      .connect25--flex-container {
+          width: 90%;
+      }
+  }
+
+  @media only screen and (max-width: 576px) {
+      .connect25--flex-container {
+          width: 94%;
+      }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+      .connect25--flex-container {
+          width: 98%;
+      }
+  }
+
+  /* ===== End of Flex Connect 2025 ==== */
+
+
+  /* ===== LG Cards ===== */
+  .connect25-cardlg-ribbon-card--wrapper {
+      background-color: #fff;
+      box-shadow: 0 2px 20px rgb(134 38 51 / 10%);
+      border-radius: 15px;
+  }
+
+  .connect25-cardlg--ribbon {
+      background-color: #A2A29E;
+      background-size: cover;
+      background-position: center center;
+      /* height: 350px; */
+      width: 100%; 
+      aspect-ratio: 1 / 1;  
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
+
+  .twmc-ribbon-card--wrapper {
+      background-color: #fff;
+      box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+  }
+
+  .connect25-cardlg-ribbon-card--inner-wrapper {
+      padding: 1.5rem 1.5rem 1.2rem;
+      text-align: left;
+      min-height: 340px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .twmc-ribbon-card--content {
+      background-color: rgba(243, 243, 243, .5);
+      padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 2200px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 350px;
+      }
+  }
+  
+  @media only screen and (max-width: 2100px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 370px;
+      }
+  }
+  @media only screen and (max-width: 2000px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 380px;
+      }
+  }
+
+  @media only screen and (max-width: 1900px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 310px;
+      }
+  }
+
+  @media only screen and (max-width: 1800px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 330px;
+      }
+  }
+
+  @media only screen and (max-width: 1700px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 340px;
+      }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 350px;
+      }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 340px;
+      }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 320px;
+      }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: 340px;
+      }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .connect25-cardlg-ribbon-card--inner-wrapper {
+        min-height: max-content;
+      }
+  }
+ 
+  .connect25-cardlg--ribbon-inner {
+      margin: 0;
+  }
+
+  .connect25-cardlg-card--title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+  }
+
+  .hr-greythin {
+    border-top: 2px solid #d1d1d1;
+  }
+
+  .connect25-cardlg--btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .connect25-p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .connect25-p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* ===== End of LG Cards ===== */
+
+
+  /* ===== Buttons/Tags ===== */
+  .connect25-tag-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 6px !important;
+  }
+
+  .connect25--tag-darkgrey {
+    display: inline-block;
+    color: #333;
+    font-size: .53rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    background-color: #d1d1d1;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    /* padding: .25rem .55rem .15rem; */
+    padding: .25rem .55rem;
+    letter-spacing: 0.5px;
+    cursor: not-allowed;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .connect25--tag-redgrey {
+    display: inline-block;
+    color: #333;
+    font-size: .53rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: capitalize;
+    vertical-align: middle;
+    background-color: #ecd6d6;
+    border: 1px solid #ecd6d6;
+    border-radius: 15px;
+    /* padding: .25rem .55rem .15rem; */
+    padding: .25rem .55rem;
+    letter-spacing: 0.5px;
+    cursor: not-allowed;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .btn-connect25-trad {
+    background-color: var(--color-traditional);
+    color: #fff;
+    border: 2px solid var(--color-traditional);
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.4rem;
+    min-width: 150px;
+    /* max-width: 255px; */
+  }
+
+  .btn-connect25-trad:hover,
+  .btn-connect25-trad:focus {
+    color: var(--color-traditional);
+    border: 2px solid var(--color-traditional);
+    background-color: rgba(243, 243, 243, .5);
+    transform: scale(1.01);
+  }
+
+  @media only screen and (max-width:768px) {
+    .btn-connect25-trad {
+        width: 150px;
+        padding: .4rem 0.7rem;
+        font-size: .7rem;
+    }
+  }
+  /* ===== End of Buttons/Tags ===== */
+
+  /* ===== SM Cards ===== */
+  .connect25-cardsm-ribbon-card--wrapper {
+      background-color: #fff;
+      box-shadow: 0 2px 20px rgb(134 38 51 / 10%);
+      border-radius: 15px;
+      padding-bottom: 0 !important;
+
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+  }
+
+  .connect25-cardsm--ribbon {
+      flex-basis: 33%;
+
+      background-color: #A2A29E;
+      background-size: cover;
+      background-position: center center;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      width: 100%;          
+      aspect-ratio: 1 / 1;  
+  }
+
+  .connect25-cardsm-ribbon-card--wrapper {
+      /* height: 146px; */
+      height: 160px;
+    } 
+
+  @media only screen and (max-width: 2100px) {
+    .connect25-cardsm--ribbon {
+      /* flex-basis: 30%; */
+      aspect-ratio: 6 / 7;  
+    }
+  }
+
+  @media only screen and (max-width: 2000px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 172px;
+    } 
+  }
+
+  @media only screen and (max-width: 1900px) {
+    .connect25-cardsm--ribbon {
+      aspect-ratio: 1 / 1;  
+    }
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+
+  }
+
+  @media only screen and (max-width: 1600px) {
+    .connect25-cardsm--ribbon {
+      aspect-ratio: 6 / 7;  
+    }
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 170px;
+    } 
+  }
+
+
+
+  @media only screen and (max-width: 1500px) {
+    .connect25-cardsm--ribbon {
+      aspect-ratio: 4 / 5;  
+    }
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 172px;
+    } 
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .connect25-cardsm--ribbon {
+      aspect-ratio: 1 / 1;  
+    }
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+  }
+
+  @media only screen and (max-width: 1300px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 150px;
+    } 
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 172px;
+    } 
+  }
+
+  @media only screen and (max-width: 992px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+  }
+
+  /* @media only screen and (max-width: 700px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 150px;
+    } 
+  }
+
+  @media only screen and (max-width: 500px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+  } */
+
+  @media only screen and (max-width: 450px) {
+    .connect25-cardsm--ribbon {
+      /* aspect-ratio: 6 / 7;   */
+      aspect-ratio: auto;
+    }
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .connect25-cardsm-ribbon-card--wrapper {
+      height: 160px;
+    } 
+
+    .connect25--content-text {
+      line-height: 1.25 !important;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    /* .connect25-cardsm--ribbon {
+      aspect-ratio: 5 / 6;  
+    } */
+
+    .connect25-cardsm-ribbon-card--wrapper {
+      /* height: 180px; */
+      overflow: hidden;
+    } 
+
+    .connect25--content-text {
+      line-height: 1.1 !important;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    /* .connect25-cardsm--ribbon {
+      aspect-ratio: 2 / 3;  
+    } */
+  }
+
+  .twmc-ribbon-card--wrapper {
+      background-color: #fff;
+      box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
+  }
+
+  .connect25-cardsm-ribbon-card--inner-wrapper {
+      flex-basis: 69%;
+      padding: 0.75rem;
+      text-align: left;
+      /* overflow: hidden; */
+  }
+
+  .twmc-ribbon-card--content {
+      background-color: rgba(243, 243, 243, .5);
+      padding: 1.5rem;
+  }
+
+  .connect25-cardsm-card--title {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .connect25--content-text {
+    font-size: 0.715rem;
+    line-height: 1.35;
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 2000px) {
+    .connect25--content-text {
+      font-size: 0.68rem !important;
+      line-height: 1.2;
+    }
+  }
+
+  @media only screen and (max-width: 2000px) {
+    .connect25--content-text {
+      font-size: 0.715rem;
+      line-height: 1.35;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 600px) {
+    .connect25--content-text {
+      font-size: 0.75rem !important;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .connect25--content-text {
+      font-size: 0.7rem !important;
+    }
+
+    .connect25--smtag {
+      font-size: 0.64rem !important;
+    }
+  }
+
+  .hr-greythin {
+    border-top: 3px solid #d1d1d1;
+  }
+
+  .connect25-cardsm--btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+
+  /* Tag */
+  .connect25--smtag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  /* link */
+  .a-connect25-sm {
+    color: #333;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .a-connect25-sm:hover,
+  .a-connect25-sm:focus {
+    color: #4f4f4f;
+    transform: scale(1.01);
+  }
+
+  /* ===== SM Cards ===== */
+
+
+  /* LG/SM Cards Flow */
+  /* BP1 */
+  .connect25--flex-item:nth-child(-n + 4) > .connect25--flex-item-sm {
+    display: none;
+  }
+
+ .connect25--flex-item:nth-child(n + 5) > .connect25--flex-item-lg {
+    display: none;
+  }
+
+  /* BP2/3 */
+  @media only screen and (max-width: 1900px) {
+    .connect25--flex-item:nth-child(-n + 3) > .connect25--flex-item-sm {
+      display: none;
+    }
+
+    .connect25--flex-item:nth-child(4) > .connect25--flex-item-sm {
+      display: flex;
+    }
+
+    .connect25--flex-item:nth-child(n + 4) > .connect25--flex-item-lg {
+      display: none;
+    }
+  }
+
+  /* BP4 */
+  @media only screen and (max-width: 1400px) {
+    .connect25--flex-item:nth-child(-n + 2) > .connect25--flex-item-sm {
+      display: none;
+    }
+
+    .connect25--flex-item:nth-child(3) > .connect25--flex-item-sm {
+      display: flex;
+    }
+
+    .connect25--flex-item:nth-child(n + 3) > .connect25--flex-item-lg {
+      display: none;
+    }
+  }
+
+
+/* =====END OF CONNECT BLOCK 2025 */
+
+/* ===== Connect Block Multicampus ===== */
+/* .connect25--flex-container {
+  justify-content: center;
+} */
+
+.connectmulti25-section {
+  padding: 5rem 0;
+  background: linear-gradient(#fff, #ebe9e8, #fff);
+} 
+
+
+/* Nav */
+.twmc--btn--toggle-nav-connectmulti25 {
+  max-width: max-content;
+}
+
+.nav-pills--connectmulti25 {
+  text-align: center;
+  width: 100%;
+}
+
+ul.nav-pills--connectmulti25-ul {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(142, 142, 142, 0.3);
+  border-radius: 8px 8px 0 0;
+  padding: 1rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  ul.nav-pills--connectmulti25-ul {
+    border-radius: 8px;
+  }
+}
+
+.connectmulti25-navtitle {
+  color: var(--color-traditional);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem 0.7rem;
+}
+
+.nav-pills--connectmulti25-ul > li > a {
+  padding: 0.8rem 1rem 0.7rem;
+  border-radius: 20px;
+  transition: all .3s ease-in-out;
+}
+
+.nav-pills--connectmulti25-ul > li > a:hover {
+  backdrop-filter: sepia(0.1);
+  border: 3px solid rgba(134, 38, 51, 0.5);
+}
+
+.nav-pills--connectmulti25 > .nav-pills > li.active > a,
+.nav-pills--connectmulti25 > .nav-pills > li.active > a:focus {
+    /* border: 3px solid rgba(75, 97, 71, 0.3); */
+    border: 3px solid rgba(134, 38, 51, 0.5);
+    background-color: transparent;
+    backdrop-filter: sepia(0.1);
+    color: var(--color-traditional);
+    padding: 0.8rem 1rem 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 150px;
+    max-width: 100%;
+}
+
+.nav-pills--connectmulti25 .nav-pills > li > a {
+  color: #565656;
+  background-color: transparent;
+  padding: 0.8rem 1rem 0.7rem;
+  margin-right: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  min-width: 150px;
+  max-width: 100%;
+}
+
+.nav-pills--connectmulti25 ul.nav.nav-pills > li {
+    margin-left: 0 !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  .connectmulti25-navtitle,
+  .nav-pills--connectmulti25-ul > li > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+  .nav-pills--connectmulti25 .nav-pills > li > a {
+    padding: 0.8rem 0.7rem 0.7rem;
+  }
+
+}
+/* End of Nav */
+
+/* Content*/
+.tab-content--connectmulti25 {
+  max-width: 100%;
+  padding-top: 3rem;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(rgba(235, 233, 232, 05),  rgba(220, 220, 220, 0.4));
+}
+
+@media only screen and (min-width: 1900px) {
+  .tab-content--connectmulti25 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tab-content--connectmulti25 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .tab-content--connectmulti25 {
+    /* background: transparent; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .tab-content--connectmulti25 {
+    background: transparent;
+  }
+}
+
+@media only screen and (max-width:1200px) {
+  .connectmulti25-navtitle,
+  .nav-pills--connectmulti25-ul > li > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+  .nav-pills--connectmulti25 .nav-pills > li > a {
+    padding: 0.8rem 0.7rem 0.7rem;
+    font-size: 0.7rem;
+    min-width: 130px;
+  }
+
+  @media only screen and (max-width:1050px) {
+    .connectmulti25-navtitle,
+    .nav-pills--connectmulti25-ul > li > a,
+    .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+    .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+    .nav-pills--connectmulti25 .nav-pills > li > a {
+      font-size: 0.6rem;
+      min-width: 130px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .connectmulti25-navtitle,
+    .nav-pills--connectmulti25-ul > li > a,
+    .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+    .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+    .nav-pills--connectmulti25 .nav-pills > li > a {
+      padding: 9px 20px 8px !important;
+      font-size: 0.7rem;
+      letter-spacing: normal;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  ul.nav-pills--connectmulti25-ul {
+    width: 40%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+  }
+
+  .twmc--btn--toggle-nav-connectmulti25 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  
+
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+  .nav-pills--connectmulti25 .nav-pills > li > a {
+      padding: 9px 20px 8px;
+      font-size: 0.7rem;
+      width: 100%;
+  }
+
+  .nav-pills--connectmulti25 .nav-pills > li:first-child {
+    margin-top: 0.7rem;
+  }
+
+  .nav-pills--connectmulti25 .nav-pills > li:last-child {
+    margin-bottom: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  ul.nav-pills--connectmulti25-ul {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  ul.nav-pills--connectmulti25-ul {
+    min-width: 70%;
+  }
+
+  /* .nav-pills--connectmulti25 > .nav-pills > li.active > a,
+  .nav-pills--connectmulti25 > .nav-pills > li.active > a:focus,
+  .nav-pills--connectmulti25 .nav-pills > li > a {
+      min-width: 100%;
+  } */
+
+  /* .twmc--btn--toggle-nav-connectmulti25 {
+    width: 100%;
+    max-width: 100%;
+  } */
+}
+
+/* Cards Styling */
+.connect25-cardlg-ribbon-card--wrapper,
+.connect25-cardsm-ribbon-card--wrapper {
+  box-shadow: 0 2px 20px rgb(134 38 51 / 10%);
+}
+
+/* ===== End of Connect Block Multicampus ===== */

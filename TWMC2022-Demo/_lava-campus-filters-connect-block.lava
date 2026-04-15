@@ -1,0 +1,123 @@
+<!-- Toggle -->
+<link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/utilities-templates.css">
+
+<section id="section-toggle-template" class="py-6">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h1 class="twmc-h1 twmc-section-title--light mb-3">Connect</h1>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1">
+                <!-- Toggle nav -->
+                <div class="nav-pills--twmctoggle-connectblock3">
+                    <ul class="nav nav-pills mt-4 mb-0 nav-pills--twmctoggle-connectblock3-ul">
+                        {% campus where:'CampusStatusValueId == 1217' %}
+                        <!-- First loop: Display non-Español campuses -->
+                        {% assign espanolCampusItem = null %}
+                        {% for campusItem in campusItems %}
+                            {% assign campusName = campusItem.Name %}
+                            <!-- Check if it's the Español campus -->
+                            {% if campusName contains "Espa" %}
+                                <!-- Store Español campus for later -->
+                                {% assign espanolCampusItem = campusItem %}
+                            {% else %}
+                                <!-- Display non-Español campuses -->
+                                <li class="{% if forloop.first %}active{% endif %}">
+                                    <a data-toggle="pill" href="#campus-{{ campusItem.Id }}" class="twmc--btn--toggle-navtab3">
+                                        {{ campusName }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        <!-- Second loop: Append Español campus at the end if it exists -->
+                        {% if espanolCampusItem %}
+                            <li>
+                                <a data-toggle="pill" href="#campus-{{ espanolCampusItem.Id }}" class="twmc--btn--toggle-navtab3">
+                                    ESPAÑOL
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endcampus %}
+
+                    </ul>
+                </div>
+                <!-- End of toggle nav -->
+                <!-- Tab Content: Campus details and items -->
+                <div class="tab-content tab-content--twmctoggle-connectblock3">
+                    {% campus where:'CampusStatusValueId == 1217' %}
+                    {% for campus in campusItems %}
+                    <div id="campus-{{ campus.Id }}" class="tab-pane fade {% if forloop.first %}in active{% endif %}">
+                        <div class="twmc-connect--flex-container">
+                            <!-- Counter to limit items displayed per campus -->
+                            {% assign itemCounter = 0 %}
+                            <!-- Loop through items to check assigned campuses -->
+                            {% for item in Items %}
+                                {% assign campusesArr = item | Attribute: 'Campuses' | Split: ',' %}
+                                {% assign campusesNameList = item | Attribute: 'Campuses','RawValue' %}
+                            <!-- If item is assigned to this campus -->
+                            {% if campusesNameList contains campus.Guid %}
+                              <!-- check the legnth of the multicampus select -->
+                            <div class="twmc-connect--flex-item twmc-pbsmall">
+                                <br />
+                                <a href="https://www.thewoodlandsmethodist.org{{ item | Attribute: 'LinkURL' }}" alt="{{ item.Title }}" class="twmc-flex-img-square">
+                                    {{ item | Attribute: 'Image' }} <!-- Display item image -->
+                                </a>
+                                <h3 class="twmc-h3 mb-2">{{ item.Title }}</h3> <!-- Display item title -->
+                                <!-- Display tags for campuses and audience -->
+                                <div class="twmc-tag-wrapper mb-2">
+                                    {% for campusTag in campusesArr %}
+                                    <p class="twmc--btn--tag-redgrey">
+                                        <span>{{ campusTag }}</span> <!-- Display campus tag -->
+                                    </p>
+                                    {% endfor %}
+                                    {% assign audienceArr = item | Attribute: 'Audience' | Split: ',' %}
+                                    {% if audienceArr %}
+                                    {% for audience in audienceArr %}
+                                    <p class="twmc--btn--tag-darkgrey">
+                                        <span>{{ audience }}</span> <!-- Display audience tag -->
+                                    </p>
+                                    {% endfor %}
+                                    {% endif %}
+                                </div>
+                                <!-- Display item content and link -->
+                                <p class="twmc-p mb-1">{{ item.Content }}</p>
+                                <a href="https://www.thewoodlandsmethodist.org{{ item | Attribute: 'LinkURL' }}" class="twmc--btn twmc--btn--traditional twmc--btn--connect twmc-mbxs" title="Find Out More" target="_blank">{{ item | Attribute: 'ButtonText' }}</a>
+                            </div>
+                            <!-- Limit to 8 items per campus -->
+                            {% assign itemCounter = itemCounter | Plus: 1 %}
+                            {% if itemCounter == 8 %}
+                            {% break %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endcampus %}
+                </div>
+                <!-- End of tab content -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Toggle -->
+<!-- JavaScript to manage tab activation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.nav-pills a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('show', 'active'));
+
+                // Add active class to clicked tab and corresponding content
+                this.classList.add('active');
+                const targetPane = document.querySelector(this.getAttribute('href'));
+                targetPane.classList.add('show', 'active');
+            });
+        });
+    });
+</script>
+

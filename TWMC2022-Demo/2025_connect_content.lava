@@ -1,0 +1,160 @@
+<style>
+    /* Tweaks */
+    .connect25--tag-redgrey {
+        margin-right: 0;
+    }
+    </style>
+
+    <section id="section-toggle-template" class="py-6">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                    <h1 class="twmc-h1 twmc-section-title--light mb-3">Connect</h1>
+                </div>
+
+                <div class="col-sm-10 col-sm-offset-1">
+                    <!-- Toggle nav -->
+                    <div class="nav-pills--twmctoggle-connectblock3">
+                        <ul class="nav nav-pills mt-4 mb-0 nav-pills--twmctoggle-connectblock3-ul">
+                        <li class="active"><a data-toggle="pill" href="#twmctoggleconnect-tab1" class="twmc--btn--toggle-navtab3">The Woodlands</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggleconnect-tab2" class="twmc--btn--toggle-navtab3">Woodforest</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggleconnect-tab3" class="twmc--btn--toggle-navtab3">Montgomery</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggleconnect-tab4" class="twmc--btn--toggle-navtab3">Creekside</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggleconnect-tab5" class="twmc--btn--toggle-navtab3">Español</a></li>
+                        </ul>
+                    </div>
+                    <!-- End of toggle nav -->
+
+
+                    <!-- Tab Content -->
+                    <div class="tab-content tab-content--twmctoggle-connectblock3">
+                        {% assign campuses = "Woodlands,Woodforest,Montgomery,Creekside,Español" | Split: "," %}
+                        <!-- Tab Panel -->
+                        {% for campus in campuses %}
+                        <div id="twmctoggleconnect-tab{{forloop.index}}" class="twmctoggleconnect-tab tab-pane fade{% if forloop.first %} in active{% endif %}" data-tab-filter="{{campus}}">
+                            <div class="connect25--flex-container">
+                                {% for item in Items %}
+                                {% assign TabFilter = item | Attribute: 'Campus' %}
+                                {% if TabFilter contains campus %}
+                                {% assign imageGuid = item | Attribute:'Image':'RawValue' %}
+                              <!-- 1 -->
+                              <div class="connect25--flex-item connect25-cardlg-ribbon-card--wrapper">
+                                <!-- lg -->
+                                <div class="connect25--flex-item-lg twmc-pbsmall">
+                                  <div class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid   }}');">
+                                    <div class="connect25-cardlg--ribbon-inner"></div>
+                                  </div>
+                                  <div class="connect25-cardlg-ribbon-card--inner-wrapper">
+                                    <div>
+                                      <p class="connect25-cardlg-card--title mb-2 mt-2"><strong>{{ item.Title }}</strong></p>
+                                      <div class="connect25-tag-wrapper mb-1">
+
+                                           <span>
+                                           {% assign campuses = item | Attribute:'Campus' | Split:',' %}
+                                            {% for camp in campuses %}
+                                                <p class="connect25--tag-redgrey">
+                                                    <span>{{ camp }}</span>
+                                                </p>
+                                            {% endfor %}
+                                            {% assign ministries =  item | Attribute:'Audience'| Split:','%}
+                                            {% for ministry in ministries %}
+                                            <p class="connect25--tag-darkgrey">
+                                                <span>{{ ministry }}</span>
+                                              </p>
+                                            {% endfor %}
+                                          </span>
+                                      </div>
+
+                                      <p class="connect25-p connect25-cardlg-excerpt my-2">{{ item.Content | StripHtml | Truncate:250,'...' }} </p>
+                                    </div>
+                                    <div>
+                                      <hr class="hr-greythin">
+                                      <div class="connect25-cardlg--btn-wrapper">
+                                        <a href="{{ item | Attribute:'Link':'RawValue' }}" class="btn btn-connect25-trad" title="Learn More" target="_blank">{{ item | Attribute: 'Button' }}</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- sm -->
+                                <div class="connect25--flex-item-sm  connect25-cardsm-ribbon-card--wrapper a-connect25-sm">
+                                  <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid   }}');">
+                                    <div class="connect25-cardsm--ribbon-inner"></div>
+                                  </div>
+                                  <div class="connect25-cardsm-ribbon-card--inner-wrapper">
+                                    <a href="{{ item | Attribute:'Link':'RawValue' }}" class="a-connect25-sm" title="Learn More" target="_blank">
+                                      <h4 class="twmc-h4 connect25-cardsm-card--title mb-1">{{ item.Title }} </h4>
+                                      <div class="connect25-tag-wrapper mb-1">
+                                         <p class="connect25--smtag">
+                                       {% assign campuses = item | Attribute:'Campus' | Split:',' %}
+                                        {% for camp in campuses %}
+                                            <span >{{ camp }} &verbar;</span>
+                                        {% endfor %}
+                                        {% assign ministries =  item | Attribute:'Audience'| Split:',' %}
+                                        {% for ministry in ministries %}
+                                            <span>{{ ministry }} &verbar;</span>
+                                        {% endfor %}
+                                      </p>
+
+                                        {% comment %}<p class="connect25--smtag">{% endcomment %}
+                                        {% comment %}  <span>{{ item | Attribute:'Campus' }}</span> &verbar; <span>{{ item | Attribute:'Audience' }}</span> &verbar; {% endcomment %}
+
+                                        {% comment %}</p>{% endcomment %}
+                                      </div>
+                                      <p class="twmc-p connect25--content-text connect25-cardsm-excerpt">{{ item.Content | StripHtml | Truncate:120,'...'  }} <span class="text-traditional"><strong style="color: #862633;">&rarr;</strong></span></p>
+                                    </a>
+                                    {% comment %} Featured: {{ item | Attribute:'Featured' }} {% endcomment %}
+                                  </div>
+                                </div>
+
+                              </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <!-- End of Tab Content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Excerpt JS -->
+    <script>
+        function createExcerptForElements(selector, maxLength = 100) {
+        const elements = document.querySelectorAll(selector);
+
+        elements.forEach((element) => {
+            const fullText = element.innerText;
+            if (fullText.length > maxLength) {
+            const excerptText = fullText.slice(0, maxLength) + '... ';
+            element.innerHTML = excerptText + '<span class="text-traditional"><strong style="color: #862633;">&rarr;</strong></span>';
+            }
+        });
+        }
+
+        // Usage
+        createExcerptForElements("p.connect25-cardsm-excerpt", 120);
+
+
+        function createExcerptForElements2(selector, maxLength = 100) {
+        const elements = document.querySelectorAll(selector);
+
+        elements.forEach((element) => {
+            const fullText2 = element.innerText;
+            if (fullText2.length > maxLength) {
+            const excerptText2 = fullText2.slice(0, maxLength) + '... ';
+            element.innerHTML = excerptText2;
+            }
+        });
+        }
+        // Usage
+        createExcerptForElements2("p.connect25-cardlg-excerpt", 250);
+
+    </script>
+    <!-- End of Excerpt JS -->

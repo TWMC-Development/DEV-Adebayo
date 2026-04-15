@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROW - Outward Focus</title>
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+ 
+     <!-- CSS -->
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+     <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+     
+     <link rel="stylesheet" href="./css/nw-main2023.css">
+     <link rel="stylesheet" href="./css/nw-navbar.css">
+     <link rel="stylesheet" href="./css/nw-grow.css">
+     <link rel="stylesheet" href="./css/seasonal.css">
+ 
+     <!-- Script -->
+     <script src="/js/script2023.js"></script>
+     
+     <!-- fontawesome v6 -->
+     <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+   
+    <!--  Datepicker -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+
+</head>
+<body>
+    <!-- Navigation -->
+  <header class="twmc-header--white-bg">
+    <div class="twmc-container twmc-header__container ">
+        <a href="#">
+            <!-- color logo -->
+            <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo-fullcolor.png" alt="" class="twmc-nav__logo3">
+        </a>
+        <nav class="twmc-header-nav--white-bg">
+            <a href="https://www.thewoodlandsumc.org/im-new" class="twmc-header__link--dark"><b>I'm New</b></a>
+            <a href="https://www.thewoodlandsumc.org/messages" class="twmc-header__link--dark"><b>Messages</b></a>
+            <a href="#" class="twmc-header__link--dark"><b>Serve</b></a>
+            <a href="https://www.thewoodlandsumc.org/give" class="twmc-header__link--dark"><b>Give</b></a>
+            <a href="https://www.thewoodlandsumc.org/login" class="twmc-header__link--dark"><i class="fas fa-user"></i></a>
+            <a href="https://www.thewoodlandsumc.org/Find" class="twmc-header__link--dark"><i class="fa fa-search"></i></a>
+
+            <!-- hamburger menu -->
+            <button class="twmc-hamburger--dark">
+                <div class="twmc-bar--dark"></div>
+            </button>
+        </nav>
+
+        
+      </div>
+  </header>
+
+  <!-- Mega nav -->
+  <!-- Mega nav after hamburger button is clicked -->
+  <nav class="twmc-container twmc-mega-nav ">
+      <!-- Mega nav grid -->
+      <div class="twmc-mega-nav--white-bg__container twmc-mega-nav__grid">
+
+          <!-- About -->
+          <div class="twmc-mega-nav__about">
+              <h3 class="twmc-mega-nav__h3">About</h3>
+              <a href="https://www.thewoodlandsumc.org/what-we-believe" class="twmc-nav__link2">What We Believe</a>
+              <a href="https://www.thewoodlandsumc.org/baptism" class="twmc-nav__link2">Baptism</a>
+              <a href="https://www.thewoodlandsumc.org/our-story" class="twmc-nav__link2">Our Story</a>
+              <a href="https://www.thewoodlandsumc.org/membership" class="twmc-nav__link2">Membership</a>
+              <a href="https://www.thewoodlandsumc.org/staff" class="twmc-nav__link2">Staff</a>
+              <a href="https://www.thewoodlandsumc.org/facilities" class="twmc-nav__link2">Facilities</a>
+              <a href="https://www.thewoodlandsumc.org/employment" class="twmc-nav__link2">Employment</a>
+              <a href="https://www.thewoodlandsumc.org/venues" class="twmc-nav__link2">Venues &amp; Bookings</a>
+              <a href="https://www.thewoodlandsumc.org/foundation" class="twmc-nav__link2">TWUMC Foundation</a>
+              <a href="https://www.thewoodlandsumc.org/gracegarden" class="twmc-nav__link2">Grace Garden - Columbarium</a>
+              <a href="https://www.thewoodlandsumc.org/seminary-scholarship" class="twmc-nav__link2">Seminary Scholarship Program</a>
+              <a href="https://www.thewoodlandsumc.org/cafe" class="twmc-nav__link2">Fireside Cafe</a>
+              <a href="https://www.thewoodlandsumc.org/funerals" class="twmc-nav__link2">Funerals and Memorial Services</a>
+              <a href="https://www.thewoodlandsumc.org/live" class="twmc-nav__link2">Church Online</a>
+          </div>
+
+          <!-- Services & Connect -->
+          <div class="twmc-mega-nav--white-bg__services-connect">
+              <!-- Services -->
+              <h3 class="twmc-mega-nav--white-bg__h3">Services</h3>
+              <a href="https://www.thewoodlandsumc.org/chapel" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="twmc-nav__services-img" class="twmc-nav__link2"><span class="twmc-mega-nav--white-bg__services--ml-small">Chapel</span></a>
+              <a href="https://www.thewoodlandsumc.org/harvest" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Harvest</span></a>
+              <a href="https://www.thewoodlandsumc.org/loft" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Loft</span></a>
+              <a href="https://www.thewoodlandsumc.org/traditional" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Traditional</span></a>
+              <a href="https://www.thewoodlandsumc.org/woodforest" class="twmc-nav__link2"><img src="https://www.thewoodlandsumc.org/GetImage.ashx?guid=2700fc35-6eaf-413a-a7c6-1609ae585648" alt="" class="twmc-nav__services-img"><span class="twmc-mega-nav--white-bg__services--ml-small">Woodforest</span></a>
+
+              
+              <!-- Connect -->
+              <h3 class="twmc-mega-nav__h3 pt-3">Connect</h3>
+              <a href="#" class="twmc-nav__link2">G.R.O.W.</a>
+              <a href="#" class="twmc-nav__link2">Events</a>
+              <a href="https://www.thewoodlandsumc.org/support-groups" class="twmc-nav__link2">Support groups</a>
+              <a href="https://www.thewoodlandsumc.org/recovery-groups" class="twmc-nav__link2">Recovery Groups</a>
+          </div>
+          <!-- End of Services -->
+
+          <!-- Ministries -->
+          <div class="twmc-mega-nav--white-bg__ministries">
+              <h3 class="twmc-mega-nav--white-bg__h3">Ministries</h3>
+              <a href="https://www.thewoodlandsumc.org/adult-discipleship" class="twmc-nav__link2">Adult Discipleship</a>
+              <a href="https://www.thewoodlandsumc.org/children" class="twmc-nav__link2">Children</a>
+              <a href="https://www.thewoodlandsumc.org/help" class="twmc-nav__link2">Prayer &amp; Care</a>
+              <a href="https://www.thewoodlandsumc.org/marriage" class="twmc-nav__link2">Marriage</a>
+              <a href="https://www.thewoodlandsumc.org/men" class="twmc-nav__link2">Men</a>
+              <a href="https://www.thewoodlandsumc.org/missions" class="twmc-nav__link2">Missions</a>
+              <a href="https://www.thewoodlandsumc.org/music-fine-arts" class="twmc-nav__link2">Music &amp; Fine Arts</a>
+              <a href="https://www.thewoodlandsumc.org/recreation" class="twmc-nav__link2">Recreation</a>
+              <a href="https://www.thewoodlandsumc.org/senior-adults" class="twmc-nav__link2">Senior Adults</a>
+              <a href="https://www.thewoodlandsumc.org/singles" class="twmc-nav__link2">Singles</a>
+              <a href="https://www.thewoodlandsumc.org/special-needs" class="twmc-nav__link2">Special Needs</a>
+              <a href="https://www.thewoodlandsumc.org/students" class="twmc-nav__link2">Students</a>
+              <a href="https://www.thewoodlandsumc.org/women" class="twmc-nav__link2">Women</a>
+              <a href="https://www.thewoodlandsumc.org/school" class="twmc-nav__link2">Woodlands Methodist School</a>
+              <a href="https://www.thewoodlandsumc.org/page/866" class="twmc-nav__link2">Woodlands Music</a>
+          </div>
+          <!-- End of Ministries -->
+
+          <!-- Navigation Buttons -->
+          <div class="twmc-mega-nav--white-bg__buttons">
+              <a href="https://www.thewoodlandsumc.org/im-new" class="twmc--btn twmc--btn--outline-mega">I'm New</a>
+              <a href="https://www.thewoodlandsumc.org/messages" class="twmc--btn twmc--btn--outline-mega">Messages</a>
+              <a href="#" class="twmc--btn twmc--btn--outline-mega">Serve</a>
+              <a href="https://www.thewoodlandsumc.org/give" class="twmc--btn twmc--btn--outline-mega">Give</a>
+              <a href="https://www.thewoodlandsumc.org/login" class="twmc--btn twmc--btn--outline-mega"><i class="fas fa-user"></i></a>
+              <a href="https://www.thewoodlandsumc.org/find" class="twmc--btn twmc--btn--outline-mega"><i class="fa fa-search"></i></a>
+
+              <!-- Socmed -->
+              <div class="twmc-mega-nav--white-bg__socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+                  <a href="https://www.thewoodlandsumc.org/podcast"><i class="fas fa-podcast fa-2x twmc-mega-nav--white-bg__icon"></i></a>
+              </div>
+              <!-- End of Socmed -->
+          </div>
+          <!-- End of navigation buttons -->
+
+      </div>
+      <!-- End of mega nav grid -->
+  </nav>
+  <!-- End of mega nav -->
+  <!-- End of Navigation -->
+
+  <!-- Back to top button -->
+  <a href="#" id="backtotop-button"></a>
+
+    <main>
+        <!-- page title -->
+        <section class="twmc-title-stripe twmc-grow-o-bg">
+            <div class="twmc-container">
+                <h1 class="twmc-h1 grow-g__page-title">Outward Focus</h1>
+            </div>
+        </section>
+        <!-- end of page title -->
+
+        <!-- grow navigation -->
+        <style>
+        /* === GROW Squares small === */
+        .square-container-small {
+            padding: 0 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .square-small {
+            width: 100px;
+            height: 100px;
+            text-transform: uppercase;
+            color: white;
+            margin: 5px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            transition: all .4s ease-in-out; 
+        }
+        
+        .square:hover,
+        .square-small:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        .grow-intro-text {
+            padding-left: 10px;
+        }
+        
+        @media only screen and (max-width: 992px) {
+            .square-small {
+                width: 75px;
+                height: 75px;
+                margin: 4px;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .square-container-small {
+                justify-content: center;
+                margin-top: 2.5rem;
+            }
+        
+            .grow-intro-text {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        
+        @media only screen and (max-width: 576px) {
+            .square-container-small {
+                margin-top: 1.7rem;
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .square-small {
+                width: 56px;
+                height: 56px;
+                margin: 2px;
+            }
+        }
+        
+        /* Square colors - small */
+        .square-g-small {
+            background-color: var(--color-periwinkle);
+        }
+        
+        .square-g-small:hover {
+            background-color: var(--color-periwinkle2);
+            
+        }
+        
+        .square-r-small {
+            background-color: var(--color-watermelon);
+        }
+        
+        .square-r-small:hover {
+            background-color: var(--color-watermelon2);
+        }
+        
+        .square-o-small {
+            background-color: var(--color-paris-green);
+        }
+        
+        .square-o-small:hover {
+            background-color: var(--color-paris-green2);
+        }
+        
+        .square-w-small {
+            background-color: var(--color-canary-yellow);
+        }
+        
+        .square-w-small:hover {
+            background-color: var(--color-canary-yellow2);
+        }
+        
+        .square-active-small {
+            pointer-events: none;
+        }
+        
+        .square-g-small > h2,
+        .square-r-small > h2, 
+        .square-o-small > h2, 
+        .square-w-small > h2,
+        .square-active-small > h2  {
+            font-size: 50px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+        }
+        
+        @media only screen and (max-width: 992px) {
+            .square-g-small > h2,
+            .square-r-small > h2, 
+            .square-o-small > h2, 
+            .square-w-small > h2 {
+                font-size: 40px;
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .square-g-small > h2,
+            .square-r-small > h2, 
+            .square-o-small > h2, 
+            .square-w-small > h2 {
+                font-size: 30px;
+            }
+        }
+        
+        /* === End of GROW Squares small === */
+        </style>
+        
+        <section class="twmc-section__pymed-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="embed-container"><iframe src="https://player.vimeo.com/video/827786894" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="square-container-small">
+                            <a href="/gather" class="square__link">
+                                <div class="square-small square-g-small">
+                                    <h2>g</h2>
+                                </div>
+                            </a>
+                            <a href="/raise" class="square__link">
+                                <div class="square-small square-r-small">
+                                    <h2>r</h2>
+                                </div>
+                            </a>
+                            <!-- Active O button, no link -->
+                            <div class="square-small square-o-small square-active-small">
+                                <h2>o</h2>
+                            </div>
+                            <a href="/walk" class="square__link">
+                                <div class="square-small square-w-small">
+                                    <h2>w</h2>
+                                </div>
+                            </a>
+                        </div>
+                            
+        
+                        <div class="grow-intro-text">
+                            <p>When Jesus was asked the most important commandment for us to follow, he made it simple. Love God and love your neighbor. He modeled the kind of servant love that compels us to serve sacrificially in our church, homes, communities and world. From greeting on a Sunday morning to serving in Children's Ministry to local and global missions, we understand that our lives have great purpose and can make a difference in the lives of others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of grow navigation -->
+
+        <!-- serve -->
+        <section id="grow-o__serve" class="twmc-grow__section">
+            <div class="container twmc-p">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="grow-o__serve-title">SERVE TEAMS</h2>
+                        <p class="twmc-p grow-o__serve-text">You have been uniquely purposed and placed at The Woodlands Methodist Church to make a difference in the lives of others from welcoming guests to serving communion to visiting and caring for seniors. Be part of what God is doing through our church by joining a serve team. </p>
+                        <a href="/serve" class="twmc--btn__grow twmc--btn__grow-o" referrerpolicy="origin">Serve now</a>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <!-- end of serve -->
+
+        <!-- local missions -->
+        <section id="grow-o__local-missions" class="twmc-grow__section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="grow-g__title">
+                            <h2>Local Missions</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="twmc-flex-container--3-col-2pctgap">
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Common Ground</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Hope Beyond Bridges</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+                            
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Common Ground</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Common Ground</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Common Ground</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Common Ground</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <!-- <i class="fas fa-tag"></i> -->
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Kitchen - B108</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 9:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            
+                    
+                        </div>
+                    </div>
+                </div>
+                <!-- end of row -->
+
+                <!-- pagination -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="grow-o__pagination">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="grow-o__page-active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of pagination -->
+            </div>
+        </section>
+        <!-- end of local missions -->
+
+
+        <!-- global missions -->
+        <section id="grow-o__global-missions" class="twmc-grow__section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="grow-g__title">
+                            <h2>
+                                Global Missions</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div id="filter-button">
+                            
+                            <a class="twmc--btn__grow twmc--btn__grow-g2 buttonColor" role="button" data-toggle="collapse" href="#event-filters-3547" aria-expanded="true" aria-controls="filter-content" style="color: white; font-weight: bold;">Filter <i class="far fa-chevron-down" style="color: white; font-weight: bold;" aria-hidden="true"></i></a>
+        
+                        </div>
+                    </div>
+                    <!-- Copied this from the online page, he data generated by lava variables -->
+                    <!-- <div id="ctl00_main_ctl14_ctl01_ctl00_pnlDetails" class="Small Groups Filters section">
+                        <div id="event-filters-3547" class="container grow-g__filter collapse in" aria-expanded="true" style="">                       
+                            <div id="ctl00_main_ctl14_ctl01_ctl00_pnlFilters" class="hidden-print ">
+                                <div class="col-md-4 margin-b-md hidden">
+                                    <label class="control-label clearfix">Filter by Date</label>
+                                        <div class="hidden-print clearfix margin-b-md" role="group">
+                                        </div>
+                                    <label class="control-label clearfix hidden">Calendar Type</label>
+                                    <div class=" hidden-print clearfix " role="group">
+                                        <a id="ctl00_main_ctl14_ctl01_ctl00_btnList" class="btn btn-event active" data-completed-text="" data-completed-message="" data-timeout-text="" data-init-text="List" onclick="Rock.controls.bootstrapButton.showLoading(this);" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$ctl14$ctl01$ctl00$btnList&quot;, &quot;&quot;, true, &quot;CalendarLava_3547&quot;, &quot;&quot;, false, true))">List</a>
+                                        <a id="ctl00_main_ctl14_ctl01_ctl00_btnFeatured" class="btn btn-event" data-completed-text="" data-completed-message="" data-timeout-text="" data-init-text="Featured" onclick="Rock.controls.bootstrapButton.showLoading(this);" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$ctl14$ctl01$ctl00$btnFeatured&quot;, &quot;&quot;, true, &quot;CalendarLava_3547&quot;, &quot;&quot;, false, true))">Featured</a>
+                           
+                                    </div>
+                                </div>
+                                <div class="row margin-b-md">
+                                    <div class="col-md-4">
+                                        <select name="ctl00$main$ctl14$ctl01$ctl00$ddlCatPicker" onchange="javascript:setTimeout('__doPostBack(\'ctl00$main$ctl14$ctl01$ctl00$ddlCatPicker\',\'\')', 0)" id="ctl00_main_ctl14_ctl01_ctl00_ddlCatPicker" class="grow__form-select form-control">
+                                        <option value="" selected="selected">Audience</option>
+                                        <option value="3403">Bilingual - Spanish</option>
+                                        <option value="23">Children</option>
+                                        <option value="24">Co-Ed</option>
+                                        <option value="3545">Home Groups</option>
+                                        <option value="984">Marriage &amp; Family</option>
+                                        <option value="151">Men</option>
+                                        <option value="1067">Missions</option>
+                                        <option value="1023">Music &amp; Fine Arts</option>
+                                        <option value="3331">Online</option>
+                                        <option value="1022">Recreation</option>
+                                        <option value="985">Senior Adults</option>
+                                        <option value="986">Singles</option>
+                                        <option value="997">Special Needs</option>
+                                        <option value="1019">Students</option>
+                                        <option value="152">Women</option>
+                                        <option value="3519">Woodforest</option>
+                                        <option value="3167">Young Adults</option>
+                
+                                    </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select name="ctl00$main$ctl14$ctl01$ctl00$ddlCommunityPicker" onchange="javascript:setTimeout('__doPostBack(\'ctl00$main$ctl14$ctl01$ctl00$ddlCommunityPicker\',\'\')', 0)" id="ctl00_main_ctl14_ctl01_ctl00_ddlCommunityPicker" class="grow__form-select form-control">
+                                        <option value="" selected="selected">Community</option>
+                                        <option value="964">Chapel</option>
+                                        <option value="742">Harvest</option>
+                                        <option value="743">Loft</option>
+                                        <option value="741">Traditional</option>
+                                        <option value="744">Woodforest</option>
+                
+                                    </select>
+                                            
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select name="ctl00$main$ctl14$ctl01$ctl00$ddlTopicPicker" onchange="javascript:setTimeout('__doPostBack(\'ctl00$main$ctl14$ctl01$ctl00$ddlTopicPicker\',\'\')', 0)" id="ctl00_main_ctl14_ctl01_ctl00_ddlTopicPicker" class="grow__form-select form-control">
+                                        <option value="" selected="selected">GROW Group Type</option>
+                                        <option value="3291">Gather in Community: Study</option>
+                                        <option value="3453">Gather in Community: Formation</option>
+                                        <option value="3454">Gather in Community: Fellowship</option>
+                                        <option value="3292">Raise Up: Share</option>
+                                        <option value="3455">Raise Up: Mentor</option>
+                                        <option value="3456">Raise Up: Lead</option>
+                                        <option value="3293">Outward Focus: Serve</option>
+                                        <option value="3457">Outward Focus: Local Missions</option>
+                                        <option value="3458">Outward Focus: Global Missions</option>
+                                        <option value="3294">Walk with God: Worship</option>
+                                        <option value="3459">Walk with God: Prayer</option>
+                                        <option value="3460">Walk with God: Generosity</option>
+                
+                                    </select>
+                                    </div>
+                                </div>
+                                <div id="campus-filter" class="col-md-4 filter-menu"></div>
+                                <div class="col-md-4 filter-menu"></div>
+                                <div class="row">
+                                    <div class="col-md-7 col-md-offset-1">
+                                        <div id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange" data-required="false" data-itemlabel="" class="js-daterangepicker picker-daterange inline-block-float grow__form-control row__filter-date">
+                                            <div class="form-control-group">
+                                                <div class="input-group input-group-lower js-lower input-width-md js-date-picker date">
+                                                    <input name="ctl00$main$ctl14$ctl01$ctl00$drpDateRange$drpDateRange_lower" type="text" value="5/6/2022" id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange_drpDateRange_lower" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                </div><span id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange_drpDateRange_lower_dav" class="validation-error help-inline" style="display:none;"></span><div class="input-group form-control-static"> to </div><div class="input-group input-group-upper js-upper input-width-md js-date-picker date">
+                                                    <input name="ctl00$main$ctl14$ctl01$ctl00$drpDateRange$drpDateRange_upper" type="text" value="11/5/2022" id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange_drpDateRange_upper" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                </div><span id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange_drpDateRange_upper_dav" class="validation-error help-inline" style="display:none;"></span>
+                                            </div><span id="ctl00_main_ctl14_ctl01_ctl00_drpDateRange_drpDateRange_cfv" class="validation-error help-inline" style="display:none;"> is required.</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="submit" name="ctl00$main$ctl14$ctl01$ctl00$lbDateRangeRefresh" value="Filter by Date" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$ctl14$ctl01$ctl00$lbDateRangeRefresh&quot;, &quot;&quot;, true, &quot;CalendarLava_3547&quot;, &quot;&quot;, false, false))" id="ctl00_main_ctl14_ctl01_ctl00_lbDateRangeRefresh" class="btn twmc--btn__grow twmc--btn__grow-g2 grow__filter-date-button twmc--btn__grow buttonColor">
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> -->
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="twmc-flex-container--3-col-2pctgap">
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+                            
+                            <!-- Card v1 -->
+                            <div class="twmc-flex-item--3-col-2pctgap grow__card">
+                                <div class="grow__card-strip--paris-green"></div>
+                                <div class="grow__card-content">
+                                    <h3 class="grow__card-title4">
+                                        <a href="#" class="grow__card-title4 text-paris-green">Honduras - Quest</a>
+                                    </h3>
+                                    <div class="grow__card-tag4">
+                                        <span>Missions</span>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-calendar-alt grow__card-icon"></i>
+                                        <p> Saturday, Sep 11 -</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="fas fa-map-marker-alt grow__card-icon"></i>
+                                        <p> The Woodlands | Tegucigalpa, Honduras</p>
+                                    </div>
+                                    <div class="grow__card-info">
+                                        <i class="far fa-clock grow__card-icon"></i>
+                                        <p> 08:00 AM</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <a href="#" class="twmc--btn__grow twmc--btn__grow-o">Details &raquo;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of card v1 -->
+                    
+                        </div>
+                    </div>
+                </div>
+                <!-- end of row -->
+
+                <!-- pagination -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="grow-o__pagination">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="grow-o__page-active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of pagination -->
+            </div>
+        </section>
+        <!-- end of global missions -->
+
+
+    </main>
+
+
+    
+    
+    
+
+
+    
+
+
+    
+
+
+    <!-- JQuery -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a768a77f8f.js" crossorigin="anonymous"></script>
+    <script src="./js/twmc-scripts2.js"></script>
+
+     <!-- datepicker -->
+     <script>
+         $(document).ready(function () {
+            $('#datepicker1').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+            $('#datepicker2').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+            $('#datepicker3').datepicker({
+                format: 'mm-dd-yyyy'
+            }); 
+            $('#datepicker4').datepicker({
+                format: 'mm-dd-yyyy'
+            });
+        });
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter 2024</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+    
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <p class="navbar-top-link navbar-top--info">NEW! SELECT A CAMPUS:</p>
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+    
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Services Connect -->
+                  <div class="megamenu-services">
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+                    <p>NextGen 56 (Ages 10-11)</p>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues &amp; Bookings</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen 56</a> -->
+              <p>NextGen 56 (Ages 10-11)</p>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Prayer &amp; Care</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music &amp; Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+     <!-- Add margin below navbar, remove if needed -->
+     <section class="margin-below-navbar"></section>
+    
+    <main>
+
+      <!-- Hero -->
+      <section id="twmc-hero__easter2024">
+        <div class="container-fluid hero--img__text-wrapper">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/est_img.png" alt="Vision Night" class="img-responsive">
+        </div>
+      </section>
+      <!-- End of Hero -->
+
+      <!-- Content -->
+      <!-- Intro -->
+      <section id="twmc-easter2024-intro" class="py-5">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+              <div class="twmc-easter2024-intro--wrapper">
+                <p class="twmc-p twmc-easter2024-intro--text">
+                  In the story of Easter, the crown of thorns symbolizes the profound sacrifice made for the greater good. It serves as a reminder of the suffering and pain Christ endured. 
+                </p>
+                <p class="twmc-p twmc-easter2024-intro--text">
+                  But the story doesn’t end there. Christ’s sacrifice transforms into an eternal promise of hope through the resurrection. Easter is a testament to the transformative power of sacrificial love. 
+                </p>
+                <p class=" twmc-p twmc-easter2024-intro--text mb-0">From the piercing crown of thorns to the radiant resurrection, Easter tells the story of sacrifice, faith and love.</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Intro -->
+
+      <!-- Resources -->
+      <section id="twmc-ashwednesday2024" class="py-6 background-lightgrey2">
+        <div class="container">
+          <!-- Intro -->
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center mb-4">
+              <h2 class="twmc-h2 mt-0">RESOURCES</h2>
+              
+            </div>
+          </div>
+
+          <!-- List -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4 mb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 my-3">&nbsp;</h4>
+              </div>
+            </div>
+  
+            
+            <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- Harvest -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0">Devotional - <i>Genesis: Altars for the Lenten Journey</i></h3>
+                  <p class="twmc--btn--tag mb-3">Harvest</p>
+                  <p class="twmc-p">In Harvest this Lenten season we will be using the devotional <i>Genesis: Altars for the Lenten Journey</i> to gain a deeper understanding of the Scriptures. Beginning February 18, pick up a copy on Sunday mornings in the Harvest Lobby or download a digital version.</p>
+
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/docs/_seasonal-docs/HAR_Lent_Devo+DIGITAL+PAGES.pdf" target="_blank">Download here</a>
+                  
+                </div>
+
+                <!-- Loft -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0">Rhythms for Life Resources</h3>
+                  <p class="twmc--btn--tag mb-3">Loft</p>
+                  <p class="twmc-p">Loft will journey through the series Rhythms for Life: Spiritual Disciplines this Lenten season. On the resource page linked below, we will provide self-reflection questions, practical steps to try these disciplines, and additional resources for further study. You are invited to implement these practices into your daily rhythm.</p>
+
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="#" target="_blank">Check Resources</a>
+                  
+                </div>
+
+
+              </div>
+            </div>
+  
+          </div>
+          <!-- End of List -->
+        </div>
+      </section>
+
+      <!-- End of Resources -->
+
+      <!-- Ash Wednesday -->
+      <section id="twmc-ashwednesday2024" class="py-6 background-lightgrey2">
+        <div class="container">
+          <!-- Intro -->
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center mb-4">
+              <h2 class="twmc-h2 mt-0">ASH WEDNESDAY</h2>
+              <p class="twmc-p">Ash Wednesday is the beginning of Lent, the 40 days before Easter. The service for Ash Wednesday is a time when we begin a season of remembering the sacrifices of Christ on His journey to the cross and preparing our hearts for the journey toward Easter.</p>
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4 mb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 my-3">Wednesday, February 14</h4>
+              </div>
+            </div>
+  
+            
+            <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- The Woodlands -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-2">THE WOODLANDS CAMPUS</h3>
+                  <p class="twmc-p">Join either a midday service or evening service of beautiful music, a meaningful message and the imposition of ashes.</p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Traditional Service &verbar; Noon<span class="text-traditional">*</span> &verbar; Sanctuary &verbar; <a href="https://www.youtube.com/@TheWoodlandsMethodistChurch/streams" target="_blank" class="text-easter2024--green">Watch Online</a></span><br>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Contemporary Service &verbar; 6:30<span class="text-traditional">*</span> p.m. &verbar; Sanctuary &verbar; <a href="https://www.youtube.com/@HarvestTWMC/streams" target="_blank" class="text-easter2024--green">Watch Online</a></span>
+                  </strong></p>
+                  
+                </div>
+
+                <!-- Woodforest -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-2">THE CHURCH AT WOODFOREST</h3>
+                  <p class="twmc-p">This family-friendly walk-through prayer experience includes six prayer stations and concludes with the imposition of ashes.</p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 12:30 &dash; 1:30 p.m. &verbar; Worship Center</span><br>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 5:30 &dash; 7:00 p.m. &verbar; Worship Center</span>
+                  </strong></p>
+                </div>
+
+                <!-- Montgomery -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-2">THE CHURCH AT MONTGOMERY</h3>
+                  <p class="twmc-p">Spend time in fellowship together at a soup potluck followed by a time of worship and reflection.</p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 5:30 p.m. &verbar; Soup Potluck &verbar; Oak Hills Junior High Cafeteria</span><br>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 6:30 p.m &verbar; Worship &verbar; Oak Hills Junior High</span>
+                  </strong></p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <p class="twmc-p text-center"><strong><em><span class="text-traditional"><strong>&ast; Live streaming online</strong></span></em></strong></p>
+            </div>
+  
+          </div>
+          <!-- End of Schedule -->
+        </div>
+      </section>
+      <!-- End of Ash Wednesday -->
+
+      <!-- Lenten Activities -->
+      <section class="py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center mb-4">
+              <h2 class="twmc-h2 mt-0 text-uppercase">Lenten Prayer and Studies</h2>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-12">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- Study Lunchtime Series -->
+                <div class="twmc-flex-item--2-col-center twmc-card--box-shadow-green">
+                  <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                  <h3 class="twmc-h3 mt-0">Pastor-Led Lenten Lunchtime Series with Bishop&nbsp;Bob&nbsp;Hayes</h3>
+                  <h4 class="twmc-h4">“What Does the Lord Require? A Journey Into Lent”</h4>
+                  <p class="twmc-p">Bring your lunch and bring a friend!</p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Tuesdays, February 13 &dash; March 19 </span><br>
+                    <i class="fas fa-clock"></i><span class="twmc-mlxs"> Noon</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Wesley Hall</span><br>               
+                  </strong></p>
+
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="https://www.thewoodlandsmethodist.org/group-detail/257341" target="_blank">Learn more</a>
+                  
+                </div>
+
+                <!-- Lectio Divina -->
+                <div class="twmc-flex-item--2-col-center twmc-card--box-shadow-green">
+                  <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                  <h3 class="twmc-h3 mt-0">Lenten Contemplative Prayer Time using Lectio&nbsp;Divina</h3>
+                  <p class="twmc-p">A weekly time of meditative prayer, reflection and rest in God’s presence.</p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Wednesdays, February 21 &dash; March 20 </span><br>
+                    <i class="fas fa-clock"></i><span class="twmc-mlxs"> Noon</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Robb Chapel </span><br>               
+                  </strong></p>
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=2375" target="_blank">Learn more</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      <!-- End of Lenten Activities -->
+
+      <!-- Volunteer -->
+      <section id="twmc-advent__volunteer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="twmc-h2 mb-2 twmc-text--white">Volunteer to Usher and Greet Our Guests</h2>
+                    <p class="twmc-p">Many visitors will come through our doors for the first time during Holy Week and Easter services. We would love for you to help us welcome them. We have opportunities for greeters, ushers and Communion servers.</p>
+                    <a href="https://thewoodlandsmethodist.org/signup" class="twmc--btn twmc--btn--easter2024" target="_blank">Sign Up Now</a>
+                    <!-- <p class="twmc--btn twmc--btn__inactive twmc-mbxs twmc-mtxs">Registration opens soon</p> -->
+                </div>
+            </div>
+        </div>          
+      </section>
+      <!-- End of volunteer -->
+
+      <!-- Holy Week  -->
+      <section class="pt-6 pb-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center mb-4">
+              <h2 class="twmc-h2 mt-0">HOLY WEEK</h2>
+            </div>
+          </div>
+
+          <!-- Maundy Thursday -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 my-3">Maundy Thursday, March 28</h4>
+              </div>
+            </div>
+  
+            
+              <div class="col-sm-12 twmc-ribbon-card--inner-wrapper ">
+                <div class="twmc-flex-container--2-col-center">
+                  <!-- The Woodlands -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Maundy Thursday Service</h3>
+                    <p class="twmc-p">A Communion service remembering the last supper Jesus shared with His disciples.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 7:00<span class="text-traditional">*</span> p.m. &verbar; Sanctuary</span>
+                    </strong></p>
+  
+                    <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="https://www.youtube.com/@TheWoodlandsMethodistChurch/streams" target="_blank">Watch Livestream</a>
+                  </div>
+
+                </div>
+              </div>
+  
+              <div class="col-sm-12">
+                <p class="twmc-p text-center"><strong><em><span class="text-traditional"><strong>&ast; Live streaming online</strong></span></em></strong></p>
+              </div>
+          </div>
+          <!-- End of Maundy Thursday -->
+
+          <!-- Good Friday -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 my-3">Good Friday, March 29</h4>
+              </div>
+            </div>
+  
+            
+              <div class="col-sm-12 twmc-ribbon-card--inner-wrapper ">
+                <div class="twmc-flex-container--2-col-center">
+                  <!-- The Woodlands -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Worship Service</h3>
+                    <p class="twmc-p">Worship services of remembrance. Holy Communion will be served at both services.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Noon<span class="text-traditional">*</span> &verbar; Traditional Service &verbar; Sanctuary &verbar; <a href="https://www.youtube.com/@TheWoodlandsMethodistChurch/streams" target="_blank" class="text-easter2024--green">Watch Online</a></span><br>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> 6:30<span class="text-traditional">*</span> p.m. &verbar; Contemporary Service &verbar; Sanctuary &verbar; <a href="https://www.youtube.com/@HarvestTWMC/streams" target="_blank" class="text-easter2024--green">Watch Online</a></span>
+                    </strong></p>
+                    
+                  </div>
+  
+                  <!-- ESP -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Ministerio en Español</h3>
+                    <p class="twmc-p">Un culto de conmemoración.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  3:00 p.m. &verbar; Centro de Vida Familiar - Sala 5/6 </span>
+                    </strong></p>
+                  </div>
+
+                  <!-- Woodforest -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">Woodforest Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Fish Fry and Worship Service</h3>
+                    <p class="twmc-p">A delicious fried fish dinner followed by a time of worship and Holy Communion. Register for the dinner <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=2393" target="_blank" class="text-easter2024--green">here</a>.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  5:00 p.m. &verbar; Fish Fry &verbar; Woodforest Worship Center</span><br>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  6:00 p.m. &verbar; Worship &verbar; Woodforest Worship Center</span>
+                    </strong></p>
+                  </div>
+
+                  <!-- Montgomery -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">Montgomery Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Worship Service</h3>
+                    <p class="twmc-p">A worship service of remembrance. Holy Communion will be served.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  6:30 p.m. &verbar; Oak Hills Junior High</span>
+                    </strong></p>
+                  </div>
+  
+                </div>
+              </div>
+  
+              <div class="col-sm-12">
+                <p class="twmc-p text-center"><strong><em><span class="text-traditional"><strong>&ast; Live streaming online</strong></span></em></strong></p>
+              </div>
+  
+          </div>
+          <!-- End of Good Friday -->
+        </div>
+      </section>
+      <!-- End of Holy Week  -->
+
+      <!-- Easter Weekend  -->
+      <section id="twmc-easter2024--easter-weekend" class="py-6">
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 text-center mb-4">
+                <h2 class="twmc-h2 mt-0">EASTER WEEKEND</h2>
+              </div>
+            </div>
+
+            <!-- Saturday -->
+            <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+              <div class="col-sm-12 twmc-easter2024--ribbon2">
+                <div class=" text-center py-3">
+                  <h4 class="twmc-h4 my-3">Saturday, March 30</h4>
+                </div>
+              </div>
+    
+              
+              <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+                <div class="twmc-flex-container--2-col-center">
+                  <!-- Prayer Walk -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Prayer Walk</h3>
+                    <p class="twmc-p">Join us for a time of worship, followed by a brief devotional. All are welcome to walk the campus and pray for our church ministries and all who will attend our Easter services. </p>
+    
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  8:30 a.m. &verbar; Ed Robb Plaza </span>
+                    </strong></p>
+                  </div>
+  
+                  <!-- Family Celebration -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">The Woodlands Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Family Easter Celebration</h3>
+                    <p class="twmc-p">Enjoy an egg hunt and other family-friendly activities.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  2:00 &dash; 4:00 p.m. &verbar; Ed Robb Plaza and Fairway Lawn &verbar; Wesley Hall and Asbury Hall </span>
+                    </strong></p>
+
+                    <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs twmc-mtxs" href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=2411" target="_blank">Learn more</a>
+                  </div>
+
+                  <!-- Car Hop -->
+                  <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                    <h5 class="twmc-h5 twmc-mtxs text-uppercase">Montgomery Campus</h5>
+                    <h3 class="twmc-h3 mt-0">Community Easter Car Hop</h3>
+                    <p class="twmc-p">The Church at Montgomery is hosting an Easter Car Hop for the whole family. Hop from car to car to receive eggs, and enjoy other family-friendly activities.</p>
+
+                    <p class="twmc-p twmc-p-small mt-3"><strong>
+                      <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  2:00 &dash; 4:00 p.m. &verbar; Cedar Brake Park &verbar; 21358 Eva Street, Montgomery</span>
+                    </strong></p>
+                  </div>
+  
+                </div>
+              </div>
+              
+            </div>
+            <!-- End of Saturday -->
+
+        </div>
+      </section>
+      <!-- End of Easter Weekend -->
+
+      <!-- Easter Worship Services -->
+      <section id="twmc-easter2023--services" class="twmc-section-lightgrey">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="twmc-h2 twmc-easter-title">Easter Worship Services</h2>
+            </div>
+
+            <div class="col-sm-10 col-sm-offset-1 text-center twmc-mts twmc-mbxs">
+              <p class="twmc-p mt-0 mb-3">We invite you to celebrate the transformative power of Easter with The Woodlands Methodist Church on one of our three campuses. We offer contemporary, traditional, modern and Spanish-speaking worship services for the whole family.</p>
+            </div>
+
+            <!-- Nursery -->
+            <div class="col-sm-10 col-sm-offset-1 text-center mb-4">
+              <p class="twmc-p">Nursery will be available for children 2 and under. Children (age 3 through 4th grade) and students (5th &ndash; 12th grade) will attend Easter services with their families. All NextGen Ministries programming will resume April 6 &nbsp;&ndash;&nbsp; 7.</p>
+            </div>
+          </div>
+
+          <!-- The Woodlands Campus -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 twmc-mbs twmc-mts">
+                  THE WOODLANDS CAMPUS
+                  <br>2200 Lake Woodlands Drive
+                  <br>The Woodlands, Texas 77380
+                  <br>281.297.5900
+                </h4>
+              </div>
+            </div>
+  
+            <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- Traditional Worship -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0 mb-2">Traditional Worship</h3>
+                  <p class="twmc--btn--tag mb-3">Traditional</p>
+                  <p class="twmc-p"><em>An inspirational Easter message and a formal order of worship with traditional Easter hymns led by a full choir and orchestra. </em></p>
+
+                  <p class="twmc-p twmc-p-small mt-3 mb-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  Sunday, March 31 &verbar; 8:00, 9:30 and 11:00<span class="text-traditional">*</span> a.m </span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Sanctuary</span>
+                  </strong></p>
+  
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://www.youtube.com/@TheWoodlandsMethodistChurch/streams" target="_blank">Watch Livestream</a>
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/easter/Alternative+Parking+Options.png" target="_blank">Overflow parking map</a>
+                </div>
+
+                <!-- Contemporary Worship -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0 mb-2">Contemporary Worship</h3>
+                  <p class="twmc--btn--tag mb-3">Harvest</p>
+                  <p class="twmc-p"><em>A contemporary worship service celebrating the joy of Easter with an uplifting biblical message and soul satisfying music.</em></p>
+  
+                  <p class="twmc-p twmc-p-small mt-3 mb-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  Sunday, March 31 &verbar; 8:00, 9:30<span class="text-traditional">*</span> and 11:00 a.m.; 12:30 p.m.</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Harvest Worship Center</span>       
+                  </strong></p>
+  
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://www.youtube.com/@HarvestTWMC/streams" target="_blank">Watch Livestream</a>
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/easter/Alternative+Parking+Options.png" target="_blank">Overflow parking map</a>
+                </div>
+
+                <!-- Modern Worship -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0 mb-2">Modern Worship</h3>
+                  <p class="twmc--btn--tag mb-3">Loft</p>
+                  <p class="twmc-p"><em>Celebrate the hope of Easter with energetic music and relevant teaching about Christ and the culture for those who desire a less traditional setting.</em></p>
+  
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs">  Saturday, March 30 &verbar; 6:00<span class="text-traditional">*</span> p.m.</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Loft Worship Center</span>       
+                  </strong></p>
+
+                  <p class="twmc-p twmc-p-small twmc-mtxs mb-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Sunday, March 31 | 8:00, 9:30 and 11:00<span class="text-traditional">*</span> a.m.</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Loft Worship Center</span>       
+                  </strong></p>
+  
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://www.youtube.com/@LoftTWMC/streams" target="_blank">Watch Livestream</a>
+                  <a class="twmc--btn twmc--btn--easter2024 twmc-mbxs mt-1" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/easter/Alternative+Parking+Options.png" target="_blank">Overflow parking map</a>
+                </div>
+
+                <!-- ESP -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0 mb-2">Ministerio en Español</h3>
+                  <p class="twmc--btn--tag mb-3">Español</p>
+                  <p class="twmc-p"><em>Adore con sus vecinos de habla hispana en un ambiente acogedor en el campus de The Woodlands. Nuestro servicio de Pascua se centra en la familia con adoración y una enseñanza bíblica que celebra al señor resucitado.</em></p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Domingo, 31 de marzo &verbar; 6:00 a.m.</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">TWMS Centro de Recreacion</span>       
+                  </strong></p>
+                </div>
+
+
+              </div>
+            </div>
+  
+            <div class="col-sm-12">
+              <p class="twmc-p text-center"><strong><em><span class="text-traditional"><strong>&ast; Live streaming online</strong></span></em></strong></p>
+            </div>
+          </div>
+          <!-- End of The Woodlands campus -->
+
+          <!-- Woodforest Campus -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 twmc-mbs twmc-mtm">
+                  <span>WOODFOREST CAMPUS</span>
+                  <br>700 Fish Creek Thoroughfare
+                  <br>Montgomery, Texas 77316
+                  <br>281.822.8182
+                </h4>
+              </div>
+            </div>
+  
+            <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- Woodforest -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0">The Church at Woodforest</h3>
+                  <p class="twmc-p"><em>A family-friendly outdoor worship service with contemporary music and engaging Bible teaching to celebrate the Risen Lord.</em></p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Sunday, March 31 &verbar; 9:30 and 11:00 a.m.</span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Outdoor Service</i></span>       
+                  </strong></p>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+          <!-- End of Woodforest Campus -->
+
+
+          <!-- Montgomery Campus -->
+          <div class="row twmc-ribbon-card--wrapper mt-4 pb-4">
+            <div class="col-sm-12 twmc-easter2024--ribbon2">
+              <div class=" text-center py-3">
+                <h4 class="twmc-h4 twmc-mbs twmc-mtm">
+                  <span>MONTGOMERY CAMPUS</span>
+                  <br>Meeting at Oak Hills Junior High
+                  <br>19190 Keenan Cut Off Road
+                  <br>Montgomery, Texas 77316
+                  <br>281.297.5900
+                </h4>
+              </div>
+            </div>
+  
+            <div class="col-sm-12 twmc-ribbon-card--inner-wrapper">
+              <div class="twmc-flex-container--2-col-center">
+                <!-- Montgomery -->
+                <div class="twmc-flex-item--2-col-center twmc-ribbon-card--content">
+                  <h3 class="twmc-h3 mt-0">The Church at Montgomery</h3>
+                  <p class="twmc-p"><em>Families and individuals of all ages are invited to join this community of believers. Our Easter service is filled with live music and engaging Bible teaching to celebrate the Risen Lord.</em></p>
+
+                  <p class="twmc-p twmc-p-small mt-3"><strong>
+                    <i class="fa-solid fa-calendar-days"></i><span class="twmc-mlxs"> Sunday, March 31 &verbar; 10:30 a.m. </span><br>
+                    <i class="fas fa-place-of-worship" aria-hidden="true"></i><span class="twmc-mlxs">Oak Hills Junior High</span>       
+                  </strong></p>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+          <!-- End of Montgomery Campus -->
+        </div>
+
+      </section>
+      <!-- Easter Worship Services -->
+      <!--End of Content -->
+
+      <!-- footer -->
+      <footer class="twmc-footer">
+        <div class="twmc-footer__cta">
+          <div class="twmc-container">
+            <div class="twmc-footer__button-container">
+              <a href="https://www.thewoodlandsumc.org/help" class="twmc--btn twmc--btn--outline-white twmc-footer__cta-button" target="_blank">Find Help &amp; Support</a>
+              <a href="https://thewoodlandsumc.org/myaccount" class="twmc--btn twmc--btn--outline-white twmc-footer__cta-button" target="_blank">My Account</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="twmc-footer__address">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <p class="twmc-p">2200 Lake Woodlands Drive &#124; The Woodlands, Texas 77380 &#124; 281.297.5900 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </footer>
+      <!-- end of footer -->
+    </main>
+
+
+    <!-- JQuery -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+    <script src="./js/twmc-scripts.js"></script>
+</body>
+</html>

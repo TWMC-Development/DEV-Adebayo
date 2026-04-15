@@ -1,0 +1,306 @@
+<!-- Content -->
+<section class="twms__section-pymed twms__content">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-sm-12">
+        {% group where:'Id == 221599' securityenabled:'false' %}
+        {% assign faculty_members = '' %}
+        {% assign admin_members = '' %}
+        {% assign leadership_members = '' %}
+        {% assign sorted_members = group.Members | OrderBy:'Person.LastName' %}
+        {% for member in sorted_members %}
+
+        {% assign sgroup = member.Person | Attribute:'StaffGroup' %}
+        {% if sgroup == 'Faculty' %}
+        {% capture faculty_members %}
+        {{ faculty_members }}
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+
+          {% assign profphoto = member.Person | Attribute:'WebsiteImage','Url' %}
+          {% if profphoto and profphoto != '' %}
+          <img src="{{ profphoto }}" alt="" class="twms-staff__img mb-3"></a>
+          {% else %}
+          <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+            class="twms-staff__img mb-3"></a>
+          {% endif %}
+
+          <a href="" class="twms-staff__card-name" data-toggle="modal" data-target="#facultyModal{{ forloop.index }}">
+            {% if member.Person | Property:'NickName' != '' %}
+            {{ member.Person | Property:'NickName' }}
+            {% else %}
+            {{ member.Person | Property:'FirstName' }}
+            {% endif %}
+            {{ member.Person | Property:'LastName' }}
+          </a>
+          <p>
+            Faculty
+            <br><em>{{ member.Person | Attribute:'Position' }}</em>
+            <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">
+              {{ member.Person | Attribute: 'StaffWebsiteEmail' }}
+            </a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="facultyModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="facultyModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="facultyModalLabel{{ forloop.index }}">
+                    {% if member.Person | Property:'NickName' != '' %}
+                    {{ member.Person | Property:'NickName' }}
+                    {% else %}
+                    {{ member.Person | Property:'FirstName' }}
+                    {% endif %}
+                    {{ member.Person | Property:'LastName' }}
+
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+
+
+                <div class="modal-body">
+                  {% comment %} conditional render for photo in modal body {% endcomment %}
+                  {% if profphoto and profphoto != '' %}
+                  <img src="{{ profphoto }}" alt="" class="twms-staff__img-small">
+                  {% else %}
+                  <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+                    class="twms-staff__img-small"></a>
+                  {% endif %}
+
+
+                  <h4>{{ member.Person | Attribute:'Position' }}</h4>
+                  {% assign philosophy = member.Person | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = member.Person | Attribute:'about' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ member.Person | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% elsif sgroup == 'Admin' %}
+        {% capture admin_members %}
+        {{ admin_members }}
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+          <a href="" data-toggle="modal" data-target="#adminModal{{ forloop.index }}">
+
+            {% assign profphoto = member.Person | Attribute:'WebsiteImage','Url' %}
+
+            {% if profphoto and profphoto != '' %}
+            <img src="{{ profphoto }}" alt="" class="twms-staff__img mb-3"></a>
+          {% else %}
+          <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+            class="twms-staff__img mb-3"></a>
+          {% endif %}
+
+          <a href="" class="twms-staff__card-name" data-toggle="modal" data-target="#adminModal{{ forloop.index }}">
+            {% if member.Person | Property:'NickName' != '' %}
+            {{ member.Person | Property:'NickName' }}
+            {% else %}
+            {{ member.Person | Property:'FirstName' }}
+            {% endif %}
+            {{ member.Person | Property:'LastName' }}
+          </a>
+          <p>
+            Admin
+            <br><em>{{ member.Person | Attribute:'Position' }}</em>
+            <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">
+              {{ member.Person | Attribute: 'StaffWebsiteEmail' }}</a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="adminModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="adminModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="facultyModalLabel{{ forloop.index }}">
+                    {% if member.Person | Property:'NickName' != '' %}
+                    {{ member.Person | Property:'NickName' }}
+                    {% else %}
+                    {{ member.Person | Property:'FirstName' }}
+                    {% endif %}
+                    {{ member.Person | Property:'LastName' }}
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <!--<img src="{{ member.Person | Attribute:'WebsiteImage','Url' }}" alt="" class="twms-staff__img-small">-->
+
+                  {% if profphoto and profphoto != '' %}
+                  <img src="{{ profphoto }}" alt="" class="twms-staff__img-small">
+                  {% else %}
+                  <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+                    class="twms-staff__img-small"></a>
+                  {% endif %}
+
+                  <h4>{{ member.Person | Attribute:'Position' }}</h4>
+                  {% assign philosophy = member.Person | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = member.Person | Attribute:'about' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ member.Person | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% elsif sgroup == 'Leadership' %}
+        {% capture leadership_members %}
+        {{ leadership_members }}
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+          <a href="" data-toggle="modal" data-target="#leadershipModal{{ forloop.index }}">
+
+            {% assign profphoto = member.Person | Attribute:'WebsiteImage','Url' %}
+            {% if profphoto and profphoto != '' %}
+            <img src="{{ profphoto }}" alt="" class="twms-staff__img mb-3"></a>
+          {% else %}
+          <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+            class="twms-staff__img mb-3"></a>
+          {% endif %}
+
+          <a href="" class="twms-staff__card-name" data-toggle="modal"
+            data-target="#leadershipModal{{ forloop.index }}">
+            {% if member.Person | Property:'NickName' != '' %}
+            {{ member.Person | Property:'NickName' }}
+            {% else %}
+            {{ member.Person | Property:'FirstName' }}
+            {% endif %}
+            {{ member.Person | Property:'LastName' }}
+          </a>
+          <p>
+            Leadership
+            <br><em>{{ member.Person | Attribute:'Position' }}</em>
+            <br><a href="mailto:{{ member.Person | Attribute: 'StaffWebsiteEmail'}}">
+              {{ member.Person | Attribute:'StaffWebsiteEmail' }}</a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="leadershipModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="leadershipModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="facultyModalLabel{{ forloop.index }}">
+                    {% if member.Person | Property:'NickName' != '' %}
+                    {{ member.Person | Property:'NickName' }}
+                    {% else %}
+                    {{ member.Person | Property:'FirstName' }}
+                    {% endif %}
+                    {{ member.Person | Property:'LastName' }}
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  {% if profphoto and profphoto != '' %}
+                  <img src="{{ profphoto }}" alt="" class="twms-staff__img-small">
+                  {% else %}
+                  <img src="https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg" alt""
+                    class="twms-staff__img-small"></a>
+                  {% endif %}
+
+                  <h4>{{ member.Person | Attribute:'Position' }}</h4>
+                  {% assign philosophy = member.Person | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = member.Person | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = member.Person | Attribute:'about' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ member.Person | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% endif %}
+        {% endfor %}
+        {% if leadership_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">LEADERSHIP</h2>
+        <div class="twms-staff__flex-container-4col">
+          {{ leadership_members |  Reverse }}
+        </div>
+        {% endif %}
+        {% if admin_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">ADMIN</h2>
+        <div class="twms-staff__flex-container-4col">
+          {{ admin_members }}
+        </div>
+        {% endif %}
+        {% if faculty_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">FACULTY</h2>
+        <div class="twms-staff__flex-container-4col">
+          {{ faculty_members }}
+        </div>
+        {% endif %}
+
+
+        {% endgroup %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

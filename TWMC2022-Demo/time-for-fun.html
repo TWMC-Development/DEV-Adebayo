@@ -1,0 +1,129 @@
+<style>
+    /* ===== 55+ Time For Fun ===== */
+   #twmc-55-timeforfun__hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+#twmc-55-timeforfun__hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(21, 114, 129, 0.5), rgba(0, 124, 194, 0.04)), 
+                url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/55%2B_TimeForFun_FeatureBanner_BG.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    z-index: -1;
+          transform: scale(1.03)
+  
+}
+        
+       
+
+.twmc-55-timeforfun__hero-text-wrapper {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-55-timeforfun__hero-text-wrapper > img {
+    height: 350px;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .twmc-55-timeforfun__hero-text-wrapper {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-55-timeforfun__hero,
+    .twmc-55-timeforfun__hero-text-wrapper {
+        height: 450px;
+    }
+
+    .twmc-55-timeforfun__hero-text-wrapper > img {
+        height: 250px;
+    }
+}
+
+.twmc-55-timeforfun__text-blue {
+    color: #147281;
+}
+
+.twmc--btn--tff-blue {
+    border: 2px solid #147281;
+    background-color: #147281;
+    color: #fff;
+    font-weight: bold !important;
+    margin-bottom: .3rem;
+
+    transition: all .3s ease-in-out;
+}
+
+.twmc--btn--tff-blue:hover,
+.twmc--btn--tff-blue:focus {
+    border-color: #438E9A;
+    background-color: #438E9A;
+    text-decoration: none;
+    color: #fff;
+
+    transform: scale(1.05);
+}
+
+.twmc-55-timeforfun--flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: space-between;
+}
+
+.twmc-55-timeforfun--flex-item {
+    flex-basis: 49%;
+    overflow: visible;
+    margin-bottom: 1rem;
+}
+
+.twmc-55-timeforfun__card {
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: #F4F7F9;
+}
+
+.twmc-55-timeforfun__text-small {
+    font-size: .9rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .twmc-55-timeforfun--flex-container {
+        gap: 0;
+    }
+
+    .twmc-55-timeforfun--flex-item {
+        flex-basis: 100%;
+    }
+}
+
+    
+    /* ===== End of 55+ Time For Fun ===== */
+    </style>
+    
+    <!-- hero -->
+    <section id="twmc-55-timeforfun__hero">
+      <div class="twmc-container twmc-55-timeforfun__hero-text-wrapper">
+          <a href="https://people.thewoodlandsmethodist.org/timeforfun"><img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/55%2B_TimeForFun_FeatureBanner_Text.png" alt="Grow In Your Faith"></a>
+      
+            <a href="https://people.thewoodlandsmethodist.org/timeforfun" type="button" class="btn button-default twmc--btn--tff-blue">View Calendar</a>
+        </div>
+    </section>

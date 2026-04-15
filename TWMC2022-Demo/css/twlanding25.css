@@ -1,0 +1,375 @@
+/* MOBILE FIRST APPROACH */
+
+/* ===== TYPOGRAPHY ===== */
+/* ====================== */
+a.twmc25-a-white,
+a.twmc25-a-white * {
+    background-image: linear-gradient(
+        to right,
+        #E5E5E5,
+        #E5E5E5 50%,
+        #fff 50%
+    ) !important;
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 1px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    overflow: visible !important;
+}
+
+a.twmc25-a-white:before {
+  content: '';
+  background: #E5E5E5;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+  }
+
+a:hover::before {
+    width: 100%;
+}
+
+/* ===== END OF TYPOGRAPHY ===== */
+/* ============================= */
+
+
+/* ===== BUTTON ===== */
+/* ================== */
+.tw25-btn-outline-whtsm {
+    font-weight: 600;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: .4rem 0.7rem;
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: .25rem;
+    transition: all .3s ease-in-out;
+}
+
+.tw25-btn-outline-whtsm:hover,
+.tw25-btn-outline-whtsm:focus {
+    border: 2px solid transparent;
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, .2) !important;
+    color: #fff;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+/* ===== END OF BUTTON ===== */
+/* ========================= */
+
+
+ /* ===== HERO ===== */
+ /* ================ */
+ #thewoodlands25-hero {
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/easter/2024+Easter/el-easter-bgtan.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    height: 450px;
+
+    /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+  }
+
+  @media only screen and (min-width: 576px) {
+    #thewoodlands25-hero {
+      height: 500px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #thewoodlands25-hero {
+      height: 700px;
+    }
+  }
+
+ /* ===== END OF HERO ===== */
+ /* ======================= */
+
+ /* ===== IMG NAVIGATION 1 ===== */
+ /* ========================== */
+ #thewoodlands25-imgnav {
+    height: max-content;
+  }
+
+  .tw25-imgnav-bgtrad {
+    background-color: rgb(134, 38, 51);
+    background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.7), rgba(134, 38, 51, 0.7)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/20240505-TRAD-1-800w.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tw25-imgnav-bgchap {
+    background-color: rgb(190, 225, 250);
+    background-image: linear-gradient(to bottom, rgba(79, 117, 139, 0.7), rgba(79, 117, 139, 0.7)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/Chapel_hero3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tw25-imgnav-bghar {
+    background-color: rgb(192, 81, 49);
+    background-image: linear-gradient(to bottom, rgba(192, 81, 49, 0.6), rgba(192, 81, 49, 0.6)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/20240505-HAR-2-800w.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tw25-imgnav-bgloft {
+    background-color: rgb(100, 167, 11);
+    background-image: linear-gradient(to bottom, rgba(100, 167, 11, 0.6), rgba(100, 167, 11, 0.6)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/20240505-LOFT-1-800w.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tw25-imgnav-bgesp {
+    background-color: #872633;
+    background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.8), rgba(134, 38, 51, 0.8)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/20240505-ESP-3-800w.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Custom flex item */
+  .tw25-imgnav-item {
+    flex-basis: 100%;
+    min-height: 200px;
+    /* border-top: 4px solid #2C0C11;
+    border-bottom: 4px solid #2C0C11;
+    border-left: 2px solid #2C0C11;
+    border-right: 2px solid #2C0C11; */
+  }
+
+  @media only screen and (min-width: 768px) {
+    .tw25-imgnav-item {
+      flex-basis: 50%;
+    }
+  }
+
+
+  @media only screen and (min-width: 992px) {
+    .tw25-imgnav-item {
+      flex-basis: 33.33%;
+      /* min-height: 180px; */
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .tw25-imgnav-item {
+      flex-basis: 20%;
+    }
+  }
+
+  /* End of custom flex item */
+
+  .tw25-imgnav-logo {
+    height: 50px;
+  }
+
+  .tw25-white-link {
+    color: white;
+  }
+
+  .tw25-white-link:hover {
+    color: red;
+  }
+
+  .tw25-imgnav-title {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .tw25-imgnav-text {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  p.twmc-p>a.tw25-white-link {
+    font-size: 0.8rem !important;
+  }
+
+ /* ===== END OF IMG NAVIGATION 1 ===== */
+ /* ================================= */
+
+
+/* ===== INTRO ===== */
+/* ================= */
+.twmc25-intro--description {
+    margin-bottom: 1rem;
+    /* margin-top: 2rem; */
+    padding-left: 1rem;
+  }
+
+  .twmc25-intro--header {
+    margin-top: 2rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .twmc25-intro--description {
+      margin-top: 0;
+      padding-left: 1.5rem;
+    }
+
+    .twmc25-intro--header {
+      margin-top: 0 !important;
+    }
+
+  }
+/* ===== END OF INTRO ===== */
+/* ======================== */
+
+
+/* ===== IMG NAVIGATION 2 ===== */
+/* ============================ */
+/* Flexbox */
+.tw25-flex-container--3col-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+    background-color: #2C0C11;
+}
+
+.tw25-flex-item--3col-box {
+  flex-basis: 100%;
+  align-content: center;
+  overflow: hidden;
+}
+
+.tw25-flex-item--3col-box a {
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .tw25-flex-container--3col-box {
+    flex-direction: row;
+  }
+
+  .tw25-flex-item--3col-box {
+      flex-basis: 49.5%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .tw25-flex-item--3col-box {
+      flex-basis: 33%;
+  }
+}
+
+.tw25-flex--3col-box-textlink {
+    color:#fff;
+}
+
+.tw25-flex--3col-box-textlink:hover,
+.tw25-flex--3col-box-textlink:focus {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.tw25-flex-item--3col-box a:hover {
+    text-decoration: none;
+}
+
+.tw25-flex--3col-content-box-wrapper {
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    font-size: 24px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+/* women */
+.tw25-flex--3col-content-box-1 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+    url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=ffff3e41-0140-4917-bfa5-8009dcb77def&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex--3col-content-box-2 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=6ee7dd46-edc2-4706-a20d-c4a0b2627482&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex--3col-content-box-3 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=d8a34dd9-dd6f-473b-9c64-377276d76fb7&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex--3col-content-box-4 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=9f74eaf8-61ae-44b3-be6b-fdb95fd1961d&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex--3col-content-box-5 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=adfdff47-2b07-4f9a-a404-252103317cb4&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex--3col-content-box-6 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('https://www.thewoodlandsumc.org/GetImage.ashx?guid=6f048195-a45d-4024-b88d-650e28ee4135&mode=crop') center center no-repeat; 
+    background-size: cover;
+}
+
+.tw25-flex-item--3col-box:hover [class*="tw25-flex--3col-content-box-"], 
+.tw25-flex-item--3col-box:focus [class*="tw25-flex--3col-content-box-"]{
+    transform: scale(1.1);
+}
+/* end of flexbox */
+
+/* ===== END OF IMG NAVIGATION 2 ===== */
+/* =================================== */

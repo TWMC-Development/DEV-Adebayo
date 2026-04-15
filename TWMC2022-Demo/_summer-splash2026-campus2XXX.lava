@@ -1,0 +1,262 @@
+<style>
+.summersplash25-btn--closed {
+    display: inline-block;
+    padding: .4rem .55rem .3rem;
+    margin-bottom: .3rem;
+    border: 2px solid #adb5bd;
+    border-radius: .25rem;
+    font-family: inherit;
+    font-size: .6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    background-color: #e9ecef;
+    cursor: default;
+}
+.summersplash25-btn--closed:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    color: #495057;
+}
+</style>
+
+<section id="twmc-summerspalsh2023__content" class="pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h2 class="twmc-h2 twxt-white mb-5">The Woodlands Methodist Church Camps and Activities<br>NextGen Ministries</h2>
+                <h4 class="twmc-h4 summersplash25-intro-title">
+                    Summer fun is on the way!! <em>NextGen Kids, Rec Ministry and 56</em> has an amazing Summer planned for your children. Register and join us for the camps and activities listed below. Don’t miss out on good fun with great friends!
+                </h4>
+                <div class="mt-5 mb-3 summersplash25-intro2">
+                    <h3 class="twmc-h3 mt-0">Registration Opens March 2</h3>
+                    <p class="twmc-p mb-0">
+                        <em>Age levels are for the upcoming 2026-2027 school year. Children must be age listed as of September 1, 2026.</em>
+                    </p>
+                </div>
+                <h5 class="twmc-h5 summersplash25-intro-title mb-5">
+                    Children can attend activities on any campus — The Woodlands, Woodforest or Creekside — but they may participate in only one VBS.
+                    Campus locations are noted on each activity.
+                </h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Grouped by Campus -->
+<!-- Montgomery Campus is being removed for now -->
+{% assign campuses = 'The Woodlands,Woodforest,Creekside,Off Campus' | Split: ',' %}
+
+{% for campus in campuses %}
+<section class="summersplash25-section-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center mt-3 pb-4">
+                    <!-- If it's off campus, do not create a new section, else create a new section -->
+                     {% if campus != 'Off Campus'  %}
+                    <h1 class="twmc-h1 summersplash25-section-title text-uppercase">{{ campus }}</h1>
+                     {% endif %}
+                </div>
+                <div class="summersplash25-flex-container">
+
+                    {% for item in Items %}
+                        {% assign CampusTags = item | Attribute:'CampusTags' %}
+                        {% if CampusTags %}
+                            {% assign CampusArr = CampusTags | Split: ',' %}
+                            {% if CampusArr contains campus %}
+                                {% assign EventTime = item | Attribute:'EventTime' | Default:'TBD' %}
+                                {% assign EventTime2 = item | Attribute:'EventTime2' %}
+                                {% assign ShortDescription = item | Attribute:'ShortDescription' %}
+                                {% assign Price = item | Attribute:'Price' | Default:'$0' %}
+                                {% assign Age = item | Attribute:'Age' | Default:'N/A' %}
+                                {% assign Content = item.Content %}
+                                {% assign RegOpenDate = item | Attribute:'RegOpenDate' %}
+                                {% assign RegOpenDate2 = item | Attribute:'RegOpenDate2' %}
+                                {% assign ButtonText = item | Attribute:'ButtonText' | Default:'Register' %}
+                                {% assign ButtonText2 = item | Attribute:'ButtonText2' %}
+                                {% assign RegistrationLink = item | Attribute:'RegistrationLink' %}
+                                {% assign RegistrationLink2 = item | Attribute:'RegistrationLink2' %}
+                                {% assign RegistrationId = item | Attribute:'RegistrationId' %}
+                                {% assign RegistrationId2 = item | Attribute:'RegistrationId2' %}
+                                {% comment %} {% assign AvailableSlots = item | Attribute:'NumberOfAvailableSlots' %}
+                                {% assign AvailableSlots2 = item | Attribute:'NumberOfAvailableSlots2' %} {% endcomment %}
+                                {% assign Title = item.Title %}
+
+                                {% assign CampusClass = '' %}
+                                {% assign CampusTextColor = '' %}
+                                {% assign CampusBtnColor = '' %}
+
+                                {% for tag in CampusArr %}
+                                    {% assign tag = tag | Trim %}
+                                    {% if tag == 'The Woodlands' %}
+                                        {% assign CampusClass = 'summersplash25-tag-thewoodlands' %}
+                                        {% assign CampusTextColor = 'summersplash25-text-thewoodlands' %}
+                                        {% assign CampusBtnColor = 'summersplash25-btn-thewoodlands' %}
+                                    {% elsif tag == 'Woodforest' %}
+                                        {% assign CampusClass = 'summersplash25-tag-woodforest' %}
+                                        {% assign CampusTextColor = 'summersplash25-text-woodforest' %}
+                                        {% assign CampusBtnColor = 'summersplash25-btn-woodforest' %}
+                                    {% elsif tag == 'Creekside' %}
+                                        {% assign CampusClass = 'summersplash25-tag-creekside' %}
+                                        {% assign CampusTextColor = 'summersplash25-text-creekside' %}
+                                        {% assign CampusBtnColor = 'summersplash25-btn-creekside' %}
+                                    {% elsif tag == 'Off Campus' %}
+                                        {% assign CampusClass = 'summersplash25-tag-other' %}
+                                        {% assign CampusTextColor = 'summersplash25-text-yellow' %}
+                                        {% assign CampusBtnColor = 'summersplash25-btn-yellow' %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                <!-- Count logic -->
+                                {% assign regCount = 0 %}
+                                {% if RegistrationId != empty %}
+                                    {% assign regIdInt = RegistrationId | AsInteger %}
+                                    {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{ regIdInt }}' count:'true' securityenabled:'false' %}
+                                    {% assign regCount = count %}
+                                    {% endregistrationregistrant %}
+                                {% endif %}
+
+                                {% assign regCount2 = 0 %}
+                                {% if RegistrationId2 != empty %}
+                                    {% assign regId2Int = RegistrationId2 | AsInteger %}
+                                    {% registrationregistrant where:'OnWaitList == false' expression:'Registration.RegistrationInstanceId == {{ regId2Int }}' count:'true' securityenabled:'false' %}
+                                    {% assign regCount2 = count %}
+                                    {% endregistrationregistrant %}
+                                {% endif %}
+
+                                <!-- Slots Left -->
+                                {% assign slotsLeft = 0 %}
+                                {% assign slotsLeft2 = 0 %}
+                                <!-- Slots1 -->
+                                {% if RegistrationId != empty %}
+                                    {% registrationinstance id:'{{ RegistrationId }}' %}
+                                        {% assign maxAttendees1 = registrationinstance.MaxAttendees %}
+                                    {% endregistrationinstance %}
+                                    {% if maxAttendees1 and maxAttendees1 > 0 %}
+                                        {% assign slotsLeft = maxAttendees1 | Minus: regCount %}
+                                    {% endif %}
+                                {% endif %}
+                                 <!-- Slots2 -->
+                                {% if RegistrationId2 != empty %}
+                                    {% registrationinstance id:'{{ RegistrationId2 }}' %}
+                                        {% assign maxAttendees2 = registrationinstance.MaxAttendees %}
+                                    {% endregistrationinstance %}
+                                    {% if maxAttendees2 and maxAttendees2 > 0 %}
+                                        {% assign slotsLeft2 = maxAttendees2 | Minus: regCount2 %}
+                                    {% endif %}
+                                {% endif %}
+
+                                <!-- Card Output -->
+                                <div class="summersplash25-flex-item summersplash25--card">
+                                    <p class="{{ CampusClass }} mb-1"><span>{{ campus }}</span></p>
+                                    <p class="twmc-p mb-0">
+                                        <strong class="summersplash25---card-title {{ CampusTextColor }}">{{ Title }}</strong>
+                                    </p>
+                                    <!-- Card info -->
+                                    <p class="twmc-p my-3 twmc-textcard-info2">
+                                        <span class="twmc-icon-wrapper3"><i class="fas fa-school" aria-hidden="true"></i></span>{{ Age }}
+                                        {% if ShortDescription != null and ShortDescription != ''%}
+                                        <br>
+                                        <span class="twmc-icon-wrapper3"><i class="fa-solid fa-note" aria-hidden="true"></i></span>{{ ShortDescription }}
+                                        {% endif %}
+                                        <br>
+                                        <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime }}
+                                        {% if EventTime2 != null and EventTime2 != '' %}
+                                        <br>
+                                        <span class="twmc-icon-wrapper3"><i class="fas fa-clock" aria-hidden="true"></i></span>{{ EventTime2 }}
+                                        {% endif %}
+                                        <br>
+                                        <span class="twmc-icon-wrapper3"><i class="fas fa-money-bill" aria-hidden="true"></i></span>{{ Price }}
+                                    </p>
+                                    <!-- End of Card info -->
+                                    <!-- Desc and reg open -->
+                                    <p class="twmc-p twmc-textcard-desc2">
+                                        {{ item.Content }}
+                                    </p>
+                                    {% if RegOpenDate != null and RegOpenDate != ''%}
+                                        <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate }}</em></p>
+                                    {% endif %}
+                                    {% if RegOpenDate2 != null and RegOpenDate2 != ''%}
+                                        <p class="twmc-p-small text-uppercase"><em>REGISTRATION OPENS {{ RegOpenDate2 }}</em></p>
+                                    {% endif %}
+                                    <!-- End of Desc and reg open -->
+                                    <!-- Slots & Registration links -->
+                                    {% if RegistrationLink %}
+                                        <div class="summersplash25-slots-btn mb-3 mt-4">
+                                            <!-- Slots -->
+                                            {% if maxAttendees1 != null and maxAttendees1 != '' %}
+                                                 {% if RegistrationId != empty %}
+                                                    {% if ButtonText != null and ButtonText != '' %}
+                                                     <p class="twmc-comdinner2024-seats--num mb-0">
+                                                        {% if slotsLeft <= 0 %} 0
+                                                        {% else %} {{ slotsLeft }}
+                                                    {% endif %}
+                                                    </p>
+                                                     <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                                                     {% endif %}
+                                                  {% endif %}
+
+                                            {% endif %}
+                                            <!-- Reg btn -->
+                                             {% if ButtonText != null and ButtonText != '' %}
+                                                {% if slotsLeft > 0 %}
+                                                <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText }}</a>
+                                                {% elsif campus == 'Off Campus'  %}
+                                                     <a href="{{ RegistrationLink }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText }}</a>
+                                                {% else %}
+                                                    <div class="summersplash25-slots-btn mb-3 mt-4">
+                                                        <p class="summersplash25-btn--closed">Registration closed</p>
+                                                    </div>
+                                                {% endif %}
+                                            {% endif %}
+
+                                        </div>
+                                        {% else %}
+                                    {% endif %}
+                                    {% if RegistrationLink2 %}
+                                        <div class="summersplash25-slots-btn2 mb-3">
+                                            <!-- Slots2 -->
+                                            {% if maxAttendees2 != null or maxAttendees2 != '' %}
+                                                 {% if ButtonText2 != null and ButtonText2 != '' %}
+                                                    <p class="twmc-comdinner2024-seats--num mb-0">{% if slotsLeft2 <= 0 %} 0 {% else %} {{ slotsLeft2 }} {% endif %}</p>
+                                                <p class="twmc-comdinner2024-seats--text mt-0">Registration spots available</p>
+                                                {% endif %}
+
+                                                <!-- Registration Button 2 -->
+                                                {% if ButtonText2 != null and ButtonText2 != '' %}
+                                                    {% if slotsLeft2 > 0%}
+                                                    <a href="{{ RegistrationLink2 }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText2 }}</a>
+                                                    {% elsif campus == 'Off Campus'  %}
+                                                         <a href="{{ RegistrationLink2 }}" class="twmc--btn twmc--btn--small {{ CampusBtnColor }} twmc-letspac-2" target="_blank">{{ ButtonText2 }}</a>
+                                                    {% else %}
+                                                        <div class="summersplash25-slots-btn mb-3 mt-4">
+                                                        <p class="summersplash25-btn--closed">Registration closed</p>
+                                                    </div>
+                                                    {% endif %}
+                                                {% endif %}
+
+                                            {% endif %}
+                                        </div>
+                                    {% else %}
+                                        <div class="summersplash25-slots-btn mb-3 mt-4">
+                                            <p class="summersplash25-btn--closed">Registration closed</p>
+                                        </div>
+                                    {% endif %}
+                                    <!-- End of Slots & Registration links -->
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}

@@ -1,0 +1,94 @@
+<!-- Advent Activities -->
+<head>
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/seasonal.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/sparkle.css">
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/utilities-templates.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/85947205a9.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<section class="twmc-advent2024--events">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <p class="twmc-p twmc-advent2024--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eum facere amet veritatis incidunt culpa nobis neque recusandae minima ut beatae suscipit, nam pariatur saepe ipsum mollitia soluta velit enim vel voluptate perferendis ipsa?</p>
+                <p class="twmc-p twmc-advent2024--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, eos unde fugit laudantium ipsa voluptatem. Voluptatum natus odio aut provident reiciendis, et neque tenetur aliquam necessitatibus laborum! Aliquam laborum rerum neque quia suscipit praesentium.</p>
+            </div>
+            <div id="twmc-advent__events" class="col-sm-10 col-sm-offset-1 mt-6">
+                <h1 class="twmc-section-title--light mt-0 mb-5 twmc-advent24--green">Christmas Events</h1>
+                <!-- Toggle nav -->
+                <div class="nav-pills--twmctoggleadvent">
+                    <ul class="nav nav-pills mt-1 nav-pills--twmctoggleadvent-ul">
+                        <li class="twmctoggleadvent-navtitle">Select campus:</li>
+                        <li class="active"><a data-toggle="pill" href="#twmctoggle-tab1" class="twmc--btn--toggle-nav-advent" data-filter="The Woodlands">The Woodlands</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggle-tab2" class="twmc--btn--toggle-nav-advent" data-filter="Woodforest">Woodforest</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggle-tab3" class="twmc--btn--toggle-nav-advent" data-filter="Montgomery">Montgomery</a></li>
+                        <li><a data-toggle="pill" href="#twmctoggle-tab4" class="twmc--btn--toggle-nav-advent" data-filter="Creekside">Creekside</a></li>
+                    </ul>
+                </div>
+                <!-- End of toggle nav -->
+
+                <!-- Tab Content -->
+                <div class="tab-content tab-content--twmctoggleadvent">
+                    {% assign campuses = "The Woodlands,Woodforest,Montgomery,Creekside" | Split: "," %}
+                    {% for campus in campuses %}
+                        <div id="twmctoggle-tab{{forloop.index}}" class="tab-pane fade{% if forloop.first %} in active{% endif %}" data-tab-filter="{{campus}}">
+                            {% for item in Items %}
+                                {% assign TabFilter = item | Attribute: 'TabFilter' %}
+                                {% if TabFilter == campus %}
+                                    {% assign Date = item | Attribute: 'Date' %}
+                                    {% assign FormattedDate = Date | Date: 'dddd, MMMM dd' %}
+                                    {% assign Time = item | Attribute: 'Time' %}
+                                    {% assign AddressLink = item | Attribute: 'AddressLink' %}
+                                    {% assign AddressText = item | Attribute: 'AddressText' %}
+                                    {% assign Image = item | Attribute: 'Image', 'object' %}
+                                    {% assign RegistrationLink = item | Attribute:'RegistrationLink' %}
+                                    <div class="twmc-connect--flex-container">
+                                        <div class="twmc-connect--flex-item twmc-pbsmall twmc-advent23__card">
+                                            <img src="{{Image.Url}}" alt="" class="twmc-flex-img-square">
+                                            <div class="mt-2">
+                                                <h3 class="twmc-advent24--green">{{item.Title}}</h3>
+                                                <p>{{item.Content}}</p>
+                                                <p class="twmc-p twmc-advent24--events-info"><strong>
+                                                    <span class="twmc-icon-wrapper2"><i class="fa-solid fa-calendar-alt" aria-hidden="true"></i></span>{{FormattedDate}}
+                                                    <br><span class="twmc-icon-wrapper2"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>{{Time}}
+                                                    <br><span class="twmc-icon-wrapper2"><i class="fa-solid fa-landmark" aria-hidden="true"></i></span><a href="{{AddressLink}}">{{AddressText}}</a>
+                                                </strong></p>
+                                                <a href="{{RegistrationLink}}" class="twmc--btn twmc--btn--advent2024 mt-2 mb-4" target="_blank">More Info</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- End of Tab Content -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        // Show content for the first tab by default
+        $('#twmctoggle-tab1').addClass('in active');
+
+        // Tab click event
+        $('.nav-pills--twmctoggleadvent a').on('click', function (e) {
+            e.preventDefault();
+
+            // Get the target tab
+            var target = $(this).attr('href');
+
+            // Hide all tab content and show the target
+            $('.tab-pane').removeClass('in active');
+            $(target).addClass('in active');
+
+            // Activate the clicked tab
+            $('.nav-pills--twmctoggleadvent a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+

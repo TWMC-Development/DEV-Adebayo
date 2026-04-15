@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Kids - Campus Toggle</title>
+
+     <!-- Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+ 
+     <!-- CSS -->
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+     <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+     
+     <link rel="stylesheet" href="./css/main.css">
+     <link rel="stylesheet" href="./css/nw-main2023.css">
+     <link rel="stylesheet" href="./css/nw-navbar.css">
+     <link rel="stylesheet" href="./css/nw-grow.css">
+     <link rel="stylesheet" href="./css/seasonal.css">
+     <link rel="stylesheet" href="./css/utilities-templates.css">
+ 
+     <!-- Script -->
+     <script src="/js/script2023.js"></script>
+     
+     <!-- fontawesome v6 -->
+     <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
+            <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+            <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+              <!-- color logo -->
+              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="TWMC logo" class="navbar-bottom-logo">
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+              <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+              
+              <!-- dropdown -->
+              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+              <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                <!-- Mega menu -->
+                <div class="nav navbar-nav navbar-bottom-megamenu">
+                  <!--  buttons -->
+                  <div class="megamenu-main-menu">
+                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                    <a href="/im-new" class="megamenu-link">Visit</a>
+                    <a href="/gather" class="megamenu-link">Grow</a>
+                    <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                    <a href="/outward" class="megamenu-link">Serve</a>
+                    <a href="/give" class="megamenu-link">Give</a>
+                    <a href="/login" class="megamenu-link">Login</a>
+                    <a href="/Find" class="megamenu-link">Search</a>
+
+                    <!-- Services -->
+                    <h3 class="megamenu-h3">Services</h3>
+                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                     
+                    <!-- Socmed -->
+                    <div class="megamenu-socmed">
+                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                     </div>
+                  </div>
+    
+    
+                  <!-- About -->
+                  <div class="megamenu-about">
+                    <h3 class="megamenu-h3">About</h3>
+                    <a href="/baptism" class="megamenu-link">Baptism</a>
+                    <a href="/our-story" class="megamenu-link">Our Stories</a>
+                    <a href="/membership" class="megamenu-link">Membership</a>
+                    <a href="/staff" class="megamenu-link">Staff</a>
+                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                    <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                    <a href="/live" class="megamenu-link">Church Online</a>
+                  </div>
+                  <!-- End of About -->
+    
+                    <!-- Connect Nextgen -->
+                  <div class="megamenu-services">
+                    <!-- Connect -->
+                    <h3 class="megamenu-h3">Connect</h3>
+                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                    <a href="/events" class="megamenu-link">Events</a>
+                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+
+                    <!-- NextGen -->
+                    <h3 class="megamenu-h3">NextGen</h3>
+                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                    <a href="56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                    <p> NextGen College (Ages 18-23)</p>
+                  </div>
+                  <!-- End of Services Connect -->
+    
+                  <!-- Ministries -->
+                  <div class="megamenu-ministries">
+                    <h3 class="megamenu-h3">Ministries</h3>
+                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                    <a href="/marriage" class="megamenu-link">Marriage</a>
+                    <a href="/men" class="megamenu-link">Men</a>
+                    <a href="/missions" class="megamenu-link">Missions</a>
+                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                    <a href="/recreation" class="megamenu-link">Recreation</a>
+                    <a href="/singles" class="megamenu-link">Singles</a>
+                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                    <a href="/women" class="megamenu-link">Women</a>
+                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                  </div>
+                  <!-- End of Ministries -->
+    
+                </div>
+              </div>
+              
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!--  Buttons -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/gather" class="megamenu-link">Grow</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="/Find" class="megamenu-link">Search</a>
+
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
+              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+
+              <div class="navbar-bottom-mobile--socmed">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
+                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+              </div>
+            </div>
+            <!--  End of Buttons -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+              <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+              <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+              <a href="/live" class="megamenu-link">Church Online</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Services Connect -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+              
+
+              <!-- NextGen -->
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+              <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+              <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+              <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+              <p> NextGen College (Ages 18-23)</p>
+            </div>
+            <!-- End of Services Connect -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+              <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navabr collapse -->
+      </div>
+      <!-- End of .contatiner -->
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    
+    <section style="background-color: #333;" class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="text-white my-0 text-center">NextGen Kids - Community & Program Section Demo</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Toggle -->
+  <style>
+  #ngkids-programs {
+    background-color: #fff;
+  }
+
+  /* ==== NGKids Toggle NavTab + Accordion ====== */
+  /* Button */
+  .ngkids--toggle-navtab {
+    /* min-width: 200px; */
+    max-width: max-content;
+    
+  }
+
+
+  .nav-pills--ngkids-toggle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-pills--ngkids-toggle-ul > li > a {
+    border-radius: 4px 4px 0 0;
+  }
+
+
+  .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+  .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus {
+      background-color: var(--color-traditional);
+      color: #fff;
+      padding: 11px 30px 10px;
+      /* padding: 11px 20px 10px; */
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .nav-pills--ngkids-toggle .nav-pills > li > a {
+      background-color: #d1d1d1;
+      color: var(--color-dark-grey2);
+      padding: 11px 30px 10px;
+      margin-right: 3px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      
+  }
+
+  .nav-pills--ngkids-toggle ul.nav.nav-pills > li {
+      margin-left: 0 !important;
+  }
+
+  .tab-content--ngkids-toggle {
+    background-color: #eaeaea;
+    padding: 2rem;
+    border-radius: 0 4px 4px 4px;
+    max-width: 100%;
+    border-top: 4px solid var(--color-traditional);
+    padding-top: 3rem;
+  }
+
+  ul.nav-pills--ngkids-toggle-ul {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width:1360px) {
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus,
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+        padding: 11px 20px 10px;
+    }
+  }
+
+
+  @media only screen and (max-width:1300px) {
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus,
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+        /* padding: 11px 15px 10px; */
+        padding: 11px 15px 10px;
+        font-size: 0.75rem;
+    }
+  }
+
+  @media only screen and (max-width:1100px) {
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus,
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+        /* padding: 11px 15px 10px; */
+        padding: 11px 12px 10px;
+        font-size: 0.7rem;
+    }
+  }
+
+  @media only screen and (max-width:1000px) {
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus,
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+        padding: 11px 10px 10px;
+        font-size: 0.6rem;
+    }
+  }
+
+  @media only screen and (max-width:870px) {
+    ul.nav-pills--ngkids-toggle-ul {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .ngkids--toggle-navtab {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+      border-bottom: 1px solid #f4f4f4;
+    }
+
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus  {
+      border-bottom: 1px solid var(--color-traditional);
+    
+    }
+
+    .tab-content--ngkids-toggle {
+      border-radius: 0 0 4px 4px;
+    }
+
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a,
+    .nav-pills--ngkids-toggle > .nav-pills > li.active > a:focus,
+    .nav-pills--ngkids-toggle .nav-pills > li > a {
+        font-size: 0.7rem;
+    }
+  }
+  /* =====End of NGKids Toggle NavTab + Accordion ===== */
+  </style>
+
+
+  <section id="ngkids-programs" class="py-6">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="twmc-h2 text-uppercase mb-3">Community & Programs</h2>
+          </div>
+
+          <div class="col-sm-10 col-sm-offset-1">
+            <!-- <h3 class="twmc-h3">FAQ</h3> -->
+            <!-- Toggle nav -->
+            <div class="nav-pills--ngkids-toggle">
+              <ul class="nav nav-pills mt-4 mb-0 nav-pills--ngkids-toggle-ul">
+                <li class="active"><a data-toggle="pill" href="#ngkids-toggle-tab1" class="ngkids--toggle-navtab">The Woodlands</a></li>
+                <li><a data-toggle="pill" href="#ngkids-toggle-tab2" class="ngkids--toggle-navtab">Creekside</a></li>
+                
+              </ul>
+            </div>
+            <!-- End of toggle nav -->
+
+            <!-- Tab Content -->
+            <div class="tab-content tab-content--ngkids-toggle">
+
+                <!-- Tab 1 | The Woodlands -->
+                <div id="ngkids-toggle-tab1" class="ngkidstoggle-tab tab-pane fade in active">
+                  <h4 class="twmc-h4 mt-1 mb-4 text-uppercase">The Woodlands Campus</h4>
+                  
+                  <!-- Panel group -->
+                  <div class="panel-group" id="accordion-ngkfaq" role="tablist" aria-multiselectable="true">
+                    <!-- Q1 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading-ngkfaq1">
+                            <h4 class="panel-title twmc-panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq1" aria-expanded="false" aria-controls="collapse-ngkfaq1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Sunday School</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-ngkfaq1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq1">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">We want to reach and teach your children in such a way that they have the greatest opportunity to become devoted followers of Jesus. In NextGen Kids Sunday School, your kids will worship, learn and have fun at their own level.</p>
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Sunday School Times</h4>
+                            <div class="twmc-confirmation--flex3col-container text-center">
+                              <div class="twmc-confirmation--flex3col-item twmc-ngkids--info-card">
+                                <i class="fa-duotone fa-solid fa-landmark fa-3x"></i>
+                                <h5 class="twmc-h5 text-uppercase mb-1">Main Building</h5>
+                                <p class="twmc-ngkids--info-card-text">Sundays | 9:00 and 11:00 a.m.</p>
+                              </div>
+          
+                              <div class="twmc-confirmation--flex3col-item twmc-ngkids--info-card">
+                                <i class="fa-duotone fa-solid fa-building fa-3x"></i>
+                                <h5 class="twmc-h5 text-uppercase mb-1">Loft Building</h5>
+                                <p class="twmc-ngkids--info-card-text">Saturdays | 6:00 p.m. <br>Sundays | 9:00 and 11:00 a.m.
+                                </p>
+                              </div>         
+                            </div>
+                          
+                            <h4 class="twmc-4 mt-2 text-uppercase">Meeting Locations</h4>
+                            <p class="twmc-p mb-0">
+                              <strong>Main Building:</strong>
+                              <ul>
+                                <li>3 years – Kindergarten: Downstairs in the rooms behind the big fish tank</li>
+                                <li>1st – 4th Grade: NextGen Kids space upstairs by the yellow slide</li>
+                                <li>5th – 6th Grade: Family Life Center across from Main Building</li>
+                              </ul>
+                            </p>
+                            <p class="twmc-p mb-0">
+                              <strong>Loft Building:</strong>
+                              <ul>
+                                <li>3 years – Kindergarten: Early Childhood Large Group Space</li>
+                                <li>1st – 4th Grade: Elementary Large Group Space</li>
+                              </ul>
+                            </p>
+          
+                            <!-- <div class="twmc-ngkids--flex2col-container text-center">
+                              <div class="twmc-ngkids--flex2col-item twmc-ngkids--info-card">
+                                <i class="fa-duotone fa-solid fa-landmark fa-2x"></i>
+                                <h5 class="twmc-h5 text-uppercase mb-2">Main Building</h5>
+                                <p class="twmc-ngkids--info-card-text mb-1"><strong>3 years – Kindergarten:</strong><br>Downstairs in the rooms behind the big fish tank</p>
+                                <p class="twmc-ngkids--info-card-text"><strong>1st – 4th Grade:</strong><br>NextGen Kids space upstairs by the yellow slide </p>
+                                <p class="twmc-ngkids--info-card-text"><strong>5th – 6th Grade:</strong><br>Family Life Center across from Main Building</p>
+                              </div>
+          
+                              <div class="twmc-ngkids--flex2col-item twmc-ngkids--info-card">
+                                  <i class="fa-duotone fa-solid fa-building fa-2x"></i>
+                                <h5 class="twmc-h5 text-uppercase mb-2">Loft Building</h5>
+                                <p class="twmc-ngkids--info-card-text mb-1"><strong>3 years – Kindergarten:</strong><br>Early Childhood Large Group Space</p>
+                                <p class="twmc-ngkids--info-card-text"><strong>1st – 4th Grade:</strong><br>Elementary Large Group Space</p>
+                              </div>         
+                            </div> -->
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Check In</h4>
+                            <p class="twmc-p">
+                              <span class="twmc-icon-wrapper2"><i class="fa-solid fa-family"></i></span>Parents check their young children in on the computers close to their meeting areas
+                              <br><span class="twmc-icon-wrapper2"><i class="fa-solid fa-person"></i></span>Older children can check themselves in at the computers close to their meeting areas
+                            </p>
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Meeting Format</h4>
+                            <p class="twmc-p">Each age group meets in a large group for worship and the main lesson and then they break up into small groups for age-appropriate discussion and activities.</p>
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Children with Special Needs</h4>
+                            <p class="twmc-p mb-3">We have Sunday School classes for children with special needs in preschool through 6th grade on the Main Campus and in the Loft.</p>
+          
+                            <!-- <p class="twmc-p mb-3 highlight-orange"> Any questions? <a>{[ emailform email:'contact@twmc.org' contactname:' contact us' class:'a-traditional' ]}</a>.</p> -->
+          
+                          </div>
+                        </div>
+                    </div>
+          
+                    <!-- Q2 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading-ngkfaq2">
+                            <h4 class="panel-title twmc-panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq2" aria-expanded="false" aria-controls="collapse-ngkfaq2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Nursery (6 weeks - 12 years)</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-ngkfaq2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq2">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">Children are precious to us at The Woodlands Methodist Church. We strive to make our Noah’s Nook Nursery fun and stimulating for even the youngest child coming through our door. While we realize it can be difficult to leave your child in the care of others, we want to assure you that our staff has a genuine love for the work they do. </p>
+                            <p class="twmc-p">Our Nursery is staffed by paid, experienced workers who are trained in the areas of child care, child development, safety and sanitation and certified by the American Heart Association in CPR and First Aid. </p>
+                            <p class="twmc-p mb-3">We offer a loving, Christian atmosphere. All of our rooms are safe, fun and filled with age-appropriate toys, games and books. </p>
+          
+                        </div>
+                        </div>
+                    </div>
+          
+                    <!-- Q3 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading-ngkfaq3">
+                            <h4 class="panel-title twmc-panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq3" aria-expanded="false" aria-controls="collapse-ngkfaq3" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Child Care Reservations</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-ngkfaq3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq3">
+                            <div class="panel-body twmc-panel-body">
+                              <h4 class="twmc-4 mt-4 text-uppercase">Worship Services</h4>
+                              <p class="twmc-p text-traditional mb-0"><i>Please refer to Re-Opening information for the most current details on Children's programming and child care options.</i></p>
+                              <p class="twmc-p">Reservations are not necessary for worship services. During worship services, all are welcome to bring children to the Nursery, infants through two years old (as of September 1).</p>
+          
+                              <h4 class="twmc-4 mt-4 text-uppercase">Bible Studies, Programs and Events</h4>
+                              <p class="twmc-p">Reservations are needed for Nursery care during all programs, except worship services. The Ministry leader sponsoring your Bible Study, program or event is responsible for requesting Nursery care and taking reservations. Reservations may be made online or through a ministry contact person. The Nursery cares for children, infants through age 12. </p>
+          
+                              <h4 class="twmc-4 mt-4 text-uppercase">Nursery Cost</h4>
+                              <p class="twmc-p mb-3">Nursery care is provided at no cost for worship services and many church-related programs and events. However, Nursery care for some events may require a fee. For more information on nursery reservations please call <a href="tel:281.297.5949" class="a-traditional">281.297.5949</a></p>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <!-- Q4 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-ngkfaq4">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq4" aria-expanded="false" aria-controls="collapse-ngkfaq4" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Early Childhood (3, Pre-K, and Kindergarten)</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-ngkfaq4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq4">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">Our main program includes dozens of weekly volunteers to help support a small group of children. A core Early Childhood staff and interns help to organize, prepare and set up lessons and activities each week. Our young children participate in large group praise and worship where they sing songs and hear about Jesus. Volunteers oversee small groups in age specific classrooms in order to focus on the biblical truths that our children are learning. Children in our Sunday school program must be 3 years old by September 1 of the current school year.</p>
+                            
+                            <p class="twmc-p mb-3">If you have any questions, please contact <a>{[ emailform email:'NextGenKids@twmc.org' contactname:'NextGen Kids Ministry' class:'a-traditional' ]}</a>.</p>
+                        </div>
+                      </div>
+                    </div>
+          
+                    <!-- Q5 -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="heading-ngkfaq5">
+                            <h4 class="panel-title twmc-panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq5" aria-expanded="false" aria-controls="collapse-ngkfaq5" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Elementary (1st - 4th grade)</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse-ngkfaq5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq5">
+                            <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">Our 1st – 4th grade Sunday School program is designed to encourage and nurture the spiritual understanding and growth of our elementary-aged children. Children are welcomed by the friendly faces of staff ministry leaders, adult volunteers and teenage interns to join us in building friendships, enjoying fellowship, singing praise and discovering biblical truths. Each year, our 3rd graders participate in Bible Sunday where they receive their own Bible during the Traditional worship service.</p>
+          
+                            <p class="twmc-p mb-3">If you have any questions, please contact <a>{[ emailform email:'NextGenKids@twmc.org' contactname:'NextGen Kids Ministry' class:'a-traditional' ]}</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <!-- Q6 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-ngkfaq6">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq6" aria-expanded="false" aria-controls="collapse-ngkfaq6" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Special Blessings</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-ngkfaq6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq6">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">Our 1st – 4th grade Sunday School program is designed to encourage and nurture the spiritual understanding and growth of our elementary-aged children. Children are welcomed by the friendly faces of staff ministry leaders, adult volunteers and teenage interns to join us in building friendships, enjoying fellowship, singing praise and discovering biblical truths. Each year, our 3rd graders participate in Bible Sunday where they receive their own Bible during the Traditional worship service. </p>
+                  
+                            <p class="twmc-p mb-3">If you have any questions, please contact <a>{[ emailform email:'NextGenKids@twmc.org' contactname:'NextGen Kids Ministry' class:'a-traditional' ]}</a>.</p>
+                          </div>
+                      </div>
+                  </div>
+          
+                    <!-- Q7 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-ngkfaq7">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq" href="#collapse-ngkfaq7" aria-expanded="false" aria-controls="collapse-ngkfaq7" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Volunteer Opportunity</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-ngkfaq7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq7">
+                          <div class="panel-body twmc-panel-body">
+                            <p class="twmc-p mt-3">Volunteers are the backbone of NextGen Kids Ministry at The Woodlands Methodist Church. All of our volunteers go through a background check and a training process. We encourage our families to partner with us so that we are able to assist you in developing your child’s spiritual formation.</p>
+          
+                            <a href="https://people.thewoodlandsmethodist.org/volunteersignup?OpportunityId=39" class="twmc--btn twmc--btn--traditional mb-3" target="_blank">Sign up now</a>
+                          </div>
+                      </div>
+                  </div>
+          
+                
+                  </div>
+                  <!-- End of panel group -->
+                       
+                </div>
+                <!-- End of Tab1 -->
+
+
+                <!-- Tab2 | Creekside -->
+                <div id="ngkids-toggle-tab2" class="ngkidstoggle-tab tab-pane fade">
+                  <h4 class="twmc-h4 mt-1 mb-4 text-uppercase">Creekside Campus</h4>
+                  
+                  <div class="panel-group" id="accordion-ngkfaq-cov" role="tablist" aria-multiselectable="true">
+                    <!-- Q1 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-ngkfaq-cov1">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq-cov" href="#collapse-ngkfaq-cov1" aria-expanded="false" aria-controls="collapse-ngkfaq-cov1" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Sunday School</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-ngkfaq-cov1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq-cov1">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p mt-3">NextGen Kids at Covenant Church at Creekside is a safe place for kids to learn, explore and discover who they are in Christ. Children are important members of our church family. We want them to be part of our community, make friends of all ages and learn about their faith. In NextGen Kids Sunday school, your kids will worship, learn and have fun at their own level.</p>
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Sunday School Times</h4>
+                            <div class="twmc-confirmation--flex3col-container text-center">
+                              <div class="twmc-confirmation--flex3col-item twmc-ngkids--info-card">
+                                <i class="fa-duotone fa-solid fa-landmark fa-3x"></i>
+                                <!-- <h5 class="twmc-h5 text-uppercase mb-1"><em>Beginning March 30</em></h5> -->
+                                <p class="twmc-p mb-0 mt-2"><em>Beginning March 30</em></p>
+                                <p class="twmc-ngkids--info-card-text">9:00 and 11:00 a.m.</p>
+                              </div>
+          
+                                     
+                            </div>
+                          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Meeting Locations</h4>
+                            <p class="twmc-p mb-0">
+                              <ul>
+                                <li>3 – 5 years old: Room 4</li>
+                                <li>Kindergarten – 5th Grade: The Cove</li>
+                              </ul>
+                            </p>
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">Check In</h4>
+                            <p class="twmc-p">Check-in area is located just outside the main entrance. Child care workers will meet your family, check your child into the system and walk you through how NextGen Kids works.</p>
+
+                            <p class="twmc-p mb-0">
+                              <strong>3 – 5 Years Old</strong>
+                              <ul class="mt-0">
+                                <li>Parents check in their young children to receive a printed name tag and a security tag. </li>
+                                <li>Parents place name tag on child’s back, keep security tag for pick up and escort child to classroom. </li>
+                                <li>Upon pick up, parents will show security tag to the child care worker. </li>
+                              </ul>
+                            </p>
+                    
+                            <p class="twmc-p mt-3 mb-0">
+                              <strong>Kindergarten – 5th Grade</strong>
+                              <ul class="mt-0">
+                                <li>Older children start in worship with their families and will be dismissed to NextGen Kids during the worship service. </li>
+                                <li>Adult helpers will walk them to The Cove for assembly and class time. </li>
+                                <li>Children will return to their families for the conclusion of the worship service.</li>
+                              </ul>
+                            </p>
+                            
+          
+                            <h4 class="twmc-4 mt-4 text-uppercase">WHAT TO EXPECT</h4>
+                            <p class="twmc-p">
+                              <strong>3 – 5 Years Old </strong>
+                              <br>Our staff with 3 – 5 year olds are background checked and Safe Sanctuary trained. They help little ones learn about God’s Word at their own level. The stories read each week correspond to those learned by the older children and are accompanied by fun crafts and activities.
+                            </p>
+
+                            <p class="twmc-p">
+                              <strong>Kindergarten – 5th Grade</strong>
+                              <br>We believe it’s important for kids to gradually learn to participate in “big” worship. During the sermon time, elementary kids will be dismissed and escorted to The Cove for a special time of fun, discovery and learning. There they will gather with other students their age so they can learn about God’s Word at their own pace and level.
+                            </p>
+          
+                           
+          
+                        </div>
+                      </div>
+                    </div>
+                    <!-- EO Q1 -->
+
+                    <!-- Q2 -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="heading-ngkfaq-cov2">
+                          <h4 class="panel-title twmc-panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordion-ngkfaq-cov" href="#collapse-ngkfaq-cov2" aria-expanded="false" aria-controls="collapse-ngkfaq-cov2" class="collapsed twmc-panel-title__link"><span class="twmc-panel-title__text faq-text-link--trad">Nursery (6 weeks – 2 Years Old)</span><i class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"></i>
+                              </a>
+                          </h4>
+                      </div>
+                      <div id="collapse-ngkfaq-cov2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-ngkfaq-cov2">
+                        <div class="panel-body twmc-panel-body">
+                          <p class="twmc-p mt-3">On Sundays, loving nursery care is available throughout the entire service for infants and toddlers. Our nursery staff are consistent, experienced, Safe Sanctuary trained and background checked, so you can be sure that your little ones are in excellent hands. </p>
+                          <p class="twmc-p">Children are precious to us at Covenant Church at Creekside. We strive to make our nursery fun and stimulating for even the youngest child coming through our door. While we realize it can be difficult to leave your child in the care of others, we want to assure you that our staff has a genuine love for the work they do. </p>
+                          <p class="twmc-p">We offer a loving, Christian atmosphere. Our rooms are safe, fun and filled with age-appropriate toys, games and books. </p>
+
+                          <p class="twmc-p mt-4 mb-0"><strong>Child Care Reservations </strong> </p>
+                          <p class="twmc-p">Reservations are not necessary for worship services. Nursery care is provided at no cost for worship services. </p>
+                          
+        
+                        </div>
+                      </div>
+                    </div>
+                    <!-- EO Q2 -->
+
+                  </div>
+
+                </div>
+                <!-- End of Tab2 -->
+
+            </div>
+            <!-- End of Tab Content -->
+          </div>
+          
+        </div>
+    </div>
+  </section>
+  <!-- End of Toggle -->
+
+
+  
+  <!-- fontawesome v6 -->
+  <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+        // When any accordion panel is shown
+        $('.panel.panel-default').on('shown.bs.collapse', function (e) {
+            // Target the specific panel that was opened and change its icon to 'minus'
+            var panelHeading = $(e.target).prev('.panel-heading');
+            panelHeading.find('.fa-plus').removeClass('fa-plus').addClass('fa-minus');
+        });
+    
+        // When any accordion panel is hidden
+        $('.panel.panel-default').on('hidden.bs.collapse', function (e) {
+            // Target the specific panel that was closed and change its icon to 'plus'
+            var panelHeading = $(e.target).prev('.panel-heading');
+            panelHeading.find('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
+        });
+    });
+  </script>
+    
+
+
+
+  <!-- Footer -->
+  <style>
+    .footer-logo2 {
+        height: 50px;
+        margin-right: 10px;
+        max-width: 100%;
+    }
+
+    .footer-logo-gmc {
+        height: 30px;
+    }
+
+    .footer-text-gmc {
+        font-size: 0.7rem;
+    }
+
+    .footer-newlogo-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      align-items: center;
+    }
+
+    .footer-gmc-div {
+      border-left: 1px solid white;
+      padding-left: 14px;
+    }
+
+    .footer-infos-wrapper {
+      margin-top: 1.8rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .footer-infos-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      .footer-newlogo-wrapper {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .footer-logo2 {
+        height: 50px;
+        width: auto;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+      }
+
+      .footer-gmc-div {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .footer-logo-gmc {
+        height: 25px;
+      }
+    }
+  </style>
+
+  <section class="footer-wrapper-twmc py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="row">
+            <!-- Left -->
+            <div class="col-sm-7 footer-info-wrapper">
+              <!-- Footer logo wrapper -->
+              <div class="footer-newlogo-wrapper">
+                <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo2">
+                
+                <div class="mt-0 footer-gmc-div">
+                  <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
+                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="" class="footer-logo-gmc mb-1">
+                </div>
+              </div>
+              <!-- End of footer logo wrapper -->
+
+              <div class="footer-infos-wrapper">
+                <p class="footer-info align-center">
+                  <i class="fas fa-church mr-1"></i>
+                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
+                    _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                </p>
+                <p class="footer-info">
+                  <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                </p>
+              </div>
+
+              <div class="my-3">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+              </div>
+              
+
+            </div>
+
+            <div class="col-sm-1"></div>
+
+            <!-- Right -->
+            <div class="col-sm-4 footer-flex-container">
+              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+              <a href="/safari-stop" class="footer-flex-item footer-link">Safari Stop</a>
+              <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
+
+              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
+
+
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+   <!-- fontawesome v6 -->
+   <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+
+
+   <script>
+     $(document).ready(function(){
+         // When any accordion panel is shown
+         $('.panel.panel-default').on('shown.bs.collapse', function (e) {
+             // Target the specific panel that was opened and change its icon to 'minus'
+             var panelHeading = $(e.target).prev('.panel-heading');
+             panelHeading.find('.fa-plus').removeClass('fa-plus').addClass('fa-minus');
+         });
+     
+         // When any accordion panel is hidden
+         $('.panel.panel-default').on('hidden.bs.collapse', function (e) {
+             // Target the specific panel that was closed and change its icon to 'plus'
+             var panelHeading = $(e.target).prev('.panel-heading');
+             panelHeading.find('.fa-minus').removeClass('fa-minus').addClass('fa-plus');
+         });
+     });
+ </script>
+</body>
+</html>

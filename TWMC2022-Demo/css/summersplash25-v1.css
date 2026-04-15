@@ -1,0 +1,386 @@
+/* ====== SUMMER SPLASH 2025 ====== */
+/* ================================ */
+
+.summersplash25-section-blue {
+    background-color: #007cc2;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+
+.summersplash25-may {
+    background-color: #2A7CC2;
+    background: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_summersplash/summersplash-may.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .summersplash25-june {
+    background-color: #2A7CC2;
+    background: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_summersplash/summersplash-june.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .summersplash25-julaug {
+    background-color: #2A7CC2;
+    background: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_summersplash/summersplash-jul-aug2.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+
+  .summersplash25-intro2 {
+    background-color: rgba(244, 244, 244, 0.6);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    padding: 1.5rem 0;
+  }
+
+  .summersplash25-intro-title {
+    line-height: 1.3;
+  }
+
+  .summersplash25-section-title {
+    text-shadow: #FFCC16 5px 0 10px;
+    /* text-shadow: 1px 1px 2px #42C1F3, 0 0 1rem #FACC19, 0 0 0.2em #42C1F3; */
+    text-shadow: 1px 1px 2px #FACC19;
+    text-shadow: 1px 1px 2px #2A7CC2;
+  }
+
+ /* Flex */
+  .summersplash25-flex-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 2%;
+  }
+
+  .summersplash25-flex-item {
+      flex-basis: 32%;
+      overflow: visible;
+      margin-bottom: 1.5rem;
+      flex-grow: 0;
+  }
+
+  @media only screen and (max-width: 991px) {
+      .summersplash25-flex-container {
+          flex-direction: row;
+          gap: 2%;
+      }
+      
+      .summersplash25-flex-item {
+          flex-basis: 49%;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+      .summersplash25-flex-container {
+          gap: 0;
+      }
+
+      .summersplash25-flex-item {
+          flex-basis: 100%;
+      }
+  }
+  /* End of Flex */
+
+  /* Cards */
+  .summersplash25--card {
+      border: 2px solid #fff;
+      border-radius: 4px;
+      padding: 1.5rem 1.5rem 2rem;
+      box-shadow: 5px 10px 20px #01B6DE;
+      background-color: #fff;
+      color: #333;
+      /* color: var(--color-dark-orange); */
+  }
+
+  .summersplash25---card-title {
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  .summersplash25-text-thewoodlands {
+      color: #ce457e;
+  }
+
+  .summersplash25-text-woodforest {
+      color: #0095b1;
+  }
+
+  .summersplash25-text-creekside {
+    color: #00472c;
+  }
+
+  .summersplash25-text-montgomery {
+    color: #331861;
+  }
+
+  .summersplash25-text-yellow {
+      /* color: #CA990E; */
+      color: #b88f00;
+  }
+
+  .a-summersplash25-pink {
+    color: #ce457e;
+  }
+
+  .a-summersplash25-pink:hover,
+  .a-summersplash25-pink:focus {
+    color: #f684ac;
+  }
+
+  .twmc-textcard-info2 {
+      font-size: .95rem !important;
+      line-height: 1.5;
+  }
+
+  .twmc-textcard-desc2 {
+      /* font-size: .95rem !important; */
+      line-height: 1.5;
+  }
+
+  /* @media only screen and (max-width: 576px) {
+      .twmc-textcard-info2 {
+          font-size: .8rem !important;
+      }
+
+      .twmc-textcard-desc2 {
+          font-size: .85rem !important;
+      }
+      
+    } */
+
+  /* End of Cards */
+
+
+  /* Buttons/Tags */
+  .summersplash25-tag-thewoodlands {
+      display: inline-block;
+      color: #ce457e;
+      font-size: .53rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #ffe4ec;
+      border: 1px solid #ffe4ec;
+      border-radius: .25rem;
+      padding: .3rem .45rem .2rem;
+      letter-spacing: 2px;
+      cursor: not-allowed;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  .summersplash25-tag-woodforest {
+      display: inline-block;
+      color: #0095b1;
+      font-size: .53rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #e2f2f7;
+      border: 1px solid #e2f2f7;
+      border-radius: .25rem;
+      padding: .3rem .45rem .2rem;
+      letter-spacing: 2px;
+      cursor: not-allowed;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  .summersplash25-tag-creekside {
+    display: inline-block;
+    color: #00472c;
+    font-size: .53rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: #e3f2eb;
+    border: 1px solid #e3f2eb;
+    border-radius: .25rem;
+    padding: .3rem .45rem .2rem;
+    letter-spacing: 2px;
+    cursor: not-allowed;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+  .summersplash25-tag-montgomery {
+    display: inline-block;
+    color: #331861;
+    font-size: .53rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: #e8e0f0;
+    border: 1px solid #e8e0f0;
+    border-radius: .25rem;
+    padding: .3rem .45rem .2rem;
+    letter-spacing: 2px;
+    cursor: not-allowed;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.summersplash25-tag-other {
+    display: inline-block;
+    color: #b88f00;
+    font-size: .53rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color: #FDF6DF;
+    border: 1px solid #FDF6DF;
+    border-radius: .25rem;
+    padding: .3rem .45rem .2rem;
+    letter-spacing: 2px;
+    cursor: not-allowed;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+  .summersplash25-btn-thewoodlands {
+      border: 2px solid #ce457e;
+      background-color: #FDEAF1;
+      color: #ce457e;
+      margin-bottom: .3rem;
+      font-weight: 700;
+
+      transition: all .3s ease-in-out;
+  }
+
+  .summersplash25-btn-thewoodlands:hover,
+  .summersplash25-btn-thewoodlands:focus {
+      border-color: #F0659B;
+      background-color: #FCDFEA;
+      text-decoration: none;
+      color: #F0659B;
+
+      transform: scale(1.04);
+  }
+
+  .summersplash25-btn-woodforest {
+      /* border: 2px solid #3692AA; */
+      /* color: #3692AA; */
+      border: 2px solid #0095b1;
+      color: #0095b1;
+      background-color: #E5F5F9;
+      
+      margin-bottom: .3rem;
+      font-weight: 700;
+
+      transition: all .3s ease-in-out;
+  }
+
+  .summersplash25-btn-woodforest:hover,
+  .summersplash25-btn-woodforest:focus {
+      border-color: #3692AA;
+      background-color: #D7F0F6;
+      text-decoration: none;
+      color: #3692AA;
+
+      transform: scale(1.04);
+  }
+
+  .summersplash25-btn-creekside {
+        border: 2px solid #00472c;
+        color: #00472c;
+        background-color: #e3f2eb;
+        
+        margin-bottom: .3rem;
+        font-weight: 700;
+
+        transition: all .3s ease-in-out;
+    }
+
+    .summersplash25-btn-creekside:hover,
+    .summersplash25-btn-creekside:focus {
+        border-color: #0a7657;
+        background-color: #e3f2eb;
+        text-decoration: none;
+        color: #0a7657;
+
+        transform: scale(1.04);
+    }
+
+    .summersplash25-btn-montgomery {
+        border: 2px solid #331861;
+        color: #331861;
+        background-color: #e8e0f0;
+        
+        margin-bottom: .3rem;
+        font-weight: 700;
+
+        transition: all .3s ease-in-out;
+    }
+
+    .summersplash25-btn-montgomery:hover,
+    .summersplash25-btn-montgomery:focus {
+        border-color: #270e56;
+        background-color: #e8e0f0;
+        text-decoration: none;
+        color: #270e56;
+
+        transform: scale(1.04);
+    }
+
+  .summersplash25-btn-yellow {
+      border: 2px solid #b88f00;
+      color: #b88f00;
+      background-color: #FDF6DF;
+      margin-bottom: .3rem;
+      font-weight: 700;
+
+      transition: all .3s ease-in-out;
+  }
+
+  .summersplash25-btn-yellow:hover,
+  .summersplash25-btn-yellow:focus {
+      border-color: #CA990E;
+      background-color: #FDF6DF;
+      text-decoration: none;
+      color: #CA990E;
+
+      transform: scale(1.04);
+  }
+
+  .summersplash25-btn-inactive {
+      border: 2px solid #444;
+      background-color: #eee;
+      color: #444;
+      margin-bottom: .3rem;
+      font-weight: 700;
+
+      cursor: not-allowed;
+  }
+
+  .summersplash25-btn-inactive:hover,
+  .summersplash25-btn-inactive:focus {
+      border-color: #444;
+      background-color: #eee;
+      text-decoration: none;
+      color: #444;
+      cursor: not-allowed;
+  }
+
+  /* End of Buttons/Tags */
+
+  /* Slots available wrapper adjustment */
+  .twmc-seats-flex-container {
+    justify-content: flex-start;
+  }
+  /* End of Slots available wrapper adjustment */

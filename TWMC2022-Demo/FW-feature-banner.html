@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section - Feature Banner 1 Col</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.57">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.57">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.57">
+    
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+    <link rel="stylesheet" href="./css/sparkle.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+</head>
+<body>
+    
+      <!-- FEATBANNER [IMG L X INFO R]  -->
+      <style>
+         .featbanner__bg-cover--left {
+            background-color: #bc9454;
+            background-image: url("https://s3.us-east-2.amazonaws.com/rockrms-assets/images/_feature-banners/SPN_June%20Family%20Worship_Feature%20Banner.png");
+            text-align: left;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 650px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            color: #fff;
+        }
+
+        .featbanner-hero--text-wrapper {
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .featbanner-hero--text-wrapper > img {
+            width: 55%;
+            height: auto;
+            margin-right: 0;
+            /* margin-bottom: 1rem; */
+        }
+
+        .featbanner__desc {
+            width: 55%;
+            color:#554741;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .featbanner__bg-cover--left,
+            .featbanner-hero--text-wrapper {
+              height: 600px;
+              align-items: center;
+            }
+
+            .featbanner-hero--text-wrapper > img {
+                width: 70%;
+            }
+
+            .featbanner__desc {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .featbanner-hero--text-wrapper > img {
+                width: 65%;
+            }
+
+            .featbanner__desc {
+                width: 65%;
+                padding: 0rem 0rem 1rem 0rem !important;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .featbanner__bg-cover--left,
+            .featbanner-hero--text-wrapper {
+                height: 450px;
+                background-position: center center;
+            }
+
+            .featbanner-hero--text-wrapper > img {
+                width: 70%;
+                padding: 0 .5rem;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .featbanner-hero--text-wrapper > img {
+                width: 75%;
+            }
+
+        }
+
+        .featbanner--btn {
+          margin-right: 2rem;
+          background-color: #EDEAE3;
+          border: 2px solid #554741;
+          color: #554741;
+          border-radius: 10px;
+        }
+
+        .featbanner--btn:hover,
+        .featbanner--btn:focus {
+          background-color: rgba(0, 0, 0, 0.4);
+          border: 2px solid #EDEAE3;
+          color: #EDEAE3;
+          transform: scale(1.02);
+        }
+
+        @media only screen and (max-width: 1200px) {
+          .featbanner--btn {
+            margin-right: 1.5rem;
+          }
+        }
+
+        @media only screen and (max-width: 768px) {
+          .featbanner--btn {
+            margin-right: 1.2rem;
+          }
+        }
+
+
+        @media only screen and (max-width: 576px) {
+          .featbanner--btn {
+            margin-right: 1rem;
+          }
+        }
+
+        @media only screen and (max-width: 450px) {
+          .featbanner--btn {
+            margin-right: 0.7rem;
+          }
+        }
+
+      </style>
+
+
+      <section class="featbanner__bg-cover--left">
+        <div class="container featbanner-hero--text-wrapper">
+            <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/_feature-banners/SPN_June%20Family%20Worship_Feature%20Banner_TEXT.png" class="img-responsive pb-3">
+            <a href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6329" class="twmc--btn twmc--btn--jontyson2024 jontyson2024-featbanner-btn featbanner--btn mt-0" target="_blank">Learn more &rarr;</a>
+        </div>
+      </section>
+
+      <section class="featbanner__bg-cover--left">
+        <div class="container featbanner-hero--text-wrapper">
+            <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/_feature-banners/SPN_June%20Family%20Worship_Feature%20Banner_TEXT.png" class="img-responsive pb-3">
+             <p class="twmc-p featbanner__desc px-3 " >Join us for our June Special Needs Family Worship and Fellowship as we celebrate God's wonderful work in baptism followed by a pool party! </p>
+            <a href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6329" class="twmc--btn twmc--btn--jontyson2024 jontyson2024-featbanner-btn featbanner--btn mt-0" target="_blank">Learn more &rarr;</a>
+        </div>
+      </section>
+      <!-- END OF FEATBANNER [IMG L X INFO R]  -->
+</body>
+</html>

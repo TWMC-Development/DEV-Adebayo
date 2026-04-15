@@ -1,0 +1,237 @@
+body {
+    color: #5A6074;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #63BC47;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    color: #5A6074;
+}
+
+.min-600 {
+    min-height: 600px;
+}
+
+.min-800 {
+    min-height: 800px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.page_header_background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), center center no-repeat;
+    background-size: cover;
+}
+
+.nix_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nix_flex a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nix__flex_link:hover {
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.nix__flex_bx {
+    display: flex;
+    overflow: hidden;
+    /* order: 1; */
+    flex: 1 1 0;
+    min-width: 340px;
+}
+
+
+.nix__flex_box_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    text-align: center;
+    order: 1;
+    flex: 1 1 0;
+    min-width: 340px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.childrenofthewoodlands.org/images/008.jpg') right center no-repeat; 
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+
+.nix__flex_box_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    text-align: center;
+    order: 2;
+    flex: 1 1 0;
+    min-width: 340px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.childrenofthewoodlands.org/images/002.jpg') right center no-repeat; 
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.nix__flex_box_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    text-align: center;
+    order: 3;
+    flex: 1 1 0;
+    min-width: 340px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.childrenofthewoodlands.org/images/013.jpg') right center no-repeat; 
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.nix__flex_box_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    text-align: center;
+    order: 4;
+    flex: 1 1 0;
+    min-width: 340px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.childrenofthewoodlands.org/images/004.jpg') right center no-repeat; 
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.nix__flex_box_5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    text-align: center;
+    order: 5;
+    flex: 1 1 0;
+    min-width: 340px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.childrenofthewoodlands.org/images/015.jpg') right center no-repeat; 
+    background-size: cover;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.nix__flex_bx:hover .nix__flex_box_1,
+.nix__flex_bx:focus .nix__flex_box_1,
+.nix__flex_bx:hover .nix__flex_box_2,
+.nix__flex_bx:focus .nix__flex_box_2,
+.nix__flex_bx:hover .nix__flex_box_3,
+.nix__flex_bx:focus .nix__flex_box_3,
+.nix__flex_bx:hover .nix__flex_box_4,
+.nix__flex_bx:focus .nix__flex_box_4,
+.nix__flex_bx:hover .nix__flex_box_5,
+.nix__flex_bx:focus .nix__flex_box_5{
+    transform: scale(1.1);
+}
+
+.nix_bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nix__bar_box {
+    padding: 10px 0;
+    flex: 1 1 0;
+    min-width: 340px;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 100%;
+}
+
+.blog-date {
+    color: #ACADB3;
+}
+
+.btn-blog a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 576px) {
+    .blog-title {
+        margin-top: 2rem;
+    }
+}
+
+/* Staff Page */
+.twmc-flex-container--3-col__1rem-gap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+.twmc-flex-item--3-col__1rem-gap {
+    flex-basis: 32%;
+    overflow: hidden;
+}
+  
+@media (max-width: 1199px) {
+    .twmc-flex-container--3-col__1rem-gap {
+        justify-content: center;
+    }
+    .twmc-flex-item--3-col__1rem-gap {
+        flex-basis: 48%;
+    }
+}
+  
+@media (max-width: 991px) {
+    .twmc-flex-container--3-col__1rem-gap{
+        flex-direction: column;
+    }
+    .twmc-flex-item--3-col__1rem-gap {
+        flex-basis: 100%;
+    }
+}
+  
+.twmc-flex-img--3-col__250h {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    padding-bottom: .7rem;
+}
