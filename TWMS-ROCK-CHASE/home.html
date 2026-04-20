@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,10 +24,110 @@
       href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.22"
     />
     <link rel="stylesheet" href="./css/twms-main.css" />
+
+    <style>
+      /* ===== START: Homepage Head of School Video Styles ===== */
+      .twms__hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+      }
+
+      .twms__hero-actions .twms__button {
+        min-width: 220px;
+      }
+
+      .twms__button-hero-primary {
+        background-color: #ffffff;
+        border: 2px solid #ffffff;
+        color: #10245f;
+        box-shadow:
+          0 0 0 6px rgba(255, 255, 255, 0.14),
+          0 16px 36px rgba(255, 255, 255, 0.3);
+      }
+
+      .twms__button-hero-primary:hover,
+      .twms__button-hero-primary:focus {
+        background-color: #f7fbff;
+        border-color: #f7fbff;
+        color: #10245f;
+        text-decoration: none;
+      }
+
+      #twms-home__head-video {
+        padding: 7.8125rem 0;
+        background: linear-gradient(180deg, #f8fcfe 0%, #ffffff 100%);
+        scroll-margin-top: 2rem;
+      }
+
+      .twms-home__head-video-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .twms-home__head-video-eyebrow {
+        margin-bottom: 0.75rem;
+        color: #007fa3;
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+      }
+
+      .twms-home__head-video-copy {
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+      }
+
+      .twms-home__info-eyebrow {
+        margin-bottom: 0.75rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+      }
+
+      .twms-home__head-video-content {
+        text-align: left;
+      }
+
+      .twms-home__curriculum-actions {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        clear: both;
+      }
+
+      .twms-home__video-frame {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 24px 60px rgba(9, 17, 56, 0.18);
+        background-color: #091138;
+      }
+
+      .twms-home__video-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .twms-home__head-video-row {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      /* ===== END: Homepage Head of School Video Styles ===== */
+    </style>
   </head>
-  
-
-
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-expand-lg twms__navbar">
@@ -304,7 +404,6 @@
   </nav>
   <!-- End of Navigation -->
 
- 
   <!-- Hero -->
   <section id="twms-home__hero">
     <video
@@ -323,25 +422,32 @@
 
     <div class="twms__hero-text">
       <h2>HERE, YOUR CHILD IS<br />LOVED AND KNOWN</h2>
-      <a
-        href="https://vimeo.com/854464797"
-        class="twms__button twms__button-outline-white"
-        >Watch Testimonials from our Alumni</a
-      >
+      <div class="twms__hero-actions">
+        <a
+          href="#twms-home__info"
+          class="twms__button twms__button-hero-primary"
+          >Meet Our Incoming Head of School</a
+        >
+        <a
+          href="https://vimeo.com/854464797"
+          target="_blank"
+          rel="noopener"
+          class="twms__button twms__button-outline-white"
+          >Watch Testimonials from our Alumni</a
+        >
+      </div>
     </div>
   </section>
   <!-- End of Hero -->
 
-
- 
   <!-- Content -->
-
-
 
   <!-- START: Homepage Featured Event Banner -->
   <section id="twms-home__featured-event">
     <div class="container">
-      <div class="twms-home__event-banner twms-home__event-banner--fiesta-night">
+      <div
+        class="twms-home__event-banner twms-home__event-banner--fiesta-night"
+      >
         <div class="twms-home__event-banner-inner">
           <div class="twms-home__event-copy">
             <p class="twms-home__event-eyebrow">TWMS P.E.O. Invites You To</p>
@@ -382,11 +488,6 @@
   </section>
   <!-- END: Homepage Featured Event Banner -->
 
-
-
-
-
-
   <!-- Welcome -->
   <section id="twms__home-welcome" class="twms__section-pymed-white">
     <div class="container py-5">
@@ -415,19 +516,51 @@
   <!-- Info -->
   <section id="twms-home__info" class="twms__section-pylg">
     <div class="container">
+      <div class="row twms-home__head-video-row">
+        <div class="col-md-5 twms-home__head-video-content">
+          <p class="twms-home__info-eyebrow">NEW LEADERSHIP</p>
+          <h2 class="twms__header-white mt-0">
+            MEET OUR INCOMING HEAD OF SCHOOL
+          </h2>
+          <p class="twms-home__head-video-copy">
+            Hear directly from our incoming Head of School and get a first look
+            at the vision, heart, and leadership guiding this next chapter at
+            The Woodlands Methodist School.
+          </p>
+        </div>
+        <div class="col-md-7">
+          <div class="twms-home__video-frame">
+            <iframe
+              src="https://player.vimeo.com/video/1182715705?title=0&byline=0&portrait=0"
+              title="Meet Our Incoming Head of School"
+              loading="lazy"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End of Info -->
+
+  <!-- Head of School Video -->
+  <section id="twms-home__head-video">
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h2 class="twms__header-white mb-3" style="text-align: left">
+          <h2 class="twms__header-blue mb-3" style="text-align: left">
             CURRICULUM HIGHLIGHTS
           </h2>
-          <hr style="border-width: 4px" />
+          <hr style="border-width: 4px; border-color: #007fa3" />
 
           <div class="row">
             <div class="col-sm-6">
               <img
                 class="img-responsive"
                 src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/twms/twms-fall-2024-action/TWMS_Curriculum%20Highlights.jpg"
-                alt="curriculum theme"
+                alt="Curriculum Highlights"
               />
             </div>
             <div class="col-sm-6">
@@ -438,25 +571,25 @@
                 class sizes. We are committed to excellence, guided by The
                 Woodlands Methodist Church, and accredited through Cognia. By
                 partnering closely with families, we emphasize compassion,
-                integrity, and the development of each student's full
-                potential—heart, mind, and body—preparing them to be
-                responsible, Christ-like citizens who positively impact the
-                world.
+                integrity, and the development of each student's full potential
+                in heart, mind, and body, preparing them to be responsible,
+                Christ-like citizens who positively impact the world.
               </p>
             </div>
           </div>
 
-          <a
-            href="academics/program-overview"
-            class="twms__button twms__button-outline-white mb-2 mt-5"
-            >Learn More</a
-          >
+          <div class="twms-home__curriculum-actions">
+            <a
+              href="academics/program-overview"
+              class="twms__button twms__button-outline-dark-blue mb-2 mt-5"
+              >Learn More</a
+            >
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- End of Info -->
+  <!-- End of Head of School Video -->
 
   <!-- Stats -->
   <section class="twms__section-pymed-blue">

@@ -544,14 +544,6 @@ a.twms__footer-link:focus {
   margin-bottom: 20px;
 }
 
-.twms__hero-text > a {
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
 @media only screen and (min-width: 576px) {
   .twms__hero-text > h2 {
     font-size: 3rem;
