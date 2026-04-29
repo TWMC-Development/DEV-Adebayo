@@ -28,15 +28,15 @@
       href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60"
     />
 
-    <link rel="stylesheet" href="./css/nw-main2023.css" />
-    <link rel="stylesheet" href="./css/nw-navbar.css" />
-    <link rel="stylesheet" href="./css/nw-grow.css" />
-    <link rel="stylesheet" href="./css/seasonal.css" />
-    <link rel="stylesheet" href="./css/sparkle.css" />
-    <link rel="stylesheet" href="./css/utilities-templates.css" />
+    <link rel="stylesheet" href="css/v3-nw-main2023.css" />
+    <link rel="stylesheet" href="css/v3-nw-navbar.css" />
+    <link rel="stylesheet" href="css/v3-nw-grow.css" />
+    <link rel="stylesheet" href="css/v3-seasonal.css" />
+    <link rel="stylesheet" href="css/v3-sparkle.css" />
+    <link rel="stylesheet" href="css/v3-utilities-templates.css" />
 
     <!-- Script -->
-    <script src="/js/script2023.js"></script>
+    <script src="./js/script2023.js"></script>
 
     <!-- fontawesome -->
     <script
@@ -401,65 +401,165 @@
 
     <!-- Page Content: paste the Rock RMS page content here. -->
     <main>
-      <!-- Hero - Church online / live -->
-      <section
-        id="twmc-churchonline__hero"
-        class="twmc-hero-background--650h-leftalign"
-      >
-        <div class="twmc-container twmc-hero-services__text">
-          <img
-            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_ChurchOnline_Text.png"
-            alt=""
-            class="img-responsive-center"
-          />
-        </div>
-      </section>
-      <!-- End of Hero - Church online / live -->
-
-      <!-- Intro -->
-      <section class="twmc-section__pymed-lightgrey">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="row">
-                <!-- Intro video -->
-                <div class="col-md-6">
-                  <img
-                    src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_ChurchOnline_image1.jpg"
-                    alt=""
-                    class="img-responsive"
-                  />
-                </div>
-
-                <!-- Intro description -->
-                <div class="col-md-6 twmc-intro__description-bootstrap">
-                  <h2 class="twmc-h2 twmc-intro__h2">
-                    Welcome to Church Online
-                  </h2>
-                  <p class="twmc-p">
-                    We’re glad you stopped by for a visit. We hope you enjoy a
-                    more interactive online church experience with Church
-                    Online.
-                    <br />
-                    The new platform allows you to actually interact with others
-                    through joining the live chat features or sharing your live
-                    prayer requests. It’s a more participatory experience where
-                    you can take advantage of note taking and sharing, along
-                    with helpful Bible app integration. You can access Church
-                    Online from anywhere – a tablet, computer or mobile device.
-                    While being online won’t replace being in a live worship
-                    service, we think you will find this to be a viable
-                    complement to experiencing church in person.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End of intro -->
-
+      <!-- ===============================================================
+        CHURCH ONLINE PAGE CSS
+        Copy/paste this full style block once for the Church Online page.
+        It contains the custom styles for the hero and service-card grid.
+      ================================================================ -->
       <style>
+        /* ----- Church Online Hero ----- */
+        #twmc-churchonline__hero {
+          position: relative;
+          min-height: 387px;
+          display: flex;
+          align-items: center;
+          background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15)),
+            url("./images/COM_ChurchOnline_BKG.jpg");
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          text-align: left !important;
+        }
+
+        .twmc-churchonline-hero__scroll-cue {
+          position: absolute;
+          left: 50%;
+          bottom: 1.25rem;
+          transform: translateX(-50%);
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.15rem;
+          color: #fff;
+          font-family: "Open Sans", sans-serif;
+          font-size: 0.74rem;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          text-decoration: none;
+          opacity: 0.92;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .twmc-churchonline-hero__scroll-cue:hover,
+        .twmc-churchonline-hero__scroll-cue:focus {
+          color: #fff;
+          opacity: 1;
+          text-decoration: none;
+        }
+
+        .twmc-churchonline-hero__scroll-cue svg {
+          width: 22px;
+          height: 22px;
+          animation: twmc-scroll-bounce 1.8s ease-in-out infinite;
+        }
+
+        @keyframes twmc-scroll-bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(6px); }
+        }
+
+        @media only screen and (max-width: 768px) {
+          .twmc-churchonline-hero__scroll-cue {
+            font-size: 0.68rem;
+            bottom: 1rem;
+          }
+        }
+
+        .twmc-churchonline-hero__content {
+          max-width: 560px;
+          padding: 2.5rem 15px;
+          text-align: left;
+        }
+
+        .twmc-churchonline-hero__logo {
+          display: block;
+          width: 100%;
+          max-width: 420px;
+          height: auto;
+          margin: 0 0 1.25rem;
+        }
+
+        .twmc-churchonline-hero__copy {
+          max-width: 460px;
+          margin: 0 0 1.5rem;
+          color: #fff;
+          font-family: "Open Sans", sans-serif;
+          font-size: 0.95rem;
+          font-weight: 500;
+          line-height: 1.5;
+          text-align: left;
+        }
+
+        @media only screen and (max-width: 768px) {
+          #twmc-churchonline__hero {
+            min-height: 460px;
+            background-position: 65% center;
+          }
+
+          .twmc-churchonline-hero__content {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+          }
+
+          .twmc-churchonline-hero__logo {
+            max-width: 320px;
+            margin-bottom: 1rem;
+          }
+
+          .twmc-churchonline-hero__copy {
+            font-size: 0.9rem;
+          }
+        }
+
+        /* ----- Church Online Service Cards ----- */
+        #twmc-live__services {
+          padding-top: 7.525rem;
+          padding-bottom: 7.525rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+          #twmc-live__services {
+            padding-top: 6.425rem;
+            padding-bottom: 6.425rem;
+          }
+        }
+
+        .twmc-services__heading {
+          text-align: center;
+          margin: 0 auto 2.25rem;
+          max-width: 720px;
+        }
+
+        .twmc-services__title {
+          font-family: "Montserrat", "Open Sans", sans-serif;
+          font-size: 2.4rem;
+          font-weight: 700;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          color: #1f1f1f;
+          margin: 0 0 1rem;
+        }
+
+        .twmc-services__rule {
+          display: inline-block;
+          width: 72px;
+          height: 3px;
+          background: #97233F;
+          border-radius: 2px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          .twmc-services__title {
+            font-size: 1.7rem;
+            letter-spacing: 2.5px;
+          }
+          .twmc-services__heading {
+            margin-bottom: 1.5rem;
+          }
+        }
+
         .twmc-white__card {
           padding: 1rem;
           box-shadow: 0 2px 20px rgb(0 0 0 / 15%);
@@ -484,14 +584,59 @@
           }
         }
       </style>
+      <!-- END CHURCH ONLINE PAGE CSS -->
 
-      <!-- Services -->
+      <!-- ===============================================================
+        CHURCH ONLINE HERO SECTION
+        Copy/paste this section for the top hero.
+      ================================================================ -->
+      <section id="twmc-churchonline__hero">
+        <div class="container">
+          <div class="twmc-churchonline-hero__content">
+            <img
+              src="./images/COM_ChurchOnline_TXT_v2.png"
+              alt="Church Online"
+              class="twmc-churchonline-hero__logo"
+            />
+
+            <p class="twmc-churchonline-hero__copy">
+              Church Online offers an interactive, accessible way to engage in
+              church through live chat, prayer requests, note-taking, and Bible
+              integration, serving as a meaningful complement to in-person
+              worship.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- Hidden for now — uncomment to restore the scroll cue -->
+        <!--
+        <a
+          href="#twmc-live__services"
+          class="twmc-churchonline-hero__scroll-cue"
+          aria-label="Scroll to watch your campus"
+        >
+          <span>Watch Your Campus</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+        -->
+      </section>
+      <!-- END CHURCH ONLINE HERO SECTION -->
+
+      <!-- ===============================================================
+        CHURCH ONLINE SERVICES SECTION
+        Copy/paste this section for the campus video cards.
+      ================================================================ -->
       <section id="twmc-live__services" class="twmc-section__pymed-white">
         <div class="container">
           <div class="row">
-            <!-- Services -->
-            <!-- 2 col flex -->
             <div class="col-sm-12">
+              <div class="twmc-services__heading">
+                <h2 class="twmc-services__title">Choose Your Service</h2>
+                <span class="twmc-services__rule" aria-hidden="true"></span>
+              </div>
               <div class="twmc-im-new__flex-container--2-col">
                 <!-- Traditional -->
                 <div class="twmc-im-new__flex-item--2-col twmc-white__card">
@@ -656,11 +801,10 @@
                 </div>
               </div>
             </div>
-            <!-- End of services -->
           </div>
         </div>
       </section>
-      <!-- End of Services -->
+      <!-- END CHURCH ONLINE SERVICES SECTION -->
     </main>
 
     <!-- Footer -->
