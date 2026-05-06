@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/twms-main.css" />
 
     <style>
-      /* ===== START: Homepage Head of School Video Styles ===== */
+      /* ===== START: Hero Section (#twms-home__hero) ===== */
       .twms__hero-actions {
         display: flex;
         flex-wrap: wrap;
@@ -56,30 +56,133 @@
         color: #10245f;
         text-decoration: none;
       }
+      /* ===== END: Hero Section (#twms-home__hero) ===== */
 
-      #twms-home__head-video {
-        padding: 7.8125rem 0;
-        background: linear-gradient(180deg, #f8fcfe 0%, #ffffff 100%);
-        scroll-margin-top: 2rem;
+      /* ===== START: Featured Event Banner (#twms-home__featured-event) ===== */
+      #twms-home__featured-event {
+        margin: 24px auto 0;
+        padding: 0;
       }
 
+      .twms-home__event-banner {
+        position: relative;
+        width: 100%;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 226, 168, 0.28);
+        box-shadow: 0 24px 60px rgba(9, 17, 56, 0.24);
+      }
+
+      .twms-home__event-copy,
+      .twms-home__event-actions {
+        position: relative;
+        z-index: 1;
+      }
+
+      .twms-home__event-banner-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 3rem 1.5rem;
+      }
+
+      .twms-home__event-eyebrow {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .twms-home__event-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .twms-home__event-actions .twms__button {
+        min-width: 190px;
+      }
+
+      /* Home page variant: Celestial Floral Banner */
+      .twms-home__event-banner--fiesta-night {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(9, 17, 56, 0.2) 0%,
+            rgba(9, 17, 56, 0.2) 100%
+          ),
+          url("https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/PEO+Event+Banners/TWMS_PEO-Fundraising-Event-CUSTOM-LOOK-b.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff6df;
+      }
+
+      .twms-home__event-banner--fiesta-night .twms-home__event-banner-inner {
+        position: relative;
+        z-index: 2;
+        min-height: 70px;
+        justify-content: center;
+      }
+
+      .twms-home__event-banner--fiesta-night .twms-home__event-eyebrow {
+        color: #ffe2a8;
+      }
+
+      .twms-home__event-title-image-wrap {
+        margin-bottom: 1rem;
+      }
+
+      .twms-home__event-title-image {
+        display: block;
+        width: min(100%, 460px);
+        height: auto;
+      }
+
+      .twms-home__event-banner--fiesta-night .twms__button-dark-blue {
+        background-color: #ffb65c;
+        border-color: #ffb65c;
+        color: #132a69;
+        font-weight: 800;
+      }
+
+      .twms-home__event-banner--fiesta-night .twms__button-dark-blue:hover,
+      .twms-home__event-banner--fiesta-night .twms__button-dark-blue:focus {
+        background-color: #ffd779;
+        border-color: #ffd779;
+        color: #10245f;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .twms-home__event-banner-inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2rem;
+          padding: 2.25rem 6rem 2rem;
+        }
+
+        .twms-home__event-actions {
+          justify-content: flex-end;
+        }
+
+        .twms-home__event-banner--fiesta-night .twms-home__event-banner-inner {
+          min-height: 70px;
+        }
+      }
+      /* ===== END: Featured Event Banner (#twms-home__featured-event) ===== */
+
+      /* ===== START: Leadership Video Section (#twms-home__info) ===== */
       .twms-home__head-video-row {
         display: flex;
         flex-direction: column;
         gap: 2rem;
       }
 
-      .twms-home__head-video-eyebrow {
-        margin-bottom: 0.75rem;
-        color: #007fa3;
-        font-size: 0.95rem;
-        font-weight: 800;
-        letter-spacing: 0.2em;
-      }
-
-      .twms-home__head-video-copy {
-        margin-bottom: 1.5rem;
-        font-size: 1.05rem;
+      .twms-home__head-video-content {
+        text-align: left;
       }
 
       .twms-home__info-eyebrow {
@@ -90,15 +193,9 @@
         letter-spacing: 0.2em;
       }
 
-      .twms-home__head-video-content {
-        text-align: left;
-      }
-
-      .twms-home__curriculum-actions {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        clear: both;
+      .twms-home__head-video-copy {
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
       }
 
       .twms-home__video-frame {
@@ -125,7 +222,22 @@
           align-items: center;
         }
       }
-      /* ===== END: Homepage Head of School Video Styles ===== */
+      /* ===== END: Leadership Video Section (#twms-home__info) ===== */
+
+      /* ===== START: Curriculum Highlights Section (#twms-home__head-video) ===== */
+      #twms-home__head-video {
+        padding: 7.8125rem 0;
+        background: linear-gradient(180deg, #f8fcfe 0%, #ffffff 100%);
+        scroll-margin-top: 2rem;
+      }
+
+      .twms-home__curriculum-actions {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        clear: both;
+      }
+      /* ===== END: Curriculum Highlights Section (#twms-home__head-video) ===== */
     </style>
   </head>
 
@@ -450,7 +562,9 @@
       >
         <div class="twms-home__event-banner-inner">
           <div class="twms-home__event-copy">
-            <p class="twms-home__event-eyebrow">TWMS P.E.O. Invites You To</p>
+            <p class="twms-home__event-eyebrow">
+              The Woodlands Methodist School P.E.O. Invites You To
+            </p>
             <div class="twms-home__event-title-image-wrap">
               <img
                 src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/PEO+Event+Banners/fiesta-for-the-future.png"
@@ -470,8 +584,7 @@
           </div>
           <div class="twms-home__event-actions">
             <a
-              href="https://app.smore.com/n/qn1r8"
-              target="_blank"
+              href="https://twmschool.org/parents/peo/#twms-home__featured-event"
               rel="noopener"
               class="twms__button twms__button-dark-blue"
               >Learn More</a
