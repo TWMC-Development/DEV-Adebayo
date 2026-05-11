@@ -415,7 +415,7 @@
           align-items: center;
           background-image:
             linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15)),
-            url("./images/COM_ChurchOnline_BKG.jpg");
+            url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_ChurchOnline_BKG.jpg");
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -439,7 +439,9 @@
           text-transform: uppercase;
           text-decoration: none;
           opacity: 0.92;
-          transition: opacity 0.2s ease, transform 0.2s ease;
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease;
         }
 
         .twmc-churchonline-hero__scroll-cue:hover,
@@ -456,8 +458,13 @@
         }
 
         @keyframes twmc-scroll-bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(6px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(6px);
+          }
         }
 
         @media only screen and (max-width: 768px) {
@@ -546,7 +553,7 @@
           display: inline-block;
           width: 72px;
           height: 3px;
-          background: #97233F;
+          background: #97233f;
           border-radius: 2px;
         }
 
@@ -594,7 +601,7 @@
         <div class="container">
           <div class="twmc-churchonline-hero__content">
             <img
-              src="./images/COM_ChurchOnline_TXT_v2.png"
+              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_ChurchOnline_TXT_v2.png"
               alt="Church Online"
               class="twmc-churchonline-hero__logo"
             />
@@ -605,7 +612,6 @@
               integration, serving as a meaningful complement to in-person
               worship.
             </p>
-
           </div>
         </div>
 
@@ -671,6 +677,8 @@
                     <div class="mt-3">
                       <a
                         href="https://traditional.twmc.org/"
+                        target="_blank"
+                        rel="noopener"
                         class="twmc--btn twmc--btn--traditional twmc-mbxs twmc--btn--w150"
                         >Watch Online</a
                       >
@@ -711,6 +719,8 @@
                     <div class="mt-3">
                       <a
                         href="https://harvest.twmc.org/"
+                        target="_blank"
+                        rel="noopener"
                         class="twmc--btn twmc--btn--traditional twmc-mbxs twmc--btn--w150"
                         >Watch Online</a
                       >
@@ -751,6 +761,8 @@
                     <div class="mt-3">
                       <a
                         href="https://loft.twmc.org/"
+                        target="_blank"
+                        rel="noopener"
                         class="twmc--btn twmc--btn--traditional twmc-mbxs twmc--btn--w150"
                         >Watch Online</a
                       >
@@ -793,6 +805,8 @@
                     <div class="mt-3">
                       <a
                         href="https://woodforest.twmc.org/"
+                        target="_blank"
+                        rel="noopener"
                         class="twmc--btn twmc--btn--traditional twmc-mbxs twmc--btn--w150"
                         >Watch Online</a
                       >

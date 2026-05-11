@@ -687,39 +687,6 @@
         width: 100%;
       }
 
-      .media-resource-message-preview-link {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .media-resource-message-preview-link:hover,
-      .media-resource-message-preview-link:focus {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .media-resource-message-thumb-group {
-        display: flex;
-        flex: 0 0 auto;
-        flex-direction: column;
-        gap: 7px;
-      }
-
-      .media-resource-message-label {
-        color: #5f5a56;
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.22em;
-        line-height: 1;
-        text-transform: uppercase;
-        transition: color 0.25s ease;
-      }
-
-      .media-resource-card:hover .media-resource-message-label,
-      .media-resource-card:focus-within .media-resource-message-label {
-        color: rgba(255, 255, 255, 0.62);
-      }
-
       .media-resource-preview-footer {
         border-top: 1px solid var(--media-bone);
         display: flex;
@@ -742,59 +709,6 @@
         flex: 0 0 auto;
         overflow: hidden;
         position: relative;
-      }
-
-      .media-resource-thumb-video {
-        height: 79px;
-        width: 140px;
-      }
-
-      .media-resource-thumb-message {
-        background:
-          radial-gradient(
-            circle at 30% 20%,
-            rgba(255, 255, 255, 0.08),
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 80% 90%,
-            rgba(0, 0, 0, 0.25),
-            transparent 60%
-          ),
-          var(--media-red-deep);
-        background-position: center center;
-        background-size: cover;
-      }
-
-      .media-resource-thumb-message::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        opacity: 0.14;
-        background:
-          linear-gradient(#f5f2ee, #f5f2ee) 50% 58% / 8px 120px no-repeat,
-          radial-gradient(ellipse at 40% 36%, #f5f2ee 0 28%, transparent 29%),
-          radial-gradient(ellipse at 62% 42%, #f5f2ee 0 24%, transparent 25%);
-      }
-
-      .media-resource-thumb-message.has-series-art::before {
-        display: none;
-      }
-
-      .media-resource-play {
-        align-items: center;
-        background: rgba(255, 255, 255, 0.92);
-        border-radius: 50%;
-        color: var(--media-red);
-        display: flex;
-        height: 32px;
-        justify-content: center;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 32px;
-        z-index: 2;
       }
 
       .media-resource-thumb-live {
@@ -829,6 +743,26 @@
         height: 72px;
         justify-content: center;
         width: 72px;
+      }
+
+      .media-resource-thumb-messages {
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          var(--media-red),
+          var(--media-red-ink)
+        );
+        color: #fff;
+        display: flex;
+        height: 72px;
+        justify-content: center;
+        width: 72px;
+      }
+
+      .media-resource-card:hover .media-resource-thumb-messages,
+      .media-resource-card:focus-within .media-resource-thumb-messages {
+        background: #fff;
+        color: var(--media-red);
       }
 
       .media-resource-card:hover .media-resource-thumb-podcast,
@@ -885,31 +819,22 @@
         color: #fff;
       }
 
-      .media-resource-duration {
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 2px;
-        bottom: 5px;
-        color: #fff;
-        font-family: Menlo, Consolas, monospace;
-        font-size: 9px;
-        padding: 1px 5px;
-        position: absolute;
-        right: 5px;
-        z-index: 3;
-      }
-
       .media-resource-preview-copy {
         flex: 1 1 auto;
         min-width: 0;
       }
 
-      .media-resource-live-copy {
+      .media-resource-live-copy,
+      .media-resource-message-copy,
+      .media-resource-channel-copy {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
       }
 
-      .media-resource-live-copy .media-resource-service-list {
+      .media-resource-live-copy .media-resource-service-list,
+      .media-resource-message-copy .media-resource-service-list,
+      .media-resource-channel-copy .media-resource-service-list {
         align-self: stretch;
         width: 100%;
       }
@@ -950,7 +875,11 @@
       }
 
       .media-resource-live-copy .media-resource-service-list li:hover,
-      .media-resource-live-copy .media-resource-service-list li:focus-within {
+      .media-resource-live-copy .media-resource-service-list li:focus-within,
+      .media-resource-message-copy .media-resource-service-list li:hover,
+      .media-resource-message-copy .media-resource-service-list li:focus-within,
+      .media-resource-channel-copy .media-resource-service-list li:hover,
+      .media-resource-channel-copy .media-resource-service-list li:focus-within {
         transform: scale(1.02);
       }
 
@@ -962,10 +891,31 @@
         text-decoration: none;
       }
 
+      .media-resource-service-list a::after {
+        border-bottom: 4px solid transparent;
+        border-left: 5px solid currentColor;
+        border-top: 4px solid transparent;
+        content: "";
+        flex: 0 0 auto;
+        height: 0;
+        margin-left: 2px;
+        opacity: 0.7;
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+        width: 0;
+      }
+
       .media-resource-service-list a:hover,
       .media-resource-service-list a:focus {
         color: inherit;
         text-decoration: none;
+      }
+
+      .media-resource-service-list a:hover::after,
+      .media-resource-service-list a:focus::after {
+        opacity: 1;
+        transform: translateX(2px);
       }
 
       .media-resource-service-name {
@@ -998,13 +948,17 @@
       }
 
       @media (min-width: 901px) {
-        .media-resource-live-copy .media-resource-service-list li {
+        .media-resource-live-copy .media-resource-service-list li,
+        .media-resource-message-copy .media-resource-service-list li,
+        .media-resource-channel-copy .media-resource-service-list li {
           font-size: 9.5px;
           gap: 4px;
           padding: 6px 8px;
         }
 
-        .media-resource-live-copy .media-resource-service-name {
+        .media-resource-live-copy .media-resource-service-name,
+        .media-resource-message-copy .media-resource-service-name,
+        .media-resource-channel-copy .media-resource-service-name {
           font-size: 9.5px;
         }
       }
@@ -1135,11 +1089,6 @@
           white-space: normal;
         }
 
-        .media-resource-thumb-video {
-          aspect-ratio: 16 / 9;
-          height: auto;
-          width: 100%;
-        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1182,44 +1131,57 @@
                 </div>
               </div>
               <div class="media-resource-preview">
-                <a
-                  class="media-resource-preview-content media-resource-message-preview-link"
-                  href="https://thewoodlandsmethodist.org/messages"
-                  data-media-latest-message-link
-                >
-                  <div class="media-resource-message-thumb-group">
-                    <div class="media-resource-message-label">Latest</div>
-                    <div
-                      class="media-resource-thumb media-resource-thumb-video media-resource-thumb-message"
-                      data-media-latest-message-image
-                      aria-hidden="true"
-                    >
-                      <span class="media-resource-play"
-                        ><i class="fas fa-play" aria-hidden="true"></i
-                      ></span>
-                    </div>
+                <div class="media-resource-preview-content">
+                  <div
+                    class="media-resource-thumb media-resource-thumb-messages"
+                    aria-hidden="true"
+                  >
+                    <i class="fas fa-play fa-2x" aria-hidden="true"></i>
                   </div>
-                  <div class="media-resource-preview-copy">
-                    <div
-                      class="media-resource-preview-title"
-                      data-media-latest-message-title
-                    >
-                      Latest Message
+                  <div
+                    class="media-resource-preview-copy media-resource-message-copy"
+                  >
+                    <div class="media-resource-preview-title">
+                      Browse Messages
                     </div>
-                    <div
-                      class="media-resource-preview-subtitle"
-                      data-media-latest-message-series
-                    >
-                      from Messages
-                    </div>
-                    <div
-                      class="media-resource-preview-meta"
-                      data-media-latest-message-meta
-                    >
-                      Browse the message archive
-                    </div>
+                    <ul class="media-resource-service-list">
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Chapel"
+                        >
+                          <span class="media-resource-service-name"
+                            >Chapel</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Traditional"
+                        >
+                          <span class="media-resource-service-name"
+                            >Traditional</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Harvest"
+                        >
+                          <span class="media-resource-service-name"
+                            >Harvest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Loft"
+                        >
+                          <span class="media-resource-service-name">Loft</span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </a>
+                </div>
                 <div class="media-resource-preview-footer">
                   <a
                     class="media-resource-button"
@@ -1381,19 +1343,101 @@
                       aria-hidden="true"
                     ></i>
                   </div>
-                  <div class="media-resource-preview-copy">
+                  <div
+                    class="media-resource-preview-copy media-resource-channel-copy"
+                  >
                     <div class="media-resource-preview-title">
                       Video Channels
                     </div>
+                    <ul class="media-resource-service-list">
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Chapel</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/@HarvestTWMC"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Harvest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UC3wbHKvd10yNK4Ob5NPvnDw"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name">Loft</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Traditional</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UCP7ezytRb2i4njgDxhwHFTg"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Woodforest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/channel/UCogPwByI6eCqY1JuUbrzmPg"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Creekside</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.youtube.com/@covenantespanol"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Creekside Espanol</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://vimeo.com/1157698761?share=copy&amp;fl=sv&amp;fe=ci"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Montgomery</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-                <div class="media-resource-preview-footer">
-                  <a
-                    class="media-resource-button"
-                    href="https://people.thewoodlandsmethodist.org/online-worship"
-                    >View All Channels
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i
-                  ></a>
                 </div>
               </div>
             </article>
@@ -1401,93 +1445,6 @@
         </div>
       </section>
     </main>
-
-    <!-- =========================================================
-        MEDIA RESOURCE PAGE JAVASCRIPT - START
-        Rock RMS note: this script pulls the latest sermon message from
-        the same messages2 persisted dataset used by ~/Assets/Lava/MessagesVue.lava.
-    ========================================================== -->
-    <script>
-      (function () {
-          /* ROCK RMS LAVA - LATEST SERMON MESSAGE DATA - START */
-          {%- assign mediaMessagesDataset = 'messages2' | PersistedDataset -%}
-          {% capture mediaMessagesJson %}{{ mediaMessagesDataset | ToJSON }}{% endcapture %}
-          var mediaMessagesData = {{ mediaMessagesJson | Default:'{}' }};
-          /* ROCK RMS LAVA - LATEST SERMON MESSAGE DATA - END */
-
-          function findLatestTraditionalMessage(data) {
-              if (!data || !Array.isArray(data.topicOptions) || !Array.isArray(data.messageArray)) {
-                  return null;
-              }
-
-              var traditionalTopic = data.topicOptions.find(function (topic) {
-                  return topic && topic.topic === "Traditional";
-              });
-
-              if (!traditionalTopic || !traditionalTopic.guid) {
-                  return data.messageArray[0] || null;
-              }
-
-              var traditionalMessages = data.messageArray.filter(function (message) {
-                  if (!message || !Array.isArray(message.topicGuidArray)) {
-                      return false;
-                  }
-
-                  return message.topicGuidArray.indexOf(traditionalTopic.guid) !== -1;
-              });
-
-              return traditionalMessages[0] || data.messageArray[0] || null;
-          }
-
-          function updateLatestMessagePreview(message) {
-              if (!message) {
-                  return;
-              }
-
-              var image = document.querySelector("[data-media-latest-message-image]");
-              var title = document.querySelector("[data-media-latest-message-title]");
-              var series = document.querySelector("[data-media-latest-message-series]");
-              var meta = document.querySelector("[data-media-latest-message-meta]");
-              var link = document.querySelector("[data-media-latest-message-link]");
-
-              var imageUrl = message.thumbnail || message.smallerThumbnail || "";
-              var messageHref = message.seriesSlug && message.slug
-                  ? "/series/" + message.seriesSlug + "/" + message.slug
-                  : "https://thewoodlandsmethodist.org/messages";
-
-              if (image && imageUrl) {
-                  image.style.backgroundImage = "url('" + imageUrl.replace(/'/g, "%27") + "')";
-                  image.classList.add("has-series-art");
-              }
-
-              if (title) {
-                  title.textContent = message.title || "Latest Message";
-              }
-
-              if (series) {
-                  series.textContent = message.seriesTitle ? "from \"" + message.seriesTitle + "\"" : "from Messages";
-              }
-
-              if (meta) {
-                  var metaParts = [];
-                  if (message.date) {
-                      metaParts.push(message.date);
-                  }
-                  if (message.speaker) {
-                      metaParts.push(message.speaker);
-                  }
-                  meta.textContent = metaParts.length ? metaParts.join(" | ") : "View the latest message";
-              }
-
-              if (link) {
-                  link.href = messageHref;
-              }
-          }
-
-          updateLatestMessagePreview(findLatestTraditionalMessage(mediaMessagesData));
-      })();
-    </script>
-    <!-- MEDIA RESOURCE PAGE JAVASCRIPT - END -->
 
     <!-- Footer -->
     <style>
