@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plan Your Visit | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+
+  <style>
+    /* What to Expect icon cards */
+    .visit-expect-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      height: 100%;
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+    .visit-expect-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .visit-expect-card .expect-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(110,49,64,0.06);
+      color: var(--maroon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 0 auto 20px;
+    }
+    .visit-expect-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .visit-expect-card p {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Visitor form */
+    .visit-form-section {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+    .visit-form-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-card);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .visit-form-card .form-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .visit-form-card .form-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .visit-form-card .form-header p {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+    /* Campus cards */
+    .visit-campus-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      height: 100%;
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+    .visit-campus-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: transparent;
+    }
+    .visit-campus-header {
+      padding: 24px 28px;
+    }
+
+    /* Campus card header backgrounds — campus brand colors */
+    .visit-campus-header--woodlands  { background: linear-gradient(135deg, var(--maroon), #8b4557); }
+    .visit-campus-header--woodforest { background: linear-gradient(135deg, #0095b1, #33b5cc); }
+    .visit-campus-header--montgomery { background: linear-gradient(135deg, #331861, #5a3d8a); }
+    .visit-campus-header--creekside  { background: linear-gradient(135deg, #2a9d8f, #4db8ab); }
+
+    .visit-campus-header h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 4px;
+    }
+    .visit-campus-header span {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.3px;
+    }
+    .visit-campus-body {
+      padding: 24px 28px;
+    }
+    .visit-campus-address {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .visit-campus-address i {
+      color: var(--maroon);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .visit-campus-services {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .visit-service {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      font-size: 14px;
+    }
+    .visit-service strong {
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .visit-service span {
+      color: var(--text-muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .visit-form-card { padding: 32px 24px; }
+      .visit-form-section { padding: 56px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link active" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       PAGE HERO
+       ============================================ -->
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.55)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twmc-main-campus.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Plan Your Visit</span>
+        </nav>
+        <h1>Plan Your Visit</h1>
+        <p>We Can't Wait to Meet You</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WELCOME INTRO SECTION
+       ============================================ -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+        <div class="col">
+          <div class="intro-text">
+            <div class="section-label">Your First Visit</div>
+            <h2 class="section-title">You Belong <em>Here</em></h2>
+            <p>Whether you've been going to church your whole life or you're just starting to explore faith, you're welcome here. At The Woodlands Methodist Church, we believe that everyone has a place and a purpose — and we'd love to help you find yours.</p>
+            <p>Your first visit is all about you. There's no pressure, no commitment — just a warm, friendly environment where you can experience authentic community and hear a message that matters. We can't wait to meet you.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <h3>Questions?</h3>
+            </div>
+            <div class="contact-card-body">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:2812975900">281-297-5900</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:visit@twmc.org">visit@twmc.org</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+                <div>
+                  <strong>Office Hours</strong>
+                  Mon–Fri, 8:30 AM – 5:00 PM
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WHAT TO EXPECT
+       ============================================ -->
+  <section style="padding: 80px 0; background: var(--cream);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <div class="section-label">Know Before You Go</div>
+        <h2 class="section-title">What to <em>Expect</em></h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="visit-expect-card reveal">
+            <div class="expect-icon"><i class="fas fa-car"></i></div>
+            <h4>Parking</h4>
+            <p>Free parking at all campuses. Look for First Time Guest signs — our parking team will direct you to reserved spots near the entrance.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="visit-expect-card reveal">
+            <div class="expect-icon"><i class="fas fa-child-reaching"></i></div>
+            <h4>Kids Programs</h4>
+            <p>Safe, age-appropriate programs for infants through 5th grade during every service. Check in when you arrive and we'll get your family set up.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="visit-expect-card reveal">
+            <div class="expect-icon"><i class="fas fa-shirt"></i></div>
+            <h4>Come as You Are</h4>
+            <p>No dress code. You'll see everything from jeans and t-shirts to business casual. Wear whatever makes you comfortable.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="visit-expect-card reveal">
+            <div class="expect-icon"><i class="fas fa-clock"></i></div>
+            <h4>Service Length</h4>
+            <p>Services typically last 60–75 minutes with worship music, a message, and communion on the first Sunday of each month.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SERVICE TIMES — CAMPUS CARDS
+       ============================================ -->
+  <section style="padding: 80px 0; background: var(--warm-gray);">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom: 48px;">
+        <div class="section-label">Service Times</div>
+        <h2 class="section-title">Our <em>Campuses</em></h2>
+        <p style="max-width: 600px; margin: 16px auto 0; color: var(--text-body); font-size: 15px; line-height: 1.7;">We have four campuses across the greater Woodlands area, each with its own personality but the same heart. Find the one closest to you.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <!-- The Woodlands -->
+        <div class="col">
+          <div class="visit-campus-card reveal">
+            <div class="visit-campus-header visit-campus-header--woodlands">
+              <h3>The Woodlands</h3>
+              <span>Main Campus</span>
+            </div>
+            <div class="visit-campus-body">
+              <div class="visit-campus-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>2200 Lake Woodlands Dr, The Woodlands, TX 77380</span>
+              </div>
+              <div class="visit-campus-services">
+                <div class="visit-service"><strong>Traditional</strong> <span>7:45, 9:00 &amp; 11:00 AM</span></div>
+                <div class="visit-service"><strong>The Loft (Modern)</strong> <span>9:30 &amp; 11:00 AM</span></div>
+                <div class="visit-service"><strong>Harvest (Contemporary)</strong> <span>9:00 &amp; 11:00 AM</span></div>
+                <div class="visit-service"><strong>Adoración (Español)</strong> <span>10:00 AM</span></div>
+              </div>
+              <a href="locations.html" class="btn-card">View Campus Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Woodforest -->
+        <div class="col">
+          <div class="visit-campus-card reveal">
+            <div class="visit-campus-header visit-campus-header--woodforest">
+              <h3>Woodforest</h3>
+              <span>Family Campus</span>
+            </div>
+            <div class="visit-campus-body">
+              <div class="visit-campus-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Woodforest, TX</span>
+              </div>
+              <div class="visit-campus-services">
+                <div class="visit-service"><strong>Family Worship</strong> <span>9:00 &amp; 11:00 AM</span></div>
+              </div>
+              <a href="locations.html" class="btn-card">View Campus Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Montgomery -->
+        <div class="col">
+          <div class="visit-campus-card reveal">
+            <div class="visit-campus-header visit-campus-header--montgomery">
+              <h3>Montgomery</h3>
+              <span>Growing Community</span>
+            </div>
+            <div class="visit-campus-body">
+              <div class="visit-campus-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Oak Hills Junior High, Montgomery, TX</span>
+              </div>
+              <div class="visit-campus-services">
+                <div class="visit-service"><strong>Contemporary Worship</strong> <span>10:30 AM</span></div>
+              </div>
+              <a href="locations.html" class="btn-card">View Campus Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creekside -->
+        <div class="col">
+          <div class="visit-campus-card reveal">
+            <div class="visit-campus-header visit-campus-header--creekside">
+              <h3>Creekside</h3>
+              <span>Bilingual Campus</span>
+            </div>
+            <div class="visit-campus-body">
+              <div class="visit-campus-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Creekside, The Woodlands, TX</span>
+              </div>
+              <div class="visit-campus-services">
+                <div class="visit-service"><strong>English Worship</strong> <span>9:00 &amp; 11:00 AM</span></div>
+                <div class="visit-service"><strong>Español</strong> <span>1:00 PM</span></div>
+              </div>
+              <a href="locations.html" class="btn-card">View Campus Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FEATURE BANNER — WATCH FIRST
+       ============================================ -->
+  <section class="feature-banner" style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/twmc-main-campus.jpg'); background-color: #3d1a24;">
+    <div class="container">
+      <div class="feature-banner-inner reveal">
+        <h2>Not Ready to Visit In Person?</h2>
+        <p>Watch a service online first. Our livestream is available every Sunday, and hundreds of past messages are ready to watch anytime.</p>
+        <a href="media.html" class="btn-white">Watch Online <i class="fas fa-play"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       VISITOR FORM
+       ============================================ -->
+  <section class="visit-form-section" id="visitor-form">
+    <div class="container">
+      <div class="visit-form-card reveal">
+        <div class="form-header">
+          <h2>We'd Love to <em>Meet You</em></h2>
+          <p>Let us know you're planning to visit and we'll save you a seat.</p>
+        </div>
+
+        <form>
+          <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-bottom: 20px;">
+            <div class="col">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="First name" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Last name" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(555) 555-5555">
+            <div class="form-helper">We'll only text you directions and a welcome message.</div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-bottom: 20px;">
+            <div class="col">
+              <div class="form-group">
+                <label>Campus *</label>
+                <select id="campusSelect" required>
+                  <option value="">Select a campus</option>
+                  <option value="the-woodlands">The Woodlands</option>
+                  <option value="woodforest">Woodforest</option>
+                  <option value="montgomery">Montgomery</option>
+                  <option value="creekside">Creekside</option>
+                  <option value="espanol">Español</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>Service Time</label>
+                <select id="serviceSelect" disabled>
+                  <option value="">Select a campus first</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4" style="margin-bottom: 20px;">
+            <div class="col">
+              <div class="form-group">
+                <label>Family Size</label>
+                <select>
+                  <option value="">Select</option>
+                  <option>Just me</option>
+                  <option>2</option>
+                  <option>3–4</option>
+                  <option>5+</option>
+                </select>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label>How did you hear about us?</label>
+                <select>
+                  <option value="">Select one</option>
+                  <option>Friend or Family</option>
+                  <option>Social Media</option>
+                  <option>Google Search</option>
+                  <option>Drove By</option>
+                  <option>Event</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>I'm interested in: <span style="font-weight: 400; color: var(--text-muted);">(optional)</span></label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px;">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="intKids">
+                <label class="form-check-label" for="intKids">Kids Ministry</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="intYouth">
+                <label class="form-check-label" for="intYouth">Youth Ministry</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="intGroups">
+                <label class="form-check-label" for="intGroups">Small Groups</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="intServing">
+                <label class="form-check-label" for="intServing">Serving Opportunities</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Questions or Comments</label>
+            <textarea rows="3" placeholder="Anything you'd like us to know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            Let Us Know You're Coming <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FAQ SECTION
+       ============================================ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">Common Questions</div>
+        <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" aria-expanded="true">What should I wear? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>There is no dress code at TWMC. You'll see everything from jeans and t-shirts to business casual. Wear whatever makes you comfortable — we're just glad you're here.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What is available for my kids? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Safe, age-appropriate programming is available for infants through 5th grade during every service at every campus. When you arrive, look for the NextGen Kids check-in area and our team will get your family set up. All of our volunteers are background-checked.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How long are services? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Most services last 60–75 minutes. You can expect a mix of worship music, a message from one of our pastors, and opportunities to connect. Communion is offered on the first Sunday of each month.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Where do I park? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Free parking is available at all campuses. Look for the "First Time Guest" signs and our parking team will direct you to reserved spots near the entrance. If you need accessible parking, just let a team member know.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Do I need to bring anything? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Just yourself! Bibles are available, song lyrics are projected on screen, and giving is handled online. Everything you need is provided. We'll even have coffee ready for you.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What if I have questions when I arrive? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Greeters are stationed at every entrance and throughout the building. Look for anyone with a lanyard or name badge — they'll be happy to help you find your way, answer questions, or walk you to your seat.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I watch online first? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Absolutely! Visit our <a href="media.html">Church Online</a> page to watch a live or recorded service before visiting in person. It's a great way to get a feel for what to expect.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       E-NEWS CTA
+       ============================================ -->
+  <section class="enews-cta">
+    <div class="container">
+      <div class="enews-inner reveal">
+        <div>
+          <h3>Stay Connected</h3>
+          <p>Sign up for our weekly newsletter to learn about upcoming events, sermon series, and ways to get involved.</p>
+        </div>
+        <a href="#" class="btn-white">
+          <i class="fas fa-envelope"></i> Subscribe Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+  <script>
+    // Campus → Service Time cascade
+    const campusServices = {
+      'the-woodlands': [
+        'Traditional — 7:45 AM',
+        'Traditional — 9:00 AM',
+        'Traditional — 11:00 AM',
+        'The Loft (Modern) — 9:30 AM',
+        'The Loft (Modern) — 11:00 AM',
+        'Harvest (Contemporary) — 9:00 AM',
+        'Harvest (Contemporary) — 11:00 AM',
+        'Adoración (Español) — 10:00 AM'
+      ],
+      'woodforest': [
+        'Family Worship — 9:00 AM',
+        'Family Worship — 11:00 AM'
+      ],
+      'montgomery': [
+        'Contemporary — 10:30 AM'
+      ],
+      'creekside': [
+        'English — 9:00 AM',
+        'English — 11:00 AM',
+        'Español — 1:00 PM'
+      ],
+      'espanol': [
+        'Adoración (The Woodlands) — 10:00 AM',
+        'Español (Creekside) — 1:00 PM'
+      ]
+    };
+
+    const campusSelect = document.getElementById('campusSelect');
+    const serviceSelect = document.getElementById('serviceSelect');
+
+    campusSelect.addEventListener('change', () => {
+      const campus = campusSelect.value;
+      serviceSelect.innerHTML = '';
+
+      if (!campus) {
+        serviceSelect.innerHTML = '<option value="">Select a campus first</option>';
+        serviceSelect.disabled = true;
+        return;
+      }
+
+      serviceSelect.disabled = false;
+      serviceSelect.innerHTML = '<option value="">Choose a service time</option>';
+      campusServices[campus].forEach(time => {
+        const opt = document.createElement('option');
+        opt.value = time;
+        opt.textContent = time;
+        serviceSelect.appendChild(opt);
+      });
+    });
+  </script>
+
+</body>
+</html>

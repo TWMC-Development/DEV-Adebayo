@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Woodlands Methodist Church | Church Everyday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Woodlands Methodist Church — a vibrant, multi-campus community in The Woodlands, TX. Join us for worship, growth, and service.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../css/theme.css">
+
+  <style>
+    /* Landing page-specific styles only.
+       All shared styles (variables, nav, buttons, footer, grow, enews, etc.)
+       come from theme.css linked above. */
+
+    /* === LANDING PAGE HERO === */
+    .lp-hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 680px;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--maroon-dark);
+    }
+
+    .lp-hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .lp-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(82,36,47,0.7) 0%, rgba(82,36,47,0.3) 40%, transparent 60%),
+        linear-gradient(0deg, rgba(10,10,10,0.82) 0%, transparent 40%);
+    }
+
+    .lp-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .lp-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: -40px auto 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .lp-hero-subtitle {
+      margin-bottom: 20px;
+      color: rgba(255,255,255,0.85);
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .lp-hero h1 {
+      margin-bottom: 36px;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 10vw, 8rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    }
+
+    .btn-campus-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 140px;
+      padding: 20px 28px;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: var(--radius);
+      transition: all var(--duration-normal) ease;
+    }
+
+    .btn-campus-pill:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+    .btn-campus-pill .campus-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .btn-campus-pill .visit-label {
+      padding: 5px 16px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius-pill);
+      transition: all var(--duration-normal) ease;
+    }
+
+    .btn-campus-pill:hover .visit-label {
+      color: var(--maroon);
+      background: #fff;
+      border-color: #fff;
+    }
+
+    .lp-scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      z-index: 2;
+      color: rgba(255,255,255,0.7);
+      font-size: 1.4rem;
+      transform: translateX(-50%);
+      animation: lp-bounce 2s infinite;
+    }
+
+    @keyframes lp-bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-12px); }
+      60% { transform: translateX(-50%) translateY(-6px); }
+    }
+
+    .lp-welcome {
+      background: var(--cream);
+    }
+
+    .lp-embed {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .lp-welcome-copy p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-size: 1.03rem;
+      line-height: 1.72;
+    }
+
+    .card-theme {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      background: var(--warm-white);
+      box-shadow: var(--shadow-card);
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+
+    .card-theme:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .card-media {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--warm-gray), var(--warm-gray-2));
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-out);
+    }
+
+    .card-theme:hover .card-media img {
+      transform: scale(1.05);
+    }
+
+    .card-message .card-media {
+      aspect-ratio: 16 / 9;
+    }
+
+    .card-message.card-featured .card-media {
+      aspect-ratio: 16 / 10;
+    }
+
+    .message-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      padding: 4px 12px;
+      color: #fff;
+      background: var(--maroon);
+      border-radius: var(--radius-pill);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .card-message .card-body {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .card-series {
+      margin-bottom: 4px;
+      color: var(--maroon);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card-message .card-title {
+      margin-bottom: 6px;
+      color: var(--dark);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      line-height: 1.3;
+    }
+
+    .card-message.card-featured .card-title {
+      font-size: 1.4rem;
+    }
+
+    .card-pastor {
+      margin-top: auto;
+      padding-top: 12px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      color: var(--maroon);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: gap var(--duration-normal) ease;
+    }
+
+    .card-message:hover .card-link {
+      gap: 10px;
+    }
+
+    .lp-campuses {
+      position: relative;
+      overflow: hidden;
+      background: var(--maroon-dark);
+    }
+
+    .lp-campuses::before,
+    .lp-campuses::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(197,162,88,0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .lp-campuses::before {
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+    }
+
+    .lp-campuses::after {
+      bottom: -150px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+    }
+
+    .lp-campuses .section-label,
+    .lp-campuses .section-title {
+      position: relative;
+      z-index: 1;
+    }
+
+    .lp-campuses .section-label {
+      color: var(--gold);
+    }
+
+    .lp-campuses .section-label::before {
+      background: var(--gold);
+    }
+
+    .lp-campuses .section-title {
+      color: #fff;
+    }
+
+    .lp-campuses .section-title em {
+      color: var(--gold);
+    }
+
+    .card-campus {
+      position: relative;
+      min-height: 100%;
+      overflow: hidden;
+      border: none;
+      border-radius: var(--radius-lg);
+      color: #fff;
+      background: transparent;
+      aspect-ratio: 3 / 4;
+      transition: transform var(--duration-slow) ease, box-shadow var(--duration-slow) ease;
+    }
+
+    .card-campus:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .card-campus::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(0deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.2) 50%, transparent 100%);
+    }
+
+    .card-campus img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) ease;
+    }
+
+    .card-campus:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-campus .card-img-overlay {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 28px;
+    }
+
+    .card-campus .card-title {
+      margin-bottom: 6px;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+
+    .card-campus .card-text {
+      margin-bottom: 16px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .btn-campus-outline {
+      align-self: flex-start;
+      padding: 8px 20px;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all var(--duration-normal) ease;
+    }
+
+    .card-campus:hover .btn-campus-outline {
+      color: var(--maroon-dark);
+      background: #fff;
+      border-color: #fff;
+    }
+
+    /* === RESPONSIVE — landing page specific only === */
+    @media (max-width: 992px) {
+      .card-campus {
+        aspect-ratio: 4 / 5;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .lp-hero {
+        height: auto;
+        min-height: 760px;
+        padding: 120px 0 88px;
+      }
+
+      .lp-hero-content {
+        margin-top: 0;
+      }
+
+      .lp-hero h1 {
+        font-size: clamp(2.8rem, 12vw, 4.8rem);
+      }
+
+      .btn-campus-pill {
+        min-width: 110px;
+        padding: 14px 18px;
+      }
+
+      .card-campus {
+        aspect-ratio: 4 / 5;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .btn-campus-pill {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 320px;
+        margin-inline: auto;
+      }
+
+      .card-campus {
+        aspect-ratio: 16 / 10;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <main>
+    <section class="lp-hero" id="main-content" aria-label="Welcome hero">
+      <video class="lp-hero-video" autoplay muted loop playsinline poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/FND_TextOverlay_BKG.png">
+        <source src="https://player.vimeo.com/progressive_redirect/playback/868865769/rendition/720p/file.mp4?loc=external&signature=08f201bcaeb42d85ce548a7886fce14662874b14d0ef0b1db7413045fd17e457" type="video/mp4">
+      </video>
+      <div class="lp-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container position-relative">
+        <div class="lp-hero-content">
+          <p class="lp-hero-subtitle">The Woodlands Methodist Church</p>
+          <h1>Church Everyday</h1>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-5 g-3 justify-content-center">
+            <div class="col d-flex">
+              <a href="home.html" class="btn btn-campus-pill w-100">
+                <span class="campus-name">The Woodlands</span>
+                <span class="visit-label">Visit</span>
+              </a>
+            </div>
+            <div class="col d-flex">
+              <a href="#" class="btn btn-campus-pill w-100">
+                <span class="campus-name">Woodforest</span>
+                <span class="visit-label">Visit</span>
+              </a>
+            </div>
+            <div class="col d-flex">
+              <a href="#" class="btn btn-campus-pill w-100">
+                <span class="campus-name">Montgomery</span>
+                <span class="visit-label">Visit</span>
+              </a>
+            </div>
+            <div class="col d-flex">
+              <a href="#" class="btn btn-campus-pill w-100">
+                <span class="campus-name">Creekside</span>
+                <span class="visit-label">Visit</span>
+              </a>
+            </div>
+            <div class="col d-flex">
+              <a href="#" class="btn btn-campus-pill w-100">
+                <span class="campus-name">Espanol</span>
+                <span class="visit-label">Visit</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lp-scroll-indicator" aria-hidden="true">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <section class="lp-welcome section-space">
+      <div class="container">
+        <div class="row align-items-center g-5 reveal">
+          <div class="col-lg-6">
+            <div class="lp-embed ratio ratio-16x9">
+              <iframe src="https://player.vimeo.com/video/710423883" title="Welcome to The Woodlands Methodist Church" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 lp-welcome-copy">
+            <div class="section-label">Welcome</div>
+            <h2 class="section-title mb-4">Come as you are.<br><em>Leave transformed.</em></h2>
+            <p>Welcome to The Woodlands Methodist Church! We are so glad you are interested in our dynamic and vibrant church. You will find a variety of worship styles on our campuses from traditional and contemporary to very modern.</p>
+            <p>Whether you're planning your first visit or looking to deepen your faith journey, we invite you to explore the many ways to get involved.</p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#" class="btn btn-primary">Plan Your Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="#" class="btn btn-outline-primary">Watch Live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-messages section-space">
+      <div class="container">
+        <div class="reveal mb-5">
+          <div class="section-label">Messages</div>
+          <h2 class="section-title">Latest from the <em>Pulpit</em></h2>
+        </div>
+
+        <div class="row row-cols-1 row-cols-xl-2 g-4 mb-4">
+          <div class="col">
+            <a href="#" class="card card-theme card-message card-featured h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=90382042-8c4a-4fc6-8822-0bdb00cdfc23&width=800&height=450&mode=crop" alt="Traditional Worship — We Have Found the Messiah">
+                <span class="message-badge">Traditional</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">The Gospel of John</span>
+                <h3 class="card-title">We Have Found the Messiah</h3>
+                <span class="card-pastor">Dr. Bob Hayes</span>
+                <span class="card-link">Watch Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-theme card-message card-featured h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=959cbf9d-1962-47c6-96e4-41dd2d7d8d69" alt="Harvest Worship — Who Are You?">
+                <span class="message-badge">Harvest</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">The Gospel of John</span>
+                <h3 class="card-title">Who Are You?</h3>
+                <span class="card-pastor">Mark Sorensen</span>
+                <span class="card-link">Watch Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+          <div class="col">
+            <a href="#" class="card card-theme card-message h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=6ef9ad5e-aaf8-4d7b-9650-7fb157ae491e" alt="Loft Worship — Why Can't I Change?">
+                <span class="message-badge">Loft</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">Days That End in Why?</span>
+                <h3 class="card-title">Why Can't I Change?</h3>
+                <span class="card-pastor">Daniel Lumpee</span>
+                <span class="card-link">Listen Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-theme card-message h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=a5a87b38-b0f7-4f42-9273-86800fbb73b6" alt="Woodforest Worship — Matthew 8-14">
+                <span class="message-badge">Woodforest</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">Walking With Jesus</span>
+                <h3 class="card-title">Matthew 8-14</h3>
+                <span class="card-pastor">Zach Anderson</span>
+                <span class="card-link">Watch Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-theme card-message h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=6dbee56a-0b13-490b-ae5d-0f761ceb9bad" alt="Montgomery Worship — I'm Giving Up">
+                <span class="message-badge">Montgomery</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">Standalone</span>
+                <h3 class="card-title">I'm Giving Up</h3>
+                <span class="card-pastor">Jeff Olive</span>
+                <span class="card-link">Listen Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-theme card-message h-100 text-decoration-none reveal">
+              <div class="card-media">
+                <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=8a9054ce-f959-4afa-a2e5-59df7105a13d" alt="Creekside Worship — And Here's Our Response">
+                <span class="message-badge">Creekside</span>
+              </div>
+              <div class="card-body">
+                <span class="card-series">Voices</span>
+                <h3 class="card-title">And Here's Our Response</h3>
+                <span class="card-pastor">Pierce Drake</span>
+                <span class="card-link">Watch Now <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a href="#" class="btn btn-primary">View All Messages <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-campuses section-space" aria-label="Our Campuses">
+      <div class="container">
+        <div class="reveal mb-5">
+          <div class="section-label">Our Campuses</div>
+          <h2 class="section-title">Find your <em>community</em></h2>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 position-relative">
+          <div class="col">
+            <a href="home.html" class="card card-campus text-decoration-none reveal">
+              <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg" alt="The Woodlands Campus">
+              <div class="card-img-overlay">
+                <h3 class="card-title">The Woodlands</h3>
+                <p class="card-text">2200 Lake Woodlands Dr<br>The Woodlands, TX 77380</p>
+                <span class="btn-campus-outline">Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-campus text-decoration-none reveal">
+              <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodforest.jpg" alt="Woodforest Campus">
+              <div class="card-img-overlay">
+                <h3 class="card-title">Woodforest</h3>
+                <p class="card-text">3200 College Park Dr<br>The Woodlands, TX 77384</p>
+                <span class="btn-campus-outline">Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-campus text-decoration-none reveal">
+              <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Montgomery.jpg" alt="Montgomery Campus">
+              <div class="card-img-overlay">
+                <h3 class="card-title">Montgomery</h3>
+                <p class="card-text">22548 TX-105<br>Montgomery, TX 77356</p>
+                <span class="btn-campus-outline">Learn More</span>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="card card-campus text-decoration-none reveal">
+              <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Creekside.jpg" alt="Creekside Campus">
+              <div class="card-img-overlay">
+                <h3 class="card-title">Creekside</h3>
+                <p class="card-text">6335 Creekside Forest Dr<br>The Woodlands, TX 77389</p>
+                <span class="btn-campus-outline">Learn More</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-header reveal">
+          <div>
+            <div class="section-label">From the Pastor</div>
+            <h2 class="section-title">Latest from the Blog</h2>
+          </div>
+          <a href="#" class="btn-outline">View All Posts</a>
+        </div>
+
+        <div class="blog-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <a href="#" class="blog-card reveal">
+              <div class="blog-card-image">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=446939" alt="Beyond Sunday Update" onerror="this.style.display='none'">
+              </div>
+              <div class="blog-card-body">
+                <h3>Beyond Sunday Update</h3>
+                <p>What a meaningful Beyond Sunday we shared this past weekend. I am grateful for the spirit of worship, the joy in the room, and the faithfulness we continue to see lived out across our church.</p>
+              </div>
+              <div class="blog-card-meta">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='../assets/images/HiImMark_Circle360.png'">
+                <div class="blog-card-meta-text">
+                  <strong>Rev. Mark Sorensen</strong>
+                  <span>February 19, 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="blog-card reveal">
+              <div class="blog-card-image">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=445285" alt="On Purpose Giving" onerror="this.src='../assets/images/WEB_Blog_header_2026Feb.jpg'">
+              </div>
+              <div class="blog-card-body">
+                <h3>On Purpose Giving</h3>
+                <p>At some point, you've glanced at your bank statement and realized you are paying for things you barely remember signing up for. A streaming service you haven't opened in months...</p>
+              </div>
+              <div class="blog-card-meta">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='../assets/images/HiImMark_Circle360.png'">
+                <div class="blog-card-meta-text">
+                  <strong>Rev. Mark Sorensen</strong>
+                  <span>February 5, 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" class="blog-card reveal">
+              <div class="blog-card-image">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=444272" alt="A Simple Word" onerror="this.src='../assets/images/WEB_Blog_header_2026Jan.jpg'">
+              </div>
+              <div class="blog-card-body">
+                <h3>A Simple Word for a Complicated World</h3>
+                <p>I came across a short story from the early church that has stuck with me. It comes from St. Jerome, a fourth-century theologian and pastor best known for translating the Scriptures into Latin.</p>
+              </div>
+              <div class="blog-card-meta">
+                <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='../assets/images/HiImMark_Circle360.png'">
+                <div class="blog-card-meta-text">
+                  <strong>Rev. Mark Sorensen</strong>
+                  <span>January 29, 2026</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grow-section">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label justify-content-center">Pathway</div>
+        </div>
+
+        <div class="grow-squares reveal">
+          <a href="grow.html" class="grow-square grow-g">g</a>
+          <a href="#" class="grow-square grow-r">r</a>
+          <a href="#" class="grow-square grow-o">o</a>
+          <a href="#" class="grow-square grow-w">w</a>
+        </div>
+
+        <div class="reveal">
+          <h2>A Pathway to a Deeper Faith</h2>
+          <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+          <h4>Ready to Get Started?</h4>
+          <a href="grow.html" class="btn btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="enews-cta">
+      <div class="container">
+        <div class="enews-inner reveal">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+              <div class="enews-text">
+                <h3>Stay Connected</h3>
+                <p>Get the latest news and updates delivered to your inbox.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#" class="btn btn-white"><i class="fas fa-envelope"></i> Subscribe Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <div class="footer-brand">
+            <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+            <p><i class="fas fa-church me-2"></i><a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank" rel="noopener noreferrer">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
+            <p><i class="fas fa-phone me-2"></i><a href="tel:(281)297-5900">(281) 297-5900</a></p>
+
+            <div class="footer-social">
+              <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-col">
+            <h4>About</h4>
+            <a href="#">What We Believe</a>
+            <a href="#">Our Stories</a>
+            <a href="#">Membership</a>
+            <a href="#">Staff</a>
+            <a href="#">Facilities</a>
+            <a href="#">Employment</a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#">Fireside Cafe</a>
+            <a href="#">Indoor Playgrounds</a>
+            <a href="#">Find Help & Support</a>
+            <a href="#">Funerals & Memorials</a>
+            <a href="#">Venues & Bookings</a>
+            <a href="#">My Account</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+</body>
+</html>

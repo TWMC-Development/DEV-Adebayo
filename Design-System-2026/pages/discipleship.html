@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adult Discipleship | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/DIS_DiscipleshipPage_FormationAndDiscipleship_HeroText+1.png');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="grow.html">Ministries</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Adult Discipleship</span>
+        </nav>
+        <h1>Adult Discipleship</h1>
+        <p>Formation & Discipleship for Every Stage of Faith</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO — Video + Text
+       ============================================ -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+        <div class="col"><div class="intro-video">
+          <iframe src="https://player.vimeo.com/video/992305848?h=0&title=0&byline=0&portrait=0" title="Adult Discipleship Video" allowfullscreen></iframe>
+        </div></div>
+
+        <div class="col"><div class="intro-text">
+          <div class="section-label">Adult Discipleship</div>
+          <h2 class="section-title">Formation & <em>Discipleship</em></h2>
+          <p>Formation and discipleship in the church are all about the process of living out and learning about the teachings of Christ. This process is about more than just head knowledge; it's about reorienting our entire lives around His teachings and way of life.</p>
+          <p>In this process, we learn to live in the reality of the kingdom of God here and now. Through spiritual disciplines like prayer, Scripture reading and community, we are formed into the image of Christ. It's a journey of transformation, where we don't just learn <em>about</em> Jesus but learn to live <em>like</em> Jesus, cultivating a life marked by love, joy, peace and deep, authentic relationship with God and others.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FORMATION — Image cards
+       ============================================ -->
+  <section class="formation-section">
+    <div class="container">
+      <div class="formation-header reveal">
+        <div class="section-label">Spiritual Growth</div>
+        <h2 class="section-title">Formation</h2>
+        <p>Formation is not merely about acquiring knowledge — it's about transforming one's life to reflect the love, grace and truth of Jesus. Faith should not only be understood but also actively practiced, fostering a vibrant and faithful community.</p>
+      </div>
+
+      <div class="formation-cards">
+        <!-- Home Groups -->
+        <div class="formation-card reveal">
+          <div class="formation-card-image">
+            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_HomeGroups_FeatureBanner_BKG-NoStripe_800x600.png" alt="Home Groups" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+          </div>
+          <div class="formation-card-body">
+            <h3>Home Groups</h3>
+            <p>Groups are the center for connection and formation at The Woodlands Methodist Church. Through home groups, we strive to encounter the tangible presence of God, be transformed into Christ's image, and live in the way of Jesus.</p>
+            <a href="https://thewoodlandsmethodist.org/homegroups" class="btn-primary" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Banding -->
+        <div class="formation-card reveal">
+          <div class="formation-card-image">
+            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Banding_FeatureBanner_BKG-NoStripe_800x600.png" alt="Banding" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--gold), var(--gold-light))'">
+          </div>
+          <div class="formation-card-body">
+            <h3>Banding</h3>
+            <p>John Wesley, the founder of Methodism, created pathways and rhythms for walking in joy, freedom and holiness in Christ. One such pathway was "banding," when a group of three to five same-gendered people would meet, read and pray together. Learn more about banding together at TWMC as we seek to encourage spiritual accountability and growth.</p>
+            <a href="https://thewoodlandsmethodist.org/banding" class="btn-primary" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Spiritual Mentorship -->
+        <div class="formation-card reveal">
+          <div class="formation-card-image">
+            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_SpiritualMentorships_FeatureBanner_BKG-NoStripe.png" alt="Spiritual Mentorship" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-g), var(--grow-o))'">
+          </div>
+          <div class="formation-card-body">
+            <h3>Spiritual Mentorship</h3>
+            <p>Spiritual mentorship at The Woodlands Methodist Church provides guidance, wisdom and support, helping individuals become more like Jesus, one step at a time. The mentoring process fosters personal growth, accountability and a deeper understanding of one's faith.</p>
+            <a href="https://thewoodlandsmethodist.org/mentoring" class="btn-primary" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       DISCIPLESHIP — Dark section with icon cards
+       ============================================ -->
+  <section class="discipleship-section">
+    <div class="container">
+      <div class="discipleship-header reveal">
+        <div class="section-label">Deepen Your Faith</div>
+        <h2 class="section-title">Discipleship</h2>
+        <p>Being a disciple involves ongoing learning, personal growth and helping others. Adult Discipleship offers studies and classes, with various days and times, to dive deeper into the Bible in community. Whether you're new to the faith or have been studying the Bible for years, all are welcome.</p>
+      </div>
+
+      <div class="discipleship-cards row row-cols-1 row-cols-md-2 g-4">
+        <!-- Studies & Classes -->
+        <div class="col"><div class="discipleship-card reveal">
+          <div class="discipleship-card-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Studies & Classes</h3>
+          <p>Trying to be more like Jesus and becoming the people we're intended to be is a lot better in community. Whether you're exploring faith as a newcomer or seeking deeper growth in a long-standing journey, we offer a variety of studies, events and groups tailored to support you.</p>
+          <a href="https://www.thewoodlandsmethodist.org/gather2023-search?Audience=95e49778-ae72-454f-91cc-2fc864557dec" class="btn-disc" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div></div>
+
+        <!-- Singles -->
+        <div class="col"><div class="discipleship-card reveal">
+          <div class="discipleship-card-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Singles</h3>
+          <p>Our singles ministry is an ideal environment to deepen your faith and enjoy meaningful connections with other single adults. It's a place where individuals in similar life stages can strengthen their relationship with God, find support and celebrate the unique journey of single life together.</p>
+          <a href="https://thewoodlandsmethodist.org/singles" class="btn-disc" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div></div>
+
+        <!-- Men -->
+        <div class="col"><div class="discipleship-card reveal">
+          <div class="discipleship-card-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Men</h3>
+          <p>There's a unique understanding among men — we connect in a way that's deeply rooted in our shared experiences and challenges. We offer spaces where you can engage openly and authentically with other men, discussing issues relevant to your journey toward becoming a man of Christ-like character.</p>
+          <a href="https://thewoodlandsmethodist.org/men" class="btn-disc" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div></div>
+
+        <!-- Women -->
+        <div class="col"><div class="discipleship-card reveal">
+          <div class="discipleship-card-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Women</h3>
+          <p>We cherish the truth that as women created in God's image, we are designed for deep connection and community. It's in these spaces where we can openly share our hearts, build meaningful friendships and glean wisdom from each other — a crucial part of becoming the Christ-like women God intended us to be.</p>
+          <a href="https://thewoodlandsmethodist.org/women" class="btn-disc" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div></div>
+      </div>
+
+      <div class="discipleship-cta reveal">
+        <p>Find a full list of classes, studies, events and programs for all ages, and gather in community as we grow deeper in faith.</p>
+        <a href="https://thewoodlandsmethodist.org/gather" class="btn-gold" target="_blank">Browse All Studies <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       E-NEWS CTA
+       ============================================ -->
+  <section class="enews-cta">
+    <div class="container">
+      <div class="enews-inner reveal">
+        <div>
+          <h3>Adult Discipleship E-News</h3>
+          <p>Subscribe to the free Adult Discipleship Ministry E-News! Get weekly updates about activities and studies sent to your inbox.</p>
+        </div>
+        <a href="http://eepurl.com/x5iBD" class="btn-white" target="_blank">
+          <i class="fas fa-envelope"></i> Subscribe Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CONNECT — Tabbed cards by location
+       ============================================ -->
+  <section class="connect-section">
+    <div class="container">
+      <div class="connect-header reveal">
+        <div class="section-label">Get Involved</div>
+        <h2 class="section-title">Connect <em>With Us</em></h2>
+
+        <div class="connect-tabs" id="connectTabs" role="tablist">
+          <button class="connect-tab active" data-tab="tab-woodlands" role="tab" aria-selected="true" aria-controls="tab-woodlands" id="btn-woodlands">The Woodlands</button>
+          <button class="connect-tab" data-tab="tab-woodforest" role="tab" aria-selected="false" aria-controls="tab-woodforest" id="btn-woodforest">Woodforest</button>
+          <button class="connect-tab" data-tab="tab-montgomery" role="tab" aria-selected="false" aria-controls="tab-montgomery" id="btn-montgomery">Montgomery</button>
+          <button class="connect-tab" data-tab="tab-creekside" role="tab" aria-selected="false" aria-controls="tab-creekside" id="btn-creekside">Creekside</button>
+        </div>
+      </div>
+
+      <!-- The Woodlands Tab -->
+      <div class="tab-panel active" id="tab-woodlands" role="tabpanel" aria-labelledby="btn-woodlands">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=d5527d9d-4904-4c2d-8fda-a9a74935d50a" alt="Men's Conference 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Men's Conference 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>The Unto Him Men's Conference is a weekend designed to help you fully surrender to Christ and walk boldly in His truth. Join other men from our community, March 20-21, as we pursue Christ together.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/mensconference" class="btn-card" target="_blank">Register <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8e9db6f4-dfc2-4f0d-81b0-30832c0a3801" alt="Recharge 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-r), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Recharge 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> All Campuses
+              </div>
+              <p>Single parents are invited to Recharge 2026, April 10-11. Hear from author and speaker Vaneetha Rendall Risner, attend breakout sessions and spend time in worship.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/recharge" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6c9c46ea-41a6-4679-ad3d-8c14089d7306" alt="Connect Classes" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-g), var(--grow-o))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Connect Classes</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>Find community and grow with others at a class that meets in connection with weekend worship.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/gather2023-search?Audience=820213dd-9597-4804-9519-9f2fb5ccfa03" class="btn-card" target="_blank">Get Connected <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=be2a4c90-d66b-4b47-bf4e-bbcd22ec9e30" alt="Home Groups" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--gold), var(--gold-light))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Home Groups</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>If you long for connection, growth and formation, we hope you'll be transformed in the relationships you make in Home Groups.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/homegroups" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Woodforest Tab -->
+      <div class="tab-panel" id="tab-woodforest" role="tabpanel" aria-labelledby="btn-woodforest">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=d5527d9d-4904-4c2d-8fda-a9a74935d50a" alt="Men's Conference 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Men's Conference 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>The Unto Him Men's Conference is a weekend designed to help you fully surrender to Christ and walk boldly in His truth. Join other men from our community, March 20-21.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/mensconference" class="btn-card" target="_blank">Register <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8e9db6f4-dfc2-4f0d-81b0-30832c0a3801" alt="Recharge 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-r), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Recharge 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> All Campuses
+              </div>
+              <p>Single parents are invited to Recharge 2026, April 10-11. Hear from author and speaker Vaneetha Rendall Risner, attend breakout sessions and spend time in worship.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/recharge" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Montgomery Tab -->
+      <div class="tab-panel" id="tab-montgomery" role="tabpanel" aria-labelledby="btn-montgomery">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8e9db6f4-dfc2-4f0d-81b0-30832c0a3801" alt="Recharge 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-r), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Recharge 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> All Campuses
+              </div>
+              <p>Single parents are invited to Recharge 2026, April 10-11. Hear from author and speaker Vaneetha Rendall Risner, attend breakout sessions and spend time in worship.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/recharge" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Creekside Tab -->
+      <div class="tab-panel" id="tab-creekside" role="tabpanel" aria-labelledby="btn-creekside">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8e9db6f4-dfc2-4f0d-81b0-30832c0a3801" alt="Recharge 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-r), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Recharge 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> All Campuses
+              </div>
+              <p>Single parents are invited to Recharge 2026, April 10-11. Hear from author and speaker Vaneetha Rendall Risner, attend breakout sessions and spend time in worship.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/recharge" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW SECTION
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container reveal">
+      <div class="section-label">Discipleship Pathway</div>
+      <h2>A Pathway to a Deeper Faith</h2>
+
+      <div class="grow-squares">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+
+      <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+
+      <h4>Ready to Get Started?</h4>
+      <a href="grow.html" class="btn-primary">Start Here <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+</body>
+</html>

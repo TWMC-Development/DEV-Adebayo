@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "postcss": "^8.5.8",
+    "serve": "^14.2.6"
+  }
+}

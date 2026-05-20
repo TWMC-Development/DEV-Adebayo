@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Summer Splash | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/seasonal.css">
+</head>
+
+<body class="season-summer">
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Location Bar -->
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <!-- Navbar (shared) -->
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Panel (shared) -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="offcanvas-body">
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+      <div class="nav-sections">
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">Main Menu <i class="fas fa-chevron-down d-lg-none"></i></h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">About <i class="fas fa-chevron-down d-lg-none"></i></h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">Connect <i class="fas fa-chevron-down d-lg-none"></i></h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">NextGen <i class="fas fa-chevron-down d-lg-none"></i></h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">Ministries <i class="fas fa-chevron-down d-lg-none"></i></h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       SEASONAL HERO
+       ============================================ -->
+  <section class="seasonal-hero" id="main-content" style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_BG.png');">
+    <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_summersplash/CHI_SummerSplash_FeatureBanner_Text.png" alt="Summer Splash 2026" onerror="this.alt='Summer Splash 2026'; this.style.display='none';">
+  </section>
+
+
+  <!-- ============================================
+       SEASONAL INTRO
+       ============================================ -->
+  <section class="seasonal-intro">
+    <div class="container">
+      <h2>Camps &amp; Activities</h2>
+      <p>Summer fun is on the way! NextGen Kids, NextGen 56, and Recreation Ministry have an amazing summer planned. Register and join us for exciting camps and activities across all campuses.</p>
+      <div class="highlight-box">
+        <i class="fas fa-calendar-check"></i> Registration opens March 2
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CAMPUS ACTIVITIES (blue background)
+       ============================================ -->
+  <div class="seasonal-page-bg">
+
+  <!-- Water effects: floating rings + gradient orbs -->
+  <div class="summer-fx" aria-hidden="true">
+    <!-- Rings (ripple circles) -->
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <span class="ring"></span>
+    <!-- Gradient orbs -->
+    <span class="orb"></span>
+    <span class="orb"></span>
+    <span class="orb"></span>
+    <span class="orb"></span>
+  </div>
+
+  <!-- THE WOODLANDS -->
+  <div class="campus-woodlands">
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-white text-center mb-4" style="font-family:var(--font-display)">The Woodlands</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="activity-card">
+              <div class="activity-card-body">
+                <div class="activity-tag">The Woodlands</div>
+                <h3>VBS — Kingdom Quest</h3>
+                <div class="activity-info">
+                  <div class="activity-info-item"><i class="fas fa-child"></i> Ages 4 – Completed 4th Grade</div>
+                  <div class="activity-info-item"><i class="fas fa-calendar"></i> June 9–13, 9:00 AM – 12:15 PM</div>
+                  <div class="activity-info-item"><i class="fas fa-dollar-sign"></i> $45 per child</div>
+                </div>
+                <p>An epic adventure where kids discover God's Kingdom! Each day features Bible stories, worship, crafts, games, and snacks.</p>
+              </div>
+              <div class="activity-card-footer">
+                <div class="activity-slots"><strong>142</strong> slots available</div>
+                <a href="#" class="btn-campus">Register <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="activity-card">
+              <div class="activity-card-body">
+                <div class="activity-tag">The Woodlands</div>
+                <h3>Camp Christ</h3>
+                <div class="activity-info">
+                  <div class="activity-info-item"><i class="fas fa-child"></i> Completed 5th – 6th Grade</div>
+                  <div class="activity-info-item"><i class="fas fa-calendar"></i> June 16–20, 9:00 AM – 3:00 PM</div>
+                  <div class="activity-info-item"><i class="fas fa-dollar-sign"></i> $85 per child</div>
+                </div>
+                <p>A week of outdoor adventures, team challenges, and faith-building experiences designed for pre-teens.</p>
+              </div>
+              <div class="activity-card-footer">
+                <div class="activity-slots"><strong>68</strong> slots available</div>
+                <a href="#" class="btn-campus">Register <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="activity-card">
+              <div class="activity-card-body">
+                <div class="activity-tag">The Woodlands</div>
+                <h3>Sports Camp</h3>
+                <div class="activity-info">
+                  <div class="activity-info-item"><i class="fas fa-child"></i> Ages 6–12</div>
+                  <div class="activity-info-item"><i class="fas fa-calendar"></i> July 7–11, 8:30 AM – 12:00 PM</div>
+                  <div class="activity-info-item"><i class="fas fa-dollar-sign"></i> $60 per child</div>
+                </div>
+                <p>Basketball, soccer, flag football, and more! Professional coaches lead skill-building drills in a faith-filled environment.</p>
+              </div>
+              <div class="activity-card-footer">
+                <div class="activity-slots"><strong>24</strong> slots available</div>
+                <a href="#" class="btn-campus btn-campus--waitlist">Wait List <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================
+       WOODFOREST CAMPUS
+       ============================================ -->
+  <div class="campus-woodforest">
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-white text-center mb-4" style="font-family:var(--font-display)">Woodforest</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="activity-card">
+              <div class="activity-card-body">
+                <div class="activity-tag">Woodforest</div>
+                <h3>VBS — Kingdom Quest</h3>
+                <div class="activity-info">
+                  <div class="activity-info-item"><i class="fas fa-child"></i> Ages 4 – Completed 4th Grade</div>
+                  <div class="activity-info-item"><i class="fas fa-calendar"></i> June 23–27, 9:00 AM – 12:15 PM</div>
+                  <div class="activity-info-item"><i class="fas fa-dollar-sign"></i> $45 per child</div>
+                </div>
+                <p>The same great VBS experience at our Woodforest campus. Bible stories, worship, crafts, games, and snacks every day!</p>
+              </div>
+              <div class="activity-card-footer">
+                <div class="activity-slots"><strong>86</strong> slots available</div>
+                <a href="#" class="btn-campus">Register <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ============================================
+       CREEKSIDE CAMPUS
+       ============================================ -->
+  <div class="campus-creekside">
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-white text-center mb-4" style="font-family:var(--font-display)">Creekside</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="activity-card">
+              <div class="activity-card-body">
+                <div class="activity-tag">Creekside</div>
+                <h3>VBS — Kingdom Quest</h3>
+                <div class="activity-info">
+                  <div class="activity-info-item"><i class="fas fa-child"></i> Ages 4 – Completed 4th Grade</div>
+                  <div class="activity-info-item"><i class="fas fa-calendar"></i> July 14–18, 9:00 AM – 12:15 PM</div>
+                  <div class="activity-info-item"><i class="fas fa-dollar-sign"></i> $45 per child</div>
+                </div>
+                <p>VBS comes to Creekside! Join us for an amazing week of faith, fun, and friendship.</p>
+              </div>
+              <div class="activity-card-footer">
+                <div class="activity-slots"><strong>54</strong> slots available</div>
+                <a href="#" class="btn-campus">Register <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  </div><!-- /.seasonal-page-bg -->
+
+
+  <!-- ============================================
+       FOOTER (shared)
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p>2200 Lake Woodlands Dr.<br>The Woodlands, TX 77380</p>
+          <p><a href="tel:281.297.5900">281.297.5900</a></p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="staff.html">Staff</a>
+          <a href="#">Venues &amp; Bookings</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="locations.html">Times &amp; Locations</a>
+          <a href="give.html">Give</a>
+          <a href="grow.html">G.R.O.W.</a>
+          <a href="media.html">Church Online</a>
+          <a href="#">Events</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Staff | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+  <style>
+    /* ── STAFF HERO ── */
+    .staff-hero {
+      background: var(--maroon);
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+      text-align: center;
+    }
+
+    .staff-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 60%, rgba(197,162,88,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 25%, rgba(255,255,255,0.06) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 0%, rgba(139,69,87,0.35) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .staff-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .staff-hero .container { position: relative; z-index: 1; }
+
+    .staff-hero .section-label {
+      color: var(--gold);
+      justify-content: center;
+    }
+    .staff-hero .section-label::before { background: var(--gold); }
+
+    .staff-hero h1 {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .staff-hero h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .staff-hero .subtitle {
+      color: rgba(255,255,255,0.55);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── SENIOR LEADERSHIP ── */
+    .leadership-section {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+
+    .senior-pastor-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      margin-top: 40px;
+      margin-bottom: 48px;
+    }
+
+    .senior-pastor-img {
+      height: 100%;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .senior-pastor-body {
+      padding: 40px 40px 40px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .senior-pastor-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .senior-pastor-body .pastor-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--maroon);
+      margin-bottom: 16px;
+    }
+
+    .senior-pastor-body p {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .senior-pastor-body .btn-outline {
+      align-self: flex-start;
+    }
+
+    /* ── PASTORS GRID ── */
+    .pastors-section {
+      padding: 0 0 80px;
+      background: var(--cream);
+    }
+
+    .pastor-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--duration-slow) var(--ease-out), box-shadow var(--duration-slow) ease;
+      text-align: center;
+    }
+
+    .pastor-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .pastor-card-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background-size: cover;
+      background-position: center top;
+      background-color: var(--warm-gray);
+    }
+
+    .pastor-card-body {
+      padding: 18px 16px 20px;
+    }
+
+    .pastor-card-body h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .pastor-card-body p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── STAFF DIRECTORY ── */
+    .staff-directory {
+      padding: 80px 0;
+      background: var(--warm-gray);
+    }
+
+    /* Search & filter */
+    .staff-search-bar {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .staff-search {
+      flex: 1;
+      min-width: 260px;
+      padding: 12px 20px 12px 44px;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23767676' viewBox='0 0 512 512'%3E%3Cpath d='M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z'/%3E%3C/svg%3E") 16px center / 16px no-repeat;
+      outline: none;
+      transition: border-color var(--duration-fast) ease;
+    }
+
+    .staff-search:focus {
+      border-color: var(--maroon);
+    }
+
+    .dept-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dept-pill {
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      font-weight: 500;
+      border: 1.5px solid var(--border-light);
+      background: #fff;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+
+    .dept-pill:hover {
+      border-color: var(--maroon);
+      color: var(--maroon);
+    }
+
+    .dept-pill.active {
+      background: var(--maroon);
+      color: #fff;
+      border-color: var(--maroon);
+    }
+
+    /* Accordion */
+    .staff-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .staff-dept {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow var(--duration-normal) ease;
+    }
+
+    .staff-dept.open {
+      box-shadow: var(--shadow-card);
+    }
+
+    .staff-dept-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      cursor: pointer;
+      transition: background var(--duration-fast) ease;
+      user-select: none;
+    }
+
+    .staff-dept-header:hover {
+      background: rgba(110,49,64,0.02);
+    }
+
+    .staff-dept-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .staff-dept-count {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--warm-gray);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .staff-dept-header .chevron {
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+
+    .staff-dept.open .chevron {
+      transform: rotate(180deg);
+    }
+
+    .staff-dept-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--duration-slow) var(--ease-out);
+    }
+
+    .staff-dept.open .staff-dept-body {
+      max-height: 2000px;
+    }
+
+    .staff-dept-grid {
+      padding: 0 24px 24px;
+    }
+
+    .staff-member {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      transition: background var(--duration-fast) ease;
+    }
+
+    .staff-member:hover {
+      background: rgba(110,49,64,0.03);
+    }
+
+    .staff-member-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--maroon-light), var(--maroon));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .staff-member-info h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 1px;
+    }
+
+    .staff-member-info p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Hidden state for search filtering */
+    .staff-dept.filtered-out { display: none; }
+    .staff-member.filtered-out { display: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 992px) {
+      .senior-pastor-img { min-height: 300px; }
+      .senior-pastor-body { padding: 28px; }
+    }
+
+    @media (max-width: 768px) {
+      .staff-hero { padding: 100px 0 60px; }
+      .leadership-section,
+      .pastors-section,
+      .staff-directory { padding: 60px 0; }
+    }
+
+    @media (max-width: 576px) {
+      .staff-search-bar { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="staff-hero" id="main-content">
+    <div class="container">
+      <div class="section-label reveal">Our Team</div>
+      <h1 class="reveal">Meet the people<br><em>behind the mission.</em></h1>
+      <p class="subtitle reveal">Over 100 pastors and staff members serving across five campuses, united by a shared calling to help others grow in faith.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SENIOR LEADERSHIP
+       ============================================ -->
+  <section class="leadership-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label">Leadership</div>
+        <h2 class="section-title">Senior <em>Leadership</em></h2>
+      </div>
+
+      <div class="senior-pastor-card reveal">
+        <div class="row g-0">
+          <div class="col-lg-4">
+            <div class="senior-pastor-img" style="background-image: url('./assets/MarkSorensen_headshot_full.jpg');"></div>
+          </div>
+          <div class="col-lg-8">
+            <div class="senior-pastor-body">
+              <h3>Rev. Mark Sorensen</h3>
+              <div class="pastor-title">Senior Pastor</div>
+              <p>Rev. Mark Sorensen serves as the Senior Pastor of The Woodlands Methodist Church, leading a congregation of thousands across five campuses. His heart for community, discipleship, and outreach shapes the vision of TWMC.</p>
+              <a href="#" class="btn-outline">Read Bio <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       PASTORS GRID
+       ============================================ -->
+  <section class="pastors-section">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label">Pastoral Team</div>
+        <h2 class="section-title">Our <em>Pastors</em></h2>
+      </div>
+
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4">
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=9d0d63b0-d7ae-40d6-a4e7-ff9f0ba498a0');"></div>
+          <div class="pastor-card-body"><h3>Rev. Drew Essen</h3><p>Executive Pastor</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=57b9b6fd-e089-4627-9a71-014703edad60');"></div>
+          <div class="pastor-card-body"><h3>Rev. Zach Anderson</h3><p>Pastor of Multicampus Discipleship</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=98f33cf4-fcc4-432c-a5af-ab7270e29aa8');"></div>
+          <div class="pastor-card-body"><h3>Rev. Pierce Drake</h3><p>Pastor, Covenant Church at Creekside</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=c54b4582-458d-4b71-8b26-9a296adda162');"></div>
+          <div class="pastor-card-body"><h3>Rev. Dr. Ashley Goad</h3><p>Pastor of Missions</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=046dc599-7b3d-4eeb-89bd-b6e28a1d2dde');"></div>
+          <div class="pastor-card-body"><h3>Dr. Stew Grant</h3><p>Pastor of Marriage &amp; Family</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=2481cbac-0431-4011-b3fe-aee69ba0cc24');"></div>
+          <div class="pastor-card-body"><h3>Rev. Shawn Gray</h3><p>Pastor of Harvest Community</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=975880c1-6be7-4bf9-894a-f4ea769e49b6');"></div>
+          <div class="pastor-card-body"><h3>Rev. Aaron Laird</h3><p>Pastor, Church at Montgomery</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=12e1dd79-c46b-4adf-ada9-1628b9ddac5');"></div>
+          <div class="pastor-card-body"><h3>David Lindwall</h3><p>Pastor of Caring &amp; Adult Outreach</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=907138ad-2106-4159-8e7b-6376038b1657');"></div>
+          <div class="pastor-card-body"><h3>Rev. Daniel Lumpee</h3><p>Loft Lead Pastor</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=1b89b555-7802-4fbb-a524-61936f69a2a0');"></div>
+          <div class="pastor-card-body"><h3>Rev. Margarita McCarthy</h3><p>Pastor of Caring &amp; Prayer</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=35d244cf-bfcb-4d36-88ac-f9020e6c5334');"></div>
+          <div class="pastor-card-body"><h3>Rev. Chris McLain</h3><p>Pastor of Caring &amp; Adults 55+</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=9ce488ca-e247-433e-8eaf-325aac0ef5fe');"></div>
+          <div class="pastor-card-body"><h3>Rev. Dr. Jeff Olive</h3><p>Pastor of Church Multiplication</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=17f2695e-1f56-485b-a048-162e48ed97e1');"></div>
+          <div class="pastor-card-body"><h3>Rev. Brent Parker</h3><p>Pastor, Church at Woodforest</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=d4832134-eee9-4ca3-a070-86d8f9dccbc7');"></div>
+          <div class="pastor-card-body"><h3>Rev. Sarah Payne</h3><p>Pastor of Caring &amp; Special Needs</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=8f65077e-7ad3-4ff2-a0bb-a21ba6c73abb');"></div>
+          <div class="pastor-card-body"><h3>Rev. Luann Riley</h3><p>Pastor of Discipleship &amp; Formation</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=b5cf6f5b-a830-41e2-99ee-da0b72f1884d');"></div>
+          <div class="pastor-card-body"><h3>Rev. Jonah Robson</h3><p>Pastor of Students &amp; Young Adults</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=7be1e5b6-bdfa-4c6a-9c74-9dd91fff91b5');"></div>
+          <div class="pastor-card-body"><h3>Rev. Enrique Sanchez</h3><p>Pastor of Spanish Ministry</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=1786e5b0-ad51-4a93-96f3-37243f5876f4');"></div>
+          <div class="pastor-card-body"><h3>Rev. Mark Swayze</h3><p>Pastor of NextGen Ministries</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=970a67ce-4720-4e09-bd36-737a80818a0b');"></div>
+          <div class="pastor-card-body"><h3>Rev. Karen Tyler</h3><p>Pastor of Worship &amp; Evangelism</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=77f7f1c0-82fa-4b56-821e-f6e811963087');"></div>
+          <div class="pastor-card-body"><h3>Rev. Dario Vargas</h3><p>Pastor of Spanish Ministry, Creekside</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=2c6b4382-6405-45a9-b1a4-bf45ae07b840');"></div>
+          <div class="pastor-card-body"><h3>Dr. Bob Hayes</h3><p>Bishop Emeritus</p></div>
+        </div></div>
+
+        <div class="col"><div class="pastor-card reveal">
+          <div class="pastor-card-img" style="background-image: url('https://thewoodlandsmethodist.org/GetImage.ashx?guid=0919505e-f429-4d4e-acf7-3e4b0f097426');"></div>
+          <div class="pastor-card-body"><h3>Dr. Ed Robb III</h3><p>Pastor Emeritus</p></div>
+        </div></div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       STAFF DIRECTORY
+       ============================================ -->
+  <section class="staff-directory">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label">Directory</div>
+        <h2 class="section-title">Staff <em>by Department</em></h2>
+      </div>
+
+      <div class="staff-search-bar reveal">
+        <input type="text" class="staff-search" id="staffSearch" placeholder="Search staff by name or title...">
+      </div>
+
+      <div class="staff-accordion" id="staffAccordion">
+
+        <!-- ADMINISTRATION -->
+        <div class="staff-dept" data-dept="administration">
+          <div class="staff-dept-header"><h3>Administration <span class="staff-dept-count">7</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Drew Essen" data-title="Executive Pastor"><div class="staff-member-avatar">DE</div><div class="staff-member-info"><h4>Rev. Drew Essen</h4><p>Executive Pastor</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Shelley Guthrie" data-title="Chief of Staff"><div class="staff-member-avatar">SG</div><div class="staff-member-info"><h4>Shelley Guthrie</h4><p>Chief of Staff to the Executive Pastor</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Julia Jordan" data-title="Project Manager"><div class="staff-member-avatar">JJ</div><div class="staff-member-info"><h4>Julia Jordan</h4><p>Project Manager</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Victoria Wood" data-title="Director of Staff Development"><div class="staff-member-avatar">VW</div><div class="staff-member-info"><h4>Victoria Wood</h4><p>Director of Staff Development</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Connie Kelley" data-title="HR Generalist"><div class="staff-member-avatar">CK</div><div class="staff-member-info"><h4>Connie Kelley</h4><p>HR Generalist</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Erica Terry" data-title="Payroll and HR Administrator"><div class="staff-member-avatar">ET</div><div class="staff-member-info"><h4>Erica Terry</h4><p>Payroll &amp; HR Administrator</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Ruth Witchet" data-title="Receptionist"><div class="staff-member-avatar">RW</div><div class="staff-member-info"><h4>Ruth Witchet</h4><p>Receptionist</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CARING -->
+        <div class="staff-dept" data-dept="caring">
+          <div class="staff-dept-header"><h3>Caring &amp; Prayer <span class="staff-dept-count">5</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Chris McLain" data-title="Pastor of Caring"><div class="staff-member-avatar">CM</div><div class="staff-member-info"><h4>Rev. Chris McLain</h4><p>Pastor of Caring &amp; Adults 55+</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Margarita McCarthy" data-title="Pastor of Prayer"><div class="staff-member-avatar">MM</div><div class="staff-member-info"><h4>Rev. Margarita McCarthy</h4><p>Pastor of Caring &amp; Prayer</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Sarah Payne" data-title="Special Needs"><div class="staff-member-avatar">SP</div><div class="staff-member-info"><h4>Rev. Sarah Payne</h4><p>Pastor of Caring &amp; Special Needs</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Susan Goldsmith" data-title="Ministry Assistant"><div class="staff-member-avatar">SG</div><div class="staff-member-info"><h4>Susan Goldsmith</h4><p>Caring &mdash; Ministry Assistant</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Teri Rossi" data-title="Ministry Assistant"><div class="staff-member-avatar">TR</div><div class="staff-member-info"><h4>Teri Rossi</h4><p>Caring &mdash; Ministry Assistant</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CHILDREN OF THE WOODLANDS -->
+        <div class="staff-dept" data-dept="children-woodlands">
+          <div class="staff-dept-header"><h3>Children of The Woodlands <span class="staff-dept-count">8</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Charla McCoy" data-title="Director"><div class="staff-member-avatar">CM</div><div class="staff-member-info"><h4>Charla McCoy</h4><p>Director, Children of The Woodlands</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Deb Minter" data-title="Curriculum Advisor"><div class="staff-member-avatar">DM</div><div class="staff-member-info"><h4>Deb Minter</h4><p>Curriculum &amp; Classroom Advisor</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Kim Schlesinger" data-title="Enrollment Coordinator"><div class="staff-member-avatar">KS</div><div class="staff-member-info"><h4>Kim Schlesinger</h4><p>Enrollment Coordinator</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Laurie Galiunas" data-title="Classroom Advisor"><div class="staff-member-avatar">LG</div><div class="staff-member-info"><h4>Laurie Galiunas</h4><p>Classroom Advisor</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Meegan Rautenbach" data-title="Business Office"><div class="staff-member-avatar">MR</div><div class="staff-member-info"><h4>Meegan Rautenbach</h4><p>Business Office</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Nikki York" data-title="Business Office"><div class="staff-member-avatar">NY</div><div class="staff-member-info"><h4>Nikki York</h4><p>Business Office</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Sara Jackson" data-title="Preschool Coordinator"><div class="staff-member-avatar">SJ</div><div class="staff-member-info"><h4>Sara Jackson</h4><p>Preschool Coordinator</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Terri Hadrick" data-title="Resource Coordinator"><div class="staff-member-avatar">TH</div><div class="staff-member-info"><h4>Terri Hadrick</h4><p>Resource Coordinator</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- COVENANT CHURCH AT CREEKSIDE -->
+        <div class="staff-dept" data-dept="creekside">
+          <div class="staff-dept-header"><h3>Covenant Church at Creekside <span class="staff-dept-count">6</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Pierce Drake" data-title="Campus Pastor"><div class="staff-member-avatar">PD</div><div class="staff-member-info"><h4>Rev. Pierce Drake</h4><p>Campus Pastor</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Dario Vargas" data-title="Spanish Ministry"><div class="staff-member-avatar">DV</div><div class="staff-member-info"><h4>Rev. Dario Vargas</h4><p>Pastor of Spanish Ministry</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Rebecca Adams" data-title="Campus Coordinator"><div class="staff-member-avatar">RA</div><div class="staff-member-info"><h4>Rebecca Adams</h4><p>Campus Coordinator</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Arnold Arreaga" data-title="Worship Leader"><div class="staff-member-avatar">AA</div><div class="staff-member-info"><h4>Arnold Arreaga</h4><p>Worship Leader &amp; NextGen Students</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Amber Nicole Birkline" data-title="NextGen Kids"><div class="staff-member-avatar">AB</div><div class="staff-member-info"><h4>Amber Nicole Birkline</h4><p>NextGen Kids Shepherd</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Jennifer Creel" data-title="NextGen Kids"><div class="staff-member-avatar">JC</div><div class="staff-member-info"><h4>Jennifer Creel</h4><p>NextGen Kids Shepherd</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CREATIVE SERVICES -->
+        <div class="staff-dept" data-dept="creative">
+          <div class="staff-dept-header"><h3>Creative Services <span class="staff-dept-count">6</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Conrad Aleshire" data-title="Design Director"><div class="staff-member-avatar">CA</div><div class="staff-member-info"><h4>Conrad Aleshire</h4><p>Design Director</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Derrick Dedmon" data-title="Director of Digital Communications"><div class="staff-member-avatar">DD</div><div class="staff-member-info"><h4>Derrick Dedmon</h4><p>Director of Digital Communications</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Ailyn Guerra" data-title="Creative Services Manager"><div class="staff-member-avatar">AG</div><div class="staff-member-info"><h4>Ailyn Guerra</h4><p>Creative Services Manager</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Kim Walters" data-title="Traffic Manager"><div class="staff-member-avatar">KW</div><div class="staff-member-info"><h4>Kim Walters</h4><p>Creative Services Traffic Manager</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Micki Mensio" data-title="Project Manager"><div class="staff-member-avatar">MM</div><div class="staff-member-info"><h4>Micki Mensio</h4><p>Creative Services Project Manager</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Robyn Johnson" data-title="Campus Manager"><div class="staff-member-avatar">RJ</div><div class="staff-member-info"><h4>Robyn Johnson</h4><p>Creative Services Campus Manager</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- DISCIPLESHIP -->
+        <div class="staff-dept" data-dept="discipleship">
+          <div class="staff-dept-header"><h3>Discipleship &amp; Formation <span class="staff-dept-count">4</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Luann Riley" data-title="Pastor of Discipleship"><div class="staff-member-avatar">LR</div><div class="staff-member-info"><h4>Rev. Luann Riley</h4><p>Pastor of Discipleship &amp; Formation</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Zach Anderson" data-title="Multicampus Discipleship"><div class="staff-member-avatar">ZA</div><div class="staff-member-info"><h4>Rev. Zach Anderson</h4><p>Pastor of Multicampus Discipleship</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Bethany Johnson" data-title="Assistant"><div class="staff-member-avatar">BJ</div><div class="staff-member-info"><h4>Bethany Johnson</h4><p>Assistant to the Pastor of Discipleship</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Terry Loughridge" data-title="Single Life Coordinator"><div class="staff-member-avatar">TL</div><div class="staff-member-info"><h4>Terry Loughridge</h4><p>Single Life Ministry Coordinator</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CONNECTING -->
+        <div class="staff-dept" data-dept="connecting">
+          <div class="staff-dept-header"><h3>Connecting &amp; Multiplication <span class="staff-dept-count">3</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Jeff Olive" data-title="Church Multiplication"><div class="staff-member-avatar">JO</div><div class="staff-member-info"><h4>Rev. Dr. Jeff Olive</h4><p>Pastor of Church Multiplication</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Debra King" data-title="Connections Director"><div class="staff-member-avatar">DK</div><div class="staff-member-info"><h4>Debra King</h4><p>Connections Director</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Pam Shelton" data-title="Connecting Coordinator"><div class="staff-member-avatar">PS</div><div class="staff-member-info"><h4>Pam Shelton</h4><p>Connecting Ministry Coordinator</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- MISSIONS -->
+        <div class="staff-dept" data-dept="missions">
+          <div class="staff-dept-header"><h3>Missions <span class="staff-dept-count">2</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Ashley Goad" data-title="Pastor of Missions"><div class="staff-member-avatar">AG</div><div class="staff-member-info"><h4>Rev. Dr. Ashley Goad</h4><p>Pastor of Missions</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Sharla Olive" data-title="Assistant Director"><div class="staff-member-avatar">SO</div><div class="staff-member-info"><h4>Sharla Olive</h4><p>Assistant Director of Missions</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- MUSIC & WORSHIP -->
+        <div class="staff-dept" data-dept="music">
+          <div class="staff-dept-header"><h3>Music &amp; Worship <span class="staff-dept-count">4</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Karen Tyler" data-title="Pastor of Worship"><div class="staff-member-avatar">KT</div><div class="staff-member-info"><h4>Rev. Karen Tyler</h4><p>Pastor of Worship &amp; Evangelism</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Brenna Bullock" data-title="Contemporary Music"><div class="staff-member-avatar">BB</div><div class="staff-member-info"><h4>Brenna Bullock</h4><p>Director of Contemporary Music</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="John Arensdorf" data-title="Worship Leader"><div class="staff-member-avatar">JA</div><div class="staff-member-info"><h4>John Arensdorf</h4><p>Montgomery Worship Leader</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Nathan Guerry" data-title="Worship Leader"><div class="staff-member-avatar">NG</div><div class="staff-member-info"><h4>Nathan Guerry</h4><p>NextGen Students Worship Leader</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- NEXTGEN -->
+        <div class="staff-dept" data-dept="nextgen">
+          <div class="staff-dept-header"><h3>NextGen Ministries <span class="staff-dept-count">3</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Mark Swayze" data-title="NextGen Pastor"><div class="staff-member-avatar">MS</div><div class="staff-member-info"><h4>Rev. Mark Swayze</h4><p>Pastor of NextGen Ministries</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Jonah Robson" data-title="Students and Young Adults"><div class="staff-member-avatar">JR</div><div class="staff-member-info"><h4>Rev. Jonah Robson</h4><p>Pastor of Students &amp; Young Adults</p></div></div></div>
+            <div class="col"><div class="staff-member" data-name="Enrique Sanchez" data-title="Spanish Ministry"><div class="staff-member-avatar">ES</div><div class="staff-member-info"><h4>Rev. Enrique Sanchez</h4><p>Pastor of Spanish Ministry</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CAMPUS: WOODFOREST -->
+        <div class="staff-dept" data-dept="woodforest">
+          <div class="staff-dept-header"><h3>Church at Woodforest <span class="staff-dept-count">1</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Brent Parker" data-title="Campus Pastor"><div class="staff-member-avatar">BP</div><div class="staff-member-info"><h4>Rev. Brent Parker</h4><p>Campus Pastor, Woodforest</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- CAMPUS: MONTGOMERY -->
+        <div class="staff-dept" data-dept="montgomery">
+          <div class="staff-dept-header"><h3>Church at Montgomery <span class="staff-dept-count">1</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Aaron Laird" data-title="Campus Pastor"><div class="staff-member-avatar">AL</div><div class="staff-member-info"><h4>Rev. Aaron Laird</h4><p>Campus Pastor, Montgomery</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- MARRIAGE & FAMILY -->
+        <div class="staff-dept" data-dept="marriage">
+          <div class="staff-dept-header"><h3>Marriage &amp; Family <span class="staff-dept-count">1</span></h3><i class="fas fa-chevron-down chevron"></i></div>
+          <div class="staff-dept-body"><div class="staff-dept-grid">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3">
+            <div class="col"><div class="staff-member" data-name="Stew Grant" data-title="Pastor of Marriage"><div class="staff-member-avatar">SG</div><div class="staff-member-info"><h4>Dr. Stew Grant</h4><p>Pastor of Marriage &amp; Family Ministries</p></div></div></div>
+            </div>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Pathway</div>
+      </div>
+      <div class="grow-squares reveal">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+      <div class="reveal">
+        <h2>A Pathway to a Deeper Faith</h2>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="grow.html" class="btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i><a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i><a href="tel:(281)297-5900">(281) 297-5900</a></p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>About</h4><a href="#">What We Believe</a><a href="#">Our Stories</a><a href="#">Membership</a><a href="staff.html">Staff</a><a href="#">Facilities</a><a href="#">Employment</a></div>
+        <div class="footer-col"><h4>Quick Links</h4><a href="#">Fireside Cafe</a><a href="#">Indoor Playgrounds</a><a href="#">Find Help &amp; Support</a><a href="#">Funerals &amp; Memorials</a><a href="#">Venues &amp; Bookings</a><a href="#">My Account</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc"><span>Member of the</span><img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church"></div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+  <script>
+    /* ── Staff Accordion ── */
+    document.querySelectorAll('.staff-dept-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const dept = header.parentElement;
+        const wasOpen = dept.classList.contains('open');
+
+        /* Close all */
+        document.querySelectorAll('.staff-dept').forEach(d => d.classList.remove('open'));
+
+        /* Toggle clicked */
+        if (!wasOpen) dept.classList.add('open');
+      });
+    });
+
+    /* ── Staff Search ── */
+    const searchInput = document.getElementById('staffSearch');
+    const depts = document.querySelectorAll('.staff-dept');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+
+      depts.forEach(dept => {
+        const members = dept.querySelectorAll('.staff-member');
+        let hasVisible = false;
+
+        members.forEach(member => {
+          const name = (member.dataset.name || '').toLowerCase();
+          const title = (member.dataset.title || '').toLowerCase();
+          const match = !query || name.includes(query) || title.includes(query);
+
+          member.classList.toggle('filtered-out', !match);
+          if (match) hasVisible = true;
+        });
+
+        dept.classList.toggle('filtered-out', !hasVisible);
+
+        /* Auto-open departments with matches */
+        if (query && hasVisible) {
+          dept.classList.add('open');
+        } else if (!query) {
+          dept.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

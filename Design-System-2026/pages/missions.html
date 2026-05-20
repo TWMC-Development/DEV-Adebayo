@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Missions | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/mission_conf_2023/avel-chucklanov.png');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">Serve</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Missions</span>
+        </nav>
+        <h1>Missions</h1>
+        <p>Until the Whole World Knows</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO — Mission Statement
+       ============================================ -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+        <div class="col"><div class="intro-video">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/MIS_WGO_International.jpg" alt="Missions — Reaching the world for Christ" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+        </div></div>
+
+        <div class="col"><div class="intro-text">
+          <div class="section-label">Our Calling</div>
+          <h2 class="section-title">Reach People for Jesus Christ, <em>Disciple Them in Faith</em>, Help Those in Need</h2>
+          <p>Missions is the heartbeat of our church. It is interwoven in and throughout all of our ministries. It's how we live out the Great Commission found in Matthew 28:19–20. And because we love Jesus Christ, we have hearts of compassion to help those in need.</p>
+          <p>Our ministries empower people in need, giving them dignity, self-worth and the ability to become strong and self-sufficient. We work both globally and locally to faithfully serve God's people.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GIVE TO MISSIONS — CTA Buttons
+       ============================================ -->
+  <section class="missions-give-cta">
+    <div class="container reveal">
+      <div class="missions-give-grid row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"><a href="https://thewoodlandsmethodist.org/givetoMissions" class="missions-give-card" target="_blank">
+          <div class="missions-give-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3>Give to Missions</h3>
+          <p>Support our local and global mission partners with a financial gift.</p>
+          <span class="btn-primary">Give Now <i class="fas fa-arrow-right"></i></span>
+        </a></div>
+
+        <div class="col"><a href="https://thewoodlandsmethodist.org/missions-donation-items" class="missions-give-card" target="_blank">
+          <div class="missions-give-icon"><i class="fas fa-box-open"></i></div>
+          <h3>Donation Items Needed</h3>
+          <p>View our current list of needed items and help supply essential resources.</p>
+          <span class="btn-primary">See Items <i class="fas fa-arrow-right"></i></span>
+        </a></div>
+
+        <div class="col"><a href="https://thewoodlandsmethodist.org/givetodisasterrelief" class="missions-give-card" target="_blank">
+          <div class="missions-give-icon"><i class="fas fa-hands-helping"></i></div>
+          <h3>Give to Disaster Relief</h3>
+          <p>Provide immediate help for communities impacted by natural disasters.</p>
+          <span class="btn-primary">Give Now <i class="fas fa-arrow-right"></i></span>
+        </a></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       MISSIONS HIGHLIGHTS — Featured Ministries
+       ============================================ -->
+  <section class="missions-highlights">
+    <div class="container">
+      <div class="section-label">How We Serve</div>
+      <h2 class="section-title">Mission Opportunities</h2>
+
+      <div class="missions-cards row row-cols-1 row-cols-md-2 g-28 reveal">
+
+        <div class="col"><div class="missions-card">
+          <div class="missions-card-image">
+            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/larm-rmah-AEaTUnvneik-unsplashV2+SMALL.jpg" alt="Global Missions">
+          </div>
+          <div class="missions-card-body">
+            <h3>Global Missions</h3>
+            <p>Our partnerships with 101 global mission ministry partners allow us to have influence in 190 countries to reach people for Jesus, disciple them in faith, and help those in need.</p>
+          </div>
+          <div class="missions-card-footer">
+            <a href="https://thewoodlandsmethodist.org/globalmissions" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div></div>
+
+        <div class="col"><div class="missions-card">
+          <div class="missions-card-image">
+            <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=f9c223c0-a509-4da5-b9cc-5b49235ff0ff" alt="Missions Ministry Focus">
+          </div>
+          <div class="missions-card-body">
+            <h3>Missions Ministry Focus</h3>
+            <p>Until the Whole World Knows of the love and grace of Jesus, we are called to be in mission to our neighbors across the street and across the globe.</p>
+          </div>
+          <div class="missions-card-footer">
+            <a href="https://thewoodlandsmethodist.org/missionsconference" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div></div>
+
+        <div class="col"><div class="missions-card">
+          <div class="missions-card-image">
+            <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=68908cb9-07a4-481c-b3af-682e855c9da2" alt="Society of St. Stephen">
+          </div>
+          <div class="missions-card-body">
+            <h3>Society of St. Stephen</h3>
+            <p>Our church provides financial assistance to families in crisis in our congregation and in the surrounding South Montgomery County area.</p>
+          </div>
+          <div class="missions-card-footer">
+            <a href="https://thewoodlandsmethodist.org/mission-partners" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div></div>
+
+        <div class="col"><div class="missions-card">
+          <div class="missions-card-image">
+            <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=477e31d9-b66e-4b1b-ba77-cb1776a6eea2" alt="Driving Family Futures">
+          </div>
+          <div class="missions-card-body">
+            <h3>Driving Family Futures</h3>
+            <p>Our Missions Ministry accepts donations of vehicles to provide transportation for individuals and families working to get back on their feet.</p>
+          </div>
+          <div class="missions-card-footer">
+            <a href="https://thewoodlandsmethodist.org/mission-partners" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div></div>
+
+      </div>
+
+      <div class="missions-cta-row reveal">
+        <a href="https://thewoodlandsmethodist.org/outward" class="btn-primary">Serve Missions <i class="fas fa-arrow-right"></i></a>
+        <a href="https://thewoodlandsmethodist.org/pledgemissions2026" class="btn-outline" target="_blank">Missions Pledge 2026</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CONNECT SECTION
+       ============================================ -->
+  <section class="connect-section">
+    <div class="container">
+      <div class="connect-header reveal">
+        <div class="section-label">Get Involved</div>
+        <h2 class="section-title">Connect <em>With Us</em></h2>
+
+        <div class="connect-tabs" id="connectTabs" role="tablist">
+        <button class="connect-tab active" data-tab="tab-woodlands" role="tab" aria-selected="true" aria-controls="tab-woodlands" id="btn-woodlands">The Woodlands</button>
+        <button class="connect-tab" data-tab="tab-woodforest" role="tab" aria-selected="false" aria-controls="tab-woodforest" id="btn-woodforest">Woodforest</button>
+        <button class="connect-tab" data-tab="tab-montgomery" role="tab" aria-selected="false" aria-controls="tab-montgomery" id="btn-montgomery">Montgomery</button>
+        <button class="connect-tab" data-tab="tab-creekside" role="tab" aria-selected="false" aria-controls="tab-creekside" id="btn-creekside">Creekside</button>
+        </div>
+      </div>
+
+      <!-- The Woodlands Tab -->
+      <div class="tab-panel active" id="tab-woodlands" role="tabpanel" aria-labelledby="btn-woodlands">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6aae44ca-6d61-4a7e-949a-d5e66fdcca4c" alt="U.M. Army 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-o), var(--grow-g))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>U.M. Army 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Off-Campus
+              </div>
+              <p>U.M. ARMY is a weeklong multi-generational construction ministry that shares the love of Christ with our neighbors within the state of Texas, serving people in need and promoting spiritual growth.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3203" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=474d824b-9a34-4a65-adb0-df454a953b8f" alt="Family Promise" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Family Promise</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands &middot; Off-Campus
+              </div>
+              <p>Family Promise, a homeless ministry based in Conroe, is a supported missions partner. We provide meals and overnight hosts to support families participating in this 90-day program.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3210" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=511ffc82-29c7-452c-be4e-03a8b5da48c1" alt="Blood Drive" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-r), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Blood Drive</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>Give the gift of life through the Gulf Coast Regional Blood Center. Blood donors are needed to give now and consistently. Patients in your community will be forever grateful.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3170" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=76e10317-cabe-4a3a-be99-d4f7ea170a92" alt="Craft Circle Spring Pop-Up" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--gold), var(--gold-light))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Craft Circle Spring Pop-Up</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>Our talented Craft Circle members have created beautiful handmade items that make great gifts. Each purchase helps support our ministry partners.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3242" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Woodforest Tab -->
+      <div class="tab-panel" id="tab-woodforest" role="tabpanel" aria-labelledby="btn-woodforest">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6aae44ca-6d61-4a7e-949a-d5e66fdcca4c" alt="U.M. Army 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-o), var(--grow-g))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>U.M. Army 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Off-Campus
+              </div>
+              <p>U.M. ARMY is a weeklong multi-generational construction ministry that shares the love of Christ with our neighbors within the state of Texas.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3203" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=58ead96e-5d91-4b3f-ad15-db8eba4592f5" alt="Family Promise - Montgomery" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Family Promise — Montgomery</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Woodforest &middot; Montgomery
+              </div>
+              <p>Family Promise, a homeless ministry based in Conroe, is a supported missions partner. We provide meals and overnight hosts to support families in this 90-day program.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3210" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Montgomery Tab -->
+      <div class="tab-panel" id="tab-montgomery" role="tabpanel" aria-labelledby="btn-montgomery">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6aae44ca-6d61-4a7e-949a-d5e66fdcca4c" alt="U.M. Army 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-o), var(--grow-g))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>U.M. Army 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Off-Campus
+              </div>
+              <p>U.M. ARMY is a weeklong multi-generational construction ministry that shares the love of Christ with our neighbors within the state of Texas.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3203" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=58ead96e-5d91-4b3f-ad15-db8eba4592f5" alt="Family Promise - Montgomery" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--maroon-light), var(--maroon))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Family Promise — Montgomery</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Woodforest &middot; Montgomery
+              </div>
+              <p>Family Promise, a homeless ministry based in Conroe, is a supported missions partner. We provide meals and overnight hosts to support families in this 90-day program.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3210" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Creekside Tab -->
+      <div class="tab-panel" id="tab-creekside" role="tabpanel" aria-labelledby="btn-creekside">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6aae44ca-6d61-4a7e-949a-d5e66fdcca4c" alt="U.M. Army 2026" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--grow-o), var(--grow-g))'">
+            </div>
+            <div class="connect-card-body">
+              <h3>U.M. Army 2026</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Off-Campus
+              </div>
+              <p>U.M. ARMY is a weeklong multi-generational construction ministry that shares the love of Christ with our neighbors within the state of Texas.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3203" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       E-NEWS CTA
+       ============================================ -->
+  <section class="enews-cta">
+    <div class="container reveal">
+      <div class="enews-inner">
+        <div class="enews-text">
+          <h3>Stay Connected with Missions</h3>
+          <p>Get the latest missions news, volunteer opportunities and stories of impact delivered to your inbox.</p>
+        </div>
+        <a href="https://thewoodlandsmethodist.org/enews" class="btn-gold" target="_blank">Subscribe to E-News <i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW SECTION
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container reveal">
+      <div class="section-label">Discipleship Pathway</div>
+      <h2>A Pathway to a Deeper Faith</h2>
+
+      <div class="grow-squares">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+
+      <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+
+      <h4>Ready to Get Started?</h4>
+      <a href="grow.html" class="btn-primary">Start Here <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+</body>
+</html>

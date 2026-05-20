@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Extras — Archived Components | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+
+  <style>
+    /* ── Section divider used in this file only ── */
+    .extras-section { padding: 80px 0; }
+    .extras-section + .extras-section { border-top: 2px dashed rgba(110,49,64,0.12); }
+    .extras-section .extras-source-label { position: static; margin-bottom: 0; }
+    .extras-source-label {
+      display: inline-block; font-family: var(--font-body); font-size: 0.72rem;
+      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: #fff; background: var(--maroon); padding: 4px 12px;
+      border-radius: var(--radius-pill); margin-bottom: 8px;
+    }
+
+    /* ── FROM childrens.html ── */
+    .ch-mission-list { list-style: none; padding: 0; margin: 20px 0 16px; }
+    .ch-mission-list li {
+      font-family: var(--font-body); padding: 10px 0; font-size: 1.05rem;
+      color: var(--maroon); font-weight: 600; display: flex; align-items: center; gap: 12px;
+    }
+    .ch-mission-list li i { color: var(--gold); font-size: 1.1rem; width: 24px; text-align: center; }
+
+    .ch-kids-enews { background: var(--maroon); padding: 48px 0; }
+    .ch-kids-enews-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .ch-kids-enews h3 { font-family: var(--font-display); color: #fff; margin: 0 0 8px; font-size: 1.6rem; }
+    .ch-kids-enews p { font-family: var(--font-body); color: rgba(255,255,255,0.85); margin: 0; line-height: 1.6; }
+
+    .ch-programs-section { padding: 80px 0; background: var(--cream); }
+    .ch-programs-header { text-align: center; margin-bottom: 40px; }
+    .ch-programs-header h2 { font-family: var(--font-display); font-size: 2.2rem; color: var(--maroon); }
+    .ch-programs-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
+    .ch-programs-tab {
+      font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; padding: 10px 22px;
+      border-radius: 50px; border: 2px solid var(--maroon); background: transparent;
+      color: var(--maroon); cursor: pointer; transition: all var(--duration-normal) ease;
+    }
+    .ch-programs-tab:hover { background: rgba(110,49,64,0.08); }
+    .ch-programs-tab.active { background: var(--maroon); color: #fff; }
+    .ch-programs-panel { display: none; }
+    .ch-programs-panel.active { display: block; }
+    .ch-campus-label {
+      font-family: var(--font-display); font-size: 1.3rem; color: var(--maroon);
+      margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--gold);
+    }
+    .ch-accordion { max-width: 860px; margin: 0 auto; }
+    .ch-accordion-item {
+      background: #fff; border-radius: var(--radius); margin-bottom: 12px;
+      overflow: hidden; box-shadow: 0 2px 12px rgba(110,49,64,0.05);
+    }
+    .ch-accordion-trigger {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 28px; background: none; border: none; cursor: pointer;
+      font-family: var(--font-body); font-size: 1.05rem; font-weight: 600;
+      color: var(--maroon); transition: background var(--duration-fast) ease; text-align: left; gap: 12px;
+    }
+    .ch-accordion-trigger:hover { background: rgba(110,49,64,0.03); }
+    .ch-accordion-trigger .ch-acc-icon-left { color: var(--gold); font-size: 1.1rem; margin-right: 12px; width: 24px; text-align: center; }
+    .ch-accordion-trigger .ch-acc-title { flex: 1; }
+    .ch-accordion-trigger .ch-acc-chevron { transition: transform var(--duration-normal) ease; color: #aaa; font-size: 0.85rem; }
+    .ch-accordion-item.open .ch-accordion-trigger .ch-acc-chevron { transform: rotate(180deg); }
+    .ch-accordion-body { max-height: 0; overflow: hidden; transition: max-height var(--duration-slow) ease; }
+    .ch-accordion-item.open .ch-accordion-body { max-height: 1200px; }
+    .ch-accordion-content { padding: 0 28px 24px; font-family: var(--font-body); color: var(--text-body); line-height: 1.75; }
+    .ch-accordion-content p { margin-bottom: 12px; }
+    .ch-accordion-content h4 {
+      font-family: var(--font-body); font-weight: 700; text-transform: uppercase;
+      font-size: 0.9rem; letter-spacing: 0.5px; color: var(--maroon); margin: 20px 0 8px;
+    }
+    .ch-accordion-content ul { padding-left: 20px; margin-bottom: 12px; }
+    .ch-accordion-content li { margin-bottom: 4px; }
+    .ch-info-cards { display: flex; gap: 20px; flex-wrap: wrap; margin: 16px 0; }
+    .ch-info-card {
+      background: var(--cream); border-radius: 12px; padding: 20px 24px;
+      text-align: center; flex: 1; min-width: 180px;
+    }
+    .ch-info-card i { color: var(--maroon); font-size: 2rem; margin-bottom: 8px; display: block; }
+    .ch-info-card h5 { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 6px; color: var(--maroon); }
+    .ch-info-card p { font-size: 0.9rem; margin: 0; }
+
+    /* ── FROM support-groups.html ── */
+    .sg-intro { padding: 80px 0; background: var(--cream); text-align: center; }
+    .sg-intro-icon {
+      width: 72px; height: 72px; margin: 0 auto 24px; background: var(--warm-gray);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 32px; color: var(--maroon);
+    }
+    .sg-intro h2 { font-family: var(--font-display); font-size: 2rem; color: var(--maroon); margin-bottom: 16px; }
+    .sg-intro p { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-body); max-width: 680px; margin: 0 auto; line-height: 1.7; }
+
+    .sg-filters {
+      padding: 24px 0; background: #fff; position: sticky; top: 0; z-index: 90;
+      border-bottom: 1px solid rgba(0,0,0,0.06); box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .sg-filters-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .sg-filters-label {
+      font-family: var(--font-body); font-weight: 700; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--maroon); white-space: nowrap;
+    }
+    .sg-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sg-pill {
+      font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; padding: 8px 20px;
+      border-radius: 50px; border: 2px solid var(--warm-gray); background: var(--warm-gray);
+      color: var(--text-body); cursor: pointer; transition: all var(--duration-normal) ease;
+    }
+    .sg-pill:hover { border-color: var(--maroon); color: var(--maroon); }
+    .sg-pill.active { background: var(--maroon); border-color: var(--maroon); color: #fff; }
+    .sg-search { position: relative; flex-shrink: 0; }
+    .sg-search-input { padding-left: 40px; width: 240px; }
+    .sg-search i {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: #999; font-size: 0.9rem; pointer-events: none;
+    }
+
+    .sg-grid-section { padding: 60px 0 80px; background: var(--warm-gray); }
+    .sg-card {
+      background: #fff; border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.05);
+      transition: transform var(--duration-slow) var(--ease-out), box-shadow var(--duration-slow) ease;
+      display: flex; flex-direction: column;
+    }
+    .sg-card:hover { transform: translateY(-6px); box-shadow: 0 8px 16px rgba(0,0,0,0.06), 0 20px 48px rgba(110,49,64,0.12); }
+    .sg-card.sg-hidden { display: none; }
+    .sg-card-header {
+      display: flex; align-items: center; gap: 14px; padding: 22px 24px;
+      background: linear-gradient(135deg, rgba(110,49,64,0.06) 0%, rgba(197,162,88,0.06) 100%);
+      border-bottom: 1px solid rgba(110,49,64,0.06);
+    }
+    .sg-card-icon {
+      width: 44px; height: 44px; border-radius: 12px; background: var(--maroon);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1rem; flex-shrink: 0; box-shadow: 0 2px 8px rgba(110,49,64,0.25);
+    }
+    .sg-card-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--dark); line-height: 1.3; }
+    .sg-card-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+    .sg-card-schedule {
+      display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-body);
+      font-size: 0.78rem; font-weight: 600; color: var(--maroon);
+      background: rgba(110,49,64,0.07); padding: 5px 12px; border-radius: var(--radius-pill);
+      margin-bottom: 14px; width: fit-content;
+    }
+    .sg-card-schedule i { font-size: 0.7rem; opacity: 0.7; }
+    .sg-card-desc { font-family: var(--font-body); font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; flex: 1; margin-bottom: 18px; }
+    .sg-card-link {
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; color: var(--maroon);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border: 2px solid var(--maroon); border-radius: var(--radius-pill);
+      transition: all var(--duration-normal) ease;
+    }
+    .sg-card-link:hover { background: var(--maroon); color: #fff; gap: 10px; }
+    .sg-card-link i { font-size: 0.72rem; transition: transform var(--duration-normal) ease; }
+    .sg-card:hover .sg-card-link i { transform: translateX(2px); }
+
+    .sg-no-results {
+      display: none; flex: 0 0 100%; width: 100%; text-align: center; padding: 60px 20px;
+      font-family: var(--font-body); color: #888; font-size: 1.1rem;
+    }
+    .sg-no-results i { display: block; font-size: 2.5rem; margin-bottom: 16px; color: #ccc; }
+    .sg-no-results.sg-visible { display: block; }
+
+    .sg-help { padding: 80px 0; background: var(--cream); }
+    .sg-help-card {
+      max-width: 680px; margin: 0 auto; background: #fff; border-radius: var(--radius-lg);
+      padding: 48px 40px; text-align: center; border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: var(--shadow-card);
+    }
+    .sg-help-icon {
+      width: 64px; height: 64px; margin: 0 auto 20px; background: var(--warm-gray);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; color: var(--maroon);
+    }
+    .sg-help-card h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--maroon); margin-bottom: 12px; }
+    .sg-help-card p { font-family: var(--font-body); font-size: 1.05rem; color: var(--text-body); line-height: 1.6; margin-bottom: 24px; }
+    .sg-help-contact { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; font-family: var(--font-body); }
+    .sg-help-contact a {
+      display: flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 600;
+      color: var(--maroon); text-decoration: none; transition: color var(--duration-fast) ease;
+    }
+    .sg-help-contact a:hover { color: var(--gold); }
+    .sg-help-btn {
+      display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body);
+      font-size: 1rem; font-weight: 700; padding: 14px 32px; border-radius: 50px;
+      background: var(--maroon); color: #fff; text-decoration: none;
+      transition: background var(--duration-normal) ease, transform var(--duration-normal) ease;
+    }
+    .sg-help-btn:hover { background: var(--maroon-hover); transform: translateY(-2px); }
+
+    @media (max-width: 768px) {
+      .ch-kids-enews-inner { flex-direction: column; text-align: center; }
+      .ch-info-cards { flex-direction: column; }
+      .sg-intro { padding: 56px 0; }
+      .sg-intro h2 { font-size: 1.6rem; }
+      .sg-filters-inner { flex-direction: column; gap: 12px; }
+      .sg-pills { justify-content: center; }
+      .sg-search-input { width: 100%; min-width: 260px; }
+      .sg-grid-section { padding: 40px 0 60px; }
+      .sg-help-card { padding: 36px 24px; }
+      .sg-help-contact { flex-direction: column; align-items: center; gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       PAGE HERO
+       ============================================ -->
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOM_HeaderBanner.png');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Extras</span>
+        </nav>
+        <h1>Extras</h1>
+        <p>Archived Custom Components — Design System Reference</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 1 — ch-mission-list + ch-info-cards
+       ============================================ -->
+  <section class="extras-section bg-cream">
+    <div class="container reveal">
+      <span class="extras-source-label">From: childrens.html</span>
+      <h2 class="section-title">Children's Ministry <em>Custom Components</em></h2>
+
+      <h3 class="h5 fw-bold mb-3 text-primary">Mission List (.ch-mission-list)</h3>
+      <ul class="ch-mission-list mb-5">
+        <li><i class="fas fa-cross"></i> Faith Formation through Biblical Teaching</li>
+        <li><i class="fas fa-hands-praying"></i> Age-Appropriate Worship Experiences</li>
+        <li><i class="fas fa-users"></i> Safe, Nurturing Community</li>
+        <li><i class="fas fa-heart"></i> Partnership with Families</li>
+      </ul>
+
+      <h3 class="h5 fw-bold mb-3 text-primary">Info Cards (.ch-info-cards)</h3>
+      <div class="ch-info-cards mb-5">
+        <div class="ch-info-card"><i class="fas fa-map-marker-alt"></i><h5>Location</h5><p>Room 200A, Children's Wing</p></div>
+        <div class="ch-info-card"><i class="fas fa-clock"></i><h5>Schedule</h5><p>Sundays 9am &amp; 11am</p></div>
+        <div class="ch-info-card"><i class="fas fa-phone"></i><h5>Contact</h5><p>(281) 555-0123</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 2 — ch-kids-enews (full-width)
+       ============================================ -->
+  <section class="ch-kids-enews">
+    <div class="container">
+      <div class="ch-kids-enews-inner reveal">
+        <div>
+          <span class="extras-source-label">From: childrens.html</span>
+          <h3>NextGen Kids Newsletter</h3>
+          <p>Stay connected with weekly updates, event reminders, and faith-at-home resources.</p>
+        </div>
+        <a href="#" class="btn-white">Subscribe to E-News</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 3 — ch-programs-section (tabs + accordion)
+       ============================================ -->
+  <section class="ch-programs-section">
+    <div class="container">
+      <div class="ch-programs-header reveal">
+        <span class="extras-source-label">From: childrens.html</span>
+        <span class="section-label">Programs</span>
+        <h2>NextGen Programs</h2>
+        <div class="ch-programs-tabs">
+          <button type="button" class="ch-programs-tab active" data-ch-tab="preschool">Preschool</button>
+          <button type="button" class="ch-programs-tab" data-ch-tab="elementary">Elementary</button>
+        </div>
+      </div>
+
+      <div class="ch-programs-panel active" id="ch-panel-preschool">
+        <div class="ch-accordion">
+          <div class="ch-accordion-item">
+            <button type="button" class="ch-accordion-trigger">
+              <i class="fas fa-baby ch-acc-icon-left"></i>
+              <span class="ch-acc-title">Little Lambs (Ages 2–3)</span>
+              <i class="fas fa-chevron-down ch-acc-chevron"></i>
+            </button>
+            <div class="ch-accordion-body">
+              <div class="ch-accordion-content">
+                <p>A nurturing environment for our youngest learners.</p>
+                <div class="ch-info-cards">
+                  <div class="ch-info-card"><i class="fas fa-map-marker-alt"></i><h5>Location</h5><p>Room 101</p></div>
+                  <div class="ch-info-card"><i class="fas fa-clock"></i><h5>Schedule</h5><p>Sun 9am &amp; 11am</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-programs-panel" id="ch-panel-elementary">
+        <div class="ch-accordion">
+          <div class="ch-accordion-item">
+            <button type="button" class="ch-accordion-trigger">
+              <i class="fas fa-book ch-acc-icon-left"></i>
+              <span class="ch-acc-title">NextGen Kids (K–5th)</span>
+              <i class="fas fa-chevron-down ch-acc-chevron"></i>
+            </button>
+            <div class="ch-accordion-body">
+              <div class="ch-accordion-content"><p>Engaging worship and teaching for elementary-age kids.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 4 — sg-intro
+       ============================================ -->
+  <section class="sg-intro">
+    <div class="container">
+      <span class="extras-source-label">From: support-groups.html</span>
+      <div class="sg-intro-icon"><i class="fas fa-hands-holding-heart"></i></div>
+      <h2>You Don't Have to Walk Alone</h2>
+      <p>Our support groups provide a safe, confidential space to find healing, community, and hope.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 5 — sg-filters + sg-grid-section
+       ============================================ -->
+  <div class="sg-filters">
+    <div class="container">
+      <div class="sg-filters-inner">
+        <span class="extras-source-label">From: support-groups.html</span>
+        <span class="sg-filters-label">Filter by:</span>
+        <div class="sg-pills">
+          <button type="button" class="sg-pill active">All Groups</button>
+          <button type="button" class="sg-pill">Grief &amp; Loss</button>
+          <button type="button" class="sg-pill">Recovery</button>
+        </div>
+        <div class="sg-search">
+          <i class="fas fa-search"></i>
+          <input type="text" class="sg-search-input form-control" placeholder="Search groups…">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sg-grid-section">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="sg-card">
+            <div class="sg-card-header">
+              <div class="sg-card-icon"><i class="fas fa-heart"></i></div>
+              <div class="sg-card-name">GriefShare</div>
+            </div>
+            <div class="sg-card-body">
+              <span class="sg-card-schedule"><i class="fas fa-calendar"></i> Tuesdays 6:30pm</span>
+              <p class="sg-card-desc">A grief recovery support group featuring nationally recognized experts.</p>
+              <a href="#" class="sg-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="sg-card">
+            <div class="sg-card-header">
+              <div class="sg-card-icon"><i class="fas fa-anchor"></i></div>
+              <div class="sg-card-name">Celebrate Recovery</div>
+            </div>
+            <div class="sg-card-body">
+              <span class="sg-card-schedule"><i class="fas fa-calendar"></i> Fridays 7:00pm</span>
+              <p class="sg-card-desc">A Christ-centered 12-step recovery program.</p>
+              <a href="#" class="sg-card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="sg-no-results"><i class="fas fa-search"></i>No groups match your search.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       SECTION 6 — sg-help
+       ============================================ -->
+  <section class="sg-help">
+    <div class="container">
+      <div class="sg-help-card reveal">
+        <span class="extras-source-label">From: support-groups.html</span>
+        <div class="sg-help-icon"><i class="fas fa-hands-holding-heart"></i></div>
+        <h3>Not Sure Where to Start?</h3>
+        <p>Our pastoral care team is here to help you find the right group.</p>
+        <div class="sg-help-contact">
+          <a href="tel:2815550100"><i class="fas fa-phone"></i> (281) 555-0100</a>
+          <a href="mailto:care@twmc.org"><i class="fas fa-envelope"></i> care@twmc.org</a>
+        </div>
+        <a href="#" class="sg-help-btn"><i class="fas fa-calendar-check"></i> Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help &amp; Support</a>
+          <a href="#">Funerals &amp; Memorials</a>
+          <a href="#">Venues &amp; Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+
+  <script>
+    // ch-programs tabs
+    document.querySelectorAll('.ch-programs-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ch-programs-tab').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.ch-programs-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const panel = document.getElementById('ch-panel-' + btn.dataset.chTab);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    // ch-accordion
+    document.querySelectorAll('.ch-accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        trigger.closest('.ch-accordion-item').classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

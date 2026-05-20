@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Groups | The Woodlands Methodist Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/HEADER_RECOVERY.jpg');"
+      onerror="this.style.backgroundImage='';this.style.backgroundColor='var(--maroon-dark)'"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="home.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="#">Connect</a>
+        <span aria-hidden="true">›</span>
+        <span>Support Groups</span>
+      </nav>
+      <h1 class="page-hero-title">Support Groups</h1>
+      <p class="page-hero-sub">You don't have to walk through it alone</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Intro Section -->
+    <section class="py-5 bg-cream">
+      <div class="container">
+        <div class="text-center reveal" style="max-width: 720px; margin: 0 auto;">
+          <div class="d-flex align-items-center justify-content-center mb-4">
+            <div class="d-flex align-items-center justify-content-center rounded-circle bg-warm-gray" style="width:72px;height:72px;font-size:2rem;color:var(--maroon);">
+              <i class="fas fa-hands-holding-heart"></i>
+            </div>
+          </div>
+          <span class="section-label">Support &amp; Care</span>
+          <h2 class="section-title">You Don't Have to <em>Walk Alone</em></h2>
+          <p class="mt-3" style="font-size:1.1rem;line-height:1.7;color:var(--text-body);max-width:680px;margin-left:auto;margin-right:auto;">Our support groups provide a safe, confidential space to find healing, community, and hope. Whether you're facing grief, addiction, anxiety, or life transitions — there's a group for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="bg-white border-bottom py-3 sticky-top" style="z-index:90;">
+      <div class="container">
+        <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
+          <span class="fw-bold text-uppercase small text-primary" style="letter-spacing:.05em;white-space:nowrap;">Filter by:</span>
+          <div class="d-flex gap-2 flex-wrap" id="filter-pills" role="group" aria-label="Filter support groups">
+            <button type="button" class="btn btn-sm btn-primary active" data-sg-filter="all">All Groups</button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-sg-filter="grief">Grief &amp; Loss</button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-sg-filter="mental-health">Mental Health</button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-sg-filter="transitions">Life Transitions</button>
+            <button type="button" class="btn btn-sm btn-outline-primary" data-sg-filter="caregiving">Caregiving</button>
+          </div>
+          <div class="position-relative flex-shrink-0">
+            <i class="fas fa-search position-absolute text-muted" style="left:14px;top:50%;transform:translateY(-50%);font-size:.9rem;pointer-events:none;"></i>
+            <input type="text" id="sg-search" class="form-control form-control-sm" style="padding-left:40px;width:240px;" placeholder="Search groups…" aria-label="Search support groups">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support Group Cards Grid -->
+    <section class="py-5" style="background:var(--warm-gray);">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="sg-grid">
+
+          <!-- Caregivers Support -->
+          <div class="col" data-sg-category="caregiving">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Caregivers Support</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> 1st &amp; 3rd Friday &middot; 11:00 AM
+              </span>
+              <p class="text-muted small flex-grow-1">A support group for caregivers of family and friends with chronic, long-term or terminal illness such as Alzheimer's, cancer, heart disease, diabetes, etc.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Caregivers Support - Woodforest -->
+          <div class="col" data-sg-category="caregiving">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Caregivers Support — Woodforest</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> 1st &amp; 3rd Monday &middot; 10:00 AM
+              </span>
+              <p class="text-muted small flex-grow-1">A support group for caregivers of family and friends with chronic, long-term or terminal illness such as Alzheimer's, cancer, heart disease, diabetes, etc.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Coffee and Caregivers -->
+          <div class="col" data-sg-category="caregiving">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-mug-hot"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Coffee and Caregivers</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> Mar 12, 2026 &middot; 10:00 AM
+              </span>
+              <p class="text-muted small flex-grow-1">An hour-long event designed for caregivers to learn directly from experts in medical, legal and other specialties.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Combat Trauma Support -->
+          <div class="col" data-sg-category="mental-health">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Combat Trauma Support</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> Tuesday &middot; 6:00 PM
+              </span>
+              <p class="text-muted small flex-grow-1">A small group providing hope and encouragement to military veterans suffering from the effects of combat trauma.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Computer Support Ministry -->
+          <div class="col" data-sg-category="transitions">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-laptop"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Computer Support Ministry</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">A member of our church helps senior adults with their computer issues. There is no charge.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Divorce Care -->
+          <div class="col" data-sg-category="grief">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-heart-broken"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Divorce Care</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> Tuesday &middot; 7:30 PM
+              </span>
+              <p class="text-muted small flex-grow-1">DivorceCare is a support group for those going through divorce or a separation, providing a safe, caring community to help you through this difficult time.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Grandmothers Raising Grandchildren -->
+          <div class="col" data-sg-category="transitions">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-home"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Grandmothers Raising Grandchildren</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">We gather as grandmothers for fellowship and support, sharing challenges, resources, and joys as we support another generation as parents. We sometimes have guest speakers.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Grief Support -->
+          <div class="col" data-sg-category="grief">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-dove"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Grief Support</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">Learn how your experience of grief can be transformed into something positive.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Job Search -->
+          <div class="col" data-sg-category="transitions">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Job Search</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> Wednesday &middot; 6:30 PM
+              </span>
+              <p class="text-muted small flex-grow-1">A supportive community to help you navigate your job search journey with encouragement, resources, and connections.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Low Vision Support Group -->
+          <div class="col" data-sg-category="mental-health">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Low Vision Support Group</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> 2nd Friday &middot; 10:00 AM
+              </span>
+              <p class="text-muted small flex-grow-1">This group welcomes those who are blind or experiencing vision loss, as well as caregivers seeking support and shared insights.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Need-A-Ride -->
+          <div class="col" data-sg-category="caregiving">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-car"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Need-A-Ride</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">Need-A-Ride assists our members who are unable to drive with rides to doctors' appointments.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Parkinson's Disease Exercise and Support -->
+          <div class="col" data-sg-category="mental-health">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-walking"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Parkinson's Disease Exercise and Support</h3>
+              </div>
+              <span class="badge rounded-pill fw-semibold small mb-3" style="background:rgba(110,49,64,0.07);color:var(--maroon);">
+                <i class="fas fa-calendar me-1 opacity-75" style="font-size:.7rem;"></i> Wednesday &middot; 10:30 AM
+              </span>
+              <p class="text-muted small flex-grow-1">Open to members of the community who are dealing with Parkinson's disease. Caregivers are welcome.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Spondylitis Education and Support -->
+          <div class="col" data-sg-category="mental-health">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-bone"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">Spondylitis Education and Support</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">Provides education and support for those dealing with Spondylitis.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- The Gathering Place Ministry -->
+          <div class="col" data-sg-category="caregiving">
+            <div class="feature-card h-100 reveal">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="d-flex align-items-center justify-content-center rounded-3 text-white flex-shrink-0" style="width:44px;height:44px;background:var(--maroon);">
+                  <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3 class="h5 mb-0 fw-bold" style="font-family:var(--font-display);">The Gathering Place Ministry</h3>
+              </div>
+              <p class="text-muted small flex-grow-1">A ministry offering hope and support by serving families with loved ones who have mild to moderate Alzheimer's or other forms of dementia.</p>
+              <a href="#" class="btn-outline mt-3">Learn More <i class="fas fa-arrow-right fa-xs ms-1"></i></a>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div id="no-results" class="d-none text-center py-5" style="color:var(--text-muted);">
+          <i class="fas fa-search fa-2x d-block mb-3 opacity-25"></i>
+          No groups match your search. Try a different filter.
+        </div>
+      </div>
+    </section>
+
+    <!-- Need Help? Callout -->
+    <section class="feature-banner feature-banner--light" style="background-color: var(--cream);">
+      <div class="container">
+        <div class="feature-banner-inner reveal">
+          <h2>Not Sure Where to Start?</h2>
+          <p>Our pastoral care team is here to help you find the right group. Reach out — all conversations are confidential.</p>
+          <div class="d-flex justify-content-center gap-4 flex-wrap mb-4">
+            <a href="tel:2812975900" class="d-flex align-items-center gap-2 fw-semibold text-decoration-none" style="color:var(--maroon);">
+              <i class="fas fa-phone"></i> (281) 297-5900
+            </a>
+            <a href="mailto:care@twmc.org" class="d-flex align-items-center gap-2 fw-semibold text-decoration-none" style="color:var(--maroon);">
+              <i class="fas fa-envelope"></i> care@twmc.org
+            </a>
+          </div>
+          <a href="mailto:care@twmc.org" class="btn-primary">Contact Pastoral Care</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GROW Section -->
+  <section class="grow-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Pathway</div>
+      </div>
+      <div class="grow-squares reveal">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+      <div class="reveal">
+        <h2>A Pathway to a Deeper Faith</h2>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="grow.html" class="btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-News CTA -->
+  <section class="enews-cta">
+    <div class="container">
+      <div class="enews-inner reveal">
+        <div class="enews-text">
+          <h3>Stay Connected</h3>
+          <p>Get the latest news and updates delivered to your inbox.</p>
+        </div>
+        <a href="#" class="btn-white"><i class="fas fa-envelope"></i> Subscribe Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i><a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i><a href="tel:(281)297-5900">(281) 297-5900</a></p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+  <!-- Page-Specific Filter JS -->
+  <script>
+    // Support groups filter
+    const sgFilterBtns = document.querySelectorAll('[data-sg-filter]');
+    const sgCols = document.querySelectorAll('#sg-grid [data-sg-category]');
+    const sgSearchInput = document.getElementById('sg-search');
+    const sgNoResults = document.getElementById('no-results');
+
+    function runFilter() {
+      const activeBtn = document.querySelector('[data-sg-filter].active');
+      const activeFilter = activeBtn ? activeBtn.dataset.sgFilter : 'all';
+      const searchTerm = sgSearchInput ? sgSearchInput.value.toLowerCase() : '';
+      let visibleCount = 0;
+
+      sgCols.forEach(col => {
+        const category = col.dataset.sgCategory || '';
+        const text = col.textContent.toLowerCase();
+        const matchesFilter = activeFilter === 'all' || category === activeFilter;
+        const matchesSearch = !searchTerm || text.includes(searchTerm);
+        const show = matchesFilter && matchesSearch;
+        col.classList.toggle('d-none', !show);
+        if (show) visibleCount++;
+      });
+
+      if (sgNoResults) sgNoResults.classList.toggle('d-none', visibleCount > 0);
+    }
+
+    sgFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sgFilterBtns.forEach(b => {
+          b.classList.remove('active', 'btn-primary');
+          b.classList.add('btn-outline-primary');
+        });
+        btn.classList.add('active', 'btn-primary');
+        btn.classList.remove('btn-outline-primary');
+        runFilter();
+      });
+    });
+
+    if (sgSearchInput) sgSearchInput.addEventListener('input', runFilter);
+  </script>
+</body>
+</html>

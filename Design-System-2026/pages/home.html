@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home Page | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <section class="hero" id="main-content">
+    <div class="hero-content">
+      <img src="../assets/images/WOR_Easter_Text3.png" alt="Easter at The Woodlands Methodist Church" class="easter-text">
+    </div>
+
+    <img src="../assets/images/WOR_Easter_Flower+Top+Left.png" class="flower flower1 parallax" data-speed="2" alt="">
+    <img src="../assets/images/WOR_Easter_Flower+Top+Right.png" class="flower flower2 parallax" data-speed="-2" alt="">
+    <img src="../assets/images/WOR_Easter_Flower+Bottom+Left.png" class="flower flower3 parallax" data-speed="1.5" alt="">
+    <img src="../assets/images/WOR_Easter_Flower+BottomRight.png" class="flower flower4 parallax" data-speed="-1.5" alt="">
+  </section>
+
+
+  <!-- ============================================
+       EASTER QUICK LINKS
+       ============================================ -->
+  <section class="btn-glasss">
+    <div class="container">
+      <div class="btn-glasss-row">
+        <a href="#" class="btn-glass">
+          <i class="fa-solid fa-party-horn"></i> Activities
+        </a>
+        <a href="#" class="btn-glass">
+          <i class="fa-solid fa-user-group-crown"></i> Maundy Thursday
+        </a>
+        <a href="#" class="btn-glass">
+          <i class="fa-solid fa-cross"></i> Good Friday
+        </a>
+        <a href="#" class="btn-glass">
+          <i class="fa-solid fa-calendar-star"></i> Saturday Events
+        </a>
+        <a href="#" class="btn-glass">
+          <i class="fa-solid fa-star-christmas"></i> Easter Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WHAT'S HAPPENING — Feature Cards
+       ============================================ -->
+  <section class="whats-happening">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Featured</div>
+        <h2 class="section-title">What's happening <em>this week</em></h2>
+      </div>
+
+      <div class="cards-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <a href="#" class="feature-card reveal" style="animation-delay: 0.1s">
+            <div class="feature-card-image">
+              <img src="../assets/images/Field_Notes_State_of_the_Church_1080x1080.jpg" alt="Field Notes podcast">
+              <span class="feature-card-badge badge-podcast">Podcast</span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Field Notes</h3>
+              <p>In this episode of Field Notes, Rev. Mark Sorensen shares an update on the state of our church.</p>
+              <span class="card-arrow">Listen now <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="feature-card reveal" style="animation-delay: 0.2s">
+            <div class="feature-card-image">
+              <img src="../assets/images/CAR_LectioDivina_ConnectBlock.png" alt="Lenten Lectio Divina">
+              <span class="feature-card-badge badge-event">Event</span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Lenten Lectio Divina</h3>
+              <p>Join us on Wednesdays at noon during Lent for a contemplative prayer time as we walk with Jesus through the Gospel.</p>
+              <span class="card-arrow">Learn more <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="feature-card reveal" style="animation-delay: 0.3s">
+            <div class="feature-card-image">
+              <img src="../assets/images/731ed75d_0a26_4116_ab4b_b63c35b2c916.jpg" alt="Stewardship 2026">
+              <span class="feature-card-badge badge-giving">Giving</span>
+            </div>
+            <div class="feature-card-body">
+              <h3>Stewardship 2026</h3>
+              <p>When life shakes us, stewardship is the act of holding loosely to what is temporary so we can cling tightly to what is eternal.</p>
+              <span class="card-arrow">Get involved <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       BENTO GRID — Featured events
+       ============================================ -->
+  <section class="bento-section">
+    <div class="container">
+      <div class="bento-grid row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <a href="#" class="bento-card bento-lent reveal">
+            <div class="bento-card-bg">
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/easter/2026+Easter/WOR_Easter_Background_Med.png" alt="" onerror="this.parentElement.style.background='var(--maroon)'">
+            </div>
+            <div class="bento-card-overlay"></div>
+            <div class="bento-card-content">
+              <div class="bento-card-date">April 13 - 20</div>
+              <h3>Holy Week<br>at TWMC</h3>
+              <p>Walk with us through Maundy Thursday, Good Friday, and into the joy of Easter Sunday. Services across all campuses.</p>
+              <span class="btn-white">View Schedule <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="bento-card bento-easter reveal">
+            <div class="bento-card-bg">
+              <img src="../assets/images/WOR_Easter_Text3.png" alt="" style="object-fit: contain; padding: 40px; background: #131d1e;" onerror="this.parentElement.style.background='#131d1e'">
+            </div>
+            <div class="bento-card-overlay"></div>
+            <div class="bento-card-content">
+              <div class="bento-card-date">April 20</div>
+              <h3>Easter Services</h3>
+              <p>Celebrate the risen Christ with us at one of our family-friendly services with live worship, teaching, and community.</p>
+              <span class="btn-white">Join Us <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WELCOME
+       ============================================ -->
+  <section class="welcome">
+    <div class="container">
+      <div class="welcome-grid row row-cols-1 row-cols-lg-2 align-items-center g-60">
+        <div class="col">
+          <div class="welcome-video reveal">
+            <div class="embed-container">
+              <iframe src="https://player.vimeo.com/video/755253246" title="Welcome Video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="welcome-text reveal">
+            <div class="section-label">Welcome</div>
+            <h2>Come as you are.<br><em>Leave transformed.</em></h2>
+            <p>Welcome to The Woodlands Methodist Church! We are so glad you are interested in our dynamic and vibrant church. You will find a variety of worship styles on our campuses from traditional and contemporary to very modern.</p>
+            <p>Whether you're planning your first visit or looking to deepen your faith journey, we invite you to explore the many ways to get involved.</p>
+
+            <div class="welcome-buttons">
+              <a href="#" class="btn-primary">Plan Your Visit <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Pathway</div>
+      </div>
+
+      <div class="grow-squares reveal">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+
+      <div class="reveal">
+        <h2>A Pathway to a Deeper Faith</h2>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="grow.html" class="btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       BLOG
+       ============================================ -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-header reveal">
+        <div>
+          <div class="section-label">From the Pastor</div>
+          <h2 class="section-title">Latest from the Blog</h2>
+        </div>
+        <a href="#" class="btn-outline">View All Posts</a>
+      </div>
+
+      <div class="blog-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <a href="#" class="blog-card reveal">
+            <div class="blog-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=446939" alt="Beyond Sunday Update" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-body">
+              <h3>Beyond Sunday Update</h3>
+              <p>What a meaningful Beyond Sunday we shared this past weekend. I am grateful for the spirit of worship, the joy in the room, and the faithfulness we continue to see lived out across our church.</p>
+            </div>
+            <div class="blog-card-meta">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='./assets/HiImMark_Circle360.png'">
+              <div class="blog-card-meta-text">
+                <strong>Rev. Mark Sorensen</strong>
+                <span>February 19, 2026</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="blog-card reveal">
+            <div class="blog-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=445285" alt="On Purpose Giving" onerror="this.src='./assets/WEB_Blog_header_2026Feb.jpg'">
+            </div>
+            <div class="blog-card-body">
+              <h3>On Purpose Giving</h3>
+              <p>At some point, you've glanced at your bank statement and realized you are paying for things you barely remember signing up for. A streaming service you haven't opened in months...</p>
+            </div>
+            <div class="blog-card-meta">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='./assets/HiImMark_Circle360.png'">
+              <div class="blog-card-meta-text">
+                <strong>Rev. Mark Sorensen</strong>
+                <span>February 5, 2026</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col">
+          <a href="#" class="blog-card reveal">
+            <div class="blog-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=444272" alt="A Simple Word" onerror="this.src='./assets/WEB_Blog_header_2026Jan.jpg'">
+            </div>
+            <div class="blog-card-body">
+              <h3>A Simple Word for a Complicated World</h3>
+              <p>I came across a short story from the early church that has stuck with me. It comes from St. Jerome, a fourth-century theologian and pastor best known for translating the Scriptures into Latin.</p>
+            </div>
+            <div class="blog-card-meta">
+              <img src="https://thewoodlandsmethodist.org/GetImage.ashx?id=390928" alt="Rev. Mark Sorensen" onerror="this.src='./assets/HiImMark_Circle360.png'">
+              <div class="blog-card-meta-text">
+                <strong>Rev. Mark Sorensen</strong>
+                <span>January 29, 2026</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+</body>
+</html>

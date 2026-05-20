@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Give | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.55)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/jacob-n_wJFKg43xE-unsplash.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Give</span>
+        </nav>
+        <h1>Give</h1>
+        <p>Your generosity helps us reach people for Jesus, disciple them in faith, and help those in need.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO — Why We Give
+       ============================================ -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+
+        <div class="col">
+        <div class="intro-video">
+          <iframe src="https://player.vimeo.com/video/663393642?badge=0&autopause=0&player_id=0&app_id=58479"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="Why We Give"></iframe>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="intro-text">
+          <div class="section-label">Generosity</div>
+          <h2>Why We Give</h2>
+          <p>At The Woodlands Methodist Church, generosity is part of who we are, rooted in the love and grace of God. Your generosity helps us live out our mission and extend God's love beyond our walls and into the world.</p>
+
+          <div class="mission-pillars">
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-cross"></i></div>
+              <div>
+                <h4>Reaching People for Jesus</h4>
+                <p>Share the gospel with those who need it most.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-book-open"></i></div>
+              <div>
+                <h4>Discipling Them in Faith</h4>
+                <p>Provide resources and opportunities for spiritual growth.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-hands-helping"></i></div>
+              <div>
+                <h4>Helping Those in Need</h4>
+                <p>Support ministries, outreach programs and missions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-cta-row">
+            <a href="https://thewoodlandsmethodist.org/give-now" class="btn-primary" target="_blank">Give Now <i class="fas fa-arrow-right"></i></a>
+            <a href="https://thewoodlandsmethodist.org/RecurringContributions" class="btn-outline" target="_blank">Recurring Gift <i class="fas fa-redo"></i></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GENEROSITY STATEMENTS
+       ============================================ -->
+  <section class="statements-section">
+    <div class="container">
+      <div class="statements-grid row row-cols-1 row-cols-lg-3 g-32">
+
+        <div class="col">
+        <div class="statement-card reveal">
+          <h3>We are generous because the gospel is generous to us.</h3>
+          <p>God's greatest gift to us was His Son, Jesus.</p>
+          <div class="verse">
+            For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.
+            <cite>— John 3:16</cite>
+          </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="statement-card reveal">
+          <h3>Giving is about what God wants <em>for</em> you, not <em>from</em> you.</h3>
+          <p>Our giving flows from a heart of gratitude, not obligation — giving out of joy for what God has done for us.</p>
+          <div class="verse">
+            Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace in its various forms.
+            <cite>— 1 Peter 4:10</cite>
+          </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="statement-card reveal">
+          <h3>Generosity is transformational, not transactional.</h3>
+          <p>When we give, we participate in something far greater than ourselves.</p>
+          <div class="verse">
+            Store up for yourselves treasures in heaven. For where your treasure is, there your heart will be also.
+            <cite>— Matthew 6:20–21</cite>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       LEARN ABOUT GIVING — Video Testimonials
+       ============================================ -->
+  <section class="learn-section">
+    <div class="container-wide">
+      <div class="learn-header reveal">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">Learn About Giving</h2>
+      </div>
+
+      <div class="learn-grid row row-cols-1 row-cols-md-2 g-32">
+
+        <div class="col">
+        <div class="learn-card reveal">
+          <div class="learn-card-video">
+            <iframe src="https://player.vimeo.com/video/1040556518?badge=0&autopause=0&player_id=0&app_id=58479"
+                    allow="autoplay; fullscreen; picture-in-picture" title="Stewardship Testimonial 1"></iframe>
+          </div>
+          <div class="learn-card-body">
+            <div class="subtitle">Subtítulos en español disponibles</div>
+            <p>Reverend Daniel and Alex Lumpee share their uplifting journey of faith-driven generosity, illustrating how true stewardship is about wholeheartedly trusting God with everything you have.</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="learn-card reveal">
+          <div class="learn-card-video">
+            <iframe src="https://player.vimeo.com/video/1040559544?badge=0&autopause=0&player_id=0&app_id=58479"
+                    allow="autoplay; fullscreen; picture-in-picture" title="Stewardship Testimonial 2"></iframe>
+          </div>
+          <div class="learn-card-body">
+            <div class="subtitle">Subtítulos en español disponibles</div>
+            <p>Discover the joy of giving through Reverend Karen Tyler's story of how a single act of generosity changed a young girl's life and revealed God's profound work.</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="learn-card reveal">
+          <div class="learn-card-video">
+            <iframe src="https://player.vimeo.com/video/1040934194?badge=0&autopause=0&player_id=0&app_id=58479"
+                    allow="autoplay; fullscreen; picture-in-picture" title="Stewardship Testimonial 3"></iframe>
+          </div>
+          <div class="learn-card-body">
+            <div class="subtitle">Subtítulos en español disponibles</div>
+            <p>Reverend Mark and Missy Swayze share their story of opening their home and hearts to God's work, creating a space for discipleship, healing and spiritual growth.</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="learn-card reveal">
+          <div class="learn-card-video">
+            <iframe src="https://player.vimeo.com/video/1043502179?badge=0&autopause=0&player_id=0&app_id=58479"
+                    allow="autoplay; fullscreen; picture-in-picture" title="Stewardship Testimonial 4"></iframe>
+          </div>
+          <div class="learn-card-body">
+            <div class="subtitle">Subtítulos en español disponibles</div>
+            <p>Reverend Brent and Kori Parker share the transformative power of generosity through heartfelt stories, including a selfless gift and the impact of "God's Garage."</p>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       WAYS TO GIVE
+       ============================================ -->
+  <section class="ways-section">
+    <div class="container-wide">
+      <div class="ways-header reveal">
+        <div class="section-label">Your Options</div>
+        <h2 class="section-title">Ways to Give</h2>
+        <a href="https://thewoodlandsmethodist.org/give-now" class="btn-gold" target="_blank">Give Online <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="ways-grid row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-money-check-alt"></i></div>
+          <h4>Checks</h4>
+          <p>Write a check payable to The Woodlands Methodist Church. Place in a worship offering or mail to: 2200 Lake Woodlands Drive, The Woodlands, TX 77380. Note your campus in the memo.</p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h4>Text to Give</h4>
+          <p>Text a dollar amount to <a href="sms:281.500.8400">281.500.8400</a>. Use keywords like HARVEST, LOFT, ESPANOL, WOODFOREST, MONTGOMERY, CREEKSIDE, MISSIONS, or SOSS followed by an amount.</p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-heart"></i></div>
+          <h4>Honorariums &amp; Memorials</h4>
+          <p>Make a <a href="https://thewoodlandsmethodist.org/foundation-give" target="_blank">one-time donation</a> to the TWMC Foundation in honor or memory of a loved one.</p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Securities</h4>
+          <p>Gifts of long-term securities generally result in federal tax benefits. Contact the Finance Office for brokerage account information.</p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-car"></i></div>
+          <h4>Donate a Vehicle</h4>
+          <p>Contact Jonah Robson on the Missions Team for more information about donating a vehicle to support the church's mission.</p>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="way-card reveal">
+          <div class="way-icon"><i class="fas fa-scroll"></i></div>
+          <h4>Leave a Legacy</h4>
+          <p>Give to <a href="https://thewoodlandsmethodist.org/foundation-give" target="_blank">The Woodlands Methodist Church Foundation</a>. Contact the Finance Office to discuss estate gifts and bequests.</p>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">Questions</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item open">
+          <button class="faq-question" aria-expanded="true">
+            Why should I give to the church?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Giving is a response to God's generosity toward us and supports our mission to reach, disciple and help others.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How can I set up a recurring gift?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Setting up a recurring gift is quick and easy through either the <a href="https://thewoodlandsmethodist.org/give-now" target="_blank">Give Now</a> link or the <a href="https://thewoodlandsmethodist.org/RecurringContributions" target="_blank">Recurring Gift</a> link. If you have previously set up a recurring gift, the Recurring Gift link will show your active schedules.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Are my gifts tax deductible?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, all donations to The Woodlands Methodist Church are tax deductible as allowed by law. You'll receive a receipt for your records.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is there a way to review my giving history online?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Past giving transactions, statements, recurring schedules and pledges are available online at <a href="https://thewoodlandsmethodist.org/myaccount" target="_blank">My Account</a>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Who can I contact if I have more questions?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Reach out to our finance team at <a href="mailto:finance@twmc.org">finance@twmc.org</a> or call <a href="tel:(281)297-5934">(281) 297-5934</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       RESOURCES — Financial Peace University
+       ============================================ -->
+  <section class="resources-section">
+    <div class="container">
+      <div class="resources-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+        <div class="col">
+        <div class="resources-image">
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/DIS_FPU+Web+Banner.png" alt="Financial Peace University">
+        </div>
+        </div>
+        <div class="col">
+        <div class="resources-text">
+          <h3>Financial Peace University</h3>
+          <p>Money affects all areas of your life, and when your finances feel out of control, your life does too. Learn how to become a better steward of the financial gifts God has provided, prepare for emergencies, and plan for your future in this nine-week class.</p>
+          <a href="https://thewoodlandsmethodist.org/fpu" class="btn-outline-light" target="_blank">Register Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW SECTION
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container reveal">
+      <div class="section-label">Discipleship Pathway</div>
+      <h2>A Pathway to a Deeper Faith</h2>
+      <div class="grow-squares">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+      <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+      <h4>Ready to Get Started?</h4>
+      <a href="grow.html" class="btn-primary">Start Here <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+</body>
+</html>

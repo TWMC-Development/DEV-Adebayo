@@ -1,0 +1,445 @@
+/* ============================================
+   Rock RMS — Bootstrap 3 Compatibility Layer
+   For use with Bootstrap 5.3 theme
+   The Woodlands Methodist Church
+   ============================================
+
+   PURPOSE:
+   Rock RMS v17.6.1.0 injects admin UI elements (zone/block config bars,
+   modals, cms-admin-footer, form controls) that depend on Bootstrap 3
+   classes. This file provides the BS3 rules Rock needs so CMS admin tools
+   work correctly alongside the BS5 site theme.
+
+   USAGE:
+   Load AFTER theme.css and AFTER bootstrap 5:
+   <link rel="stylesheet" href="rock-compat.css">
+
+   This file is NOT used in the demo/prototype — it's for production
+   deployment into the Rock RMS theme only.
+   ============================================ */
+
+
+/* ── 1. CMS ADMIN FOOTER ── */
+#cms-admin-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1049;
+  height: 36px;
+  background: #222;
+  color: #d4d4d4;
+  font-size: 12px;
+  line-height: 36px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+
+#cms-admin-footer a {
+  color: #e1edf7;
+  text-decoration: none;
+}
+
+#cms-admin-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#cms-admin-footer .btn {
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 3px;
+  line-height: 1.5;
+}
+
+#cms-admin-footer .button-bar {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.cms-admin-footer-property {
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  #cms-admin-footer { opacity: 0.85; }
+  .cms-admin-footer-property { display: none; }
+}
+
+
+/* ── 2. ZONE CONFIGURATION ── */
+.zone-instance { position: relative; }
+
+.zone-instance.outline {
+  outline: 2px dashed rgba(100,100,100,0.3);
+  outline-offset: -2px;
+}
+
+.zone-configuration {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 26px;
+  z-index: 1000;
+  background: #3c3c3c;
+  color: #d4d4d4;
+  text-align: center;
+  line-height: 26px;
+  font-size: 12px;
+  cursor: pointer;
+  border-bottom-left-radius: 3px;
+}
+
+.zone-instance:hover > .zone-configuration,
+.zone-instance.outline > .zone-configuration {
+  display: block;
+}
+
+.zone-configuration:hover { background: #555; }
+
+.zone-configuration-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  background: #3c3c3c;
+  color: #d4d4d4;
+  padding: 4px 8px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.zone-configuration-bar span {
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.zone-configuration-bar a,
+.zone-configuration-bar .btn {
+  color: #e1edf7;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 2px 8px;
+}
+
+.zone-configuration-bar a:hover { color: #fff; }
+
+
+/* ── 3. BLOCK CONFIGURATION ── */
+.block-instance { position: relative; }
+
+.block-instance.outline {
+  outline: 2px dashed rgba(100,100,100,0.2);
+  outline-offset: -2px;
+}
+
+.block-configuration {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  z-index: 1049;
+  background: #3c3c3c;
+  color: #d4d4d4;
+  text-align: center;
+  line-height: 26px;
+  font-size: 12px;
+  cursor: pointer;
+  border-bottom-right-radius: 3px;
+}
+
+.block-instance:hover > .block-configuration {
+  display: block;
+}
+
+.block-configuration:hover { background: #555; }
+
+.block-configuration-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  background: #3c3c3c;
+  color: #d4d4d4;
+  padding: 4px 8px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.block-configuration-bar .btn {
+  color: #e1edf7;
+  font-size: 11px;
+  padding: 2px 8px;
+  background: transparent;
+  border: none;
+}
+
+.block-configuration-bar .btn:hover { color: #fff; }
+
+/* Shared config bar base */
+.config-bar {
+  background: #3c3c3c;
+  color: #d4d4d4;
+  padding: 4px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 12px;
+}
+
+
+/* ── 4. ROCK MODAL SYSTEM ── */
+/* Bridge BS3 .fade.in to BS5 .fade.show */
+.fade.in {
+  opacity: 1;
+}
+
+.modal.in .modal-dialog {
+  transform: none;
+}
+
+/* Rock modal theming */
+.rock-modal .modal-header,
+.modal-content.rock-modal .modal-header {
+  background-color: #862533;
+  color: #fff;
+  border-bottom: none;
+  padding: 12px 16px;
+}
+
+.rock-modal .modal-header h3,
+.rock-modal .modal-header .modal-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.rock-modal .modal-header .close,
+.rock-modal .modal-header .btn-close {
+  color: #fff;
+  opacity: 0.7;
+  text-shadow: none;
+  filter: brightness(0) invert(1);
+}
+
+.rock-modal .modal-header .close:hover,
+.rock-modal .modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.rock-modal .modal-body {
+  padding: 16px;
+}
+
+.rock-modal .modal-body > .scroll-container {
+  max-width: 720px;
+  overflow-y: auto;
+}
+
+.rock-modal .modal-footer {
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  padding: 12px 16px;
+}
+
+.rock-modal .modal-footer .btn {
+  font-size: 13px;
+}
+
+/* Modal overflow handling */
+.modal.modal-overflow .modal-body {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.modal-scrollable {
+  overflow-y: auto;
+}
+
+
+/* ── 5. BS3 PANEL → BS5 BRIDGE ── */
+.panel {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.panel-body {
+  padding: 15px;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.panel-default > .panel-heading { background-color: #f5f5f5; color: #333; }
+.panel-primary > .panel-heading { background-color: #337ab7; color: #fff; border-color: #337ab7; }
+.panel-success > .panel-heading { background-color: #dff0d8; color: #3c763d; }
+.panel-warning > .panel-heading { background-color: #fcf8e3; color: #8a6d3b; }
+.panel-danger > .panel-heading  { background-color: #f2dede; color: #a94442; }
+
+.panel-dashboard { margin-bottom: 20px; }
+.panel-block { margin-bottom: 16px; }
+.panel.panel-block > .rock-panel-drawer {
+  padding: 10px 15px;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+
+/* ── 6. ROCK FORM CONTROLS ── */
+.rock-drop-down-list .form-control,
+.rock-radio-button-list .form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.rock-drop-down-list .form-control:focus,
+.rock-radio-button-list .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+
+.rock-check-box .checkbox {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.rock-control-wrapper {
+  margin-bottom: 15px;
+}
+
+.rock-literal {
+  padding-top: 7px;
+  font-size: 14px;
+}
+
+.form-control-static {
+  min-height: 34px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+
+
+/* ── 7. ROCK UTILITIES ── */
+.rock-fullscreen-toggle {
+  position: fixed;
+  bottom: 44px; /* above cms-admin-footer */
+  right: 16px;
+  z-index: 1048;
+  cursor: pointer;
+  background: #3c3c3c;
+  color: #d4d4d4;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.rock-fullscreen-toggle:hover { background: #555; color: #fff; }
+
+.is-fullscreen .rock-fullscreen-toggle {
+  bottom: 16px;
+}
+
+.rock-blank {
+  min-height: 100vh;
+}
+
+.rock-blank main.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Validation */
+.validation-error {
+  color: #d9534f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.aspNetDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Rock config triggers */
+.rock-config-trigger,
+.rock-config-cancel-trigger {
+  display: inline-block;
+}
+
+
+/* ── 8. BS3 BUTTON VARIANTS (admin context) ── */
+/* Only needed for Rock admin panels, not site buttons */
+.block-configuration-bar .btn-default,
+.zone-configuration-bar .btn-default,
+#cms-admin-footer .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.block-configuration-bar .btn-primary,
+.zone-configuration-bar .btn-primary,
+#cms-admin-footer .btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.block-configuration-bar .btn-danger,
+.zone-configuration-bar .btn-danger,
+#cms-admin-footer .btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.block-configuration-bar .btn-xs,
+.zone-configuration-bar .btn-xs,
+#cms-admin-footer .btn-xs {
+  padding: 1px 5px;
+  font-size: 10px;
+  line-height: 1.5;
+  border-radius: 3px;
+}

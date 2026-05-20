@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>2026 Website Redesign | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --maroon: #6e3140;
+      --maroon-dark: #542535;
+      --maroon-hover: #7d3a4c;
+      --gold: #c5a258;
+      --gold-light: #d4b87a;
+      --cream: #faf8f5;
+      --warm-gray: #f5f2ee;
+      --text-dark: #2c2c2c;
+      --text-muted: #6b6b6b;
+      --grow-g: #7b9cc5;
+      --grow-r: #e25b6a;
+      --grow-o: #3dbf87;
+      --grow-w: #f2c94c;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: rgba(110,49,64,0.18); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(110,49,64,0.32); }
+
+    ::selection { background: rgba(110,49,64,0.15); color: var(--text-dark); }
+
+    /* ── HEADER ── */
+    .index-header {
+      background: var(--maroon);
+      padding: 60px 32px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Multi-layer gradient */
+    .index-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 40%, rgba(197,162,88,0.16) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 25%, rgba(255,255,255,0.08) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 0%, rgba(139,69,87,0.4) 0%, transparent 50%),
+        radial-gradient(circle at 50% 130%, rgba(42,18,26,0.7) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    /* Grain texture */
+    .index-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.45;
+    }
+
+    /* Decorative diamond motif — top-left */
+    .header-decor {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .header-decor--left {
+      top: -40px;
+      left: -40px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(197,162,88,0.1);
+      transform: rotate(45deg);
+      border-radius: 8px;
+    }
+    .header-decor--left::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(197,162,88,0.06);
+      border-radius: 6px;
+    }
+    .header-decor--right {
+      bottom: -60px;
+      right: -30px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transform: rotate(45deg);
+      border-radius: 8px;
+    }
+
+    /* Logo mark */
+    .index-header .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+      position: relative;
+      opacity: 0;
+      animation: headerReveal 0.9s var(--ease-out) 0.1s forwards;
+    }
+
+    .logo-mark img {
+      height: 48px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .logo-divider {
+      width: 1px;
+      height: 32px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    .logo-text {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: left;
+      line-height: 1.45;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      padding: 7px 20px;
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      position: relative;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      opacity: 0;
+      animation: headerReveal 0.9s var(--ease-out) 0.2s forwards;
+    }
+
+    .badge i {
+      font-size: 0.45rem;
+      animation: pulse 2.5s ease-in-out infinite;
+      color: #4ade80;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.25; }
+    }
+
+    /* Title */
+    .index-header h1 {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      position: relative;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: headerReveal 0.9s var(--ease-out) 0.35s forwards;
+    }
+
+    .index-header h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 200% center; }
+    }
+
+    .index-header .subtitle {
+      color: rgba(255,255,255,0.55);
+      font-size: 1rem;
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.7;
+      position: relative;
+      opacity: 0;
+      animation: headerReveal 0.9s var(--ease-out) 0.5s forwards;
+    }
+
+
+    @keyframes headerReveal {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 32px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    .filter-pill {
+      padding: 7px 18px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      background: #fff;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.25s var(--ease-out);
+      user-select: none;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--maroon);
+      color: var(--maroon);
+    }
+
+    .filter-pill.active {
+      background: var(--maroon);
+      color: #fff;
+      border-color: var(--maroon);
+    }
+
+    .filter-spacer {
+      flex: 1;
+    }
+
+    .filter-pill--framework {
+      text-decoration: none;
+      border-color: rgba(197,162,88,0.25);
+      color: var(--gold);
+      background: rgba(197,162,88,0.06);
+    }
+
+    .filter-pill--framework:hover {
+      border-color: var(--gold);
+      color: var(--maroon-dark);
+      background: rgba(197,162,88,0.12);
+    }
+
+    .filter-pill--framework i {
+      font-size: 0.72rem;
+    }
+
+    /* ── SECTION GROUPS ── */
+    .index-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 20px 32px 80px;
+    }
+
+    .card-section {
+      margin-top: 44px;
+    }
+
+    .card-section[data-category] {
+      transition: opacity 0.35s ease, max-height 0.4s ease;
+    }
+
+    .card-section.hidden {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      margin: 0;
+      pointer-events: none;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .section-number {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(197,162,88,0.08);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--maroon);
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(110,49,64,0.15), transparent 80%);
+    }
+
+    .section-count {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 4px 14px rgba(0,0,0,0.04);
+      transition:
+        transform 0.45s var(--ease-out),
+        box-shadow 0.45s ease,
+        border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0,0,0,0.05);
+      position: relative;
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    .card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        opacity 0.7s var(--ease-out),
+        transform 0.7s var(--ease-out),
+        box-shadow 0.45s ease,
+        border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px rgba(110,49,64,0.12), 0 8px 20px rgba(0,0,0,0.05);
+      border-color: rgba(110,49,64,0.12);
+    }
+
+    .card:active {
+      transform: translateY(-3px);
+      transition-duration: 0.15s;
+    }
+
+    .card:focus-visible {
+      outline: 2px solid var(--maroon);
+      outline-offset: 3px;
+    }
+
+    /* Accent bar on hover */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--gold), var(--maroon));
+      border-radius: 18px 0 0 18px;
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: opacity 0.35s ease, transform 0.45s var(--ease-out);
+      z-index: 3;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    .card-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.65s var(--ease-out);
+      z-index: 0;
+    }
+
+    .card:hover .card-img::before {
+      transform: scale(1.06);
+    }
+
+    .card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(110,49,64,0.18), transparent 55%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    .card:hover .card-img::after {
+      opacity: 1;
+    }
+
+    .card-img .card-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Card ordinal number */
+    .card-img .card-ordinal {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      z-index: 2;
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .card-body {
+      padding: 24px 26px 26px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.25;
+      color: var(--text-dark);
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .card-body h2 {
+      color: var(--maroon);
+    }
+
+    .card-body p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--maroon);
+      font-weight: 600;
+      font-size: 0.84rem;
+      letter-spacing: 0.02em;
+      transition: gap 0.35s var(--ease-out), color 0.2s;
+    }
+
+    .card:hover .card-link {
+      gap: 12px;
+      color: var(--maroon-dark);
+    }
+
+    .card-link i {
+      font-size: 0.68rem;
+      transition: transform 0.35s var(--ease-out);
+    }
+
+    .card:hover .card-link i {
+      transform: translateX(3px);
+    }
+
+    /* ── HOME card — teal hero ── */
+    .card-img.home-hero {
+      background: linear-gradient(135deg, #1a5c5a 0%, #0d3b3a 40%, #1a5c5a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-img.home-hero::before { display: none; }
+
+    .home-hero-text {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+
+    /* ── GROW card — gradient hero ── */
+    .card-img.grow-hero {
+      background: linear-gradient(135deg, var(--grow-g), var(--grow-r), var(--grow-o), var(--grow-w));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .card-img.grow-hero::before { display: none; }
+
+    .grow-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+      transition: transform 0.35s var(--ease-out);
+    }
+
+    .card:hover .grow-dot {
+      transform: translateY(-3px);
+    }
+
+    .card:hover .grow-dot:nth-child(3) { transition-delay: 0.03s; }
+    .card:hover .grow-dot:nth-child(4) { transition-delay: 0.06s; }
+    .card:hover .grow-dot:nth-child(5) { transition-delay: 0.09s; }
+    .card:hover .grow-dot:nth-child(6) { transition-delay: 0.12s; }
+
+    /* ── FOOTER ── */
+    .index-footer {
+      padding: 44px 32px 40px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      background: var(--warm-gray);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-brand a {
+      color: var(--maroon);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .footer-brand a:hover { color: var(--maroon-dark); }
+
+    .footer-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .footer-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(110,49,64,0.05);
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .footer-right {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      opacity: 0.5;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .index-header { padding: 44px 20px 52px; }
+      .header-stats { gap: 24px; }
+      .header-stat-value { font-size: 1.3rem; }
+      .filter-bar { padding: 28px 20px 0; gap: 8px; }
+      .filter-label { width: 100%; margin-bottom: 2px; }
+      .index-grid { padding: 16px 20px 60px; }
+      .card-section { margin-top: 36px; }
+      .cards { grid-template-columns: 1fr; gap: 18px; }
+      .card-img { height: 180px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-left { flex-direction: column; }
+    }
+
+    @media (max-width: 480px) {
+      .index-header h1 { font-size: 2rem; }
+      .header-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
+      .header-stat + .header-stat::before { display: none; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .card { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="index-header">
+    <div class="header-decor header-decor--left"></div>
+    <div class="header-decor header-decor--right"></div>
+
+    <div class="logo-mark">
+      <img src="assets/images/twumc-logo-fullcolor.png" alt="TWMC Logo">
+      <div class="logo-divider"></div>
+      <div class="logo-text">Website<br>Redesign</div>
+    </div>
+    <div class="badge"><i class="fas fa-circle"></i> Design Preview</div>
+    <h1>2026 Website <em>Redesign</em></h1>
+    <p class="subtitle">Page prototypes for the new TWMC digital experience. Click any card to preview.</p>
+
+  </header>
+
+  <!-- FILTER BAR -->
+  <nav class="filter-bar" aria-label="Filter pages by category">
+    <span class="filter-label">Filter</span>
+    <button class="filter-pill active" data-filter="all">All Pages</button>
+    <button class="filter-pill" data-filter="core">Core</button>
+    <button class="filter-pill" data-filter="ministry">Ministry</button>
+    <button class="filter-pill" data-filter="pathway">Pathways &amp; Resources</button>
+    <span class="filter-spacer"></span>
+    <a href="framework.html" class="filter-pill filter-pill--framework"><i class="fas fa-swatchbook"></i> Design System</a>
+  </nav>
+
+  <!-- PAGE INDEX -->
+  <main class="index-grid">
+
+    <!-- CORE EXPERIENCE -->
+    <section class="card-section" data-category="core">
+      <div class="section-header">
+        <div class="section-number">I</div>
+        <span class="section-title">Core Experience</span>
+        <div class="section-rule"></div>
+        <span class="section-count">3 pages</span>
+      </div>
+      <div class="cards">
+
+        <!-- HOME -->
+        <a href="pages/home.html" class="card">
+          <div class="card-img home-hero">
+            <span class="card-tag">Homepage</span>
+            <span class="home-hero-text">Easter</span>
+            <span class="card-ordinal">01</span>
+          </div>
+          <div class="card-body">
+            <h2>Home Page</h2>
+            <p>Easter hero, featured events, bento grid, welcome section, blog feed, and GROW pathway.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- LANDING PAGE -->
+        <a href="pages/landingpage.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.35), transparent 55%), url('https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg');">
+            <span class="card-tag">Alternate Home</span>
+            <span class="card-ordinal">02</span>
+          </div>
+          <div class="card-body">
+            <h2>Landing Page</h2>
+            <p>Cinematic video hero, campus cards, latest messages gallery, campus spotlight, blog feed, and GROW pathway.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- TIMES & LOCATIONS -->
+        <a href="pages/locations.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Hero_2000x800.png');">
+            <span class="card-tag">Worship</span>
+            <span class="card-ordinal">03</span>
+          </div>
+          <div class="card-body">
+            <h2>Times &amp; Locations</h2>
+            <p>All four campuses with service times, venue details, livestream CTA, and campus info cards.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- MINISTRY PAGES -->
+    <section class="card-section" data-category="ministry">
+      <div class="section-header">
+        <div class="section-number">II</div>
+        <span class="section-title">Ministry Pages</span>
+        <div class="section-rule"></div>
+        <span class="section-count">4 pages</span>
+      </div>
+      <div class="cards">
+
+        <!-- WOMEN -->
+        <a href="pages/womens.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOM_HeaderBanner.png');">
+            <span class="card-tag">Ministry</span>
+            <span class="card-ordinal">04</span>
+          </div>
+          <div class="card-body">
+            <h2>Women&rsquo;s Ministry</h2>
+            <p>Campus-filtered connect cards, contact sidebar, e-news signup, and event listings.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- DISCIPLESHIP -->
+        <a href="pages/discipleship.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_formation/DIS_Banding_FeatureBanner_BKG-NoStripe_800x600.png');">
+            <span class="card-tag">Ministry</span>
+            <span class="card-ordinal">05</span>
+          </div>
+          <div class="card-body">
+            <h2>Adult Discipleship</h2>
+            <p>Formation pathway cards, discipleship offerings, campus-filtered connect section, and classes.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- MISSIONS -->
+        <a href="pages/missions.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/mission_conf_2023/avel-chucklanov.png');">
+            <span class="card-tag">Serve</span>
+            <span class="card-ordinal">06</span>
+          </div>
+          <div class="card-body">
+            <h2>Missions</h2>
+            <p>Global and local mission opportunities, giving CTAs, campus-filtered connect section, and volunteer sign-ups.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- CHILDREN'S MINISTRY -->
+        <a href="pages/childrens.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20241007-CHI-24-2500w.jpg');">
+            <span class="card-tag">NextGen</span>
+            <span class="card-ordinal">07</span>
+          </div>
+          <div class="card-body">
+            <h2>Children&rsquo;s Ministry</h2>
+            <p>NextGen Kids page with campus connect cards, programs accordion, Summer Splash banner, and contact info.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- PATHWAYS & RESOURCES -->
+    <section class="card-section" data-category="pathway">
+      <div class="section-header">
+        <div class="section-number">III</div>
+        <span class="section-title">Pathways &amp; Resources</span>
+        <div class="section-rule"></div>
+        <span class="section-count">6 pages</span>
+      </div>
+      <div class="cards">
+
+        <!-- GROW / GATHER -->
+        <a href="pages/grow.html" class="card">
+          <div class="card-img" style="background: #7b9cc5; display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">Pathway</span>
+            <span style="font-family:var(--font-display); font-size:5rem; font-weight:700; color:rgba(255,255,255,0.15); position:relative; z-index:2; line-height:1;">G</span>
+            <span class="card-ordinal">08</span>
+          </div>
+          <div class="card-body">
+            <h2>Gather in Community</h2>
+            <p>GROW pathway intro, audience grid for men, women, adults, and young adults with study finder.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- GIVE -->
+        <a href="pages/give.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/jacob-n_wJFKg43xE-unsplash.jpg');">
+            <span class="card-tag">Generosity</span>
+            <span class="card-ordinal">09</span>
+          </div>
+          <div class="card-body">
+            <h2>Give</h2>
+            <p>Video testimonials, giving statements, ways to give, FAQ accordion, and FPU resources.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- SUPPORT GROUPS -->
+        <a href="pages/support-groups.html" class="card">
+          <div class="card-img" style="background-image: linear-gradient(to top, rgba(0,0,0,0.3), transparent 60%), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/HEADER_RECOVERY.jpg');">
+            <span class="card-tag">Connect</span>
+            <span class="card-ordinal">10</span>
+          </div>
+          <div class="card-body">
+            <h2>Support Groups</h2>
+            <p>Filterable support group directory with day-of-week pills, search, pastoral care callout, and 14 group cards.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- TWMC APP -->
+        <a href="pages/app.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, var(--maroon) 0%, #3d1a24 50%, var(--maroon) 100%); display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">App</span>
+            <i class="fas fa-mobile-alt" style="font-size: 3rem; color: rgba(255,255,255,0.25); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">11</span>
+          </div>
+          <div class="card-body">
+            <h2>TWMC App</h2>
+            <p>Interactive mobile app prototype with live streaming, giving, groups, messages, events, and kids check-in.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- MEDIA -->
+        <a href="pages/media.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, #1a1a1a 0%, #2a1520 50%, #1a1a1a 100%); display: flex; align-items: center; justify-content: center; gap: 14px;">
+            <span class="card-tag">Media</span>
+            <i class="fab fa-youtube" style="font-size: 1.6rem; color: rgba(255,0,0,0.35); position: relative; z-index: 2;"></i>
+            <i class="fab fa-spotify" style="font-size: 1.6rem; color: rgba(29,185,84,0.35); position: relative; z-index: 2;"></i>
+            <i class="fas fa-podcast" style="font-size: 1.6rem; color: rgba(153,51,204,0.35); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">12</span>
+          </div>
+          <div class="card-body">
+            <h2>Media</h2>
+            <p>Church Online livestream, 10 podcast feeds across all campuses, YouTube channel, and social media hub.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- STAFF -->
+        <a href="pages/staff.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%); display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">About</span>
+            <i class="fas fa-users" style="font-size: 2.4rem; color: rgba(255,255,255,0.2); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">13</span>
+          </div>
+          <div class="card-body">
+            <h2>Staff Directory</h2>
+            <p>Senior pastor feature, 22 pastor photo cards, searchable staff directory with 13 departments.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- SUMMER SPLASH (Seasonal) -->
+        <a href="pages/summer-splash.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, #007cc2 0%, #005a8f 100%); display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">Seasonal</span>
+            <i class="fas fa-water" style="font-size: 2.4rem; color: rgba(255,255,255,0.2); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">14</span>
+          </div>
+          <div class="card-body">
+            <h2>Summer Splash</h2>
+            <p>Seasonal landing page demo. Uses seasonal.css override layer with campus color system, activity cards, and water-themed effects.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- PLAN YOUR VISIT -->
+        <a href="pages/plan-your-visit.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, var(--maroon) 0%, #8b4557 100%); display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">Visitor</span>
+            <i class="fas fa-hand-wave" style="font-size: 2.4rem; color: rgba(255,255,255,0.2); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">15</span>
+          </div>
+          <div class="card-body">
+            <h2>Plan Your Visit</h2>
+            <p>First-time visitor page with welcome intro, what-to-expect cards, campus service times tabs, visitor form, and FAQ accordion.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <!-- EXTRAS -->
+        <a href="pages/Extras.html" class="card">
+          <div class="card-img" style="background: linear-gradient(135deg, #4a4a5a 0%, #2e2e3a 100%); display: flex; align-items: center; justify-content: center;">
+            <span class="card-tag">Reference</span>
+            <i class="fas fa-box-archive" style="font-size: 2.4rem; color: rgba(255,255,255,0.2); position: relative; z-index: 2;"></i>
+            <span class="card-ordinal">16</span>
+          </div>
+          <div class="card-body">
+            <h2>Extras</h2>
+            <p>Archived custom components removed during the 2026 design-system compliance pass. Preserved for reference.</p>
+            <span class="card-link">View Page <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="index-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-brand">TWMC 2026 Redesign &mdash; <a href="framework.html">Design System v2026.1</a></span>
+        <div class="footer-tags">
+          <span class="footer-tag">Bootstrap 5.3</span>
+          <span class="footer-tag">Playfair + DM Sans</span>
+          <span class="footer-tag">theme.css</span>
+          <span class="footer-tag">theme.js</span>
+        </div>
+      </div>
+      <span class="footer-right">15 pages &middot; 5 campuses</span>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Scroll-triggered card reveals ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const siblings = [...card.parentElement.children];
+          const idx = siblings.indexOf(card);
+          card.style.transitionDelay = `${idx * 0.1}s`;
+          card.classList.add('revealed');
+          revealObserver.unobserve(card);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.card').forEach((c) => revealObserver.observe(c));
+
+    /* ── Filter pills ── */
+    const pills = document.querySelectorAll('.filter-pill');
+    const sections = document.querySelectorAll('.card-section[data-category]');
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        pills.forEach((p) => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const filter = pill.dataset.filter;
+
+        sections.forEach((section) => {
+          if (filter === 'all' || section.dataset.category === filter) {
+            section.classList.remove('hidden');
+            /* Re-observe any unrevealed cards in newly shown sections */
+            section.querySelectorAll('.card:not(.revealed)').forEach((c) => {
+              revealObserver.observe(c);
+            });
+          } else {
+            section.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+  <script src="js/font-switcher.js"></script>
+
+</body>
+</html>

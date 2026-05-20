@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NextGen Kids | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="page-hero" id="main-content">
+    <div class="page-hero-bg" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20241007-CHI-24-2500w.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="#">NextGen</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Kids</span>
+        </nav>
+        <h1>NextGen Kids</h1>
+        <p>Where faith begins with fun</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       INTRO — Welcome + Contact Card
+       ============================================ -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal">
+        <div class="col"><div class="intro-text">
+          <div class="section-label">NextGen Kids Ministry</div>
+          <h2 class="section-title">Welcome to <em>NextGen Kids</em></h2>
+          <p>Greetings from NextGen Kids Ministry! We couldn't be more excited that you are looking for a church home, and we hope that your family can find a place here! God calls us to walk alongside parents of all children. Our vision is to excellently engage children with biblically missional principles in a safe environment. This will allow us to fulfill our Holy Spirit-led mission of:</p>
+          <ul class="list-unstyled mt-3 mb-3">
+            <li class="d-flex align-items-center gap-3 py-2 border-bottom border-light">
+              <i class="fas fa-cross text-secondary fs-5 flex-shrink-0"></i>
+              <span class="fw-semibold text-primary">Faith Formation through Biblical Teaching</span>
+            </li>
+            <li class="d-flex align-items-center gap-3 py-2 border-bottom border-light">
+              <i class="fas fa-hands-praying text-secondary fs-5 flex-shrink-0"></i>
+              <span class="fw-semibold text-primary">Age-Appropriate Worship Experiences</span>
+            </li>
+            <li class="d-flex align-items-center gap-3 py-2 border-bottom border-light">
+              <i class="fas fa-users text-secondary fs-5 flex-shrink-0"></i>
+              <span class="fw-semibold text-primary">Safe, Nurturing Community</span>
+            </li>
+            <li class="d-flex align-items-center gap-3 py-2">
+              <i class="fas fa-heart text-secondary fs-5 flex-shrink-0"></i>
+              <span class="fw-semibold text-primary">Partnership with Families</span>
+            </li>
+          </ul>
+          <p>Please consider following us on social media and don't hesitate to contact us should you have any questions.</p>
+        </div></div>
+
+        <div class="col"><div class="contact-card">
+          <div class="contact-card-header">
+            <h4>Get in Touch</h4>
+          </div>
+          <div class="contact-card-body">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <a href="tel:281.297.5900">281.297.5900</a>
+                <span>NextGen Kids Office</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <a href="mailto:NextGenKids@twmc.org">NextGenKids@twmc.org</a>
+                <span>Send us a message</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div>
+                <a href="https://www.facebook.com/twmcnextgenkids" target="_blank">Like us on Facebook</a>
+                <span>TWMC NextGen Kids</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <a href="https://www.instagram.com/twmc_nextgenkids/?hl=en" target="_blank">Follow on Instagram</a>
+                <span>@twmc_nextgenkids</span>
+              </div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FEATURE BANNER — Summer Splash
+       ============================================ -->
+  <section class="feature-banner" style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_BG.png'); background-color: var(--maroon);">
+    <div class="container">
+      <div class="feature-banner-inner reveal">
+        <h2>Summer Splash</h2>
+        <p>Summer fun is on the way! NextGen Kids, NextGen 56 and Recreation Ministry have an amazing summer planned. Register and join us for exciting camps and activities. Don't miss out on good fun with great friends!</p>
+        <a href="https://people.thewoodlandsmethodist.org/summersplash" class="btn-white" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       KIDS E-NEWS CTA
+       ============================================ -->
+  <section class="enews-cta">
+    <div class="container">
+      <div class="enews-inner reveal">
+        <div>
+          <h3>NextGen Kids Newsletter</h3>
+          <p>Stay connected with weekly updates, event reminders, and faith-at-home resources for families.</p>
+        </div>
+        <a href="#" class="btn-white">Subscribe to E-News</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       CONNECT — Tabbed Cards by Campus
+       ============================================ -->
+  <section class="connect-section">
+    <div class="container">
+      <div class="connect-header reveal">
+        <div class="section-label">Get Involved</div>
+        <h2 class="section-title">Connect <em>With Us</em></h2>
+        <div class="connect-tabs" id="connectTabs" role="tablist">
+          <button class="connect-tab active" data-tab="tab-woodlands" role="tab" aria-selected="true" aria-controls="tab-woodlands" id="btn-woodlands">The Woodlands</button>
+          <button class="connect-tab" data-tab="tab-woodforest" role="tab" aria-selected="false" aria-controls="tab-woodforest" id="btn-woodforest">Woodforest</button>
+          <button class="connect-tab" data-tab="tab-montgomery" role="tab" aria-selected="false" aria-controls="tab-montgomery" id="btn-montgomery">Montgomery</button>
+          <button class="connect-tab" data-tab="tab-creekside" role="tab" aria-selected="false" aria-controls="tab-creekside" id="btn-creekside">Creekside</button>
+          <button class="connect-tab" data-tab="tab-woodlands-esp" role="tab" aria-selected="false" aria-controls="tab-woodlands-esp" id="btn-woodlands-esp">The Woodlands (ESP)</button>
+          <button class="connect-tab" data-tab="tab-creekside-esp" role="tab" aria-selected="false" aria-controls="tab-creekside-esp" id="btn-creekside-esp">Creekside (ESP)</button>
+        </div>
+      </div>
+
+      <!-- The Woodlands Tab -->
+      <div class="tab-panel active" id="tab-woodlands" role="tabpanel" aria-labelledby="btn-woodlands">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9cf12277-ca2c-4814-8bbd-32ecde3cdecb" alt="Family Easter Celebration" onerror="this.parentElement.style.background='linear-gradient(135deg, #9b4d63, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Family Easter Celebration</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>NextGen Kids will host multiple egg hunts on Saturday, April 4, 2:00-4:00 p.m. Children will enjoy age-specific egg hunts, and a sensory-friendly egg hunt will be available. Families can also engage with the Easter story through an interactive experience.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3222" class="btn-card" target="_blank">Find Out More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS Serve Team" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>VBS Serve Team</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands, Woodforest, Creekside
+              </div>
+              <p>Join us this summer as we welcome children to our campuses for VBS, and be part of what makes it unforgettable. It takes a team of caring volunteers to help every child experience an amazing week. Volunteer registration is open now.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3224" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=cd5394b3-1a26-4433-8371-927d3a622629" alt="Children's Choir" onerror="this.parentElement.style.background='linear-gradient(135deg, #d4b46a, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Children's Choir</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>Children's Choir is open to children entering grades K-6. The choir sings in worship services periodically throughout the year, as well as produces a musical in the spring.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event/2939" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=908ab715-8e8a-4ac2-891c-29b52bf2edd9" alt="Volunteer" onerror="this.parentElement.style.background='linear-gradient(135deg, #6e3140, #9b4d63)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Volunteer</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>One of the best ways to meet people, develop relationships, and grow as a follower of Christ is to serve the local church. Volunteers are the backbone of NextGen Kids Ministry.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/volunteersignup?OpportunityId=39" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9e4a9196-228c-4786-aa89-19cadb30cb00" alt="Little Oaks Early Learning Academy" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #d4b46a)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Little Oaks Early Learning Academy</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands, Creekside
+              </div>
+              <p>We are pleased to partner with Little Oaks Early Learning Academy to offer full-day, year-round Christian preschool at our campuses!</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://www.littleoaksela.com/thewoodlands" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Woodforest Tab -->
+      <div class="tab-panel" id="tab-woodforest" role="tabpanel" aria-labelledby="btn-woodforest">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS Serve Team" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>VBS Serve Team</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Woodforest
+              </div>
+              <p>Join us this summer as we welcome children to our campuses for VBS, and be part of what makes it unforgettable. It takes a team of caring volunteers to help every child experience an amazing week.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3224" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Montgomery Tab -->
+      <div class="tab-panel" id="tab-montgomery" role="tabpanel" aria-labelledby="btn-montgomery">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=c8e3f950-df2e-4f66-8f6e-d152fd97c6e4" alt="NextGen Kids Montgomery" onerror="this.parentElement.style.background='linear-gradient(135deg, #6e3140, #c5a258)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>NextGen Kids Montgomery</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Montgomery
+              </div>
+              <p>NextGen Kids at Montgomery welcomes children to worship, learn and grow in their faith in a fun, safe environment.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/montgomery" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS Serve Team" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>VBS Serve Team</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Montgomery
+              </div>
+              <p>Join us this summer as we welcome children to our campuses for VBS. Volunteer registration is open now.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3224" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Creekside Tab -->
+      <div class="tab-panel" id="tab-creekside" role="tabpanel" aria-labelledby="btn-creekside">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS Serve Team" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>VBS Serve Team</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Creekside
+              </div>
+              <p>Join us this summer as we welcome children to our campuses for VBS, and be part of what makes it unforgettable. Volunteer registration is open now.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3224" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=7b612904-1d2a-433f-8ef8-4377051dc0cb" alt="Volunteer" onerror="this.parentElement.style.background='linear-gradient(135deg, #6e3140, #9b4d63)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Volunteer</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Creekside
+              </div>
+              <p>One of the best ways to meet people, develop relationships, and grow as a follower of Christ is to serve the local church. Volunteers are the backbone of NextGen Kids Ministry.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/volunteersignup?OpportunityId=39" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6f47fd8a-afd8-442b-9fb1-63d93db379f8" alt="Little Oaks Early Learning Academy" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #d4b46a)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Little Oaks Early Learning Academy</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Creekside
+              </div>
+              <p>We are pleased to partner with Little Oaks Early Learning Academy to offer full-day, year-round Christian preschool at our Creekside campus!</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://www.littleoaksela.com/thewoodlands" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- The Woodlands (ESP) Tab -->
+      <div class="tab-panel" id="tab-woodlands-esp" role="tabpanel" aria-labelledby="btn-woodlands-esp">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS Serve Team" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #6e3140)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>VBS Serve Team</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands (ESP)
+              </div>
+              <p>Join us this summer as we welcome children to our campuses for VBS, and be part of what makes it unforgettable. Volunteer registration is open now.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/event?EventOccurrenceId=3224" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9e4a9196-228c-4786-aa89-19cadb30cb00" alt="Little Oaks Early Learning Academy" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #d4b46a)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Little Oaks Early Learning Academy</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> The Woodlands
+              </div>
+              <p>We are pleased to partner with Little Oaks Early Learning Academy to offer full-day, year-round Christian preschool!</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://www.littleoaksela.com/thewoodlands" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- Creekside (ESP) Tab -->
+      <div class="tab-panel" id="tab-creekside-esp" role="tabpanel" aria-labelledby="btn-creekside-esp">
+        <div class="connect-cards row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=7b612904-1d2a-433f-8ef8-4377051dc0cb" alt="Volunteer" onerror="this.parentElement.style.background='linear-gradient(135deg, #6e3140, #9b4d63)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Volunteer</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Creekside (ESP)
+              </div>
+              <p>One of the best ways to meet people, develop relationships, and grow as a follower of Christ is to serve the local church.</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://people.thewoodlandsmethodist.org/volunteersignup?OpportunityId=39" class="btn-card" target="_blank">Sign Up <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+
+          <div class="col"><div class="connect-card reveal">
+            <div class="connect-card-image">
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=6f47fd8a-afd8-442b-9fb1-63d93db379f8" alt="Little Oaks Early Learning Academy" onerror="this.parentElement.style.background='linear-gradient(135deg, #c5a258, #d4b46a)'">
+            </div>
+            <div class="connect-card-body">
+              <h3>Little Oaks Early Learning Academy</h3>
+              <div class="connect-card-campus">
+                <i class="fas fa-map-marker-alt"></i> Creekside
+              </div>
+              <p>We are pleased to partner with Little Oaks Early Learning Academy to offer full-day, year-round Christian preschool at our Creekside campus!</p>
+            </div>
+            <div class="connect-card-footer">
+              <a href="https://www.littleoaksela.com/thewoodlands" class="btn-card" target="_blank">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       COMMUNITY & PROGRAMS — Tabbed Accordion
+       ============================================ -->
+  <section class="connect-section" id="programs">
+    <div class="container">
+      <div class="connect-header reveal">
+        <span class="section-label">Programs</span>
+        <h2 class="section-title">NextGen <em>Programs</em></h2>
+        <div class="connect-tabs" id="programsTabs" role="tablist" aria-label="Programs by age group">
+          <button class="connect-tab active" role="tab" id="tab-preschool-btn" aria-selected="true" aria-controls="tab-preschool" data-tab="tab-preschool">Preschool</button>
+          <button class="connect-tab" role="tab" id="tab-elementary-btn" aria-selected="false" aria-controls="tab-elementary" data-tab="tab-elementary">Elementary</button>
+          <button class="connect-tab" role="tab" id="tab-preteen-btn" aria-selected="false" aria-controls="tab-preteen" data-tab="tab-preteen">Pre-Teen</button>
+          <button class="connect-tab" role="tab" id="tab-youth-btn" aria-selected="false" aria-controls="tab-youth" data-tab="tab-youth">Youth</button>
+        </div>
+      </div>
+      <div class="connect-cards">
+        <div id="tab-preschool" class="tab-panel active" role="tabpanel" aria-labelledby="tab-preschool-btn">
+          <div class="accordion" id="accordionPreschool">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prog-littlelambs" aria-expanded="false" aria-controls="prog-littlelambs">
+                  <i class="fas fa-baby text-secondary me-3"></i> Little Lambs (Ages 2–3)
+                </button>
+              </h2>
+              <div id="prog-littlelambs" class="accordion-collapse collapse" data-bs-parent="#accordionPreschool">
+                <div class="accordion-body">
+                  <p>A nurturing environment for our youngest learners. Story time, songs, and age-appropriate crafts build a foundation of faith.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prog-explorers" aria-expanded="false" aria-controls="prog-explorers">
+                  <i class="fas fa-child text-secondary me-3"></i> Preschool Explorers (Ages 4–5)
+                </button>
+              </h2>
+              <div id="prog-explorers" class="accordion-collapse collapse" data-bs-parent="#accordionPreschool">
+                <div class="accordion-body">
+                  <p>Bible stories come alive through play, music, and hands-on activities designed for PreK learners.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-elementary" class="tab-panel" role="tabpanel" aria-labelledby="tab-elementary-btn">
+          <div class="accordion" id="accordionElementary">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prog-nextgen" aria-expanded="false" aria-controls="prog-nextgen">
+                  <i class="fas fa-book text-secondary me-3"></i> NextGen Kids (K–5th Grade)
+                </button>
+              </h2>
+              <div id="prog-nextgen" class="accordion-collapse collapse" data-bs-parent="#accordionElementary">
+                <div class="accordion-body">
+                  <p>Engaging, age-appropriate worship and teaching for elementary-age kids every Sunday morning.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-preteen" class="tab-panel" role="tabpanel" aria-labelledby="tab-preteen-btn">
+          <div class="accordion" id="accordionPreteen">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prog-preteen-main" aria-expanded="false" aria-controls="prog-preteen-main">
+                  <i class="fas fa-star text-secondary me-3"></i> 456 Club (4th–6th Grade)
+                </button>
+              </h2>
+              <div id="prog-preteen-main" class="accordion-collapse collapse" data-bs-parent="#accordionPreteen">
+                <div class="accordion-body">
+                  <p>A safe space for preteens to ask big questions and discover their identity in Christ.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-youth" class="tab-panel" role="tabpanel" aria-labelledby="tab-youth-btn">
+          <div class="accordion" id="accordionYouth">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#prog-youth-main" aria-expanded="false" aria-controls="prog-youth-main">
+                  <i class="fas fa-bolt text-secondary me-3"></i> Student Ministry (7th–12th Grade)
+                </button>
+              </h2>
+              <div id="prog-youth-main" class="accordion-collapse collapse" data-bs-parent="#accordionYouth">
+                <div class="accordion-body">
+                  <p>Weekly worship, small groups, and retreats designed to deepen faith for middle and high school students.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW SECTION
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Pathway</div>
+      </div>
+      <div class="grow-squares reveal">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+      <div class="reveal">
+        <h2>A Pathway to a Deeper Faith</h2>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="grow.html" class="btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       E-NEWS CTA
+       ============================================ -->
+  <section class="enews-cta">
+    <div class="container">
+      <div class="enews-inner reveal">
+        <div class="enews-text">
+          <h3>Stay Connected</h3>
+          <p>Get the latest news and updates delivered to your inbox.</p>
+        </div>
+        <a href="#" class="btn-white"><i class="fas fa-envelope"></i> Subscribe Now</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i><a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i><a href="tel:(281)297-5900">(281) 297-5900</a></p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help & Support</a>
+          <a href="#">Funerals & Memorials</a>
+          <a href="#">Venues & Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <!-- Connect section tab switching and accordion handled by Bootstrap + theme.js -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+
+</body>
+</html>

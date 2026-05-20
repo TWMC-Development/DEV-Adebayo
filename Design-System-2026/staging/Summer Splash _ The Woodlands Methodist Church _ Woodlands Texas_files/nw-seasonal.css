@@ -1,0 +1,307 @@
+/* ===== WOM Radiant Fall Bible Study 2023 ===== */
+#twmc-feature-banner__wom-radiantfall2023 {
+    background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/WOM_RadientFall_FeatureBannerBG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: scroll;
+    color: #fff;
+    
+    height: 600px;
+    padding: auto 0;
+}
+
+.twmc-feature-banner__wom-radiantfall2023-wrapper {
+    height: 600px;
+    width: 50%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: 7%;
+    padding: 2rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.twmc-feature-banner__wom-radiantfall2023-wrapper > img {
+    max-width: 90%;
+}
+
+.twmc-feature-banner__wom-radiantfall2023-wrapper > .twmc--btn.twmc--btn--outline--radiantfall2023.twmc-letspac-2.mt-3  {
+    margin-left: 7px;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    #twmc-feature-banner__wom-radiantfall2023 {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .3)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/WOM_RadientFall_FeatureBannerBG.png");
+        
+    }
+
+    .twmc-feature-banner__wom-radiantfall2023-wrapper {
+        width: 90%;
+        align-items: flex-end;
+    }
+
+    .twmc-feature-banner__wom-radiantfall2023-wrapper > .twmc--btn.twmc--btn--outline--radiantfall2023.twmc-letspac-2.mt-3  {
+        margin-right: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #twmc-feature-banner__wom-radiantfall2023 {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/WOM_RadientFall_FeatureBannerBG.png");
+        
+    }
+    
+    .twmc-feature-banner__wom-radiantfall2023-wrapper {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-feature-banner__wom-radiantfall2023,
+    .twmc-feature-banner__wom-radiantfall2023-wrapper {
+        height: 450px;
+    }
+}
+
+.twmc--btn--outline--radiantfall2023 {
+    border: 2px solid transparent;
+    border-color: #FDE9A3;
+    color: #FDE9A3;
+    /* background-color: rgba(255, 255, 255, .2); */
+    transition: all .3s ease-in-out;
+}
+
+.twmc--btn--outline--radiantfall2023:hover,
+.twmc--btn--outline--radiantfall2023:focus  {
+    border: 2px solid transparent;
+    border-color: #FDDD6D;
+    background-color: rgba(255, 255, 255, .1);
+    color: #FDDD6D;
+    text-decoration: none;
+
+    transform: scale(1.02);
+}
+
+@media only screen and (max-width: 576px) {
+    .twmc--btn--outline--radiantfall2023 {
+        padding: 0.4rem .8rem;
+        font-size: .7rem;
+    }
+}
+
+/* ===== WOM Radiant Fall Bible Study 2023 ===== */
+
+
+/* ===== Summer Splash Feature Banner ===== */
+#twmc-chi__summersplash-featurebanner {
+    background-color: #007cc2;
+    /* background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_BG.png'); */
+    background-image: linear-gradient(to bottom, rgba(0, 124, 194, 0), rgba(0, 124, 194, .5)), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_BG.png");
+    text-align: center;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-btn-summersplash2023--yellow {
+    border: 2px solid #FFCC18;
+    background-color: #FFCC18;
+    color: #00639B;
+
+    transition: all .3s ease-in-out;
+
+}
+
+.twmc-btn-summersplash2023--yellow:hover,
+.twmc-btn-summersplash2023--yellow:focus {
+    border: 2px solid #FDF6DF;
+    background-color: #FDF6DF;
+    color: #00639B;
+}
+
+.twmc-summersplash2023--h4 {
+    color: #fff;
+    text-shadow: #00639B 2px 0 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .twmc-feature-banner__img.twmc-mbxs.twmc-wom__radiant2023-img {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #twmc-chi__summersplash-featurebanner {
+        height: 450px;
+    }
+
+    .twmc-btn-summersplash2023--yellow {
+        padding: .4rem .8rem;
+        font-size: .6rem;
+    }
+
+    .twmc-summersplash2023--h4 {
+        font-size: 14px;
+    }
+}
+
+.twmc-summerspalsh2023--card-infoicon {
+    font-size: .95rem;
+}
+/* ===== EEnd of Summer Splash Feature Banner ===== */
+
+/* Summer Events Feature Banner */
+#twmc-reb__summerevents2023-featurebanner {
+    background-color: #007cc2;
+    background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/Summer+EventsFEATURE+BANNER_+Size_+1270x600+BKG.jpg');
+    text-align: center;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twmc-reb__btn-auction-dinner-white {
+    border: 2px solid white;
+    background-color: white;
+    color: #464646;
+
+    transition: all .3s ease-in-out;
+
+}
+
+.twmc-reb__btn-auction-dinner-white:hover,
+.twmc-reb__btn-auction-dinner-white:focus {
+    border: 2px solid #f3f3f3;
+    background-color: #f3f3f3;
+    color: #464646;
+    transform: scale(1.02);
+}
+
+.twmc-reb__summerevents2023-featurebanner > img {
+    width: 80%;
+
+}
+
+@media only screen and (max-width: 768px) {
+    #twmc-reb__summerevents2023-featurebanner {
+        height: 450px;
+    }
+
+    .twmc-reb__btn-auction-dinner-white {
+        padding: .4rem .8rem;
+        font-size: .6rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-reb__summerevents2023-featurebanner {
+        height: 400px;
+    }
+
+}
+/* ===== End of REB Summer Events 2023 ===== */
+
+/* ===== Adult Discipleship GROW ===== */
+#twmc-adultdisc__grow {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .9)
+    ), url("https://people.thewoodlandsmethodist.org/Content/web/DIS_GROW%20Feature%20Banner%20BG.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: right top;
+
+    color: #fff ;
+}
+/* ===== End of Adult Discipleship GROW ===== */
+
+/* ===== MEN - Men's Conference ===== */
+#twmc-men__conference-2023 {
+    background-color: #007cc2;
+    background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/MEN_TheWay_FeatureBannerBG.png');
+    text-align: center;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.twmc-men__conference-2023--p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+
+}
+
+.twmc-btn__feat-banner-white {
+    border: 2px solid white;
+    background-color: white;
+    color: #464646;
+
+    transition: all .3s ease-in-out;
+}
+
+.twmc-btn__feat-banner-white:hover,
+.twmc-btn__feat-banner-white:focus {
+    border: 2px solid #f3f3f3;
+    background-color: #f3f3f3;
+    color: #464646;
+    transform: scale(1.02);
+}
+
+.twmc-reb__summerevents2023-featurebanner > img {
+    width: 80%;
+
+}
+
+@media only screen and (max-width: 768px) {
+    #twmc-men__conference-2023 {
+        height: 500px;
+    }
+
+    .twmc-btn__feat-banner-white  {
+        padding: .4rem .8rem;
+        font-size: .6rem;
+    }
+
+    .twmc-men__conference-2023--p {
+        margin-bottom: 1rem;
+    
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #twmc-men__conference-2023 {
+        height: 450px;
+    }
+
+}
+/* ===== End of MEN - Men's Conference ===== */

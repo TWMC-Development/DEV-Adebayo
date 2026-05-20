@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TWMC App | The Woodlands Methodist Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+  <link rel="preload" href="../css/theme.css" as="style">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css">
+  <style>
+    /* ── APP PAGE HERO ── */
+    .app-hero {
+      background: var(--maroon);
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 0;
+      text-align: center;
+    }
+
+    .app-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(197,162,88,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 0%, rgba(139,69,87,0.35) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .app-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .app-hero .container { position: relative; z-index: 1; }
+
+    .app-hero .section-label {
+      color: var(--gold);
+      justify-content: center;
+    }
+    .app-hero .section-label::before { background: var(--gold); }
+
+    .app-hero h1 {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .app-hero h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .app-hero .subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ── PHONE MOCKUP ── */
+    .phone-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+    }
+
+    .phone-frame {
+      width: 375px;
+      height: 780px;
+      background: #000;
+      border-radius: 48px;
+      padding: 14px;
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,0.08),
+        0 40px 80px rgba(0,0,0,0.35),
+        0 20px 40px rgba(0,0,0,0.2),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+      position: relative;
+      margin: 40px auto 60px;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      background: var(--cream);
+      border-radius: 36px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      /* Hide scrollbar but keep scrollable */
+      scrollbar-width: none;
+    }
+    .phone-screen::-webkit-scrollbar { display: none; }
+
+    /* Notch */
+    .phone-notch {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 28px;
+      background: #000;
+      border-radius: 14px;
+      z-index: 20;
+    }
+
+    .phone-notch::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #1a3a5c 30%, #0d1e33 70%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #0a0a0a;
+    }
+
+    /* Status bar */
+    .phone-status {
+      padding: 16px 28px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--dark);
+      position: relative;
+      z-index: 15;
+      flex-shrink: 0;
+    }
+
+    .phone-status-icons {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.68rem;
+    }
+
+    /* App screens container */
+    .app-screens {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: relative;
+      scrollbar-width: none;
+    }
+    .app-screens::-webkit-scrollbar { display: none; }
+
+    .app-screen {
+      display: none;
+      padding: 0 20px 20px;
+      animation: screenFadeIn var(--duration-normal) ease;
+    }
+
+    .app-screen.active { display: block; }
+
+    @keyframes screenFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tab bar */
+    .app-tab-bar {
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px));
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .app-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      padding: 6px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all var(--duration-normal);
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+      color: var(--text-muted);
+    }
+
+    .app-tab i { font-size: 1.1rem; transition: transform var(--duration-normal) var(--ease-out); }
+    .app-tab span { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.03em; }
+
+    .app-tab.active {
+      color: var(--maroon);
+      background: rgba(110,49,64,0.06);
+    }
+
+    .app-tab.active i { transform: scale(1.1); }
+
+    /* ── APP SCREEN COMPONENTS ── */
+
+    /* Home screen greeting */
+    .app-greeting {
+      padding: 20px 0 16px;
+    }
+
+    .app-greeting h2 {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+
+    .app-greeting p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Live banner */
+    .app-live-banner {
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-live-banner::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(197,162,88,0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .app-live-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .app-live-dot::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .app-live-banner h3 {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .app-live-banner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.72rem;
+      margin-bottom: 10px;
+    }
+
+    .app-live-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Quick actions grid */
+    .app-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .app-quick-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      padding: 18px 8px 14px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.03);
+      cursor: pointer;
+      transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+    }
+
+    .app-quick-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .app-quick-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .app-quick-item span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.01em;
+    }
+
+    /* Service times card */
+    .app-service-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 16px;
+    }
+
+    .app-service-card h4 {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .app-service-card h4 i { color: var(--maroon); font-size: 0.78rem; }
+
+    .app-service-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .app-service-row:last-child { border-bottom: none; }
+
+    .app-service-name {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .app-service-time {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .app-service-venue {
+      font-size: 0.62rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    /* App section header */
+    .app-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      margin-top: 6px;
+    }
+
+    .app-section-head h3 {
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .app-section-head a {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--maroon);
+      text-decoration: none;
+    }
+
+    /* Event mini cards */
+    .app-event-card {
+      display: flex;
+      gap: 12px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .app-event-date {
+      width: 46px;
+      height: 50px;
+      background: rgba(110,49,64,0.06);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .app-event-date .month {
+      font-size: 0.55rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--maroon);
+    }
+
+    .app-event-date .day {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .app-event-info h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .app-event-info p {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    /* Give screen */
+    .app-give-header {
+      text-align: center;
+      padding: 24px 0 20px;
+    }
+
+    .app-give-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .app-give-header p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .app-give-amounts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .app-give-amount {
+      padding: 14px 8px;
+      background: #fff;
+      border: 2px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--duration-fast) ease;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .app-give-amount:hover,
+    .app-give-amount.selected {
+      border-color: var(--maroon);
+      background: rgba(110,49,64,0.04);
+      color: var(--maroon);
+    }
+
+    .app-give-custom {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--dark);
+      background: #fff;
+      outline: none;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .app-give-custom:focus { border-color: var(--maroon); }
+
+    .app-give-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .app-give-fund {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .app-give-fund span:first-child {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .app-give-fund span:last-child {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    /* Messages screen */
+    .app-series-card {
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-series-card::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(197,162,88,0.15), transparent 70%);
+    }
+
+    .app-series-label {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .app-series-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .app-series-card p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 12px;
+    }
+
+    .app-series-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .app-series-play i {
+      width: 28px;
+      height: 28px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+    }
+
+    .app-message-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      align-items: center;
+    }
+
+    .app-message-thumb {
+      width: 56px;
+      height: 40px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--warm-gray), var(--warm-gray-2));
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+    }
+
+    .app-message-info h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .app-message-info p {
+      font-size: 0.62rem;
+      color: var(--text-muted);
+    }
+
+    /* Groups screen */
+    .app-my-group {
+      background: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.03);
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .app-group-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .app-group-info h4 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .app-group-info p {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    .app-group-badge {
+      margin-left: auto;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.58rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    /* More screen */
+    .app-profile-card {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .app-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .app-profile-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .app-profile-campus {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .app-menu-group {
+      margin-bottom: 20px;
+    }
+
+    .app-menu-label {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 0 8px;
+    }
+
+    .app-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      cursor: pointer;
+    }
+
+    .app-menu-item i:first-child {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(110,49,64,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--maroon);
+      font-size: 0.78rem;
+      flex-shrink: 0;
+    }
+
+    .app-menu-item span {
+      flex: 1;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .app-menu-item .fa-chevron-right {
+      color: var(--text-muted);
+      font-size: 0.6rem;
+      background: none;
+      width: auto;
+      height: auto;
+    }
+
+    .app-notification-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--grow-r);
+      margin-left: auto;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── FEATURES SECTION (below phone) ── */
+    .app-features {
+      background: var(--cream);
+      padding: 120px 0 80px;
+    }
+
+    .app-features .container { max-width: 1100px; }
+
+    .feature-item {
+      text-align: center;
+      padding: 32px 24px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-card);
+      transition: transform var(--duration-slow) var(--ease-out), box-shadow var(--duration-slow) ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 18px;
+    }
+
+    /* Feature icon & quick action icon gradient modifiers */
+    .feature-icon--watch-live,
+    .app-quick-icon--messages,
+    .app-group-avatar--bible-study {
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+    }
+
+    .feature-icon--giving,
+    .app-quick-icon--give,
+    .app-group-avatar--banding {
+      background: linear-gradient(135deg, var(--gold), #b8933f);
+    }
+
+    .feature-icon--groups,
+    .app-quick-icon--groups,
+    .app-group-avatar--home-group {
+      background: linear-gradient(135deg, var(--grow-g), #5c7ea8);
+    }
+
+    .feature-icon--events,
+    .app-quick-icon--events {
+      background: linear-gradient(135deg, var(--grow-r), #c04050);
+    }
+
+    .feature-icon--checkin,
+    .app-quick-icon--checkin {
+      background: linear-gradient(135deg, #8b7ec8, #6654a3);
+    }
+
+    .feature-icon--prayer,
+    .app-quick-icon--prayer {
+      background: linear-gradient(135deg, var(--grow-o), #2a9e6a);
+    }
+
+    .feature-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* ── DOWNLOAD CTA ── */
+    .app-download {
+      background: var(--maroon);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-download::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(197,162,88,0.1), transparent 55%),
+        radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.04), transparent 40%);
+      pointer-events: none;
+    }
+
+    .app-download .container { position: relative; z-index: 1; }
+
+    .app-download h2 {
+      font-family: var(--font-display);
+      color: #fff;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .app-download p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+      max-width: 440px;
+      margin: 0 auto 32px;
+    }
+
+    .download-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: all var(--duration-normal) ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .download-btn:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .download-btn i { font-size: 1.6rem; }
+
+    .download-btn-text {
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .download-btn-text small {
+      font-size: 0.6rem;
+      opacity: 0.7;
+      display: block;
+    }
+
+    .download-btn-text strong {
+      font-size: 0.92rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .app-hero { padding: 80px 0 0; }
+      .phone-frame {
+        width: 320px;
+        height: 680px;
+        border-radius: 40px;
+        padding: 12px;
+      }
+      .phone-screen { border-radius: 30px; }
+      .phone-notch { width: 100px; height: 24px; top: 12px; }
+      .app-features { padding: 100px 0 60px; }
+    }
+
+    @media (max-width: 576px) {
+      .phone-frame {
+        width: 290px;
+        height: 620px;
+        border-radius: 36px;
+        padding: 10px;
+      }
+      .phone-screen { border-radius: 28px; }
+      .app-quick-grid { gap: 6px; }
+      .app-quick-item { padding: 12px 6px 10px; }
+      .app-quick-icon { width: 36px; height: 36px; font-size: 0.85rem; }
+      .download-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="home.html" class="active">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="home.html">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="locations.html">Times &amp; Locations</a>
+        <a class="nav-link" href="#">Visit</a>
+        <a class="nav-link" href="grow.html">Grow</a>
+        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">Serve</a>
+        <a class="nav-link" href="give.html">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       UNIFIED NAVIGATION PANEL
+       Single offcanvas for desktop (3-col grid) and mobile (accordion sections)
+       ============================================ -->
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="home.html" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+
+      <!-- Campus selector in header area -->
+      <div class="nav-campuses">
+        <a href="home.html" class="nav-campus-chip active">The Woodlands</a>
+        <a href="#" class="nav-campus-chip">Woodforest</a>
+        <a href="#" class="nav-campus-chip">Montgomery</a>
+        <a href="#" class="nav-campus-chip">Creekside</a>
+        <a href="#" class="nav-campus-chip">Español</a>
+      </div>
+
+      <!-- All sections: 3-col grid on desktop, accordion on mobile -->
+      <div class="nav-sections">
+
+        <!-- COLUMN 1: Main + About -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="locations.html">Times &amp; Locations</a>
+                <a href="#">Visit</a>
+                <a href="grow.html">Grow</a>
+                <a href="#">Messages</a>
+                <a href="#">Serve</a>
+                <a href="give.html">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="#">Baptism</a>
+                <a href="#">Our Stories</a>
+                <a href="#">Membership</a>
+                <a href="staff.html">Staff</a>
+                <a href="#">Venues &amp; Bookings</a>
+                <a href="#">TWMC Foundation</a>
+                <a href="#">Grace Garden — Columbarium</a>
+                <a href="#">Seminary Scholarship</a>
+                <a href="media.html">Church Online</a>
+                <a href="media.html">Podcast</a>
+                <a href="#">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: Connect + NextGen -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="grow.html">G.R.O.W.</a>
+                <a href="#">Events</a>
+                <a href="#">Home Groups</a>
+                <a href="support-groups.html">Support Groups</a>
+                <a href="#">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="childrens.html">NextGen Kids (Ages 3–9)</a>
+                <a href="#">NextGen 56 (Ages 10–11)</a>
+                <a href="#">NextGen Students (Ages 12–18)</a>
+                <a href="#">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: Ministries -->
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="#">Adults 55+</a>
+                <a href="discipleship.html">Adult Discipleship</a>
+                <a href="https://www.bristolhousemusic.org/" target="_blank" rel="noopener noreferrer">Bristol House Music</a>
+                <a href="http://www.childrenofthewoodlands.org/" target="_blank" rel="noopener noreferrer">Children of the Woodlands</a>
+                <a href="#">Caring &amp; Prayer</a>
+                <a href="#">Marriage</a>
+                <a href="#">Men</a>
+                <a href="missions.html">Missions</a>
+                <a href="#">Music &amp; Fine Arts</a>
+                <a href="#">Recreation</a>
+                <a href="#">Singles</a>
+                <a href="#">Special Needs</a>
+                <a href="https://www.twmschool.org/" target="_blank" rel="noopener noreferrer">TWMC School</a>
+                <a href="womens.html">Women</a>
+                <a href="#">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================
+       APP HERO
+       ============================================ -->
+  <section class="app-hero" id="main-content">
+    <div class="container">
+      <div class="section-label reveal">App</div>
+      <h1 class="reveal">Your church,<br><em>in your pocket.</em></h1>
+      <p class="subtitle reveal">Stay connected to The Woodlands Methodist Church with everything you need — services, groups, giving, messages, and more — all in one place.</p>
+    </div>
+
+    <div class="phone-wrapper">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+
+          <!-- Status Bar -->
+          <div class="phone-status">
+            <span>9:41</span>
+            <span class="phone-status-icons">
+              <i class="fas fa-signal"></i>
+              <i class="fas fa-wifi"></i>
+              <i class="fas fa-battery-full"></i>
+            </span>
+          </div>
+
+          <!-- App Screens -->
+          <div class="app-screens">
+
+            <!-- HOME SCREEN -->
+            <div class="app-screen active" data-screen="home">
+              <div class="app-greeting">
+                <h2>Good morning,<br>welcome back.</h2>
+                <p>Sunday, March 15 &middot; The Woodlands Campus</p>
+              </div>
+
+              <div class="app-live-banner">
+                <div class="app-live-dot">Live Now</div>
+                <h3>Easter Series: Unshaken</h3>
+                <p>Traditional Service &middot; 9:30 AM</p>
+                <span class="app-live-btn"><i class="fas fa-play"></i> Watch Live</span>
+              </div>
+
+              <div class="app-quick-grid">
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--give">
+                    <i class="fas fa-hand-holding-heart"></i>
+                  </div>
+                  <span>Give</span>
+                </div>
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--groups">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <span>Groups</span>
+                </div>
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--events">
+                    <i class="fas fa-calendar"></i>
+                  </div>
+                  <span>Events</span>
+                </div>
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--prayer">
+                    <i class="fas fa-praying-hands"></i>
+                  </div>
+                  <span>Prayer</span>
+                </div>
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--checkin">
+                    <i class="fas fa-qrcode"></i>
+                  </div>
+                  <span>Check In</span>
+                </div>
+                <div class="app-quick-item">
+                  <div class="app-quick-icon app-quick-icon--messages">
+                    <i class="fas fa-headphones"></i>
+                  </div>
+                  <span>Messages</span>
+                </div>
+              </div>
+
+              <div class="app-service-card">
+                <h4><i class="fas fa-church"></i> This Sunday</h4>
+                <div class="app-service-row">
+                  <div>
+                    <div class="app-service-name">Traditional</div>
+                    <div class="app-service-venue">Sanctuary</div>
+                  </div>
+                  <div class="app-service-time">8:00, 9:30, 11:00 AM</div>
+                </div>
+                <div class="app-service-row">
+                  <div>
+                    <div class="app-service-name">Harvest</div>
+                    <div class="app-service-venue">Harvest Hall</div>
+                  </div>
+                  <div class="app-service-time">9:30, 11:00 AM</div>
+                </div>
+                <div class="app-service-row">
+                  <div>
+                    <div class="app-service-name">Loft</div>
+                    <div class="app-service-venue">The Loft</div>
+                  </div>
+                  <div class="app-service-time">9:30, 11:00 AM</div>
+                </div>
+              </div>
+
+              <div class="app-section-head">
+                <h3>Upcoming Events</h3>
+                <a href="#">See All</a>
+              </div>
+
+              <div class="app-event-card">
+                <div class="app-event-date">
+                  <span class="month">Apr</span>
+                  <span class="day">13</span>
+                </div>
+                <div class="app-event-info">
+                  <h4>Palm Sunday Services</h4>
+                  <p>All campuses &middot; Regular service times</p>
+                </div>
+              </div>
+
+              <div class="app-event-card">
+                <div class="app-event-date">
+                  <span class="month">Apr</span>
+                  <span class="day">17</span>
+                </div>
+                <div class="app-event-info">
+                  <h4>Maundy Thursday</h4>
+                  <p>Sanctuary &middot; 7:00 PM</p>
+                </div>
+              </div>
+
+              <div class="app-event-card">
+                <div class="app-event-date">
+                  <span class="month">Apr</span>
+                  <span class="day">20</span>
+                </div>
+                <div class="app-event-info">
+                  <h4>Easter Sunday</h4>
+                  <p>All campuses &middot; 6:30 AM Sunrise + regular times</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- MESSAGES SCREEN -->
+            <div class="app-screen" data-screen="messages">
+              <div class="app-greeting">
+                <h2>Messages</h2>
+                <p>Sermons, podcasts, and teaching from TWMC</p>
+              </div>
+
+              <div class="app-series-card">
+                <div class="app-series-label">Current Series</div>
+                <h3>Unshaken: Standing Firm in Uncertain Times</h3>
+                <p>A 6-week journey through the book of Hebrews</p>
+                <span class="app-series-play">
+                  <i class="fas fa-play"></i>
+                  Watch Latest
+                </span>
+              </div>
+
+              <div class="app-section-head">
+                <h3>Recent Messages</h3>
+                <a href="#">Browse All</a>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fas fa-play"></i></div>
+                <div class="app-message-info">
+                  <h4>Unshaken: The Anchor Holds</h4>
+                  <p>Rev. Mark Sorensen &middot; Mar 9, 2026</p>
+                </div>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fas fa-play"></i></div>
+                <div class="app-message-info">
+                  <h4>Unshaken: Built on the Rock</h4>
+                  <p>Rev. Pierce Drake &middot; Mar 2, 2026</p>
+                </div>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fas fa-play"></i></div>
+                <div class="app-message-info">
+                  <h4>Unshaken: Faith Over Fear</h4>
+                  <p>Rev. Mark Sorensen &middot; Feb 23, 2026</p>
+                </div>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fas fa-play"></i></div>
+                <div class="app-message-info">
+                  <h4>Beyond Sunday: State of the Church</h4>
+                  <p>Rev. Mark Sorensen &middot; Feb 16, 2026</p>
+                </div>
+              </div>
+
+              <div class="app-section-head" style="margin-top: 16px;">
+                <h3>Field Notes Podcast</h3>
+                <a href="#">Subscribe</a>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb" style="background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));"><i class="fas fa-podcast" style="color: #fff;"></i></div>
+                <div class="app-message-info">
+                  <h4>Ep. 42: Stewarding Generously</h4>
+                  <p>Field Notes &middot; 28 min</p>
+                </div>
+              </div>
+
+              <div class="app-message-item">
+                <div class="app-message-thumb" style="background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));"><i class="fas fa-podcast" style="color: #fff;"></i></div>
+                <div class="app-message-info">
+                  <h4>Ep. 41: A Word for the Weary</h4>
+                  <p>Field Notes &middot; 34 min</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- GIVE SCREEN -->
+            <div class="app-screen" data-screen="give">
+              <div class="app-give-header">
+                <h2>Give Generously</h2>
+                <p>Your generosity fuels the mission of TWMC</p>
+              </div>
+
+              <div class="app-give-amounts">
+                <div class="app-give-amount">$25</div>
+                <div class="app-give-amount">$50</div>
+                <div class="app-give-amount selected">$100</div>
+                <div class="app-give-amount">$250</div>
+                <div class="app-give-amount">$500</div>
+                <div class="app-give-amount">$1000</div>
+              </div>
+
+              <input class="app-give-custom" type="text" placeholder="Or enter custom amount">
+
+              <button class="btn-primary app-give-btn">
+                <i class="fas fa-heart" style="margin-right: 6px;"></i>
+                Give $100.00
+              </button>
+
+              <div class="app-section-head">
+                <h3>Giving Funds</h3>
+              </div>
+
+              <div class="app-give-fund">
+                <span>General Fund</span>
+                <span>Default</span>
+              </div>
+              <div class="app-give-fund">
+                <span>Beyond Campaign</span>
+                <span>Building Fund</span>
+              </div>
+              <div class="app-give-fund">
+                <span>Missions</span>
+                <span>Local &amp; Global</span>
+              </div>
+              <div class="app-give-fund">
+                <span>Benevolence</span>
+                <span>Community Aid</span>
+              </div>
+
+              <div style="text-align: center; margin-top: 20px;">
+                <a href="#" style="font-size: 0.72rem; color: var(--maroon); font-weight: 600; text-decoration: none;">
+                  <i class="fas fa-history" style="margin-right: 4px;"></i> View Giving History
+                </a>
+              </div>
+            </div>
+
+            <!-- GROUPS SCREEN -->
+            <div class="app-screen" data-screen="groups">
+              <div class="app-greeting">
+                <h2>Groups</h2>
+                <p>Find your people. Grow together.</p>
+              </div>
+
+              <div class="app-section-head">
+                <h3>My Groups</h3>
+                <a href="#">Find a Group</a>
+              </div>
+
+              <div class="app-my-group">
+                <div class="app-group-avatar app-group-avatar--home-group">
+                  <i class="fas fa-home"></i>
+                </div>
+                <div class="app-group-info">
+                  <h4>Creekside Home Group</h4>
+                  <p>Wednesdays &middot; 7:00 PM &middot; 12 members</p>
+                </div>
+                <span class="app-group-badge" style="background: rgba(61,191,135,0.1); color: var(--grow-o);">Active</span>
+              </div>
+
+              <div class="app-my-group">
+                <div class="app-group-avatar app-group-avatar--bible-study">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="app-group-info">
+                  <h4>Men's Bible Study</h4>
+                  <p>Tuesdays &middot; 6:30 AM &middot; 8 members</p>
+                </div>
+                <span class="app-group-badge" style="background: rgba(110,49,64,0.08); color: var(--maroon);">Active</span>
+              </div>
+
+              <div class="app-my-group">
+                <div class="app-group-avatar app-group-avatar--banding">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="app-group-info">
+                  <h4>Banding Group</h4>
+                  <p>Bi-weekly &middot; Saturdays &middot; 3 members</p>
+                </div>
+                <span class="app-group-badge" style="background: rgba(197,162,88,0.12); color: var(--gold);">Active</span>
+              </div>
+
+              <div class="app-section-head" style="margin-top: 16px;">
+                <h3>Recommended for You</h3>
+              </div>
+
+              <div class="app-event-card">
+                <div class="app-event-date" style="background: rgba(197,162,88,0.1);">
+                  <span class="day" style="font-size: 0.85rem;"><i class="fas fa-cross" style="color: var(--gold);"></i></span>
+                </div>
+                <div class="app-event-info">
+                  <h4>Lenten Study: Walk With Me</h4>
+                  <p>Starts Apr 1 &middot; 6 weeks &middot; 4 spots left</p>
+                </div>
+              </div>
+
+              <div class="app-event-card">
+                <div class="app-event-date" style="background: rgba(110,49,64,0.06);">
+                  <span class="day" style="font-size: 0.85rem;"><i class="fas fa-user-friends" style="color: var(--maroon);"></i></span>
+                </div>
+                <div class="app-event-info">
+                  <h4>Spiritual Mentorship Program</h4>
+                  <p>Rolling enrollment &middot; 1-on-1 mentoring</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- MORE SCREEN -->
+            <div class="app-screen" data-screen="more">
+              <div class="app-profile-card">
+                <div class="app-avatar">JD</div>
+                <div>
+                  <div class="app-profile-name">John Doe</div>
+                  <div class="app-profile-campus">The Woodlands Campus</div>
+                </div>
+              </div>
+
+              <div class="app-menu-group">
+                <div class="app-menu-label">Account</div>
+                <div class="app-menu-item">
+                  <i class="fas fa-user"></i>
+                  <span>My Profile</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-bell"></i>
+                  <span>Notifications</span>
+                  <div class="app-notification-dot"></div>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>My Campus</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="app-menu-group">
+                <div class="app-menu-label">Faith &amp; Growth</div>
+                <div class="app-menu-item">
+                  <i class="fas fa-praying-hands"></i>
+                  <span>Prayer Wall</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-bible"></i>
+                  <span>Daily Devotional</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-seedling"></i>
+                  <span>G.R.O.W. Pathway</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="app-menu-group">
+                <div class="app-menu-label">Church</div>
+                <div class="app-menu-item">
+                  <i class="fas fa-church"></i>
+                  <span>Campuses &amp; Services</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-child"></i>
+                  <span>Kids Check-In</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-hands-helping"></i>
+                  <span>Volunteer</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="app-menu-item">
+                  <i class="fas fa-heart"></i>
+                  <span>Support Groups</span>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tab Bar -->
+          <nav class="app-tab-bar">
+            <button class="app-tab active" data-target="home">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </button>
+            <button class="app-tab" data-target="messages">
+              <i class="fas fa-play-circle"></i>
+              <span>Messages</span>
+            </button>
+            <button class="app-tab" data-target="give">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span>Give</span>
+            </button>
+            <button class="app-tab" data-target="groups">
+              <i class="fas fa-users"></i>
+              <span>Groups</span>
+            </button>
+            <button class="app-tab" data-target="more">
+              <i class="fas fa-ellipsis-h"></i>
+              <span>More</span>
+            </button>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FEATURES
+       ============================================ -->
+  <section class="app-features">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-label">Why the App</div>
+        <h2 class="section-title">Everything you need,<br><em>right at your fingertips.</em></h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--watch-live">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3>Watch Live</h3>
+            <p>Stream services live from any campus. Never miss a Sunday even when you're traveling or home with the kids.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--giving">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Easy Giving</h3>
+            <p>Set up one-time or recurring gifts in seconds. Support the General Fund, Beyond Campaign, Missions, and more.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--groups">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Find Your Group</h3>
+            <p>Browse and join home groups, Bible studies, and banding groups. Stay connected with your group throughout the week.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--events">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3>Events &amp; Registration</h3>
+            <p>See what's happening across all campuses. Register for events, retreats, and classes with a single tap.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--checkin">
+              <i class="fas fa-qrcode"></i>
+            </div>
+            <h3>Kids Check-In</h3>
+            <p>Skip the kiosk line. Check in your children before you even walk through the doors with secure QR code check-in.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="feature-item reveal">
+            <div class="feature-icon feature-icon--prayer">
+              <i class="fas fa-praying-hands"></i>
+            </div>
+            <h3>Prayer Wall</h3>
+            <p>Share prayer requests and pray for others in our community. Get notified when someone is praying for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       DOWNLOAD CTA
+       ============================================ -->
+  <section class="app-download">
+    <div class="container">
+      <h2 class="reveal">Download the TWMC App</h2>
+      <p class="reveal">Available free on iOS and Android. Your church community is just a tap away.</p>
+
+      <div class="download-buttons reveal">
+        <a href="#" class="download-btn">
+          <i class="fab fa-apple"></i>
+          <div class="download-btn-text">
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </div>
+        </a>
+        <a href="#" class="download-btn">
+          <i class="fab fa-google-play"></i>
+          <div class="download-btn-text">
+            <small>Get it on</small>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       GROW
+       ============================================ -->
+  <section class="grow-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label">Pathway</div>
+      </div>
+      <div class="grow-squares reveal">
+        <a href="grow.html" class="grow-square grow-g">g</a>
+        <a href="#" class="grow-square grow-r">r</a>
+        <a href="#" class="grow-square grow-o">o</a>
+        <a href="#" class="grow-square grow-w">w</a>
+      </div>
+      <div class="reveal">
+        <h2>A Pathway to a Deeper Faith</h2>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="grow.html" class="btn-primary">Start Here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:(281)297-5900">(281) 297-5900</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Our Stories</a>
+          <a href="#">Membership</a>
+          <a href="#">Staff</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+          <a href="#">Find Help &amp; Support</a>
+          <a href="#">Funerals &amp; Memorials</a>
+          <a href="#">Venues &amp; Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/font-switcher.js"></script>
+  <script>
+    /* ── App Tab Navigation ── */
+    const tabs = document.querySelectorAll('.app-tab');
+    const screens = document.querySelectorAll('.app-screen');
+    const appScreensContainer = document.querySelector('.app-screens');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        screens.forEach(s => {
+          s.classList.remove('active');
+          if (s.dataset.screen === target) {
+            s.classList.add('active');
+          }
+        });
+
+        /* Scroll to top of screen */
+        appScreensContainer.scrollTop = 0;
+      });
+    });
+
+    /* ── Give Amount Selection ── */
+    const amounts = document.querySelectorAll('.app-give-amount');
+    const giveBtn = document.querySelector('.app-give-btn');
+
+    amounts.forEach(amt => {
+      amt.addEventListener('click', () => {
+        amounts.forEach(a => a.classList.remove('selected'));
+        amt.classList.add('selected');
+        if (giveBtn) {
+          giveBtn.textContent = '';
+          const icon = document.createElement('i');
+          icon.className = 'fas fa-heart';
+          icon.style.marginRight = '6px';
+          giveBtn.appendChild(icon);
+          giveBtn.appendChild(document.createTextNode(' Give ' + amt.textContent + '.00'));
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

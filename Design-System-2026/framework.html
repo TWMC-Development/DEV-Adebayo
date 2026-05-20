@@ -1,0 +1,2487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TWMC Framework — Design System Reference</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <style>
+    /* ── Framework Doc Overrides ── */
+    body { background: var(--cream); }
+
+    /* Sidebar */
+    .fw-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+
+    .fw-sidebar {
+      position: sticky; top: 0; height: 100vh; overflow-y: auto;
+      background: var(--dark); padding: 28px 0;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.15) transparent;
+    }
+    .fw-sidebar::-webkit-scrollbar { width: 4px; }
+    .fw-sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+    .fw-sidebar-logo {
+      padding: 0 24px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+    .fw-sidebar-logo img { height: 32px; filter: brightness(0) invert(1); margin-bottom: 8px; }
+    .fw-sidebar-logo span {
+      display: block; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); opacity: 0.8;
+    }
+
+    .fw-nav-group { margin-bottom: 8px; }
+    .fw-nav-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
+      padding: 12px 24px 6px;
+    }
+    .fw-nav-link {
+      display: block; padding: 7px 24px 7px 28px;
+      font-size: 13px; color: rgba(255,255,255,0.55);
+      transition: all 0.15s; border-left: 2px solid transparent;
+      text-decoration: none;
+    }
+    .fw-nav-link:hover {
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.04);
+      border-left-color: rgba(255,255,255,0.2);
+    }
+    .fw-nav-link.active {
+      color: #fff; background: rgba(110,49,64,0.3);
+      border-left-color: var(--gold);
+    }
+
+    /* Main Content */
+    .fw-main {
+      padding: 48px 56px 100px;
+      max-width: 960px;
+    }
+
+    .fw-hero {
+      margin-bottom: 56px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .fw-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 700; color: var(--dark);
+      line-height: 1.1; margin-bottom: 12px;
+    }
+    .fw-hero h1 em { color: var(--maroon); font-style: italic; }
+    .fw-hero p {
+      font-size: 17px; color: var(--text-body);
+      max-width: 600px; line-height: 1.7;
+    }
+    .fw-version {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(110,49,64,0.08); color: var(--maroon);
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+      padding: 5px 14px; border-radius: 999px; margin-bottom: 16px;
+    }
+
+    /* Section */
+    .fw-section {
+      margin-bottom: 64px;
+      scroll-margin-top: 32px;
+    }
+    .fw-section-title {
+      font-family: var(--font-display);
+      font-size: 28px; font-weight: 700;
+      color: var(--dark); margin-bottom: 8px;
+    }
+    .fw-section-desc {
+      font-size: 15px; color: var(--text-body);
+      line-height: 1.7; margin-bottom: 32px;
+      max-width: 640px;
+    }
+
+    .fw-subsection { margin-bottom: 40px; }
+    .fw-subsection-title {
+      font-family: var(--font-display);
+      font-size: 20px; font-weight: 600;
+      color: var(--dark); margin-bottom: 16px;
+    }
+
+    /* Demo + Code Blocks */
+    .fw-demo {
+      background: var(--warm-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius) var(--radius) 0 0;
+      padding: 32px;
+      overflow: hidden;
+      position: relative;
+    }
+    .fw-demo-dark {
+      background: var(--dark);
+    }
+    .fw-demo-maroon {
+      background: var(--maroon);
+    }
+
+    .fw-code-wrap {
+      border: 1px solid var(--border-light);
+      border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .fw-code-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px;
+      background: #1e1e2e;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .fw-code-lang {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .fw-code-copy {
+      background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.5);
+      font-size: 11px; font-family: var(--font-body); font-weight: 600;
+      padding: 4px 12px; border-radius: 6px; cursor: pointer;
+      transition: all 0.2s; display: flex; align-items: center; gap: 5px;
+    }
+    .fw-code-copy:hover { background: rgba(255,255,255,0.14); color: rgba(255,255,255,0.8); }
+    .fw-code-copy.copied { background: var(--grow-o); color: #fff; }
+
+    .fw-code {
+      background: #1e1e2e;
+      padding: 16px 20px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .fw-code pre {
+      margin: 0; font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px; line-height: 1.7;
+      color: #cdd6f4; white-space: pre; tab-size: 2;
+    }
+    .fw-code .tag { color: #f38ba8; }
+    .fw-code .attr { color: #fab387; }
+    .fw-code .str { color: #a6e3a1; }
+    .fw-code .cls { color: #89b4fa; }
+    .fw-code .cmt { color: #585b70; font-style: italic; }
+    .fw-code .prop { color: #cba6f7; }
+    .fw-code .val { color: #f9e2af; }
+    .fw-code .fn { color: #89dceb; }
+    .fw-code .kw { color: #cba6f7; }
+
+    /* Color Swatches */
+    .fw-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .fw-swatch {
+      border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--border-light);
+      background: var(--warm-white);
+    }
+    .fw-swatch-color {
+      height: 72px; display: flex;
+      align-items: flex-end; padding: 8px 12px;
+    }
+    .fw-swatch-info {
+      padding: 12px;
+    }
+    .fw-swatch-name {
+      font-size: 13px; font-weight: 600;
+      color: var(--dark); margin-bottom: 2px;
+    }
+    .fw-swatch-var {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-muted);
+    }
+    .fw-swatch-hex {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-muted);
+    }
+
+    /* Typography Specimens */
+    .fw-type-row {
+      display: flex; align-items: baseline; gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .fw-type-row:last-child { border-bottom: none; }
+    .fw-type-meta {
+      width: 180px; flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Spacing Scale */
+    .fw-spacing-row {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 12px;
+    }
+    .fw-spacing-bar {
+      height: 24px; background: rgba(110,49,64,0.12);
+      border-radius: 4px; border-left: 3px solid var(--maroon);
+    }
+    .fw-spacing-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--text-muted);
+      width: 80px; flex-shrink: 0;
+    }
+
+    /* Radius Demo */
+    .fw-radius-row {
+      display: flex; gap: 24px; flex-wrap: wrap;
+    }
+    .fw-radius-item {
+      text-align: center;
+    }
+    .fw-radius-box {
+      width: 80px; height: 80px;
+      background: rgba(110,49,64,0.08);
+      border: 2px solid var(--maroon);
+      margin-bottom: 8px;
+    }
+    .fw-radius-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-muted);
+    }
+
+    /* Shadow Demo */
+    .fw-shadow-row { display: flex; gap: 32px; flex-wrap: wrap; }
+    .fw-shadow-item { text-align: center; }
+    .fw-shadow-box {
+      width: 120px; height: 80px; background: var(--warm-white);
+      border-radius: var(--radius); margin-bottom: 10px;
+    }
+    .fw-shadow-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; color: var(--text-muted);
+    }
+
+    /* Button gallery */
+    .fw-btn-row {
+      display: flex; align-items: center; gap: 16px;
+      flex-wrap: wrap; margin-bottom: 16px;
+    }
+
+    /* Inline note */
+    .fw-note {
+      background: rgba(197,162,88,0.1);
+      border-left: 3px solid var(--gold);
+      padding: 12px 16px;
+      font-size: 13px; color: var(--dark-soft);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .fw-note strong { color: var(--dark); }
+
+    /* Grid demo */
+    .fw-grid-demo {
+      display: grid; gap: 12px;
+    }
+    .fw-grid-cell {
+      background: rgba(110,49,64,0.08);
+      border: 1px dashed rgba(110,49,64,0.2);
+      border-radius: 8px;
+      padding: 20px; text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--maroon);
+    }
+
+    /* Table */
+    .fw-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 13px; margin-bottom: 24px;
+    }
+    .fw-table th {
+      text-align: left; padding: 10px 14px;
+      font-weight: 600; color: var(--dark);
+      background: var(--warm-gray);
+      border-bottom: 2px solid var(--border-light);
+      font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+    .fw-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-body);
+    }
+    .fw-table code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; background: rgba(110,49,64,0.06);
+      padding: 2px 6px; border-radius: 4px; color: var(--maroon);
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .fw-layout { grid-template-columns: 1fr; }
+      .fw-sidebar {
+        position: fixed; left: -280px; top: 0; width: 280px;
+        z-index: 500; transition: left 0.3s var(--ease-out);
+      }
+      .fw-sidebar.open { left: 0; }
+      .fw-sidebar-toggle {
+        display: flex; position: fixed; top: 12px; left: 12px; z-index: 499;
+        width: 40px; height: 40px; background: var(--dark);
+        border: none; border-radius: 10px; color: #fff; font-size: 18px;
+        align-items: center; justify-content: center; cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      }
+      .fw-main { padding: 48px 24px 80px; }
+    }
+    @media (min-width: 901px) {
+      .fw-sidebar-toggle { display: none; }
+    }
+
+    /* GROW squares inside demo - reset overflow */
+    .fw-demo .grow-squares { margin: 0; }
+    .fw-demo .grow-section { padding: 40px 0; }
+
+    /* Prevent page-level grow-section overrides */
+    .fw-demo .section-label { margin-bottom: 12px; }
+
+    /* Card demos need constrained width */
+    .fw-card-demo {
+      max-width: 340px;
+    }
+
+    /* For connect card demo, need tab panel override */
+    .fw-demo .tab-panel { display: block; }
+    .fw-demo .connect-cards { grid-template-columns: 1fr; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Mobile sidebar toggle -->
+  <button class="fw-sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="fw-layout">
+
+    <!-- ═══════════════════════════════════════
+         SIDEBAR NAVIGATION
+         ═══════════════════════════════════════ -->
+    <aside class="fw-sidebar" id="sidebar">
+      <div class="fw-sidebar-logo">
+        <img src="assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+        <span>Design System 2026</span>
+      </div>
+
+      <nav>
+        <div class="fw-nav-group">
+          <div class="fw-nav-label">Foundation</div>
+          <a href="#colors" class="fw-nav-link active">Colors</a>
+          <a href="#typography" class="fw-nav-link">Typography</a>
+          <a href="#spacing" class="fw-nav-link">Spacing & Layout</a>
+          <a href="#radius-shadows" class="fw-nav-link">Radius & Shadows</a>
+          <a href="#timing" class="fw-nav-link">Timing Tokens</a>
+          <a href="#animations" class="fw-nav-link">Animations</a>
+        </div>
+
+        <div class="fw-nav-group">
+          <div class="fw-nav-label">Components</div>
+          <a href="#buttons" class="fw-nav-link">Buttons</a>
+          <a href="#forms" class="fw-nav-link">Forms</a>
+          <a href="#section-headings" class="fw-nav-link">Section Headings</a>
+          <a href="#cards" class="fw-nav-link">Cards</a>
+          <a href="#hero" class="fw-nav-link">Page Hero</a>
+          <a href="#navbar" class="fw-nav-link">Navbar</a>
+          <a href="#location-bar" class="fw-nav-link">Location Bar</a>
+          <a href="#mega-menu" class="fw-nav-link">Mega Menu</a>
+          <a href="#tabs" class="fw-nav-link">Tabs</a>
+          <a href="#faq" class="fw-nav-link">FAQ Accordion</a>
+          <a href="#grow" class="fw-nav-link">GROW Section</a>
+          <a href="#feature-banner" class="fw-nav-link">Feature Banner</a>
+          <a href="#video-embed" class="fw-nav-link">Video Embed</a>
+          <a href="#enews" class="fw-nav-link">E-News CTA</a>
+          <a href="#footer-comp" class="fw-nav-link">Footer</a>
+        </div>
+
+        <div class="fw-nav-group">
+          <div class="fw-nav-label">Bootstrap Overrides</div>
+          <a href="#modals" class="fw-nav-link">Modals</a>
+          <a href="#alerts" class="fw-nav-link">Alerts</a>
+          <a href="#toasts" class="fw-nav-link">Toasts</a>
+          <a href="#accordions" class="fw-nav-link">Accordions</a>
+          <a href="#dropdowns" class="fw-nav-link">Dropdowns</a>
+          <a href="#tables" class="fw-nav-link">Tables</a>
+          <a href="#spinners" class="fw-nav-link">Spinners & Progress</a>
+          <a href="#pagination" class="fw-nav-link">Pagination</a>
+          <a href="#tooltips" class="fw-nav-link">Tooltips</a>
+        </div>
+
+        <div class="fw-nav-group">
+          <div class="fw-nav-label">Pages</div>
+          <a href="pages/home.html" class="fw-nav-link">Home <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/locations.html" class="fw-nav-link">Times & Locations <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/grow.html" class="fw-nav-link">Gather in Community <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/give.html" class="fw-nav-link">Give <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/womens.html" class="fw-nav-link">Women's Ministry <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/discipleship.html" class="fw-nav-link">Adult Discipleship <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/missions.html" class="fw-nav-link">Missions <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/childrens.html" class="fw-nav-link">Children's Ministry <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/support-groups.html" class="fw-nav-link">Support Groups <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/media.html" class="fw-nav-link">Media <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/app.html" class="fw-nav-link">TWMC App <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/staff.html" class="fw-nav-link">Staff Directory <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/landingpage.html" class="fw-nav-link">Landing Page <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/summer-splash.html" class="fw-nav-link">Summer Splash <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+          <a href="pages/404.html" class="fw-nav-link">404 Page <i class="fas fa-external-link-alt" style="font-size:9px;margin-left:4px;opacity:0.4"></i></a>
+        </div>
+
+        <div class="fw-nav-group">
+          <div class="fw-nav-label">Resources</div>
+          <a href="style_guide.md" class="fw-nav-link">Style Guide (MD)</a>
+          <a href="css/theme.css" class="fw-nav-link">theme.css</a>
+          <a href="js/theme.js" class="fw-nav-link">theme.js</a>
+        </div>
+      </nav>
+    </aside>
+
+
+    <!-- ═══════════════════════════════════════
+         MAIN CONTENT
+         ═══════════════════════════════════════ -->
+    <main class="fw-main">
+
+      <!-- Hero -->
+      <header class="fw-hero">
+        <div class="fw-version"><i class="fas fa-code-branch" style="font-size:10px"></i> v2026.1</div>
+        <h1>TWMC <em>Framework</em></h1>
+        <p>The complete design system for The Woodlands Methodist Church 2026 website redesign. Living documentation with visual examples and copy-ready code.</p>
+      </header>
+
+
+      <!-- ═══════════════ COLORS ═══════════════ -->
+      <section class="fw-section" id="colors">
+        <h2 class="fw-section-title">Colors</h2>
+        <p class="fw-section-desc">All colors are defined as CSS custom properties on <code>:root</code> for global consistency. The maroon + gold palette anchors the brand; neutrals provide warmth and readability.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Brand</h3>
+          <div class="fw-colors">
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#6e3140"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Maroon</div>
+                <div class="fw-swatch-var">--maroon</div>
+                <div class="fw-swatch-hex">#6e3140</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#8b4557"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Maroon Light</div>
+                <div class="fw-swatch-var">--maroon-light</div>
+                <div class="fw-swatch-hex">#8b4557</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#52242f"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Maroon Dark</div>
+                <div class="fw-swatch-var">--maroon-dark</div>
+                <div class="fw-swatch-hex">#52242f</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#7d3a4c"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Maroon Hover</div>
+                <div class="fw-swatch-var">--maroon-hover</div>
+                <div class="fw-swatch-hex">#7d3a4c</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#c5a258"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Gold</div>
+                <div class="fw-swatch-var">--gold</div>
+                <div class="fw-swatch-hex">#c5a258</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#d4b87a"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Gold Light</div>
+                <div class="fw-swatch-var">--gold-light</div>
+                <div class="fw-swatch-hex">#d4b87a</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Neutrals</h3>
+          <div class="fw-colors">
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#faf8f5; border-bottom:1px solid #eae7e3"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Cream</div>
+                <div class="fw-swatch-var">--cream</div>
+                <div class="fw-swatch-hex">#faf8f5</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#f5f3f0; border-bottom:1px solid #eae7e3"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Warm Gray</div>
+                <div class="fw-swatch-var">--warm-gray</div>
+                <div class="fw-swatch-hex">#f5f3f0</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#eae7e3; border-bottom:1px solid #ddd"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Warm Gray 2</div>
+                <div class="fw-swatch-var">--warm-gray-2</div>
+                <div class="fw-swatch-hex">#eae7e3</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#1a1a1a"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Dark</div>
+                <div class="fw-swatch-var">--dark</div>
+                <div class="fw-swatch-hex">#1a1a1a</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#555555"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Text Body</div>
+                <div class="fw-swatch-var">--text-body</div>
+                <div class="fw-swatch-hex">#555555</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#767676"></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Text Muted</div>
+                <div class="fw-swatch-var">--text-muted</div>
+                <div class="fw-swatch-hex">#767676</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">GROW Pathway</h3>
+          <div class="fw-colors">
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#7b9cc5"><span style="color:#fff;font-family:var(--font-display);font-size:24px;font-weight:700;padding:8px 12px">G</span></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Gather</div>
+                <div class="fw-swatch-var">--grow-g</div>
+                <div class="fw-swatch-hex">#7b9cc5</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#e25b6a"><span style="color:#fff;font-family:var(--font-display);font-size:24px;font-weight:700;padding:8px 12px">R</span></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Raise</div>
+                <div class="fw-swatch-var">--grow-r</div>
+                <div class="fw-swatch-hex">#e25b6a</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#3dbf87"><span style="color:#fff;font-family:var(--font-display);font-size:24px;font-weight:700;padding:8px 12px">O</span></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Outward</div>
+                <div class="fw-swatch-var">--grow-o</div>
+                <div class="fw-swatch-hex">#3dbf87</div>
+              </div>
+            </div>
+            <div class="fw-swatch">
+              <div class="fw-swatch-color" style="background:#f2c94c"><span style="color:#fff;font-family:var(--font-display);font-size:24px;font-weight:700;padding:8px 12px">W</span></div>
+              <div class="fw-swatch-info">
+                <div class="fw-swatch-name">Walk</div>
+                <div class="fw-swatch-var">--grow-w</div>
+                <div class="fw-swatch-hex">#f2c94c</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Code for colors -->
+        <div class="fw-code-wrap">
+          <div class="fw-code-header">
+            <span class="fw-code-lang">CSS</span>
+            <button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+          <div class="fw-code"><pre><span class="prop">:root</span> {
+  <span class="cmt">/* Brand */</span>
+  <span class="prop">--maroon</span>: <span class="val">#6e3140</span>;
+  <span class="prop">--gold</span>: <span class="val">#c5a258</span>;
+  <span class="prop">--cream</span>: <span class="val">#faf8f5</span>;
+
+  <span class="cmt">/* GROW */</span>
+  <span class="prop">--grow-g</span>: <span class="val">#7b9cc5</span>;
+  <span class="prop">--grow-r</span>: <span class="val">#e25b6a</span>;
+  <span class="prop">--grow-o</span>: <span class="val">#3dbf87</span>;
+  <span class="prop">--grow-w</span>: <span class="val">#f2c94c</span>;
+}</pre></div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">What We Changed in Bootstrap</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:24px">All Bootstrap color classes (<code>.bg-primary</code>, <code>.text-primary</code>, <code>.btn-primary</code>, <code>.border-primary</code>, etc.) are overridden to use TWMC brand colors. This applies everywhere Bootstrap uses colors — buttons, backgrounds, text, borders, badges, alerts. GROW pathway colors are <strong>not</strong> mapped to Bootstrap — they are reserved for pathway pages only.</p>
+
+          <table class="fw-table">
+            <thead><tr><th>Bootstrap Role</th><th>Default</th><th>TWMC Override</th><th>Token</th><th>Hex</th></tr></thead>
+            <tbody>
+              <tr><td><code>primary</code></td><td style="color:#0d6efd">Blue</td><td style="color:var(--maroon);font-weight:700">Maroon</td><td><code>--maroon</code></td><td>#6e3140</td></tr>
+              <tr><td><code>secondary</code></td><td style="color:#6c757d">Gray</td><td style="color:var(--gold);font-weight:700">Gold</td><td><code>--gold</code></td><td>#c5a258</td></tr>
+              <tr><td><code>success</code></td><td style="color:#198754">Green</td><td style="color:var(--success);font-weight:700">Sage</td><td><code>--success</code></td><td>#5a8a6e</td></tr>
+              <tr><td><code>danger</code></td><td style="color:#dc3545">Red</td><td style="color:var(--danger);font-weight:700">Rose</td><td><code>--danger</code></td><td>#b5454a</td></tr>
+              <tr><td><code>warning</code></td><td style="color:#ffc107">Yellow</td><td style="color:var(--warning);font-weight:700">Gold</td><td><code>--warning</code></td><td>#c5a258</td></tr>
+              <tr><td><code>info</code></td><td style="color:#0dcaf0">Cyan</td><td style="color:var(--info);font-weight:700">Slate</td><td><code>--info</code></td><td>#6b849e</td></tr>
+              <tr><td><code>light</code></td><td style="color:#adb5bd">Light gray</td><td style="color:var(--text-muted);font-weight:700">Warm Gray</td><td><code>--warm-gray</code></td><td>#f5f3f0</td></tr>
+              <tr><td><code>dark</code></td><td style="color:#212529">Dark</td><td style="color:var(--dark);font-weight:700">Dark</td><td><code>--dark</code></td><td>#1a1a1a</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:13px;color:var(--text-muted);margin-top:12px">These map to all Bootstrap utilities: <code>.bg-*</code>, <code>.text-*</code>, <code>.btn-*</code>, <code>.btn-outline-*</code>, <code>.border-*</code>, <code>.badge</code>, <code>.alert-*</code>, etc.</p>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Custom Brand Utilities</h4>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">In addition to Bootstrap's color classes, these custom utilities give direct access to brand tokens:</p>
+          <table class="fw-table">
+            <thead><tr><th>Background</th><th>Text</th><th>Border</th></tr></thead>
+            <tbody>
+              <tr><td><code>.bg-maroon</code> / <code>.bg-maroon-light</code> / <code>.bg-maroon-dark</code></td><td><code>.text-maroon</code></td><td><code>.border-maroon</code></td></tr>
+              <tr><td><code>.bg-gold</code> / <code>.bg-gold-light</code></td><td><code>.text-gold</code></td><td><code>.border-gold</code></td></tr>
+              <tr><td><code>.bg-cream</code></td><td><code>.text-cream</code></td><td>—</td></tr>
+              <tr><td><code>.bg-warm-gray</code> / <code>.bg-warm-white</code></td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Brand Buttons</h4>
+          <div class="fw-demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-outline-primary">Outline Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-outline-secondary">Outline Secondary</button>
+          </div>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Semantic Buttons</h4>
+          <div class="fw-demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-light">Light</button>
+            <button class="btn btn-dark">Dark</button>
+          </div>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Semantic Outlines</h4>
+          <div class="fw-demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-outline-success">Success</button>
+            <button class="btn btn-outline-danger">Danger</button>
+            <button class="btn btn-outline-warning">Warning</button>
+            <button class="btn btn-outline-info">Info</button>
+          </div>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Sizes</h4>
+          <div class="fw-demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-primary btn-lg">Large <i class="fas fa-arrow-right"></i></button>
+            <button class="btn btn-primary">Default <i class="fas fa-arrow-right"></i></button>
+            <button class="btn btn-primary btn-sm">Small</button>
+          </div>
+          <div class="fw-demo" style="margin-top:12px">
+            <div class="d-grid">
+              <button class="btn btn-outline-primary">Full Width (d-grid)</button>
+            </div>
+          </div>
+
+          <h4 style="font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--dark);margin:32px 0 16px">Other Bootstrap Overrides</h4>
+          <table class="fw-table">
+            <thead><tr><th>What Changed</th><th>Bootstrap Default</th><th>TWMC Override</th></tr></thead>
+            <tbody>
+              <tr><td><code>.btn</code> shape</td><td>Rounded rectangle (0.375rem)</td><td>Pill (999px), 600 weight, 14px, 0.3px tracking</td></tr>
+              <tr><td><code>.btn-lg</code></td><td>Bootstrap sizing</td><td>16px / 16px×36px padding, pill shape</td></tr>
+              <tr><td><code>.btn-sm</code></td><td>Bootstrap sizing</td><td>12px / 8px×20px padding, pill shape</td></tr>
+              <tr><td>Link color</td><td>Blue</td><td>Maroon (<code>--bs-link-color</code>)</td></tr>
+              <tr><td>Font stack</td><td>System fonts</td><td>DM Sans (body), Playfair Display (headings)</td></tr>
+              <tr><td>Bootstrap source</td><td>CDN</td><td>Local files (<code>bootstrap.min.css</code>)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ TYPOGRAPHY ═══════════════ -->
+      <section class="fw-section" id="typography">
+        <h2 class="fw-section-title">Typography</h2>
+        <p class="fw-section-desc">Two fonts power the entire system. Playfair Display for display headings — elegant and editorial. DM Sans for everything else — clean and highly readable.</p>
+
+        <div class="fw-demo">
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              Playfair Display<br>
+              700 · clamp(40px, 6vw, 64px)
+            </div>
+            <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,56px);font-weight:700;color:var(--dark);line-height:1.1;margin:0">Page Hero <em style="color:var(--maroon);font-style:italic">Title</em></h1>
+          </div>
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              Playfair Display<br>
+              700 · clamp(32px, 4vw, 48px)
+            </div>
+            <h2 style="font-family:var(--font-display);font-size:clamp(28px,3.5vw,42px);font-weight:700;color:var(--dark);line-height:1.15;margin:0">Section <em style="color:var(--maroon);font-style:italic">Title</em></h2>
+          </div>
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              Playfair Display<br>
+              600 · 20px
+            </div>
+            <h3 style="font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--dark);margin:0">Card Heading</h3>
+          </div>
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              DM Sans · 700<br>
+              12px · uppercase
+            </div>
+            <div class="section-label">Section Label</div>
+          </div>
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              DM Sans · 400<br>
+              16px · 1.65
+            </div>
+            <p style="margin:0;max-width:480px">Body text set in DM Sans at 16px with a generous 1.65 line-height for comfortable reading across all devices.</p>
+          </div>
+          <div class="fw-type-row">
+            <div class="fw-type-meta">
+              DM Sans · 600<br>
+              14px · pill button
+            </div>
+            <span class="btn-primary">Button Label <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header">
+            <span class="fw-code-lang">HTML</span>
+            <button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button>
+          </div>
+          <div class="fw-code"><pre><span class="cmt">&lt;!-- Google Fonts --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com/css2?family=
+  Playfair+Display:ital,wght@0,400..800;1,400..600
+  &amp;family=DM+Sans:wght@300..700&amp;display=swap"</span>
+  <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+
+<span class="cmt">&lt;!-- Usage --&gt;</span>
+<span class="tag">&lt;h1</span> <span class="attr">style</span>=<span class="str">"font-family: var(--font-display)"</span><span class="tag">&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;p&gt;</span>Body text uses --font-body (DM Sans)<span class="tag">&lt;/p&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ SPACING ═══════════════ -->
+      <section class="fw-section" id="spacing">
+        <h2 class="fw-section-title">Spacing & Layout</h2>
+        <p class="fw-section-desc">Consistent spacing creates rhythm and hierarchy. Two container widths handle standard and wide layouts.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Containers</h3>
+          <table class="fw-table">
+            <thead><tr><th>Class</th><th>Max Width</th><th>Padding</th><th>Usage</th></tr></thead>
+            <tbody>
+              <tr><td><code>.container</code></td><td>1200px</td><td>0 24px</td><td>Standard content sections</td></tr>
+              <tr><td><code>.container-wide</code></td><td>1400px</td><td>0 24px</td><td>Navbar, wide layouts</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Section Padding</h3>
+          <table class="fw-table">
+            <thead><tr><th>Section</th><th>Desktop</th><th>Mobile</th></tr></thead>
+            <tbody>
+              <tr><td>Standard content</td><td><code>80px 0</code></td><td><code>56px 0</code></td></tr>
+              <tr><td>GROW section</td><td><code>100px 0</code></td><td><code>60px 0</code></td></tr>
+              <tr><td>E-News CTA</td><td><code>56px 0</code></td><td><code>48px 0</code></td></tr>
+              <tr><td>Footer</td><td><code>64px 0 40px</code></td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Custom Gutter Utilities</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:20px">All content grids use standard Bootstrap <code>row</code> / <code>row-cols-*</code>. These custom gutter classes extend Bootstrap's built-in <code>g-*</code> for gaps that don't have a Bootstrap equivalent.</p>
+          <table class="fw-table">
+            <thead><tr><th>Class</th><th>Value</th><th>Usage</th></tr></thead>
+            <tbody>
+              <tr><td><code>.g-28</code></td><td>28px</td><td>Info cards</td></tr>
+              <tr><td><code>.g-32</code></td><td>32px</td><td>Statement cards, learn cards, service columns</td></tr>
+              <tr><td><code>.g-56</code></td><td>56px</td><td>Intro grids, resources grid</td></tr>
+              <tr><td><code>.g-60</code></td><td>60px</td><td>Welcome grid</td></tr>
+            </tbody>
+          </table>
+          <div class="fw-code-wrap" style="margin-top:16px">
+            <div class="fw-code-header"><span class="fw-code-lang">CSS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="cmt">/* Custom gutter utilities in theme.css */</span>
+<span class="prop">.g-28</span> { <span class="attr">--bs-gutter-x</span>: <span class="val">28px</span>; <span class="attr">--bs-gutter-y</span>: <span class="val">28px</span>; }
+<span class="prop">.g-32</span> { <span class="attr">--bs-gutter-x</span>: <span class="val">32px</span>; <span class="attr">--bs-gutter-y</span>: <span class="val">32px</span>; }
+<span class="prop">.g-56</span> { <span class="attr">--bs-gutter-x</span>: <span class="val">56px</span>; <span class="attr">--bs-gutter-y</span>: <span class="val">56px</span>; }
+<span class="prop">.g-60</span> { <span class="attr">--bs-gutter-x</span>: <span class="val">60px</span>; <span class="attr">--bs-gutter-y</span>: <span class="val">60px</span>; }</pre></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ RADIUS & SHADOWS ═══════════════ -->
+      <section class="fw-section" id="radius-shadows">
+        <h2 class="fw-section-title">Radius & Shadows</h2>
+        <p class="fw-section-desc">Three border-radius values and a consistent shadow system create depth and hierarchy throughout the interface.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Border Radius</h3>
+          <div class="fw-demo">
+            <div class="fw-radius-row">
+              <div class="fw-radius-item">
+                <div class="fw-radius-box" style="border-radius:16px"></div>
+                <div class="fw-radius-label">--radius<br>16px</div>
+              </div>
+              <div class="fw-radius-item">
+                <div class="fw-radius-box" style="border-radius:24px"></div>
+                <div class="fw-radius-label">--radius-lg<br>24px</div>
+              </div>
+              <div class="fw-radius-item">
+                <div class="fw-radius-box" style="border-radius:999px"></div>
+                <div class="fw-radius-label">--radius-pill<br>999px</div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">CSS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="prop">--radius</span>: <span class="val">16px</span>;      <span class="cmt">/* Cards, inputs */</span>
+<span class="prop">--radius-lg</span>: <span class="val">24px</span>;   <span class="cmt">/* Bento cards, contact card */</span>
+<span class="prop">--radius-pill</span>: <span class="val">999px</span>; <span class="cmt">/* Buttons, tabs, badges */</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Shadows</h3>
+          <div class="fw-demo">
+            <div class="fw-shadow-row">
+              <div class="fw-shadow-item">
+                <div class="fw-shadow-box" style="box-shadow:var(--shadow-card)"></div>
+                <div class="fw-shadow-label">--shadow-card</div>
+              </div>
+              <div class="fw-shadow-item">
+                <div class="fw-shadow-box" style="box-shadow:var(--shadow-card-hover)"></div>
+                <div class="fw-shadow-label">--shadow-card-hover</div>
+              </div>
+              <div class="fw-shadow-item">
+                <div class="fw-shadow-box" style="box-shadow:var(--shadow-lg)"></div>
+                <div class="fw-shadow-label">--shadow-lg</div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">CSS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="prop">--shadow-card</span>: <span class="val">0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06)</span>;
+<span class="prop">--shadow-card-hover</span>: <span class="val">0 4px 12px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.10)</span>;
+<span class="prop">--shadow-lg</span>: <span class="val">0 20px 60px rgba(0,0,0,0.12)</span>;</pre></div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ TIMING TOKENS ═══════════════ -->
+      <section class="fw-section" id="timing">
+        <h2 class="fw-section-title">Timing Tokens</h2>
+        <p class="fw-section-desc">All transitions use CSS custom property duration tokens. Never hardcode transition durations.</p>
+
+        <div class="fw-demo">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center">
+            <div>
+              <div style="width:60px;height:60px;background:var(--maroon);border-radius:12px;margin:0 auto 12px;transition:transform var(--duration-fast);cursor:pointer" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform=''"></div>
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">--duration-fast</div>
+              <div style="font-size:12px;color:var(--text-muted)">0.15s — links, icons</div>
+            </div>
+            <div>
+              <div style="width:60px;height:60px;background:var(--gold);border-radius:12px;margin:0 auto 12px;transition:transform var(--duration-normal);cursor:pointer" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform=''"></div>
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">--duration-normal</div>
+              <div style="font-size:12px;color:var(--text-muted)">0.3s — buttons, states</div>
+            </div>
+            <div>
+              <div style="width:60px;height:60px;background:var(--grow-g);border-radius:12px;margin:0 auto 12px;transition:transform var(--duration-slow);cursor:pointer" onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform=''"></div>
+              <div style="font-size:13px;font-weight:600;color:var(--dark)">--duration-slow</div>
+              <div style="font-size:12px;color:var(--text-muted)">0.5s — cards, panels</div>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">CSS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="prop">--duration-fast</span>: <span class="val">0.15s</span>;   <span class="cmt">/* links, icons, micro-interactions */</span>
+<span class="prop">--duration-normal</span>: <span class="val">0.3s</span>;  <span class="cmt">/* buttons, nav items, state changes */</span>
+<span class="prop">--duration-slow</span>: <span class="val">0.5s</span>;   <span class="cmt">/* cards, panels, FAQ accordion */</span>
+
+<span class="cmt">/* Usage */</span>
+<span class="prop">.my-element</span> {
+  <span class="attr">transition</span>: <span class="val">all var(--duration-normal) var(--ease-out)</span>;
+}</pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ ANIMATIONS ═══════════════ -->
+      <section class="fw-section" id="animations">
+        <h2 class="fw-section-title">Animations</h2>
+        <p class="fw-section-desc">Scroll-triggered reveal animations bring content to life as visitors scroll. Uses IntersectionObserver with auto-stagger for batched reveals.</p>
+
+        <div class="fw-demo">
+          <div style="display:flex;gap:16px;flex-wrap:wrap">
+            <div id="revealDemo1" class="reveal visible" style="width:140px;height:90px;background:rgba(110,49,64,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--maroon);cursor:pointer" onclick="replayReveal()">fadeUp</div>
+            <div id="revealDemo2" class="reveal visible" style="width:140px;height:90px;background:rgba(110,49,64,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--maroon);transition-delay:0.15s;cursor:pointer" onclick="replayReveal()">+ delay</div>
+            <div id="revealDemo3" class="reveal visible" style="width:140px;height:90px;background:rgba(110,49,64,0.08);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--maroon);transition-delay:0.3s;cursor:pointer" onclick="replayReveal()">+ more delay</div>
+          </div>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:12px">Click any box to replay the animation</p>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML + JS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="cmt">&lt;!-- Add .reveal to any element --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"reveal"</span><span class="tag">&gt;</span>Content fades up on scroll<span class="tag">&lt;/div&gt;</span>
+
+<span class="cmt">/* CSS */</span>
+<span class="prop">.reveal</span> {
+  <span class="attr">opacity</span>: <span class="val">0</span>;
+  <span class="attr">transform</span>: <span class="fn">translateY</span>(<span class="val">30px</span>);
+  <span class="attr">transition</span>: <span class="val">opacity 0.7s var(--ease-out),
+               transform 0.7s var(--ease-out)</span>;
+}
+<span class="prop">.reveal.visible</span> {
+  <span class="attr">opacity</span>: <span class="val">1</span>;
+  <span class="attr">transform</span>: <span class="fn">translateY</span>(<span class="val">0</span>);
+}
+
+<span class="cmt">// JS (in theme.js)</span>
+<span class="kw">const</span> observer = <span class="kw">new</span> <span class="fn">IntersectionObserver</span>((entries) => {
+  entries.<span class="fn">forEach</span>(e => {
+    <span class="kw">if</span> (e.isIntersecting) e.target.classList.<span class="fn">add</span>(<span class="str">'visible'</span>);
+  });
+}, { <span class="attr">threshold</span>: <span class="val">0.1</span>, <span class="attr">rootMargin</span>: <span class="str">'0px 0px -40px 0px'</span> });</pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ BUTTONS ═══════════════ -->
+      <section class="fw-section" id="buttons">
+        <h2 class="fw-section-title">Buttons</h2>
+        <p class="fw-section-desc">All buttons use pill-shaped corners (<code>border-radius: 999px</code>), 600 weight, and a subtle lift on hover. Multiple variants for different contexts.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Standard</h3>
+          <div class="fw-demo">
+            <div class="fw-btn-row">
+              <a class="btn-primary">Primary <i class="fas fa-arrow-right"></i></a>
+              <a class="btn-outline">Outline</a>
+              <a class="btn-gold">Gold <i class="fas fa-arrow-right"></i></a>
+              <a class="btn-white">White <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="fw-btn-row" style="margin-top:12px">
+              <a class="btn-card">Card Link <i class="fas fa-arrow-right"></i></a>
+              <span style="display:inline-flex;align-items:center;gap:12px;margin-left:24px">
+                <a class="btn btn-primary btn-sm btn-login">Login</a>
+              </span>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-primary"</span><span class="tag">&gt;</span>Primary <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-outline"</span><span class="tag">&gt;</span>Outline<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-gold"</span><span class="tag">&gt;</span>Gold <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-white"</span><span class="tag">&gt;</span>White <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-card"</span><span class="tag">&gt;</span>Card Link <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn btn-primary btn-sm btn-login"</span><span class="tag">&gt;</span>Login<span class="tag">&lt;/a&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">On Dark Backgrounds</h3>
+          <div class="fw-demo fw-demo-dark" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <a class="btn-outline-light">Outline Light</a>
+            <a class="btn-white">White <i class="fas fa-envelope"></i></a>
+            <a class="btn-glass"><i class="fas fa-church"></i> Easter Link</a>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="cmt">&lt;!-- For dark/maroon backgrounds --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-outline-light"</span><span class="tag">&gt;</span>Outline Light<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-white"</span><span class="tag">&gt;</span>White <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-envelope"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-glass"</span><span class="tag">&gt;&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-church"</span><span class="tag">&gt;&lt;/i&gt;</span> Easter Link<span class="tag">&lt;/a&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">GROW Pathway Buttons</h3>
+          <div class="fw-demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <a class="btn-grow">Gather <i class="fas fa-arrow-right"></i></a>
+            <a class="btn-grow-r">Raise <i class="fas fa-arrow-right"></i></a>
+            <a class="btn-grow-o">Outward <i class="fas fa-arrow-right"></i></a>
+            <a class="btn-grow-w">Walk <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-grow"</span><span class="tag">&gt;</span>Gather <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-grow-r"</span><span class="tag">&gt;</span>Raise <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-grow-o"</span><span class="tag">&gt;</span>Outward <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-grow-w"</span><span class="tag">&gt;</span>Walk <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">GROW Utilities</h3>
+          <div class="fw-demo">
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+              <span class="badge-grow-g" style="padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600">.badge-grow-g</span>
+              <span class="badge-grow-r" style="padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600">.badge-grow-r</span>
+              <span class="badge-grow-o" style="padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600">.badge-grow-o</span>
+              <span class="badge-grow-w" style="padding:6px 14px;border-radius:999px;font-size:12px;font-weight:600">.badge-grow-w</span>
+            </div>
+            <div style="display:flex;gap:24px;flex-wrap:wrap">
+              <span class="text-grow-g" style="font-weight:600">.text-grow-g</span>
+              <span class="text-grow-r" style="font-weight:600">.text-grow-r</span>
+              <span class="text-grow-o" style="font-weight:600">.text-grow-o</span>
+              <span class="text-grow-w" style="font-weight:600">.text-grow-w</span>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">CSS Classes</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="cmt">/* Text colors */</span>
+<span class="prop">.text-grow-g</span> / <span class="prop">.text-grow-r</span> / <span class="prop">.text-grow-o</span> / <span class="prop">.text-grow-w</span>
+
+<span class="cmt">/* Backgrounds */</span>
+<span class="prop">.bg-grow-g</span> / <span class="prop">.bg-grow-r</span> / <span class="prop">.bg-grow-o</span> / <span class="prop">.bg-grow-w</span>
+
+<span class="cmt">/* Badges */</span>
+<span class="prop">.badge-grow-g</span> / <span class="prop">.badge-grow-r</span> / <span class="prop">.badge-grow-o</span> / <span class="prop">.badge-grow-w</span>
+
+<span class="cmt">/* Card link colors */</span>
+<span class="prop">.btn-card-grow-r</span> / <span class="prop">.btn-card-grow-o</span> / <span class="prop">.btn-card-grow-w</span>
+
+<span class="cmt">/* Subsection accent bars */</span>
+<span class="prop">.accent-grow-g::after</span> / <span class="prop">.accent-grow-r::after</span> / <span class="prop">.accent-grow-o::after</span> / <span class="prop">.accent-grow-w::after</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Disabled States</h3>
+          <div class="fw-demo">
+            <div class="fw-btn-row">
+              <a class="btn-primary" disabled style="pointer-events:none;opacity:0.5">Primary <i class="fas fa-arrow-right"></i></a>
+              <a class="btn-outline" disabled style="pointer-events:none;opacity:0.5">Outline</a>
+              <a class="btn-grow" disabled style="pointer-events:none;opacity:0.5">Gather <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="cmt">&lt;!-- Add disabled attribute + inline styles for anchor buttons --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"btn-primary"</span> <span class="attr">disabled</span>
+   <span class="attr">style</span>=<span class="str">"pointer-events:none;opacity:0.5"</span><span class="tag">&gt;</span>Primary<span class="tag">&lt;/a&gt;</span>
+
+<span class="cmt">&lt;!-- For &lt;button&gt; elements, the disabled attribute alone works --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-primary"</span> <span class="attr">disabled</span><span class="tag">&gt;</span>Primary<span class="tag">&lt;/button&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <!-- Button reference table -->
+        <table class="fw-table">
+          <thead><tr><th>Class</th><th>Background</th><th>Text</th><th>Context</th></tr></thead>
+          <tbody>
+            <tr><td><code>.btn-primary</code></td><td>--maroon</td><td>White</td><td>Primary actions</td></tr>
+            <tr><td><code>.btn-outline</code></td><td>Transparent</td><td>--maroon</td><td>Secondary actions</td></tr>
+            <tr><td><code>.btn-gold</code></td><td>--gold</td><td>--dark</td><td>Give page, special CTAs</td></tr>
+            <tr><td><code>.btn-outline-light</code></td><td>Transparent</td><td>White</td><td>Dark backgrounds</td></tr>
+            <tr><td><code>.btn-glass</code></td><td>Glass (rgba)</td><td>White</td><td>Dark hero quick links</td></tr>
+            <tr><td><code>.btn-card</code></td><td>None</td><td>--maroon</td><td>Card footers</td></tr>
+            <tr><td><code>.btn-grow</code></td><td>--grow-g</td><td>White</td><td>Gather pathway page</td></tr>
+            <tr><td><code>.btn-grow-r</code></td><td>--grow-r</td><td>White</td><td>Raise pathway page</td></tr>
+            <tr><td><code>.btn-grow-o</code></td><td>--grow-o</td><td>White</td><td>Outward pathway page</td></tr>
+            <tr><td><code>.btn-grow-w</code></td><td>--grow-w</td><td>--dark</td><td>Walk pathway page</td></tr>
+            <tr><td><code>.btn-login</code></td><td>--maroon</td><td>White</td><td>Navbar login</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- ═══════════════ FORMS ═══════════════ -->
+      <section class="fw-section" id="forms">
+        <h2 class="fw-section-title">Form Inputs</h2>
+        <p class="fw-section-desc">Themed form controls with consistent border-radius, focus rings, and helper/error messaging. All inputs use the design system tokens for colors, spacing, and typography.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Standard Inputs</h3>
+          <div class="fw-demo">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter your full name">
+              <div class="form-helper">As it appears on your church profile.</div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="How can we help?"></textarea>
+            </div>
+            <div class="form-group">
+              <label>Campus</label>
+              <select>
+                <option value="">Select a campus</option>
+                <option>The Woodlands</option>
+                <option>Woodforest</option>
+                <option>Montgomery</option>
+                <option>Creekside</option>
+              </select>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label&gt;</span>Full Name<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">placeholder</span>=<span class="str">"Enter your full name"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-helper"</span><span class="tag">&gt;</span>Helper text goes here.<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label&gt;</span>Email Address<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">placeholder</span>=<span class="str">"you@example.com"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label&gt;</span>Message<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;textarea</span> <span class="attr">placeholder</span>=<span class="str">"How can we help?"</span><span class="tag">&gt;&lt;/textarea&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label&gt;</span>Campus<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;select&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="str">""</span><span class="tag">&gt;</span>Select a campus<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option&gt;</span>The Woodlands<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;/select&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Error State</h3>
+          <div class="fw-demo">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" class="is-error" value="not-an-email">
+              <div class="form-error">Please enter a valid email address.</div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label&gt;</span>Email Address<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"email"</span> <span class="attr">class</span>=<span class="str">"is-error"</span> <span class="attr">value</span>=<span class="str">"not-an-email"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-error"</span><span class="tag">&gt;</span>Please enter a valid email address.<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Disabled State</h3>
+          <div class="fw-demo">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" disabled value="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label>Campus</label>
+              <select disabled>
+                <option>The Woodlands</option>
+              </select>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">disabled</span> <span class="attr">value</span>=<span class="str">"Jane Smith"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;select</span> <span class="attr">disabled</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;option&gt;</span>The Woodlands<span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <!-- Checkboxes -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Checkboxes</h3>
+        <div class="fw-demo">
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="chk1" checked>
+            <label class="form-check-label" for="chk1">Receive weekly newsletter</label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="chk2">
+            <label class="form-check-label" for="chk2">Allow event reminders</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="chk3" disabled>
+            <label class="form-check-label" for="chk3">Disabled option</label>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-check"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">class</span>=<span class="str">"form-check-input"</span> <span class="attr">type</span>=<span class="str">"checkbox"</span> <span class="attr">id</span>=<span class="str">"chk1"</span> <span class="attr">checked</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-check-label"</span> <span class="attr">for</span>=<span class="str">"chk1"</span><span class="tag">&gt;</span>Label text<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <!-- Radio Buttons -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Radio Buttons</h3>
+        <div class="fw-demo">
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="campus" id="radio1" checked>
+            <label class="form-check-label" for="radio1">The Woodlands</label>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="campus" id="radio2">
+            <label class="form-check-label" for="radio2">Woodforest</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="campus" id="radio3">
+            <label class="form-check-label" for="radio3">Montgomery</label>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-check"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">class</span>=<span class="str">"form-check-input"</span> <span class="attr">type</span>=<span class="str">"radio"</span> <span class="attr">name</span>=<span class="str">"campus"</span> <span class="attr">id</span>=<span class="str">"radio1"</span> <span class="attr">checked</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-check-label"</span> <span class="attr">for</span>=<span class="str">"radio1"</span><span class="tag">&gt;</span>The Woodlands<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <!-- Toggle Switches -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Toggle Switches</h3>
+        <div class="fw-demo">
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="switch1" checked>
+            <label class="form-check-label" for="switch1">Email notifications</label>
+          </div>
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="switch2">
+            <label class="form-check-label" for="switch2">SMS notifications</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switch3" disabled>
+            <label class="form-check-label" for="switch3">Disabled switch</label>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-check form-switch"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">class</span>=<span class="str">"form-check-input"</span> <span class="attr">type</span>=<span class="str">"checkbox"</span> <span class="attr">id</span>=<span class="str">"switch1"</span> <span class="attr">checked</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">class</span>=<span class="str">"form-check-label"</span> <span class="attr">for</span>=<span class="str">"switch1"</span><span class="tag">&gt;</span>Email notifications<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <!-- Input Groups -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Input Groups</h3>
+        <div class="fw-demo">
+          <div class="form-group">
+            <label>Search</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-search"></i></span>
+              <input type="text" class="form-control" placeholder="Search groups...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Donation Amount</label>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="number" class="form-control" placeholder="0.00">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label>Email Address</label>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="username">
+              <span class="input-group-text">@twmc.org</span>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"input-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"input-group-text"</span><span class="tag">&gt;</span><span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-search"</span><span class="tag">&gt;&lt;/i&gt;</span><span class="tag">&lt;/span&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"text"</span> <span class="attr">class</span>=<span class="str">"form-control"</span> <span class="attr">placeholder</span>=<span class="str">"Search..."</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <!-- File Upload -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">File Upload</h3>
+        <div class="fw-demo">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="fileUpload">Upload Document</label>
+            <input class="form-control" type="file" id="fileUpload">
+            <div class="form-helper">Accepted formats: PDF, DOC, JPG. Max 10MB.</div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-group"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"fileUpload"</span><span class="tag">&gt;</span>Upload Document<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">class</span>=<span class="str">"form-control"</span> <span class="attr">type</span>=<span class="str">"file"</span> <span class="attr">id</span>=<span class="str">"fileUpload"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"form-helper"</span><span class="tag">&gt;</span>Accepted formats: PDF, DOC, JPG. Max 10MB.<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <!-- Range Slider -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Range Slider</h3>
+        <div class="fw-demo">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="rangeDemo">Distance (miles)</label>
+            <input type="range" class="form-range" id="rangeDemo" min="0" max="50" value="25">
+            <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--text-muted);font-family:var(--font-body);">
+              <span>0 mi</span><span>25 mi</span><span>50 mi</span>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"range"</span><span class="tag">&gt;</span>Distance<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"range"</span> <span class="attr">class</span>=<span class="str">"form-range"</span> <span class="attr">min</span>=<span class="str">"0"</span> <span class="attr">max</span>=<span class="str">"50"</span><span class="tag">&gt;</span></pre></div>
+        </div>
+
+        <!-- Date Input -->
+        <h3 style="font-size:1rem;font-weight:600;margin:40px 0 12px;color:var(--maroon);">Date Input</h3>
+        <div class="fw-demo">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="dateDemo">Event Date</label>
+            <input type="date" id="dateDemo">
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="str">"date"</span><span class="tag">&gt;</span>Event Date<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="str">"date"</span> <span class="attr">id</span>=<span class="str">"date"</span><span class="tag">&gt;</span></pre></div>
+        </div>
+
+      </section>
+
+
+      <!-- ═══════════════ SECTION HEADINGS ═══════════════ -->
+      <section class="fw-section" id="section-headings">
+        <h2 class="fw-section-title">Section Headings</h2>
+        <p class="fw-section-desc">A two-part heading pattern: a small uppercase label with a maroon bar, followed by a large Playfair Display title. Use <code>&lt;em&gt;</code> for italic maroon accents.</p>
+
+        <div class="fw-demo">
+          <div class="section-label">Section Label</div>
+          <h2 class="section-title">Section <em>Title</em></h2>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"section-label"</span><span class="tag">&gt;</span>Section Label<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="str">"section-title"</span><span class="tag">&gt;</span>Section <span class="tag">&lt;em&gt;</span>Title<span class="tag">&lt;/em&gt;&lt;/h2&gt;</span></pre></div>
+        </div>
+
+        <div class="fw-note">
+          <strong>Centered variant:</strong> Add <code>style="justify-content: center; text-align: center"</code> to the label and title for centered sections like GROW and Connect.
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ CARDS ═══════════════ -->
+      <section class="fw-section" id="cards">
+        <h2 class="fw-section-title">Cards</h2>
+        <p class="fw-section-desc">The primary content container throughout the site. All cards share the same hover behavior: lift up with shadow deepening.</p>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Connect Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Used on subpages inside campus-tabbed Connect sections.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="connect-card">
+                <div class="connect-card-image" style="background:linear-gradient(135deg, var(--grow-o), var(--grow-g))">
+                </div>
+                <div class="connect-card-body">
+                  <h3>Card Title</h3>
+                  <div class="connect-card-campus">
+                    <i class="fas fa-map-marker-alt"></i> The Woodlands
+                  </div>
+                  <p>Card description text goes here. This will be line-clamped to 3 lines for consistency across the grid layout.</p>
+                </div>
+                <div class="connect-card-footer">
+                  <a href="#" class="btn-card">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-card-image"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">alt</span>=<span class="str">"Description"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-card-body"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3&gt;</span>Card Title<span class="tag">&lt;/h3&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-card-campus"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-map-marker-alt"</span><span class="tag">&gt;&lt;/i&gt;</span> The Woodlands
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Card description text...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-card-footer"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn-card"</span><span class="tag">&gt;</span>Learn More <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Feature Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Homepage cards in the "What's Happening" section with image, optional badge, body text, and arrow link.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="feature-card">
+                <div class="feature-card-image">
+                  <div class="img-placeholder" style="height:180px">
+                    <div class="img-placeholder-icon"><i class="fas fa-image"></i></div>
+                    <div class="img-placeholder-label">Card Image</div>
+                  </div>
+                </div>
+                <span class="feature-card-badge">Upcoming</span>
+                <div class="feature-card-body">
+                  <h3>Feature Card Title</h3>
+                  <p>Brief description of this event or announcement. Cards line-clamp to keep the grid tidy.</p>
+                  <div class="card-arrow">Learn More <i class="fas fa-arrow-right"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-card-image"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">alt</span>=<span class="str">"Description"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"feature-card-badge"</span><span class="tag">&gt;</span>Upcoming<span class="tag">&lt;/span&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-card-body"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3&gt;</span>Card Title<span class="tag">&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Card description text...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"card-arrow"</span><span class="tag">&gt;</span>Learn More <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Blog Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Used for blog posts and news articles. Includes author avatar and meta row at bottom.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="blog-card">
+                <div class="blog-card-image">
+                  <div class="img-placeholder" style="height:180px">
+                    <div class="img-placeholder-icon"><i class="fas fa-image"></i></div>
+                    <div class="img-placeholder-label">Blog Image</div>
+                  </div>
+                </div>
+                <div class="blog-card-body">
+                  <h3>Blog Post Title Goes Here</h3>
+                  <p>A short excerpt from the blog post giving a preview of what the reader will find inside.</p>
+                  <div class="blog-card-meta">
+                    <div style="width:36px;height:36px;border-radius:50%;background:var(--warm-gray-2)"></div>
+                    <div class="blog-card-meta-text">
+                      <strong>Author Name</strong>
+                      <span>March 15, 2026</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"blog-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"blog-card-image"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"image.jpg"</span> <span class="attr">alt</span>=<span class="str">"Description"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"blog-card-body"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h3&gt;</span>Blog Post Title<span class="tag">&lt;/h3&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Excerpt text...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"blog-card-meta"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"avatar.jpg"</span> <span class="attr">alt</span>=<span class="str">"Author"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"blog-card-meta-text"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;strong&gt;</span>Author Name<span class="tag">&lt;/strong&gt;</span>
+        <span class="tag">&lt;span&gt;</span>March 15, 2026<span class="tag">&lt;/span&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Statement Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Used on the Give page for impact statements. Features a gold top bar, heading with italic accent, and optional scripture verse with citation.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="statement-card">
+                <h3>Generosity Changes <em>Lives</em></h3>
+                <p>Your faithful giving helps us reach our community, strengthen families, and share the love of Christ across the globe.</p>
+                <div class="verse">
+                  "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."
+                  <cite>2 Corinthians 9:7</cite>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"statement-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;h3&gt;</span>Generosity Changes <span class="tag">&lt;em&gt;</span>Lives<span class="tag">&lt;/em&gt;&lt;/h3&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Description text...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"verse"</span><span class="tag">&gt;</span>
+    "Scripture text here..."
+    <span class="tag">&lt;cite&gt;</span>Book Chapter:Verse<span class="tag">&lt;/cite&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Way Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Centered card with an icon circle, heading, and description. Used for "Ways to Give" and similar icon-driven grids.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="way-card">
+                <div class="way-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h4>Online Giving</h4>
+                <p>Give securely online anytime using a credit card, debit card, or bank transfer.</p>
+                <a href="#">Give Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"way-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"way-icon"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-hand-holding-heart"</span><span class="tag">&gt;&lt;/i&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;h4&gt;</span>Online Giving<span class="tag">&lt;/h4&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Description text...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Give Now <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-subsection">
+          <h3 class="fw-subsection-title">Info Card</h3>
+          <p style="font-size:14px;color:var(--text-body);margin-bottom:16px">Centered icon card used for informational content grids. Similar structure to Way Card but used in different page contexts.</p>
+          <div class="fw-demo">
+            <div class="fw-card-demo">
+              <div class="info-card">
+                <div class="info-icon"><i class="fas fa-book-open"></i></div>
+                <h4>Bible Studies</h4>
+                <p>Join a group studying God's Word together. Multiple times and locations available each week.</p>
+                <a href="#">Find a Study <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="fw-code-wrap">
+            <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+            <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"info-card reveal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"info-icon"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-book-open"</span><span class="tag">&gt;&lt;/i&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;h4&gt;</span>Bible Studies<span class="tag">&lt;/h4&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Description text...<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span><span class="tag">&gt;</span>Find a Study <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-arrow-right"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+          </div>
+        </div>
+
+        <div class="fw-note">
+          <strong>Additional card variants:</strong> The system also includes Campus Cards (locations), Audience Cards (grow), Bento Cards (homepage), and Formation Cards (discipleship). All follow the same lift-on-hover pattern with consistent border-radius and shadow tokens.
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ HERO ═══════════════ -->
+      <section class="fw-section" id="hero">
+        <h2 class="fw-section-title">Page Hero</h2>
+        <p class="fw-section-desc">Full-width hero with Ken Burns background, gradient overlay, breadcrumb navigation, and large display title. Used on all subpages.</p>
+
+        <div class="fw-demo" style="padding:0;overflow:hidden;border-radius:var(--radius) var(--radius) 0 0">
+          <div style="position:relative;height:280px;overflow:hidden;display:flex;align-items:flex-end;background-color:var(--maroon-dark)">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(110,49,64,0.1) 0%,rgba(110,49,64,0.3) 40%,rgba(26,26,26,0.85) 100%)"></div>
+            <div style="position:relative;z-index:2;padding:0 32px 28px;width:100%">
+              <nav style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:12px">
+                <a href="#" style="color:rgba(255,255,255,0.7)">Home</a>
+                <i class="fas fa-chevron-right" style="font-size:9px"></i>
+                <a href="#" style="color:rgba(255,255,255,0.7)">Section</a>
+                <i class="fas fa-chevron-right" style="font-size:9px"></i>
+                <span>Current Page</span>
+              </nav>
+              <h1 style="font-family:var(--font-display);font-size:42px;font-weight:700;color:#fff;line-height:1.1;margin:0 0 8px">Page Title</h1>
+              <p style="font-size:16px;color:rgba(255,255,255,0.8);margin:0">Subtitle or tagline text</p>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"page-hero"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"page-hero-bg"</span>
+    <span class="attr">style</span>=<span class="str">"background-image: linear-gradient(...), url('hero.jpg')"</span><span class="tag">&gt;&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"page-hero-overlay"</span><span class="tag">&gt;&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"page-hero-content"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="str">"breadcrumb"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/home"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-chevron-right"</span><span class="tag">&gt;&lt;/i&gt;</span>
+        <span class="tag">&lt;span&gt;</span>Current Page<span class="tag">&lt;/span&gt;</span>
+      <span class="tag">&lt;/nav&gt;</span>
+      <span class="tag">&lt;h1&gt;</span>Page Title<span class="tag">&lt;/h1&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Subtitle text<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ LOCATION BAR ═══════════════ -->
+      <section class="fw-section" id="location-bar">
+        <h2 class="fw-section-title">Location Bar</h2>
+        <p class="fw-section-desc">The maroon campus selector strip at the very top of every page. Horizontally scrollable on mobile.</p>
+
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <div class="location-bar" style="position:relative">
+            <a href="#" class="active">The Woodlands</a>
+            <a href="#">Woodforest</a>
+            <a href="#">Montgomery</a>
+            <a href="#">Creekside</a>
+            <a href="#">Español</a>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"location-bar"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/home"</span> <span class="attr">class</span>=<span class="str">"active"</span><span class="tag">&gt;</span>The Woodlands<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/woodforest"</span><span class="tag">&gt;</span>Woodforest<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/montgomery"</span><span class="tag">&gt;</span>Montgomery<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/creekside"</span><span class="tag">&gt;</span>Creekside<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/espanol"</span><span class="tag">&gt;</span>Español<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ NAVBAR ═══════════════ -->
+      <section class="fw-section" id="navbar">
+        <h2 class="fw-section-title">Navbar</h2>
+        <p class="fw-section-desc">Sticky Bootstrap-backed navbar with TWMC branding, desktop navigation, Login button, mega menu trigger, and an offcanvas mobile navigation shell below the <code>xl</code> breakpoint.</p>
+        <div class="fw-note">
+          <strong>See it live:</strong> The navbar is visible at the top of every page. View any page to see the full sticky navbar with scroll shadow behavior.
+        </div>
+
+        <table class="fw-table">
+          <thead><tr><th>Element</th><th>Class</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Container</td><td><code>.navbar.navbar-expand-xl.navbar-twmc</code></td><td>Sticky, branded shell, gains <code>.scrolled</code> shadow</td></tr>
+            <tr><td>Inner width</td><td><code>.container-xxl</code></td><td>Wide Bootstrap container for logo, links, and actions</td></tr>
+            <tr><td>Logo</td><td><code>.navbar-brand img</code></td><td>44px height</td></tr>
+            <tr><td>Links</td><td><code>.nav-link</code></td><td>14px, pill hover highlight</td></tr>
+            <tr><td>Login</td><td><code>.btn-login</code></td><td>Maroon pill button</td></tr>
+            <tr><td>Menu trigger</td><td><code>.mega-trigger</code></td><td>40px circle, opens mega panel</td></tr>
+            <tr><td>Mobile toggle</td><td><code>.navbar-toggler</code></td><td>Bootstrap toggler, visible below <code>xl</code></td></tr>
+            <tr><td>Mobile panel</td><td><code>.offcanvas.offcanvas-twmc</code></td><td>Bootstrap offcanvas panel for mobile navigation</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- ═══════════════ MEGA MENU ═══════════════ -->
+      <section class="fw-section" id="mega-menu">
+        <h2 class="fw-section-title">Mega Menu</h2>
+        <p class="fw-section-desc">A slide-in panel from the right with a 3-column grid of links organized by category. Includes backdrop blur overlay.</p>
+
+        <table class="fw-table">
+          <thead><tr><th>Element</th><th>Class</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Overlay</td><td><code>.mega-overlay</code></td><td>Fixed, backdrop-filter blur, toggles <code>.open</code></td></tr>
+            <tr><td>Panel</td><td><code>.mega-panel</code></td><td>900px max-width, slides from right</td></tr>
+            <tr><td>Grid</td><td><code>.mega-grid</code></td><td>3 columns: Main+Services, About+Connect, NextGen+Ministries</td></tr>
+            <tr><td>Column</td><td><code>.mega-col</code></td><td>32px padding, right border divider</td></tr>
+            <tr><td>Headings</td><td><code>.mega-col h4</code></td><td>Playfair 17px, maroon bottom border</td></tr>
+            <tr><td>Links</td><td><code>.mega-col a</code></td><td>14px, 8px padding, icon support</td></tr>
+            <tr><td>Social row</td><td><code>.mega-social</code></td><td>Circular icon buttons</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+
+      <!-- ═══════════════ TABS ═══════════════ -->
+      <section class="fw-section" id="tabs">
+        <h2 class="fw-section-title">Tabs</h2>
+        <p class="fw-section-desc">Pill-shaped campus tabs used in Connect sections. JavaScript toggles <code>.active</code> class on tabs and panels.</p>
+
+        <div class="fw-demo">
+          <div class="connect-tabs" style="margin-top:0">
+            <button class="connect-tab active" onclick="fwTab(this, 'fw-tab1')">The Woodlands</button>
+            <button class="connect-tab" onclick="fwTab(this, 'fw-tab2')">Woodforest</button>
+            <button class="connect-tab" onclick="fwTab(this, 'fw-tab3')">Montgomery</button>
+          </div>
+          <div class="tab-panel active" id="fw-tab1" style="display:block;padding:20px 0 0">
+            <p style="font-size:14px;color:var(--text-body)">Content for The Woodlands campus goes here — typically a grid of Connect Cards.</p>
+          </div>
+          <div class="tab-panel" id="fw-tab2" style="padding:20px 0 0">
+            <p style="font-size:14px;color:var(--text-body)">Content for Woodforest campus.</p>
+          </div>
+          <div class="tab-panel" id="fw-tab3" style="padding:20px 0 0">
+            <p style="font-size:14px;color:var(--text-body)">Content for Montgomery campus.</p>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"connect-tabs"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"connect-tab active"</span> <span class="attr">data-tab</span>=<span class="str">"tab-woodlands"</span><span class="tag">&gt;</span>The Woodlands<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"connect-tab"</span> <span class="attr">data-tab</span>=<span class="str">"tab-woodforest"</span><span class="tag">&gt;</span>Woodforest<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"tab-panel active"</span> <span class="attr">id</span>=<span class="str">"tab-woodlands"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"tab-panel"</span> <span class="attr">id</span>=<span class="str">"tab-woodforest"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ FAQ ACCORDION ═══════════════ -->
+      <section class="fw-section" id="faq">
+        <h2 class="fw-section-title">FAQ Accordion</h2>
+        <p class="fw-section-desc">Expandable question/answer items used on multiple pages. Clicking a question toggles the <code>.open</code> class to reveal the answer with a smooth max-height transition.</p>
+
+        <div class="fw-demo">
+          <div class="faq-list" style="max-width:100%">
+            <div class="faq-item open" onclick="this.classList.toggle('open')">
+              <button class="faq-question">What are the weekend worship times? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">
+                <p>We offer services on Saturday at 5:00 PM and Sunday at 9:00 AM and 11:00 AM at The Woodlands campus. Check the Locations page for times at all five campuses.</p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+              <button class="faq-question">How do I join a small group? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">
+                <p>Visit the Gather page to browse available groups by campus, day, and topic. You can sign up online or contact the church office for help finding the right fit.</p>
+              </div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+              <button class="faq-question">Is childcare available during services? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer">
+                <p>Yes! We provide nursery care for infants through pre-K during all weekend services. Children's ministry programming is available for K through 5th grade during the 9:00 and 11:00 AM services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"faq-list"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"faq-item open"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"faq-question"</span><span class="tag">&gt;</span>
+      Question text here?
+      <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-chevron-down"</span><span class="tag">&gt;&lt;/i&gt;</span>
+    <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"faq-answer"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Answer text here.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"faq-item"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"faq-question"</span><span class="tag">&gt;</span>
+      Another question?
+      <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-chevron-down"</span><span class="tag">&gt;&lt;/i&gt;</span>
+    <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"faq-answer"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Answer text here.<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+
+        <div class="fw-note">
+          <strong>Toggle behavior:</strong> In <code>theme.js</code>, FAQ items use click handlers that toggle the <code>.open</code> class. The <code>.faq-answer</code> transitions from <code>max-height: 0</code> to <code>max-height: 800px</code> and the chevron icon rotates 180 degrees.
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ GROW SECTION ═══════════════ -->
+      <section class="fw-section" id="grow">
+        <h2 class="fw-section-title">GROW Section</h2>
+        <p class="fw-section-desc">The GROW discipleship pathway section appears on every page. Four interactive colored squares link to each pathway stage.</p>
+
+        <div class="fw-demo" style="text-align:center;padding:40px 32px">
+          <div class="section-label" style="justify-content:center">Discipleship Pathway</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(24px,3vw,32px);font-weight:700;color:var(--dark);margin-bottom:16px">A Pathway to a Deeper Faith</h2>
+          <div class="grow-squares">
+            <a href="#" class="grow-square grow-g">g</a>
+            <a href="#" class="grow-square grow-r">r</a>
+            <a href="#" class="grow-square grow-o">o</a>
+            <a href="#" class="grow-square grow-w">w</a>
+          </div>
+          <p style="max-width:540px;margin:0 auto 20px;font-size:14px;color:var(--text-body);line-height:1.7">G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church.</p>
+          <a href="#" class="btn-primary">Start Here <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"grow-section"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container reveal"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"section-label"</span><span class="tag">&gt;</span>Discipleship Pathway<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;h2&gt;</span>A Pathway to a Deeper Faith<span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"grow-squares"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"grow-square grow-g"</span><span class="tag">&gt;</span>g<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"grow-square grow-r"</span><span class="tag">&gt;</span>r<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"grow-square grow-o"</span><span class="tag">&gt;</span>o<span class="tag">&lt;/a&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">class</span>=<span class="str">"grow-square grow-w"</span><span class="tag">&gt;</span>w<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Pathway description...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"/grow"</span> <span class="attr">class</span>=<span class="str">"btn-primary"</span><span class="tag">&gt;</span>Start Here<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ FEATURE BANNER ═══════════════ -->
+      <section class="fw-section" id="feature-banner">
+        <h2 class="fw-section-title">Feature Banner</h2>
+        <p class="fw-section-desc">Full-width promotional CTA with background image. Two layouts (centered, split) × two themes (dark, light) = four variants. Background image set via inline <code>style</code> on the section.</p>
+
+        <!-- Centered + Dark -->
+        <h3 style="font-size:1rem;font-weight:600;margin:32px 0 12px;color:var(--maroon);">Centered + Dark (default)</h3>
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <section class="feature-banner" style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/CHI_SummerSplash_FeatureBanner_BG.png'); background-color: #007cc2;">
+            <div class="container">
+              <div class="feature-banner-inner">
+                <h2>Summer Splash</h2>
+                <p>Summer fun is on the way! Register and join us for exciting camps and activities.</p>
+                <a href="#" class="btn-white">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"feature-banner"</span> <span class="attr">style</span>=<span class="str">"background-image: url('...'); background-color: #007cc2;"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-banner-inner reveal"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>Headline<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Description text.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn-white"</span><span class="tag">&gt;</span>Call to Action<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+
+        <!-- Centered + Light -->
+        <h3 style="font-size:1rem;font-weight:600;margin:32px 0 12px;color:var(--maroon);">Centered + Light</h3>
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <section class="feature-banner feature-banner--light" style="background-color: var(--cream);">
+            <div class="container">
+              <div class="feature-banner-inner">
+                <h2>Join Us This Easter</h2>
+                <p>Celebrate the risen King with us at any of our campus locations. Services for all ages.</p>
+                <a href="#" class="btn-primary">Find a Service <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"feature-banner feature-banner--light"</span> <span class="attr">style</span>=<span class="str">"background-color: var(--cream);"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-banner-inner reveal"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>Headline<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Description text.<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn-primary"</span><span class="tag">&gt;</span>Call to Action<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+
+        <!-- Split + Dark -->
+        <h3 style="font-size:1rem;font-weight:600;margin:32px 0 12px;color:var(--maroon);">Split + Dark</h3>
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <section class="feature-banner feature-banner--split" style="background-color: var(--maroon);">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-lg-2 align-items-center g-56">
+                <div class="col">
+                  <div class="feature-banner-text">
+                    <h2>VBS 2026</h2>
+                    <p>An amazing week of fun, faith, and friendship for kids of all ages. Register your child today!</p>
+                    <a href="#" class="btn-white">Register Now <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="feature-banner-media">
+                    <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e" alt="VBS" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--gold), var(--maroon))'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"feature-banner feature-banner--split"</span> <span class="attr">style</span>=<span class="str">"background-color: var(--maroon);"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"row row-cols-1 row-cols-lg-2 align-items-center g-56 reveal"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-banner-text"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;h2&gt;</span>Headline<span class="tag">&lt;/h2&gt;</span>
+          <span class="tag">&lt;p&gt;</span>Description text.<span class="tag">&lt;/p&gt;</span>
+          <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn-white"</span><span class="tag">&gt;</span>Call to Action<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"col"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"feature-banner-media"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="str">"..."</span> <span class="attr">alt</span>=<span class="str">"..."</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+
+        <!-- Split + Light -->
+        <h3 style="font-size:1rem;font-weight:600;margin:32px 0 12px;color:var(--maroon);">Split + Light</h3>
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <section class="feature-banner feature-banner--split feature-banner--light" style="background-color: var(--cream);">
+            <div class="container">
+              <div class="row row-cols-1 row-cols-lg-2 align-items-center g-56">
+                <div class="col">
+                  <div class="feature-banner-text">
+                    <h2>Financial Peace University</h2>
+                    <p>Take control of your money with a proven plan. Join this 9-week course and start winning with money.</p>
+                    <a href="#" class="btn-primary">Sign Up <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="feature-banner-media">
+                    <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=303eb6cc-3c9e-49b1-ba8d-b02c3636f729" alt="Financial Peace" onerror="this.parentElement.style.background='linear-gradient(135deg, var(--cream), var(--gold-light))'">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"feature-banner feature-banner--split feature-banner--light"</span><span class="tag">&gt;</span>
+  <span class="cmt">&lt;!-- Same structure as Split + Dark, use .btn-primary instead of .btn-white --&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ VIDEO EMBED ═══════════════ -->
+      <section class="fw-section" id="video-embed">
+        <h2 class="fw-section-title">Video Embed</h2>
+        <p class="fw-section-desc">Responsive 16:9 video wrapper. Works with Vimeo, YouTube, or any iframe. Three variants: default (card shadow), small (no shadow), and dark (for colored backgrounds).</p>
+
+        <h3 style="font-size:1rem;font-weight:600;margin:32px 0 12px;color:var(--maroon);">Default</h3>
+        <div class="fw-demo">
+          <div style="max-width:560px">
+            <div class="video-embed">
+              <iframe src="https://player.vimeo.com/video/755253246" title="Welcome Video" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"video-embed"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;iframe</span> <span class="attr">src</span>=<span class="str">"https://player.vimeo.com/video/..."</span> <span class="attr">allowfullscreen</span><span class="tag">&gt;&lt;/iframe&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="cmt">&lt;!-- Small variant (no shadow, tighter radius) --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"video-embed video-embed--sm"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+
+<span class="cmt">&lt;!-- Dark variant (for colored backgrounds) --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"video-embed video-embed--dark"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ E-NEWS CTA ═══════════════ -->
+      <section class="fw-section" id="enews">
+        <h2 class="fw-section-title">E-News CTA</h2>
+        <p class="fw-section-desc">Maroon call-to-action band for newsletter signup. Features decorative pseudo-element circles for subtle visual interest.</p>
+
+        <div class="fw-demo" style="padding:0;overflow:hidden">
+          <div class="enews-cta" style="position:relative">
+            <div class="container">
+              <div class="enews-inner">
+                <div class="enews-text">
+                  <h3>Stay Connected</h3>
+                  <p>Get the latest news and updates delivered to your inbox.</p>
+                </div>
+                <a href="#" class="btn-white">Subscribe <i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"enews-cta"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"container reveal"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"enews-inner"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;h3&gt;</span>Stay Connected<span class="tag">&lt;/h3&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Get the latest news...<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="str">"#"</span> <span class="attr">class</span>=<span class="str">"btn-white"</span><span class="tag">&gt;</span>Subscribe <span class="tag">&lt;i</span> <span class="attr">class</span>=<span class="str">"fas fa-envelope"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/section&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ FOOTER ═══════════════ -->
+      <section class="fw-section" id="footer-comp">
+        <h2 class="fw-section-title">Footer</h2>
+        <p class="fw-section-desc">Dark footer with 3-column grid: brand info with social links, About links, and Quick Links. Includes GMC membership badge.</p>
+
+        <table class="fw-table">
+          <thead><tr><th>Element</th><th>Class</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Container</td><td><code>.site-footer</code></td><td>--dark background, white text at 0.7 opacity</td></tr>
+            <tr><td>Grid</td><td><code>.footer-grid</code></td><td>1.5fr 1fr 1fr, collapses at 768px</td></tr>
+            <tr><td>Brand</td><td><code>.footer-brand</code></td><td>Logo (inverted), address, phone, social icons</td></tr>
+            <tr><td>Social</td><td><code>.footer-social a</code></td><td>40px circles, maroon on hover</td></tr>
+            <tr><td>Columns</td><td><code>.footer-col</code></td><td>Playfair h4 heading + link list</td></tr>
+            <tr><td>Bottom bar</td><td><code>.footer-bottom</code></td><td>Copyright + GMC badge, top border</td></tr>
+          </tbody>
+        </table>
+
+        <div class="fw-note">
+          <strong>See it live:</strong> Scroll to the bottom of any page to see the footer in context. The logo uses <code>filter: brightness(0) invert(1)</code> to render white on dark.
+        </div>
+      </section>
+
+
+      <!-- ═══════════════ BOOTSTRAP OVERRIDES ═══════════════ -->
+
+      <!-- Modals -->
+      <section class="fw-section" id="modals">
+        <h2 class="fw-section-title">Modals</h2>
+        <p class="fw-section-desc">Bootstrap modals with TWMC brand styling: Playfair title, rounded corners, maroon close focus ring.</p>
+        <div class="fw-demo">
+          <div style="background:#fff;border-radius:var(--radius);box-shadow:0 16px 48px rgba(0,0,0,0.15);max-width:500px;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--border-light)">
+              <h5 style="font-family:var(--font-display);color:var(--maroon);font-size:1.4rem;margin:0">Event Registration</h5>
+              <span style="opacity:0.4;cursor:pointer;font-size:1.2rem">&times;</span>
+            </div>
+            <div style="padding:24px;font-size:15px;line-height:1.7;color:var(--text-body)">
+              Thank you for your interest! Fill out the form below to register.
+            </div>
+            <div style="padding:16px 24px;border-top:1px solid var(--border-light);display:flex;gap:8px;justify-content:flex-end">
+              <button class="btn-outline">Cancel</button>
+              <button class="btn-primary">Register</button>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;button</span> <span class="attr">data-bs-toggle</span>=<span class="str">"modal"</span> <span class="attr">data-bs-target</span>=<span class="str">"#myModal"</span><span class="tag">&gt;</span>Open<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal fade"</span> <span class="attr">id</span>=<span class="str">"myModal"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-dialog"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-content"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-header"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;h5</span> <span class="attr">class</span>=<span class="str">"modal-title"</span><span class="tag">&gt;</span>Title<span class="tag">&lt;/h5&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-close"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"modal"</span><span class="tag">&gt;&lt;/button&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-body"</span><span class="tag">&gt;</span>Content<span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"modal-footer"</span><span class="tag">&gt;</span>Buttons<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Alerts -->
+      <section class="fw-section" id="alerts">
+        <h2 class="fw-section-title">Alerts</h2>
+        <p class="fw-section-desc">Bootstrap alerts themed with brand palette. Use standard <code>.alert-*</code> classes.</p>
+        <div class="fw-demo">
+          <div class="alert alert-primary" role="alert"><strong>Welcome!</strong> Your registration has been received.</div>
+          <div class="alert alert-success" role="alert"><strong>Success!</strong> Your giving profile has been updated.</div>
+          <div class="alert alert-danger" role="alert"><strong>Error:</strong> Please check the highlighted fields below.</div>
+          <div class="alert alert-warning" role="alert"><strong>Heads up:</strong> Registration closes this Friday.</div>
+          <div class="alert alert-info mb-0" role="alert"><strong>Note:</strong> Childcare is available for this event.</div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-primary"</span> <span class="attr">role</span>=<span class="str">"alert"</span><span class="tag">&gt;</span>Message<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-success"</span><span class="tag">&gt;</span>Success<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-danger"</span><span class="tag">&gt;</span>Error<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-warning"</span><span class="tag">&gt;</span>Warning<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"alert alert-info"</span><span class="tag">&gt;</span>Info<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Toasts -->
+      <section class="fw-section" id="toasts">
+        <h2 class="fw-section-title">Toasts</h2>
+        <p class="fw-section-desc">Notification toasts with brand styling. Use Bootstrap's toast JS to trigger.</p>
+        <div class="fw-demo">
+          <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" style="position:relative">
+            <div class="toast-header">
+              <strong class="me-auto">TWMC</strong>
+              <small class="text-muted">Just now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">Your registration was submitted successfully.</div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast"</span> <span class="attr">role</span>=<span class="str">"alert"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast-header"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;strong</span> <span class="attr">class</span>=<span class="str">"me-auto"</span><span class="tag">&gt;</span>TWMC<span class="tag">&lt;/strong&gt;</span>
+    <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-close"</span> <span class="attr">data-bs-dismiss</span>=<span class="str">"toast"</span><span class="tag">&gt;&lt;/button&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"toast-body"</span><span class="tag">&gt;</span>Message<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Accordions -->
+      <section class="fw-section" id="accordions">
+        <h2 class="fw-section-title">Accordions</h2>
+        <p class="fw-section-desc">Bootstrap accordions with maroon active state, cream expanded background, and maroon arrow.</p>
+        <div class="fw-demo">
+          <div class="accordion" id="demoAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What time are worship services?</button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#demoAccordion">
+                <div class="accordion-body">We offer services at 8:30am, 9:45am, and 11:00am at our Woodlands campus. Visit our Times &amp; Locations page for all campus schedules.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Is childcare available?</button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+                <div class="accordion-body">Yes! Childcare is available for infants through Pre-K during all worship services at every campus.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How do I join a small group?</button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#demoAccordion">
+                <div class="accordion-body">Visit our GROW page to browse studies and groups by campus, topic, and day of the week.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion"</span> <span class="attr">id</span>=<span class="str">"faq"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion-item"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;h2</span> <span class="attr">class</span>=<span class="str">"accordion-header"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"accordion-button"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"collapse"</span> <span class="attr">data-bs-target</span>=<span class="str">"#c1"</span><span class="tag">&gt;</span>Question<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="str">"c1"</span> <span class="attr">class</span>=<span class="str">"accordion-collapse collapse show"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"accordion-body"</span><span class="tag">&gt;</span>Answer<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Dropdowns -->
+      <section class="fw-section" id="dropdowns">
+        <h2 class="fw-section-title">Dropdowns</h2>
+        <p class="fw-section-desc">Bootstrap dropdowns with rounded corners, cream hover, and maroon active state.</p>
+        <div class="fw-demo">
+          <div class="dropdown">
+            <button class="btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select Campus</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="#">The Woodlands</a></li>
+              <li><a class="dropdown-item" href="#">Woodforest</a></li>
+              <li><a class="dropdown-item" href="#">Montgomery</a></li>
+              <li><a class="dropdown-item" href="#">Creekside</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">All Campuses</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"dropdown"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">class</span>=<span class="str">"btn-primary dropdown-toggle"</span> <span class="attr">data-bs-toggle</span>=<span class="str">"dropdown"</span><span class="tag">&gt;</span>Select<span class="tag">&lt;/button&gt;</span>
+  <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"dropdown-menu"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"dropdown-item"</span><span class="tag">&gt;</span>Item<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Tables -->
+      <section class="fw-section" id="tables">
+        <h2 class="fw-section-title">Tables</h2>
+        <p class="fw-section-desc">Bootstrap tables with brand typography, cream striping, and warm border colors.</p>
+        <div class="fw-demo" style="padding:0;overflow:hidden;border-radius:var(--radius)">
+          <table class="table table-striped table-hover mb-0">
+            <thead>
+              <tr><th>Service</th><th>Time</th><th>Campus</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Traditional Worship</td><td>8:30 AM</td><td>The Woodlands</td></tr>
+              <tr><td>Contemporary Worship</td><td>9:45 AM</td><td>The Woodlands</td></tr>
+              <tr><td>Modern Worship</td><td>11:00 AM</td><td>The Woodlands</td></tr>
+              <tr><td>Sunday Worship</td><td>9:30 AM</td><td>Woodforest</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;table</span> <span class="attr">class</span>=<span class="str">"table table-striped table-hover"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;thead&gt;&lt;tr&gt;&lt;th&gt;</span>Column<span class="tag">&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</span>
+  <span class="tag">&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;</span>Data<span class="tag">&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Spinners & Progress -->
+      <section class="fw-section" id="spinners">
+        <h2 class="fw-section-title">Spinners &amp; Progress</h2>
+        <p class="fw-section-desc">Loading indicators and progress bars in brand colors.</p>
+        <div class="fw-demo">
+          <div style="display:flex;gap:24px;align-items:center;margin-bottom:24px">
+            <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-grow" role="status"><span class="visually-hidden">Loading...</span></div>
+            <div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:75%"></div></div>
+            <div class="progress" role="progressbar"><div class="progress-bar bg-success" style="width:100%"></div></div>
+            <div class="progress" role="progressbar"><div class="progress-bar bg-warning" style="width:45%"></div></div>
+          </div>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="cmt">&lt;!-- Spinner --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"spinner-border"</span> <span class="attr">role</span>=<span class="str">"status"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="str">"visually-hidden"</span><span class="tag">&gt;</span>Loading...<span class="tag">&lt;/span&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+<span class="cmt">&lt;!-- Progress --&gt;</span>
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"progress"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"progress-bar"</span> <span class="attr">style</span>=<span class="str">"width: 75%"</span><span class="tag">&gt;&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Pagination -->
+      <section class="fw-section" id="pagination">
+        <h2 class="fw-section-title">Pagination</h2>
+        <p class="fw-section-desc">Page navigation with maroon active state and brand focus rings.</p>
+        <div class="fw-demo">
+          <nav aria-label="Page navigation">
+            <ul class="pagination mb-0">
+              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;nav&gt;</span>
+  <span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="str">"pagination"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li</span> <span class="attr">class</span>=<span class="str">"page-item active"</span><span class="tag">&gt;&lt;a</span> <span class="attr">class</span>=<span class="str">"page-link"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></pre></div>
+        </div>
+      </section>
+
+      <!-- Tooltips -->
+      <section class="fw-section" id="tooltips">
+        <h2 class="fw-section-title">Tooltips</h2>
+        <p class="fw-section-desc">Dark tooltips with brand font. Initialize with <code>new bootstrap.Tooltip(element)</code>.</p>
+        <div class="fw-demo">
+          <button type="button" class="btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="This is a tooltip">Hover me</button>
+          <button type="button" class="btn-outline" data-bs-toggle="tooltip" data-bs-placement="right" title="Right tooltip">Right</button>
+        </div>
+        <div class="fw-code-wrap">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML + JS</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;button</span> <span class="attr">data-bs-toggle</span>=<span class="str">"tooltip"</span> <span class="attr">title</span>=<span class="str">"Tooltip text"</span><span class="tag">&gt;</span>Hover<span class="tag">&lt;/button&gt;</span>
+
+<span class="cmt">&lt;!-- Initialize all tooltips --&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  .forEach(el => new bootstrap.Tooltip(el));
+<span class="tag">&lt;/script&gt;</span></pre></div>
+        </div>
+      </section>
+
+
+      <!-- Page Template -->
+      <section class="fw-section" id="template">
+        <h2 class="fw-section-title">Subpage Template</h2>
+        <p class="fw-section-desc">Every subpage follows this Bootstrap-backed shell. Copy the template below as a starting point for new pages.</p>
+
+        <div class="fw-code-wrap" style="border-top:1px solid var(--border-light);border-radius:var(--radius)">
+          <div class="fw-code-header"><span class="fw-code-lang">HTML — Full Page Template</span><button class="fw-code-copy" onclick="copyCode(this)"><i class="fas fa-copy"></i> Copy</button></div>
+          <div class="fw-code"><pre><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="str">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="str">"utf-8"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;title&gt;</span>Page Title | The Woodlands Methodist Church<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="str">"viewport"</span> <span class="attr">content</span>=<span class="str">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"preconnect"</span> <span class="attr">href</span>=<span class="str">"https://fonts.gstatic.com"</span> <span class="attr">crossorigin</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"https://fonts.googleapis.com/css2?family=..."</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"https://kit.fontawesome.com/85947205a9.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">href</span>=<span class="str">"bootstrap.min.css"</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="str">"stylesheet"</span> <span class="attr">href</span>=<span class="str">"theme.css"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+  <span class="cmt">&lt;!-- 1. Location Bar --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"location-bar"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+
+  <span class="cmt">&lt;!-- 2. Navbar --&gt;</span>
+  <span class="tag">&lt;header</span> <span class="attr">class</span>=<span class="str">"navbar navbar-expand-xl py-0 navbar-twmc"</span> <span class="attr">id</span>=<span class="str">"navbar"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/header&gt;</span>
+
+  <span class="cmt">&lt;!-- 3. Mobile Offcanvas --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"offcanvas offcanvas-end offcanvas-twmc"</span> <span class="attr">id</span>=<span class="str">"mobileNav"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+
+  <span class="cmt">&lt;!-- 4. Mega Menu --&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mega-overlay"</span> <span class="attr">id</span>=<span class="str">"megaOverlay"</span><span class="tag">&gt;&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="str">"mega-panel"</span> <span class="attr">id</span>=<span class="str">"megaPanel"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/div&gt;</span>
+
+  <span class="cmt">&lt;!-- 5. Page Hero --&gt;</span>
+  <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"page-hero"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/section&gt;</span>
+
+  <span class="cmt">&lt;!-- 6. Content Sections --&gt;</span>
+  <span class="tag">&lt;section</span><span class="tag">&gt;</span>...<span class="tag">&lt;/section&gt;</span>
+
+  <span class="cmt">&lt;!-- 7. Connect Section (optional) --&gt;</span>
+  <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"connect-section"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/section&gt;</span>
+
+  <span class="cmt">&lt;!-- 8. E-News CTA (optional) --&gt;</span>
+  <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"enews-cta"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/section&gt;</span>
+
+  <span class="cmt">&lt;!-- 9. GROW Section --&gt;</span>
+  <span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="str">"grow-section"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/section&gt;</span>
+
+  <span class="cmt">&lt;!-- 10. Footer --&gt;</span>
+  <span class="tag">&lt;footer</span> <span class="attr">class</span>=<span class="str">"site-footer"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/footer&gt;</span>
+
+  <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"bootstrap.bundle.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+  <span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="str">"theme.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></pre></div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Bootstrap Bundle (modals, dropdowns, accordions, tooltips) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/font-switcher.js"></script>
+
+  <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <script>
+    // Copy code button
+    function copyCode(btn) {
+      const code = btn.closest('.fw-code-wrap').querySelector('pre').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+
+    // Replay reveal animation
+    function replayReveal() {
+      ['revealDemo1','revealDemo2','revealDemo3'].forEach(id => {
+        const el = document.getElementById(id);
+        el.classList.remove('visible');
+      });
+      setTimeout(() => {
+        ['revealDemo1','revealDemo2','revealDemo3'].forEach(id => {
+          document.getElementById(id).classList.add('visible');
+        });
+      }, 50);
+    }
+
+    // Framework tabs (local demo)
+    function fwTab(btn, panelId) {
+      btn.closest('.fw-demo').querySelectorAll('.connect-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      btn.closest('.fw-demo').querySelectorAll('.tab-panel').forEach(p => {
+        p.classList.remove('active');
+        p.style.display = 'none';
+      });
+      const panel = document.getElementById(panelId);
+      panel.classList.add('active');
+      panel.style.display = 'block';
+    }
+
+    // Active sidebar link on scroll
+    const sections = document.querySelectorAll('.fw-section');
+    const navLinks = document.querySelectorAll('.fw-nav-link[href^="#"]');
+
+    const observerOptions = { threshold: 0, rootMargin: '-20% 0px -70% 0px' };
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector(`.fw-nav-link[href="#${entry.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Mobile sidebar toggle
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+      // Close sidebar when clicking a link on mobile
+      sidebar.querySelectorAll('.fw-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 900) sidebar.classList.remove('open');
+        });
+      });
+    }
+
+    // Initialize Bootstrap tooltips
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+  </script>
+
+</body>
+</html>
