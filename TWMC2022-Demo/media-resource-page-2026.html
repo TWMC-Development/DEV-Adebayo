@@ -412,16 +412,11 @@
         --media-red-deep: #5c1620;
         --media-red-bright: #9a2a3a;
         --media-red-ink: #3d0f18;
-        --media-cream: #f5f2ee;
-        --media-cream-deep: #eae4db;
         --media-section-white: #fff;
         --media-soft-white: #fafafa;
-        --media-paper: #fbf9f6;
         --media-bone: #e8e1d6;
         --media-ink: #1a1614;
-        --media-ink-soft: #2a2522;
         --media-ink-mute: #6b5f58;
-        --media-ink-faint: #a89b91;
         --media-card-border: #ded8d1;
         --media-shadow-card:
           0 1px 2px rgba(26, 22, 20, 0.08),
@@ -434,6 +429,11 @@
         font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
       }
 
+      .py-5 {
+        padding-top: unset !important;
+        padding-bottom: unset !important;
+      }
+
       .media-resource-page * {
         box-sizing: border-box;
       }
@@ -444,35 +444,26 @@
         padding: 0 32px;
       }
 
+      .media-resource-hero .media-resource-container {
+        max-width: 1200px;
+        padding: 0;
+        width: 100%;
+      }
+
       .media-resource-hero {
-        position: relative;
-        overflow: hidden;
-        background: var(--media-red-deep);
+        align-items: center;
+        background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.15)),
+          url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_ChurchOnline_BKG.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
         color: #fff;
-        padding: 72px 0 88px;
-      }
-
-      .media-resource-hero::after {
-        content: "";
-        position: absolute;
-        bottom: -70px;
-        right: -120px;
-        width: 560px;
-        height: 560px;
-        opacity: 0.06;
-        background:
-          linear-gradient(#fff, #fff) center / 42px 420px no-repeat,
-          linear-gradient(#fff, #fff) center 38% / 300px 42px no-repeat;
-        pointer-events: none;
-      }
-
-      .media-resource-eyebrow {
-        color: #e8b4ba;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        margin-bottom: 18px;
-        text-transform: uppercase;
+        display: flex;
+        min-height: 511px;
+        overflow: hidden;
+        position: relative;
+        text-align: left;
       }
 
       .media-resource-hero h1 {
@@ -488,7 +479,7 @@
       }
 
       .media-resource-hero p {
-        color: #f5d9dd;
+        color: #fff;
         font-family: Georgia, "Times New Roman", serif;
         font-size: 22px;
         font-style: italic;
@@ -500,7 +491,7 @@
       .media-resource-list-section {
         background: var(--media-section-white);
         margin-top: -32px;
-        padding: 56px 0 72px;
+        padding: 100px 0 100px;
         position: relative;
         z-index: 2;
       }
@@ -664,21 +655,6 @@
         border-left-color: rgba(255, 255, 255, 0.12);
       }
 
-      .media-resource-preview-label {
-        color: var(--media-ink-faint);
-        font-size: 9px;
-        font-weight: 700;
-        letter-spacing: 0.32em;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        transition: color 0.25s ease;
-      }
-
-      .media-resource-card:hover .media-resource-preview-label,
-      .media-resource-card:focus-within .media-resource-preview-label {
-        color: rgba(255, 255, 255, 0.62);
-      }
-
       .media-resource-preview-content {
         align-items: center;
         display: flex;
@@ -711,28 +687,9 @@
         position: relative;
       }
 
-      .media-resource-thumb-live {
+      .media-resource-thumb-icon {
         align-items: center;
-        background: rgba(211, 36, 54, 0.1);
-        border: 1.5px solid rgba(211, 36, 54, 0.3);
-        border-radius: 50%;
-        color: #d32436;
-        display: flex;
-        height: 80px;
-        justify-content: center;
-        overflow: visible;
-        width: 80px;
-      }
-
-      .media-resource-card:hover .media-resource-thumb-live,
-      .media-resource-card:focus-within .media-resource-thumb-live {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.5);
-        color: #fff;
-      }
-
-      .media-resource-thumb-podcast {
-        align-items: center;
+        align-self: flex-start;
         background: linear-gradient(
           135deg,
           var(--media-red),
@@ -745,28 +702,8 @@
         width: 72px;
       }
 
-      .media-resource-thumb-messages {
-        align-items: center;
-        background: linear-gradient(
-          135deg,
-          var(--media-red),
-          var(--media-red-ink)
-        );
-        color: #fff;
-        display: flex;
-        height: 72px;
-        justify-content: center;
-        width: 72px;
-      }
-
-      .media-resource-card:hover .media-resource-thumb-messages,
-      .media-resource-card:focus-within .media-resource-thumb-messages {
-        background: #fff;
-        color: var(--media-red);
-      }
-
-      .media-resource-card:hover .media-resource-thumb-podcast,
-      .media-resource-card:focus-within .media-resource-thumb-podcast {
+      .media-resource-card:hover .media-resource-thumb-icon,
+      .media-resource-card:focus-within .media-resource-thumb-icon {
         background: #fff;
         color: var(--media-red);
       }
@@ -794,29 +731,9 @@
         background: rgba(134, 37, 51, 0.72);
       }
 
-      .media-resource-thumb-youtube {
-        align-items: center;
-        background: transparent;
-        box-shadow: none;
-        color: var(--media-red);
-        display: flex;
-        height: 80px;
-        justify-content: flex-start;
-        width: 96px;
-      }
-
-      .media-resource-thumb-youtube::before {
-        display: none;
-      }
-
       .media-resource-youtube-logo {
-        font-size: 72px;
+        font-size: 42px;
         line-height: 1;
-      }
-
-      .media-resource-card:hover .media-resource-thumb-youtube,
-      .media-resource-card:focus-within .media-resource-thumb-youtube {
-        color: #fff;
       }
 
       .media-resource-preview-copy {
@@ -824,17 +741,13 @@
         min-width: 0;
       }
 
-      .media-resource-live-copy,
-      .media-resource-message-copy,
-      .media-resource-channel-copy {
+      .media-resource-pill-copy {
         align-items: flex-start;
         display: flex;
         flex-direction: column;
       }
 
-      .media-resource-live-copy .media-resource-service-list,
-      .media-resource-message-copy .media-resource-service-list,
-      .media-resource-channel-copy .media-resource-service-list {
+      .media-resource-pill-copy .media-resource-service-list {
         align-self: stretch;
         width: 100%;
       }
@@ -858,14 +771,14 @@
         color: var(--media-ink-mute);
         display: inline-flex;
         flex: 0 1 auto;
-        font-size: 10px;
-        gap: 5px;
+        font-size: 10.8px;
+        gap: 6px;
         justify-content: center;
         line-height: 1.35;
         margin: 0;
         margin-left: 0 !important;
         min-width: 0;
-        padding: 6px 9px;
+        padding: 7px 10px;
         transition:
           background 0.25s ease,
           border-color 0.25s ease,
@@ -874,12 +787,8 @@
         white-space: nowrap;
       }
 
-      .media-resource-live-copy .media-resource-service-list li:hover,
-      .media-resource-live-copy .media-resource-service-list li:focus-within,
-      .media-resource-message-copy .media-resource-service-list li:hover,
-      .media-resource-message-copy .media-resource-service-list li:focus-within,
-      .media-resource-channel-copy .media-resource-service-list li:hover,
-      .media-resource-channel-copy .media-resource-service-list li:focus-within {
+      .media-resource-service-list li:hover,
+      .media-resource-service-list li:focus-within {
         transform: scale(1.02);
       }
 
@@ -920,18 +829,10 @@
 
       .media-resource-service-name {
         color: var(--media-red);
-        font-size: 10px;
+        font-size: 10.8px;
         font-weight: 800;
         letter-spacing: 0.07em;
         text-transform: uppercase;
-        transition: color 0.25s ease;
-      }
-
-      .media-resource-preview-summary {
-        color: var(--media-ink-mute);
-        font-size: 12px;
-        line-height: 1.45;
-        margin: 0;
         transition: color 0.25s ease;
       }
 
@@ -947,32 +848,6 @@
         color: #fff;
       }
 
-      @media (min-width: 901px) {
-        .media-resource-live-copy .media-resource-service-list li,
-        .media-resource-message-copy .media-resource-service-list li,
-        .media-resource-channel-copy .media-resource-service-list li {
-          font-size: 9.5px;
-          gap: 4px;
-          padding: 6px 8px;
-        }
-
-        .media-resource-live-copy .media-resource-service-name,
-        .media-resource-message-copy .media-resource-service-name,
-        .media-resource-channel-copy .media-resource-service-name {
-          font-size: 9.5px;
-        }
-      }
-
-      .media-resource-preview-kicker {
-        color: var(--media-red);
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        margin-bottom: 4px;
-        text-transform: uppercase;
-        transition: color 0.25s ease;
-      }
-
       .media-resource-preview-title {
         color: var(--media-ink);
         font-family: "Montserrat", "Open Sans", Arial, sans-serif;
@@ -985,36 +860,9 @@
         transition: color 0.25s ease;
       }
 
-      .media-resource-preview-subtitle {
-        color: var(--media-ink-mute);
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 11px;
-        font-style: italic;
-        margin-bottom: 2px;
-        transition: color 0.25s ease;
-      }
-
-      .media-resource-preview-meta {
-        color: var(--media-ink-faint);
-        font-size: 11px;
-        letter-spacing: 0.04em;
-        transition: color 0.25s ease;
-      }
-
-      .media-resource-card:hover .media-resource-preview-kicker,
-      .media-resource-card:focus-within .media-resource-preview-kicker,
       .media-resource-card:hover .media-resource-preview-title,
       .media-resource-card:focus-within .media-resource-preview-title {
         color: #fff;
-      }
-
-      .media-resource-card:hover .media-resource-preview-subtitle,
-      .media-resource-card:focus-within .media-resource-preview-subtitle,
-      .media-resource-card:hover .media-resource-preview-meta,
-      .media-resource-card:focus-within .media-resource-preview-meta,
-      .media-resource-card:hover .media-resource-preview-summary,
-      .media-resource-card:focus-within .media-resource-preview-summary {
-        color: rgba(255, 255, 255, 0.72);
       }
 
       @keyframes media-resource-dot-pulse {
@@ -1049,8 +897,13 @@
           padding: 0 20px;
         }
 
+        .media-resource-hero .media-resource-container {
+          padding: 0 20px;
+        }
+
         .media-resource-hero {
-          padding: 54px 0 74px;
+          background-position: 72% center;
+          min-height: 563px;
         }
 
         .media-resource-hero h1 {
@@ -1088,7 +941,6 @@
         .media-resource-service-list li {
           white-space: normal;
         }
-
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1103,12 +955,28 @@
     <!-- MEDIA RESOURCE PAGE CSS - END -->
 
     <main class="media-resource-page">
+      <!-- Previous maroon hero retained for reference.
       <section
         class="media-resource-hero"
         aria-labelledby="media-resource-title"
       >
         <div class="media-resource-container">
-          <div class="media-resource-eyebrow">Media Center</div>
+          <h1 id="media-resource-title">
+            Watch, listen,<br />worship anywhere.
+          </h1>
+          <p>
+            Sermons, podcasts, and live services from The Woodlands Methodist
+            Church, gathered in one place so you never miss a word.
+          </p>
+        </div>
+      </section>
+      -->
+
+      <section
+        class="media-resource-hero"
+        aria-labelledby="media-resource-title"
+      >
+        <div class="media-resource-container">
           <h1 id="media-resource-title">
             Watch, listen,<br />worship anywhere.
           </h1>
@@ -1122,77 +990,6 @@
       <section class="media-resource-list-section" aria-label="Media resources">
         <div class="media-resource-container">
           <div class="media-resource-list">
-            <article class="media-resource-card">
-              <div class="media-resource-card-main">
-                <div class="media-resource-kicker">Sermons</div>
-                <div class="media-resource-title">Messages</div>
-                <div class="media-resource-description">
-                  Every Sunday message, archived and searchable.
-                </div>
-              </div>
-              <div class="media-resource-preview">
-                <div class="media-resource-preview-content">
-                  <div
-                    class="media-resource-thumb media-resource-thumb-messages"
-                    aria-hidden="true"
-                  >
-                    <i class="fas fa-play fa-2x" aria-hidden="true"></i>
-                  </div>
-                  <div
-                    class="media-resource-preview-copy media-resource-message-copy"
-                  >
-                    <div class="media-resource-preview-title">
-                      Browse Messages
-                    </div>
-                    <ul class="media-resource-service-list">
-                      <li>
-                        <a
-                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Chapel"
-                        >
-                          <span class="media-resource-service-name"
-                            >Chapel</span
-                          >
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Traditional"
-                        >
-                          <span class="media-resource-service-name"
-                            >Traditional</span
-                          >
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Harvest"
-                        >
-                          <span class="media-resource-service-name"
-                            >Harvest</span
-                          >
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Loft"
-                        >
-                          <span class="media-resource-service-name">Loft</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="media-resource-preview-footer">
-                  <a
-                    class="media-resource-button"
-                    href="https://thewoodlandsmethodist.org/messages"
-                    >View All Messages
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i
-                  ></a>
-                </div>
-              </div>
-            </article>
-
             <article class="media-resource-card">
               <div class="media-resource-card-main">
                 <div class="media-resource-kicker">
@@ -1211,13 +1008,13 @@
               <div class="media-resource-preview">
                 <div class="media-resource-preview-content">
                   <div
-                    class="media-resource-thumb media-resource-thumb-live"
+                    class="media-resource-thumb media-resource-thumb-icon"
                     aria-hidden="true"
                   >
                     <i class="fas fa-tv fa-2x" aria-hidden="true"></i>
                   </div>
                   <div
-                    class="media-resource-preview-copy media-resource-live-copy"
+                    class="media-resource-preview-copy media-resource-pill-copy"
                   >
                     <div class="media-resource-preview-title">
                       Watch Live Services
@@ -1272,9 +1069,75 @@
                     </ul>
                   </div>
                 </div>
+              </div>
+            </article>
+
+            <article class="media-resource-card">
+              <div class="media-resource-card-main">
+                <div class="media-resource-kicker">Video</div>
+                <div class="media-resource-title">Messages</div>
+                <div class="media-resource-description">
+                  Choose a worship community to watch the latest message or
+                  browse past sermon series.
+                </div>
+              </div>
+              <div class="media-resource-preview">
+                <div class="media-resource-preview-content">
+                  <div
+                    class="media-resource-thumb media-resource-thumb-icon"
+                    aria-hidden="true"
+                  >
+                    <i class="fas fa-play fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <div
+                    class="media-resource-preview-copy media-resource-pill-copy"
+                  >
+                    <div class="media-resource-preview-title">
+                      Watch Past Messages
+                    </div>
+                    <ul class="media-resource-service-list">
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Chapel"
+                        >
+                          <span class="media-resource-service-name"
+                            >Chapel</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Traditional"
+                        >
+                          <span class="media-resource-service-name"
+                            >Traditional</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Harvest"
+                        >
+                          <span class="media-resource-service-name"
+                            >Harvest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://thewoodlandsmethodist.org/messages?ContentFilter=Loft"
+                        >
+                          <span class="media-resource-service-name">Loft</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <div class="media-resource-preview-footer">
-                  <a class="media-resource-button" href="/live"
-                    >View All Services
+                  <a
+                    class="media-resource-button"
+                    href="https://thewoodlandsmethodist.org/messages"
+                    >View All Messages
                     <i class="fas fa-arrow-right" aria-hidden="true"></i
                   ></a>
                 </div>
@@ -1293,7 +1156,7 @@
               <div class="media-resource-preview">
                 <div class="media-resource-preview-content">
                   <div
-                    class="media-resource-thumb media-resource-thumb-podcast"
+                    class="media-resource-thumb media-resource-thumb-icon"
                     aria-hidden="true"
                   >
                     <i class="fas fa-microphone fa-2x" aria-hidden="true"></i>
@@ -1308,14 +1171,84 @@
                       <span style="height: 10px"></span>
                     </div>
                   </div>
-                  <div class="media-resource-preview-copy">
+                  <div
+                    class="media-resource-preview-copy media-resource-pill-copy"
+                  >
                     <div class="media-resource-preview-title">
                       Audio Channels
                     </div>
+                    <ul class="media-resource-service-list">
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/2O2NcIvTwZ4xzTfap0fSFR?si=b52e0503bc3f4769"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >The Harvest Podcast</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/2O2NcIvTwZ4xzTfap0fSFR?si=b52e0503bc3f4769"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Harvest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/6RqkplrSBvuQzHZtpJtCXQ?si=e8af50d55a954d44"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name">Loft</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/4lR1fG2QKcsUOJfRLKct7m?si=c1d9427660c54a94"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Woodforest</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/5H89ju5WA6zQMvbe7GNlqj?si=014afff208ae4091"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Montgomery</span
+                          >
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://open.spotify.com/show/4P7YFZKGuWTNMHiQ5qGRCd?si=ecf7c4bf84024135"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span class="media-resource-service-name"
+                            >Creekside</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="media-resource-preview-footer">
-                  <a class="media-resource-button" href="/podcast"
+                  <a
+                    class="media-resource-button"
+                    href="https://thewoodlandsmethodist.org/podcast"
                     >View All Channels
                     <i class="fas fa-arrow-right" aria-hidden="true"></i
                   ></a>
@@ -1325,7 +1258,7 @@
 
             <article class="media-resource-card">
               <div class="media-resource-card-main">
-                <div class="media-resource-kicker">Video</div>
+                <div class="media-resource-kicker"></div>
                 <div class="media-resource-title">YouTube</div>
                 <div class="media-resource-description">
                   Watch streamed services live at the scheduled time or anytime
@@ -1335,7 +1268,7 @@
               <div class="media-resource-preview">
                 <div class="media-resource-preview-content">
                   <div
-                    class="media-resource-thumb media-resource-thumb-youtube"
+                    class="media-resource-thumb media-resource-thumb-icon"
                     aria-hidden="true"
                   >
                     <i
@@ -1344,7 +1277,7 @@
                     ></i>
                   </div>
                   <div
-                    class="media-resource-preview-copy media-resource-channel-copy"
+                    class="media-resource-preview-copy media-resource-pill-copy"
                   >
                     <div class="media-resource-preview-title">
                       Video Channels

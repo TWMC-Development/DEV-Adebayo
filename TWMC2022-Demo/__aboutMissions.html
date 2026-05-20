@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Missions</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
+
+    <link rel="stylesheet" href="./css/nw-main2023.css">
+    <link rel="stylesheet" href="./css/nw-navbar.css">
+    <link rel="stylesheet" href="./css/nw-grow.css">
+    <link rel="stylesheet" href="./css/seasonal.css">
+    <link rel="stylesheet" href="./css/sparkle.css">
+    <link rel="stylesheet" href="./css/utilities-templates.css">
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/85947205a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top-->
+    <div class="navbar-container navbar-twmc-top">
+        <div class="navbar-top-flex-container desktop-top-menu">
+            <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
+            <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
+            <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
+            <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>
+            <a href="/creekside" class="navbar-top-flex-item navbar-top-link">Creekside</a>
+        </div>
+
+        <div class="mobile-dropdown-menu navbar-top-flex-container">
+            <div class="dropdown navbar-top-flex-item">
+                <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Locations
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+                    <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
+                    <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
+                    <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+                    <li><a href="/creekside" class="navbar-top-flex-item">Creekside</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+        <div class="navbar-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar navbar-bottom-icon-bar"></span>
+                    <span class="icon-bar navbar-bottom-icon-bar"></span>
+                    <span class="icon-bar navbar-bottom-icon-bar"></span>
+                </button>
+                <a href="/home">
+                    <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="TWMC logo" class="navbar-bottom-logo">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Nav desktop -->
+                <div class="nav navbar-nav navbar-right navbar-bottom-right">
+                    <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+                    <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+                    <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+                    <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+                    <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+                    <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
+                    <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+
+                    <div class="dropdown-menu navbar-bottom-dropdownmenu">
+                        <div class="nav navbar-nav navbar-bottom-megamenu">
+                            <div class="megamenu-main-menu">
+                                <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                                <a href="/im-new" class="megamenu-link">Visit</a>
+                                <a href="/gather" class="megamenu-link">Grow</a>
+                                <a href="/messages/Traditional" class="megamenu-link">Messages</a>
+                                <a href="/outward" class="megamenu-link">Serve</a>
+                                <a href="/give" class="megamenu-link">Give</a>
+                                <a href="/login" class="megamenu-link">Login</a>
+                                <a href="/Find" class="megamenu-link">Search</a>
+
+                                <h3 class="megamenu-h3">Services</h3>
+                                <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Chapel</span></a>
+                                <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                                <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                                <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                            </div>
+
+                            <div class="megamenu-about">
+                                <h3 class="megamenu-h3">About</h3>
+                                <a href="/baptism" class="megamenu-link">Baptism</a>
+                                <a href="/our-story" class="megamenu-link">Our Stories</a>
+                                <a href="/membership" class="megamenu-link">Membership</a>
+                                <a href="/staff" class="megamenu-link">Staff</a>
+                                <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                                <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+                                <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                                <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                                <a href="/live" class="megamenu-link">Church Online</a>
+                            </div>
+
+                            <div class="megamenu-services">
+                                <h3 class="megamenu-h3">Connect</h3>
+                                <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                                <a href="/events" class="megamenu-link">Events</a>
+                                <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                                <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                                <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+                                <h3 class="megamenu-h3">NextGen</h3>
+                                <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                                <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+                                <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                                <p> NextGen College (Ages 18-23)</p>
+                            </div>
+
+                            <div class="megamenu-ministries">
+                                <h3 class="megamenu-h3">Ministries</h3>
+                                <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                                <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                                <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                                <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                                <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                                <a href="/marriage" class="megamenu-link">Marriage</a>
+                                <a href="/men" class="megamenu-link">Men</a>
+                                <a href="/missions" class="megamenu-link">Missions</a>
+                                <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                                <a href="/recreation" class="megamenu-link">Recreation</a>
+                                <a href="/singles" class="megamenu-link">Singles</a>
+                                <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                                <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                                <a href="/women" class="megamenu-link">Women</a>
+                                <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nav mobile -->
+                <div class="dropdown-menu navbar-bottom-mobile">
+                    <div class="navbar-bottom-mobile--main-menu">
+                        <h3 class="megamenu-h3">Main Menu</h3>
+                        <a href="/im-new" class="megamenu-link">Visit</a>
+                        <a href="/gather" class="megamenu-link">Grow</a>
+                        <a href="/messages" class="megamenu-link">Messages</a>
+                        <a href="/outward" class="megamenu-link">Serve</a>
+                        <a href="/give" class="megamenu-link">Give</a>
+                        <a href="/login" class="megamenu-link">Login</a>
+                        <a href="/Find" class="megamenu-link">Search</a>
+
+                        <h3 class="megamenu-h3">Services</h3>
+                        <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Chapel</span></a>
+                        <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
+                        <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
+                        <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+                    </div>
+
+                    <div class="navbar-bottom-mobile--about">
+                        <h3 class="megamenu-h3">About</h3>
+                        <a href="/baptism" class="megamenu-link">Baptism</a>
+                        <a href="/our-story" class="megamenu-link">Our Stories</a>
+                        <a href="/membership" class="megamenu-link">Membership</a>
+                        <a href="/staff" class="megamenu-link">Staff</a>
+                        <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                        <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+                        <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                        <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                        <a href="/live" class="megamenu-link">Church Online</a>
+                    </div>
+
+                    <div class="navbar-bottom-mobile--services">
+                        <h3 class="megamenu-h3">Connect</h3>
+                        <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                        <a href="/events" class="megamenu-link">Events</a>
+                        <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                        <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                        <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+                        <h3 class="megamenu-h3">NextGen</h3>
+                        <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                        <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+                        <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                        <p> NextGen College (Ages 18-23)</p>
+                    </div>
+
+                    <div class="navbar-bottom-mobile--ministries">
+                        <h3 class="megamenu-h3">Ministries</h3>
+                        <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                        <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                        <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                        <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                        <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                        <a href="/marriage" class="megamenu-link">Marriage</a>
+                        <a href="/men" class="megamenu-link">Men</a>
+                        <a href="/missions" class="megamenu-link">Missions</a>
+                        <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                        <a href="/recreation" class="megamenu-link">Recreation</a>
+                        <a href="/singles" class="megamenu-link">Singles</a>
+                        <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                        <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                        <a href="/women" class="megamenu-link">Women</a>
+                        <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ===== NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- ABOUT MISSIONS PAGE CSS - START -->
+    <style>
+        .about-missions-page {
+            background-color: #fff;
+        }
+
+        .about-missions-page .about-missions-intro {
+            padding: 4.5rem 0 3.5rem;
+        }
+
+        .about-missions-page .about-missions-kicker {
+            color: #862633;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            letter-spacing: 1.4px;
+            line-height: 1.4;
+            margin: 0 0 1rem;
+            text-transform: uppercase;
+        }
+
+        .about-missions-page .about-missions-lead {
+            border-left: 4px solid #862633;
+            color: #333;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin: 0 0 2rem;
+            padding-left: 1.25rem;
+        }
+
+        .about-missions-page .about-missions-content {
+            padding: 0 0 5rem;
+        }
+
+        .about-missions-page .about-missions-photos {
+            padding: 0 0 4rem;
+        }
+
+        .about-missions-page .about-missions-photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .about-missions-page .about-missions-photo-card {
+            background-color: #f0efee;
+            border-radius: 4px;
+            color: inherit;
+            display: block;
+            flex: 1 1 0;
+            min-width: 0;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .about-missions-page .about-missions-photo-card:hover,
+        .about-missions-page .about-missions-photo-card:focus {
+            text-decoration: none;
+        }
+
+        .about-missions-page .about-missions-photo-card img {
+            aspect-ratio: 4 / 3;
+            display: block;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .about-missions-page .about-missions-photo-card p {
+            color: #333;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 1rem;
+            text-transform: uppercase;
+        }
+
+        .about-missions-page .about-missions-section {
+            border-top: 1px solid #e2e0de;
+            padding: 2.5rem 0 0;
+            margin-top: 2.5rem;
+        }
+
+        .about-missions-page .about-missions-section:first-child {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .about-missions-page .about-missions-panel {
+            background-color: #f0efee;
+            border-top: 4px solid #862633;
+            border-radius: 4px;
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+
+        .about-missions-page .about-missions-panel h4 {
+            margin-top: 0;
+        }
+
+        .about-missions-page .about-missions-wide-image {
+            margin: 3rem auto 0;
+            max-width: 760px;
+        }
+
+        .about-missions-page .about-missions-wide-image img {
+            aspect-ratio: 16 / 7;
+            border-radius: 4px;
+            display: block;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .about-missions-page .about-missions-wide-image p {
+            color: #5c5c5c;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin: 0.75rem 0 0;
+        }
+
+        .about-missions-page .about-missions-list {
+            margin-bottom: 1.5rem;
+            margin-left: 1.4rem;
+            padding-left: 0;
+        }
+
+        .about-missions-page .about-missions-list li {
+            margin-bottom: 0.7rem;
+        }
+
+        .about-missions-page .about-missions-quote {
+            background-color: #f0efee;
+            border-left: 4px solid #862633;
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin: 1rem 0 2rem;
+            padding: 1.25rem 1.5rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .about-missions-page .about-missions-intro {
+                padding: 3rem 0 2.5rem;
+            }
+
+            .about-missions-page .about-missions-panel {
+                padding: 1.5rem;
+            }
+
+            .about-missions-page .about-missions-photo-card {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    <!-- ABOUT MISSIONS PAGE CSS - END -->
+
+    <!-- ABOUT MISSIONS PAGE CONTENT - START -->
+    <main class="about-missions-page">
+        <section class="about-missions-intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p class="about-missions-kicker">The heart of our Missions Ministry</p>
+                        <p class="about-missions-lead">&ldquo;Abide in me, and I in you. I am the vine; you are the branches. If you remain in me and I in you, you will bear much fruit&rdquo; (John 15:4-5).</p>
+                        <p class="twmc-p">This image of the vine and branches shapes our mission philosophy. We are joined together in Christ, drawing our life from Him, and it is only from that life-giving connection that fruitful ministry flows.</p>
+                        <p class="twmc-p">Mission does not begin with activity but with presence. Before we go, we remain. Before we serve, we abide. As we dwell in Christ, we begin to see the world as He sees it, noticing where God is already at work and joining Him there.</p>
+                        <p class="twmc-p">Paul reminded the early church that &ldquo;we are co-workers in God&rsquo;s service&rdquo; (1 Corinthians 3:9). We do not labor alone. We stand side-by-side with believers around the world, encouraging, praying, and bearing one another&rsquo;s burdens as partners in God&rsquo;s mission.</p>
+                        <p class="twmc-p">We also believe mission begins with seeing. We honor the dignity, gifts, and leadership of those we serve alongside. People are not projects, but partners. Transformation happens through presence, listening, and shared life.</p>
+                        <p class="twmc-p mb-0">Guided by these convictions, the Missions Ministry of The Woodlands Methodist Church seeks to build Christ-centered, mutually beneficial partnerships that proclaim the Gospel, make disciples, and embody the love of Christ through word and deed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-missions-photos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="about-missions-photo-grid">
+                            <a class="about-missions-photo-card" href="https://people.thewoodlandsmethodist.org/globalmissions">
+                                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=151348" alt="Global missions team serving together" />
+                                <p>Global Missions</p>
+                            </a>
+                            <a class="about-missions-photo-card" href="https://people.thewoodlandsmethodist.org/outward">
+                                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=151345" alt="Local missions volunteers serving in the community" />
+                                <p>Local Missions</p>
+                            </a>
+                            <a class="about-missions-photo-card" href="https://people.thewoodlandsmethodist.org/global-partners">
+                                <img src="https://www.thewoodlandsmethodist.org/Content/web/MIS_WGO_International.jpg" alt="International ministry partners gathered for mission work" />
+                                <p>Ministry Partners</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-missions-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="about-missions-section">
+                            <h3 class="twmc-h3 mb-3">HOW IT BEGAN</h3>
+                            <p class="twmc-p">Soon after the founding of The Woodlands Methodist Church, Rev. Dr. Ed Robb recognized the importance of supporting missionaries and ministries around the world for the advancement of God&rsquo;s Kingdom. About that same time, the Methodist Women&rsquo;s Circle began a Craft Circle to raise funding for missions. Dr. Robb&rsquo;s conviction, still shared by the pastoral and lay leadership of the church today, was that the true heartbeat of a church is revealed in how it reaches others for Jesus Christ, both in communities surrounding the church and across the globe.</p>
+                            <p class="twmc-p mb-0">What began as a small group of faithful members organizing support for a handful of missionaries has grown into a thriving Missions Ministry overseen by a full-time pastor and staff, guided by a dedicated governance committee, supported by annual congregational faith promises, and impacting over 125 partners locally and globally. Still today, an expanded Craft Circle gives of their time, talent, and treasure to support the Missions Ministry.</p>
+                        </div>
+
+                        <div class="about-missions-section">
+                            <h3 class="twmc-h3 mb-3">WHO OVERSEES OUR MISSIONS MINISTRY?</h3>
+                            <p class="twmc-p">The Woodlands Methodist Church&rsquo;s Missions Ministry is governed by a Missions Committee of ten volunteers designated through the church&rsquo;s formal governance committee nominations process. The Committee includes a chairperson and nine at-large members who serve three-year terms, providing continuity and fresh perspective through rotating membership.</p>
+                            <p class="twmc-p">Our Missions Ministry is guided through prayerful discernment, spiritual accountability, and careful stewardship. The Committee is the formal voting body which faithfully discerns the vision and strategy for TWMC&rsquo;s Missions Ministry, selects effective ministry partners, and determines how available missions funds are distributed to those partners. The Committee meets at least bi-monthly to accomplish those objectives with additional meetings during annual planning periods.</p>
+                            <p class="twmc-p">The Committee is supported by a Missions Advisory Board composed of former Committee members who offer wisdom and insight regarding ministry partners. This Board works in an advisory capacity only with no voting privileges.</p>
+                            <p class="twmc-p">The chairperson serves as a member of the Church Council to engage with other church leadership for information sharing and overall church governance and also as a member of the Finance Committee to remain apprised of and contribute to church financial management.</p>
+                            <p class="twmc-p mb-0">Daily operations of the Missions Ministry are carried out by Missions Staff consisting of the Missions Pastor, a Director of Local Missions, and administrative support staff. The Missions Pastor provides spiritual leadership, nurtures relationships with ministry partners, and helps guide the church in living out its missional calling. Staff and Committee work together to ensure wise stewardship of resources and faithful engagement in God&rsquo;s mission.</p>
+                        </div>
+
+                        <div class="about-missions-section">
+                            <h3 class="twmc-h3 mb-3">HOW DO YOU DO ALL THIS?</h3>
+                            <p class="twmc-p">Funding for missions programs is obtained from three primary sources:</p>
+                            <ul class="twmc-p about-missions-list">
+                                <li>Annual faith promises from church members dedicated specifically for Missions activities,</li>
+                                <li>An annual craft boutique and auction held in conjunction with a gala coordinated by the Craft Circle and Missions Ministry staff, and</li>
+                                <li>Other non-pledged contributions received throughout the year from church members or others desiring to support our Missions Ministry.</li>
+                            </ul>
+                            <p class="twmc-p">All of these sources of Missions funding are separate and distinct from the annual stewardship and occasional capital campaigns of the church. The missions budget is managed independently from the church&rsquo;s general operating expenses, ensuring that designated contributions are faithfully directed toward mission partnerships and initiatives.</p>
+                            <p class="twmc-p mb-0">While Capital Campaigns have traditionally designated some portion of total campaign pledges to specific missional partners or projects, those are typically managed separately from general Missions Ministry activities.</p>
+
+                            <div class="about-missions-panel">
+                                <h4 class="twmc-h4">VISION</h4>
+                                <p class="twmc-p mb-4">The Missions Ministry of The Woodlands Methodist Church prayerfully discerns where God is moving locally and globally and joins Him through building Christ-centered, mutually beneficial partnerships that proclaim the Gospel, make disciples, and embody the love of Christ through word and deed.</p>
+
+                                <h4 class="twmc-h4">MISSION STATEMENTS</h4>
+                                <ul class="twmc-p about-missions-list mb-0">
+                                    <li>Cultivate deep, covenant-based relationships with individuals, churches, and ministries who are faithfully and effectively proclaiming Christ and serving in His name while walking together in humility and mutual learning as co-laborers in God&rsquo;s mission.</li>
+                                    <li>Equip and encourage members of The Woodlands Methodist Church to live as witnesses of Jesus through listening, learning, and serving alongside our partners across the street and around the world.</li>
+                                    <li>Engage the whole congregation in God&rsquo;s mission through prayer, generosity, and service so that the kingdom of God is made visible &ldquo;until the whole world knows.&rdquo;</li>
+                                </ul>
+                            </div>
+
+                            <p class="twmc-p mt-4">The Missions Committee has also developed a set of specific criteria designed to evaluate and strengthen our partnerships in a spirit of mutuality, prayer, and shared mission. These criteria guide both the selection of new partners and the ongoing review of existing partnerships and include the following:</p>
+                            <ul class="twmc-p about-missions-list">
+                                <li>Mission Alignment</li>
+                                <li>Impact &amp; Effectiveness</li>
+                                <li>Sustainability &amp; Leadership</li>
+                                <li>Financial Stewardship</li>
+                                <li>Congregational Engagement</li>
+                                <li>Spiritual Discernment &amp; Relationship Health</li>
+                            </ul>
+                            <p class="twmc-p">Each partner is evaluated at least once every three years, typically following their request for renewal of financial support, to discern whether the partnership with this missionary or ministry effectively meets the goals of our Missions Ministry as outlined in our Vision and Mission Statements, as measured using the criteria listed above.</p>
+                            <p class="twmc-p mb-0">Funding decisions for each partner consider spiritual and practical impact, strategic priorities, evaluation outcomes, and available resources. Certainly, the total available funding from the Missions Ministry funding sources described earlier is a key factor impacting the amount of support which can be provided to any and all partners.</p>
+
+                            <div class="about-missions-wide-image">
+                                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_um-army/umarmy-grid-9-small.jpg" alt="U.M. ARMY volunteers serving through hands-on construction ministry" />
+                                <p>Hands-on mission work gives our congregation practical ways to serve alongside neighbors and ministry partners.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-missions-section">
+                            <h3 class="twmc-h3 mb-3">SO HOW DO I GET INVOLVED?</h3>
+                            <p class="twmc-p">Paul&rsquo;s prayer for Philemon continues to shape us:</p>
+                            <p class="about-missions-quote">&ldquo;I pray that your partnership with us in the faith may be effective in deepening your understanding of every good thing we share for the sake of Christ&rdquo; (Philemon 1:6).</p>
+                            <p class="twmc-p">Every member of The Woodlands Methodist Church is invited and encouraged to participate in God&rsquo;s mission. Whether through prayer for our staff, committee, and ministry partners, participation in local missions activities or global mission trips, or financial support, your participation is a blessing that sustains our Missions Ministry.</p>
+                            <p class="twmc-p">Missions partners of The Woodlands Methodist Church enter into a covenant relationship with us as we share in the partnership for the Gospel. We invite our congregation to join in this same commitment:</p>
+                            <ul class="twmc-p about-missions-list">
+                                <li>Abide in Christ, remaining connected to the Vine who gives life.</li>
+                                <li>Walk as co-laborers in the gospel, strengthening one another through faithful friendship.</li>
+                                <li>Honor the dignity and calling of every person through listening, presence, and mutual respect.</li>
+                                <li>Encourage one another in prayer, presence, and love.</li>
+                                <li>Steward God&rsquo;s resources with integrity and purpose.</li>
+                                <li>Seek first the Kingdom of God, bearing fruit that will last, &ldquo;until the whole world knows.&rdquo;</li>
+                            </ul>
+                            <p class="twmc-p mb-0"><strong>We go because Christ sends us, and we remain because Christ abides in us.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ABOUT MISSIONS PAGE CONTENT - END -->
+
+    <!-- Footer -->
+    <style>
+        .footer-logo2 {
+            height: 50px;
+            margin-right: 10px;
+            max-width: 100%;
+        }
+
+        .footer-logo-gmc {
+            height: 30px;
+        }
+
+        .footer-text-gmc {
+            font-size: 0.7rem;
+        }
+
+        .footer-newlogo-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+            align-items: center;
+        }
+
+        .footer-gmc-div {
+            border-left: 1px solid white;
+            padding-left: 14px;
+        }
+
+        .footer-infos-wrapper {
+            margin-top: 1.8rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .footer-infos-wrapper {
+                margin-left: 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .footer-newlogo-wrapper {
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                align-items: flex-start;
+            }
+
+            .footer-logo2 {
+                height: 50px;
+                width: auto;
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+                border-bottom: 1px solid white;
+                padding-bottom: 10px;
+            }
+
+            .footer-gmc-div {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .footer-logo-gmc {
+                height: 25px;
+            }
+        }
+    </style>
+
+    <section class="footer-wrapper-twmc py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <div class="row">
+                        <div class="col-sm-7 footer-info-wrapper">
+                            <div class="footer-newlogo-wrapper">
+                                <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo2">
+
+                                <div class="mt-0 footer-gmc-div">
+                                    <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
+                                    <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="" class="footer-logo-gmc mb-1">
+                                </div>
+                            </div>
+
+                            <div class="footer-infos-wrapper">
+                                <p class="footer-info align-center">
+                                    <i class="fas fa-church mr-1"></i>
+                                    <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="_blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+                                </p>
+                                <p class="footer-info">
+                                    <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                                    <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                                </p>
+                            </div>
+
+                            <div class="my-3">
+                                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook footer-socmed-icon" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
+                                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-1"></div>
+
+                        <div class="col-sm-4 footer-flex-container">
+                            <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+                            <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+                            <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+                            <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+                            <a href="/indoor-playgrounds" class="footer-flex-item footer-link">Indoor Playgrounds</a>
+                            <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
+                            <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+                            <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+</body>
+</html>
