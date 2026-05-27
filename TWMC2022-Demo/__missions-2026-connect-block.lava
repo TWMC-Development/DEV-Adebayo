@@ -1,6 +1,4 @@
 <style>
-    {% assign geezerSquadVimeoSrc = 'https://player.vimeo.com/video/1194728359' %}
-
     /* Tweaks */
     .connect25--tag-redgrey {
         margin-right: 0;
@@ -26,160 +24,6 @@
     /* EF updates Jun 2, 2025 */
     .post-type-container {
         flex-wrap: wrap;
-    }
-
-    .connect25-video-poster {
-        border: 0;
-        color: #fff;
-        cursor: pointer;
-        display: block;
-        overflow: hidden;
-        padding: 0;
-        position: relative;
-        text-align: left;
-    }
-
-    .connect25-video-poster::before {
-        background: linear-gradient(180deg, rgba(20, 20, 20, 0) 35%, rgba(20, 20, 20, .66) 100%);
-        content: "";
-        inset: 0;
-        opacity: .58;
-        position: absolute;
-        transition: opacity .2s ease-in-out;
-    }
-
-    .connect25-video-poster::after {
-        background: rgba(0, 0, 0, .18);
-        content: "";
-        inset: 0;
-        opacity: 0;
-        position: absolute;
-        transition: opacity .2s ease-in-out;
-    }
-
-    .connect25-video-poster:hover::before,
-    .connect25-video-poster:focus-visible::before {
-        opacity: .92;
-    }
-
-    .connect25-video-poster:hover::after,
-    .connect25-video-poster:focus-visible::after {
-        opacity: 1;
-    }
-
-    .connect25-video-poster:focus-visible {
-        outline: 3px solid #fff;
-        outline-offset: -6px;
-    }
-
-    .connect25-video-poster__cue {
-        align-items: center;
-        background: rgba(255, 255, 255, .95);
-        border-radius: 999px;
-        color: #333;
-        display: inline-flex;
-        font-size: .84rem;
-        font-weight: 700;
-        gap: .55rem;
-        left: 50%;
-        line-height: 1;
-        padding: .8rem 1rem;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -42%);
-        transition: background-color .2s ease-in-out, transform .2s ease-in-out;
-        white-space: nowrap;
-        z-index: 1;
-    }
-
-    .connect25-video-poster:hover .connect25-video-poster__cue,
-    .connect25-video-poster:focus-visible .connect25-video-poster__cue {
-        background: #fff;
-        transform: translate(-50%, -50%);
-    }
-
-    .connect25-video-poster__icon {
-        align-items: center;
-        background: #862633;
-        border-radius: 50%;
-        display: inline-flex;
-        height: 1.9rem;
-        justify-content: center;
-        width: 1.9rem;
-    }
-
-    .connect25-video-poster__icon::before {
-        border-bottom: .42rem solid transparent;
-        border-left: .68rem solid #fff;
-        border-top: .42rem solid transparent;
-        content: "";
-        margin-left: .14rem;
-    }
-
-    .connect25-cardsm--ribbon.connect25-video-poster .connect25-video-poster__cue {
-        font-size: 0;
-        padding: .45rem;
-    }
-
-    .connect25-video-modal {
-        align-items: center;
-        background: rgba(20, 20, 20, .82);
-        display: none;
-        inset: 0;
-        justify-content: center;
-        padding: 1.25rem;
-        position: fixed;
-        z-index: 11000;
-    }
-
-    .connect25-video-modal.is-open {
-        display: flex;
-    }
-
-    .connect25-video-modal__dialog {
-        background: #111;
-        border-radius: 8px;
-        box-shadow: 0 18px 60px rgba(0, 0, 0, .42);
-        max-width: 960px;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-    }
-
-    .connect25-video-modal__close {
-        align-items: center;
-        background: rgba(0, 0, 0, .72);
-        border: 1px solid rgba(255, 255, 255, .36);
-        border-radius: 50%;
-        color: #fff;
-        display: flex;
-        font-size: 1.65rem;
-        height: 2.6rem;
-        justify-content: center;
-        line-height: 1;
-        padding: 0 0 .18rem;
-        position: absolute;
-        right: .85rem;
-        top: .85rem;
-        width: 2.6rem;
-        z-index: 1;
-    }
-
-    .connect25-video-modal__close:hover,
-    .connect25-video-modal__close:focus-visible {
-        background: #862633;
-    }
-
-    .connect25-video-modal__frame {
-        aspect-ratio: 16 / 9;
-        background: #000;
-        width: 100%;
-    }
-
-    .connect25-video-modal__frame iframe {
-        border: 0;
-        height: 100%;
-        width: 100%;
     }
 </style>
 
@@ -235,15 +79,9 @@
 
                                     <div class="connect25--flex-item connect25-cardlg-ribbon-card--wrapper">
                                         <div class="connect25--flex-item-lg twmc-pbsmall">
-                                            {% if item.Title == 'The Geezer Squad' %}
-                                                <button type="button" class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 connect25-video-poster py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');" data-connect25-video-open data-vimeo-src="{{ geezerSquadVimeoSrc }}" aria-label="Play The Geezer Squad video">
-                                                    <span class="connect25-video-poster__cue"><span class="connect25-video-poster__icon" aria-hidden="true"></span>Play Video</span>
-                                                </button>
-                                            {% else %}
-                                                <div class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');">
-                                                    <div class="connect25-cardlg--ribbon-inner"></div>
-                                                </div>
-                                            {% endif %}
+                                            <div class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');">
+                                                <div class="connect25-cardlg--ribbon-inner"></div>
+                                            </div>
                                             <div class="connect25-cardlg-ribbon-card--inner-wrapper">
                                                 <div>
                                                     <p class="connect25-cardlg-card--title mb-2 mt-2"><strong>{{ item.Title }}</strong></p>
@@ -279,15 +117,9 @@
                                         </div>
 
                                         <div class="connect25--flex-item-sm connect25-cardsm-ribbon-card--wrapper a-connect25-sm">
-                                            {% if item.Title == 'The Geezer Squad' %}
-                                                <button type="button" class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 connect25-video-poster py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');" data-connect25-video-open data-vimeo-src="{{ geezerSquadVimeoSrc }}" aria-label="Play The Geezer Squad video">
-                                                    <span class="connect25-video-poster__cue"><span class="connect25-video-poster__icon" aria-hidden="true"></span>Play Video</span>
-                                                </button>
-                                            {% else %}
-                                                <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');">
-                                                    <div class="connect25-cardsm--ribbon-inner"></div>
-                                                </div>
-                                            {% endif %}
+                                            <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid={{ imageGuid }}');">
+                                                <div class="connect25-cardsm--ribbon-inner"></div>
+                                            </div>
                                             <div class="connect25-cardsm-ribbon-card--inner-wrapper">
                                                 <a href="{{ item | Attribute:'Link','RawValue' }}" class="a-connect25-sm" title="Learn More" target="_blank">
                                                     <h4 class="twmc-h4 connect25-cardsm-card--title mb-1">{{ item.Title }}</h4>
@@ -317,15 +149,6 @@
     </div>
 </section>
 
-<div class="connect25-video-modal" id="connect25-geezer-video-modal" aria-hidden="true">
-    <div class="connect25-video-modal__dialog" role="dialog" aria-modal="true" aria-label="The Geezer Squad video">
-        <button class="connect25-video-modal__close" type="button" data-connect25-video-close aria-label="Close video">&times;</button>
-        <div class="connect25-video-modal__frame">
-            <iframe title="The Geezer Squad video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
 <script>
     function createExcerptForElements(selector, maxLength = 100) {
         document.querySelectorAll(selector).forEach((element) => {
@@ -346,53 +169,4 @@
         });
     }
     createExcerptForElements2("p.connect25-cardlg-excerpt", 250);
-
-    (function () {
-        const modal = document.getElementById("connect25-geezer-video-modal");
-        if (!modal) {
-            return;
-        }
-
-        const frame = modal.querySelector("iframe");
-        const closeButton = modal.querySelector("[data-connect25-video-close]");
-        let lastTrigger = null;
-
-        function withAutoplay(src) {
-            return src + (src.indexOf("?") === -1 ? "?" : "&") + "autoplay=1&title=0&byline=0&portrait=0";
-        }
-
-        function closeVideo() {
-            modal.classList.remove("is-open");
-            modal.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-            frame.removeAttribute("src");
-
-            if (lastTrigger) {
-                lastTrigger.focus();
-            }
-        }
-
-        document.addEventListener("click", function (event) {
-            const trigger = event.target.closest("[data-connect25-video-open]");
-            if (trigger) {
-                lastTrigger = trigger;
-                frame.src = withAutoplay(trigger.getAttribute("data-vimeo-src"));
-                modal.classList.add("is-open");
-                modal.setAttribute("aria-hidden", "false");
-                document.body.style.overflow = "hidden";
-                closeButton.focus();
-                return;
-            }
-
-            if (event.target === modal || event.target.closest("[data-connect25-video-close]")) {
-                closeVideo();
-            }
-        });
-
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && modal.classList.contains("is-open")) {
-                closeVideo();
-            }
-        });
-    }());
 </script>

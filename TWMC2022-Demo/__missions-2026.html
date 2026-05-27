@@ -924,8 +924,273 @@
       href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/utilities-connect25.css"
     />
 
+    <style>
+      /* ===== GEEZER SQUAD CONNECT VIDEO: COPY TO ROCK RMS START ===== */
+      .connect25-video-poster {
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        text-align: left;
+      }
+
+      .connect25-video-poster::before {
+        background: linear-gradient(
+          180deg,
+          rgba(20, 20, 20, 0) 35%,
+          rgba(20, 20, 20, 0.66) 100%
+        );
+        content: "";
+        inset: 0;
+        opacity: 0.58;
+        position: absolute;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .connect25-video-poster::after {
+        background: rgba(0, 0, 0, 0.18);
+        content: "";
+        inset: 0;
+        opacity: 0;
+        position: absolute;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .connect25-video-poster:hover::before,
+      .connect25-video-poster:focus-visible::before {
+        opacity: 0.92;
+      }
+
+      .connect25-video-poster:hover::after,
+      .connect25-video-poster:focus-visible::after {
+        opacity: 1;
+      }
+
+      .connect25-video-poster:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: -6px;
+      }
+
+      .connect25-video-poster__cue {
+        align-items: center;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 999px;
+        color: #333;
+        display: inline-flex;
+        font-size: 0.84rem;
+        font-weight: 700;
+        gap: 0.55rem;
+        left: 50%;
+        line-height: 1;
+        padding: 0.8rem 1rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -42%);
+        transition:
+          background-color 0.2s ease-in-out,
+          transform 0.2s ease-in-out;
+        white-space: nowrap;
+        z-index: 1;
+      }
+
+      .connect25-video-poster:hover .connect25-video-poster__cue,
+      .connect25-video-poster:focus-visible .connect25-video-poster__cue {
+        background: #fff;
+        transform: translate(-50%, -50%);
+      }
+
+      .connect25-video-poster__icon {
+        align-items: center;
+        background: #862633;
+        border-radius: 50%;
+        display: inline-flex;
+        height: 1.9rem;
+        justify-content: center;
+        width: 1.9rem;
+      }
+
+      .connect25-video-poster__icon::before {
+        border-bottom: 0.42rem solid transparent;
+        border-left: 0.68rem solid #fff;
+        border-top: 0.42rem solid transparent;
+        content: "";
+        margin-left: 0.14rem;
+      }
+
+      .connect25-cardsm--ribbon.connect25-video-poster
+        .connect25-video-poster__cue {
+        font-size: 0;
+        padding: 0.45rem;
+      }
+
+      .connect25-video-modal {
+        align-items: center;
+        background: rgba(20, 20, 20, 0.82);
+        display: none;
+        inset: 0;
+        justify-content: center;
+        padding: 1.25rem;
+        position: fixed;
+        z-index: 11000;
+      }
+
+      .connect25-video-modal.is-open {
+        display: flex;
+      }
+
+      .connect25-video-modal__dialog {
+        background: #111;
+        border-radius: 8px;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+        max-width: 960px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      .connect25-video-modal__close {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        font-size: 1.65rem;
+        height: 2.6rem;
+        justify-content: center;
+        line-height: 1;
+        padding: 0 0 0.18rem;
+        position: absolute;
+        right: 0.85rem;
+        top: 0.85rem;
+        width: 2.6rem;
+        z-index: 1;
+      }
+
+      .connect25-video-modal__close:hover,
+      .connect25-video-modal__close:focus-visible {
+        background: #862633;
+      }
+
+      .connect25-video-modal__frame {
+        aspect-ratio: 16 / 9;
+        background: #000;
+        width: 100%;
+      }
+
+      .connect25-video-modal__frame iframe {
+        border: 0;
+        height: 100%;
+        width: 100%;
+      }
+      /* ===== GEEZER SQUAD CONNECT VIDEO: COPY TO ROCK RMS END ===== */
+    </style>
+
     <div id="missions-connect-block"></div>
     <script>
+      const geezerSquadVimeoSrc = "https://player.vimeo.com/video/1194728359";
+
+      function initializeGeezerSquadConnectVideo(connectBlock) {
+        if (
+          !connectBlock ||
+          document.getElementById("connect25-geezer-video-modal")
+        ) {
+          return;
+        }
+
+        connectBlock
+          .querySelectorAll(".connect25--flex-item")
+          .forEach(function (card) {
+            const title = card.querySelector(
+              ".connect25-cardlg-card--title, .connect25-cardsm-card--title",
+            );
+
+            if (!title || title.textContent.trim() !== "The Geezer Squad") {
+              return;
+            }
+
+            card
+              .querySelectorAll(
+                ".connect25-cardlg--ribbon, .connect25-cardsm--ribbon",
+              )
+              .forEach(function (poster) {
+                const playButton = document.createElement("button");
+                playButton.type = "button";
+                playButton.className =
+                  poster.className + " connect25-video-poster";
+                playButton.setAttribute("style", poster.getAttribute("style"));
+                playButton.setAttribute("data-connect25-video-open", "");
+                playButton.setAttribute("data-vimeo-src", geezerSquadVimeoSrc);
+                playButton.setAttribute(
+                  "aria-label",
+                  "Play The Geezer Squad video",
+                );
+                playButton.innerHTML =
+                  '<span class="connect25-video-poster__cue"><span class="connect25-video-poster__icon" aria-hidden="true"></span>Play Video</span>';
+                poster.replaceWith(playButton);
+              });
+          });
+
+        document.body.insertAdjacentHTML(
+          "beforeend",
+          '<div class="connect25-video-modal" id="connect25-geezer-video-modal" aria-hidden="true"><div class="connect25-video-modal__dialog" role="dialog" aria-modal="true" aria-label="The Geezer Squad video"><button class="connect25-video-modal__close" type="button" data-connect25-video-close aria-label="Close video">&times;</button><div class="connect25-video-modal__frame"><iframe title="The Geezer Squad video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div></div></div>',
+        );
+
+        const modal = document.getElementById("connect25-geezer-video-modal");
+        const frame = modal.querySelector("iframe");
+        const closeButton = modal.querySelector("[data-connect25-video-close]");
+        let lastTrigger = null;
+
+        function withAutoplay(src) {
+          return (
+            src +
+            (src.indexOf("?") === -1 ? "?" : "&") +
+            "autoplay=1&title=0&byline=0&portrait=0"
+          );
+        }
+
+        function closeVideo() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          frame.removeAttribute("src");
+
+          if (lastTrigger) {
+            lastTrigger.focus();
+          }
+        }
+
+        document.addEventListener("click", function (event) {
+          const trigger = event.target.closest("[data-connect25-video-open]");
+
+          if (trigger) {
+            lastTrigger = trigger;
+            frame.src = withAutoplay(trigger.getAttribute("data-vimeo-src"));
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            closeButton.focus();
+            return;
+          }
+
+          if (
+            event.target === modal ||
+            event.target.closest("[data-connect25-video-close]")
+          ) {
+            closeVideo();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeVideo();
+          }
+        });
+      }
+
       fetch("./__inspectElement-missions-page.html")
         .then(function (response) {
           if (!response.ok) {
@@ -935,7 +1200,11 @@
           return response.text();
         })
         .then(function (html) {
-          document.getElementById("missions-connect-block").innerHTML = html;
+          const connectBlock = document.getElementById(
+            "missions-connect-block",
+          );
+          connectBlock.innerHTML = html;
+          initializeGeezerSquadConnectVideo(connectBlock);
         })
         .catch(function (error) {
           console.warn(error);

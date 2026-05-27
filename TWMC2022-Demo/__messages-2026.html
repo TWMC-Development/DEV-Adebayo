@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messages | The Woodlands Methodist Church | Woodlands Texas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/_LIVE_bootstrap_v1.1.70.css">
+  <link rel="stylesheet" href="css/_LIVE_theme_1.1.70.css">
+  <link rel="stylesheet" href="css/_LIVE_main_v1.1.70.css">
+  <link rel="stylesheet" href="css/_LIVE_seasonal_v1.1.70.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/_LIVE_nw-main2023_v1.1.70.css">
+  <link rel="stylesheet" href="css/nw-navbar.css">
+  <link rel="stylesheet" href="css/_LIVE_nw-grow_v1.1.70.css">
+  <link rel="stylesheet" href="css/_LIVE_nw-seasonal_v1.1.70.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root {
+      --replica-red: #862633;
+      --replica-dark: #222;
+      --replica-light-brown: #d3d0cd;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      color: #333;
+      background: #fff;
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857143;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .replica-topbar {
+      height: 55px;
+      background: #f1f0ef;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 8%;
+      gap: 28px;
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e1e1e;
+    }
+
+    .replica-topbar a {
+      color: #1e1e1e;
+    }
+
+    .replica-navbar {
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8%;
+      background: #fff;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .replica-navbar__logo {
+      width: 230px;
+      height: auto;
+      display: block;
+    }
+
+    .replica-navbar__links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #222;
+    }
+
+    .replica-navbar__links a {
+      color: #222;
+      white-space: nowrap;
+    }
+
+    .replica-beyond {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+    }
+
+    .replica-login {
+      border: 2px solid #6f6f6f;
+      border-radius: 2px;
+      padding: 7px 17px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: none;
+    }
+
+    .replica-menu-icon {
+      font-size: 18px;
+    }
+
+    .replica-title-stripe {
+      height: 108px;
+      background: var(--replica-red);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .replica-title-stripe h1 {
+      margin: 0;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .replica-filter-area {
+      min-height: 273px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 50px;
+      background: #fff;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .replica-filter-inner {
+      width: 100%;
+      max-width: 860px;
+      text-align: center;
+    }
+
+    .replica-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .replica-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 43px;
+      padding: 0 18px;
+      border: 2px solid var(--replica-red);
+      border-radius: 4px;
+      background: var(--replica-red);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .replica-btn:hover,
+    .replica-btn:focus {
+      color: #fff;
+      background: #5e1b24;
+      border-color: #5e1b24;
+    }
+
+    .replica-dropdown {
+      gap: 20px;
+      min-width: 210px;
+    }
+
+    .replica-podcast {
+      margin-top: 2px;
+      min-width: 190px;
+    }
+
+    .replica-latest {
+      padding: 110px 0 109px;
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)),
+        url("messages-replica-assets/latest.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .replica-content-container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 8%;
+    }
+
+    .replica-latest-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4%;
+    }
+
+    .replica-latest-grid > * {
+      flex-basis: 47%;
+    }
+
+    .replica-latest-copy {
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      padding-top: 4px;
+    }
+
+    .replica-series-title {
+      margin: 0 0 7px;
+      color: #fff;
+      font-size: 32px;
+      font-style: italic;
+      font-weight: 300;
+      letter-spacing: 2px;
+      line-height: 1.25;
+    }
+
+    .replica-message-title {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 41px;
+      font-weight: 800;
+      line-height: 1.13;
+    }
+
+    .replica-message-meta {
+      margin: 0 0 23px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+    }
+
+    .replica-latest-buttons {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .replica-btn-white {
+      background: #fff;
+      border-color: #fff;
+      color: var(--replica-red);
+    }
+
+    .replica-btn-white:hover,
+    .replica-btn-white:focus {
+      background: #6e6259;
+      border-color: #6e6259;
+      color: #fff;
+    }
+
+    .replica-video {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    .replica-video-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #000;
+    }
+
+    .replica-video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .replica-archive {
+      padding: 156px 0 168px;
+      background: #fff;
+    }
+
+    .replica-archive h2 {
+      margin: 0 0 59px;
+      color: var(--replica-light-brown);
+      font-family: Montserrat, sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .replica-series-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 1260px;
+      margin: 0 auto;
+    }
+
+    .replica-series-card {
+      display: block;
+      overflow: hidden;
+      background: #eee;
+      aspect-ratio: 1.785 / 1;
+    }
+
+    .replica-series-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .replica-more {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+    }
+
+    .replica-more .replica-btn {
+      min-width: 215px;
+      min-height: 40px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 13px;
+    }
+
+    .replica-footer {
+      min-height: 350px;
+      padding: 68px 8% 54px;
+      color: #fff;
+      background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)),
+        url("messages-replica-assets/footer-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+      font-family: "Open Sans", Arial, sans-serif;
+    }
+
+    .replica-footer-inner {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 80px;
+      max-width: 1700px;
+      margin: 0 auto;
+    }
+
+    .replica-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 29px;
+    }
+
+    .replica-footer-logo {
+      width: 214px;
+      height: auto;
+    }
+
+    .replica-gmc {
+      border-left: 1px solid #fff;
+      padding-left: 16px;
+    }
+
+    .replica-gmc p {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .replica-gmc img {
+      width: 119px;
+      height: auto;
+    }
+
+    .replica-footer-info {
+      margin: 0 0 6px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .replica-footer-info i {
+      width: 18px;
+      margin-right: 3px;
+    }
+
+    .replica-socials {
+      display: flex;
+      gap: 11px;
+      margin-top: 13px;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .replica-socials a,
+    .replica-footer-links a {
+      color: #fff;
+    }
+
+    .replica-footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-top: 0;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: right;
+    }
+
+    .replica-language {
+      position: fixed;
+      right: 25px;
+      bottom: 0;
+      width: 102px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: #fff;
+      border: 1px solid #ddd;
+      color: #222;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 20;
+    }
+
+    @media (max-width: 1199px) {
+      .replica-navbar__links {
+        gap: 16px;
+        font-size: 12px;
+      }
+
+      .replica-latest-grid {
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .replica-topbar,
+      .replica-navbar__links {
+        display: none;
+      }
+
+      .replica-navbar {
+        height: 76px;
+      }
+
+      .replica-navbar::after {
+        content: "\f0c9";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 22px;
+      }
+
+      .replica-latest-grid {
+        display: block;
+      }
+
+      .replica-latest-grid > * {
+        width: 100%;
+      }
+
+      .replica-series-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .replica-filter-area {
+        padding: 32px 18px;
+      }
+
+      .replica-latest {
+        padding: 70px 0;
+      }
+
+      .replica-content-container {
+        padding: 0 30px;
+      }
+
+      .replica-archive {
+        padding: 95px 30px 110px;
+      }
+
+      .replica-archive h2 {
+        font-size: 52px;
+        letter-spacing: 5px;
+      }
+
+      .replica-series-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .replica-footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .replica-footer-links {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .replica-navbar__logo {
+        width: 190px;
+      }
+
+      .replica-series-title {
+        font-size: 24px;
+      }
+
+      .replica-message-title {
+        font-size: 34px;
+      }
+
+      .replica-series-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .replica-footer-brand {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .replica-gmc {
+        border-left: 0;
+        border-top: 1px solid #fff;
+        padding: 12px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="replica-topbar" aria-label="Locations">
+      <a href="#">The Woodlands</a>
+      <a href="#">Woodforest</a>
+      <a href="#">Montgomery</a>
+      <a href="#">Creekside</a>
+      <a href="#">Español</a>
+    </nav>
+
+    <nav class="replica-navbar" aria-label="Main navigation">
+      <a href="#">
+        <img class="replica-navbar__logo" src="messages-replica-assets/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+      <div class="replica-navbar__links">
+        <a href="#">Times &amp; Locations</a>
+        <a href="#">Visit</a>
+        <a href="#">Grow</a>
+        <a href="#">Messages</a>
+        <a href="#">Serve</a>
+        <a href="#">Give</a>
+        <a href="#"><img class="replica-beyond" src="messages-replica-assets/CAP_Beyond_Icon.png" alt=""></a>
+        <a class="replica-login" href="#">Login</a>
+        <a class="replica-menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="replica-title-stripe">
+    <h1>Messages</h1>
+  </section>
+
+  <main>
+    <section class="replica-filter-area" aria-label="Message filters">
+      <div class="replica-filter-inner">
+        <div class="replica-filter-row">
+          <a class="replica-btn" href="#">Chapel</a>
+          <a class="replica-btn" href="#">Traditional</a>
+          <a class="replica-btn" href="#">Harvest</a>
+          <a class="replica-btn" href="#">Loft</a>
+          <a class="replica-btn" href="#">The Woodlands - Espanol</a>
+          <a class="replica-btn" href="#">Woodforest</a>
+          <a class="replica-btn" href="#">Montgomery</a>
+          <a class="replica-btn" href="#">Creekside</a>
+        </div>
+        <div class="replica-filter-row">
+          <a class="replica-btn" href="#">Creekside - Espanol</a>
+          <a class="replica-btn replica-dropdown" href="#">Other Messages <i class="fa-solid fa-caret-down"></i></a>
+        </div>
+        <a class="replica-btn replica-podcast" href="#">Listen to Podcasts</a>
+      </div>
+    </section>
+
+    <section class="replica-latest">
+      <div class="replica-content-container">
+        <div class="replica-latest-grid">
+          <div class="replica-latest-copy">
+            <h2 class="replica-series-title">Count on It</h2>
+            <h3 class="replica-message-title">Peace</h3>
+            <p class="replica-message-meta">May 24, 2026 | Drew Essen</p>
+            <div class="replica-latest-buttons">
+              <a class="replica-btn replica-btn-white" href="#">View Series</a>
+              <a class="replica-btn" href="#"><i class="fa-solid fa-headphones"></i>&nbsp;Listen</a>
+            </div>
+          </div>
+
+          <div class="replica-video">
+            <div class="replica-video-frame">
+              <iframe src="https://player.vimeo.com/video/1195691672?loop=0&amp;title=0&amp;byline=0&amp;autoplay=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Peace"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="replica-archive">
+      <h2>Archive</h2>
+      <div class="replica-series-grid">
+        <a class="replica-series-card" href="#" aria-label="Count on It"><img src="messages-replica-assets/series-01.jpg" alt="Count on It"></a>
+        <a class="replica-series-card" href="#" aria-label="Anchored"><img src="messages-replica-assets/series-02.jpg" alt="Anchored"></a>
+        <a class="replica-series-card" href="#" aria-label="Easter 2026"><img src="messages-replica-assets/series-03.jpg" alt="Easter 2026"></a>
+        <a class="replica-series-card" href="#" aria-label="Holy Hunger"><img src="messages-replica-assets/series-04.jpg" alt="Holy Hunger"></a>
+        <a class="replica-series-card" href="#" aria-label="Shaken"><img src="messages-replica-assets/series-05.jpg" alt="Shaken"></a>
+        <a class="replica-series-card" href="#" aria-label="Standalone Message - January"><img src="messages-replica-assets/series-06.jpg" alt="Standalone Message - January"></a>
+        <a class="replica-series-card" href="#" aria-label="Standalone Message - December"><img src="messages-replica-assets/series-07.jpg" alt="Standalone Message - December"></a>
+        <a class="replica-series-card" href="#" aria-label="Emmanuel"><img src="messages-replica-assets/series-08.jpg" alt="Emmanuel"></a>
+        <a class="replica-series-card" href="#" aria-label="Missions 2026"><img src="messages-replica-assets/series-09.jpg" alt="Missions 2026"></a>
+        <a class="replica-series-card" href="#" aria-label="The Gospel of John"><img src="messages-replica-assets/series-10.jpg" alt="The Gospel of John"></a>
+        <a class="replica-series-card" href="#" aria-label="Truth Be Told"><img src="messages-replica-assets/series-11.jpg" alt="Truth Be Told"></a>
+        <a class="replica-series-card" href="#" aria-label="Holy Mysteries"><img src="messages-replica-assets/series-12.jpg" alt="Holy Mysteries"></a>
+      </div>
+      <div class="replica-more">
+        <a class="replica-btn" href="#">See More Series</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="replica-footer">
+    <div class="replica-footer-inner">
+      <div>
+        <div class="replica-footer-brand">
+          <img class="replica-footer-logo" src="messages-replica-assets/twumc-logo-white.png" alt="The Woodlands Methodist Church">
+          <div class="replica-gmc">
+            <p>Member of the</p>
+            <img src="messages-replica-assets/GMC_logo.png" alt="Global Methodist Church">
+          </div>
+        </div>
+        <p class="replica-footer-info"><i class="fa-solid fa-church"></i>2200 Lake Woodlands Drive, The Woodlands, TX 77380</p>
+        <p class="replica-footer-info"><i class="fa-solid fa-phone"></i>(281) 297-5900</p>
+        <div class="replica-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
+        </div>
+      </div>
+
+      <nav class="replica-footer-links" aria-label="Footer navigation">
+        <a href="#">What We Believe</a>
+        <a href="#">Facilities</a>
+        <a href="#">Employment</a>
+        <a href="#">Fireside Cafe</a>
+        <a href="#">Indoor Playgrounds</a>
+        <a href="#">Funerals &amp; Memorial Services</a>
+        <a href="#">Find Help &amp; Support</a>
+        <a href="#">My Account</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="replica-language">English <i class="fa-solid fa-chevron-right"></i></div>
+</body>
+</html>
