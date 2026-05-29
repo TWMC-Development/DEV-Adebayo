@@ -1,0 +1,1960 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/_LIVE_bootstrap_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_theme_1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_main_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_seasonal_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_nw-main2023_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/nw-navbar.css" />
+    <link rel="stylesheet" href="./css/_LIVE_nw-grow_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_nw-seasonal_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/sparkle.css" />
+    <link rel="stylesheet" href="./css/utilities-templates.css" />
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/85947205a9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    a.tw26-beyond-logo > img.img-responsive {
+      height: 34px;
+      width: auto;
+      padding: 0 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a.tw26-beyond-logo > img.img-responsive:hover,
+    a.tw26-beyond-logo > img.img-responsive:focus {
+      opacity: 0.7;
+    }
+
+    /* Updated Jan 2026 -- add Beyond icon */
+    @media only screen and (max-width: 1190px) {
+      .navbar-bottom-link {
+        font-size: 0.9rem;
+        padding: 0 10px;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 1050px) {
+      .navbar-bottom-link {
+        font-size: 0.85rem;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media only screen and (max-width: 1030px) {
+      .navbar-bottom-link {
+        font-size: 0.75rem;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.75rem;
+      }
+    }
+
+    .cls-text--dark {
+      color: #1f1b1a;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .cls-tag--tan {
+      display: inline-block;
+      color: #333;
+      font-size: 0.65rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background-color: #d2cdcc;
+      border: 1px solid #d2cdcc;
+      border-radius: 0.25rem;
+      padding: 0.3rem 0.55rem 0.2rem;
+      letter-spacing: 1px;
+      cursor: default;
+    }
+
+    .faq-text-link--reengage {
+      color: #323f4a;
+    }
+
+    .faq-text-link--reengage:hover,
+    .faq-text-link--reengage:focus {
+      color: #9e948e;
+    }
+
+    a.a-reengage,
+    a.a-reengage2 {
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      padding: 1px 0;
+      position: relative;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a.a-reengage {
+      background-image: linear-gradient(
+        to right,
+        #a99d8e,
+        #a99d8e 50%,
+        #766a5d 50%
+      );
+    }
+
+    a.a-reengage2 {
+      background-image: linear-gradient(
+        to right,
+        #c9d6e1,
+        #c9d6e1 50%,
+        #627c90 50%
+      );
+    }
+
+    a.a-reengage::before,
+    a.a-reengage2::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a.a-reengage::before {
+      background: #a99d8e;
+    }
+
+    a.a-reengage2::before {
+      background: #c9d6e1;
+    }
+
+    a.a-reengage:hover,
+    a.a-reengage:focus,
+    a.a-reengage2:hover,
+    a.a-reengage2:focus {
+      background-position: 0 0;
+    }
+
+    a.a-reengage:hover::before,
+    a.a-reengage:focus::before,
+    a.a-reengage2:hover::before,
+    a.a-reengage2:focus::before {
+      width: 100%;
+    }
+
+    .cls-btn-outline {
+      border: 2px solid #1f1b1a;
+      background-color: transparent;
+      color: #1f1b1a;
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .cls-btn-outline:hover,
+    .cls-btn-outline:focus {
+      border-color: #1f1b1a;
+      background-color: rgba(31, 27, 26, 0.1);
+      text-decoration: none;
+      color: #1f1b1a;
+      transform: scale(1.01);
+    }
+
+    #cls-featbanner,
+    .cls-featbanner {
+      background-color: #212125;
+      background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_reengage/MAR_ReEngage+FEATURE+BANNER+BG.png");
+      text-align: left;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 2rem 0;
+    }
+
+    .cls-hero--text-wrapper {
+      height: 650px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cls-hero--text-wrapper > img {
+      max-width: 90%;
+    }
+
+    .max-w1440 {
+      width: 100%;
+      max-width: 1440px;
+    }
+
+    #cls-intro-schedule {
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1),
+        rgba(151, 173, 186, 0.4)
+      );
+    }
+
+    #modalCls {
+      width: 700px;
+      margin-left: -350px;
+    }
+
+    .cls-modal-body {
+      padding: 1.5rem 2rem;
+      background-color: #f4f6f9;
+      color: #333;
+      min-height: max-content !important;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .cls-modal-header {
+      background-color: #c9d6e1;
+      color: #0e1113;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .twmc-cls--flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2%;
+      justify-content: center;
+    }
+
+    .twmc-cls--flex-item {
+      flex-basis: 49%;
+      overflow: visible;
+      margin-bottom: 20px;
+    }
+
+    .twmc-cls--card {
+      box-sizing: border-box;
+      background-color: #dde5ec;
+      padding: 1.7rem 2rem;
+      border-radius: 8px;
+    }
+
+    .twmc-cls--card,
+    .twmc-cls--card * {
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+
+    .cls-coming-soon {
+      margin-top: 1.15rem;
+    }
+
+    .cls-coming-soon__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      margin-bottom: 0.55rem;
+      color: #323f4a;
+      font-weight: 700;
+    }
+
+    .cls-coming-soon__row .twmc-icon-wrapper2 {
+      flex: 0 0 25px;
+      color: #766a5d;
+    }
+
+    .cls-coming-soon__note {
+      color: #5c5c5c;
+      font-size: 0.82rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin-top: 0.85rem;
+      margin-bottom: 0;
+    }
+
+    #cls-faq {
+      background-color: #fff;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0.7) 50%
+        ),
+        url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_reengage/BG+Splatter+Horizontal+Blue.png");
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .twmc-icon-wrapper2 {
+      width: 25px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      .cls-hero--text-wrapper > img {
+        width: 95%;
+        height: auto;
+      }
+    }
+
+    @media only screen and (max-width: 992px) {
+      #cls-featbanner,
+      .cls-featbanner,
+      .cls-hero--text-wrapper {
+        height: 600px;
+      }
+
+      .twmc-cls--flex-container {
+        display: block;
+        width: 100%;
+      }
+
+      .twmc-cls--flex-item {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #cls-featbanner,
+      .cls-featbanner,
+      .cls-hero--text-wrapper {
+        height: 550px;
+      }
+
+      #modalCls {
+        width: 90%;
+        margin-left: -45%;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      #cls-featbanner,
+      .cls-featbanner,
+      .cls-hero--text-wrapper {
+        height: 450px;
+      }
+
+      #cls-intro-schedule,
+      #cls-faq,
+      #cls-intro-schedule .container-fluid,
+      #cls-faq .container-fluid {
+        width: 100vw;
+        max-width: 100vw;
+      }
+
+      #cls-intro-schedule .row,
+      #cls-faq .row {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      #cls-intro-schedule [class*="col-"],
+      #cls-faq [class*="col-"] {
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+
+      #cls-intro-schedule .twmc-h1,
+      #cls-intro-schedule .twmc-h2,
+      #cls-faq h3 {
+        max-width: 330px;
+        margin-right: auto;
+        margin-left: auto;
+        line-height: 1.05;
+      }
+
+      #cls-intro-schedule .twmc-h1 {
+        font-size: 1.55rem !important;
+      }
+
+      #cls-intro-schedule .twmc-h2,
+      #cls-faq h3 {
+        font-size: 1.45rem !important;
+      }
+
+      .twmc-cls--card {
+        padding: 1.6rem 1.8rem;
+      }
+
+      .twmc-cls--card .twmc-p,
+      .twmc-cls--card strong,
+      .twmc-cls--card a {
+        word-break: break-word;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      #cls-featbanner,
+      .cls-featbanner,
+      .cls-hero--text-wrapper {
+        height: 400px;
+      }
+    }
+  </style>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top -->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <a href="/home" class="navbar-top-flex-item navbar-top-link"
+          >The Woodlands</a
+        >
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link"
+          >Woodforest</a
+        >
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link"
+          >Montgomery</a
+        >
+        <a href="/creekside" class="navbar-top-flex-item navbar-top-link"
+          >Creekside</a
+        >
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link"
+          >Español</a
+        >
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button
+            class="btn btn-white dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+          >
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="/home" class="navbar-top-flex-item">The Woodlands</a>
+            </li>
+            <li>
+              <a href="/woodforest" class="navbar-top-flex-item">Woodforest</a>
+            </li>
+            <li>
+              <a href="/montgomery" class="navbar-top-flex-item">Montgomery</a>
+            </li>
+            <li>
+              <a href="/creekside" class="navbar-top-flex-item">Creekside</a>
+            </li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed navbar-bottom-hamburger"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+            <!-- color logo -->
+            <img
+              src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png"
+              alt="TWMC logo"
+              class="navbar-bottom-logo"
+            />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div
+          class="collapse navbar-collapse navbar-bottom-collapse"
+          id="bs-example-navbar-collapse-1"
+        >
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+            <a href="/times-locations" class="navbar-bottom-link"
+              ><b>Times &amp; Locations</b></a
+            >
+            <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+            <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+            <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+            <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+            <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+            <!-- Beyond -->
+            <a
+              href="https://beyondcampaign.org/"
+              class="tw26-beyond-logo"
+              target="_blank"
+            >
+              <img
+                src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                alt=""
+                class="img-responsive"
+              />
+            </a>
+
+            <a
+              href="https://twmc.org/login"
+              class="btn btn-outline-lightgrey mx-2"
+              >Login</a
+            >
+
+            <!-- dropdown -->
+            <a
+              href="#"
+              class="dropdown-toggle navbar-bottom-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-bars"></i
+            ></a>
+
+            <div class="dropdown-menu navbar-bottom-dropdownmenu">
+              <!-- Mega menu -->
+              <div class="nav navbar-nav navbar-bottom-megamenu">
+                <!-- Main Menu -->
+                <div class="megamenu-main-menu">
+                  <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                  <a href="/times-locations" class="megamenu-link"
+                    >Times &amp; Locations</a
+                  >
+                  <a href="/im-new" class="megamenu-link">Visit</a>
+                  <a href="/gather" class="megamenu-link">Grow</a>
+                  <a href="/messages" class="megamenu-link">Messages</a>
+                  <a href="/outward" class="megamenu-link">Serve</a>
+                  <a href="/give" class="megamenu-link">Give</a>
+                  <a href="/login" class="megamenu-link">Login</a>
+                  <a href="https://beyondcampaign.org/" class="megamenu-link"
+                    ><span class="pr-2">Beyond Campaign</span
+                    ><img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                  /></a>
+
+                  <!-- Services -->
+                  <h3 class="megamenu-h3">Services</h3>
+                  <a href="/chapel" class="megamenu-link mt-3"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Chapel</span></a
+                  >
+                  <a href="/harvest" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Harvest</span></a
+                  >
+                  <a href="/loft" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Loft</span></a
+                  >
+                  <a href="/traditional" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Traditional</span></a
+                  >
+                  <a href="/house" class="megamenu-link"
+                    ><img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_logo/CYA_House_Bug.png"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">House</span></a
+                  >
+
+                  <!-- Socmed -->
+                  <div class="megamenu-socmed">
+                    <a
+                      href="https://www.instagram.com/woodlandsmethodistchurch/"
+                      ><i
+                        class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                      ><i
+                        class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a
+                      href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                      ><i
+                        class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a href="/podcast"
+                      ><i
+                        class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+
+                <!-- About -->
+                <div class="megamenu-about">
+                  <h3 class="megamenu-h3">About</h3>
+                  <a href="/baptism" class="megamenu-link">Baptism</a>
+                  <a href="/our-story" class="megamenu-link">Our Stories</a>
+                  <a href="/membership" class="megamenu-link">Membership</a>
+                  <a href="/staff" class="megamenu-link">Staff</a>
+                  <a href="/venues" class="megamenu-link"
+                    >Venues and Bookings</a
+                  >
+                  <a href="/foundation" class="megamenu-link"
+                    >TWMC Foundation</a
+                  >
+                  <a href="/gracegarden" class="megamenu-link"
+                    >Grace Garden - Columbarium</a
+                  >
+                  <a href="/seminary-scholarship" class="megamenu-link"
+                    >Seminary Scholarship Program</a
+                  >
+                  <a href="/media-hub" class="megamenu-link">Church Online</a>
+                  <a href="/podcast" class="megamenu-link">Podcast</a>
+                  <a href="/woodlands-parking" class="megamenu-link">Parking</a>
+                  <a href="/umarmy" class="megamenu-link">U.M. ARMY</a>
+                </div>
+                <!-- End of About -->
+
+                <!-- Connect / NextGen -->
+                <div class="megamenu-services">
+                  <h3 class="megamenu-h3">Connect</h3>
+                  <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                  <a href="/events" class="megamenu-link">Events</a>
+                  <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                  <a href="/support-groups" class="megamenu-link"
+                    >Support Groups</a
+                  >
+                  <a href="/recovery-groups" class="megamenu-link"
+                    >Recovery Groups</a
+                  >
+
+                  <h3 class="megamenu-h3">NextGen</h3>
+                  <a href="/children" class="megamenu-link"
+                    >NextGen Kids (Ages 3–9)</a
+                  >
+                  <a href="/56" class="megamenu-link"
+                    >NextGen 56 (Ages 10-11)</a
+                  >
+                  <a href="/students" class="megamenu-link"
+                    >NextGen Students (Ages 12-18)</a
+                  >
+                  <a href="/confirmation" class="megamenu-link">Confirmation</a>
+                  <a href="/nextgen-sports" class="megamenu-link"
+                    >NextGen Sports</a
+                  >
+                </div>
+                <!-- End of Connect / NextGen -->
+
+                <!-- Ministries -->
+                <div class="megamenu-ministries">
+                  <h3 class="megamenu-h3">Ministries</h3>
+                  <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                  <a href="/adult-discipleship" class="megamenu-link"
+                    >Adult Discipleship</a
+                  >
+                  <a
+                    href="https://www.bristolhousemusic.org/"
+                    class="megamenu-link"
+                    >Bristol House Music</a
+                  >
+                  <a
+                    href="http://www.childrenofthewoodlands.org/"
+                    class="megamenu-link"
+                    >Children of the Woodlands</a
+                  >
+                  <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                  <a href="/marriage" class="megamenu-link">Marriage</a>
+                  <a href="/men" class="megamenu-link">Men</a>
+                  <a href="/missions" class="megamenu-link">Missions</a>
+                  <a href="/music-fine-arts" class="megamenu-link"
+                    >Music and Fine Arts</a
+                  >
+                  <a href="/recreation" class="megamenu-link">Recreation</a>
+                  <a href="/singles" class="megamenu-link">Singles</a>
+                  <a href="/special-needs" class="megamenu-link"
+                    >Special Needs</a
+                  >
+                  <a href="https://www.twmschool.org/" class="megamenu-link"
+                    >The Woodlands Methodist School</a
+                  >
+                  <a href="/women" class="megamenu-link">Women</a>
+                  <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                </div>
+                <!-- End of Ministries -->
+              </div>
+            </div>
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!-- Main Menu -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/times-locations" class="megamenu-link"
+                >Times &amp; Locations</a
+              >
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/gather" class="megamenu-link">Grow</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="https://beyondcampaign.org/" class="megamenu-link"
+                ><span class="pr-2">Beyond Campaign</span
+                ><img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+              /></a>
+
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Chapel</span></a
+              >
+              <a href="/harvest" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Harvest</span></a
+              >
+              <a href="/loft" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Loft</span></a
+              >
+              <a href="/traditional" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Traditional</span></a
+              >
+              <a href="/house" class="megamenu-link"
+                ><img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_logo/CYA_House_Bug.png"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">House</span></a
+              >
+
+              <div class="navbar-bottom-mobile--socmed">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/"
+                  ><i
+                    class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                  ><i
+                    class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                  ><i
+                    class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a href="/podcast"
+                  ><i
+                    class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <!-- End of Main Menu -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+              <a href="/gracegarden" class="megamenu-link"
+                >Grace Garden - Columbarium</a
+              >
+              <a href="/seminary-scholarship" class="megamenu-link"
+                >Seminary Scholarship Program</a
+              >
+              <a href="/media-hub" class="megamenu-link">Church Online</a>
+              <a href="/podcast" class="megamenu-link">Podcast</a>
+              <a href="/woodlands-parking" class="megamenu-link">Parking</a>
+              <a href="/umarmy" class="megamenu-link">U.M. ARMY</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Connect / NextGen -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link"
+                >Recovery Groups</a
+              >
+
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link"
+                >NextGen Kids (Ages 3–9)</a
+              >
+              <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+              <a href="/students" class="megamenu-link"
+                >NextGen Students (Ages 12-18)</a
+              >
+              <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
+            </div>
+            <!-- End of Connect / NextGen -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link"
+                >Adult Discipleship</a
+              >
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link"
+                >Bristol House Music</a
+              >
+              <a
+                href="http://www.childrenofthewoodlands.org/"
+                class="megamenu-link"
+                >Children of the Woodlands</a
+              >
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link"
+                >Music and Fine Arts</a
+              >
+              <a href="/recreation" class="megamenu-link">Recreation</a>
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link"
+                >The Woodlands Methodist School</a
+              >
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navbar collapse -->
+      </div>
+      <!-- End of .container -->
+    </nav>
+    <!-- ===== /NAVBAR ===== -->
+
+    <main>
+      <!-- Hero -->
+      <section id="cls-featbanner">
+        <div class="cls-hero--text-wrapper">
+          <img
+            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_reengage/2027_ReEngage+FEATURE+BANNER+TEXT.png"
+            alt="Re|Engage Spring 2027. Reconnect, reconcile, resurrect."
+            class="img-responsive"
+            style="
+              width: clamp(480px, 62vw, 900px);
+              max-width: 90%;
+              height: auto;
+            "
+          />
+        </div>
+      </section>
+      <!-- End of hero -->
+
+      <!-- Intro + Schedule -->
+      <section id="cls-intro-schedule" class="pt-6 pb-3">
+        <div class="container-fluid max-w1440">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+              <h1 class="twmc-h1 cls-text--dark text-center">
+                Invest in What Matters Most
+              </h1>
+              <p class="twmc-p mt-3">
+                Every marriage is a journey, with seasons of joy, growth and
+                challenge. Whether your marriage is thriving and you want to
+                make it even better, you're navigating a difficult season, or
+                you find yourselves somewhere in between, re|engage is a place
+                for you.
+              </p>
+              <p class="twmc-p">
+                This is more than just a class; it's a community dedicated to
+                helping you and your spouse grow closer to each other and to
+                God. We believe that every marriage can be strengthened by
+                applying biblical principles in a supportive, authentic
+                environment.
+              </p>
+
+              <a
+                href="#modalCls"
+                data-toggle="modal"
+                data-target="#modalCls"
+                class="twmc--btn cls-btn-outline twmc--btn--small mb-4"
+                target="_blank"
+                referrerpolicy="origin"
+                >What to expect?</a
+              >
+
+              <div
+                class="modal fade"
+                id="modalCls"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="modalClsLabel"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header cls-modal-header">
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <h4 class="twmc-h4 text-center">What to expect?</h4>
+                    </div>
+                    <div class="modal-body text-justify cls-modal-body">
+                      <h4 class="twmc-h4">A Safe Place to Grow Together</h4>
+                      <p class="twmc-p">
+                        Re|engage is a marriage enrichment program that offers a
+                        safe space for couples to connect and learn. Here, you
+                        will find:
+                      </p>
+                      <ul>
+                        <li>
+                          <strong>Biblical Guidance:</strong> Discover timeless
+                          truths from scripture that provide a blueprint for a
+                          healthy, Christ-centered marriage.
+                        </li>
+                        <li>
+                          <strong>Authentic Community:</strong> Connect with
+                          other couples who are on the same journey, sharing
+                          experiences and encouragement along the way.
+                        </li>
+                        <li>
+                          <strong>Guided Growth:</strong> Through a mix of
+                          teaching, small group discussions and personal
+                          stories, you'll gain practical tools to strengthen
+                          your marital bond and deepen your faith.
+                        </li>
+                      </ul>
+                      <p class="twmc-p">
+                        This program is for any married couple, at any stage.
+                        You will find a welcoming atmosphere where you can be
+                        real with each other and find harmony and resolution.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-6 mb-5">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="embed-container">
+                <iframe
+                  src="https://player.vimeo.com/video/1136159095"
+                  frameborder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-sm-10 col-sm-offset-1">
+              <h2 class="twmc-h2 cls-text--dark text-center">
+                Your Journey to a Stronger Marriage Starts Here
+              </h2>
+              <p class="twmc-p text-center mb-4">
+                Are you ready to invest in your relationship and build a
+                marriage that reflects God's love? Join us for re|engage and
+                take the next step in your journey together. Let's build
+                something beautiful and lasting, rooted in faith and community.
+              </p>
+
+              <!-- START RE|ENGAGE 2027 CAMPUS CARD SECTION -->
+              <div class="twmc-cls--flex-container mt-2">
+                <!-- The Woodlands -->
+                <div class="twmc-cls--flex-item twmc-cls--card">
+                  <h4 class="twmc-h4 mb-2">THE WOODLANDS CAMPUS</h4>
+                  <div class="cls-coming-soon">
+                    <p class="cls-tag--tan mb-2">Details</p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span><strong>2027 Dates Coming Soon</strong></span>
+                    </p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-location-dot"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span><strong>2027 Locations Coming Soon</strong></span>
+                    </p>
+                    <p
+                      class="cls-coming-soon__note twmc-p text-small twmc-letspac-1 mb-1 mt-2"
+                    >
+                      <small style="font-size: 105% !important"
+                        ><em
+                          >*Registration, meeting times and child care details
+                          will be shared once finalized.</em
+                        ></small
+                      >
+                    </p>
+                  </div>
+                  <!-- 2026 reference details
+                  <p class="cls-tag--tan mb-1 mt-2">Open House</p>
+                  <p class="twmc-p">
+                    <strong>
+                      <span class="twmc-icon-wrapper2"
+                        ><i class="fa-solid fa-door-open" aria-hidden="true"></i
+                      ></span>
+                      January 13 | Wesley Hall
+                    </strong>
+                  </p>
+                  <p class="cls-tag--tan mb-1 mt-1">
+                    Class: January 20 - April 28
+                  </p>
+                  <p class="twmc-p mb-0">
+                    <strong>
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      >Tuesdays<sup>*</sup> | 6:00–8:30 p.m. | Wesley Hall |
+                      <a
+                        href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6293"
+                        class="a-reengage mt-0"
+                        target="_blank"
+                        ><em>Register here</em></a
+                      >
+                    </strong>
+                  </p>
+                  <p class="twmc-p text-small twmc-letspac-1 mb-1 mt-2">
+                    <em><sup>*</sup>Child care available</em>
+                  </p>
+                  -->
+                </div>
+                <!-- End of The Woodlands -->
+
+                <!-- Woodforest -->
+                <div class="twmc-cls--flex-item twmc-cls--card">
+                  <h4 class="twmc-h4 mb-2">WOODFOREST CAMPUS</h4>
+                  <div class="cls-coming-soon">
+                    <p class="cls-tag--tan mb-2">Details</p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span><strong>2027 Dates Coming Soon</strong></span>
+                    </p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-location-dot"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span><strong>2027 Locations Coming Soon</strong></span>
+                    </p>
+                    <p
+                      class="cls-coming-soon__note twmc-p text-small twmc-letspac-1 mb-1 mt-2"
+                    >
+                      <small style="font-size: 105% !important"
+                        ><em
+                          >*Registration, meeting times and child care details
+                          will be shared once finalized.</em
+                        ></small
+                      >
+                    </p>
+                  </div>
+                  <!-- 2026 reference details
+                  <p class="cls-tag--tan mb-1 mt-2">Open House</p>
+                  <p class="twmc-p">
+                    <strong>
+                      <span class="twmc-icon-wrapper2"
+                        ><i class="fa-solid fa-door-open" aria-hidden="true"></i
+                      ></span>
+                      January 13 | The Woodlands Campus, Wesley Hall
+                      <a
+                        href="https://maps.app.goo.gl/nzsEND3ZRj3wPxEL7"
+                        target="_blank"
+                        class="a-reengage"
+                        ><i
+                          class="fa-regular fa-circle-location-arrow"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </strong>
+                  </p>
+                  <p class="cls-tag--tan mb-1">Class: January 27 - May 5</p>
+                  <p class="twmc-p mb-0">
+                    <strong>
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      >Tuesdays<sup>*</sup> | 6:30–8:30 p.m. | Woodforest
+                      Annex 1A |
+                      <a
+                        href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6870"
+                        class="a-reengage mt-0"
+                        target="_blank"
+                        ><em>Register here</em></a
+                      >
+                    </strong>
+                  </p>
+                  <p class="twmc-p text-small twmc-letspac-1 mb-1 mt-2">
+                    <em><sup>*</sup>Child care available</em>
+                  </p>
+                  -->
+                </div>
+                <!-- End of Woodforest -->
+
+                <!-- Creekside -->
+                <div class="twmc-cls--flex-item twmc-cls--card">
+                  <h4 class="twmc-h4 mb-2">CREEKSIDE CAMPUS</h4>
+                  <p class="mb-1">Covenant Español</p>
+                  <div class="cls-coming-soon">
+                    <p class="cls-tag--tan mb-2">Detalles</p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span><strong>Fechas 2027 próximamente</strong></span>
+                    </p>
+                    <p class="cls-coming-soon__row">
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-location-dot"
+                          aria-hidden="true"
+                        ></i></span
+                      ><span
+                        ><strong>Ubicaciones 2027 próximamente</strong></span
+                      >
+                    </p>
+                    <p
+                      class="cls-coming-soon__note twmc-p text-small twmc-letspac-1 mb-1 mt-2"
+                    >
+                      <small style="font-size: 105% !important"
+                        ><em
+                          >*La inscripción, los horarios de reunión y los
+                          detalles del servicio de guardería se compartirán
+                          cuando estén finalizados.</em
+                        ></small
+                      >
+                    </p>
+                  </div>
+                  <!-- 2026 reference details
+                  <p class="cls-tag--tan mb-1">4 de Febrero - 6 de Mayo</p>
+                  <p class="twmc-p mb-0">
+                    <strong>
+                      <span class="twmc-icon-wrapper2"
+                        ><i
+                          class="fa-solid fa-calendar-days"
+                          aria-hidden="true"
+                        ></i></span
+                      >Miércoles<sup>*</sup> | 6:00 – 7:30 p.m. | Campus
+                      Creekside |
+                      <a
+                        href="https://thewoodlandsmethodist.org/Registration/crk-esp-2026reengage"
+                        class="a-reengage mt-0"
+                        target="_blank"
+                        ><em>Regístrate aquí</em></a
+                      >
+                    </strong>
+                  </p>
+                  <p class="twmc-p text-small twmc-letspac-1 mb-1 mt-2">
+                    <em><sup>*</sup>Servicio de guardería disponible.</em>
+                  </p>
+                  -->
+                </div>
+                <!-- End of Creekside -->
+              </div>
+              <!-- END RE|ENGAGE 2027 CAMPUS CARD SECTION -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Intro + Schedule -->
+
+      <!-- FAQ -->
+      <section id="cls-faq" class="pt-2 pb-6">
+        <div class="container-fluid max-w1440">
+          <div class="row mt-6">
+            <div class="col-sm-8 col-sm-offset-2 text-left">
+              <h3 class="mb-4 text-uppercase text-center">
+                Frequently Asked Questions
+              </h3>
+              <div
+                class="panel-group"
+                id="accordion-faq"
+                role="tablist"
+                aria-multiselectable="true"
+              >
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq1">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq1"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq1"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >How long does the program last?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq1"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq1"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p mb-1">
+                        The program runs for <strong>15 weeks</strong>,
+                        excluding the week of Spring Break. It begins with an
+                        <strong>Open House</strong> orientation, followed by
+                        <strong>14 weekly sessions with your small group</strong
+                        >.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq2">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq2"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq2"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >When is the re|engage Open House?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq2"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq2"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        The <strong>Open House</strong> is on
+                        <strong
+                          >Tuesday, January 13, 2026, at 6:00 p.m. in Wesley
+                          Hall</strong
+                        >. Couples who wish to join a small group for the
+                        upcoming session must attend.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq3">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq3"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq3"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >What happens at the Open House?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq3"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq3"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        The Open House is an
+                        <strong>orientation session</strong> where you will
+                        learn more about the program and receive your
+                        <strong>small group assignment</strong>. It's the
+                        <strong>first step</strong> in your re|engage journey.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq4">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq4"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq4"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >When do the small groups start meeting?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq4"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq4"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        Small groups begin
+                        <strong>January 20 at The Woodlands Campus</strong> and
+                        <strong>January 27 at the Woodforest Campus</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq5">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq5"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq5"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >What does the re|engage program involve?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq5"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq5"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        Couples work through a
+                        <strong>14-lesson curriculum</strong> designed to
+                        strengthen their relationship with each other and with
+                        God. The program takes place in a
+                        <strong>small group setting</strong>, with
+                        <strong>four to six couples</strong> and a
+                        <strong>facilitator couple</strong> who guides the
+                        discussion.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq6">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq6"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq6"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >What is the attendance expectation?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq6"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq6"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        <strong>Consistent attendance</strong> is one of the
+                        most important keys to getting the most out of
+                        re|engage. We understand that life happens, but if you
+                        expect to miss
+                        <strong>more than three sessions</strong>, please
+                        contact Amy Jones to discuss your situation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq7">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq7"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq7"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >Is child care provided?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq7"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq7"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p mb-1">
+                        Yes,
+                        <strong
+                          >child care is available on a limited basis</strong
+                        >. We encourage you to
+                        <strong>register early</strong> to reserve a spot for
+                        your children.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq8">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq8"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq8"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >Are there dinner options available?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq8"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq8"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p">
+                        Yes, for those attending at
+                        <a
+                          href="https://maps.app.goo.gl/o3XZFwbxcNyaQtkN8"
+                          class="a-reengage2"
+                          target="_blank"
+                          >The Woodlands Campus</a
+                        >, dinner is available for purchase starting
+                        <strong>Tuesday, January 20</strong>.
+                      </p>
+                      <ul>
+                        <li>
+                          <strong>Time &amp; Location:</strong> 6:00 p.m. in
+                          <a
+                            href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_map/CON_Campus+Map+First+Floor+Web+Blocks.png"
+                            class="a-reengage2"
+                            target="_blank"
+                            >Wesley Hall</a
+                          >
+                        </li>
+                        <li>
+                          <strong>Cost:</strong> $12 for adult meals and $5 for
+                          kids' meals
+                        </li>
+                        <li>
+                          <strong>Note:</strong> Your
+                          <strong>first meal</strong> and the
+                          <strong>Valentine's meal are complimentary!</strong>
+                          <strong>Weekly registration links</strong> will be
+                          sent out so you can order dinner in advance.
+                        </li>
+                      </ul>
+                      <p class="twmc-p">
+                        Check
+                        <a
+                          href="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_map/CON_CampusMapParking.png"
+                          class="a-reengage2"
+                          target="_blank"
+                          >campus map
+                          <i
+                            class="fa-regular fa-arrow-up-right-from-square"
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq9">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq9"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq9"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >How do we register as a couple?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq9"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq9"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p mb-1">
+                        When registering, please make sure to
+                        <strong>register both spouses</strong>. You will need to
+                        <strong>select "2" registrants</strong> to complete the
+                        process.
+                      </p>
+                      <p class="twmc-p">
+                        <a
+                          href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6293"
+                          class="a-reengage2"
+                          target="_blank"
+                          >Register here
+                          <i
+                            class="fa-solid fa-arrow-up-right"
+                            aria-hidden="true"
+                          ></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="heading-faq10">
+                    <h4 class="panel-title twmc-panel-title">
+                      <a
+                        role="button"
+                        data-toggle="collapse"
+                        data-parent="#accordion-faq"
+                        href="#collapse-faq10"
+                        aria-expanded="false"
+                        aria-controls="collapse-faq10"
+                        class="collapsed twmc-panel-title__link"
+                        ><span
+                          class="twmc-panel-title__text faq-text-link--reengage"
+                          >Is there anything else I should know?</span
+                        ><i
+                          class="fa-regular fa-plus twmc-accordion-plus-minus twmc-panel-title__icon"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                    </h4>
+                  </div>
+                  <div
+                    id="collapse-faq10"
+                    class="panel-collapse collapse"
+                    role="tabpanel"
+                    aria-labelledby="heading-faq10"
+                  >
+                    <div class="panel-body twmc-panel-body">
+                      <p class="twmc-p mb-1">
+                        re|engage requires commitment, but we truly believe it
+                        will be one of the <strong>best investments</strong> you
+                        make in your
+                        <strong>faith, your marriage, and your family</strong>.
+                        We look forward to
+                        <strong>walking alongside you</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of FAQ -->
+    </main>
+
+    <!-- Footer -->
+    <style>
+      .footer-logo2 {
+        height: 50px;
+        margin-right: 10px;
+        max-width: 100%;
+      }
+
+      .footer-logo-gmc {
+        height: 30px;
+      }
+
+      .footer-text-gmc {
+        font-size: 0.7rem;
+      }
+
+      .footer-newlogo-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        align-items: center;
+      }
+
+      .footer-gmc-div {
+        border-left: 1px solid white;
+        padding-left: 14px;
+      }
+
+      .footer-infos-wrapper {
+        margin-top: 1.8rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .footer-infos-wrapper {
+          margin-left: 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .footer-newlogo-wrapper {
+          flex-direction: column;
+          gap: 0;
+          width: 100%;
+          align-items: flex-start;
+        }
+
+        .footer-logo2 {
+          height: 50px;
+          width: auto;
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+          border-bottom: 1px solid white;
+          padding-bottom: 10px;
+        }
+
+        .footer-gmc-div {
+          padding-left: 0;
+          border-left: none;
+        }
+
+        .footer-logo-gmc {
+          height: 25px;
+        }
+      }
+    </style>
+
+    <section class="footer-wrapper-twmc py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+              <div class="col-sm-7 footer-info-wrapper">
+                <div class="footer-newlogo-wrapper">
+                  <img
+                    src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png"
+                    alt=""
+                    class="footer-logo2"
+                  />
+
+                  <div class="mt-0 footer-gmc-div">
+                    <p class="text-white footer-text-gmc mb-1">
+                      <strong>Member of the</strong>
+                    </p>
+                    <img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png"
+                      alt=""
+                      class="footer-logo-gmc mb-1"
+                    />
+                  </div>
+                </div>
+
+                <div class="footer-infos-wrapper">
+                  <p class="footer-info align-center">
+                    <i class="fas fa-church mr-1"></i>
+                    <a
+                      href="https://goo.gl/maps/v9urcNcJGxLDrvNH8"
+                      class="nw-a-white"
+                      target="_blank"
+                      >2200 Lake Woodlands Drive, The Woodlands, TX 77380</a
+                    >
+                  </p>
+                  <p class="footer-info">
+                    <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                    <a href="tel:(281)297-5900" class="nw-a-white"
+                      >(281) 297-5900</a
+                    >
+                  </p>
+                </div>
+
+                <div class="my-3">
+                  <a
+                    href="https://www.instagram.com/woodlandsmethodistchurch/"
+                    target="_blank"
+                    ><i
+                      class="fab fa-instagram footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/TheWoodlandsMethodist"
+                    target="_blank"
+                    ><i
+                      class="fab fa-facebook footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/c/TheWoodlandsMethodistChurch"
+                    target="_blank"
+                    ><i
+                      class="fab fa-youtube footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.thewoodlandsmethodist.org/podcast"
+                    target="_blank"
+                    ><i
+                      class="fas fa-podcast footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-4 footer-flex-container">
+                <a href="/what-we-believe" class="footer-flex-item footer-link"
+                  >What We Believe</a
+                >
+                <a href="/facilities" class="footer-flex-item footer-link"
+                  >Facilities</a
+                >
+                <a href="/employment" class="footer-flex-item footer-link"
+                  >Employment</a
+                >
+                <a href="/cafe" class="footer-flex-item footer-link"
+                  >Fireside Cafe</a
+                >
+                <a
+                  href="/indoor-playgrounds"
+                  class="footer-flex-item footer-link"
+                  >Indoor Playgrounds</a
+                >
+                <a href="/funerals" class="footer-flex-item footer-link"
+                  >Funerals &amp; Memorial Services</a
+                >
+                <a href="/help" class="footer-flex-item footer-link"
+                  >Find Help &amp; Support</a
+                >
+                <a href="/myaccount" class="footer-flex-item footer-link"
+                  >My Account</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome v6 -->
+    <script
+      src="https://kit.fontawesome.com/0283da34b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".panel.panel-default").on("shown.bs.collapse", function (e) {
+          var panelHeading = $(e.target).prev(".panel-heading");
+          panelHeading
+            .find(".fa-plus")
+            .removeClass("fa-plus")
+            .addClass("fa-minus");
+        });
+
+        $(".panel.panel-default").on("hidden.bs.collapse", function (e) {
+          var panelHeading = $(e.target).prev(".panel-heading");
+          panelHeading
+            .find(".fa-minus")
+            .removeClass("fa-minus")
+            .addClass("fa-plus");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -60,7 +60,7 @@
     }
 
     .replica-navbar {
-      height: 96px;
+      height: 94px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -111,7 +111,7 @@
     }
 
     .replica-title-stripe {
-      height: 108px;
+      height: 103px;
       background: var(--replica-red);
       color: #fff;
       display: flex;
@@ -127,6 +127,7 @@
       letter-spacing: 0;
     }
 
+    /* START: Messages Filter Button Row CSS */
     .replica-filter-area {
       min-height: 273px;
       display: flex;
@@ -139,13 +140,13 @@
 
     .replica-filter-inner {
       width: 100%;
-      max-width: 860px;
+      max-width: 1120px;
       text-align: center;
     }
 
     .replica-filter-row {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
       gap: 5px;
       margin-bottom: 14px;
@@ -156,7 +157,7 @@
       align-items: center;
       justify-content: center;
       min-height: 43px;
-      padding: 0 18px;
+      padding: 0 17px;
       border: 2px solid var(--replica-red);
       border-radius: 4px;
       background: var(--replica-red);
@@ -181,10 +182,15 @@
       min-width: 210px;
     }
 
+    .replica-filter-row--services {
+      max-width: none;
+    }
+
     .replica-podcast {
       margin-top: 2px;
       min-width: 190px;
     }
+    /* END: Messages Filter Button Row CSS */
 
     .replica-latest {
       padding: 110px 0 109px;
@@ -490,6 +496,12 @@
         padding: 32px 18px;
       }
 
+      /* START: Messages Filter Button Row Mobile CSS */
+      .replica-filter-row {
+        flex-wrap: wrap;
+      }
+      /* END: Messages Filter Button Row Mobile CSS */
+
       .replica-latest {
         padding: 70px 0;
       }
@@ -586,7 +598,8 @@
   <main>
     <section class="replica-filter-area" aria-label="Message filters">
       <div class="replica-filter-inner">
-        <div class="replica-filter-row">
+        <!-- START: Messages Filter Button Row -->
+        <div class="replica-filter-row replica-filter-row--services">
           <a class="replica-btn" href="#">Chapel</a>
           <a class="replica-btn" href="#">Traditional</a>
           <a class="replica-btn" href="#">Harvest</a>
@@ -595,12 +608,13 @@
           <a class="replica-btn" href="#">Woodforest</a>
           <a class="replica-btn" href="#">Montgomery</a>
           <a class="replica-btn" href="#">Creekside</a>
-        </div>
-        <div class="replica-filter-row">
           <a class="replica-btn" href="#">Creekside - Espanol</a>
-          <a class="replica-btn replica-dropdown" href="#">Other Messages <i class="fa-solid fa-caret-down"></i></a>
+          <!-- <a class="replica-btn replica-dropdown" href="#">Other Messages <i class="fa-solid fa-caret-down"></i></a> -->
         </div>
+        <!-- END: Messages Filter Button Row -->
+        <!-- START: Messages Podcast Button -->
         <a class="replica-btn replica-podcast" href="#">Listen to Podcasts</a>
+        <!-- END: Messages Podcast Button -->
       </div>
     </section>
 

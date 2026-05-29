@@ -1,0 +1,1213 @@
+{%- assign routeForMessageParentPage = "messages" -%}
+{%- assign routeForSeriesDetailPage = "series" -%}
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
+
+{%- assign theme-1 = '#862533' -%} <!-- Correct Theme Primary Color for Woodlands -->
+{% comment %}{%- assign speakerDefinedTypeId = 90 -%} {% endcomment %}
+{%- assign topicDefinedTypeId = 90 -%} <!-- Messages Filter -->
+
+<style>
+
+    .card-pic {
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        padding-top: 56%;
+        transition: 0.35s ease-in-out;
+    }
+    .card-pic:hover {
+        cursor:pointer;
+        }
+    .series-pic {
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        padding-top: 56%;
+    }
+
+    .message-row:nth-child(even)  {
+        background-color: #f6f6f6;
+        }
+    .message-row:nth-child(odd) {
+        background-color: #fff;
+        }
+    .message-row {
+        transition: ease-in-out 0.3s;
+        }
+    .message-row:hover {
+        cursor: pointer;
+        filter: brightness(0.9);
+        }
+
+    .message-card {
+        background-color: white;
+        border: none;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1.2;
+        transition: .35s ease-in;
+        backface-visibility: hidden;
+    }
+
+    /*
+    .message-card:hover .card-pic {
+        transition: 0.35s ease-in-out;
+        cursor: pointer;
+        transform: scale(1.02);
+        -webkit-backface-visibility: hidden;
+        will-change: transform;
+        -webkit-perspective: 1000;
+    }
+    */
+
+    .card-text-container {
+        height: 72px;
+        display: flex;
+        border-top: 1px solid #eef1f7;
+    }
+
+    .message-card-pic {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        width: 100%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center;
+
+        }
+    .embed-title {
+        margin-top: -400px;
+        }
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+
+
+
+
+        fieldset[disabled] .multiselect {
+            pointer-events: none
+          }
+
+          .multiselect__spinner {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            width: 48px;
+            height: 35px;
+            background-color: {{theme-1}};
+            display: block
+          }
+
+          .multiselect__spinner:after,
+          .multiselect__spinner:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            margin: -8px 0 0 -8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            border-color: #ef413d transparent transparent;
+            border-style: solid;
+            border-width: 2px;
+            box-shadow: 0 0 0 1px transparent
+          }
+
+          .multiselect__spinner:before {
+            animation: a 2.4s cubic-bezier(.41, .26, .2, .62);
+            animation-iteration-count: infinite
+          }
+
+          .multiselect__spinner:after {
+            animation: a 2.4s cubic-bezier(.51, .09, .21, .8);
+            animation-iteration-count: infinite
+          }
+
+          .multiselect__loading-enter-active,
+          .multiselect__loading-leave-active {
+            transition: opacity .4s ease-in-out;
+            opacity: 1
+          }
+
+          .multiselect__loading-enter,
+          .multiselect__loading-leave-active {
+            opacity: 0
+          }
+
+
+
+          .multiselect {
+            box-sizing: content-box;
+            display: block;
+            position: relative;
+            text-align: left;
+          }
+
+          .multiselect * {
+            box-sizing: border-box
+          }
+
+          .multiselect:focus {
+            outline: none
+          }
+
+          .multiselect--disabled {
+            opacity: .6
+          }
+
+          .multiselect--active {
+            z-index: 10
+          }
+
+          .multiselect--active .multiselect__select {
+            transform: rotate(180deg)
+          }
+
+          .multiselect__input,
+          .multiselect__single {
+            position: relative;
+            display: inline-block;
+            min-height: 20px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            background-color: {{theme-1}};
+            padding: 0 0 0 10px;
+            transition: border .1s ease;
+            box-sizing: border-box;
+            margin-bottom: 8px;
+            vertical-align: top
+          }
+
+
+          .multiselect__tag~.multiselect__input,
+          .multiselect__tag~.multiselect__single {
+            width: auto
+          }
+
+          .multiselect__input:hover,
+          .multiselect__single:hover {
+            border-color: #cfcfcf
+          }
+
+          .multiselect__input:focus,
+          .multiselect__single:focus {
+            border-color: #a8a8a8;
+            outline: none
+          }
+
+          .multiselect__single {
+            padding-left: 5px;
+            padding-top: 2px;
+            margin-bottom: 8px
+          }
+
+          .multiselect__tags-wrap {
+            display: inline
+          }
+          .multiselect,
+          .multiselect__input,
+          .multiselect__single {
+            font-family: inherit;
+            font-size: .75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #fff;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            line-height: 18px;
+            text-decoration: none;
+            vertical-align: middle;
+          }
+          .multiselect__tags {
+            display: block;
+            overflow-y: hidden;
+            border-radius: 4px;
+            padding: 9.6px 30px 0px 4px;
+            border: 2px solid {{theme-1}};
+            background-color: {{theme-1}};
+          }
+
+          .multiselect__tag {
+            position: relative;
+            display: inline-block;
+            padding: 7px 6px 6px;
+            margin-right: 4px;
+            color: #fff;
+            line-height: 1;
+            background-color: {{theme-1}};
+            margin-bottom: 2px;
+            white-space: break-spaces;
+            overflow: hidden;
+            max-width: 100%;
+            text-overflow: ellipsis
+          }
+
+          .multiselect__tag-icon {
+            display: none;
+            cursor: pointer;
+            margin-left: 7px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            font-weight: 700;
+            font-style: normal;
+            width: 22px;
+            text-align: center;
+            line-height: 22px;
+            transition: all .2s ease;
+            border-radius: 4px;
+          }
+
+          .multiselect__tag-icon:after {
+            content: "\D7";
+            color: #fff;
+            font-size: 14px
+          }
+
+          .multiselect__tag-icon:focus:after,
+          .multiselect__tag-icon:hover:after {
+            color: #fff
+          }
+
+          .multiselect__current {
+            min-height: 40px;
+            overflow: hidden;
+            padding: 8px 12px 0;
+            padding-right: 30px;
+            white-space: break-spaces;
+            border-radius: 4px;
+            border: 1px solid #e8e8e8
+          }
+
+          .multiselect__current,
+          .multiselect__select {
+            line-height: 8px;
+            box-sizing: border-box;
+            display: block;
+            margin: 0;
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          .multiselect__select {
+            position: absolute;
+            width: 40px;
+            height: 38px;
+            right: 4px;
+            top: 2px;
+            padding: 4px 8px;
+            text-align: center;
+            transition: transform .2s ease
+          }
+
+          .multiselect__select:before {
+            position: relative;
+            right: 0;
+            top: 75%;
+            color: #fff;
+            margin-top: 4px;
+            border-style: solid;
+            border-width: 5px 5px 0;
+            border-color: #fff transparent transparent;
+            content: ""
+          }
+
+          .multiselect__placeholder {
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding-top: 2px
+          }
+
+          .multiselect__content-wrapper {
+            position: absolute;
+            display: block;
+            background-color: #fff;
+            text-transform: uppercase;
+            max-height: 400px !important;
+            overflow: auto;
+            border: 1px solid #e8e8e8;
+            margin-top: 5px;
+            border-radius: 4px;
+            z-index: 10;
+            -webkit-overflow-scrolling: touch;
+            text-align: center;
+          }
+
+          .multiselect__content {
+            list-style: none;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            min-width: 100%;
+            vertical-align: top
+          }
+
+          .multiselect__content::webkit-scrollbar {
+            display: none
+          }
+
+          .multiselect__element {
+            display: block
+          }
+
+          .multiselect__option {
+            display: block;
+            color: {{theme-1}};
+            background: #fff;
+            padding: 12px 24px;
+            min-height: 40px;
+            line-height: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+            margin-left: -24px;
+            padding-right: 30px;
+            padding-left: 30px;
+            white-space: break-spaces;
+          }
+
+          .multiselect__option:after {
+            top: 0;
+            right: 0;
+            position: absolute;
+            line-height: 40px;
+            padding-right: 12px;
+            padding-left: 0px;
+            font-size: 13px
+          }
+
+
+
+          .multiselect__option--selected {
+            background-color: {{theme-1}};
+            color: #fff;
+            font-weight: 700
+          }
+
+          .multiselect--disabled {
+            background: #ededed;
+            pointer-events: none
+          }
+
+          .multiselect--disabled .multiselect__current,
+          .multiselect--disabled .multiselect__select,
+          .multiselect__option--disabled {
+            background: #ededed;
+            color: #a6a6a6
+          }
+
+          .multiselect__option--disabled {
+            cursor: text;
+            pointer-events: none
+          }
+
+          .multiselect__option--group {
+            background: #ededed;
+          }
+
+
+
+
+
+          .multiselect-enter-active,
+          .multiselect-leave-active {
+            transition: all .15s ease
+          }
+
+          .multiselect-enter,
+          .multiselect-leave-active {
+            opacity: 0
+          }
+
+          .multiselect__strong {
+            margin-bottom: 8px;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: top
+          }
+
+          [dir=rtl] .multiselect {
+            text-align: right
+          }
+
+          [dir=rtl] .multiselect__select {
+            right: auto;
+            left: 1px
+          }
+
+          [dir=rtl] .multiselect__tags {
+            padding: 8px 8px 0 40px
+          }
+
+          [dir=rtl] .multiselect__content {
+            text-align: right
+          }
+
+          [dir=rtl] .multiselect__option:after {
+            right: auto;
+            left: 0
+          }
+
+          [dir=rtl] .multiselect__clear {
+            right: auto;
+            left: 12px
+          }
+
+          [dir=rtl] .multiselect__spinner {
+            right: auto;
+            left: 1px
+          }
+
+          @keyframes a {
+            0% {
+              transform: rotate(0)
+            }
+            to {
+              transform: rotate(2turn)
+            }
+          }
+    .multiselect__tag-icon {
+        display: none
+        }
+    .multiselect__tag {
+        padding: 4px 10px 4px 10px
+        }
+    .multiselect__input {
+        max-width:100%;
+    }
+    .multiselect:hover,
+    .multiselect__input:hover {
+        cursor: pointer;
+        }
+    .multiselect__tag{
+        background-color: #fff !important;
+        color: {{theme-1}} !important;
+        font-weight: 900;
+    }
+    /*multiselect color updates */
+    .multselect__spinner:after, .multselect_spinner:before {
+        border-color: #323232 transparent transparent;
+    }
+
+    .multiselect__option--highlight {
+        background:#323232;
+        color: white;
+    }
+
+
+    @media  (max-width: 449.9px) {
+        iframe {
+            opacity: 1 !important;
+        }
+        .placeholder-thumbnail {
+            display: none;
+        }
+    }
+
+    @keyframes fadeOutAnimation {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+         }
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
+
+    .play-button {
+        padding-top:56.25%;
+        font-size: 20rem;
+        mix-blend-mode: screen;
+        animation: 1.5s ease;
+    }
+    @media  (max-width: 449.9px) {
+        .play-button {
+            font-size: 12rem;
+        }
+    }
+
+    .masthead{
+        max-height: 450px;
+        height: unset;
+        }
+
+    @media (max-width: 1199px) {
+
+        .message-card-pic {
+            height: 120px;
+            }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+        .message-card-pic {
+            height: 180px;
+            font-size: 24px;
+            }
+
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+
+        .message-card-pic {
+            height: 360px;
+            font-size: 40px;
+            }
+        .masthead {
+            min-height: 300px;
+            }
+        . {
+            margin-top: -230px;
+            }
+    }
+
+    @media  (min-width: 450px) and (max-width: 639.9px) {
+        .message-card-pic {
+            height: 270px;
+            font-size: 40px;
+            }
+        .masthead {
+            min-height: 300px;
+            }
+        . {
+            margin-top: -230px;
+            }
+    }
+
+    @media  (max-width: 449.9px) {
+        .message-card-pic {
+            height: 230px;
+            font-size: 30px;
+            }
+        .masthead {
+            min-height: 200px;
+            }
+        . {
+            margin-top: -170px;
+            }
+}
+.multiselect__input::placeholder {
+
+    color: #ffffff;
+  }
+
+#latest-message-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    }
+.multiselect__single {
+    display: none;
+    }
+.multiselect__input {
+    display: block !important;
+    }
+.flex-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+@media(max-width: 767.9px){
+    .flex-padding {
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+    }
+
+/* START: Messages Filter Button Row CSS */
+.messages-filter-column {
+    width: 100%;
+}
+.messages-filter-row {
+    flex-wrap: nowrap !important;
+}
+.messages-filter-row .twmc--btn {
+    flex: 0 0 auto;
+}
+@media(max-width: 1199.9px){
+    .messages-filter-row {
+        flex-wrap: wrap !important;
+    }
+}
+/* END: Messages Filter Button Row CSS */
+</style>
+
+<div id="app" >
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-12 messages-filter-column">
+                <div class="form-group mb-2 m-sm-0">
+                    <!-- START: Messages Filter Button Row -->
+                    <div class="control-wrapper d-flex justify-content-center messages-filter-row" style="gap: 4px;">
+                        <template v-for="topic in topicOptions.slice(0,9)">
+                            <button class="twmc--btn twmc--btn--traditional twmc-mbxs" @click="filterButtonClick(topic.guid)">{*topic.topic*}</button>
+                        </template>
+                        {% comment %}
+                        <multiselect v-model="selectedTopic" :options="topicOptions.slice(9,topicOptions.length)" :multiple="false" :searchable="false" :show-labels="false" :close-on-select="true" placeholder="Other Messages" label="topic" track-by="topic"  @input="setSelectedTopic()">
+                        </multiselect>
+                        {% endcomment %}
+                    </div>
+                    <!-- END: Messages Filter Button Row -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-11 text-center mt-2">
+                 <!-- START: Messages Podcast Button -->
+                 <a class="twmc--btn twmc--btn--traditional twmc-mbxs" target="_blank" href="/podcast">Listen to Podcasts</a>
+                 <!-- END: Messages Podcast Button -->
+            </div>
+        </div>
+    </div>
+
+    <div v-if="showLatestMessage" key="latestMessage">
+        <div class="container-fluid" id="latest-message-background" :style="'background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)),url(' + latestMessage.thumbnail + ')'">
+            <div class="twmc-container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="twmc-flex-container--2-col">
+                            <div class="twmc-flex-item--2-col twmc-latest-message__description">
+                                <h3 class="twmc-h3 twmc-latest-message__serries-title">{*latestMessage.seriesTitle*}</h3>
+                                <h3 class="twmc-h3 twmc-latest-message__title">{*latestMessage.title*}</h3>
+                                <p class="twmc-p twmc-latest-message__details">
+                                    <span class="twmc-latest-message__date">{*latestMessage.date*}</span>
+                                    |
+                                    <span class="twmc-latest-message__speaker">{*latestMessage.speaker*}</span>
+                                </p>
+                                <a :href="'/{{routeForSeriesDetailPage}}/' + latestMessage.seriesSlug" class="twmc--btn twmc--btn--traditional-white">View Series</a>
+
+							        <a v-if="latestMessage.audioLink != null" :href="latestMessage.audioLink" class="twmc--btn twmc--btn--traditional twmc-btn__right "><i class="fas fa-headphones twmc-icon-listen"></i>Listen</span></a>
+                            </div>
+                            <div class="twmc-flex-item--2-col xtwmc-latest-message__videox" v-if="latestMessage.videoLink != null">
+                                <div class='embed-container' :key="latestMessage.id" >
+                                    <iframe id="latestMessageFrame" :src='latestMessage.videoLink' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div v-if="!showSelectedSeries" class="container-fluid bg-theme-1 section-padding-sm">
+        <div class="container">
+            <h2 v-if="showAllSeries" class="my-0 text-bold text-center text-white">Sermon Series</h2>
+            <h2 v-if="showMessagesFilteredByKeyword" class="my-0 text-bold text-center text-white">Sermons Filtered by Keyword "{*selectedKeywords*}" ({*messagesFilteredByKeyword.length*})</h2>
+        </div>
+    </div>
+    <div v-if="!showSelectedSeries" class="container-fluid px-0 section-padding-t-sm section-padding-b-none bg-white" id="filters" key="filter-section">
+        <div class="container pt-5 twmc-connect">
+            <div class="row pt-5">
+                <div class="col-sm-12">
+                    <h1 class="twmc-h1 twmc-section-title--light">Archive</h1>
+                  </div>
+                {% comment %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="form-group mb-2 m-sm-0">
+                        <div class="control-wrapper d-flex">
+                        <multiselect v-model="selectedSpeaker" :options="speakerOptions" :multiple="false" :searchable="false" :show-labels="false" :close-on-select="true" placeholder="Speaker" label="name" track-by="name"  @input="setSelectedSpeaker()">
+                        </multiselect>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+
+                {% comment %}
+                <div class="col-sm-6 col-md-6">
+                    <div class="form-group mb-2 m-sm-0">
+                        <div class="control-wrapper">
+                            <div tabindex="-1" class="multiselect">
+                            <div class="d-flex">
+                                <div class="multiselect__tags w-100 d-flex align-items-center" style='padding-right:12px !important;'>
+                                    <input v-model="selectedKeywords" v-on:keydown.enter="setSelectedKeyword" placeholder="Search" class="multiselect__input keyword" autocomplete="off" style="padding-bottom:6px;" key="keyword-searchbar">
+                                </div>
+                                <button class="multiselect__tags px-3 pt-0 py-1 text-bold text-white ml-2 px-5" @click="setSelectedKeyword" @click.prevent style="overflow:hidden;"><i class="fa fa-search"></i></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+            </div>
+            <div v-if="showAllSeries" class="row"  key="allSeries" id="seriesSection">
+                <div class="col-xs-12 flex-padding">
+                    <div class="twmc-flex-container--4-col__justify-left">
+                        <template v-for="series in seriesLimited">
+                            <div class="twmc-flex-item--4-col__justify-left" :key="series.id">
+                                <a class="message-card" :href="'/{{routeForSeriesDetailPage}}/' + series.slug">
+                                    <div class="theme-border-radius overflow-hidden">
+                                        <div class="card-pic theme-shadow theme-border-radius bg-hover" :style="'background-image: url(' + series.thumbnailImage + ')'" ></div>
+                                    </div>
+                                    <div class="d-none">
+                                        <h3 class="text-bold text-left" style="cursor: pointer;">{*series.title*}</h3>
+                                        <h5 class="text-uppercase m-0 theme-1 text-left" style="cursor: pointer;">{*series.month*}</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </template>
+                        <div v-if="seriesLimit < seriesFilteredByContentFilter.length" class="d-flex justify-content-center w-100 my-5">
+                            <button class="btn btn-primary px-5" @click="seriesLimit += 12" @click.prevent>See More Series</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div v-if="showMessagesFilteredByTopic" key="filteredByTopic">
+        <template v-for="message in messagesFilteredByTopic">
+            <div class="container-fluid px-0 py-3 m-0 message-row" :key="message.id + '-topic'">
+                <div class="container">
+                        <div class= "row d-flex flex-wrap justify-content-center align-items-center py-5" >
+                                <div class="col-xs-12 col-md-4">
+                                    <a :key="message.id" :href="'/sermon/' + message.slug">
+                                        <div class="message-card theme-shadow theme-border-radius" >
+                                            <div v-if="message.thumbnail != ''" class="card-pic " :style="'background-image: url(' + message.smallerThumbnail + ')'" ></div>
+                                            <div v-else class="card-pic " :style="'background-image: url(' + selectedSeries.image + ')'" ></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <a :key="message.id + '2'" :href="'/sermon/' + message.slug">
+                                        <h2 class="mt-4 mt-sm-0 theme-1">{*message.title*}</h2>
+                                        <h4 class="mt-2 mb-4 theme-1">{*message.speaker*}</h4>
+                                        <h5 class="theme-1 text-uppercase">{*message.date*}</h5>
+                                        <p class="theme-1">{*message.descriptiontrunc*}</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-2 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fa fa-play-circle-o d-none d-md-block" style="font-size: 40px; opacity: 0.5;"></i>
+                                    <a :key="message.id + '3'" :href="'/sermon/' + message.slug" class="btn btn-primary btn-block  d-md-none"><i class="fa fa-play-circle-o mr-3 "></i>View Message</a>
+                                    {% comment %}
+                                    <a v-if="message.groupGuide != null" :key="message.id + '-group-guide'" class="btn btn-primary btn-block text-bold mt-3" target="_blank" :href="message.groupGuide"><i class="fa fa-file-text mr-3 "></i>Group Guide</a>{% endcomment %}
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </template>
+        <div class="container">
+            <a class="btn btn-primary text-bold my-5" @click="resetSelection()"><i class="fa fa-arrow-left mr-3"></i>Back</a>
+        </div>
+
+    </div>
+    <div v-if="showMessagesFilteredByKeyword" key="filteredByKeyword">
+        <div v-if="messagesFilteredByKeyword.length == 0">
+            <div class="container-fluid px-0 py-3 m-0" :key="no-messages-keyword">
+                <div class="my-5 container">
+                    <h2 class="my-5 theme-1 text-center">Loading
+                        {% comment %}Sorry, we couldn't find any sermons with the keyword "{*selectedKeywords*}"{% endcomment %}
+                        </h2>
+                </div>
+            </div>
+        </div>
+        <div v-else>
+            <template v-for="message in messagesFilteredByKeyword">
+                <div class="container-fluid px-0 py-3 m-0 message-row" :key="message.id + '-keyword'">
+                    <div class="container">
+                            <div class= "row d-flex flex-wrap justify-content-center align-items-center py-5" >
+                                <div class="col-xs-12 col-md-4">
+                                    <a :key="message.id" :href="'/sermon/' + message.slug">
+                                        <div class="message-card theme-shadow theme-border-radius" >
+                                            <div v-if="message.thumbnail != ''" class="card-pic " :style="'background-image: url(' + message.smallerThumbnail + ')'" ></div>
+                                            <div v-else class="card-pic " :style="'background-image: url(' + selectedSeries.image + ')'" ></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <a :key="message.id + '2'" :href="'/sermon/' + message.slug">
+                                        <h2 class="mt-4 mt-sm-0 theme-1">{*message.title*}</h2>
+                                        <h4 class="mt-2 mb-4 theme-1">{*message.speaker*}</h4>
+                                        <h5 class="theme-1 text-uppercase">{*message.date*}</h5>
+                                        <p class="theme-1">{*message.descriptiontrunc*}</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-2 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fa fa-play-circle-o d-none d-md-block" style="font-size: 40px; opacity: 0.5;"></i>
+                                    <a :key="message.id + '3'" :href="'/sermon/' + message.slug" class="btn btn-primary btn-block  d-md-none"><i class="fa fa-play-circle-o mr-3 "></i>View Message</a>
+                                    {% comment %}
+                                    <a v-if="message.groupGuide != null" :key="message.id + '-group-guide'" class="btn btn-primary btn-block text-bold mt-3" target="_blank" :href="message.groupGuide"><i class="fa fa-file-text mr-3 "></i>Group Guide</a>{% endcomment %}
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="container">
+            <a class="btn btn-primary text-bold my-5 py-3" @click="resetSelection()"><i class="fa fa-arrow-left mr-3"></i>Back</a>
+        </div>
+    </div>
+
+    <div v-if="showSelectedSeries">
+        <div class="container-fluid px-0 pb-5 bg-white section-padding-t-md">
+            <div class="container mb-0">
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <div class="d-flex align-items-center">
+                            <a style="cursor: pointer;" @click="resetSelection()">Series</a>
+                            <span class="mx-4">/</span>
+                            <a>{*selectedSeries.title*}</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="series-pic " :style="'background-image: url(' + selectedSeries.image + ')'" ></div>
+                        <h5 class="mt-5 text-uppercase theme-1">Series - {*selectedSeries.month*}</h5>
+                        <h2 class="m-0 text-bold">{*selectedSeries.title*}</h2>
+                        <p class="mt-4">{*selectedSeries.summary*}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <template v-for="message in messagesFilteredBySeries">
+            <div class="container-fluid px-0 py-3 m-0 message-row">
+                <div class="container">
+                        <div class= "row d-flex flex-wrap justify-content-center align-items-center py-5" >
+                                <div class="col-xs-12 col-md-4">
+                                    <a :key="message.id" :href="'{{'Global' | Attribute:'PublicApplicationRoot'}}/series/' + message.seriesSlug + '/' + message.slug">
+                                        <div class="message-card theme-shadow theme-border-radius" >
+                                            <div v-if="message.thumbnail != ''" class="card-pic " :style="'background-image: url(' + message.smallerThumbnail + ')'" ></div>
+                                            <div v-else class="card-pic " :style="'background-image: url(' + selectedSeries.image + ')'" ></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <a :key="message.id + '2'" :href="'{{'Global' | Attribute:'PublicApplicationRoot'}}/series/' + message.seriesSlug + '/' + message.slug">
+                                        <h2 class="mt-4 mt-sm-0 theme-1">{*message.title*}</h2>
+                                        <h4 class="mt-2 mb-4 theme-1">{*message.speaker*}</h4>
+                                        <h5 class="theme-1 text-uppercase">{*message.date*}</h5>
+                                        <p class="theme-1">{*message.descriptiontrunc*}</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-md-2 d-flex flex-column align-items-center justify-content-center">
+                                    <i class="fa fa-play-circle-o d-none d-md-block" style="font-size: 40px; opacity: 0.5;"></i>
+                                    <a :key="message.id + '3'" :href="'{{'Global' | Attribute:'PublicApplicationRoot'}}/series/' + message.seriesSlug + '/' + message.slug" class="btn btn-primary btn-block  d-md-none"><i class="fa fa-play-circle-o mr-3 "></i>View Message</a>
+                                </div>
+                        </div>
+                </div>
+            </div>
+        </template>
+        <div class="container-fluid px-0 py-5 bg-white">
+            <div class="container">
+                <a class="btn btn-primary text-bold my-5" @click="resetSelection()"><i class="fa fa-arrow-left mr-3"></i>Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        delimiters: ['{*','*}'],
+        components: {
+            Multiselect: window.VueMultiselect.default
+        },
+        data () {
+            return {
+                seriesArray: [],
+                seriesFilteredByContentFilter: [],
+                seriesLimit: 12,
+                selectedSeries: {},
+                messageArray: [],
+                messageIdArray: [],
+                latestMessage: {},
+                selectedMessage: {},
+                selectedSpeaker: [],
+                selectedKeywords: null,
+                speakerOptions: [],
+                selectedTopic: [],
+                topicOptions: [],
+                messagesFilteredBySeries: [],
+                messagesFilteredBySpeaker: [],
+                messagesFilteredByTopic: [],
+                messagesFilteredByKeyword: [],
+                showLatestMessage: true,
+                showAllSeries: true,
+                showSelectedSeries: false,
+                showSelectedMessage: false,
+                showMessagesFilteredBySpeaker: false,
+                showMessagesFilteredByTopic: false,
+                showMessagesFilteredByKeyword: false,
+                currentBrowserState: null
+            }
+        },
+        created() {
+            this.currentBrowserState = 'initial';
+            window.addEventListener('popstate', function(event) {
+                if (window.history.state != this.currentBrowserState){
+                    history.pushState('back', '', '/{{routeForMessageParentPage}}');
+                    window.location.reload();
+                    }
+            }, false);
+            this.initialLoadMessages();
+        },
+
+        methods: {
+            initialLoadMessages() {
+                this.addMessages();
+
+                {%- assign seriesSlug = 'Global' | PageParameter:'Series'-%}
+                {%- if seriesSlug != '' -%}
+                        var selectedSeries = this.seriesArray.find(series => series.slug == "{{seriesSlug}}");
+                        if (selectedSeries != null) {
+                            this.setSelectedSeries("{{seriesSlug}}");
+                            }
+                {%- endif -%}
+
+                {%- assign messageSlug = 'Global' | PageParameter:'Message'-%}
+                {%- if messageSlug != '' -%}
+                    var selectedMessage = this.messageArray.find(message => message.slug == "{{messageSlug}}");
+                    if (selectedMessage != null) {
+                            this.setSelectedMessage("{{messageSlug}}");
+                            }
+                {%- endif -%}
+
+                {%- assign selectedTopicSlug = 'Global' | PageParameter:'ContentFilter' | ToString -%}
+                {%- if selectedTopicSlug != '' -%}
+                    {%- definedvalue where:'DefinedTypeId == {{topicDefinedTypeId}} && IsActive == true' sort:'Order' -%}
+                        {%- for definedvalue in definedvalueItems -%}
+                            {%- assign nameToCompare = definedvalue | Attribute:'Slug' -%}
+                                {% if nameToCompare == selectedTopicSlug %}
+                                    this.selectedTopic = {guid:"{{definedvalue.Guid}}",topic:"{{definedvalue.Value}}",slug:"{{selectedTopicSlug}}"};
+                                    this.setSelectedTopic();
+                                {% endif %}
+                        {%- endfor -%}
+                    {%- enddefinedvalue -%}
+                {%- endif -%}
+
+
+                {%- assign selectedKeywords = 'Global' | PageParameter:'keyword' | ToString -%}
+                {%- if selectedKeywords != '' -%}
+                    this.selectedKeywords = "{{selectedKeywords}}";
+                    this.setSelectedKeyword();
+                {%- endif -%}
+            }
+            , addMessages() {
+                {%- assign results = 'messages2' | PersistedDataset -%}
+                {% capture messageJSON %}{{ results | ToJSON }}{% endcapture %}
+                let messageJSON = {{messageJSON}};
+                this.messageArray = messageJSON.messageArray;
+                this.messageIdArray = messageJSON.messageIdArray;
+                this.speakerOptions = messageJSON.speakerOptions;
+                this.topicOptions = messageJSON.topicOptions;
+                this.seriesArray = messageJSON.seriesArray;
+                this.selectedTopic = this.topicOptions.find(topic => topic.topic == "Traditional");
+                this.setSelectedTopic()
+            }
+            , filterButtonClick(selectedGuid) {
+                let filteredOptions = this.topicOptions.filter(topic => topic.guid == selectedGuid );
+                this.selectedTopic = filteredOptions[0];
+                this.setSelectedTopic();
+                }
+            , setSelectedTopic() {
+                if (this.selectedTopic != null) {
+                    this.seriesFilteredByContentFilter = this.seriesArray.filter(series => {
+                        let selectedTopicGuid = this.selectedTopic.guid;
+                        let topicGuidArray = series.contentFilterGuids;
+                        if (topicGuidArray != null){
+                            let guidMatch = topicGuidArray.filter(guid => guid == selectedTopicGuid);
+                            if (guidMatch.length > 0) {
+                                return true;
+                            }
+                        }
+                    });
+                    this.messagesFilteredByTopic = this.messageArray.filter(message => {
+                        let selectedTopicGuid = this.selectedTopic.guid;
+                        let topicGuidArray = message.topicGuidArray;
+                        if (topicGuidArray != null){
+                            let guidMatch = topicGuidArray.filter(guid => guid == selectedTopicGuid);
+                            if (guidMatch.length > 0) {
+                                return true;
+                            }
+                        }
+                    });
+                    if (this.messagesFilteredByTopic.length > 0){
+                        this.latestMessage = this.messagesFilteredByTopic[0];
+                    } else {
+                        let firstSeries = this.seriesFilteredByContentFilter[0];
+                        let messagesFilteredBySeries = this.messageArray.filter(message => message.seriesId == firstSeries.id);
+                        this.latestMessage = messagesFilteredBySeries[0];
+                    }
+
+                    this.insertParam('ContentFilter', this.selectedTopic.slug);
+                    this.selectedKeywords = null;
+                    this.selectedSpeaker = [];
+                    this.removeParam('keyword');
+                    this.removeParam('speaker');
+                    this.showAllSeries = true;
+                    this.showSelectedSeries = false;
+                    this.showSelectedMessage = false;
+                    this.showMessagesFilteredBySpeaker = false;
+                    this.showMessagesFilteredByKeyword = false;
+                    this.playVideo = false;
+                    this.showMessagesFilteredByTopic = false;
+                }
+            }
+            , setSelectedKeyword() {
+                if (this.selectedKeywords == null) {
+                    event.preventDefault();
+                    }
+                else {
+                    let searchTerm = this.selectedKeywords.toLowerCase().replace(/\W/g, '');
+                    this.messagesFilteredByKeyword = this.messageArray.filter((message) => {
+                        return (
+                            message.title ? message.title.replace(/\W/g, '').toLowerCase().includes(searchTerm) : false
+                          ) ||
+                          (
+                            message.description ? message.description.replace(/\W/g, '').toLowerCase().includes(searchTerm) : false
+                          ) ||
+                          (
+                            message.topic ? message.topic.replace(/\W/g, '').toLowerCase().includes(searchTerm) : false
+                          ) ||
+                          (
+                            message.speaker ? message.speaker.replace(/\W/g, '').toLowerCase().includes(searchTerm) : false
+                          ) ||
+                          (
+                            message.seriesTitle ? message.seriesTitle.replace(/\W/g, '').toLowerCase().includes(searchTerm) : false
+                          );
+                    });
+                    if (this.messagesFilteredByKeyword != null){
+
+
+                    this.insertParam('keyword', this.selectedKeywords);
+                    this.removeParam('topic');
+                    this.removeParam('speaker');
+                    this.selectedSpeaker = [];
+                    this.selectedTopic = [];
+                    this.showLatestMessage = false;
+                    this.showAllSeries = false;
+                    this.showSelectedSeries = false;
+                    this.showSelectedMessage = false;
+                    this.playVideo = false;
+                    this.showMessagesFilteredBySpeaker = false;
+                    this.showMessagesFilteredByTopic = false;
+                    this.showMessagesFilteredByKeyword = true;
+                    }
+                }
+            }
+            , setSelectedSeries(slug) {
+                this.selectedMessage = {};
+                var selectedSeries = this.seriesArray.find(series => series.slug == slug);
+                this.selectedSeries = selectedSeries;
+                this.messagesFilteredBySeries = this.messageArray.filter(message => message.seriesId == this.selectedSeries.id);
+                var newRelativePath = '/{{routeForMessageParentPage}}/series/' + this.selectedSeries.slug;
+                this.currentBrowserState = 'set series';
+                history.pushState('set series', '', newRelativePath);
+                this.showLatestMessage = false;
+                this.showAllSeries = false;
+                this.showSelectedMessage = false;
+                this.playVideo = false;
+                this.showSelectedSeries = true;
+                $(window).scrollTop(0);
+                this.showMessagesFilteredBySpeaker = false;
+                this.showMessagesFilteredByTopic = false;
+            }
+            , resetSelection() {
+                this.selectedSpeaker = [];
+                this.selectedTopic = [];
+                this.selectedKeywords = null;
+                this.selectedSeries = {};
+                this.selectedMessage = {};
+                this.messagesFilteredBySeries = [];
+                $('.masthead').show();
+
+                history.pushState('reset series', '', '/{{routeForMessageParentPage}}');
+                this.showLatestMessage = true;
+                this.showAllSeries = true;
+                this.showSelectedMessage = false;
+                this.showSelectedSeries = false;
+                this.playVideo = false;
+                this.showMessagesFilteredBySpeaker = false;
+                this.showMessagesFilteredByTopic = false;
+                this.showMessagesFilteredByKeyword = false;
+                $(window).scrollTop(0);
+
+
+            }
+            , setSelectedMessage(slug) {
+                var selectedMessage = this.messageArray.find(message => message.slug == slug);
+                this.selectedMessage = selectedMessage;
+                if (this.selectedSeries.id != this.selectedMessage.seriesId) {
+                    var selectedSeries = this.seriesArray.find(series => series.id == this.selectedMessage.seriesId);
+                    this.selectedSeries = selectedSeries;
+                    }
+                var newRelativePath = '/{{routeForMessageParentPage}}/' + this.selectedSeries.slug + '/' + this.selectedMessage.slug;
+                this.currentBrowserState = 'set message';
+                history.pushState('set message', '', newRelativePath);
+                $('.masthead').show();
+                $(window).scrollTop(0);
+
+                this.showLatestMessage = false;
+                this.showAllSeries = false;
+                this.showSelectedSeries = false;
+                this.showSelectedMessage = true;
+                this.playVideo = false;
+                this.showMessagesFilteredBySpeaker = false;
+                this.showMessagesFilteredByTopic = false;
+            }
+            , insertParam(key, value) {
+                if ('URLSearchParams' in window) {
+                    var searchParams = new URLSearchParams(window.location.search);
+                    searchParams.set(key,value);
+                    var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+                    this.currentBrowserState = 'insert';
+                    history.pushState('insert', '', newRelativePathQuery);
+                }
+            }
+            , removeParam(key) {
+                if ('URLSearchParams' in window) {
+                var searchParams = new URLSearchParams(window.location.search)
+                searchParams.delete(key);
+                var newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+                history.pushState('remove', '', newRelativePathQuery);
+                this.currentBrowserState = 'remove';
+                }
+            }
+        },
+        computed: {
+            seriesLimited() {
+                return this.seriesLimit && this.seriesFilteredByContentFilter ? this.seriesFilteredByContentFilter.slice(0,this.seriesLimit) : this.seriesFilteredByContentFilter;
+                }
+            }
+    });
+</script>
