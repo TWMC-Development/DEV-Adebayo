@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Woodlands Methodist Church | One Church, Multiple Campuses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Woodlands Methodist Church is one church with campuses in The Woodlands, Woodforest, Montgomery, Creekside, and Español.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link href="../Design-System-2026/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../Design-System-2026/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../Design-System-2026/css/theme.css">
+
+  <style>
+    .home-hero {
+      position: relative;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--maroon-dark);
+    }
+
+    .home-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(26,26,26,0.84) 0%, rgba(26,26,26,0.54) 45%, rgba(26,26,26,0.2) 100%),
+        url("https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg");
+      background-position: center;
+      background-size: cover;
+      transform: scale(1.03);
+    }
+
+    .home-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(197,162,88,0.18), transparent 34%),
+        linear-gradient(0deg, rgba(82,36,47,0.76), transparent 42%);
+      pointer-events: none;
+    }
+
+    .home-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      color: #fff;
+      padding: 96px 0;
+    }
+
+    .home-hero-kicker {
+      margin-bottom: 18px;
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .home-hero h1 {
+      margin-bottom: 24px;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 6.8rem);
+      font-weight: 700;
+      line-height: 0.98;
+      text-shadow: 0 8px 38px rgba(0,0,0,0.35);
+    }
+
+    .home-hero p {
+      max-width: 630px;
+      margin-bottom: 34px;
+      color: rgba(255,255,255,0.86);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.62;
+    }
+
+    .hero-campus-finder {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 980px;
+      margin-top: 48px;
+    }
+
+    .hero-campus-chip {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 116px;
+      padding: 18px;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: all var(--duration-normal) ease;
+    }
+
+    .hero-campus-chip:hover {
+      color: #fff;
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.26);
+    }
+
+    .hero-campus-chip strong {
+      font-size: 0.96rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero-campus-chip span {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .campus-overview {
+      background: var(--cream);
+    }
+
+    .campus-card-home {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-card);
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+
+    .campus-card-home:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .campus-card-home-media {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--warm-gray);
+    }
+
+    .campus-card-home-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) ease;
+    }
+
+    .campus-card-home:hover img {
+      transform: scale(1.06);
+    }
+
+    .campus-card-home-badge {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      padding: 6px 14px;
+      color: #fff;
+      background: var(--maroon);
+      border-radius: var(--radius-pill);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .campus-card-home-body {
+      display: flex;
+      min-height: 280px;
+      flex-direction: column;
+      padding: 24px;
+    }
+
+    .campus-card-home h3 {
+      margin-bottom: 8px;
+      color: var(--dark);
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      line-height: 1.2;
+    }
+
+    .campus-card-home p {
+      margin-bottom: 18px;
+      color: var(--text-body);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .campus-times {
+      display: grid;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .campus-times span {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--dark-soft);
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+
+    .campus-times i {
+      margin-top: 3px;
+      color: var(--maroon);
+      font-size: 0.78rem;
+      flex-shrink: 0;
+    }
+
+    .campus-link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .home-feature-band {
+      background: var(--warm-white);
+    }
+
+    .feature-card-lite {
+      display: block;
+      height: 100%;
+      padding: 28px;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-card);
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+
+    .feature-card-lite:hover {
+      color: inherit;
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .feature-card-lite i {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      color: var(--maroon);
+      background: rgba(110,49,64,0.08);
+      border-radius: 50%;
+    }
+
+    .feature-card-lite h3 {
+      margin-bottom: 10px;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--dark);
+    }
+
+    .feature-card-lite p {
+      margin-bottom: 16px;
+      color: var(--text-body);
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    .welcome-home {
+      background: var(--cream);
+    }
+
+    .welcome-video {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .messages-strip {
+      background: var(--warm-white);
+    }
+
+    .message-mini-card {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow-card);
+      transition: all var(--duration-slow) var(--ease-out);
+    }
+
+    .message-mini-card:hover {
+      color: inherit;
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .message-mini-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--warm-gray);
+    }
+
+    .message-mini-body {
+      padding: 20px;
+    }
+
+    .message-mini-campus {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--maroon);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .message-mini-body h3 {
+      margin-bottom: 6px;
+      color: var(--dark);
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      line-height: 1.28;
+    }
+
+    .message-mini-body p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 1199.98px) {
+      .hero-campus-finder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .home-hero {
+        min-height: auto;
+      }
+
+      .home-hero-content {
+        padding: 84px 0 72px;
+      }
+
+      .hero-campus-finder {
+        grid-template-columns: 1fr;
+        margin-top: 34px;
+      }
+
+      .hero-campus-chip {
+        min-height: 74px;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .campus-card-home-body {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="location-bar">
+    <a href="/home" class="active">The Woodlands</a>
+    <a href="/woodforest">Woodforest</a>
+    <a href="/montgomery">Montgomery</a>
+    <a href="/creekside">Creekside</a>
+    <a href="/espanol">Español</a>
+  </div>
+
+  <header class="navbar navbar-expand-xl py-0 navbar-twmc" id="navbar">
+    <div class="container-xxl px-4">
+      <a class="navbar-brand py-3 me-3" href="/home">
+        <img src="../Design-System-2026/assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+      </a>
+
+      <nav class="d-none d-xl-flex align-items-center ms-auto">
+        <a class="nav-link" href="/times-locations">Times &amp; Locations</a>
+        <a class="nav-link" href="/im-new">Visit</a>
+        <a class="nav-link" href="/gather">Grow</a>
+        <a class="nav-link" href="/messages">Messages</a>
+        <a class="nav-link" href="/outward">Serve</a>
+        <a class="nav-link" href="/give">Give</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2 ms-xl-3 ms-auto">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login d-none d-xl-inline-flex">Login</a>
+        <button class="mega-trigger" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Open navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end offcanvas-nav" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+      <a href="/home" class="offcanvas-brand" id="siteNavLabel">
+        <img src="../Design-System-2026/assets/images/twumc-logo-fullcolor.png" alt="TWMC">
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="https://twmc.org/login" class="btn btn-primary btn-sm btn-login">Login</a>
+        <button type="button" class="nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas-body">
+      <div class="nav-campuses">
+        <a href="/home" class="nav-campus-chip active">The Woodlands</a>
+        <a href="/woodforest" class="nav-campus-chip">Woodforest</a>
+        <a href="/montgomery" class="nav-campus-chip">Montgomery</a>
+        <a href="/creekside" class="nav-campus-chip">Creekside</a>
+        <a href="/espanol" class="nav-campus-chip">Español</a>
+      </div>
+
+      <div class="nav-sections">
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMain" aria-expanded="false">
+              Main Menu <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMain">
+              <div class="nav-section-links">
+                <a href="/times-locations">Times &amp; Locations</a>
+                <a href="/im-new">Visit</a>
+                <a href="/gather">Grow</a>
+                <a href="/messages">Messages</a>
+                <a href="/outward">Serve</a>
+                <a href="/give">Give</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navAbout" aria-expanded="false">
+              About <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navAbout">
+              <div class="nav-section-links">
+                <a href="/baptism">Baptism</a>
+                <a href="/our-stories">Our Stories</a>
+                <a href="/membership">Membership</a>
+                <a href="/staff">Staff</a>
+                <a href="/venues">Venues &amp; Bookings</a>
+                <a href="/foundation">TWMC Foundation</a>
+                <a href="/churchonline">Church Online</a>
+                <a href="/parking">Parking</a>
+                <a href="https://beyondcampaign.org/" target="_blank" rel="noopener noreferrer">
+                  <img src="../Design-System-2026/assets/images/CAP_Beyond_Icon.png" alt=""> Beyond Campaign
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navConnect" aria-expanded="false">
+              Connect <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navConnect">
+              <div class="nav-section-links">
+                <a href="/gather">G.R.O.W.</a>
+                <a href="/events">Events</a>
+                <a href="/homegroups">Home Groups</a>
+                <a href="/support-groups">Support Groups</a>
+                <a href="/recovery-groups">Recovery Groups</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navNextGen" aria-expanded="false">
+              NextGen <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navNextGen">
+              <div class="nav-section-links">
+                <a href="/kids">NextGen Kids</a>
+                <a href="/56">NextGen 56</a>
+                <a href="/students">NextGen Students</a>
+                <a href="/sports">NextGen Sports</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-col">
+          <div class="nav-section">
+            <h4 class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#navMinistries" aria-expanded="false">
+              Ministries <i class="fas fa-chevron-down d-lg-none"></i>
+            </h4>
+            <div class="collapse d-lg-block" id="navMinistries">
+              <div class="nav-section-links">
+                <a href="/adult-discipleship">Adult Discipleship</a>
+                <a href="/caring">Caring &amp; Prayer</a>
+                <a href="/men">Men</a>
+                <a href="/missions">Missions</a>
+                <a href="/recreation">Recreation</a>
+                <a href="/special-needs">Special Needs</a>
+                <a href="/women">Women</a>
+                <a href="/young-adults">Young Adults</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-social">
+        <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="/podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="home-hero" id="main-content" aria-label="The Woodlands Methodist Church homepage">
+      <div class="home-hero-bg" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="home-hero-content">
+          <div class="home-hero-kicker">One Church Across Greater Montgomery County</div>
+          <h1>Find your campus. Find your community.</h1>
+          <p>Join The Woodlands Methodist Church for worship, discipleship, and service at The Woodlands, Woodforest, Montgomery, Creekside, or Español.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="/im-new" class="btn btn-primary">Plan Your Visit <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/times-locations" class="btn btn-outline-light">View Times &amp; Locations</a>
+          </div>
+        </div>
+
+        <div class="hero-campus-finder" aria-label="Campus quick links">
+          <a href="/home" class="hero-campus-chip"><strong>The Woodlands</strong><span>Main Campus</span></a>
+          <a href="/woodforest" class="hero-campus-chip"><strong>Woodforest</strong><span>Family Worship</span></a>
+          <a href="/montgomery" class="hero-campus-chip"><strong>Montgomery</strong><span>Community Campus</span></a>
+          <a href="/creekside" class="hero-campus-chip"><strong>Creekside</strong><span>Covenant Church</span></a>
+          <a href="/espanol" class="hero-campus-chip"><strong>Español</strong><span>Adoración</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="campus-overview section-space" aria-label="Our campuses">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-8">
+            <div class="section-label">Our Campuses</div>
+            <h2 class="section-title mb-0">Worship close to <em>home</em></h2>
+          </div>
+          <div class="col-lg-4">
+            <p class="mb-0 text-muted">Each campus shares the same mission while offering a local expression of worship, connection, and care.</p>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg" alt="The Woodlands Campus">
+                <span class="campus-card-home-badge">Main Campus</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>The Woodlands</h3>
+                <p>The main campus offers traditional, Harvest contemporary, Loft modern, Español, and Chinese fellowship worship options.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-clock"></i> Sundays at 7:45, 9:00, 9:30, 10:00, and 11:00 a.m.</span>
+                  <span><i class="fas fa-location-dot"></i> 2200 Lake Woodlands Drive</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/home" class="btn btn-sm btn-primary">Campus Page</a>
+                  <a href="/times-locations" class="btn btn-sm btn-outline-primary">Service Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodforest.jpg" alt="Woodforest Campus">
+                <span class="campus-card-home-badge">Family Worship</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>Woodforest</h3>
+                <p>A growing campus with Sunday worship, nursery, NextGen Kids, and confirmation opportunities for families.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-clock"></i> Sundays at 9:00 and 11:00 a.m.</span>
+                  <span><i class="fas fa-location-dot"></i> Woodforest Worship Center</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/woodforest" class="btn btn-sm btn-primary">Campus Page</a>
+                  <a href="/times-locations" class="btn btn-sm btn-outline-primary">Service Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Montgomery.jpg" alt="Montgomery Campus">
+                <span class="campus-card-home-badge">Montgomery</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>Montgomery</h3>
+                <p>A local campus serving the Montgomery area with contemporary worship, kids, students, and adult discipleship.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-clock"></i> Sundays at 10:30 a.m.</span>
+                  <span><i class="fas fa-location-dot"></i> Oak Hills Junior High</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/montgomery" class="btn btn-sm btn-primary">Campus Page</a>
+                  <a href="/times-locations" class="btn btn-sm btn-outline-primary">Service Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Creekside.jpg" alt="Covenant Church at Creekside">
+                <span class="campus-card-home-badge">Creekside</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>Creekside</h3>
+                <p>Covenant Church at Creekside offers English worship in the morning and Español worship in the afternoon.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-clock"></i> Sundays at 9:00, 11:00 a.m., and 1:00 p.m.</span>
+                  <span><i class="fas fa-location-dot"></i> Covenant Worship Center</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/creekside" class="btn btn-sm btn-primary">Campus Page</a>
+                  <a href="/times-locations" class="btn btn-sm btn-outline-primary">Service Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Hero_2000x800.png" alt="Español worship">
+                <span class="campus-card-home-badge">Español</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>Español</h3>
+                <p>Spanish-language worship and community are available through The Woodlands and Covenant Church at Creekside.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-clock"></i> Sundays at 10:00 a.m. and 1:00 p.m.</span>
+                  <span><i class="fas fa-location-dot"></i> The Woodlands and Creekside</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/espanol" class="btn btn-sm btn-primary">Campus Page</a>
+                  <a href="/times-locations" class="btn btn-sm btn-outline-primary">Service Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="campus-card-home">
+              <div class="campus-card-home-media">
+                <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_foundation/FND_TextOverlay_BKG.png" alt="Plan your visit">
+                <span class="campus-card-home-badge">First Visit</span>
+              </div>
+              <div class="campus-card-home-body">
+                <h3>Not sure where to start?</h3>
+                <p>Tell us where you live and what kind of worship experience you are looking for, and we will help you find a good first Sunday.</p>
+                <div class="campus-times">
+                  <span><i class="fas fa-circle-info"></i> Worship styles range from traditional and contemporary to modern and Spanish-language.</span>
+                </div>
+                <div class="campus-link-row">
+                  <a href="/im-new" class="btn btn-sm btn-primary">Plan Your Visit</a>
+                  <a href="/churchonline" class="btn btn-sm btn-outline-primary">Watch Online</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-feature-band section-space">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <a href="/events" class="feature-card-lite">
+              <i class="fa-solid fa-calendar-star"></i>
+              <h3>What's Happening</h3>
+              <p>Find featured events, seasonal gatherings, classes, and ways to connect across the church.</p>
+              <span class="card-link">View Events <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/messages" class="feature-card-lite">
+              <i class="fa-solid fa-circle-play"></i>
+              <h3>Latest Messages</h3>
+              <p>Watch or listen to recent worship messages from multiple campuses and worship venues.</p>
+              <span class="card-link">Watch Messages <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/give" class="feature-card-lite">
+              <i class="fa-solid fa-hand-heart"></i>
+              <h3>Give &amp; Serve</h3>
+              <p>Partner in the mission of the church through generosity, serving, and local outreach.</p>
+              <span class="card-link">Get Involved <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-home section-space">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 align-items-center g-60">
+          <div class="col">
+            <div class="welcome-video ratio ratio-16x9">
+              <iframe src="https://player.vimeo.com/video/755253246" title="Welcome to The Woodlands Methodist Church" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col">
+            <div class="section-label">Welcome</div>
+            <h2 class="section-title">Come as you are.<br><em>Leave transformed.</em></h2>
+            <p class="mt-4">Welcome to The Woodlands Methodist Church. We are a dynamic and vibrant church with a variety of worship styles across our campuses, from traditional and contemporary to modern and Spanish-language worship.</p>
+            <p>Whether you are planning your first visit or looking to deepen your faith journey, there is a place for you and your family here.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="/im-new" class="btn btn-primary">Plan Your Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="/times-locations" class="btn btn-outline-primary">Compare Campuses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="messages-strip section-space">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-8">
+            <div class="section-label">Messages</div>
+            <h2 class="section-title mb-0">A voice from every <em>campus</em></h2>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="/messages" class="btn btn-outline-primary">View All Messages</a>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
+          <div class="col">
+            <a href="/messages" class="message-mini-card">
+              <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=90382042-8c4a-4fc6-8822-0bdb00cdfc23&width=800&height=450&mode=crop" alt="Traditional worship message">
+              <div class="message-mini-body">
+                <span class="message-mini-campus">The Woodlands</span>
+                <h3>Traditional Worship</h3>
+                <p>Classic worship and teaching from the main campus.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/messages" class="message-mini-card">
+              <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=a5a87b38-b0f7-4f42-9273-86800fbb73b6" alt="Woodforest worship message">
+              <div class="message-mini-body">
+                <span class="message-mini-campus">Woodforest</span>
+                <h3>Woodforest Worship</h3>
+                <p>Messages for families and neighbors in Woodforest.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/messages" class="message-mini-card">
+              <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=6dbee56a-0b13-490b-ae5d-0f761ceb9bad" alt="Montgomery worship message">
+              <div class="message-mini-body">
+                <span class="message-mini-campus">Montgomery</span>
+                <h3>Montgomery Worship</h3>
+                <p>Teaching and worship from The Church at Montgomery.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="/messages" class="message-mini-card">
+              <img src="https://people.thewoodlandsmethodist.org/GetImage.ashx?guid=8a9054ce-f959-4afa-a2e5-59df7105a13d" alt="Creekside worship message">
+              <div class="message-mini-body">
+                <span class="message-mini-campus">Creekside</span>
+                <h3>Creekside Worship</h3>
+                <p>Messages from Covenant Church at Creekside.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grow-section">
+      <div class="container reveal">
+        <div class="section-label">Discipleship Pathway</div>
+        <h2>A Pathway to a Deeper Faith</h2>
+        <div class="grow-squares">
+          <a href="/gather" class="grow-square grow-g">g</a>
+          <a href="/raise" class="grow-square grow-r">r</a>
+          <a href="/outward" class="grow-square grow-o">o</a>
+          <a href="/walk" class="grow-square grow-w">w</a>
+        </div>
+        <p>Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and become more like Him.</p>
+        <h4>Ready to Get Started?</h4>
+        <a href="/gather" class="btn btn-primary">Start Here <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Design-System-2026/assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fas fa-church" style="margin-right: 6px;"></i>
+            <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" target="_blank" rel="noopener noreferrer">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
+          </p>
+          <p><i class="fas fa-phone" style="margin-right: 6px;"></i>
+            <a href="tel:2812975900">(281) 297-5900</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="/podcast" aria-label="Podcast"><i class="fas fa-podcast"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Campuses</h4>
+          <a href="/home">The Woodlands</a>
+          <a href="/woodforest">Woodforest</a>
+          <a href="/montgomery">Montgomery</a>
+          <a href="/creekside">Creekside</a>
+          <a href="/espanol">Español</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="/times-locations">Times &amp; Locations</a>
+          <a href="/im-new">Plan Your Visit</a>
+          <a href="/messages">Messages</a>
+          <a href="/churchonline">Church Online</a>
+          <a href="/give">Give</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc">
+          <span>Member of the</span>
+          <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="Global Methodist Church">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../Design-System-2026/js/bootstrap.bundle.min.js"></script>
+  <script src="../Design-System-2026/js/theme.js"></script>
+  <script src="../Design-System-2026/js/font-switcher.js"></script>
+</body>
+</html>

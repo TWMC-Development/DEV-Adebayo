@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Woodlands Methodist Church Homepage 2026</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60"
+    />
+    <link
+      rel="stylesheet"
+      href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60"
+    />
+
+    <link rel="stylesheet" href="./css/nw-main2023.css" />
+    <link rel="stylesheet" href="./css/nw-navbar.css" />
+    <link rel="stylesheet" href="./css/nw-grow.css" />
+    <link rel="stylesheet" href="./css/seasonal.css" />
+    <link rel="stylesheet" href="./css/sparkle.css" />
+    <link rel="stylesheet" href="./css/utilities-templates.css" />
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/85947205a9.js"
+      crossorigin="anonymous"
+    ></script>
+  
+    <style>
+      /* ===== START HOMEPAGE 2026 CUSTOM CSS ===== */
+      :root {
+        --twmc-red: #862633;
+        --twmc-light: #f2f2f2;
+        --twmc-text: #191919;
+      }
+
+      .hero--video-section {
+        position: relative;
+        height: 560px;
+        overflow: hidden;
+        background: #222;
+      }
+
+      .hero--video-section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.12);
+      }
+
+      .hero--video__text-wrapper {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18%;
+      }
+
+      .hero--video__text-wrapper img {
+        width: min(860px, 100%);
+      }
+
+      .twmc-home-cta-feat {
+        padding: 34px 0;
+        background: #efefef;
+      }
+
+      .twmc-flex-container--3-col-feat {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+
+      .twmc-home-cta-feat__link {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 18px;
+        align-items: center;
+        min-height: 150px;
+        padding: 18px;
+        border-radius: 6px;
+        color: #333;
+        text-decoration: none;
+        transition: transform 0.25s ease;
+      }
+
+      .twmc-home-cta-feat__link:hover,
+      .twmc-home-cta-feat__link:focus {
+        color: var(--twmc-red);
+        text-decoration: none;
+        transform: scale(1.03);
+      }
+
+      .twmc-home-cta-adv__img {
+        width: 88px;
+        height: 88px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+
+      .twmc-home-cta-adv__text h4 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .twmc-home-cta-adv__text p {
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.35;
+        letter-spacing: 0.08em;
+      }
+
+      .twmc-section__pymed-white {
+        padding: 90px 0;
+        background: #fff;
+      }
+
+      .twmc-home-intro__row {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+      }
+
+      .twmc-home-intro__row > .col-md-6 {
+        width: calc(50% - 19px);
+        padding: 0;
+      }
+
+      .embed-container {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+      }
+
+      .embed-container iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .twmc--btn-outline-traditional,
+      .twmc--btn-solid-traditional {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 3px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .twmc--btn-outline-traditional {
+        border: 2px solid var(--twmc-red);
+        color: var(--twmc-red);
+        background: #fff;
+      }
+
+      .twmc--btn-solid-traditional {
+        border: 2px solid var(--twmc-red);
+        color: #fff;
+        background: var(--twmc-red);
+      }
+
+      .text-traditional,
+      .twmc-socmed-icon__traditional a {
+        color: var(--twmc-red);
+      }
+
+      .twmc-socmed-icon__container2 {
+        display: flex;
+        gap: 14px;
+        margin-top: 4px;
+        font-size: 18px;
+      }
+
+      #grow__nav-home {
+        padding: 115px 0 120px;
+        background: #f0f0f0;
+        text-align: center;
+      }
+
+      .square-container {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 58px;
+      }
+
+      .square {
+        width: 138px;
+        height: 138px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .square h2 {
+        margin: 0;
+        color: #fff;
+        font-size: 54px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .square-g { background: #39369a; }
+      .square-r { background: #ee2d68; }
+      .square-o { background: #5cc0a4; }
+      .square-w { background: #ffc709; }
+
+      .grow__nav--text {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .twmc--btn__grow-outline-grey2 {
+        min-width: 160px;
+        border: 1px solid #d9d9d9;
+        color: #666;
+        background: #e8e8e8;
+      }
+
+      .blog-section {
+        padding: 74px 0 72px;
+        background: #fff;
+      }
+
+      .twmcblog__flex-container-4col {
+        display: grid;
+        grid-template-columns: 1fr 1.16fr 1.16fr 1.16fr;
+        gap: 26px;
+        align-items: start;
+      }
+
+      .twmc-home-blog__info-title img {
+        width: 290px;
+        max-width: 100%;
+      }
+
+      .twmc-card {
+        overflow: hidden;
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .twmc-card a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .twmcblog__card-img {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+      }
+
+      .twmc-card-body {
+        padding: 22px 22px 26px;
+      }
+
+      .twmcblog__card-title {
+        margin: 0 0 12px;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 1.05;
+      }
+
+      .twmcblog__card-text {
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
+      .twmcblog__card-info-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .twmcblog__card-info-img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+      }
+
+      .twmcblog__card-info-text {
+        margin: 0;
+        font-size: 10px;
+        line-height: 1.25;
+      }
+
+      @media (max-width: 991px) {
+        .hero--video-section { height: 220px; }
+        .hero--video__text-wrapper { padding: 0 18px; }
+        .twmc-home-cta-feat { padding: 18px 0; }
+        .twmc-flex-container--3-col-feat { grid-template-columns: 1fr; gap: 10px; }
+        .twmc-home-cta-feat__link { grid-template-columns: 70px 1fr; min-height: 98px; padding: 12px; }
+        .twmc-home-cta-adv__img { width: 70px; height: 70px; }
+        .twmc-section__pymed-white { padding: 46px 0; }
+        .twmc-home-intro__row { display: block; }
+        .twmc-home-intro__row > .col-md-6 { width: 100%; }
+        .embed-container { display: none; }
+        #grow__nav-home { padding: 58px 0; }
+        .square { width: 42px; height: 42px; }
+        .square h2 { font-size: 20px; }
+        .square-container { gap: 8px; margin-bottom: 28px; }
+        .blog-section { padding: 48px 0; }
+        .twmcblog__flex-container-4col { grid-template-columns: 1fr; gap: 20px; }
+        .twmcblog__card-img { height: auto; }
+      }
+
+      @media (max-width: 430px) {
+        .container-fluid { padding-left: 18px; padding-right: 18px; }
+        .hero--video-section { height: 205px; }
+        .hero--video-section video { transform: scale(1.2); }
+        .twmcblog__card-title { font-size: 22px; }
+      }
+      /* ===== END HOMEPAGE 2026 CUSTOM CSS ===== */
+    </style>
+  </head>
+  <style>
+    a.tw26-beyond-logo > img.img-responsive {
+      height: 34px;
+      width: auto;
+      padding: 0 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a.tw26-beyond-logo > img.img-responsive:hover,
+    a.tw26-beyond-logo > img.img-responsive:focus {
+      opacity: 0.7;
+    }
+
+    /* Updated Jan 2026 -- add Beyond icon */
+    @media only screen and (max-width: 1190px) {
+      .navbar-bottom-link {
+        font-size: 0.9rem;
+        padding: 0 10px;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.9rem;
+        padding: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 1050px) {
+      .navbar-bottom-link {
+        font-size: 0.85rem;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media only screen and (max-width: 1030px) {
+      .navbar-bottom-link {
+        font-size: 0.75rem;
+      }
+
+      .navbar-bottom-link:hover,
+      .navbar-bottom-link:focus {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <!-- Navbar top -->
+    <div class="navbar-container navbar-twmc-top">
+      <div class="navbar-top-flex-container desktop-top-menu">
+        <a href="/home" class="navbar-top-flex-item navbar-top-link"
+          >The Woodlands</a
+        >
+        <a href="/woodforest" class="navbar-top-flex-item navbar-top-link"
+          >Woodforest</a
+        >
+        <a href="/montgomery" class="navbar-top-flex-item navbar-top-link"
+          >Montgomery</a
+        >
+        <a href="/creekside" class="navbar-top-flex-item navbar-top-link"
+          >Creekside</a
+        >
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link"
+          >Español</a
+        >
+      </div>
+
+      <div class="mobile-dropdown-menu navbar-top-flex-container">
+        <div class="dropdown navbar-top-flex-item">
+          <button
+            class="btn btn-white dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+          >
+            Locations
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="/home" class="navbar-top-flex-item">The Woodlands</a>
+            </li>
+            <li>
+              <a href="/woodforest" class="navbar-top-flex-item">Woodforest</a>
+            </li>
+            <li>
+              <a href="/montgomery" class="navbar-top-flex-item">Montgomery</a>
+            </li>
+            <li>
+              <a href="/creekside" class="navbar-top-flex-item">Creekside</a>
+            </li>
+            <li><a href="/espanol" class="navbar-top-flex-item">Español</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar bottom -->
+    <nav class="navbar navbar-twmc-bottom">
+      <div class="navbar-container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed navbar-bottom-hamburger"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+            <span class="icon-bar navbar-bottom-icon-bar"></span>
+          </button>
+          <a href="/home">
+            <!-- color logo -->
+            <img
+              src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png"
+              alt="TWMC logo"
+              class="navbar-bottom-logo"
+            />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div
+          class="collapse navbar-collapse navbar-bottom-collapse"
+          id="bs-example-navbar-collapse-1"
+        >
+          <!-- Nav desktop -->
+          <div class="nav navbar-nav navbar-right navbar-bottom-right">
+            <a href="/times-locations" class="navbar-bottom-link"
+              ><b>Times &amp; Locations</b></a
+            >
+            <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+            <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+            <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+            <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+            <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+
+            <!-- Beyond -->
+            <a
+              href="https://beyondcampaign.org/"
+              class="tw26-beyond-logo"
+              target="_blank"
+            >
+              <img
+                src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                alt=""
+                class="img-responsive"
+              />
+            </a>
+
+            <a
+              href="https://twmc.org/login"
+              class="btn btn-outline-lightgrey mx-2"
+              >Login</a
+            >
+
+            <!-- dropdown -->
+            <a
+              href="#"
+              class="dropdown-toggle navbar-bottom-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-bars"></i
+            ></a>
+
+            <div class="dropdown-menu navbar-bottom-dropdownmenu">
+              <!-- Mega menu -->
+              <div class="nav navbar-nav navbar-bottom-megamenu">
+                <!-- Main Menu -->
+                <div class="megamenu-main-menu">
+                  <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                  <a href="/times-locations" class="megamenu-link"
+                    >Times &amp; Locations</a
+                  >
+                  <a href="/im-new" class="megamenu-link">Visit</a>
+                  <a href="/gather" class="megamenu-link">Grow</a>
+                  <a href="/messages" class="megamenu-link">Messages</a>
+                  <a href="/outward" class="megamenu-link">Serve</a>
+                  <a href="/give" class="megamenu-link">Give</a>
+                  <a href="/login" class="megamenu-link">Login</a>
+                  <a href="https://beyondcampaign.org/" class="megamenu-link"
+                    ><span class="pr-2">Beyond Campaign</span
+                    ><img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                  /></a>
+
+                  <!-- Services -->
+                  <h3 class="megamenu-h3">Services</h3>
+                  <a href="/chapel" class="megamenu-link mt-3"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Chapel</span></a
+                  >
+                  <a href="/harvest" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Harvest</span></a
+                  >
+                  <a href="/loft" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Loft</span></a
+                  >
+                  <a href="/traditional" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Traditional</span></a
+                  >
+                  <a href="/house" class="megamenu-link"
+                    ><img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_logo/CYA_House_Bug.png"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">House</span></a
+                  >
+
+                  <!-- Socmed -->
+                  <div class="megamenu-socmed">
+                    <a
+                      href="https://www.instagram.com/woodlandsmethodistchurch/"
+                      ><i
+                        class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                      ><i
+                        class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a
+                      href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                      ><i
+                        class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                    <a href="/podcast"
+                      ><i
+                        class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+
+                <!-- About -->
+                <div class="megamenu-about">
+                  <h3 class="megamenu-h3">About</h3>
+                  <a href="/baptism" class="megamenu-link">Baptism</a>
+                  <a href="/our-story" class="megamenu-link">Our Stories</a>
+                  <a href="/membership" class="megamenu-link">Membership</a>
+                  <a href="/staff" class="megamenu-link">Staff</a>
+                  <a href="/venues" class="megamenu-link"
+                    >Venues and Bookings</a
+                  >
+                  <a href="/foundation" class="megamenu-link"
+                    >TWMC Foundation</a
+                  >
+                  <a href="/gracegarden" class="megamenu-link"
+                    >Grace Garden - Columbarium</a
+                  >
+                  <a href="/seminary-scholarship" class="megamenu-link"
+                    >Seminary Scholarship Program</a
+                  >
+                  <a href="/media-hub" class="megamenu-link">Church Online</a>
+                  <a href="/podcast" class="megamenu-link">Podcast</a>
+                  <a href="/woodlands-parking" class="megamenu-link">Parking</a>
+                  <a href="/umarmy" class="megamenu-link">U.M. ARMY</a>
+                </div>
+                <!-- End of About -->
+
+                <!-- Connect / NextGen -->
+                <div class="megamenu-services">
+                  <h3 class="megamenu-h3">Connect</h3>
+                  <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                  <a href="/events" class="megamenu-link">Events</a>
+                  <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                  <a href="/support-groups" class="megamenu-link"
+                    >Support Groups</a
+                  >
+                  <a href="/recovery-groups" class="megamenu-link"
+                    >Recovery Groups</a
+                  >
+
+                  <h3 class="megamenu-h3">NextGen</h3>
+                  <a href="/children" class="megamenu-link"
+                    >NextGen Kids (Ages 3–9)</a
+                  >
+                  <a href="/56" class="megamenu-link"
+                    >NextGen 56 (Ages 10-11)</a
+                  >
+                  <a href="/students" class="megamenu-link"
+                    >NextGen Students (Ages 12-18)</a
+                  >
+                  <a href="/confirmation" class="megamenu-link">Confirmation</a>
+                  <a href="/nextgen-sports" class="megamenu-link"
+                    >NextGen Sports</a
+                  >
+                </div>
+                <!-- End of Connect / NextGen -->
+
+                <!-- Ministries -->
+                <div class="megamenu-ministries">
+                  <h3 class="megamenu-h3">Ministries</h3>
+                  <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                  <a href="/adult-discipleship" class="megamenu-link"
+                    >Adult Discipleship</a
+                  >
+                  <a
+                    href="https://www.bristolhousemusic.org/"
+                    class="megamenu-link"
+                    >Bristol House Music</a
+                  >
+                  <a
+                    href="http://www.childrenofthewoodlands.org/"
+                    class="megamenu-link"
+                    >Children of the Woodlands</a
+                  >
+                  <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                  <a href="/marriage" class="megamenu-link">Marriage</a>
+                  <a href="/men" class="megamenu-link">Men</a>
+                  <a href="/missions" class="megamenu-link">Missions</a>
+                  <a href="/music-fine-arts" class="megamenu-link"
+                    >Music and Fine Arts</a
+                  >
+                  <a href="/recreation" class="megamenu-link">Recreation</a>
+                  <a href="/singles" class="megamenu-link">Singles</a>
+                  <a href="/special-needs" class="megamenu-link"
+                    >Special Needs</a
+                  >
+                  <a href="https://www.twmschool.org/" class="megamenu-link"
+                    >The Woodlands Methodist School</a
+                  >
+                  <a href="/women" class="megamenu-link">Women</a>
+                  <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                </div>
+                <!-- End of Ministries -->
+              </div>
+            </div>
+          </div>
+          <!-- End of nav desktop -->
+
+          <!-- Nav mobile -->
+          <div class="dropdown-menu navbar-bottom-mobile">
+            <!-- Main Menu -->
+            <div class="navbar-bottom-mobile--main-menu">
+              <h3 class="megamenu-h3">Main Menu</h3>
+              <a href="/times-locations" class="megamenu-link"
+                >Times &amp; Locations</a
+              >
+              <a href="/im-new" class="megamenu-link">Visit</a>
+              <a href="/gather" class="megamenu-link">Grow</a>
+              <a href="/messages" class="megamenu-link">Messages</a>
+              <a href="/outward" class="megamenu-link">Serve</a>
+              <a href="/give" class="megamenu-link">Give</a>
+              <a href="/login" class="megamenu-link">Login</a>
+              <a href="https://beyondcampaign.org/" class="megamenu-link"
+                ><span class="pr-2">Beyond Campaign</span
+                ><img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_feature-banners/_featurebanners2024/CAP_Beyond_Icon.png"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+              /></a>
+
+              <h3 class="megamenu-h3">Services</h3>
+              <a href="/chapel" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Chapel</span></a
+              >
+              <a href="/harvest" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Harvest</span></a
+              >
+              <a href="/loft" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Loft</span></a
+              >
+              <a href="/traditional" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Traditional</span></a
+              >
+              <a href="/house" class="megamenu-link"
+                ><img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_logo/CYA_House_Bug.png"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">House</span></a
+              >
+
+              <div class="navbar-bottom-mobile--socmed">
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/"
+                  ><i
+                    class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                  ><i
+                    class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                  ><i
+                    class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+                <a href="/podcast"
+                  ><i
+                    class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <!-- End of Main Menu -->
+
+            <!-- About -->
+            <div class="navbar-bottom-mobile--about">
+              <h3 class="megamenu-h3">About</h3>
+              <a href="/baptism" class="megamenu-link">Baptism</a>
+              <a href="/our-story" class="megamenu-link">Our Stories</a>
+              <a href="/membership" class="megamenu-link">Membership</a>
+              <a href="/staff" class="megamenu-link">Staff</a>
+              <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+              <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+              <a href="/gracegarden" class="megamenu-link"
+                >Grace Garden - Columbarium</a
+              >
+              <a href="/seminary-scholarship" class="megamenu-link"
+                >Seminary Scholarship Program</a
+              >
+              <a href="/media-hub" class="megamenu-link">Church Online</a>
+              <a href="/podcast" class="megamenu-link">Podcast</a>
+              <a href="/woodlands-parking" class="megamenu-link">Parking</a>
+              <a href="/umarmy" class="megamenu-link">U.M. ARMY</a>
+            </div>
+            <!-- End of About -->
+
+            <!-- Connect / NextGen -->
+            <div class="navbar-bottom-mobile--services">
+              <h3 class="megamenu-h3">Connect</h3>
+              <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+              <a href="/events" class="megamenu-link">Events</a>
+              <a href="/homegroups" class="megamenu-link">Home Groups</a>
+              <a href="/support-groups" class="megamenu-link">Support Groups</a>
+              <a href="/recovery-groups" class="megamenu-link"
+                >Recovery Groups</a
+              >
+
+              <h3 class="megamenu-h3">NextGen</h3>
+              <a href="/children" class="megamenu-link"
+                >NextGen Kids (Ages 3–9)</a
+              >
+              <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+              <a href="/students" class="megamenu-link"
+                >NextGen Students (Ages 12-18)</a
+              >
+              <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
+            </div>
+            <!-- End of Connect / NextGen -->
+
+            <!-- Ministries -->
+            <div class="navbar-bottom-mobile--ministries">
+              <h3 class="megamenu-h3">Ministries</h3>
+              <a href="/adults55" class="megamenu-link">Adults 55+</a>
+              <a href="/adult-discipleship" class="megamenu-link"
+                >Adult Discipleship</a
+              >
+              <a href="https://www.bristolhousemusic.org/" class="megamenu-link"
+                >Bristol House Music</a
+              >
+              <a
+                href="http://www.childrenofthewoodlands.org/"
+                class="megamenu-link"
+                >Children of the Woodlands</a
+              >
+              <a href="/help" class="megamenu-link">Caring and Prayer</a>
+              <a href="/marriage" class="megamenu-link">Marriage</a>
+              <a href="/men" class="megamenu-link">Men</a>
+              <a href="/missions" class="megamenu-link">Missions</a>
+              <a href="/music-fine-arts" class="megamenu-link"
+                >Music and Fine Arts</a
+              >
+              <a href="/recreation" class="megamenu-link">Recreation</a>
+              <a href="/singles" class="megamenu-link">Singles</a>
+              <a href="/special-needs" class="megamenu-link">Special Needs</a>
+              <a href="https://www.twmschool.org/" class="megamenu-link"
+                >The Woodlands Methodist School</a
+              >
+              <a href="/women" class="megamenu-link">Women</a>
+              <a href="/youngadults" class="megamenu-link">Young Adults</a>
+            </div>
+            <!-- End of Ministries -->
+          </div>
+          <!-- End of Nav mobile -->
+        </div>
+        <!-- End of Navbar collapse -->
+      </div>
+      <!-- End of .container -->
+    </nav>
+    <!-- ===== /NAVBAR ===== -->
+
+    <!-- Add margin below navbar, remove if needed -->
+    <section class="margin-below-navbar"></section>
+
+    <!-- Page Content -->
+    <section class="hero--video-section">
+      <video
+        playsinline
+        autoplay
+        muted
+        loop
+        poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/FND_TextOverlay_BKG2.png"
+      >
+        <source
+          src="https://player.vimeo.com/progressive_redirect/playback/1184955692/rendition/720p/file.mp4%20%28720p%29.mp4?loc=external&amp;signature=77ffdc605f222accf2a247b6b6e243b467121c37921f498e32cd62f4f6d88515"
+          type="video/mp4"
+        />
+      </video>
+      <div class="container hero--video__text-wrapper">
+        <img
+          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png"
+          alt="Church doesn't just happen on Sunday. Your church, every day of the week."
+          class="img-responsive"
+        />
+      </div>
+    </section>
+
+    <main>
+      <section class="twmc-home-cta-feat">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="twmc-flex-container--3-col-feat">
+                <a href="/house" class="twmc-home-cta-feat__link">
+                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=2d28e2d9-adf3-46d8-a1cc-186e93e4eeec" alt="" class="twmc-home-cta-adv__img" />
+                  <div class="twmc-home-cta-adv__text">
+                    <h4 class="twmc-h4">Official House Launch</h4>
+                    <p class="twmc-p-small">Join us June 1-2 to kick off House, a weekly gathering for young adults and anyone seeking a midweek worship opportun...</p>
+                  </div>
+                </a>
+                <a href="https://www.geezersquad.org/" class="twmc-home-cta-feat__link">
+                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=62f32bd8-04a4-4487-b235-424b37616748" alt="" class="twmc-home-cta-adv__img" />
+                  <div class="twmc-home-cta-adv__text">
+                    <h4 class="twmc-h4">Geezer Squad</h4>
+                    <p class="twmc-p-small">The Geezer Squad is a ministry of our church that serves those in need in Montgomery County.</p>
+                  </div>
+                </a>
+                <a href="/gather" class="twmc-home-cta-feat__link">
+                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=02093875-156e-4896-82d6-ce792a824e6f" alt="" class="twmc-home-cta-adv__img" />
+                  <div class="twmc-home-cta-adv__text">
+                    <h4 class="twmc-h4">Summer Studies</h4>
+                    <p class="twmc-p-small">Whatever your next step in the journey of faith, we probably have a class launching this summer that can help.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="twmc-section__pymed-white">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="row twmc-home-intro__row">
+                <div class="col-md-6">
+                  <div class="embed-container">
+                    <iframe src="https://player.vimeo.com/video/755253246" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="twmc-p">Welcome to The Woodlands Methodist Church! We're a vibrant, multi-campus community of faith with worship styles ranging from traditional and contemporary to very modern — and we'd love for you to find your place with us.</p>
+                  <p class="twmc-p mb-3">Whether you're planning a visit to one of our campuses or looking to connect from wherever you are, we make it easy to join us in person or worship anytime through our messages, podcasts, and live services.</p>
+                  <div class="button-group">
+                    <a href="/times-locations" class="twmc--btn-outline-traditional">Times &amp; Locations</a>
+                    <a href="/media-hub" class="twmc--btn-solid-traditional">Watch &amp; Listen</a>
+                  </div>
+                  <div class="text-traditional mt-4">
+                    <h5 class="twmc-h5 mb-0">Follow us on social media:</h5>
+                    <div class="twmc-socmed-icon__traditional twmc-socmed-icon__container2">
+                      <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch"><i class="fab fa-youtube"></i></a>
+                      <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="grow__nav-home">
+        <div class="container-fluid">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="square-container">
+              <a href="/gather" class="square__link"><div class="square square-g"><h2>g</h2></div></a>
+              <a href="/raise" class="square__link"><div class="square square-r"><h2>r</h2></div></a>
+              <a href="/outward" class="square__link"><div class="square square-o"><h2>o</h2></div></a>
+              <a href="/walk" class="square__link"><div class="square square-w"><h2>w</h2></div></a>
+            </div>
+            <div class="grow__nav--text text-center">
+              <h4 class="twmc-h4 mt-0 mb-4">A Pathway to a Deeper Faith</h4>
+              <p class="twmc-p">Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church. No matter where you are in your faith, we are excited to journey with you.</p>
+              <h4 class="twmc-h4 my-4">Ready to Get Started?</h4>
+              <a href="/grow" class="twmc--btn twmc--btn__grow-outline-grey2">Start here</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section">
+        <div class="container-fluid mx-sm-5">
+          <div class="twmcblog__flex-container-4col">
+            <div class="twmcblog__flex-item-4col">
+              <div class="twmc-home-blog__info-title">
+                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/HiImMark_Circle360.png" alt="Hi, I'm Mark." class="img-responsive mb-2" />
+                <h2 class="twmc-h2">Senior Pastor Blog</h2>
+              </div>
+              <p class="twmc-p">Read our most recent blogs and find message summaries, up-to-date information on the latest events around the church and reflections on personal faith journeys from our TWMC staff.</p>
+              <a href="/blog" class="twmc--btn twmc--btn--traditional">Find more</a>
+            </div>
+
+            <article class="twmcblog__flex-item-4col twmc-card">
+              <a href="/blog/envy">
+                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=458686&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <div class="twmc-card-body">
+                  <h3 class="twmcblog__card-title">The Rot of Envy</h3>
+                  <p class="twmcblog__card-text">Last weekend, I had the joy of being with our Church at Woodforest community. It was a gift to worship together on Pentecost Sunday, remember the anniversary of John Wesley's "strangely warmed" heart, and wrap up their sermon series on the seven deadly sins with a message on envy.</p>
+                  <div class="twmcblog__card-info-wrapper">
+                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
+                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">May 28, 2026</p><p class="twmcblog__card-info-text">2 mins</p></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="twmcblog__flex-item-4col twmc-card">
+              <a href="/blog/holiness-hidden-in-everyday-life">
+                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=457434&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <div class="twmc-card-body">
+                  <h3 class="twmcblog__card-title">Holiness Hidden in Everyday Life</h3>
+                  <p class="twmcblog__card-text">For the past month, Nycki and I have had the joy of extended time with our grandson, who has been staying at our house while his parents work through the details of relocating back to The Woodlands. Let me just say, having a 3-year-old back in the house after an extended season of empty nesting has brought a whole new level of awareness into our lives.</p>
+                  <div class="twmcblog__card-info-wrapper">
+                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
+                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">May 14, 2026</p><p class="twmcblog__card-info-text">2 mins</p></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="twmcblog__flex-item-4col twmc-card">
+              <a href="/blog/the-kind-of-story-you-dont-want-to-end">
+                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=455046&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <div class="twmc-card-body">
+                  <h3 class="twmcblog__card-title">The Kind of Story You Don’t Want to End</h3>
+                  <p class="twmcblog__card-text">Lately, I've been thinking a lot about the stories that shape us — the ones we carry, the ones we return to, and the ones that quietly form as we become who we are. If I'm honest, growing up, I never really enjoyed reading.</p>
+                  <div class="twmcblog__card-info-wrapper">
+                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
+                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">April 23, 2026</p><p class="twmcblog__card-info-text">1 min</p></div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <style>
+      .footer-logo2 {
+        height: 50px;
+        margin-right: 10px;
+        max-width: 100%;
+      }
+
+      .footer-logo-gmc {
+        height: 30px;
+      }
+
+      .footer-text-gmc {
+        font-size: 0.7rem;
+      }
+
+      .footer-newlogo-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        align-items: center;
+      }
+
+      .footer-gmc-div {
+        border-left: 1px solid white;
+        padding-left: 14px;
+      }
+
+      .footer-infos-wrapper {
+        margin-top: 1.8rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .footer-infos-wrapper {
+          margin-left: 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .footer-newlogo-wrapper {
+          flex-direction: column;
+          gap: 0;
+          width: 100%;
+          align-items: flex-start;
+        }
+
+        .footer-logo2 {
+          height: 50px;
+          width: auto;
+          max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+          border-bottom: 1px solid white;
+          padding-bottom: 10px;
+        }
+
+        .footer-gmc-div {
+          padding-left: 0;
+          border-left: none;
+        }
+
+        .footer-logo-gmc {
+          height: 25px;
+        }
+      }
+    </style>
+
+    <section class="footer-wrapper-twmc py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+              <div class="col-sm-7 footer-info-wrapper">
+                <div class="footer-newlogo-wrapper">
+                  <img
+                    src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png"
+                    alt=""
+                    class="footer-logo2"
+                  />
+
+                  <div class="mt-0 footer-gmc-div">
+                    <p class="text-white footer-text-gmc mb-1">
+                      <strong>Member of the</strong>
+                    </p>
+                    <img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png"
+                      alt=""
+                      class="footer-logo-gmc mb-1"
+                    />
+                  </div>
+                </div>
+
+                <div class="footer-infos-wrapper">
+                  <p class="footer-info align-center">
+                    <i class="fas fa-church mr-1"></i>
+                    <a
+                      href="https://goo.gl/maps/v9urcNcJGxLDrvNH8"
+                      class="nw-a-white"
+                      target="_blank"
+                      >2200 Lake Woodlands Drive, The Woodlands, TX 77380</a
+                    >
+                  </p>
+                  <p class="footer-info">
+                    <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                    <a href="tel:(281)297-5900" class="nw-a-white"
+                      >(281) 297-5900</a
+                    >
+                  </p>
+                </div>
+
+                <div class="my-3">
+                  <a
+                    href="https://www.instagram.com/woodlandsmethodistchurch/"
+                    target="_blank"
+                    ><i
+                      class="fab fa-instagram footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/TheWoodlandsMethodist"
+                    target="_blank"
+                    ><i
+                      class="fab fa-facebook footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/c/TheWoodlandsMethodistChurch"
+                    target="_blank"
+                    ><i
+                      class="fab fa-youtube footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://www.thewoodlandsmethodist.org/podcast"
+                    target="_blank"
+                    ><i
+                      class="fas fa-podcast footer-socmed-icon"
+                      aria-hidden="true"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="col-sm-1"></div>
+
+              <div class="col-sm-4 footer-flex-container">
+                <a href="/what-we-believe" class="footer-flex-item footer-link"
+                  >What We Believe</a
+                >
+                <a href="/facilities" class="footer-flex-item footer-link"
+                  >Facilities</a
+                >
+                <a href="/employment" class="footer-flex-item footer-link"
+                  >Employment</a
+                >
+                <a href="/cafe" class="footer-flex-item footer-link"
+                  >Fireside Cafe</a
+                >
+                <a
+                  href="/indoor-playgrounds"
+                  class="footer-flex-item footer-link"
+                  >Indoor Playgrounds</a
+                >
+                <a href="/funerals" class="footer-flex-item footer-link"
+                  >Funerals &amp; Memorial Services</a
+                >
+                <a href="/help" class="footer-flex-item footer-link"
+                  >Find Help &amp; Support</a
+                >
+                <a href="/myaccount" class="footer-flex-item footer-link"
+                  >My Account</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome v6 -->
+    <script
+      src="https://kit.fontawesome.com/0283da34b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
