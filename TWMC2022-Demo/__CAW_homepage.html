@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Church at Woodforest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/_LIVE_bootstrap_v1.1.70.css" />
+    <link rel="stylesheet" href="css/_LIVE_theme_1.1.70.css" />
+    <link rel="stylesheet" href="css/_LIVE_main_v1.1.70.css" />
+    <link rel="stylesheet" href="css/_LIVE_nw-main2023_v1.1.70.css" />
+    <link rel="stylesheet" href="css/_LIVE_nw-grow_v1.1.70.css" />
+    <link rel="stylesheet" href="css/_LIVE_nw-seasonal_v1.1.70.css" />
+    <link rel="stylesheet" href="css/utilities-connect25.css" />
+    <link rel="stylesheet" href="css/utilities-templates.css" />
+    <script
+      src="https://kit.fontawesome.com/0283da34b5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      /* ===== START CAW WOODFOREST PIXEL-PERFECT CUSTOM CSS ===== */
+      :root {
+        --caw-red: #862633;
+        --caw-teal: #365057;
+        --caw-light: #f3f3f3;
+        --caw-black: #111;
+      }
+
+      html,
+      body {
+        margin: 0;
+        font-family: "Open Sans", Arial, sans-serif;
+        color: #111;
+        background: #fff;
+      }
+
+      .caw-page h1,
+      .caw-page h2,
+      .caw-page h3,
+      .caw-page h4,
+      .caw-page .nav-link {
+        font-family: "Montserrat", Arial, sans-serif;
+      }
+
+      .caw-topbar {
+        height: 34px;
+        background: #f4f3f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .caw-topbar a,
+      .caw-navbar a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .caw-navbar {
+        height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 118px;
+        background: #fff;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 5;
+      }
+
+      .caw-logo {
+        width: 224px;
+        height: auto;
+        display: block;
+      }
+
+      .caw-navlinks {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+
+      .caw-login {
+        border: 1px solid #111;
+        padding: 6px 13px;
+        text-transform: none;
+        font-weight: 500;
+      }
+
+      .caw-hero {
+        min-height: 602px;
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.36), rgba(0, 0, 0, 0.58)),
+          url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/CAW_20240512_0076.jpg")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        margin-top: 0;
+      }
+
+      .caw-hero h1 {
+        max-width: 1128px;
+        font-size: 56px;
+        line-height: 61.6px;
+        font-weight: 700;
+        letter-spacing: 0;
+        margin: 0 141px 10px;
+      }
+
+      #cta-wakeupcall {
+        background: var(--caw-teal);
+        color: #fdfdec;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-attachment: scroll;
+        padding: 1.2rem 0;
+        text-align: center;
+        height: max-content;
+      }
+
+      #cta-wakeupcall h3 {
+        margin: 16px 0 4px;
+        font-size: 24px;
+        line-height: 26.4px;
+        font-weight: 700;
+      }
+
+      .wakeupcall-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(251, 247, 183, 0.85);
+        border: 3px solid #f7f072;
+        border-radius: 9px;
+        color: #365057;
+        width: 199.172px;
+        min-height: 49.1875px;
+        max-width: 255px;
+        padding: 8px 16px;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 27.2px;
+        font-weight: 700;
+        flex-direction: row;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        text-decoration: none;
+      }
+
+      .wakeupcall-img {
+        width: 24px;
+        height: auto;
+      }
+
+      .caw-section {
+        padding: 72px 0;
+      }
+
+      .caw-container {
+        width: min(1140px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .caw-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        align-items: start;
+      }
+
+      .caw-intro img {
+        width: 100%;
+        display: block;
+      }
+
+      .caw-intro h2 {
+        margin: 0 0 10px;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #333;
+      }
+
+      .caw-intro p {
+        font-size: 13px;
+        line-height: 1.72;
+        margin: 0 0 14px;
+      }
+
+      .caw-service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-top: 24px;
+      }
+
+      .caw-service-grid h4 {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 0 0 4px;
+      }
+
+      .btn-caw {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 0;
+        background: var(--caw-red);
+        color: #fff !important;
+        padding: 9px 18px;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+      }
+
+      .caw-social {
+        display: flex;
+        gap: 16px;
+        margin-top: 22px;
+        font-size: 19px;
+      }
+
+      .caw-social a {
+        color: var(--caw-red);
+      }
+
+      .caw-message {
+        min-height: 570px;
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.62)),
+          url("https://thewoodlandsmethodist.org/GetImage.ashx?guid=b57da65e-8a3e-4fe8-b5eb-f26b529d5da6&width=1600&height=674&mode=crop")
+            center/cover no-repeat,
+          #292929;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .caw-message h2 {
+        font-size: 58px;
+        line-height: 1;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 0 60px;
+      }
+
+      .caw-message .series {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        margin: 0 0 12px;
+      }
+
+      .caw-message h3 {
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 14px;
+      }
+
+      .caw-message p {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin-bottom: 24px;
+      }
+
+      .caw-message .btn-caw {
+        margin: 0 4px;
+      }
+      .caw-message .btn-white {
+        background: #fff;
+        color: #333 !important;
+      }
+
+      .caw-connect {
+        padding-top: 86px;
+        padding-bottom: 62px;
+      }
+
+      .caw-title-light {
+        font-size: 58px;
+        line-height: 1;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #d2d0d0;
+        text-align: center;
+        margin: 0 0 28px;
+      }
+
+      .caw-card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      .caw-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 16px rgba(134, 38, 51, 0.14);
+        min-height: 520px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .caw-card-img {
+        height: 280px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .caw-card-body {
+        padding: 22px 24px 18px;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+
+      .caw-card h3 {
+        font-size: 16px;
+        font-weight: 800;
+        margin: 0 0 8px;
+      }
+
+      .caw-tags {
+        font-size: 9px;
+        font-weight: 800;
+        margin-bottom: 14px;
+      }
+
+      .caw-tag {
+        display: inline-block;
+        background: #eee;
+        color: var(--caw-red);
+        border-radius: 10px;
+        padding: 3px 8px;
+        margin: 3px 2px 0 0;
+      }
+
+      .caw-card p {
+        font-size: 12px;
+        line-height: 1.45;
+        margin: 0 0 20px;
+      }
+
+      .caw-card .card-spacer {
+        flex: 1;
+        border-bottom: 1px solid #cfcfcf;
+        margin-bottom: 16px;
+      }
+
+      .caw-card .btn-caw {
+        align-self: flex-end;
+        border-radius: 18px;
+        min-width: 130px;
+        padding: 8px 18px;
+      }
+
+      .caw-find-more {
+        display: flex;
+        justify-content: center;
+        margin-top: 62px;
+      }
+
+      .caw-enews {
+        background: var(--caw-red);
+        color: #fff;
+        padding: 42px 0;
+      }
+
+      .caw-enews .caw-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 940px;
+      }
+
+      .caw-enews h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .caw-enews p {
+        margin: 0;
+        font-size: 12px;
+      }
+
+      .caw-grow {
+        background: var(--caw-light);
+        text-align: center;
+        padding: 82px 0 70px;
+      }
+
+      .grow-squares {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .grow-square {
+        width: 126px;
+        height: 126px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        font:
+          700 54px/1 "Montserrat",
+          sans-serif;
+      }
+
+      .grow-g {
+        background: #4d4aa0;
+      }
+      .grow-r {
+        background: #e92961;
+      }
+      .grow-o {
+        background: #62c5b5;
+      }
+      .grow-w {
+        background: #f8c948;
+      }
+
+      .caw-grow h4 {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 0 0 12px;
+      }
+
+      .caw-grow p {
+        max-width: 860px;
+        margin: 0 auto 28px;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .btn-outline-caw {
+        background: transparent;
+        border: 1px solid #111;
+        color: #111 !important;
+        padding: 7px 14px;
+        font-size: 11px;
+        text-decoration: none;
+      }
+
+      .caw-footer {
+        background: #111;
+        color: #fff;
+        padding: 55px 0 70px;
+      }
+
+      .caw-footer .caw-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-logo {
+        width: 160px;
+        margin-bottom: 16px;
+      }
+
+      .caw-footer p,
+      .caw-footer a {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.2;
+        text-decoration: none;
+      }
+
+      .caw-footer p {
+        margin: 0 0 8px;
+      }
+
+      .footer-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+        font-size: 18px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 13px;
+      }
+
+      @media (max-width: 767px) {
+        .caw-topbar {
+          justify-content: flex-start;
+          padding-left: 13px;
+          height: 24px;
+          font-size: 8px;
+          gap: 0;
+        }
+
+        .caw-topbar a:not(:first-child) {
+          display: none;
+        }
+
+        .caw-navbar {
+          height: 54px;
+          padding: 0 15px;
+        }
+
+        .caw-logo {
+          width: 112px;
+        }
+        .caw-navlinks a:not(.caw-menu) {
+          display: none;
+        }
+        .caw-navlinks {
+          gap: 0;
+          font-size: 14px;
+        }
+
+        .caw-hero {
+          min-height: 246px;
+          background-position: center;
+        }
+
+        .caw-hero h1 {
+          font-size: 18px;
+          line-height: 1.08;
+          max-width: 290px;
+          margin-top: 30px;
+        }
+
+        #cta-wakeupcall {
+          padding: 1.2rem 0;
+        }
+
+        #cta-wakeupcall h3 {
+          font-size: 13px;
+          line-height: 1.2;
+          margin-bottom: 10px;
+        }
+
+        .wakeupcall-btn {
+          width: 150px;
+          min-height: 34px;
+          font-size: 9px;
+          line-height: 1.2;
+          border-width: 2px;
+          border-radius: 7px;
+        }
+
+        .wakeupcall-img {
+          width: 20px;
+        }
+
+        .caw-section {
+          padding: 42px 0;
+        }
+
+        .caw-container {
+          width: min(350px, calc(100% - 28px));
+        }
+
+        .caw-intro,
+        .caw-service-grid {
+          grid-template-columns: 1fr;
+          gap: 19px;
+        }
+
+        .caw-intro h2 {
+          font-size: 18px;
+          margin-top: 9px;
+        }
+
+        .caw-intro p {
+          font-size: 11px;
+          line-height: 1.55;
+        }
+
+        .caw-message {
+          min-height: 300px;
+        }
+
+        .caw-message h2 {
+          font-size: 22px;
+          letter-spacing: 0.18em;
+          margin-bottom: 22px;
+        }
+
+        .caw-message .series {
+          font-size: 14px;
+        }
+
+        .caw-message h3 {
+          font-size: 16px;
+        }
+
+        .caw-message p {
+          font-size: 8px;
+        }
+
+        .caw-connect {
+          padding-top: 42px;
+        }
+
+        .caw-title-light {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+
+        .caw-card-grid {
+          grid-template-columns: 1fr;
+          gap: 17px;
+        }
+
+        .caw-card {
+          min-height: 0;
+        }
+
+        .caw-card:not(:nth-child(-n + 2)) {
+          display: grid;
+          grid-template-columns: 112px 1fr;
+        }
+
+        .caw-card-img {
+          height: 215px;
+        }
+        .caw-card:not(:nth-child(-n + 2)) .caw-card-img {
+          height: 128px;
+        }
+        .caw-card-body {
+          padding: 16px 18px;
+        }
+        .caw-card:not(:nth-child(-n + 2)) .caw-card-body {
+          padding: 10px 12px;
+        }
+        .caw-card h3 {
+          font-size: 12px;
+        }
+        .caw-card p {
+          font-size: 9px;
+          line-height: 1.32;
+        }
+        .caw-card .card-spacer {
+          display: none;
+        }
+        .caw-card:not(:nth-child(-n + 3)) .btn-caw {
+          display: none;
+        }
+
+        .caw-find-more {
+          margin-top: 28px;
+        }
+
+        .caw-enews {
+          padding: 28px 0;
+        }
+
+        .caw-enews .caw-container {
+          display: block;
+        }
+
+        .caw-enews h3 {
+          font-size: 13px;
+        }
+        .caw-enews p {
+          font-size: 10px;
+          margin-bottom: 16px;
+        }
+
+        .caw-grow {
+          padding: 46px 0 42px;
+        }
+
+        .grow-squares {
+          gap: 8px;
+          margin-bottom: 28px;
+        }
+
+        .grow-square {
+          width: 48px;
+          height: 48px;
+          font-size: 20px;
+        }
+
+        .caw-grow p {
+          font-size: 10px;
+          line-height: 1.65;
+        }
+
+        .caw-footer {
+          padding: 38px 0 54px;
+        }
+
+        .caw-footer .caw-container {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+
+        .footer-links {
+          align-items: flex-start;
+        }
+      }
+      /* ===== END CAW WOODFOREST PIXEL-PERFECT CUSTOM CSS ===== */
+    </style>
+  </head>
+  <body>
+    <div class="caw-page">
+      <header>
+        <div class="caw-topbar">
+          <a href="/home">The Woodlands</a>
+          <a href="/woodforest">Woodforest</a>
+          <a href="/montgomery">Montgomery</a>
+          <a href="/creekside">Creekside</a>
+          <a href="/espanol">Español</a>
+        </div>
+        <nav class="caw-navbar">
+          <a href="/woodforest"
+            ><img
+              class="caw-logo"
+              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/CAW_Logo_2024_Red.png"
+              alt="The Church at Woodforest"
+          /></a>
+          <div class="caw-navlinks">
+            <a class="nav-link" href="/times-locations"
+              >Times &amp; Locations</a
+            >
+            <a class="nav-link" href="/im-new">Visit</a>
+            <a class="nav-link" href="/gather">Grow</a>
+            <a
+              class="nav-link"
+              href="/messages/Woodforest?ContentFilter=Woodforest"
+              >Messages</a
+            >
+            <a class="nav-link" href="/outward">Serve</a>
+            <a class="nav-link" href="/give">Give</a>
+            <a class="caw-login" href="/login">Login</a>
+            <a class="caw-menu" href="#" aria-label="Menu"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </div>
+        </nav>
+      </header>
+
+      <section class="caw-hero">
+        <h1>Loving God and Loving Neighbors — a Community United in Faith</h1>
+      </section>
+
+      <section id="cta-wakeupcall">
+        <div class="container-fluid">
+          <div class="row">
+            <div
+              class="col-sm-10 col-sm-offset-1 text-center d-flex flex-column justify-content-center align-items-center"
+            >
+              <h3 class="twmc-h3 mb-1 mt-3">Request Prayer Here</h3>
+              <a
+                href="https://seedbed.com/wakeupcall/#latest-episodes"
+                class="wakeupcall-btn mb-3"
+                target="_blank"
+                ><img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/wake-up-call-logo.png"
+                  alt=""
+                  class="img-responsive wakeupcall-img mr-2"
+                />
+                Prayer Request</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="caw-section">
+        <div class="caw-container caw-intro">
+          <img
+            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/CAW_20240512_0086.jpg"
+            alt="People entering The Church at Woodforest"
+          />
+          <div>
+            <h2>What to Expect</h2>
+            <p>
+              The Church at Woodforest is a campus of The Woodlands Methodist
+              Church. Worship gatherings are held in the Worship Center at 700
+              Fish Creek Thoroughfare. Worship services are filled with live
+              worship music and engaging Bible teaching. Families and
+              individuals of all ages are invited to join this “front porch”
+              community of believers.
+            </p>
+            <p>
+              <strong>Have questions?</strong> Read our most frequently asked
+              questions <a href="/caw-faq">here</a>.
+            </p>
+            <div class="caw-service-grid">
+              <div>
+                <h4>Service Times</h4>
+                <p>Sundays at 9:00 and 11:00 a.m.</p>
+                <a
+                  class="btn-caw"
+                  href="https://goo.gl/maps/sTBsxA84Pq1HnjvN8"
+                  target="_blank"
+                  >Map &amp; Directions</a
+                >
+              </div>
+              <div>
+                <h4>Watch Online</h4>
+                <p>Sundays at 9:00 a.m.</p>
+                <a
+                  class="btn-caw"
+                  href="https://woodforest.online.church/"
+                  target="_blank"
+                  >Watch Online</a
+                >
+              </div>
+            </div>
+            <div class="caw-social">
+              <a href="https://www.youtube.com/@TheChurchatWoodforest"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.facebook.com/churchatwoodforest/"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/thechurchatwoodforest/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="caw-message">
+        <div class="caw-container">
+          <h2>Latest Message</h2>
+          <p class="series">Standalone - May</p>
+          <h3>A Life of Prayer</h3>
+          <p>May 31, 2026 | Rev. Margarita McCarthy</p>
+          <a
+            class="btn-caw btn-white"
+            href="/series/standalone-may-1/a-life-of-prayer"
+            >View Series</a
+          >
+          <a
+            class="btn-caw"
+            href="https://api.spreaker.com/v2/episodes/72269962/download.mp3"
+            ><i class="fas fa-headphones"></i>&nbsp; Listen</a
+          >
+        </div>
+      </section>
+
+      <section class="caw-connect">
+        <div class="caw-container">
+          <h2 class="caw-title-light">Connect</h2>
+          <div class="caw-card-grid">
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=98dcfe06-ae5e-4355-8370-edf05bba90ee&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Prayer Team Training</h3>
+                <div class="caw-tags">
+                  Campus Location: <span class="caw-tag">The Woodlands</span>
+                  <span class="caw-tag">Woodforest</span>
+                </div>
+                <p>
+                  If you are interested in serving on our prayer teams, join us
+                  for an afternoon of Prayer Team Training. Sunday, June 7, on
+                  The Woodlands Campus, or Sunday, June 14 at the Woodforest
+                  Campus.
+                </p>
+                <div class="card-spacer"></div>
+                <a class="btn-caw" href="/event?EventOccurrenceId=3307"
+                  >Register</a
+                >
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=d4e5a152-6ab7-4bd3-8525-58adca6cf47d&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Handbell Choir</h3>
+                <div class="caw-tags">
+                  Campus Location: <span class="caw-tag">Woodforest</span>
+                </div>
+                <p>
+                  The Woodforest Handbell Choir rehearses on Thursdays, May
+                  14-July 16, 6:30-8:00 p.m. We would love to welcome a few new
+                  members. No experience is required, and participants may range
+                  from junior high students to adults.
+                </p>
+                <div class="card-spacer"></div>
+                <a class="btn-caw" href="/event?EventOccurrenceId=3310"
+                  >Learn More</a
+                >
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=0ceac3ed-e717-443e-905d-c916813f2f1d&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>NextGen Sports</h3>
+                <div class="caw-tags">
+                  Campus Location: <span class="caw-tag">The Woodlands</span>
+                  <span class="caw-tag">Woodforest</span>
+                </div>
+                <p>
+                  Our NextGen Sports allow kids to grow in their knowledge and
+                  skills within a particular sport in a safe, controlled,
+                  Christ-centered environment. Registration open for fall 2026.
+                </p>
+                <div class="card-spacer"></div>
+                <a class="btn-caw" href="/nextgen-sports">Find Out More</a>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=d86ae35b-d55b-4707-a58d-ce3ef78649cc&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Mission of the Month: Sleep in Heavenly Peace</h3>
+                <p>
+                  Everyone deserves a safe place to sleep. This ministry is
+                  dedicated to ending child bedlessness by building and
+                  delivering hand-crafted beds.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=8b7351ff-0dc9-4183-8adc-cb9337a5e9f0&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Spotlight</h3>
+                <p>
+                  Award: The Woodlands, Creekside, Woodforest. A spotlight
+                  moment for family, fellowship, food and entertainment.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=bc19c2c5-f286-4945-b9a7-da8f9e29a86a&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Summer Splash 2026</h3>
+                <p>
+                  Celebrate The Woodlands, Woodforest, Creekside, Montgomery.
+                  Summer fun on the way. Join friends and neighbors for an
+                  amazing summer planned for your family.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=303eb6cc-3c9e-49b1-ba8d-b02c3636f729&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Women's Summer Bible Study</h3>
+                <p>
+                  Women are invited to gather this summer for Bible study,
+                  fellowship and conversation.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=373fb4f9-9381-45ef-8af2-2948840d9deb&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Get Connected</h3>
+                <p>
+                  Ready to connect? We have a variety of groups and places where
+                  you can connect and grow in community.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=e2775078-41cc-4242-8e6c-59ad076a3803&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Woodforest Blood Drive</h3>
+                <p>
+                  Join the Gulf Coast Regional Blood Center blood drive and help
+                  save lives.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=e0411fa1-d446-4f1d-b352-254a1426184e&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>VBS Serve Team</h3>
+                <p>
+                  Vacation Bible School is on the way, and there are many ways
+                  to serve kids and families.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=891033ce-327a-411a-b6a0-c6e9477f55a0&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Support Groups</h3>
+                <p>
+                  A group of people who have common experiences and concerns and
+                  come together in community to provide spiritual, emotional and
+                  practical support.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+            <article class="caw-card">
+              <div
+                class="caw-card-img"
+                style="
+                  background-image: url(&quot;https://thewoodlandsmethodist.org/GetFile.ashx?guid=f534a353-32da-4a3c-9096-3a06ecd39040&quot;);
+                "
+              ></div>
+              <div class="caw-card-body">
+                <h3>Wonderfully Made Connect Class</h3>
+                <p>
+                  Sunday morning class for parents and caregivers of those with
+                  special needs.
+                </p>
+                <div class="card-spacer"></div>
+              </div>
+            </article>
+          </div>
+          <div class="caw-find-more">
+            <a class="btn-caw" href="/gather">Find More</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="caw-enews">
+        <div class="caw-container">
+          <div>
+            <h3>The Church at Woodforest E-News</h3>
+            <p>
+              Subscribe to a free E-News! Get weekly updates about church
+              activities sent to your inbox.
+            </p>
+          </div>
+          <a class="btn-caw btn-white" href="http://eepurl.com/bzCsO9"
+            >Subscribe Now</a
+          >
+        </div>
+      </section>
+
+      <section class="caw-grow">
+        <div class="caw-container">
+          <div class="grow-squares">
+            <a href="/gather"><div class="grow-square grow-g">g</div></a>
+            <a href="/raise"><div class="grow-square grow-r">r</div></a>
+            <a href="/outward"><div class="grow-square grow-o">o</div></a>
+            <a href="/walk"><div class="grow-square grow-w">w</div></a>
+          </div>
+          <h4>A Pathway to a Deeper Faith</h4>
+          <p>
+            Jesus’ call “to follow me” is an invitation to begin a life-long
+            journey to explore and apply God’s Word, grow in maturity, love our
+            neighbors, share our faith and, ultimately, become more like Him.
+            G.R.O.W. Points is a pathway to intentionally connect and live out
+            your faith at The Woodlands Methodist Church. No matter where you
+            are in your faith, we are excited to journey with you.
+          </p>
+          <h4>Ready to Get Started?</h4>
+          <a class="btn-outline-caw" href="/grow">Start here</a>
+        </div>
+      </section>
+
+      <footer class="caw-footer">
+        <div class="caw-container">
+          <div>
+            <img
+              class="footer-logo"
+              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_woodforest/CAW_Logo_2024_WHITE.png"
+              alt="The Church at Woodforest"
+            />
+            <p>
+              <i class="fas fa-church"></i>
+              <a href="https://goo.gl/maps/U9zfVFC5AqoceJq3A"
+                >700 Fish Creek Thoroughfare, Montgomery, TX 77316</a
+              >
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:2818228182">(281) 822-8182</a>
+            </p>
+            <p><i class="fas fa-envelope"></i> Leave us a message</p>
+            <br />
+            <p>OFFICE HOURS</p>
+            <p>Mon - Thu: 9:00 a.m. - 5:00 p.m.</p>
+            <p>Fri: 9:00 a.m. - noon</p>
+            <div class="footer-icons">
+              <a href="https://www.instagram.com/thechurchatwoodforest/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/churchatwoodforest/"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.youtube.com/@TheChurchatWoodforest"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="/podcast"><i class="fas fa-podcast"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="/what-we-believe">What We Believe</a>
+            <a href="/facilities">Facilities</a>
+            <a href="/employment">Employment</a>
+            <a href="/foundation">TWMC Foundation</a>
+            <a href="/funerals">Funerals &amp; Memorial Services</a>
+            <a href="/help">Find Help &amp; Support</a>
+            <a href="/myaccount">My Account</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
