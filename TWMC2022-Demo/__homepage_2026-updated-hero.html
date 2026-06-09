@@ -13,11 +13,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- Fonts for 2026 multi-campus hero -->
+    <!-- =========================================================
+      START: 2026 UPDATED HERO FONTS
+      Copy this into Rock RMS with the updated hero if these fonts are not already loaded.
+    ========================================================== -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
       rel="stylesheet"
     />
+    <!-- =========================================================
+      STOP: 2026 UPDATED HERO FONTS
+    ========================================================== -->
 
     <!-- CSS -->
     <link
@@ -48,7 +54,7 @@
       src="https://kit.fontawesome.com/85947205a9.js"
       crossorigin="anonymous"
     ></script>
-  
+
     <style>
       /* ===== START HOMEPAGE 2026 CUSTOM CSS ===== */
       :root {
@@ -85,278 +91,36 @@
         width: min(860px, 100%);
       }
 
-      .twmc-home-cta-feat {
-        padding: 34px 0;
-        background: #efefef;
-      }
-
-      .twmc-flex-container--3-col-feat {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 28px;
-      }
-
-      .twmc-home-cta-feat__link {
-        display: grid;
-        grid-template-columns: 88px 1fr;
-        gap: 18px;
-        align-items: center;
-        min-height: 150px;
-        padding: 18px;
-        border-radius: 6px;
-        color: #333;
-        text-decoration: none;
-        transition: transform 0.25s ease;
-      }
-
-      .twmc-home-cta-feat__link:hover,
-      .twmc-home-cta-feat__link:focus {
-        color: var(--twmc-red);
-        text-decoration: none;
-        transform: scale(1.03);
-      }
-
-      .twmc-home-cta-adv__img {
-        width: 88px;
-        height: 88px;
-        object-fit: cover;
-        border-radius: 6px;
-      }
-
-      .twmc-home-cta-adv__text h4 {
-        margin: 0 0 8px;
-        font-size: 17px;
-        font-weight: 800;
-      }
-
-      .twmc-home-cta-adv__text p {
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.35;
-        letter-spacing: 0.08em;
-      }
-
-      .twmc-section__pymed-white {
-        padding: 90px 0;
-        background: #fff;
-      }
-
-      .twmc-home-intro__row {
-        display: flex;
-        align-items: center;
-        gap: 38px;
-      }
-
-      .twmc-home-intro__row > .col-md-6 {
-        width: calc(50% - 19px);
-        padding: 0;
-      }
-
-      .embed-container {
-        position: relative;
-        height: 0;
-        padding-bottom: 56.25%;
-        overflow: hidden;
-      }
-
-      .embed-container iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-      }
-
-      .twmc--btn-outline-traditional,
-      .twmc--btn-solid-traditional {
-        display: inline-block;
-        padding: 12px 18px;
-        border-radius: 3px;
-        font-family: "Montserrat", Arial, sans-serif;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        text-decoration: none;
-      }
-
-      .twmc--btn-outline-traditional {
-        border: 2px solid var(--twmc-red);
-        color: var(--twmc-red);
-        background: #fff;
-      }
-
-      .twmc--btn-solid-traditional {
-        border: 2px solid var(--twmc-red);
-        color: #fff;
-        background: var(--twmc-red);
-      }
-
-      .text-traditional,
-      .twmc-socmed-icon__traditional a {
-        color: var(--twmc-red);
-      }
-
-      .twmc-socmed-icon__container2 {
-        display: flex;
-        gap: 14px;
-        margin-top: 4px;
-        font-size: 18px;
-      }
-
-      #grow__nav-home {
-        padding: 115px 0 120px;
-        background: #f0f0f0;
-        text-align: center;
-      }
-
-      .square-container {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        margin-bottom: 58px;
-      }
-
-      .square {
-        width: 138px;
-        height: 138px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .square h2 {
-        margin: 0;
-        color: #fff;
-        font-size: 54px;
-        font-weight: 800;
-        text-transform: uppercase;
-      }
-
-      .square-g { background: #39369a; }
-      .square-r { background: #ee2d68; }
-      .square-o { background: #5cc0a4; }
-      .square-w { background: #ffc709; }
-
-      .grow__nav--text {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .twmc--btn__grow-outline-grey2 {
-        min-width: 160px;
-        border: 1px solid #d9d9d9;
-        color: #666;
-        background: #e8e8e8;
-      }
-
-      .blog-section {
-        padding: 74px 0 72px;
-        background: #fff;
-      }
-
-      .twmcblog__flex-container-4col {
-        display: grid;
-        grid-template-columns: 1fr 1.16fr 1.16fr 1.16fr;
-        gap: 26px;
-        align-items: start;
-      }
-
-      .twmc-home-blog__info-title img {
-        width: 290px;
-        max-width: 100%;
-      }
-
-      .twmc-card {
-        overflow: hidden;
-        border-radius: 6px;
-        background: #fff;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-      }
-
-      .twmc-card a {
-        color: #000;
-        text-decoration: none;
-      }
-
-      .twmcblog__card-img {
-        width: 100%;
-        height: 290px;
-        object-fit: cover;
-      }
-
-      .twmc-card-body {
-        padding: 22px 22px 26px;
-      }
-
-      .twmcblog__card-title {
-        margin: 0 0 12px;
-        font-family: "Montserrat", Arial, sans-serif;
-        font-size: 25px;
-        font-weight: 900;
-        line-height: 1.05;
-      }
-
-      .twmcblog__card-text {
-        font-size: 14px;
-        line-height: 1.72;
-      }
-
-      .twmcblog__card-info-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 18px;
-      }
-
-      .twmcblog__card-info-img {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-      }
-
-      .twmcblog__card-info-text {
-        margin: 0;
-        font-size: 10px;
-        line-height: 1.25;
-      }
-
       @media (max-width: 991px) {
-        .hero--video-section { height: 220px; }
-        .hero--video__text-wrapper { padding: 0 18px; }
-        .twmc-home-cta-feat { padding: 18px 0; }
-        .twmc-flex-container--3-col-feat { grid-template-columns: 1fr; gap: 10px; }
-        .twmc-home-cta-feat__link { grid-template-columns: 70px 1fr; min-height: 98px; padding: 12px; }
-        .twmc-home-cta-adv__img { width: 70px; height: 70px; }
-        .twmc-section__pymed-white { padding: 46px 0; }
-        .twmc-home-intro__row { display: block; }
-        .twmc-home-intro__row > .col-md-6 { width: 100%; }
-        .embed-container { display: none; }
-        #grow__nav-home { padding: 58px 0; }
-        .square { width: 42px; height: 42px; }
-        .square h2 { font-size: 20px; }
-        .square-container { gap: 8px; margin-bottom: 28px; }
-        .blog-section { padding: 48px 0; }
-        .twmcblog__flex-container-4col { grid-template-columns: 1fr; gap: 20px; }
-        .twmcblog__card-img { height: auto; }
+        .hero--video-section {
+          height: 220px;
+        }
+        .hero--video__text-wrapper {
+          padding: 0 18px;
+        }
       }
 
       @media (max-width: 430px) {
-        .container-fluid { padding-left: 18px; padding-right: 18px; }
-        .hero--video-section { height: 205px; }
-        .hero--video-section video { transform: scale(1.2); }
-        .twmcblog__card-title { font-size: 22px; }
+        .container-fluid {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        .hero--video-section {
+          height: 205px;
+        }
+        .hero--video-section video {
+          transform: scale(1.2);
+        }
       }
-      /* ===== 2026 MULTI-CAMPUS HERO (redesign) — self-contained ===== */
+      /* =========================================================
+        START: 2026 UPDATED HERO CSS
+        Required for the updated hero layout, overlay, typography, chips, and scroll button.
+        Copy this CSS into Rock RMS with the updated hero HTML.
+      ========================================================== */
       .tw26-hero {
         position: relative;
         overflow: hidden;
-        min-height: min(88vh, 760px);
+        height: clamp(560px, 88vh, 880px);
         display: flex;
         align-items: flex-end;
         background: #1a1a1a;
@@ -377,20 +141,29 @@
         inset: 0;
         z-index: 1;
         background:
-          linear-gradient(to top, rgba(26, 26, 26, 0.92) 0%, rgba(26, 26, 26, 0.35) 42%, rgba(26, 26, 26, 0.15) 70%, rgba(26, 26, 26, 0.45) 100%),
-          linear-gradient(105deg, rgba(82, 36, 47, 0.55) 0%, rgba(82, 36, 47, 0) 55%);
+          linear-gradient(
+            to top,
+            rgba(26, 26, 26, 0.92) 0%,
+            rgba(26, 26, 26, 0.35) 42%,
+            rgba(26, 26, 26, 0.15) 70%,
+            rgba(26, 26, 26, 0.45) 100%
+          ),
+          linear-gradient(
+            105deg,
+            rgba(82, 36, 47, 0.55) 0%,
+            rgba(82, 36, 47, 0) 55%
+          );
       }
       .tw26-hero__content {
         position: relative;
         z-index: 2;
         width: 100%;
-        max-width: 1320px;
-        margin: 0 auto;
-        padding: 120px 24px 94px;
+        padding-top: 120px;
+        padding-bottom: 135px;
       }
       .tw26-hero__title {
-        font-family: 'Playfair Display', Georgia, serif;
-        font-weight: 800;
+        font-family: "Playfair Display", Georgia, serif;
+        font-weight: 400;
         color: #fff;
         font-size: clamp(40px, 5.6vw, 74px);
         line-height: 1.07;
@@ -401,10 +174,28 @@
       }
       .tw26-hero__title em {
         font-style: italic;
-        color: #d4b87a;
+        font-weight: 800;
+        color: #fff;
+      }
+      .tw26-hero__marker {
+        position: relative;
+        display: inline-block;
+        z-index: 0;
+      }
+      .tw26-hero__marker::after {
+        content: "";
+        position: absolute;
+        left: -0.03em;
+        right: -0.04em;
+        bottom: 0.08em;
+        height: 0.16em;
+        z-index: -1;
+        border-radius: 999px;
+        background: rgba(134, 38, 51, 0.78);
+        transform: rotate(-1.5deg);
       }
       .tw26-hero__sub {
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: "DM Sans", system-ui, sans-serif;
         font-size: clamp(16px, 1.5vw, 19px);
         line-height: 1.65;
         color: rgba(255, 255, 255, 0.9);
@@ -424,7 +215,7 @@
         border: 1.5px solid rgba(255, 255, 255, 0.35);
         border-radius: 999px;
         color: #fff;
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: "DM Sans", system-ui, sans-serif;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 0.2px;
@@ -437,12 +228,51 @@
       }
       .tw26-hero__chip:hover,
       .tw26-hero__chip:focus {
-        background: #c5a258;
-        border-color: #c5a258;
-        color: #1a1a1a;
+        background: #862633;
+        border-color: #862633;
+        color: #fff;
         transform: translateY(-2px);
         text-decoration: none;
       }
+      .tw26-hero__chip--primary {
+        background: #fff;
+        border-color: #fff;
+        color: #862633;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+      }
+      .tw26-hero__chip--primary:hover,
+      .tw26-hero__chip--primary:focus {
+        background: #9b2d3d;
+        border-color: #9b2d3d;
+        color: #fff;
+      }
+      .tw26-hero__chip-icon {
+        margin-right: 7px;
+        font-size: 0.86em;
+      }
+      @media (max-width: 991px) {
+        .tw26-hero {
+          height: clamp(520px, 80vh, 720px);
+        }
+        .tw26-hero__content {
+          padding-top: 96px;
+          padding-bottom: 72px;
+        }
+      }
+      @media (max-width: 576px) {
+        .tw26-hero {
+          height: 520px;
+        }
+        .tw26-hero__content {
+          padding-top: 76px;
+          padding-bottom: 46px;
+        }
+      }
+
+      /* Disabled Feb 2026: optional hero scroll arrow.
+         To re-enable, uncomment this CSS and the matching button markup near
+         the end of the 2026 UPDATED HERO section. */
+      /*
       .tw26-hero__scroll {
         position: absolute;
         bottom: 22px;
@@ -461,18 +291,32 @@
         justify-content: center;
         animation: tw26HeroBob 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
       }
+
       @keyframes tw26HeroBob {
-        0%, 100% { transform: translateX(-50%) translateY(0); }
-        50% { transform: translateX(-50%) translateY(6px); }
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(6px);
+        }
       }
+
       @media (max-width: 991px) {
-        .tw26-hero { min-height: 70vh; }
-        .tw26-hero__content { padding-top: 96px; padding-bottom: 52px; }
-        .tw26-hero__scroll { display: none; }
+        .tw26-hero__scroll {
+          display: none;
+        }
       }
+
       @media (prefers-reduced-motion: reduce) {
-        .tw26-hero__scroll { animation: none; }
+        .tw26-hero__scroll {
+          animation: none;
+        }
       }
+      */
+      /* =========================================================
+        STOP: 2026 UPDATED HERO CSS
+      ========================================================== */
       /* ===== END HOMEPAGE 2026 CUSTOM CSS ===== */
     </style>
   </head>
@@ -1037,27 +881,56 @@
         />
       </video>
       <div class="tw26-hero__scrim"></div>
-      <div class="tw26-hero__content">
-        <h1 class="tw26-hero__title">One church.<br /><em>Five places to belong.</em></h1>
-        <p class="tw26-hero__sub">
-          Church doesn't just happen on Sunday. Find your people across Montgomery County — in person or online, every day of the week.
-        </p>
-        <div class="tw26-hero__chips">
-          <a href="/times-locations" class="tw26-hero__chip">The Woodlands</a>
-          <a href="/woodforest" class="tw26-hero__chip">Woodforest</a>
-          <a href="/montgomery" class="tw26-hero__chip">Montgomery</a>
-          <a href="/creekside" class="tw26-hero__chip">Creekside</a>
-          <!-- <a href="/espanol" class="tw26-hero__chip">Español</a> -->
+      <div class="container-fluid tw26-hero__content">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-1">
+            <h1 class="tw26-hero__title">
+              One church.<br /><em
+                ><span class="tw26-hero__marker">Five</span> places to
+                belong.</em
+              >
+            </h1>
+            <p class="tw26-hero__sub">
+              Church doesn't just happen on Sunday. Find your people across
+              Montgomery County — in person or online, every day of the week.
+            </p>
+            <div class="tw26-hero__chips">
+              <a href="/times-locations" class="tw26-hero__chip"
+                >The Woodlands</a
+              >
+              <a href="/woodforest" class="tw26-hero__chip">Woodforest</a>
+              <a href="/montgomery" class="tw26-hero__chip">Montgomery</a>
+              <a href="/creekside" class="tw26-hero__chip">Creekside</a>
+              <a href="/espanol" class="tw26-hero__chip">Español</a>
+              <a
+                href="/media-hub"
+                class="tw26-hero__chip tw26-hero__chip--primary"
+                ><i
+                  class="fas fa-play tw26-hero__chip-icon"
+                  aria-hidden="true"
+                ></i
+                >Watch &amp; Listen</a
+              >
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Disabled Feb 2026: optional hero scroll arrow.
+           To re-enable, uncomment this button and the matching CSS above.
       <button
         type="button"
         class="tw26-hero__scroll"
         aria-label="Scroll to content"
-        onclick="window.scrollBy({ top: Math.round(window.innerHeight * 0.85), behavior: 'smooth' });"
+        onclick="
+          window.scrollBy({
+            top: Math.round(window.innerHeight * 0.85),
+            behavior: 'smooth',
+          })
+        "
       >
         <i class="fa-solid fa-chevron-down"></i>
       </button>
+      -->
     </section>
     <!-- =========================================================
       STOP: 2026 UPDATED HERO
@@ -1098,30 +971,130 @@
       <!-- =========================================================
         START: FEATURED CTA CARDS
       ========================================================== -->
+      <style>
+        .twmc-home-cta-feat {
+          padding: 34px 0;
+          background: #efefef;
+        }
+
+        .twmc-flex-container--3-col-feat {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 28px;
+        }
+
+        .twmc-home-cta-feat__link {
+          display: grid;
+          grid-template-columns: 88px 1fr;
+          gap: 18px;
+          align-items: center;
+          min-height: 150px;
+          padding: 18px;
+          border-radius: 6px;
+          color: #333;
+          text-decoration: none;
+          background: #fff;
+          transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .twmc-home-cta-feat__link:hover,
+        .twmc-home-cta-feat__link:focus {
+          color: var(--twmc-red, #862633);
+          text-decoration: none;
+          transform: scale(1.03);
+        }
+
+        .twmc-home-cta-adv__img {
+          width: 88px;
+          height: 88px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+
+        .twmc-home-cta-adv__text h4 {
+          margin: 0 0 8px;
+          font-size: 17px;
+          font-weight: 800;
+        }
+
+        .twmc-home-cta-adv__text p {
+          margin: 0;
+          font-size: 12px;
+          line-height: 1.35;
+          letter-spacing: 0.08em;
+        }
+
+        @media only screen and (max-width: 991px) {
+          .twmc-home-cta-feat {
+            padding: 18px 0;
+          }
+
+          .twmc-flex-container--3-col-feat {
+            grid-template-columns: 1fr;
+            gap: 10px;
+          }
+
+          .twmc-home-cta-feat__link {
+            grid-template-columns: 70px 1fr;
+            min-height: 98px;
+            padding: 12px;
+          }
+
+          .twmc-home-cta-adv__img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+      </style>
       <section class="twmc-home-cta-feat">
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
               <div class="twmc-flex-container--3-col-feat">
                 <a href="/house" class="twmc-home-cta-feat__link">
-                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=2d28e2d9-adf3-46d8-a1cc-186e93e4eeec" alt="" class="twmc-home-cta-adv__img" />
+                  <img
+                    src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=2d28e2d9-adf3-46d8-a1cc-186e93e4eeec"
+                    alt=""
+                    class="twmc-home-cta-adv__img"
+                  />
                   <div class="twmc-home-cta-adv__text">
                     <h4 class="twmc-h4">Official House Launch</h4>
-                    <p class="twmc-p-small">Join us June 1-2 to kick off House, a weekly gathering for young adults and anyone seeking a midweek worship opportun...</p>
+                    <p class="twmc-p-small">
+                      Join us June 1-2 to kick off House, a weekly gathering for
+                      young adults and anyone seeking a midweek worship
+                      opportun...
+                    </p>
                   </div>
                 </a>
-                <a href="https://www.geezersquad.org/" class="twmc-home-cta-feat__link">
-                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=62f32bd8-04a4-4487-b235-424b37616748" alt="" class="twmc-home-cta-adv__img" />
+                <a
+                  href="https://www.geezersquad.org/"
+                  class="twmc-home-cta-feat__link"
+                >
+                  <img
+                    src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=62f32bd8-04a4-4487-b235-424b37616748"
+                    alt=""
+                    class="twmc-home-cta-adv__img"
+                  />
                   <div class="twmc-home-cta-adv__text">
                     <h4 class="twmc-h4">Geezer Squad</h4>
-                    <p class="twmc-p-small">The Geezer Squad is a ministry of our church that serves those in need in Montgomery County.</p>
+                    <p class="twmc-p-small">
+                      The Geezer Squad is a ministry of our church that serves
+                      those in need in Montgomery County.
+                    </p>
                   </div>
                 </a>
                 <a href="/gather" class="twmc-home-cta-feat__link">
-                  <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=02093875-156e-4896-82d6-ce792a824e6f" alt="" class="twmc-home-cta-adv__img" />
+                  <img
+                    src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=02093875-156e-4896-82d6-ce792a824e6f"
+                    alt=""
+                    class="twmc-home-cta-adv__img"
+                  />
                   <div class="twmc-home-cta-adv__text">
                     <h4 class="twmc-h4">Summer Studies</h4>
-                    <p class="twmc-p-small">Whatever your next step in the journey of faith, we probably have a class launching this summer that can help.</p>
+                    <p class="twmc-p-small">
+                      Whatever your next step in the journey of faith, we
+                      probably have a class launching this summer that can help.
+                    </p>
                   </div>
                 </a>
               </div>
@@ -1136,6 +1109,98 @@
       <!-- =========================================================
         START: WELCOME VIDEO AND INTRO
       ========================================================== -->
+      <style>
+        .twmc-section__pymed-white {
+          padding: 90px 0;
+          background: #fff;
+        }
+
+        .twmc-home-intro__row {
+          display: flex;
+          align-items: center;
+          gap: 38px;
+        }
+
+        .twmc-home-intro__row > .col-md-6 {
+          width: calc(50% - 19px);
+          padding: 0;
+        }
+
+        .embed-container {
+          position: relative;
+          height: 0;
+          padding-bottom: 56.25%;
+          overflow: hidden;
+        }
+
+        .embed-container iframe {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .button-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        .twmc--btn-outline-traditional,
+        .twmc--btn-solid-traditional {
+          display: inline-block;
+          padding: 12px 18px;
+          border-radius: 3px;
+          font-family: "Montserrat", Arial, sans-serif;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        .twmc--btn-outline-traditional {
+          border: 2px solid var(--twmc-red, #862633);
+          color: var(--twmc-red, #862633);
+          background: #fff;
+        }
+
+        .twmc--btn-solid-traditional {
+          border: 2px solid var(--twmc-red, #862633);
+          color: #fff;
+          background: var(--twmc-red, #862633);
+        }
+
+        .text-traditional,
+        .twmc-socmed-icon__traditional a {
+          color: var(--twmc-red, #862633);
+        }
+
+        .twmc-socmed-icon__container2 {
+          display: flex;
+          gap: 14px;
+          margin-top: 4px;
+          font-size: 18px;
+        }
+
+        @media (max-width: 991px) {
+          .twmc-section__pymed-white {
+            padding: 46px 0;
+          }
+
+          .twmc-home-intro__row {
+            display: block;
+          }
+
+          .twmc-home-intro__row > .col-md-6 {
+            width: 100%;
+          }
+
+          .embed-container {
+            display: none;
+          }
+        }
+      </style>
       <section class="twmc-section__pymed-white">
         <div class="container-fluid">
           <div class="row">
@@ -1143,22 +1208,52 @@
               <div class="row twmc-home-intro__row">
                 <div class="col-md-6">
                   <div class="embed-container">
-                    <iframe src="https://player.vimeo.com/video/755253246" frameborder="0" allowfullscreen></iframe>
+                    <iframe
+                      src="https://player.vimeo.com/video/755253246"
+                      frameborder="0"
+                      allowfullscreen
+                    ></iframe>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <p class="twmc-p">Welcome to The Woodlands Methodist Church! We're a vibrant, multi-campus community of faith with worship styles ranging from traditional and contemporary to very modern — and we'd love for you to find your place with us.</p>
-                  <p class="twmc-p mb-3">Whether you're planning a visit to one of our campuses or looking to connect from wherever you are, we make it easy to join us in person or worship anytime through our messages, podcasts, and live services.</p>
+                  <p class="twmc-p">
+                    Welcome to The Woodlands Methodist Church! We're a vibrant,
+                    multi-campus community of faith with worship styles ranging
+                    from traditional and contemporary to very modern — and we'd
+                    love for you to find your place with us.
+                  </p>
+                  <p class="twmc-p mb-3">
+                    Whether you're planning a visit to one of our campuses or
+                    looking to connect from wherever you are, we make it easy to
+                    join us in person or worship anytime through our messages,
+                    podcasts, and live services.
+                  </p>
                   <div class="button-group">
-                    <a href="/times-locations" class="twmc--btn-outline-traditional">Times &amp; Locations</a>
-                    <a href="/media-hub" class="twmc--btn-solid-traditional">Watch &amp; Listen</a>
+                    <a
+                      href="/times-locations"
+                      class="twmc--btn-outline-traditional"
+                      >Times &amp; Locations</a
+                    >
+                    <a href="/media-hub" class="twmc--btn-solid-traditional"
+                      >Watch &amp; Listen</a
+                    >
                   </div>
                   <div class="text-traditional mt-4">
                     <h5 class="twmc-h5 mb-0">Follow us on social media:</h5>
-                    <div class="twmc-socmed-icon__traditional twmc-socmed-icon__container2">
-                      <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch"><i class="fab fa-youtube"></i></a>
-                      <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook"></i></a>
-                      <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram"></i></a>
+                    <div
+                      class="twmc-socmed-icon__traditional twmc-socmed-icon__container2"
+                    >
+                      <a
+                        href="https://www.youtube.com/c/TheWoodlandsMethodistChurch"
+                        ><i class="fab fa-youtube"></i
+                      ></a>
+                      <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                        ><i class="fab fa-facebook"></i
+                      ></a>
+                      <a
+                        href="https://www.instagram.com/woodlandsmethodistchurch/"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
                     </div>
                   </div>
                 </div>
@@ -1174,20 +1269,115 @@
       <!-- =========================================================
         START: GROW PATHWAY SECTION
       ========================================================== -->
+      <style>
+        #grow__nav-home {
+          padding: 115px 0 120px;
+          background: #f0f0f0;
+          text-align: center;
+        }
+
+        .square-container {
+          display: flex;
+          justify-content: center;
+          gap: 14px;
+          margin-bottom: 58px;
+        }
+
+        .square {
+          width: 138px;
+          height: 138px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .square h2 {
+          margin: 0;
+          color: #fff;
+          font-size: 54px;
+          font-weight: 800;
+          text-transform: uppercase;
+        }
+
+        .square-g {
+          background: #39369a;
+        }
+
+        .square-r {
+          background: #ee2d68;
+        }
+
+        .square-o {
+          background: #5cc0a4;
+        }
+
+        .square-w {
+          background: #ffc709;
+        }
+
+        .grow__nav--text {
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        .twmc--btn__grow-outline-grey2 {
+          min-width: 160px;
+          border: 1px solid #d9d9d9;
+          color: #666;
+          background: #e8e8e8;
+        }
+
+        @media (max-width: 991px) {
+          #grow__nav-home {
+            padding: 58px 0;
+          }
+
+          .square {
+            width: 42px;
+            height: 42px;
+          }
+
+          .square h2 {
+            font-size: 20px;
+          }
+
+          .square-container {
+            gap: 8px;
+            margin-bottom: 28px;
+          }
+        }
+      </style>
       <section id="grow__nav-home">
         <div class="container-fluid">
           <div class="col-sm-8 col-sm-offset-2">
             <div class="square-container">
-              <a href="/gather" class="square__link"><div class="square square-g"><h2>g</h2></div></a>
-              <a href="/raise" class="square__link"><div class="square square-r"><h2>r</h2></div></a>
-              <a href="/outward" class="square__link"><div class="square square-o"><h2>o</h2></div></a>
-              <a href="/walk" class="square__link"><div class="square square-w"><h2>w</h2></div></a>
+              <a href="/gather" class="square__link"
+                ><div class="square square-g"><h2>g</h2></div></a
+              >
+              <a href="/raise" class="square__link"
+                ><div class="square square-r"><h2>r</h2></div></a
+              >
+              <a href="/outward" class="square__link"
+                ><div class="square square-o"><h2>o</h2></div></a
+              >
+              <a href="/walk" class="square__link"
+                ><div class="square square-w"><h2>w</h2></div></a
+              >
             </div>
             <div class="grow__nav--text text-center">
               <h4 class="twmc-h4 mt-0 mb-4">A Pathway to a Deeper Faith</h4>
-              <p class="twmc-p">Jesus' call to "follow me" is an invitation to begin a lifelong journey to explore and apply God's Word, grow in maturity, love our neighbors, share our faith and, ultimately, become more like Him. G.R.O.W. Points is a pathway to intentionally connect and live out your faith at The Woodlands Methodist Church. No matter where you are in your faith, we are excited to journey with you.</p>
+              <p class="twmc-p">
+                Jesus' call to "follow me" is an invitation to begin a lifelong
+                journey to explore and apply God's Word, grow in maturity, love
+                our neighbors, share our faith and, ultimately, become more like
+                Him. G.R.O.W. Points is a pathway to intentionally connect and
+                live out your faith at The Woodlands Methodist Church. No matter
+                where you are in your faith, we are excited to journey with you.
+              </p>
               <h4 class="twmc-h4 my-4">Ready to Get Started?</h4>
-              <a href="/grow" class="twmc--btn twmc--btn__grow-outline-grey2">Start here</a>
+              <a href="/grow" class="twmc--btn twmc--btn__grow-outline-grey2"
+                >Start here</a
+              >
             </div>
           </div>
         </div>
@@ -1199,27 +1389,150 @@
       <!-- =========================================================
         START: SENIOR PASTOR BLOG SECTION
       ========================================================== -->
+      <style>
+        .blog-section {
+          padding: 74px 0 72px;
+          background: #fff;
+        }
+
+        .twmcblog__flex-container-4col {
+          display: grid;
+          grid-template-columns: 1fr 1.16fr 1.16fr 1.16fr;
+          gap: 26px;
+          align-items: start;
+        }
+
+        .twmc-home-blog__info-title img {
+          width: 290px;
+          max-width: 100%;
+        }
+
+        .twmc-card {
+          overflow: hidden;
+          border-radius: 6px;
+          background: #fff;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .twmc-card a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        .twmcblog__card-img {
+          width: 100%;
+          height: 290px;
+          object-fit: cover;
+        }
+
+        .twmc-card-body {
+          padding: 22px 22px 26px;
+        }
+
+        .twmcblog__card-title {
+          margin: 0 0 12px;
+          font-family: "Montserrat", Arial, sans-serif;
+          font-size: 25px;
+          font-weight: 900;
+          line-height: 1.05;
+        }
+
+        .twmcblog__card-text {
+          font-size: 14px;
+          line-height: 1.72;
+        }
+
+        .twmcblog__card-info-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 18px;
+        }
+
+        .twmcblog__card-info-img {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+        }
+
+        .twmcblog__card-info-text {
+          margin: 0;
+          font-size: 10px;
+          line-height: 1.25;
+        }
+
+        @media (max-width: 991px) {
+          .blog-section {
+            padding: 48px 0;
+          }
+
+          .twmcblog__flex-container-4col {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          .twmcblog__card-img {
+            height: auto;
+          }
+        }
+
+        @media (max-width: 430px) {
+          .twmcblog__card-title {
+            font-size: 22px;
+          }
+        }
+      </style>
       <section class="blog-section">
         <div class="container-fluid mx-sm-5">
           <div class="twmcblog__flex-container-4col">
             <div class="twmcblog__flex-item-4col">
               <div class="twmc-home-blog__info-title">
-                <img src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/HiImMark_Circle360.png" alt="Hi, I'm Mark." class="img-responsive mb-2" />
+                <img
+                  src="https://s3.us-east-2.amazonaws.com/rockrms-assets/images/HiImMark_Circle360.png"
+                  alt="Hi, I'm Mark."
+                  class="img-responsive mb-2"
+                />
                 <h2 class="twmc-h2">Senior Pastor Blog</h2>
               </div>
-              <p class="twmc-p">Read our most recent blogs and find message summaries, up-to-date information on the latest events around the church and reflections on personal faith journeys from our TWMC staff.</p>
-              <a href="/blog" class="twmc--btn twmc--btn--traditional">Find more</a>
+              <p class="twmc-p">
+                Read our most recent blogs and find message summaries,
+                up-to-date information on the latest events around the church
+                and reflections on personal faith journeys from our TWMC staff.
+              </p>
+              <a href="/blog" class="twmc--btn twmc--btn--traditional"
+                >Find more</a
+              >
             </div>
 
             <article class="twmcblog__flex-item-4col twmc-card">
               <a href="/blog/envy">
-                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=458686&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=458686&amp;Width=600"
+                  alt=""
+                  class="twmc-card--img twmcblog__card-img"
+                />
                 <div class="twmc-card-body">
                   <h3 class="twmcblog__card-title">The Rot of Envy</h3>
-                  <p class="twmcblog__card-text">Last weekend, I had the joy of being with our Church at Woodforest community. It was a gift to worship together on Pentecost Sunday, remember the anniversary of John Wesley's "strangely warmed" heart, and wrap up their sermon series on the seven deadly sins with a message on envy.</p>
+                  <p class="twmcblog__card-text">
+                    Last weekend, I had the joy of being with our Church at
+                    Woodforest community. It was a gift to worship together on
+                    Pentecost Sunday, remember the anniversary of John Wesley's
+                    "strangely warmed" heart, and wrap up their sermon series on
+                    the seven deadly sins with a message on envy.
+                  </p>
                   <div class="twmcblog__card-info-wrapper">
-                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
-                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">May 28, 2026</p><p class="twmcblog__card-info-text">2 mins</p></div>
+                    <img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200"
+                      alt=""
+                      class="twmcblog__card-info-img"
+                    />
+                    <div class="twmcblog__card-info">
+                      <p class="twmcblog__card-info-text">
+                        <strong>Rev. Mark Sorensen</strong>
+                      </p>
+                      <p class="twmcblog__card-info-text">May 28, 2026</p>
+                      <p class="twmcblog__card-info-text">2 mins</p>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -1227,13 +1540,36 @@
 
             <article class="twmcblog__flex-item-4col twmc-card">
               <a href="/blog/holiness-hidden-in-everyday-life">
-                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=457434&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=457434&amp;Width=600"
+                  alt=""
+                  class="twmc-card--img twmcblog__card-img"
+                />
                 <div class="twmc-card-body">
-                  <h3 class="twmcblog__card-title">Holiness Hidden in Everyday Life</h3>
-                  <p class="twmcblog__card-text">For the past month, Nycki and I have had the joy of extended time with our grandson, who has been staying at our house while his parents work through the details of relocating back to The Woodlands. Let me just say, having a 3-year-old back in the house after an extended season of empty nesting has brought a whole new level of awareness into our lives.</p>
+                  <h3 class="twmcblog__card-title">
+                    Holiness Hidden in Everyday Life
+                  </h3>
+                  <p class="twmcblog__card-text">
+                    For the past month, Nycki and I have had the joy of extended
+                    time with our grandson, who has been staying at our house
+                    while his parents work through the details of relocating
+                    back to The Woodlands. Let me just say, having a 3-year-old
+                    back in the house after an extended season of empty nesting
+                    has brought a whole new level of awareness into our lives.
+                  </p>
                   <div class="twmcblog__card-info-wrapper">
-                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
-                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">May 14, 2026</p><p class="twmcblog__card-info-text">2 mins</p></div>
+                    <img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200"
+                      alt=""
+                      class="twmcblog__card-info-img"
+                    />
+                    <div class="twmcblog__card-info">
+                      <p class="twmcblog__card-info-text">
+                        <strong>Rev. Mark Sorensen</strong>
+                      </p>
+                      <p class="twmcblog__card-info-text">May 14, 2026</p>
+                      <p class="twmcblog__card-info-text">2 mins</p>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -1241,13 +1577,34 @@
 
             <article class="twmcblog__flex-item-4col twmc-card">
               <a href="/blog/the-kind-of-story-you-dont-want-to-end">
-                <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=455046&amp;Width=600" alt="" class="twmc-card--img twmcblog__card-img" />
+                <img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=455046&amp;Width=600"
+                  alt=""
+                  class="twmc-card--img twmcblog__card-img"
+                />
                 <div class="twmc-card-body">
-                  <h3 class="twmcblog__card-title">The Kind of Story You Don’t Want to End</h3>
-                  <p class="twmcblog__card-text">Lately, I've been thinking a lot about the stories that shape us — the ones we carry, the ones we return to, and the ones that quietly form as we become who we are. If I'm honest, growing up, I never really enjoyed reading.</p>
+                  <h3 class="twmcblog__card-title">
+                    The Kind of Story You Don’t Want to End
+                  </h3>
+                  <p class="twmcblog__card-text">
+                    Lately, I've been thinking a lot about the stories that
+                    shape us — the ones we carry, the ones we return to, and the
+                    ones that quietly form as we become who we are. If I'm
+                    honest, growing up, I never really enjoyed reading.
+                  </p>
                   <div class="twmcblog__card-info-wrapper">
-                    <img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200" alt="" class="twmcblog__card-info-img" />
-                    <div class="twmcblog__card-info"><p class="twmcblog__card-info-text"><strong>Rev. Mark Sorensen</strong></p><p class="twmcblog__card-info-text">April 23, 2026</p><p class="twmcblog__card-info-text">1 min</p></div>
+                    <img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?id=390928&amp;Width=200"
+                      alt=""
+                      class="twmcblog__card-info-img"
+                    />
+                    <div class="twmcblog__card-info">
+                      <p class="twmcblog__card-info-text">
+                        <strong>Rev. Mark Sorensen</strong>
+                      </p>
+                      <p class="twmcblog__card-info-text">April 23, 2026</p>
+                      <p class="twmcblog__card-info-text">1 min</p>
+                    </div>
                   </div>
                 </div>
               </a>
