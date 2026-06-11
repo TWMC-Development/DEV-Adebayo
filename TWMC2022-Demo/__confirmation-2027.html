@@ -378,17 +378,16 @@
       .conf27-photo-tile > div {
         overflow: hidden;
         border-radius: 4px;
-        background: #efe8e0 center / cover no-repeat;
+        background: #efe8e0;
       }
       .conf27-photo-tile > div:nth-child(1) {
-        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-19.jpg");
         grid-row: span 2;
       }
-      .conf27-photo-tile > div:nth-child(2) {
-        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-17.jpg");
-      }
-      .conf27-photo-tile > div:nth-child(3) {
-        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-7.jpg");
+      .conf27-photo-tile img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       @media (max-width: 520px) {
         .conf27-photo-tile {
@@ -554,15 +553,14 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 1.5rem;
+        box-shadow: 0 8px 24px rgba(42, 35, 32, 0.06);
         transition:
           border-color 0.25s ease,
-          box-shadow 0.25s ease,
-          transform 0.25s ease;
+          box-shadow 0.25s ease;
       }
       .conf27-camp-card:hover {
         border-color: var(--conf27-trad);
-        box-shadow: 0 18px 38px -24px rgba(134, 38, 51, 0.25);
-        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(42, 35, 32, 0.08);
       }
       .conf27-camp-card__head {
         display: flex;
@@ -973,9 +971,30 @@
           <!-- Photo tile -->
           <div class="col-md-6 hidden-sm hidden-xs conf27-whatis-media">
             <div class="conf27-photo-tile" aria-hidden="true">
-              <div></div>
-              <div></div>
-              <div></div>
+              <div>
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-19.jpg"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-17.jpg"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/20240522-CONFIRMATION+CEREMONY-7.jpg"
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
             </div>
           </div>
 
@@ -984,10 +1003,10 @@
             <span class="conf27-eyebrow">About the Program</span>
             <h2 class="twmc-h2 conf27-sec-title">What is Confirmation?</h2>
             <p class="twmc-p conf27-lead">
-              Confirmation is a structured, year-long program that equips
-              students with a strong biblical foundation, encourages spiritual
-              growth, and prepares them to take ownership of their faith as they
-              become members of The Woodlands Methodist Church.
+              Confirmation is a structured program that guides students through
+              essential Christian teachings, fosters spiritual maturity, and
+              helps them confidently embrace their identity as members of The
+              Woodlands Methodist Church.
             </p>
 
             <div class="conf27-pillars">
@@ -998,8 +1017,8 @@
                 <div>
                   <div class="conf27-pillar__label">Catechesis</div>
                   <div class="conf27-pillar__text">
-                    A year of instruction in the core beliefs and practices of
-                    the Christian faith
+                    Systematic teaching of faith, Scripture and the Christian
+                    doctrine
                   </div>
                 </div>
               </div>
@@ -1079,7 +1098,7 @@
               <h3 class="conf27-curr-card__name">Roots</h3>
               <div class="conf27-curr-card__dates">Aug. &mdash; Nov.</div>
               <p class="conf27-curr-card__desc">
-                Build a foundation in Scripture and God&rsquo;s story.
+                Build a foundation in God’s Word and the story of Scripture.
               </p>
             </div>
           </div>
@@ -1100,7 +1119,7 @@
               <h3 class="conf27-curr-card__name">Grow</h3>
               <div class="conf27-curr-card__dates">Dec. &mdash; Feb.</div>
               <p class="conf27-curr-card__desc">
-                Develop habits of personal faith, discipleship, and worship.
+                Develop habits of personal faith, discipleship and worship.
               </p>
             </div>
           </div>
@@ -1137,21 +1156,23 @@
     <!-- ================================================================
        SECTION 4: CAMPUSES
        ================================================================ -->
-    <section class="conf27-section-white" id="find-your-campus">
+    <section class="conf27-section-white">
       <div class="container conf27-wrap">
         <!-- Head -->
         <div class="row">
           <div
             class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center twmc-mbxl"
           >
-            <span class="conf27-eyebrow">Find Your Campus</span>
+            <span class="conf27-eyebrow" id="find-your-campus"
+              >Find Your Campus</span
+            >
             <h2 class="twmc-h2 conf27-sec-title">
               One churchwide confirmation journey, three meeting locations
             </h2>
             <p class="twmc-p conf27-lead">
               Confirmation is open to sixth-grade students from all four
               campuses of The Woodlands Methodist Church. Wherever students
-              attend, they share the same curriculum, retreat experience, and
+              attend, they share the same curriculum, retreat experience and
               Confirmation Sunday in May.
             </p>
           </div>
@@ -1167,9 +1188,6 @@
                   <div class="conf27-camp-card__title">The Woodlands</div>
                   <div class="conf27-camp-card__place">Main Campus</div>
                 </div>
-                <span class="conf27-camp-badge"
-                  ><i class="fa-solid fa-circle-check"></i> Enrolling</span
-                >
               </div>
               <dl class="conf27-camp-meta">
                 <dt>When</dt>
@@ -1183,20 +1201,20 @@
                 <dt>Fee</dt>
                 <dd>
                   $55 per student<span class="sub"
-                    >Includes Bible, T-shirt, bag, and workbook</span
+                    >Includes Bible, T-shirt, bag and workbook</span
                   >
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
                 <a
                   class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6337"
-                  >Register</a
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7259"
+                  >Register Student</a
                 >
                 <a
                   class="twmc--btn twmc--btn--outline-dark-grey"
-                  href="https://thewoodlandsmethodist.org/Registration/confirmation-parentleader-2025-2026"
-                  >Parent Leaders</a
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7431"
+                  >Register as Parent Leader</a
                 >
               </div>
             </div>
@@ -1212,9 +1230,6 @@
                     The Church at Woodforest
                   </div>
                 </div>
-                <span class="conf27-camp-badge"
-                  ><i class="fa-solid fa-circle-check"></i> Enrolling</span
-                >
               </div>
               <dl class="conf27-camp-meta">
                 <dt>When</dt>
@@ -1228,20 +1243,20 @@
                 <dt>Fee</dt>
                 <dd>
                   $55 per student<span class="sub"
-                    >Includes Bible, T-shirt, bag, and workbook</span
+                    >Includes Bible, T-shirt, bag and workbook</span
                   >
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
                 <a
                   class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6338"
-                  >Register</a
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7258"
+                  >Register Student</a
                 >
                 <a
                   class="twmc--btn twmc--btn--outline-dark-grey"
-                  href="https://thewoodlandsmethodist.org/Registration/confirmation-parentleader-wf-2025-2026"
-                  >Parent Leaders</a
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7433"
+                  >Register as Parent Leader</a
                 >
               </div>
             </div>
@@ -1257,9 +1272,6 @@
                     Covenant Church at Creekside
                   </div>
                 </div>
-                <span class="conf27-camp-badge"
-                  ><i class="fa-solid fa-circle-check"></i> Enrolling</span
-                >
               </div>
               <dl class="conf27-camp-meta">
                 <dt>When</dt>
@@ -1273,15 +1285,15 @@
                 <dt>Fee</dt>
                 <dd>
                   $55 per student<span class="sub"
-                    >Includes Bible, T-shirt, bag, and workbook</span
+                    >Includes Bible, T-shirt, bag and workbook</span
                   >
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
                 <a
                   class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=6347"
-                  >Register</a
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7260"
+                  >Register Student</a
                 >
               </div>
             </div>
@@ -1304,19 +1316,23 @@
               </div>
               <p class="conf27-camp-card__note">
                 Confirmation is not offered at the Montgomery campus this year.
-                Montgomery families are welcome to join the Woodforest program
-                on Sundays, 12:30&ndash;1:45 p.m.
+                However, Montgomery families are welcome to join the Woodforest
+                program on Sundays, 12:30-1:45 p.m., as it is the next campus
+                closest to Montgomery.
               </p>
+
               <div class="conf27-camp-card__foot">
-                <a class="twmc--btn twmc--btn--traditional"
-                  >Register at Woodforest</a
+                <a
+                  class="twmc--btn twmc--btn--traditional"
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7261"
+                  >Register Student</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- Español — spans both columns -->
-          <div class="col-sm-12">
+          <!-- Español -->
+          <div class="col-sm-12 col-md-8 col-md-offset-2">
             <div class="conf27-camp-card">
               <div class="conf27-camp-card__head">
                 <div>
@@ -1328,27 +1344,37 @@
                   </div>
                 </div>
                 <span class="conf27-camp-badge conf27-camp-badge--muted">
-                  <i class="fa-solid fa-language"></i> English Program
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Via
+                  Creekside
                 </span>
               </div>
-              <h4>Available in English at The Woodlands and Creekside</h4>
+              <h4>
+                Confirmation is available in Spanish at the Covenant Church at
+                Creekside.
+              </h4>
               <p class="conf27-camp-card__note">
-                Confirmation is not currently offered in Spanish. Sixth-grade
-                students are welcome to register for the English-language
-                program at The Woodlands or Creekside.
                 <span lang="es" style="display: block; margin-top: 0.3rem">
                   <em
-                    >El programa de confirmación no se ofrece actualmente en
-                    español. Los estudiantes de sexto grado son bienvenidos al
-                    programa en inglés en The Woodlands o Creekside.</em
+                    >El programa de Confirmación está disponible en español en
+                    la Iglesia Covenant en Creekside.</em
                   >
                 </span>
               </p>
+
+              <!---  <p class="conf27-camp-card__note">
+                Unfortunately, Confirmation is not available in Spanish this year. Students are welcome to register for the English-language program at The Woodlands or Creekside.
+                <span lang="es" style="display: block; margin-top: 0.3rem">
+                  <em
+                    >Desafortunadamente, la Confirmación no está disponible en español este año. Los estudiantes pueden inscribirse en el programa en inglés en The Woodlands o Creekside.</em
+                  >
+                </span>
+              </p>--->
+
               <div class="conf27-camp-card__foot">
                 <a
-                  class="twmc--btn twmc--btn--outline-dark-grey"
-                  href="mailto:confirmation@twmc.org"
-                  >Contact Us</a
+                  class="twmc--btn twmc--btn--traditional"
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7262"
+                  >Register Student</a
                 >
               </div>
             </div>
