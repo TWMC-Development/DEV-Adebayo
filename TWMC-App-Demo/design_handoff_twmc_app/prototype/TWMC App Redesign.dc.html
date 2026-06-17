@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ds/colors_and_type.css">
+  <link rel="stylesheet" href="ds/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="ds/app.css">
+  <style>
+    body { margin: 0; background: #efedea; }
+  </style>
+</helmet>
+
+<div style="min-height: 100vh; background: #efedea; font-family: 'DM Sans', system-ui, sans-serif;">
+
+  <!-- ============ DOC HEADER ============ -->
+  <section data-screen-label="Design brief" style="background: #ffffff; border-bottom: 1px solid #e8e5e1; padding: 56px 56px 48px;">
+    <div style="max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px;">
+      <img src="assets/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church" style="height: 44px; width: auto; align-self: flex-start;">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <span class="section-label">Member App · 2026 Redesign</span>
+        <h1 style="font-family: 'Playfair Display', Georgia, serif; font-size: 42px; font-weight: 700; color: #1a1a1a; line-height: 1.1; margin: 0;">Same app. <em style="font-style: italic; color: #6e3140;">New clothes.</em></h1>
+        <p style="font-size: 16px; line-height: 1.65; color: #555555; max-width: 640px; margin: 0;">A redesign of the current Rock RMS member app onto the 2026 design system — feature-for-feature parity, restyled with the maroon &amp; gold palette, Playfair Display headings, and the warm editorial card language.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+        <div style="background: #faf8f5; border: 1px solid #e8e5e1; border-radius: 16px; padding: 22px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #6e3140; margin-bottom: 10px;">What's covered</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #555555; margin: 0;">Every surface in the 14 screenshots: Home, sermon channels &amp; player, pastor articles, all six locations with service times, Tithes &amp; Offerings, and Profile.</p>
+        </div>
+        <div style="background: #faf8f5; border: 1px solid #e8e5e1; border-radius: 16px; padding: 22px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #6e3140; margin-bottom: 10px;">Navigation change</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #555555; margin: 0;">The hamburger menu becomes a five-tab bar — Home · Watch · Give · Locations · More. Everything is reachable in one tap; articles live on Home and under More.</p>
+        </div>
+        <div style="background: #faf8f5; border: 1px solid #e8e5e1; border-radius: 16px; padding: 22px;">
+          <div style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #6e3140; margin-bottom: 10px;">Color system</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #555555; margin: 0;">The vivid per-channel colors are remapped to the warm muted palette: Chapel slate, Traditional maroon, Harvest gold, Loft sage — keeping the wayfinding, losing the clash.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 1 · HOME VARIATIONS ============ -->
+  <section style="padding: 64px 56px 24px;">
+    <div style="max-width: 1360px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-label">Section 01</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0;">Home — <em style="font-style: italic; color: #6e3140;">three directions</em></h2>
+        <p style="font-size: 15px; color: #555555; max-width: 620px; margin: 0;">The chosen direction is the first frame: A's structure with B's branded header, and the This Sunday card carrying the current series artwork. A, B and C stay below for reference.</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+
+        <!-- ── HOME FINAL ── -->
+        <div data-screen-label="Home — Final direction" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;"><i class="fa-solid fa-star" style="font-size: 10px;"></i> FINAL</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">A's structure · B's header · live series art</span>
+          </div>
+          <div class="phone-frame" style="margin: 0; box-shadow: 0 0 0 2px rgba(197,162,88,0.8), 0 40px 80px rgba(0,0,0,0.35), 0 20px 40px rgba(0,0,0,0.2);">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="background: #faf8f5;">
+              <div style="background: linear-gradient(150deg, #6e3140, #52242f); padding: 0 0 18px; flex-shrink: 0;">
+                <div class="phone-status" style="color: #ffffff;"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 0;">
+                  <img src="assets/twumc-logo.png" alt="TWMC" style="height: 26px; width: auto;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-bell" style="color: rgba(255,255,255,0.75); font-size: 15px;"></i>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 11px; font-weight: 700;">AA</div>
+                  </div>
+                </div>
+                <div style="padding: 16px 20px 0;">
+                  <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffffff; line-height: 1.2;">Welcome back, Adebayo.</div>
+                  <div style="font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px;">Friday, June 12 · The Woodlands Campus</div>
+                </div>
+              </div>
+              <div class="app-screens">
+                <div class="app-screen" style="padding-top: 16px;">
+                  <div style="position: relative; border-radius: 16px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <img src="assets/count-on-it-series.png" alt="Count on It — The Promises of God" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,26,26,0.35) 0%, rgba(26,26,26,0.05) 38%, rgba(26,26,26,0.8) 100%);"></div>
+                    <div style="position: relative; padding: 14px 16px 14px; display: flex; flex-direction: column; min-height: 175px;">
+                      <div class="app-live-dot">This Sunday</div>
+                      <div style="margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;">
+                        <p style="font-size: 11.5px; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.55; text-shadow: 0 1px 6px rgba(0,0,0,0.5);">Current series<br>Traditional · Sun 7:45, 9:00 &amp; 11:00 AM</p>
+                        <span class="app-live-btn" style="flex-shrink: 0; backdrop-filter: blur(4px);"><i class="fa-solid fa-play"></i> Watch Live</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="app-section-head"><h3>Latest Messages</h3><a>All Channels</a></div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(107,132,158,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/chapel-bug-c.png" alt="Chapel" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>Guidance</h4><p>Chapel · Rev. Kimberly Constant</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(197,162,88,0.16); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/harvest-bug-c.png" alt="Harvest" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>The Power of Words</h4><p>Harvest · Rev. Mark Sorensen</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(90,138,110,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/loft-bug-c.png" alt="Loft" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>When You See Mysteries in the Sky</h4><p>Loft · Rev. Daniel Lumpee</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(110,49,64,0.10); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="Traditional" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>Humble Faith</h4><p>Montgomery · Rev. Aaron Laird</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-section-head" style="margin-top: 16px;"><h3>From the Senior Pastor</h3><a>All Articles</a></div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 100%; height: 110px; object-fit: cover; display: block;">
+                    <div style="padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px;">
+                      <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">Holiness Hidden in Everyday Life</h4>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/HiImMark_Circle360.png" alt="" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;">
+                        <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · May 14, 2026</span>
+                      </div>
+                      <a style="font-size: 12px; font-weight: 600; color: #6e3140; cursor: pointer;">Read Article <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">The pick: B's maroon header, A's content order, and the This Sunday card now carries the current series artwork — it updates each time a new series launches.</p>
+        </div>
+
+        <!-- ── HOME A ── -->
+        <div data-screen-label="Home A — Familiar" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">A</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Familiar — today's structure, restyled</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div class="app-greeting">
+                    <h2>Good morning,<br>Adebayo.</h2>
+                    <p>Friday, June 12 · The Woodlands Campus</p>
+                  </div>
+                  <div class="app-live-banner">
+                    <div class="app-live-dot">This Sunday</div>
+                    <h3>Count on It: The Promises of God</h3>
+                    <p>Traditional · Sundays at 7:45, 9:00 &amp; 11:00 AM</p>
+                    <span class="app-live-btn"><i class="fa-solid fa-play"></i> Watch Live</span>
+                  </div>
+                  <div class="app-section-head"><h3>Latest Messages</h3><a>All Channels</a></div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(107,132,158,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/chapel-bug-c.png" alt="Chapel" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>Guidance</h4><p>Chapel · Rev. Kimberly Constant</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(197,162,88,0.16); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/harvest-bug-c.png" alt="Harvest" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>The Power of Words</h4><p>Harvest · Rev. Mark Sorensen</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(90,138,110,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/loft-bug-c.png" alt="Loft" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>When You See Mysteries in the Sky</h4><p>Loft · Rev. Daniel Lumpee</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(110,49,64,0.10); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="Traditional" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>Humble Faith</h4><p>Montgomery · Rev. Aaron Laird</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-section-head" style="margin-top: 16px;"><h3>From the Senior Pastor</h3><a>All Articles</a></div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 100%; height: 110px; object-fit: cover; display: block;">
+                    <div style="padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px;">
+                      <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">Holiness Hidden in Everyday Life</h4>
+                      <div style="display: flex; align-items: center; gap: 8px;">
+                        <img src="assets/HiImMark_Circle360.png" alt="" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;">
+                        <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · May 14, 2026</span>
+                      </div>
+                      <a style="font-size: 12px; font-weight: 600; color: #6e3140; cursor: pointer;">Read Article <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Mirrors the current home: messages by channel, then the pastor's article. Lowest re-learning cost.</p>
+        </div>
+
+        <!-- ── HOME B ── -->
+        <div data-screen-label="Home B — Action hub" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">B</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Action hub — branded header, quick actions</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen" style="background: #faf8f5;">
+              <div style="background: linear-gradient(150deg, #6e3140, #52242f); padding: 0 0 18px; flex-shrink: 0;">
+                <div class="phone-status" style="color: #ffffff;"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 0;">
+                  <img src="assets/twumc-logo.png" alt="TWMC" style="height: 26px; width: auto;">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-bell" style="color: rgba(255,255,255,0.75); font-size: 15px;"></i>
+                    <div style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 11px; font-weight: 700;">AA</div>
+                  </div>
+                </div>
+                <div style="padding: 16px 20px 0;">
+                  <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffffff; line-height: 1.2;">Welcome back, Adebayo.</div>
+                  <div style="font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px;">Friday, June 12 · The Woodlands Campus</div>
+                </div>
+              </div>
+              <div class="app-screens">
+                <div class="app-screen" style="padding-top: 16px;">
+                  <div class="app-quick-grid">
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--messages"><i class="fa-solid fa-circle-play"></i></div><span>Watch</span></div>
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--give"><i class="fa-solid fa-hand-holding-heart"></i></div><span>Give</span></div>
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--groups"><i class="fa-solid fa-location-dot"></i></div><span>Locations</span></div>
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--prayer"><i class="fa-solid fa-book-open"></i></div><span>Articles</span></div>
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--checkin"><i class="fa-solid fa-user"></i></div><span>Profile</span></div>
+                    <div class="app-quick-item"><div class="app-quick-icon app-quick-icon--events"><i class="fa-solid fa-tower-broadcast"></i></div><span>Live</span></div>
+                  </div>
+                  <div class="app-service-card">
+                    <h4><i class="fa-solid fa-church"></i> This Sunday · The Woodlands</h4>
+                    <div class="app-service-row">
+                      <div><div class="app-service-name">Traditional</div><div class="app-service-venue">Sanctuary</div></div>
+                      <div class="app-service-time">7:45, 9:00, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div><div class="app-service-name">Contemporary</div><div class="app-service-venue">Harvest Hall</div></div>
+                      <div class="app-service-time">9:00, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div><div class="app-service-name">Modern</div><div class="app-service-venue">The Loft</div></div>
+                      <div class="app-service-time">Sat 6:00 PM · Sun 9:30, 11:00</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div><div class="app-service-name">Children</div><div class="app-service-venue">Kids Building</div></div>
+                      <div class="app-service-time">9:00, 11:00 AM</div>
+                    </div>
+                  </div>
+                  <div class="app-section-head"><h3>Latest Message</h3><a>All Channels</a></div>
+                  <div class="app-message-item">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(107,132,158,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/chapel-bug-c.png" alt="Chapel" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                    <div class="app-message-info"><h4>Guidance</h4><p>Chapel · Rev. Kimberly Constant · May 17</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-section-head" style="margin-top: 14px;"><h3>From the Senior Pastor</h3><a>All Articles</a></div>
+                  <div class="app-message-item" style="border-bottom: none;">
+                    <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 56px; height: 42px; border-radius: 8px; object-fit: cover; flex-shrink: 0;">
+                    <div class="app-message-info"><h4>Holiness Hidden in Everyday Life</h4><p>Rev. Mark Sorensen · May 14, 2026</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Maroon brand header with quick actions — everything one tap away, service times front and center.</p>
+        </div>
+
+        <!-- ── HOME C ── -->
+        <div data-screen-label="Home C — Editorial" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">C</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Editorial — calm, type-led, print-like</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div style="padding: 26px 0 22px; border-bottom: 1px solid #e8e5e1;">
+                    <span class="section-label" style="font-size: 10px; letter-spacing: 2px;">Friday, June 12</span>
+                    <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 700; color: #1a1a1a; line-height: 1.15; margin-top: 10px;">Good morning, <em style="font-style: italic; color: #6e3140;">Adebayo.</em></div>
+                  </div>
+                  <div style="margin-top: 20px; border-radius: 16px; overflow: hidden; position: relative; background: linear-gradient(150deg, #52242f, #2e141b); padding: 26px 20px 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 140px; height: 140px; background: radial-gradient(circle, rgba(197,162,88,0.22), transparent 70%); pointer-events: none;"></div>
+                    <div style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #c5a258; margin-bottom: 10px;">Current Series</div>
+                    <div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 30px; font-weight: 600; color: #ffffff; line-height: 1.1;">Count on it</div>
+                    <div style="font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 8px;">The Promises of God</div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-top: 18px;">
+                      <div style="width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 11px;"><i class="fa-solid fa-play"></i></div>
+                      <span style="font-size: 12px; font-weight: 600; color: #ffffff;">Watch the latest message</span>
+                    </div>
+                  </div>
+                  <div style="margin-top: 24px;">
+                    <span class="section-label" style="font-size: 10px; letter-spacing: 2px;">This Week's Messages</span>
+                    <div style="display: flex; flex-direction: column;">
+                      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8e5e1;">
+                        <div>
+                          <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; color: #1a1a1a; line-height: 1.3;">Guidance</div>
+                          <div style="font-size: 11px; color: #767676; margin-top: 3px;">Rev. Kimberly Constant</div>
+                        </div>
+                        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6b849e; flex-shrink: 0;">Chapel</span>
+                      </div>
+                      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8e5e1;">
+                        <div>
+                          <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; color: #1a1a1a; line-height: 1.3;">The Power of Words</div>
+                          <div style="font-size: 11px; color: #767676; margin-top: 3px;">Rev. Mark Sorensen</div>
+                        </div>
+                        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #c5a258; flex-shrink: 0;">Harvest</span>
+                      </div>
+                      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e8e5e1;">
+                        <div>
+                          <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; color: #1a1a1a; line-height: 1.3;">When You See Mysteries in the Sky</div>
+                          <div style="font-size: 11px; color: #767676; margin-top: 3px;">Rev. Daniel Lumpee</div>
+                        </div>
+                        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #5a8a6e; flex-shrink: 0;">Loft</span>
+                      </div>
+                      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 14px 0;">
+                        <div>
+                          <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; color: #1a1a1a; line-height: 1.3;">On Guard</div>
+                          <div style="font-size: 11px; color: #767676; margin-top: 3px;">Rev. Pierce Drake</div>
+                        </div>
+                        <span style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #b5454a; flex-shrink: 0;">Creekside</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 10px;">
+                    <span class="section-label" style="font-size: 10px; letter-spacing: 2px;">From the Senior Pastor</span>
+                    <div style="margin-top: 12px; border-radius: 16px; overflow: hidden; position: relative;">
+                      <img src="assets/WEB_Blog_header_2026Feb.jpg" alt="" style="width: 100%; height: 170px; object-fit: cover; display: block;">
+                      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(26,26,26,0.85) 100%);"></div>
+                      <div style="position: absolute; left: 16px; right: 16px; bottom: 14px;">
+                        <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: #ffffff; line-height: 1.25; text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Holiness Hidden in Everyday Life</div>
+                        <div style="font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 4px;">Rev. Mark Sorensen · 4 min read</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Quietest option — serif-led, hairline rules, typographic series card. Closest to the 2026 website's editorial feel.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 · WATCH ============ -->
+  <section style="padding: 64px 56px 24px;">
+    <div style="max-width: 1360px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-label">Section 02</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0;">Watch — <em style="font-style: italic; color: #6e3140;">channels &amp; player</em></h2>
+        <p style="font-size: 15px; color: #555555; max-width: 620px; margin: 0;">The two sermon surfaces merged into one tab: channels grouped by worship style and campus, and the message detail with share.</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+
+        <!-- ── WATCH CHANNELS ── -->
+        <div data-screen-label="Watch — Channels" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">02·1</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Channels</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div class="app-greeting"><h2>Watch &amp; Listen</h2><p>Messages from every service and campus</p></div>
+                  <div class="app-section-head"><h3>Woodlands Campus</h3></div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(107,132,158,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/chapel-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Chapel</h4><p>Latest: Guidance · Rev. Kimberly Constant</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(110,49,64,0.10); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Traditional</h4><p>Latest: Guidance · Rev. Kimberly Constant</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(197,162,88,0.16); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/harvest-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Harvest</h4><p>Latest: The Power of Words · Rev. Mark Sorensen</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(90,138,110,0.14); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/loft-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Loft</h4><p>Latest: When You See Mysteries in the Sky</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(26,26,26,0.07); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/CYA_House_Bug.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>House</h4><p>College &amp; Young Adults · Sunday evenings</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-section-head" style="margin-top: 16px;"><h3>Across Our Campuses</h3></div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(139,69,87,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Woodforest</h4><p>Latest: Lust · Rev. Brent Parker</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(82,36,47,0.10); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Montgomery</h4><p>Latest: Humble Faith · Rev. Aaron Laird</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                  <div class="app-my-group">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(181,69,74,0.10); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="assets/traditional-bug-c.png" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                    <div class="app-group-info"><h4>Creekside</h4><p>Latest: On Guard · Rev. Pierce Drake</p></div>
+                    <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Replaces the dark channel menu — worship-style bugs on soft tints, latest message shown inline.</p>
+        </div>
+
+        <!-- ── SERMON DETAIL ── -->
+        <div data-screen-label="Watch — Message detail" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">02·2</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Message detail</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 16px;">
+                    <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                    <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Chapel</span>
+                  </div>
+                  <div style="border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 16 / 9; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <img src="assets/count-on-it-series.png" alt="Count on It — The Promises of God" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; inset: 0; background: rgba(26,26,26,0.18); display: flex; align-items: center; justify-content: center;">
+                      <div style="width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 14px; backdrop-filter: blur(4px);"><i class="fa-solid fa-play" style="margin-left: 2px;"></i></div>
+                    </div>
+                  </div>
+                  <div style="padding: 18px 0 4px;">
+                    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.2;">Guidance</h2>
+                    <p style="font-size: 12px; color: #767676; margin: 8px 0 0; line-height: 1.6;">Rev. Kimberly Constant<br>Chapel, Traditional · May 17, 2026</p>
+                  </div>
+                  <div style="display: flex; gap: 10px; margin-top: 16px;">
+                    <button class="btn-primary" style="flex: 1; font-size: 13px; padding: 12px 20px;"><i class="fa-solid fa-share-nodes" style="margin-right: 8px;"></i> Share</button>
+                    <button style="width: 46px; height: 46px; border-radius: 999px; border: 1.5px solid #e8e5e1; background: #ffffff; color: #6e3140; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i class="fa-regular fa-bookmark"></i></button>
+                  </div>
+                  <div class="app-section-head" style="margin-top: 22px;"><h3>More from this series</h3></div>
+                  <div class="app-message-item">
+                    <div class="app-message-thumb"><i class="fa-solid fa-play"></i></div>
+                    <div class="app-message-info"><h4>Promises Kept</h4><p>Rev. Kimberly Constant · May 10, 2026</p></div>
+                  </div>
+                  <div class="app-message-item">
+                    <div class="app-message-thumb"><i class="fa-solid fa-play"></i></div>
+                    <div class="app-message-info"><h4>An Anchor for the Soul</h4><p>Rev. Pierce Drake · May 3, 2026</p></div>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">The dark fullscreen player becomes a warm card — now with the real "Count on It" series artwork, share kept primary.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 · ARTICLES ============ -->
+  <section style="padding: 64px 56px 24px;">
+    <div style="max-width: 1360px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-label">Section 03</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0;">Articles — <em style="font-style: italic; color: #6e3140;">from the Senior Pastor</em></h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+
+        <!-- ── ARTICLES LIST ── -->
+        <div data-screen-label="Articles — All articles" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">03·1</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">All articles</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 6px;">
+                    <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                    <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Home</span>
+                  </div>
+                  <div class="app-greeting"><h2>From the Senior Pastor</h2><p>Weekly reflections from Rev. Mark Sorensen</p></div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 14px;">
+                    <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+                      <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">Holiness Hidden in Everyday Life</h4>
+                      <p style="font-size: 12px; line-height: 1.6; color: #555555; margin: 0;">For the past month, Nycki and I have had the joy of some extended time with our grandson staying in…</p>
+                      <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+                        <img src="assets/HiImMark_Circle360.png" alt="" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                        <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · May 14, 2026</span>
+                        <span style="margin-left: auto; font-size: 12px; font-weight: 600; color: #6e3140;">Read <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 14px;">
+                    <img src="assets/WEB_Blog_header_2026Feb.jpg" alt="" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                    <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+                      <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">The Kind of Story You Don't Want to End</h4>
+                      <p style="font-size: 12px; line-height: 1.6; color: #555555; margin: 0;">Lately, I've been thinking a lot about the stories we tell — and the ones we live…</p>
+                      <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+                        <img src="assets/HiImMark_Circle360.png" alt="" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                        <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · May 7, 2026</span>
+                        <span style="margin-left: auto; font-size: 12px; font-weight: 600; color: #6e3140;">Read <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── ARTICLE DETAIL ── -->
+        <div data-screen-label="Articles — Article detail" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">03·2</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Article detail</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen" style="padding: 0;">
+                  <div style="position: relative;">
+                    <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 100%; height: 190px; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 14px; left: 16px; width: 32px; height: 32px; border-radius: 50%; background: rgba(26,26,26,0.45); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 13px;"><i class="fa-solid fa-chevron-left"></i></div>
+                  </div>
+                  <div style="padding: 20px 20px 24px;">
+                    <span class="section-label" style="font-size: 10px; letter-spacing: 2px;">From the Pastor</span>
+                    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 12px 0 0; line-height: 1.2;">Holiness Hidden in Everyday Life</h2>
+                    <div style="display: flex; align-items: center; gap: 10px; padding: 16px 0; border-bottom: 1px solid #e8e5e1; margin-bottom: 16px;">
+                      <img src="assets/HiImMark_Circle360.png" alt="" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;">
+                      <div>
+                        <div style="font-size: 12px; font-weight: 600; color: #1a1a1a;">Rev. Mark Sorensen</div>
+                        <div style="font-size: 11px; font-weight: 600; color: #6e3140;">May 14, 2026 · 4 min read</div>
+                      </div>
+                      <i class="fa-solid fa-share-nodes" style="margin-left: auto; color: #6e3140; font-size: 14px;"></i>
+                    </div>
+                    <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0 0 14px;">For the past month, Nycki and I have had the joy of extended time with our grandson, who has been staying at our house while his parents work through the details of relocating back to The Woodlands. Let me just say, having a 3-year-old back in the house after a season of empty nesting has brought a whole new level of awareness into our lives.</p>
+                    <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0 0 10px;">A few things my wife and I quickly relearned:</p>
+                    <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0 0 6px; padding-left: 14px;">· Silence is no longer comforting; it's suspicious.</p>
+                    <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0 0 6px; padding-left: 14px;">· Bath time is actually an experiment to see how much water can escape the tub and still count as a bath.</p>
+                    <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0; padding-left: 14px;">· A 3-year-old can ask "why?" 17 times in under two minutes.</p>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab active"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 · LOCATIONS ============ -->
+  <section style="padding: 64px 56px 24px;">
+    <div style="max-width: 1360px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-label">Section 04</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0;">Locations — <em style="font-style: italic; color: #6e3140;">five campuses, one church</em></h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+
+        <!-- ── LOCATIONS LIST ── -->
+        <div data-screen-label="Locations — List" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">04·1</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">All locations</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div class="app-greeting"><h2>Locations</h2><p>Find a campus and plan your Sunday</p></div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">The Woodlands</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">2200 Lake Woodlands Drive<br>The Woodlands, TX 77380</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">The Woodlands en Español</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">2200 Lake Woodlands Drive<br>The Woodlands, TX 77380-1119</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">Woodforest</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">700 Fish Creek Thoroughfare<br>Montgomery, TX 77316-6830</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">Montgomery</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">19190 Keenan Cut Off Rd<br>Montgomery, TX 77316-9102</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">Creekside</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">8555 Creekside Green Drive<br>The Woodlands, TX 77389</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                  <div class="app-my-group" style="align-items: flex-start;">
+                    <div style="flex: 1;">
+                      <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">Creekside en Español</div>
+                      <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                        <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                        <span style="font-size: 12px; color: #555555; line-height: 1.5;">8555 Creekside Green Drive<br>The Woodlands, TX 77389</span>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Clean tiles like the current app — bold campus name, address with a small pin. Service times live one tap in.</p>
+        </div>
+
+        <!-- ── LOCATION DETAIL ── -->
+        <div data-screen-label="Locations — Detail" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">04·2</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Location detail — The Woodlands</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 12px;">
+                    <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                    <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Locations</span>
+                  </div>
+                  <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 700; color: #1a1a1a; margin: 0 0 14px; line-height: 1.15;">The Woodlands</h2>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 14px;">
+                    <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(110,49,64,0.08); display: flex; align-items: center; justify-content: center; color: #6e3140; font-size: 14px; flex-shrink: 0;"><i class="fa-solid fa-location-dot"></i></div>
+                    <div style="flex: 1;">
+                      <div style="font-size: 13px; font-weight: 600; color: #1a1a1a;">2200 Lake Woodlands Drive</div>
+                      <div style="font-size: 11px; color: #767676; margin-top: 1px;">The Woodlands, TX 77380</div>
+                    </div>
+                    <span style="font-size: 11px; font-weight: 700; color: #6e3140; flex-shrink: 0;">Directions <i class="fa-solid fa-arrow-right" style="font-size: 9px;"></i></span>
+                  </div>
+                  <div class="app-service-card">
+                    <h4><i class="fa-solid fa-clock"></i> Service Times</h4>
+                    <div class="app-service-row">
+                      <div class="app-service-name">Traditional</div>
+                      <div class="app-service-time">Sun 7:45, 9:00, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div class="app-service-name">Contemporary</div>
+                      <div class="app-service-time">Sun 9:00, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div class="app-service-name">Modern</div>
+                      <div class="app-service-time">Sat 6:00 PM · Sun 9:30, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div class="app-service-name">Students</div>
+                      <div class="app-service-time">Sun 9:30, 11:00 AM</div>
+                    </div>
+                    <div class="app-service-row">
+                      <div class="app-service-name">Children</div>
+                      <div class="app-service-time">Sun 9:00, 11:00 AM</div>
+                    </div>
+                  </div>
+                  <div style="border-radius: 16px; overflow: hidden; border: 1px solid #e8e5e1; background: #eae7e3; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative;">
+                    <i class="fa-solid fa-map-location-dot" style="font-size: 26px; color: #767676;"></i>
+                    <span style="font-size: 11px; font-weight: 600; color: #767676;">Map · 2200 Lake Woodlands Drive</span>
+                    <span style="font-size: 11px; font-weight: 700; color: #6e3140;">Open in Maps <i class="fa-solid fa-arrow-right" style="font-size: 9px;"></i></span>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 · GIVE + PROFILE ============ -->
+  <section style="padding: 64px 56px 80px;">
+    <div style="max-width: 1360px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <span class="section-label">Section 05</span>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0;">Give &amp; <em style="font-style: italic; color: #6e3140;">Profile</em></h2>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 44px; align-items: flex-start;">
+
+        <!-- ── GIVE ── -->
+        <div data-screen-label="Give" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">05·1</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Tithes &amp; Offerings</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div class="app-give-header">
+                    <h2>Tithes &amp; Offerings</h2>
+                    <p>Giving is about what God wants <em style="color: #6e3140;">for</em> you, not <em style="color: #6e3140;">from</em> you.</p>
+                  </div>
+                  <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                    <button style="flex: 1; padding: 10px; border-radius: 999px; border: 1.5px solid #6e3140; background: #6e3140; color: #ffffff; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer;"><i class="fa-solid fa-user" style="margin-right: 6px;"></i> Person</button>
+                    <button style="flex: 1; padding: 10px; border-radius: 999px; border: 1.5px solid #e8e5e1; background: #ffffff; color: #767676; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer;"><i class="fa-solid fa-briefcase" style="margin-right: 6px;"></i> Business</button>
+                  </div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                    <div>
+                      <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #767676;">Giving Area</div>
+                      <div style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-top: 2px;">General</div>
+                    </div>
+                    <i class="fa-solid fa-chevron-down" style="color: #6e3140; font-size: 12px;"></i>
+                  </div>
+                  <div class="app-give-amounts">
+                    <div class="app-give-amount">$25</div>
+                    <div class="app-give-amount">$50</div>
+                    <div class="app-give-amount selected">$100</div>
+                    <div class="app-give-amount">$250</div>
+                    <div class="app-give-amount">$500</div>
+                    <div class="app-give-amount">Other</div>
+                  </div>
+                  <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #767676; margin-bottom: 8px;">Frequency</div>
+                  <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #6e3140; color: #ffffff; font-size: 11px; font-weight: 600;">One-Time</span>
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #e8e5e1; color: #555555; font-size: 11px; font-weight: 600;">Weekly</span>
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #e8e5e1; color: #555555; font-size: 11px; font-weight: 600;">Bi-Weekly</span>
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #e8e5e1; color: #555555; font-size: 11px; font-weight: 600;">1st &amp; 15th</span>
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #e8e5e1; color: #555555; font-size: 11px; font-weight: 600;">Monthly</span>
+                    <span style="padding: 7px 14px; border-radius: 999px; background: #ffffff; border: 1px solid #e8e5e1; color: #555555; font-size: 11px; font-weight: 600;">Yearly</span>
+                  </div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 13px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Gift date</span>
+                    <span style="font-size: 12px; font-weight: 600; color: #6e3140;">6/14/2026 <i class="fa-solid fa-calendar" style="margin-left: 6px;"></i></span>
+                  </div>
+                  <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 13px 16px; margin-bottom: 18px;">
+                    <span style="font-size: 13px; color: #767676;">Comments (optional)</span>
+                  </div>
+                  <button class="btn-primary app-give-btn">Give $100.00 <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+                  <p style="font-size: 11px; color: #767676; text-align: center; line-height: 1.6; margin: 0;">Need a hand? Email <span style="color: #6e3140; font-weight: 600;">Finance@twmc.org</span> and someone from our team will be happy to help.</p>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">The long instructional form becomes one warm screen: quick amounts + custom, all six frequencies, fund picker, date and comments kept.</p>
+        </div>
+
+        <!-- ── PROFILE ── -->
+        <div data-screen-label="More — Profile" style="display: flex; flex-direction: column; gap: 14px; align-items: center;">
+          <div style="display: flex; align-items: baseline; gap: 10px; align-self: flex-start;">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #c5a258;">05·2</span>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Profile</span>
+          </div>
+          <div class="phone-frame" style="margin: 0;">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+              <div class="app-screens">
+                <div class="app-screen">
+                  <div class="app-profile-card">
+                    <div class="app-avatar">AA</div>
+                    <div>
+                      <div class="app-profile-name">Adebayo Adewole</div>
+                      <div class="app-profile-campus">The Woodlands Campus</div>
+                    </div>
+                  </div>
+                  <div class="app-menu-group">
+                    <div class="app-menu-label">Profile</div>
+                    <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">First Name</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Adebayo</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Last Name</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Adewole</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Gender</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Male <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Birth Date</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">11/19/1988 <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Campus</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">The Woodlands <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                    </div>
+                  </div>
+                  <div class="app-menu-group">
+                    <div class="app-menu-label">Contact Information</div>
+                    <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Email</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">aadewole@twmc.org</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Mobile Phone</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">(832) 987-4331</span></div>
+                    </div>
+                  </div>
+                  <div class="app-menu-group">
+                    <div class="app-menu-label">Address</div>
+                    <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Street</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">6363 Fairdale Ln Apt I</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">City</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Houston</span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">State</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Texas <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Zip</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">77057-6355</span></div>
+                    </div>
+                  </div>
+                  <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 13px;">Save Changes</button>
+                  <div style="text-align: center; padding: 14px 0 6px;">
+                    <span style="font-size: 12px; font-weight: 600; color: #b5454a; cursor: pointer;">Sign Out</span>
+                  </div>
+                </div>
+              </div>
+              <nav class="app-tab-bar">
+                <button class="app-tab"><i class="fa-solid fa-house"></i><span>Home</span></button>
+                <button class="app-tab"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+                <button class="app-tab"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+                <button class="app-tab"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+                <button class="app-tab active"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+              </nav>
+            </div>
+          </div>
+          <p style="font-size: 12px; color: #767676; max-width: 340px; margin: 0; text-align: center;">Same fields, grouped into cards — lives under the More tab alongside Sign Out.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEXT STEPS ============ -->
+  <section data-screen-label="Next steps" style="background: #1a1a1a; padding: 56px;">
+    <div style="max-width: 1040px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px;">
+      <span class="section-label" style="color: #c5a258;">Next Steps</span>
+      <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 28px; font-weight: 700; color: #ffffff; margin: 0;">Where we go from here</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px;">
+          <div style="font-size: 13px; font-weight: 700; color: #c5a258; margin-bottom: 8px;">1 · Pick a Home</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.65); margin: 0;">Choose A, B, or C — or tell me which pieces to combine (e.g. B's quick actions inside C's editorial frame).</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px;">
+          <div style="font-size: 13px; font-weight: 700; color: #c5a258; margin-bottom: 8px;">2 · Real artwork</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.65); margin: 0;">Send the "Count on It" series art and campus photos and I'll drop them in where I used typographic placeholders.</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px;">
+          <div style="font-size: 13px; font-weight: 700; color: #c5a258; margin-bottom: 8px;">3 · Make it tappable</div>
+          <p style="font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.65); margin: 0;">Once a direction is locked, I'll wire the screens into one interactive prototype — working tabs, drill-ins, and the give flow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* ============================================================
+   TWMC — colors_and_type.css
+   The Woodlands Methodist Church · 2026 Design System
+   ------------------------------------------------------------
+   Self-contained color + type token layer. Drop this into any
+   prototype to inherit the TWMC look without pulling in the full
+   Bootstrap + theme.css stack.
+
+   Fonts are loaded from Google Fonts (the production site uses the
+   same families). Add this to <head> BEFORE this file:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+   ============================================================ */
+
+:root {
+  /* ---- Brand palette ---- */
+  --maroon:        #6e3140;   /* PRIMARY — CTAs, links, headings, brand */
+  --maroon-light:  #8b4557;   /* lighter accents */
+  --maroon-dark:   #52242f;   /* dark sections, deep contrast */
+  --maroon-hover:  #7d3a4c;   /* hover state on maroon elements */
+  --gold:          #c5a258;   /* SECONDARY — accents, highlights, badges */
+  --gold-light:    #d4b87a;   /* softer gold, hover states */
+
+  /* ---- Neutrals (all warm) ---- */
+  --cream:         #faf8f5;   /* TERTIARY — warm off-white backgrounds */
+  --warm-white:    #ffffff;   /* default page background */
+  --warm-gray:     #f5f3f0;   /* alternating section backgrounds */
+  --warm-gray-2:   #eae7e3;   /* borders, dividers, hover fills */
+  --dark:          #1a1a1a;   /* headings, footer background */
+  --dark-soft:     #333333;   /* secondary dark text */
+  --text-body:     #555555;   /* body text */
+  --text-muted:    #767676;   /* captions, meta text */
+  --border-light:  #e8e5e1;   /* card borders, dividers */
+
+  /* ---- Semantic (warm & muted, harmonize w/ brand) ---- */
+  --success:        #5a8a6e;  --success-light: #e8f0eb;
+  --danger:         #b5454a;  --danger-light:  #f5e5e6;
+  --warning:        #c5a258;  --warning-light: #f8f0e3;  /* warning == gold (intentional) */
+  --info:           #6b849e;  --info-light:    #e8edf2;
+
+  /* ---- GROW pathway colors (RESERVED — pathway pages only, never general accents) ---- */
+  --grow-g: #7b9cc5;  --grow-g-hover: #6889b0;   /* Gather */
+  --grow-r: #e25b6a;  --grow-r-hover: #cc4a59;   /* Raise  */
+  --grow-o: #3dbf87;  --grow-o-hover: #33a574;   /* Outward*/
+  --grow-w: #f2c94c;  --grow-w-hover: #dab63e;   /* Walk   */
+
+  /* ---- Shadows ---- */
+  --shadow-card:       0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.06), 0 16px 40px rgba(0,0,0,0.10);
+  --shadow-lg:         0 20px 60px rgba(0,0,0,0.12);
+
+  /* ---- Radius ---- */
+  --radius:      16px;   /* cards, inputs, icon cards */
+  --radius-lg:   24px;   /* bento cards, video embeds, formation images */
+  --radius-pill: 999px;  /* buttons, badges, pills, tabs */
+
+  /* ---- Fonts ---- */
+  --font-display: 'Playfair Display', Georgia, serif;   /* headings, titles */
+  --font-body:    'DM Sans', system-ui, sans-serif;     /* body, UI, labels */
+
+  /* ---- Motion ---- */
+  --ease-out:         cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast:    0.15s;  /* links, icons, micro-interactions */
+  --duration-normal:  0.3s;   /* buttons, nav, state changes */
+  --duration-slow:    0.5s;   /* cards, panels, FAQ accordion */
+
+  /* ---- Semantic type tokens (computed from scale) ---- */
+  --h1-size:   clamp(40px, 6vw, 64px);   /* page hero h1 — Playfair 700 */
+  --h2-size:   clamp(32px, 4vw, 48px);   /* section title — Playfair 700 */
+  --h3-size:   clamp(28px, 3vw, 38px);   /* subsection — Playfair 700 */
+  --card-title-size: 20px;               /* card heading — Playfair 600 */
+  --body-size: 16px;                     /* DM Sans 400 / 1.65 */
+  --small-size: 14px;
+  --label-size: 12px;                    /* section label — DM Sans 700 uppercase 2px tracking */
+}
+
+/* ============================================================
+   BASE TYPE STYLES
+   Semantic element defaults. Use these classes/elements directly,
+   or copy the rules into a scoped block.
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: 1.65;
+  color: var(--text-body);
+  background: var(--warm-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 { font-family: var(--font-display); color: var(--dark); line-height: 1.15; }
+
+/* Page hero headline */
+.h1, h1 { font-size: var(--h1-size); font-weight: 700; line-height: 1.1; }
+
+/* Section title — use <em> for the italic maroon accent word */
+.section-title, h2 { font-size: var(--h2-size); font-weight: 700; }
+.section-title em, h2 em { font-style: italic; color: var(--maroon); }
+
+/* Subsection */
+h3 { font-size: var(--h3-size); font-weight: 700; }
+
+/* Card heading */
+.card-title { font-size: var(--card-title-size); font-weight: 600; line-height: 1.3; }
+
+/* Section label — small maroon eyebrow, preceded by a 24px maroon bar */
+.section-label {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--font-body);
+  font-size: var(--label-size); font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--maroon);
+}
+.section-label::before {
+  content: ""; width: 24px; height: 2px; background: var(--maroon);
+}
+
+/* Body copy */
+p { font-size: var(--body-size); line-height: 1.65; color: var(--text-body); }
+.text-section { font-size: 15px; line-height: 1.75; }   /* intro / GROW paragraphs */
+.text-small   { font-size: var(--small-size); line-height: 1.6; }
+.text-meta    { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+/* Links */
+a { color: var(--maroon); text-decoration: none; transition: color var(--duration-fast); }
+a:hover { color: var(--maroon-hover); }
+
+::selection { background: rgba(110, 49, 64, 0.15); color: var(--dark); }

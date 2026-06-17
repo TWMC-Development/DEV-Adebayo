@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&amp;family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ds/colors_and_type.css">
+  <link rel="stylesheet" href="ds/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="ds/app.css">
+  <style>
+    body { margin: 0; }
+  </style>
+</helmet>
+
+<div class="app-stage">
+  <div class="app-stage-head">
+    <span class="section-label">Interactive Prototype</span>
+    <h1>Tap through the <em>member app</em></h1>
+    <p>The final direction, wired up: five tabs, channel and article drill-ins, location details, and a working give flow.</p>
+  </div>
+  <div class="phone-wrapper">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen" style="background: #faf8f5;">
+
+        <!-- ── TOP: maroon header on Home, plain status bar elsewhere ── -->
+        <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+          <div style="background: linear-gradient(150deg, #6e3140, #52242f); padding: 0 0 18px; flex-shrink: 0;">
+            <div class="phone-status" style="color: #ffffff;"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 0;">
+              <img src="assets/twumc-logo.png" alt="TWMC" style="height: 26px; width: auto;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <i class="fa-solid fa-bell" style="color: rgba(255,255,255,0.75); font-size: 15px;"></i>
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 11px; font-weight: 700; cursor: pointer;" onClick="{{ goMore }}">AA</div>
+              </div>
+            </div>
+            <div style="padding: 16px 20px 0;">
+              <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 22px; font-weight: 700; color: #ffffff; line-height: 1.2;">Welcome back, Adebayo.</div>
+              <div style="font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px;">Friday, June 12 · The Woodlands Campus</div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notHome }}" hint-placeholder-val="{{ false }}">
+          <div class="phone-status"><span>9:41</span><span class="phone-status-icons"><i class="fa-solid fa-signal"></i><i class="fa-solid fa-wifi"></i><i class="fa-solid fa-battery-full"></i></span></div>
+        </sc-if>
+
+        <div class="app-screens" id="app-scroll">
+
+          <!-- ════ HOME ════ -->
+          <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+            <div class="app-screen" style="padding-top: 16px;" data-screen-label="Home">
+              <div style="position: relative; border-radius: 16px; overflow: hidden; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); cursor: pointer;" onClick="{{ openFeaturedSermon }}">
+                <img src="assets/count-on-it-series.png" alt="Count on It — The Promises of God" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,26,26,0.35) 0%, rgba(26,26,26,0.05) 38%, rgba(26,26,26,0.8) 100%);"></div>
+                <div style="position: relative; padding: 14px 16px 14px; display: flex; flex-direction: column; min-height: 175px;">
+                  <div class="app-live-dot">This Sunday</div>
+                  <div style="margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px;">
+                    <p style="font-size: 11.5px; color: rgba(255,255,255,0.9); margin: 0; line-height: 1.55; text-shadow: 0 1px 6px rgba(0,0,0,0.5);">Current series<br>Traditional · Sun 7:45, 9:00 &amp; 11:00 AM</p>
+                    <span class="app-live-btn" style="flex-shrink: 0; backdrop-filter: blur(4px);"><i class="fa-solid fa-play"></i> Watch Live</span>
+                  </div>
+                </div>
+              </div>
+              <div class="app-section-head"><h3>Latest Messages</h3><a onClick="{{ goWatch }}">All Channels</a></div>
+              <sc-for list="{{ homeMsgs }}" as="m" hint-placeholder-count="4">
+                <div class="app-message-item" onClick="{{ m.onOpen }}">
+                  <div style="width: 40px; height: 40px; border-radius: 50%; background: {{ m.tint }}; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="{{ m.bug }}" alt="" style="width: 20px; height: 20px; object-fit: contain;"></div>
+                  <div class="app-message-info"><h4>{{ m.title }}</h4><p>{{ m.sub }}</p></div>
+                  <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                </div>
+              </sc-for>
+              <div class="app-section-head" style="margin-top: 16px;"><h3>From the Senior Pastor</h3><a onClick="{{ goArticles }}">All Articles</a></div>
+              <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); cursor: pointer;" onClick="{{ openFeaturedArticle }}">
+                <img src="assets/WEB_Blog_header_2026Jan.jpg" alt="" style="width: 100%; height: 110px; object-fit: cover; display: block;">
+                <div style="padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px;">
+                  <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">Holiness Hidden in Everyday Life</h4>
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <img src="assets/HiImMark_Circle360.png" alt="" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover;">
+                    <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · May 14, 2026</span>
+                  </div>
+                  <a style="font-size: 12px; font-weight: 600; color: #6e3140; cursor: pointer;">Read Article <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ════ WATCH · CHANNELS ════ -->
+          <sc-if value="{{ isWatch }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Watch">
+              <div class="app-greeting"><h2>Watch &amp; Listen</h2><p>Messages from every service and campus</p></div>
+              <div class="app-section-head"><h3>Woodlands Campus</h3></div>
+              <sc-for list="{{ woodlandsChannels }}" as="ch" hint-placeholder-count="5">
+                <div class="app-my-group" onClick="{{ ch.onOpen }}" style="cursor: pointer;">
+                  <div style="width: 44px; height: 44px; border-radius: 12px; background: {{ ch.tint }}; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="{{ ch.bug }}" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                  <div class="app-group-info"><h4>{{ ch.name }}</h4><p>{{ ch.sub }}</p></div>
+                  <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                </div>
+              </sc-for>
+              <div class="app-section-head" style="margin-top: 16px;"><h3>Across Our Campuses</h3></div>
+              <sc-for list="{{ campusChannels }}" as="ch" hint-placeholder-count="3">
+                <div class="app-my-group" onClick="{{ ch.onOpen }}" style="cursor: pointer;">
+                  <div style="width: 44px; height: 44px; border-radius: 12px; background: {{ ch.tint }}; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="{{ ch.bug }}" alt="" style="width: 22px; height: 22px; object-fit: contain;"></div>
+                  <div class="app-group-info"><h4>{{ ch.name }}</h4><p>{{ ch.sub }}</p></div>
+                  <i class="fa-solid fa-chevron-right" style="margin-left: auto; color: #767676; font-size: 11px;"></i>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <!-- ════ WATCH · MESSAGE DETAIL ════ -->
+          <sc-if value="{{ isSermon }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Message detail">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 16px; cursor: pointer;" onClick="{{ goWatch }}">
+                <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">{{ sermonBack }}</span>
+              </div>
+              <div style="border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 16 / 9; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06);">
+                <img src="assets/count-on-it-series.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; inset: 0; background: rgba(26,26,26,0.18); display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 14px; backdrop-filter: blur(4px); cursor: pointer;"><i class="fa-solid fa-play" style="margin-left: 2px;"></i></div>
+                </div>
+              </div>
+              <div style="padding: 18px 0 4px;">
+                <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.2;">{{ sermonTitle }}</h2>
+                <p style="font-size: 12px; color: #767676; margin: 8px 0 0; line-height: 1.6;">{{ sermonSpeaker }}<br>{{ sermonMeta }}</p>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 16px;">
+                <button class="btn-primary" style="flex: 1; font-size: 13px; padding: 12px 20px;"><i class="fa-solid fa-share-nodes" style="margin-right: 8px;"></i> Share</button>
+                <button style="width: 46px; height: 46px; border-radius: 999px; border: 1.5px solid #e8e5e1; background: #ffffff; color: #6e3140; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i class="fa-regular fa-bookmark"></i></button>
+              </div>
+              <div class="app-section-head" style="margin-top: 22px;"><h3>More from this series</h3></div>
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fa-solid fa-play"></i></div>
+                <div class="app-message-info"><h4>Promises Kept</h4><p>Rev. Kimberly Constant · May 10, 2026</p></div>
+              </div>
+              <div class="app-message-item">
+                <div class="app-message-thumb"><i class="fa-solid fa-play"></i></div>
+                <div class="app-message-info"><h4>An Anchor for the Soul</h4><p>Rev. Pierce Drake · May 3, 2026</p></div>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ════ ARTICLES · LIST ════ -->
+          <sc-if value="{{ isArticles }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Articles">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 6px; cursor: pointer;" onClick="{{ goHome }}">
+                <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Home</span>
+              </div>
+              <div class="app-greeting"><h2>From the Senior Pastor</h2><p>Weekly reflections from Rev. Mark Sorensen</p></div>
+              <sc-for list="{{ articles }}" as="art" hint-placeholder-count="2">
+                <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 14px; cursor: pointer;" onClick="{{ art.onOpen }}">
+                  <img src="{{ art.img }}" alt="" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                  <div style="padding: 16px; display: flex; flex-direction: column; gap: 8px;">
+                    <h4 style="font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: #1a1a1a; margin: 0; line-height: 1.3;">{{ art.title }}</h4>
+                    <p style="font-size: 12px; line-height: 1.6; color: #555555; margin: 0;">{{ art.excerpt }}</p>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 2px;">
+                      <img src="assets/HiImMark_Circle360.png" alt="" style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover;">
+                      <span style="font-size: 11px; color: #767676;">Rev. Mark Sorensen · {{ art.date }}</span>
+                      <span style="margin-left: auto; font-size: 12px; font-weight: 600; color: #6e3140;">Read <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <!-- ════ ARTICLES · DETAIL ════ -->
+          <sc-if value="{{ isArticleDetail }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" style="padding: 0;" data-screen-label="Article detail">
+              <div style="position: relative;">
+                <img src="{{ articleImg }}" alt="" style="width: 100%; height: 190px; object-fit: cover; display: block;">
+                <div style="position: absolute; top: 14px; left: 16px; width: 32px; height: 32px; border-radius: 50%; background: rgba(26,26,26,0.45); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 13px; cursor: pointer;" onClick="{{ goArticles }}"><i class="fa-solid fa-chevron-left"></i></div>
+              </div>
+              <div style="padding: 20px 20px 24px;">
+                <span class="section-label" style="font-size: 10px; letter-spacing: 2px;">From the Pastor</span>
+                <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; color: #1a1a1a; margin: 12px 0 0; line-height: 1.2;">{{ articleTitle }}</h2>
+                <div style="display: flex; align-items: center; gap: 10px; padding: 16px 0; border-bottom: 1px solid #e8e5e1; margin-bottom: 16px;">
+                  <img src="assets/HiImMark_Circle360.png" alt="" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover;">
+                  <div>
+                    <div style="font-size: 12px; font-weight: 600; color: #1a1a1a;">Rev. Mark Sorensen</div>
+                    <div style="font-size: 11px; font-weight: 600; color: #6e3140;">{{ articleDate }}</div>
+                  </div>
+                  <i class="fa-solid fa-share-nodes" style="margin-left: auto; color: #6e3140; font-size: 14px;"></i>
+                </div>
+                <sc-for list="{{ articleBody }}" as="para" hint-placeholder-count="3">
+                  <p style="font-size: 13.5px; line-height: 1.75; color: #555555; margin: 0 0 14px;">{{ para.text }}</p>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ════ LOCATIONS · LIST ════ -->
+          <sc-if value="{{ isLocations }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Locations">
+              <div class="app-greeting"><h2>Locations</h2><p>Find a campus and plan your Sunday</p></div>
+              <sc-for list="{{ locations }}" as="loc" hint-placeholder-count="6">
+                <div class="app-my-group" style="align-items: flex-start; cursor: pointer;" onClick="{{ loc.onOpen }}">
+                  <div style="flex: 1;">
+                    <div style="font-size: 15px; font-weight: 700; color: #1a1a1a;">{{ loc.name }}</div>
+                    <div style="display: flex; align-items: flex-start; gap: 7px; margin-top: 5px;">
+                      <i class="fa-solid fa-location-dot" style="color: #6e3140; font-size: 12px; margin-top: 2px;"></i>
+                      <span style="font-size: 12px; color: #555555; line-height: 1.5;">{{ loc.street }}<br>{{ loc.city }}</span>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right" style="color: #767676; font-size: 11px; margin-top: 4px;"></i>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <!-- ════ LOCATIONS · DETAIL ════ -->
+          <sc-if value="{{ isLocationDetail }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Location detail">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0 12px; cursor: pointer;" onClick="{{ goLocations }}">
+                <i class="fa-solid fa-chevron-left" style="color: #1a1a1a; font-size: 14px;"></i>
+                <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Locations</span>
+              </div>
+              <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 700; color: #1a1a1a; margin: 0 0 14px; line-height: 1.15;">{{ locName }}</h2>
+              <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 14px;">
+                <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(110,49,64,0.08); display: flex; align-items: center; justify-content: center; color: #6e3140; font-size: 14px; flex-shrink: 0;"><i class="fa-solid fa-location-dot"></i></div>
+                <div style="flex: 1;">
+                  <div style="font-size: 13px; font-weight: 600; color: #1a1a1a;">{{ locStreet }}</div>
+                  <div style="font-size: 11px; color: #767676; margin-top: 1px;">{{ locCity }}</div>
+                </div>
+                <span style="font-size: 11px; font-weight: 700; color: #6e3140; flex-shrink: 0;">Directions <i class="fa-solid fa-arrow-right" style="font-size: 9px;"></i></span>
+              </div>
+              <div class="app-service-card">
+                <h4><i class="fa-solid fa-clock"></i> Service Times</h4>
+                <sc-for list="{{ locTimes }}" as="t" hint-placeholder-count="3">
+                  <div class="app-service-row">
+                    <div class="app-service-name">{{ t.name }}</div>
+                    <div class="app-service-time">{{ t.time }}</div>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="border-radius: 16px; overflow: hidden; border: 1px solid #e8e5e1; background: #eae7e3; height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; position: relative;">
+                <i class="fa-solid fa-map-location-dot" style="font-size: 26px; color: #767676;"></i>
+                <span style="font-size: 11px; font-weight: 600; color: #767676;">Map · {{ locStreet }}</span>
+                <span style="font-size: 11px; font-weight: 700; color: #6e3140;">Open in Maps <i class="fa-solid fa-arrow-right" style="font-size: 9px;"></i></span>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ════ GIVE ════ -->
+          <sc-if value="{{ isGive }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Give">
+              <div class="app-give-header">
+                <h2>Tithes &amp; Offerings</h2>
+                <p>Giving is about what God wants <em style="color: #6e3140;">for</em> you, not <em style="color: #6e3140;">from</em> you.</p>
+              </div>
+              <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                <button onClick="{{ pickPerson }}" style="flex: 1; padding: 10px; border-radius: 999px; border: 1.5px solid {{ personBorder }}; background: {{ personBg }}; color: {{ personColor }}; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer;"><i class="fa-solid fa-user" style="margin-right: 6px;"></i> Person</button>
+                <button onClick="{{ pickBusiness }}" style="flex: 1; padding: 10px; border-radius: 999px; border: 1.5px solid {{ businessBorder }}; background: {{ businessBg }}; color: {{ businessColor }}; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; cursor: pointer;"><i class="fa-solid fa-briefcase" style="margin-right: 6px;"></i> Business</button>
+              </div>
+              <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 16px rgba(0,0,0,0.06); cursor: pointer;" onClick="{{ cycleFund }}">
+                <div>
+                  <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #767676;">Giving Area</div>
+                  <div style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-top: 2px;">{{ fund }}</div>
+                </div>
+                <i class="fa-solid fa-chevron-down" style="color: #6e3140; font-size: 12px;"></i>
+              </div>
+              <div class="app-give-amounts">
+                <sc-for list="{{ amounts }}" as="a" hint-placeholder-count="6">
+                  <div class="{{ a.cls }}" onClick="{{ a.onPick }}">{{ a.label }}</div>
+                </sc-for>
+              </div>
+              <div style="font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #767676; margin-bottom: 8px;">Frequency</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;">
+                <sc-for list="{{ freqs }}" as="f" hint-placeholder-count="6">
+                  <span onClick="{{ f.onPick }}" style="padding: 7px 14px; border-radius: 999px; background: {{ f.bg }}; border: 1px solid {{ f.border }}; color: {{ f.color }}; font-size: 11px; font-weight: 600; cursor: pointer;">{{ f.label }}</span>
+                </sc-for>
+              </div>
+              <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 13px 16px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Gift date</span>
+                <span style="font-size: 12px; font-weight: 600; color: #6e3140;">6/14/2026 <i class="fa-solid fa-calendar" style="margin-left: 6px;"></i></span>
+              </div>
+              <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 13px 16px; margin-bottom: 18px;">
+                <span style="font-size: 13px; color: #767676;">Comments (optional)</span>
+              </div>
+              <button class="btn-primary app-give-btn">{{ giveLabel }} <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+              <p style="font-size: 11px; color: #767676; text-align: center; line-height: 1.6; margin: 0;">Need a hand? Email <span style="color: #6e3140; font-weight: 600;">Finance@twmc.org</span> and someone from our team will be happy to help.</p>
+            </div>
+          </sc-if>
+
+          <!-- ════ MORE · PROFILE ════ -->
+          <sc-if value="{{ isMore }}" hint-placeholder-val="{{ false }}">
+            <div class="app-screen" data-screen-label="Profile">
+              <div class="app-profile-card">
+                <div class="app-avatar">AA</div>
+                <div>
+                  <div class="app-profile-name">Adebayo Adewole</div>
+                  <div class="app-profile-campus">The Woodlands Campus</div>
+                </div>
+              </div>
+              <div class="app-menu-group">
+                <div class="app-menu-label">Profile</div>
+                <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">First Name</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Adebayo</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Last Name</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Adewole</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Gender</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Male <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Birth Date</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">11/19/1988 <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Campus</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">The Woodlands <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                </div>
+              </div>
+              <div class="app-menu-group">
+                <div class="app-menu-label">Contact Information</div>
+                <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Email</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">aadewole@twmc.org</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Mobile Phone</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">(832) 987-4331</span></div>
+                </div>
+              </div>
+              <div class="app-menu-group">
+                <div class="app-menu-label">Address</div>
+                <div style="background: #ffffff; border: 1px solid #e8e5e1; border-radius: 16px; padding: 2px 16px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">Street</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">6363 Fairdale Ln Apt I</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">City</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Houston</span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);"><span style="font-size: 12px; font-weight: 600; color: #767676;">State</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">Texas <i class="fa-solid fa-chevron-down" style="font-size: 9px; color: #767676; margin-left: 4px;"></i></span></div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;"><span style="font-size: 12px; font-weight: 600; color: #767676;">Zip</span><span style="font-size: 13px; font-weight: 500; color: #1a1a1a;">77057-6355</span></div>
+                </div>
+              </div>
+              <button class="btn-primary" style="width: 100%; justify-content: center; font-size: 13px;">Save Changes</button>
+              <div style="text-align: center; padding: 14px 0 6px;">
+                <span style="font-size: 12px; font-weight: 600; color: #b5454a; cursor: pointer;">Sign Out</span>
+              </div>
+            </div>
+          </sc-if>
+
+        </div>
+
+        <!-- ── TAB BAR ── -->
+        <nav class="app-tab-bar">
+          <button class="{{ tabHome }}" onClick="{{ goHome }}"><i class="fa-solid fa-house"></i><span>Home</span></button>
+          <button class="{{ tabWatch }}" onClick="{{ goWatch }}"><i class="fa-solid fa-circle-play"></i><span>Watch</span></button>
+          <button class="{{ tabGive }}" onClick="{{ goGive }}"><i class="fa-solid fa-hand-holding-heart"></i><span>Give</span></button>
+          <button class="{{ tabLocations }}" onClick="{{ goLocations }}"><i class="fa-solid fa-location-dot"></i><span>Locations</span></button>
+          <button class="{{ tabMore }}" onClick="{{ goMore }}"><i class="fa-solid fa-ellipsis"></i><span>More</span></button>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    view: 'home',
+    sermon: null,
+    article: null,
+    location: null,
+    amount: '$100',
+    freq: 'One-Time',
+    payer: 'Person',
+    fundIdx: 0
+  };
+
+  CHANNELS = {
+    woodlands: [
+      { name: 'Chapel', sub: 'Latest: Guidance · Rev. Kimberly Constant', bug: 'assets/chapel-bug-c.png', tint: 'rgba(107,132,158,0.14)',
+        sermon: { title: 'Guidance', speaker: 'Rev. Kimberly Constant', meta: 'Chapel, Traditional · May 17, 2026' } },
+      { name: 'Traditional', sub: 'Latest: Guidance · Rev. Kimberly Constant', bug: 'assets/traditional-bug-c.png', tint: 'rgba(110,49,64,0.10)',
+        sermon: { title: 'Guidance', speaker: 'Rev. Kimberly Constant', meta: 'Chapel, Traditional · May 17, 2026' } },
+      { name: 'Harvest', sub: 'Latest: The Power of Words · Rev. Mark Sorensen', bug: 'assets/harvest-bug-c.png', tint: 'rgba(197,162,88,0.16)',
+        sermon: { title: 'The Power of Words', speaker: 'Rev. Mark Sorensen', meta: 'Harvest · May 17, 2026' } },
+      { name: 'Loft', sub: 'Latest: When You See Mysteries in the Sky', bug: 'assets/loft-bug-c.png', tint: 'rgba(90,138,110,0.14)',
+        sermon: { title: 'When You See Mysteries in the Sky', speaker: 'Rev. Daniel Lumpee', meta: 'Loft · May 17, 2026' } },
+      { name: 'House', sub: 'College & Young Adults · Sunday evenings', bug: 'assets/CYA_House_Bug.png', tint: 'rgba(26,26,26,0.07)',
+        sermon: { title: 'House', speaker: 'College & Young Adults', meta: 'The Woodlands · Sunday evenings' } }
+    ],
+    campuses: [
+      { name: 'Woodforest', sub: 'Latest: Lust · Rev. Brent Parker', bug: 'assets/traditional-bug-c.png', tint: 'rgba(139,69,87,0.12)',
+        sermon: { title: 'Lust', speaker: 'Rev. Brent Parker', meta: 'Woodforest · May 17, 2026' } },
+      { name: 'Montgomery', sub: 'Latest: Humble Faith · Rev. Aaron Laird', bug: 'assets/traditional-bug-c.png', tint: 'rgba(82,36,47,0.10)',
+        sermon: { title: 'Humble Faith', speaker: 'Rev. Aaron Laird', meta: 'Montgomery · May 17, 2026' } },
+      { name: 'Creekside', sub: 'Latest: On Guard · Rev. Pierce Drake', bug: 'assets/traditional-bug-c.png', tint: 'rgba(181,69,74,0.10)',
+        sermon: { title: 'On Guard', speaker: 'Rev. Pierce Drake', meta: 'Creekside · May 17, 2026' } }
+    ]
+  };
+
+  ARTICLES = [
+    {
+      title: 'Holiness Hidden in Everyday Life',
+      excerpt: 'For the past month, Nycki and I have had the joy of some extended time with our grandson staying in\u2026',
+      date: 'May 14, 2026',
+      img: 'assets/WEB_Blog_header_2026Jan.jpg',
+      body: [
+        'For the past month, Nycki and I have had the joy of extended time with our grandson, who has been staying at our house while his parents work through the details of relocating back to The Woodlands. Let me just say, having a 3-year-old back in the house after a season of empty nesting has brought a whole new level of awareness into our lives.',
+        'A few things my wife and I quickly relearned:',
+        '\u00b7 Silence is no longer comforting; it\u2019s suspicious.',
+        '\u00b7 Bath time is actually an experiment to see how much water can escape the tub and still count as a bath.',
+        '\u00b7 A 3-year-old can ask \u201cwhy?\u201d 17 times in under two minutes.'
+      ]
+    },
+    {
+      title: 'The Kind of Story You Don\u2019t Want to End',
+      excerpt: 'Lately, I\u2019ve been thinking a lot about the stories we tell \u2014 and the ones we live\u2026',
+      date: 'May 7, 2026',
+      img: 'assets/WEB_Blog_header_2026Feb.jpg',
+      body: [
+        'Lately, I\u2019ve been thinking a lot about the stories we tell \u2014 and the ones we live.'
+      ]
+    }
+  ];
+
+  LOCATIONS = [
+    { name: 'The Woodlands', street: '2200 Lake Woodlands Drive', city: 'The Woodlands, TX 77380',
+      times: [
+        { name: 'Traditional', time: 'Sun 7:45, 9:00, 11:00 AM' },
+        { name: 'Contemporary', time: 'Sun 9:00, 11:00 AM' },
+        { name: 'Modern', time: 'Sat 6:00 PM \u00b7 Sun 9:30, 11:00 AM' },
+        { name: 'Students', time: 'Sun 9:30, 11:00 AM' },
+        { name: 'Children', time: 'Sun 9:00, 11:00 AM' }
+      ] },
+    { name: 'The Woodlands en Espa\u00f1ol', street: '2200 Lake Woodlands Drive', city: 'The Woodlands, TX 77380-1119',
+      times: [ { name: 'Espa\u00f1ol', time: 'Sun 10:00 AM' } ] },
+    { name: 'Woodforest', street: '700 Fish Creek Thoroughfare', city: 'Montgomery, TX 77316-6830',
+      times: [ { name: 'Woodforest', time: 'Sun 9:00, 11:00 AM' } ] },
+    { name: 'Montgomery', street: '19190 Keenan Cut Off Rd', city: 'Montgomery, TX 77316-9102',
+      times: [ { name: 'Montgomery', time: 'Sun 10:30 AM' } ] },
+    { name: 'Creekside', street: '8555 Creekside Green Drive', city: 'The Woodlands, TX 77389',
+      times: [ { name: 'Creekside', time: 'Sun 9:00, 11:00 AM' } ] },
+    { name: 'Creekside en Espa\u00f1ol', street: '8555 Creekside Green Drive', city: 'The Woodlands, TX 77389',
+      times: [ { name: 'Espa\u00f1ol', time: 'Sun 1:00 PM' } ] }
+  ];
+
+  FUNDS = ['General', 'Capital Campaign - Beyond', 'Missions', 'Benevolence'];
+
+  nav(view, extra) {
+    this.setState(Object.assign({ view: view }, extra || {}), () => {
+      const el = document.getElementById('app-scroll');
+      if (el) el.scrollTop = 0;
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const v = s.view;
+    const tab = (id, views) => 'app-tab' + (views.indexOf(v) >= 0 ? ' active' : '');
+
+    const mapCh = (c) => ({
+      name: c.name, sub: c.sub, bug: c.bug, tint: c.tint,
+      onOpen: () => this.nav('sermon', { sermon: c.sermon, sermonBack: c.name })
+    });
+
+    const homeSrc = [
+      this.CHANNELS.woodlands[0],
+      this.CHANNELS.woodlands[2],
+      this.CHANNELS.woodlands[3],
+      this.CHANNELS.campuses[1]
+    ];
+    const homeMsgs = homeSrc.map((c) => ({
+      title: c.sermon.title,
+      sub: c.name + ' \u00b7 ' + c.sermon.speaker,
+      bug: c.bug, tint: c.tint,
+      onOpen: () => this.nav('sermon', { sermon: c.sermon, sermonBack: c.name })
+    }));
+
+    const articles = this.ARTICLES.map((a) => ({
+      title: a.title, excerpt: a.excerpt, date: a.date, img: a.img,
+      onOpen: () => this.nav('articleDetail', { article: a })
+    }));
+
+    const locations = this.LOCATIONS.map((l) => ({
+      name: l.name, street: l.street, city: l.city,
+      onOpen: () => this.nav('locationDetail', { location: l })
+    }));
+
+    const AMTS = ['$25', '$50', '$100', '$250', '$500', 'Other'];
+    const amounts = AMTS.map((a) => ({
+      label: a,
+      cls: 'app-give-amount' + (s.amount === a ? ' selected' : ''),
+      onPick: () => this.setState({ amount: a })
+    }));
+
+    const FREQS = ['One-Time', 'Weekly', 'Bi-Weekly', '1st & 15th', 'Monthly', 'Yearly'];
+    const freqs = FREQS.map((f) => ({
+      label: f,
+      bg: s.freq === f ? '#6e3140' : '#ffffff',
+      border: s.freq === f ? '#6e3140' : '#e8e5e1',
+      color: s.freq === f ? '#ffffff' : '#555555',
+      onPick: () => this.setState({ freq: f })
+    }));
+
+    const isPerson = s.payer === 'Person';
+    const sermon = s.sermon || this.CHANNELS.woodlands[0].sermon;
+    const article = s.article || this.ARTICLES[0];
+    const location = s.location || this.LOCATIONS[0];
+
+    return {
+      isHome: v === 'home',
+      notHome: v !== 'home',
+      isWatch: v === 'watch',
+      isSermon: v === 'sermon',
+      isArticles: v === 'articles',
+      isArticleDetail: v === 'articleDetail',
+      isLocations: v === 'locations',
+      isLocationDetail: v === 'locationDetail',
+      isGive: v === 'give',
+      isMore: v === 'more',
+
+      tabHome: tab('home', ['home', 'articles', 'articleDetail']),
+      tabWatch: tab('watch', ['watch', 'sermon']),
+      tabGive: tab('give', ['give']),
+      tabLocations: tab('locations', ['locations', 'locationDetail']),
+      tabMore: tab('more', ['more']),
+
+      goHome: () => this.nav('home'),
+      goWatch: () => this.nav('watch'),
+      goGive: () => this.nav('give'),
+      goLocations: () => this.nav('locations'),
+      goMore: () => this.nav('more'),
+      goArticles: () => this.nav('articles'),
+
+      openFeaturedSermon: () => this.nav('sermon', { sermon: this.CHANNELS.woodlands[1].sermon, sermonBack: 'Traditional' }),
+      openFeaturedArticle: () => this.nav('articleDetail', { article: this.ARTICLES[0] }),
+
+      homeMsgs: homeMsgs,
+      woodlandsChannels: this.CHANNELS.woodlands.map(mapCh),
+      campusChannels: this.CHANNELS.campuses.map(mapCh),
+
+      sermonTitle: sermon.title,
+      sermonSpeaker: sermon.speaker,
+      sermonMeta: sermon.meta,
+      sermonBack: s.sermonBack || 'Watch',
+
+      articles: articles,
+      articleTitle: article.title,
+      articleDate: article.date + ' \u00b7 ' + (article.body.length > 2 ? '4 min read' : '1 min read'),
+      articleImg: article.img,
+      articleBody: article.body.map((p) => ({ text: p })),
+
+      locations: locations,
+      locName: location.name,
+      locStreet: location.street,
+      locCity: location.city,
+      locTimes: location.times,
+
+      fund: this.FUNDS[s.fundIdx],
+      cycleFund: () => this.setState({ fundIdx: (s.fundIdx + 1) % this.FUNDS.length }),
+      amounts: amounts,
+      freqs: freqs,
+      giveLabel: s.amount === 'Other' ? 'Give' : 'Give ' + s.amount + '.00',
+      personBg: isPerson ? '#6e3140' : '#ffffff',
+      personColor: isPerson ? '#ffffff' : '#767676',
+      personBorder: isPerson ? '#6e3140' : '#e8e5e1',
+      businessBg: isPerson ? '#ffffff' : '#6e3140',
+      businessColor: isPerson ? '#767676' : '#ffffff',
+      businessBorder: isPerson ? '#e8e5e1' : '#6e3140',
+      pickPerson: () => this.setState({ payer: 'Person' }),
+      pickBusiness: () => this.setState({ payer: 'Business' })
+    };
+  }
+}
+</script>
+</body>
+</html>
