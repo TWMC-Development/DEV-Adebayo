@@ -75,6 +75,15 @@
           font-size: 0.75rem;
         }
       }
+
+      .navbar.navbar-twmc-bottom {
+        position: relative;
+        margin-bottom: 0;
+      }
+
+      .margin-below-navbar {
+        margin-top: 0;
+      }
     </style>
   </head>
 
@@ -380,21 +389,24 @@
       <!-- HARVEST HERO BLOCK -->
       <style>
         /* ===== START CUSTOM CSS: HARVEST HERO BLOCK ===== */
+        .hero--video-section.harvest-hero,
+        .hero--video-section.harvest-hero > video,
+        .harvest-hero .hero--video__text-wrapper {
+          height: clamp(560px, 88vh, 880px);
+        }
+
         .hero--video-section.harvest-hero {
-          height: clamp(520px, 52vw, 600px);
           overflow: hidden;
           background-color: #111;
         }
 
         .hero--video-section.harvest-hero > video {
-          height: 100%;
           object-fit: cover;
           object-position: center center;
-          transform: scale(1.05);
+          transform: scale(1.12);
         }
 
         .harvest-hero .hero--video__text-wrapper {
-          height: 100%;
           padding: 0 8%;
         }
 
@@ -403,13 +415,15 @@
         }
 
         @media only screen and (max-width: 576px) {
-          .hero--video-section.harvest-hero {
-            height: 245px;
+          .hero--video-section.harvest-hero,
+          .hero--video-section.harvest-hero > video,
+          .harvest-hero .hero--video__text-wrapper {
+            height: 520px;
           }
 
           .hero--video-section.harvest-hero > video {
             object-position: 50% 50%;
-            transform: scale(1.08);
+            transform: scale(1.12);
           }
 
           .harvest-hero .hero--video__text-wrapper {
@@ -781,20 +795,6 @@
           padding-bottom: 2.2rem;
         }
 
-        .harvest-connect .connect25--flex-container {
-          max-width: 1120px;
-        }
-
-        .harvest-connect .connect25-cardlg-ribbon-card--wrapper {
-          border-radius: 12px;
-          overflow: hidden;
-        }
-
-        .harvest-connect .connect25-cardlg--ribbon,
-        .harvest-connect .connect25-cardsm--ribbon {
-          border-radius: 0;
-        }
-
         .harvest-connect-more {
           padding: 0 0 4rem;
           text-align: center;
@@ -986,6 +986,10 @@
                     <div class="connect25-cardlg-ribbon-card--inner-wrapper">
                       <div>
                         <p class="connect25-cardlg-card--title mb-2 mt-2"><strong>Blood Drive</strong></p>
+                        <div class="connect25-tag-wrapper mb-1">
+                          <span class="post-type-delineator">Campus Location:</span>
+                          <span class="post-type-container"><p class="connect25--tag-redgrey"><span>The Woodlands</span></p></span>
+                        </div>
                         <p class="connect25-p connect25-cardlg-excerpt my-2">Give the gift of life through the Gulf Coast Regional Blood Center. Blood donors are needed to give now, and in the future, consistently.</p>
                       </div>
                       <div><hr class="hr-greythin" /><div class="connect25-cardlg--btn-wrapper"><a href="https://www.giveblood.org/woodlandsmethodist/" class="btn btn-connect25-trad" target="_blank">Sign Up</a></div></div>
@@ -993,7 +997,13 @@
                   </div>
                   <div class="connect25--flex-item-sm connect25-cardsm-ribbon-card--wrapper a-connect25-sm">
                     <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid=511ffc82-29c7-452c-be4e-03a8b5da48c1');"><div class="connect25-cardsm--ribbon-inner"></div></div>
-                    <div class="connect25-cardsm-ribbon-card--inner-wrapper"><a href="https://www.giveblood.org/woodlandsmethodist/" class="a-connect25-sm" target="_blank"><h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Blood Drive</h4><p class="connect25--smtag">Campus: The Woodlands</p><p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Give the gift of life through the Gulf Coast Regional Blood Center. Blood donors are needed to give now, and in the f... <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p></a></div>
+                    <div class="connect25-cardsm-ribbon-card--inner-wrapper">
+                      <a href="https://www.giveblood.org/woodlandsmethodist/" class="a-connect25-sm" title="Learn More" target="_blank">
+                        <h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Blood Drive</h4>
+                        <div class="connect25-tag-wrapper mb-1"><p class="connect25--smtag"><span>Campus: The Woodlands</span></p></div>
+                        <p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Give the gift of life through the Gulf Coast Regional Blood Center. Blood donors are needed to give now, and in the f... <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1001,13 +1011,26 @@
                   <div class="connect25--flex-item-lg twmc-pbsmall">
                     <div class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid=8f970035-4a6e-46cb-ad1d-c8778b43073d');"><div class="connect25-cardlg--ribbon-inner"></div></div>
                     <div class="connect25-cardlg-ribbon-card--inner-wrapper">
-                      <div><p class="connect25-cardlg-card--title mb-2 mt-2"><strong>Internship Interest</strong></p><p class="connect25-p connect25-cardlg-excerpt my-2">Learn more about internship opportunities at TWMC in NextGen Ministries, Pastoral, Missions and Media.</p></div>
+                      <div>
+                        <p class="connect25-cardlg-card--title mb-2 mt-2"><strong>Internship Interest</strong></p>
+                        <div class="connect25-tag-wrapper mb-1">
+                          <span class="post-type-delineator">Campus Location:</span>
+                          <span class="post-type-container"><p class="connect25--tag-redgrey"><span>The Woodlands</span></p></span>
+                        </div>
+                        <p class="connect25-p connect25-cardlg-excerpt my-2">Learn more about internship opportunities at TWMC in NextGen Ministries, Pastoral, Missions and Media.</p>
+                      </div>
                       <div><hr class="hr-greythin" /><div class="connect25-cardlg--btn-wrapper"><a href="/intern-resident-application" class="btn btn-connect25-trad" target="_blank">Learn More</a></div></div>
                     </div>
                   </div>
                   <div class="connect25--flex-item-sm connect25-cardsm-ribbon-card--wrapper a-connect25-sm">
                     <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid=8f970035-4a6e-46cb-ad1d-c8778b43073d');"><div class="connect25-cardsm--ribbon-inner"></div></div>
-                    <div class="connect25-cardsm-ribbon-card--inner-wrapper"><a href="/intern-resident-application" class="a-connect25-sm" target="_blank"><h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Internship Interest</h4><p class="connect25--smtag">Campus: The Woodlands</p><p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Learn more about internship opportunities at TWMC in NextGen Ministries, Pastoral, Missions and Media. <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p></a></div>
+                    <div class="connect25-cardsm-ribbon-card--inner-wrapper">
+                      <a href="/intern-resident-application" class="a-connect25-sm" title="Learn More" target="_blank">
+                        <h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Internship Interest</h4>
+                        <div class="connect25-tag-wrapper mb-1"><p class="connect25--smtag"><span>Campus: The Woodlands</span></p></div>
+                        <p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Learn more about internship opportunities at TWMC in NextGen Ministries, Pastoral, Missions and Media. <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p>
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -1015,13 +1038,29 @@
                   <div class="connect25--flex-item-lg twmc-pbsmall">
                     <div class="connect25-cardlg--ribbon connect25-cardlg--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid=68908cb9-07a4-481c-b3af-682e855c9da2');"><div class="connect25-cardlg--ribbon-inner"></div></div>
                     <div class="connect25-cardlg-ribbon-card--inner-wrapper">
-                      <div><p class="connect25-cardlg-card--title mb-2 mt-2"><strong>Society of St. Stephen</strong></p><p class="connect25-p connect25-cardlg-excerpt my-2">Our church provides financial assistance to families in crisis in our congregation and in the surrounding South Montgomery County area.</p></div>
+                      <div>
+                        <p class="connect25-cardlg-card--title mb-2 mt-2"><strong>Society of St. Stephen</strong></p>
+                        <div class="connect25-tag-wrapper mb-1">
+                          <span class="post-type-delineator">Campus Location:</span>
+                          <span class="post-type-container">
+                            <p class="connect25--tag-redgrey"><span>The Woodlands</span></p>
+                            <p class="connect25--tag-redgrey"><span>Woodforest</span></p>
+                          </span>
+                        </div>
+                        <p class="connect25-p connect25-cardlg-excerpt my-2">Our church provides financial assistance to families in crisis in our congregation and in the surrounding South Montgomery County area. Give online and designate for Society of St. Stephen.</p>
+                      </div>
                       <div><hr class="hr-greythin" /><div class="connect25-cardlg--btn-wrapper"><a href="/mission-partners" class="btn btn-connect25-trad" target="_blank">Find Out More</a></div></div>
                     </div>
                   </div>
                   <div class="connect25--flex-item-sm connect25-cardsm-ribbon-card--wrapper a-connect25-sm">
                     <div class="connect25-cardsm--ribbon connect25-cardsm--ribbon1 py-2" style="background-image: url('https://thewoodlandsmethodist.org/GetFile.ashx?guid=68908cb9-07a4-481c-b3af-682e855c9da2');"><div class="connect25-cardsm--ribbon-inner"></div></div>
-                    <div class="connect25-cardsm-ribbon-card--inner-wrapper"><a href="/mission-partners" class="a-connect25-sm" target="_blank"><h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Society of St. Stephen</h4><p class="connect25--smtag">Campus: The Woodlands, Woodforest</p><p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Our church provides financial assistance to families in crisis in our congregation and in the surrounding South Montg... <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p></a></div>
+                    <div class="connect25-cardsm-ribbon-card--inner-wrapper">
+                      <a href="/mission-partners" class="a-connect25-sm" title="Learn More" target="_blank">
+                        <h4 class="twmc-h4 connect25-cardsm-card--title mb-1">Society of St. Stephen</h4>
+                        <div class="connect25-tag-wrapper mb-1"><p class="connect25--smtag"><span>Campus: The Woodlands, </span>Woodforest</p></div>
+                        <p class="twmc-p connect25--content-text connect25-cardsm-excerpt">Our church provides financial assistance to families in crisis in our congregation and in the surrounding South Montg... <span class="text-traditional"><strong style="color: #862633">&rarr;</strong></span></p>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
