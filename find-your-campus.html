@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Campus — The Woodlands Methodist</title>
+
+    <!-- ============================================================= -->
+    <!--  FONTS + ICONS                                                -->
+    <!--  On the live Rock RMS site these are already loaded globally; -->
+    <!--  keep them here only for standalone / local preview.          -->
+    <!-- ============================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome (production site uses kit 85947205a9) -->
+    <script src="https://kit.fontawesome.com/85947205a9.js" crossorigin="anonymous"></script>
+
+    <!-- ============================================================= -->
+    <!--  CAMPUS SECTION STYLES — self-contained, namespaced .tw26-campus
+         Tokens are scoped to the wrapper so this renders correctly even
+         without the site's theme.css, and never leaks into other CSS.  -->
+    <!-- ============================================================= -->
+    <style>
+      .tw26-campus {
+        /* scoped brand tokens */
+        --maroon: #6e3140;
+        --maroon-dark: #52242f;
+        --gold: #c5a258;
+        --gold-light: #d4b87a;
+        --cream: #faf8f5;
+        --warm-white: #ffffff;
+        --warm-gray: #f5f3f0;
+        --warm-gray-2: #eae7e3;
+        --dark: #1a1a1a;
+        --text-body: #555555;
+        --text-muted: #767676;
+        --border-light: #e8e5e1;
+        --radius: 16px;
+        --radius-lg: 24px;
+        --radius-pill: 999px;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+        --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.06);
+        --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 16px 40px rgba(0, 0, 0, 0.1);
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --duration-normal: 0.3s;
+        --duration-slow: 0.5s;
+
+        padding: 96px 0;
+        background: var(--warm-white);
+        font-family: var(--font-body);
+        color: var(--text-body);
+      }
+      .tw26-campus *,
+      .tw26-campus *::before,
+      .tw26-campus *::after {
+        box-sizing: border-box;
+      }
+      .tw26-campus__container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* ---- header ---- */
+      .tw26-campus__head {
+        max-width: 760px;
+        margin-bottom: 44px;
+      }
+      .tw26-campus__title {
+        font-family: var(--font-display);
+        font-weight: 700;
+        color: var(--dark);
+        font-size: clamp(26px, 3.24vw, 39px);
+        line-height: 1.12;
+        letter-spacing: -0.3px;
+        margin: 0;
+      }
+      .tw26-campus__title em {
+        font-style: italic;
+        color: var(--maroon);
+      }
+      .tw26-campus__intro {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text-body);
+        margin: 10px 0 0;
+      }
+
+      /* ---- service line ---- */
+      .tw26-campus__service {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .tw26-campus__service-style {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .tw26-campus__service-time {
+        font-size: 13px;
+      }
+
+      /* ---- tab bar ---- */
+      .tw26-campus__tabbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 26px;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 18px;
+      }
+      .tw26-campus__tab {
+        flex: 1 1 auto;
+        min-width: 120px;
+        padding: 13px 18px;
+        border-radius: var(--radius-pill);
+        border: 1.5px solid var(--border-light);
+        background: var(--warm-white);
+        color: var(--text-body);
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--duration-normal) var(--ease-out);
+      }
+      .tw26-campus__tab:hover {
+        border-color: var(--maroon);
+        color: var(--maroon);
+      }
+      .tw26-campus__tab.is-active {
+        background: var(--maroon);
+        border-color: var(--maroon);
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(110, 49, 64, 0.22);
+      }
+
+      /* ---- panel ---- */
+      .tw26-campus__panel {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        background: var(--warm-white);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+        animation: tw26PanelIn 0.5s var(--ease-out);
+      }
+      .tw26-campus__panel[hidden] {
+        display: none;
+      }
+      @keyframes tw26PanelIn {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .tw26-campus__media {
+        position: relative;
+        min-height: 420px;
+        background: linear-gradient(160deg, var(--warm-gray), var(--warm-gray-2));
+      }
+      .tw26-campus__media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .tw26-campus__tags {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        z-index: 2;
+      }
+      .tw26-campus__tag {
+        padding: 6px 14px;
+        border-radius: var(--radius-pill);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--maroon);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+      }
+      .tw26-campus__info {
+        padding: 44px 44px 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .tw26-campus__name {
+        font-family: var(--font-display);
+        font-size: clamp(28px, 3vw, 38px);
+        font-weight: 700;
+        color: var(--dark);
+        margin: 0 0 14px;
+        line-height: 1.12;
+      }
+      .tw26-campus__blurb {
+        font-size: 15.5px;
+        line-height: 1.7;
+        color: var(--text-body);
+        margin: 0 0 20px;
+      }
+      .tw26-campus__addr {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin: 0 0 24px;
+        display: flex;
+        gap: 8px;
+      }
+      .tw26-campus__addr i {
+        color: var(--maroon);
+        margin-top: 3px;
+      }
+      .tw26-campus__services {
+        background: var(--cream);
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius);
+        padding: 20px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 26px;
+      }
+      .tw26-campus__services-label {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: var(--maroon);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .tw26-campus__services .tw26-campus__service {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 14px;
+      }
+      .tw26-campus__services .tw26-campus__service-style {
+        color: var(--dark);
+      }
+      .tw26-campus__services .tw26-campus__service-time {
+        color: var(--text-body);
+        font-weight: 500;
+        text-align: right;
+      }
+      .tw26-campus__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: auto;
+      }
+
+      /* ---- buttons ---- */
+      .tw26-campus__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        border-radius: var(--radius-pill);
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1.5px solid transparent;
+        transition: all var(--duration-normal) var(--ease-out);
+      }
+      .tw26-campus__btn--primary {
+        background: var(--maroon);
+        color: #fff;
+      }
+      .tw26-campus__btn--primary:hover {
+        background: var(--maroon-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(110, 49, 64, 0.25);
+        color: #fff;
+      }
+      .tw26-campus__btn--outline {
+        background: transparent;
+        color: var(--maroon);
+        border-color: var(--border-light);
+      }
+      .tw26-campus__btn--outline:hover {
+        border-color: var(--maroon);
+        background: var(--maroon);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      /* ---- footer link ---- */
+      .tw26-campus__foot {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* ---- responsive ---- */
+      @media (max-width: 767px) {
+        .tw26-campus {
+          padding: 60px 0;
+        }
+        .tw26-campus__panel {
+          grid-template-columns: 1fr;
+        }
+        .tw26-campus__media {
+          min-height: 260px;
+        }
+        .tw26-campus__info {
+          padding: 30px 24px;
+        }
+        .tw26-campus__tab {
+          flex: 1 1 40%;
+        }
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; background: #faf8f5">
+    <!-- ============================================================= -->
+    <!--  ▼▼▼  COPY FROM HERE INTO YOUR ROCK RMS HTML BLOCK  ▼▼▼        -->
+    <!--  (include the <style> block above as well)                    -->
+    <!-- ============================================================= -->
+    <section class="tw26-campus" id="campuses">
+      <div class="tw26-campus__container">
+        <div class="tw26-campus__head">
+          <h2 class="tw26-campus__title">Find your campus, <em>near you</em></h2>
+          <p class="tw26-campus__intro">
+            The Woodlands Methodist Church gathers across campuses throughout
+            Montgomery County — each with its own personality, and all part of one
+            family. Wherever you are, there's a place for you this Sunday.
+          </p>
+        </div>
+
+        <!-- TAB BAR -->
+        <div class="tw26-campus__tabbar" role="tablist">
+          <button class="tw26-campus__tab is-active" role="tab" aria-selected="true" data-campus="woodlands">Woodlands</button>
+          <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="woodforest">Woodforest</button>
+          <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="montgomery">Montgomery</button>
+          <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="creekside">Creekside</button>
+          <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="espanol">Español</button>
+        </div>
+
+        <!-- PANELS (one per campus; inactive ones are [hidden]) -->
+
+        <!-- The Woodlands -->
+        <div class="tw26-campus__panel" data-campus="woodlands">
+          <div class="tw26-campus__media">
+            <img
+              src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodlands.jpg"
+              alt="The Woodlands campus"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="tw26-campus__tags">
+              <span class="tw26-campus__tag">Traditional</span>
+              <span class="tw26-campus__tag">Harvest</span>
+              <span class="tw26-campus__tag">Loft</span>
+              <span class="tw26-campus__tag">Chapel</span>
+            </div>
+          </div>
+          <div class="tw26-campus__info">
+            <h3 class="tw26-campus__name">The Woodlands</h3>
+            <p class="tw26-campus__blurb">Four distinct worship styles under one roof — find the one that feels like home.</p>
+            <p class="tw26-campus__addr"><i class="fa-solid fa-location-dot"></i> 2200 Lake Woodlands Drive, The Woodlands, TX 77380</p>
+            <div class="tw26-campus__services">
+              <div class="tw26-campus__services-label"><i class="fa-regular fa-clock"></i> Service Times</div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Traditional</span><span class="tw26-campus__service-time">Sundays · 9:30 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Harvest</span><span class="tw26-campus__service-time">Sundays · 9:00 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Loft</span><span class="tw26-campus__service-time">Sundays · 9:30 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Chapel</span><span class="tw26-campus__service-time">Sundays · 8:00 a.m.</span></div>
+            </div>
+            <div class="tw26-campus__actions">
+              <a class="tw26-campus__btn tw26-campus__btn--primary" href="/times-locations">Plan a Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="tw26-campus__btn tw26-campus__btn--outline" href="https://maps.google.com/?q=2200+Lake+Woodlands+Drive+The+Woodlands+TX+77380" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Woodforest -->
+        <div class="tw26-campus__panel" data-campus="woodforest" hidden>
+          <div class="tw26-campus__media">
+            <img
+              src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Woodforest.jpg"
+              alt="Woodforest campus"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="tw26-campus__tags">
+              <span class="tw26-campus__tag">Family Worship</span>
+            </div>
+          </div>
+          <div class="tw26-campus__info">
+            <h3 class="tw26-campus__name">Woodforest</h3>
+            <p class="tw26-campus__blurb">A growing family worship community on the west side of Lake Conroe.</p>
+            <p class="tw26-campus__addr"><i class="fa-solid fa-location-dot"></i> 700 Fish Creek Thoroughfare, Montgomery, TX 77316</p>
+            <div class="tw26-campus__services">
+              <div class="tw26-campus__services-label"><i class="fa-regular fa-clock"></i> Service Times</div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Family Worship</span><span class="tw26-campus__service-time">Sundays · 9:00 &amp; 11:00 a.m.</span></div>
+            </div>
+            <div class="tw26-campus__actions">
+              <a class="tw26-campus__btn tw26-campus__btn--primary" href="/woodforest">Plan a Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="tw26-campus__btn tw26-campus__btn--outline" href="https://maps.google.com/?q=700+Fish+Creek+Thoroughfare+Montgomery+TX+77316" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Montgomery -->
+        <div class="tw26-campus__panel" data-campus="montgomery" hidden>
+          <div class="tw26-campus__media">
+            <img
+              src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Montgomery.jpg"
+              alt="Montgomery campus"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="tw26-campus__tags">
+              <span class="tw26-campus__tag">Contemporary</span>
+            </div>
+          </div>
+          <div class="tw26-campus__info">
+            <h3 class="tw26-campus__name">Montgomery</h3>
+            <p class="tw26-campus__blurb">A contemporary congregation gathering in the heart of Montgomery.</p>
+            <p class="tw26-campus__addr"><i class="fa-solid fa-location-dot"></i> Oak Hills Junior High · Montgomery, TX</p>
+            <div class="tw26-campus__services">
+              <div class="tw26-campus__services-label"><i class="fa-regular fa-clock"></i> Service Times</div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Contemporary Worship</span><span class="tw26-campus__service-time">Sundays · 10:30 a.m.</span></div>
+            </div>
+            <div class="tw26-campus__actions">
+              <a class="tw26-campus__btn tw26-campus__btn--primary" href="/montgomery">Plan a Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="tw26-campus__btn tw26-campus__btn--outline" href="https://maps.google.com/?q=Oak+Hills+Junior+High+Montgomery+TX" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Covenant at Creekside -->
+        <div class="tw26-campus__panel" data-campus="creekside" hidden>
+          <div class="tw26-campus__media">
+            <img
+              src="https://s3.us-east-2.amazonaws.com/rockrms-assets/twms-images/campuses-bg/optimized_campus_iamges/Creekside.jpg"
+              alt="Covenant at Creekside campus"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="tw26-campus__tags">
+              <span class="tw26-campus__tag">English</span>
+              <span class="tw26-campus__tag">Español</span>
+            </div>
+          </div>
+          <div class="tw26-campus__info">
+            <h3 class="tw26-campus__name">Covenant at Creekside</h3>
+            <p class="tw26-campus__blurb">A bilingual, intergenerational neighborhood church where everyone belongs.</p>
+            <p class="tw26-campus__addr"><i class="fa-solid fa-location-dot"></i> 8555 Creekside Green Drive, The Woodlands, TX 77389</p>
+            <div class="tw26-campus__services">
+              <div class="tw26-campus__services-label"><i class="fa-regular fa-clock"></i> Service Times</div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">English Worship</span><span class="tw26-campus__service-time">Sundays · 9:00 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Adoración Español</span><span class="tw26-campus__service-time">Domingos · 1:00 p.m.</span></div>
+            </div>
+            <div class="tw26-campus__actions">
+              <a class="tw26-campus__btn tw26-campus__btn--primary" href="/creekside">Plan a Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="tw26-campus__btn tw26-campus__btn--outline" href="https://maps.google.com/?q=8555+Creekside+Green+Drive+The+Woodlands+TX+77389" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Español -->
+        <div class="tw26-campus__panel" data-campus="espanol" hidden>
+          <div class="tw26-campus__media">
+            <img
+              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg"
+              alt="Español"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="tw26-campus__tags">
+              <span class="tw26-campus__tag">Español</span>
+            </div>
+          </div>
+          <div class="tw26-campus__info">
+            <h3 class="tw26-campus__name">Español</h3>
+            <p class="tw26-campus__blurb">Una comunidad vibrante de fe que adora en español cada domingo.</p>
+            <p class="tw26-campus__addr"><i class="fa-solid fa-location-dot"></i> Recreation Center · 2200 Lake Woodlands Drive</p>
+            <div class="tw26-campus__services">
+              <div class="tw26-campus__services-label"><i class="fa-regular fa-clock"></i> Service Times</div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Adoración Español</span><span class="tw26-campus__service-time">Domingos · 10:00 a.m.</span></div>
+            </div>
+            <div class="tw26-campus__actions">
+              <a class="tw26-campus__btn tw26-campus__btn--primary" href="/espanol">Plan a Visit <i class="fa-solid fa-arrow-right"></i></a>
+              <a class="tw26-campus__btn tw26-campus__btn--outline" href="https://maps.google.com/?q=2200+Lake+Woodlands+Drive+The+Woodlands+TX+77380" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Get Directions</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tw26-campus__foot">
+          <a class="tw26-campus__btn tw26-campus__btn--outline" href="/times-locations">See All Times &amp; Locations <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab-switching script (vanilla, no dependencies) -->
+    <script>
+      (function () {
+        var root = document.getElementById("campuses");
+        if (!root) return;
+        var tabs = root.querySelectorAll(".tw26-campus__tab");
+        var panels = root.querySelectorAll(".tw26-campus__panel");
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            var key = tab.getAttribute("data-campus");
+            tabs.forEach(function (t) {
+              var on = t === tab;
+              t.classList.toggle("is-active", on);
+              t.setAttribute("aria-selected", on ? "true" : "false");
+            });
+            panels.forEach(function (p) {
+              p.hidden = p.getAttribute("data-campus") !== key;
+            });
+          });
+        });
+      })();
+    </script>
+    <!-- ============================================================= -->
+    <!--  ▲▲▲  COPY TO HERE  ▲▲▲                                        -->
+    <!-- ============================================================= -->
+  </body>
+</html>

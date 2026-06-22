@@ -386,8 +386,9 @@
     <section class="margin-below-navbar"></section>
 
     <main>
-      <!-- HARVEST HERO BLOCK -->
-      <style>
+      <!-- CURRENT HARVEST HERO BLOCK (disabled; remove the template wrapper to restore) -->
+      <template data-disabled-block="harvest-hero">
+        <style>
         /* ===== START CUSTOM CSS: HARVEST HERO BLOCK ===== */
         .hero--video-section.harvest-hero,
         .hero--video-section.harvest-hero > video,
@@ -437,30 +438,235 @@
           }
         }
         /* ===== END CUSTOM CSS: HARVEST HERO BLOCK ===== */
-      </style>
-      <section class="hero--video-section harvest-hero">
-        <video
-          playsinline="playsinline"
-          autoplay="autoplay"
-          muted="muted"
-          loop="loop"
-          poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/FND_TextOverlay_BKG2.png"
-        >
-          <source
-            src="https://player.vimeo.com/progressive_redirect/playback/1184955692/rendition/720p/file.mp4%20%28720p%29.mp4?loc=external&amp;signature=77ffdc605f222accf2a247b6b6e243b467121c37921f498e32cd62f4f6d88515"
-            type="video/mp4"
-          />
-        </video>
+        </style>
 
-        <div class="container hero--video__text-wrapper">
-          <img
-            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png"
-            alt="Church doesn't just happen on Sunday. Your church, every day of the week."
-            class="img-responsive"
-          />
+        <section class="hero--video-section harvest-hero">
+          <video
+            playsinline="playsinline"
+            autoplay="autoplay"
+            muted="muted"
+            loop="loop"
+            poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/FND_TextOverlay_BKG2.png"
+          >
+            <source
+              src="https://player.vimeo.com/progressive_redirect/playback/1184955692/rendition/720p/file.mp4%20%28720p%29.mp4?loc=external&amp;signature=77ffdc605f222accf2a247b6b6e243b467121c37921f498e32cd62f4f6d88515"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="container hero--video__text-wrapper">
+            <img
+              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Headline_Web_ChurchEverday800.png"
+              alt="Church doesn't just happen on Sunday. Your church, every day of the week."
+              class="img-responsive"
+            />
+          </div>
+        </section>
+      </template>
+      <!-- END CURRENT HARVEST HERO BLOCK -->
+
+      <!-- ===== START COPY/PASTE: HARVEST VOLUNTEER HERO ===== -->
+      <section class="chero" aria-labelledby="harvest-volunteer-title">
+        <style>
+          /* All styles are scoped to this hero for safe use in Rock RMS. */
+          .chero {
+            --harvest-maroon: #862633;
+            --harvest-button: #c05131;
+            --harvest-button-hover: #9f4028;
+            --harvest-cream: #faf8f5;
+            position: relative;
+            overflow: hidden;
+            background: var(--harvest-cream);
+          }
+
+          .chero .chero__inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: clamp(2rem, 5vw, 5rem);
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: clamp(5.1rem, 10.2vw, 9.35rem) 24px;
+          }
+
+          .chero .chero__text {
+            flex: 1 1 44%;
+          }
+
+          .chero .chero__title {
+            margin: 0 0 1.2rem;
+            color: #1a1a1a;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.3rem);
+            font-weight: 800;
+            line-height: 1.08;
+            text-wrap: balance;
+          }
+
+          .chero .chero__title em {
+            color: var(--harvest-button);
+            font-style: italic;
+          }
+
+          .chero .chero__body {
+            max-width: 31rem;
+            margin: 0 0 1.9rem;
+            color: #4a4a4a;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.08rem;
+            line-height: 1.65;
+          }
+
+          .chero .twmc--btn {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            cursor: pointer;
+          }
+
+          .chero a.twmc--btn--traditional,
+          .chero a.twmc--btn--traditional:visited {
+            border: 2px solid var(--harvest-button);
+            background-color: var(--harvest-button);
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+          }
+
+          .chero a.twmc--btn--traditional:hover,
+          .chero a.twmc--btn--traditional:focus,
+          .chero a.twmc--btn--traditional:active {
+            border-color: var(--harvest-button-hover);
+            background-color: var(--harvest-button-hover);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: none;
+            transform: scale(1.05);
+          }
+
+          .chero a.twmc--btn--traditional:focus-visible {
+            outline: 3px solid #c5a258;
+            outline-offset: 4px;
+            box-shadow: none;
+          }
+
+          .chero .chero__media {
+            position: relative;
+            display: flex;
+            flex: 1 1 56%;
+            justify-content: center;
+          }
+
+          .chero .vframe {
+            position: relative;
+            width: min(560px, 100%);
+            aspect-ratio: 16 / 9;
+          }
+
+          .chero .vframe__box {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #000;
+            box-shadow: 0 24px 60px rgba(82, 36, 47, 0.28);
+          }
+
+          .chero .vframe__box iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+          }
+
+          .chero::before {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            right: -8%;
+            width: 760px;
+            height: 760px;
+            background: radial-gradient(
+              circle,
+              rgba(197, 162, 88, 0.34) 0%,
+              rgba(197, 162, 88, 0.12) 38%,
+              rgba(197, 162, 88, 0) 68%
+            );
+            content: "";
+            pointer-events: none;
+            transform: translateY(-50%);
+          }
+
+          @media only screen and (max-width: 860px) {
+            .chero .chero__inner {
+              flex-direction: column;
+              text-align: center;
+            }
+
+            .chero .chero__text {
+              order: 2;
+            }
+
+            .chero .chero__media {
+              order: 1;
+              width: 100%;
+            }
+
+            .chero .vframe {
+              width: 100%;
+            }
+
+            .chero .chero__body {
+              margin-right: auto;
+              margin-left: auto;
+            }
+          }
+        </style>
+
+        <div class="chero__inner">
+          <div class="chero__text">
+            <h1 id="harvest-volunteer-title" class="chero__title">
+              Better together at <em>Harvest.</em>
+            </h1>
+            <p class="chero__body">
+              As we come together in one location this season, we need friendly
+              faces to help welcome everyone — greeters, new member hosts, and a
+              warm welcome at our Connection Point.
+            </p>
+            <a
+              href="https://thewoodlandsmethodist.org/volunteersignup?OpportunityId=25"
+              class="twmc--btn twmc--btn--traditional"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sign Up to Volunteer &rarr;
+            </a>
+          </div>
+
+          <div class="chero__media">
+            <div class="vframe">
+              <div class="vframe__box">
+                <iframe
+                  src="https://player.vimeo.com/video/1202518491?title=0&amp;byline=0&amp;portrait=0"
+                  title="Harvest volunteer opportunities"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- END HARVEST HERO BLOCK -->
+      <!-- ===== END COPY/PASTE: HARVEST VOLUNTEER HERO ===== -->
 
       <!-- WHAT TO EXPECT BLOCK -->
       <style>
