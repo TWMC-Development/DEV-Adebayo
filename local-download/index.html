@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Times & Locations | The Woodlands Methodist Church</title>
+
+  <!-- Fonts (retained from current TWMC site: Open Sans + Montserrat) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Strictly Bootstrap 3 — TWMC's own live production build (v1.1.70) -->
+  <link rel="stylesheet" href="css/bootstrap-v1.1.70.css">
+
+  <!-- TWMC 2026 design-system brand layer -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/seasonal.css">
+
+  <!-- Font Awesome 6 (free) via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       CUSTOM CSS  (the only hand-written styles on this page)
+       Every rule here exists to RETAIN a current-site element.
+       ============================================================ */
+
+    /* Retained maroon (#862633) */
+    :root {
+      --maroon: #862633;
+      --maroon-hover: #5e1b24;
+      --maroon-dark: #5e1b24;
+      --maroon-light: #a03442;
+    }
+
+    /* Retained typography */
+    body { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.7; color: #6e6259; background: #ffffff; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    .section-label { font-family: 'Montserrat', sans-serif; }
+    .section-label::before { display: none; }
+
+    /* Page header: full-bleed maroon bar */
+    .page-title-bar { background: var(--maroon); padding: 32px 0; text-align: center; }
+    .page-title { font-size: clamp(2rem, 4vw, 2.75rem); color: #ffffff; margin: 0; }
+    .page-title em { font-style: italic; color: #ffffff; }
+
+    /* Campus cards */
+    .campus-card { background: #fff; border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card); margin-bottom: 24px; }
+    .campus-card:hover { border-color: var(--border-light); box-shadow: var(--shadow-card); }
+    .campus-body { padding: 40px; }
+    @media (max-width: 768px) { .campus-body { padding: 24px; } }
+    .campus-head { padding: 18px 24px; text-align: center; background: var(--warm-gray); }
+    .campus-title { font-size: 1.3rem; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin: 0; }
+    .campus-rule { height: 3px; background: var(--maroon); }
+
+    /* Service listings */
+    .svc-group { margin-bottom: 1.75rem; }
+    .svc-list { margin: 0; padding: 0; list-style: none; }
+    .svc-list li { display: flex; align-items: flex-start; gap: 10px; font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 16px; line-height: 1.55; color: #333333; margin-bottom: .35rem; }
+    .svc-list li:last-child { margin-bottom: 0; }
+    .svc-list i { color: var(--maroon); font-size: .85rem; margin-top: .3rem; flex-shrink: 0; }
+    .svc-sep { color: var(--gold); font-weight: 600; padding: 0 2px; }
+
+    /* Map buttons: retained radius (.25rem), uppercase, maroon fill */
+    .map-btn { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 600; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; line-height: 1.5; padding: 10px 18px; border-radius: .25rem; background: var(--maroon); color: #fff; text-decoration: none; transition: background .3s, transform .3s; }
+    .map-btn:hover { background: var(--maroon-dark); color: #fff; text-decoration: none; transform: translateY(-2px); }
+    .map-btn:active { transform: translateY(0); }
+
+    /* Venue transition band: full-bleed layer behind the last two cards */
+    .venue-band { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; z-index: 0; line-height: 0; pointer-events: none; }
+    .venue-band img { position: relative; z-index: 1; width: 100%; height: auto; display: block; filter: contrast(1.05); }
+    .venue-band .band-fill {
+      position: absolute; inset: 0; z-index: 0;
+      background: var(--maroon);
+      -webkit-mask-image: url('assets/images/WOR_VenueTransition_Background_2000x800.png');
+      mask-image: url('assets/images/WOR_VenueTransition_Background_2000x800.png');
+      -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Location bar -->
+  <div class="location-bar">
+    <a class="active" href="#">The Woodlands</a>
+    <a href="#">Woodforest</a>
+    <a href="#">Montgomery</a>
+    <a href="#">Creekside</a>
+    <a href="#">Español</a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar-twmc" id="navbar" style="background: #fff; border-bottom: 1px solid var(--border-light);">
+    <div class="container" style="display: flex; align-items: center; min-height: 72px;">
+      <a class="navbar-brand" href="#" style="display: flex; align-items: center; margin-right: 24px; padding: 0;">
+        <img src="assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church" style="height: 44px; width: auto;">
+      </a>
+      <div style="display: flex; align-items: center; margin-left: auto; gap: 16px;">
+        <nav class="hidden-xs hidden-sm" style="display: flex; align-items: center; gap: 4px;">
+          <a class="nav-link" href="#">Times &amp; Locations</a>
+          <a class="nav-link" href="#">Visit</a>
+          <a class="nav-link" href="#">Grow</a>
+          <a class="nav-link" href="#">Messages</a>
+          <a class="nav-link" href="#">Serve</a>
+          <a class="nav-link" href="#">Give</a>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <a class="btn btn-primary btn-login hidden-xs hidden-sm" href="#" style="display: inline-flex; align-items: center;">Login</a>
+          <button class="mega-trigger" type="button" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section class="page-title-bar">
+    <div class="container">
+      <h1 class="page-title">Service Times <em>and Locations</em></h1>
+    </div>
+  </section>
+
+  <!-- Campus cards -->
+  <section style="padding: 32px 0 110px; background: transparent; position: relative; z-index: 1;">
+    <div class="container" style="position: relative; z-index: 1; max-width: 1080px;">
+
+      <!-- The Woodlands -->
+      <div class="campus-card">
+        <div class="campus-head"><h2 class="campus-title">The Woodlands Campus</h2></div>
+        <div class="campus-rule"></div>
+        <div class="campus-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="svc-group">
+                <div class="section-label">Traditional Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 7:45 a.m. <span class="svc-sep">|</span> Robb Chapel</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Robb Chapel</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Sanctuary</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">Loft Modern Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:30 a.m. <span class="svc-sep">|</span> Loft Worship Center</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Loft Worship Center</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="svc-group">
+                <div class="section-label">Harvest Contemporary Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Sanctuary</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Harvest Worship Center</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">Adoración Español</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 10:00 a.m. <span class="svc-sep">|</span> Recreation Center</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">Chinese Fellowship Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Otterbein Room (Room B106)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-top: 24px; margin-top: 16px; border-top: 1px solid var(--border-light);">
+            <a href="#" class="map-btn">Main Building Map</a>
+            <a href="#" class="map-btn">FLC &amp; Recreation Map</a>
+            <a href="#" class="map-btn">The Loft Building Map</a>
+            <a href="#" class="map-btn">Parking Map</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Covenant Church at Creekside -->
+      <div class="campus-card">
+        <div class="campus-head"><h2 class="campus-title">Covenant Church at Creekside</h2></div>
+        <div class="campus-rule"></div>
+        <div class="campus-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="svc-group">
+                <div class="section-label">English Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Covenant Worship Center</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Covenant Worship Center</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="svc-group">
+                <div class="section-label">Adoración Español</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 1:00 p.m. <span class="svc-sep">|</span> Covenant Worship Center</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Woodforest + Montgomery -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="campus-card">
+            <div class="campus-head"><h2 class="campus-title">Woodforest Campus</h2></div>
+            <div class="campus-rule"></div>
+            <div class="campus-body">
+              <div class="svc-group">
+                <div class="section-label">Family Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Woodforest Worship Center</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 11:00 a.m. <span class="svc-sep">|</span> Woodforest Worship Center</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">Nursery (Birth – 2 Years)</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 and 11:00 a.m.</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">NextGen Kids (3 Years – 5th Grade)</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 and 11:00 a.m.</span></li>
+                </ul>
+              </div>
+              <div class="svc-group" style="margin-bottom: 0;">
+                <div class="section-label">Confirmation</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 12:30 – 1:45 p.m.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="campus-card">
+            <div class="campus-head"><h2 class="campus-title">Montgomery Campus</h2></div>
+            <div class="campus-rule"></div>
+            <div class="campus-body">
+              <div class="svc-group">
+                <div class="section-label">Contemporary Worship</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 10:30 a.m. <span class="svc-sep">|</span> Oak Hills Junior High</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">NextGen Kids (3 Years – 5th Grade)</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Sunday School</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 10:30 a.m. <span class="svc-sep">|</span> Children’s Church</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>1st Sundays <span class="svc-sep">|</span> 10:30 a.m. <span class="svc-sep">|</span> Family Worship</span></li>
+                </ul>
+              </div>
+              <div class="svc-group">
+                <div class="section-label">NextGen Students (6th – 12th Grade)</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m. <span class="svc-sep">|</span> Sunday School <span class="svc-sep">|</span> Oak Hills Middle School</span></li>
+                  <li><i class="fa-regular fa-clock"></i><span>Wednesdays <span class="svc-sep">|</span> 5:00 p.m. <span class="svc-sep">|</span> Moss &amp; Co</span></li>
+                </ul>
+              </div>
+              <div class="svc-group" style="margin-bottom: 0;">
+                <div class="section-label">Adult Discipleship Connect Class</div>
+                <ul class="svc-list">
+                  <li><i class="fa-regular fa-clock"></i><span>Sundays <span class="svc-sep">|</span> 9:00 a.m.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Venue transition band: full-bleed layer behind the last cards -->
+    <div class="venue-band">
+      <div class="band-fill"></div>
+      <div class="band-fill"></div>
+      <div class="band-fill"></div>
+      <img src="assets/images/WOR_VenueTransition_Background_2000x800.png" alt="The Woodlands Methodist Church worship venues">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/twumc-logo-fullcolor.png" alt="The Woodlands Methodist Church">
+          <p><i class="fa-solid fa-church" style="margin-right: 6px;"></i><a href="#">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
+          <p><i class="fa-solid fa-phone" style="margin-right: 6px;"></i><a href="#">(281) 297-5900</a></p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">What We Believe</a>
+          <a href="#">Facilities</a>
+          <a href="#">Employment</a>
+          <a href="#">Fireside Cafe</a>
+          <a href="#">Indoor Playgrounds</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Funerals &amp; Memorial Services</a>
+          <a href="#">Find Help &amp; Support</a>
+          <a href="#">Venues &amp; Bookings</a>
+          <a href="#">My Account</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 The Woodlands Methodist Church. All rights reserved.</span>
+        <div class="footer-gmc"><span>Member of the</span><img src="assets/images/GMC_logo.png" alt="Global Methodist Church"></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+/* ============================================
+   SEASONAL / THEMED PAGE OVERRIDES
+
+   Loads AFTER theme.css to override brand tokens
+   for seasonal campaigns and themed landing pages.
+
+   Usage: Add a season class to <body> and link this stylesheet.
+     <body class="season-summer">
+     <link rel="stylesheet" href="seasonal.css">
+
+   Available seasons:
+     .season-summer   — Summer Splash (aqua/cyan)
+     .season-easter   — Easter (teal/floral)
+     .season-christmas — Christmas (deep green/red)
+     .season-vbs      — VBS (vibrant/playful)
+
+   Campus color system (works with any season):
+     .campus-woodlands, .campus-woodforest,
+     .campus-montgomery, .campus-creekside, .campus-espanol
+   ============================================ */
+
+
+/* ============================================
+   1. SEASONAL COLOR TOKENS
+   Override brand tokens so ALL shared components
+   (buttons, links, focus rings) shift automatically.
+   ============================================ */
+
+/* --- Summer Splash --- */
+.season-summer {
+  --seasonal-primary: #007cc2;
+  --seasonal-primary-rgb: 0, 124, 194;
+  --seasonal-primary-hover: #006aa8;
+  --seasonal-primary-dark: #005a8f;
+  --seasonal-accent: #01B6DE;
+  --seasonal-accent-light: #e0f5fb;
+  --seasonal-bg: #f0faff;
+  --seasonal-hero-bg: #007cc2;
+
+  /* Override Bootstrap primary so .btn-primary goes seasonal */
+  --bs-primary: var(--seasonal-primary);
+  --bs-primary-rgb: var(--seasonal-primary-rgb);
+  --bs-link-color: var(--seasonal-primary);
+  --bs-link-hover-color: var(--seasonal-primary-hover);
+}
+.season-summer .btn-primary {
+  --bs-btn-bg: var(--seasonal-primary);
+  --bs-btn-border-color: var(--seasonal-primary);
+  --bs-btn-hover-bg: var(--seasonal-primary-hover);
+  --bs-btn-hover-border-color: var(--seasonal-primary-hover);
+  --bs-btn-active-bg: var(--seasonal-primary-dark);
+}
+.season-summer .section-label::before {
+  background: var(--seasonal-primary);
+}
+.season-summer .section-title em {
+  color: var(--seasonal-primary);
+}
+
+/* --- Easter --- */
+.season-easter {
+  --seasonal-primary: #2a7a6e;
+  --seasonal-primary-rgb: 42, 122, 110;
+  --seasonal-primary-hover: #1f6358;
+  --seasonal-primary-dark: #174d45;
+  --seasonal-accent: #c5a258;
+  --seasonal-accent-light: #f8f0e3;
+  --seasonal-bg: #f5faf9;
+  --seasonal-hero-bg: #1a5c52;
+
+  --bs-primary: var(--seasonal-primary);
+  --bs-primary-rgb: var(--seasonal-primary-rgb);
+  --bs-link-color: var(--seasonal-primary);
+  --bs-link-hover-color: var(--seasonal-primary-hover);
+}
+.season-easter .btn-primary {
+  --bs-btn-bg: var(--seasonal-primary);
+  --bs-btn-border-color: var(--seasonal-primary);
+  --bs-btn-hover-bg: var(--seasonal-primary-hover);
+  --bs-btn-hover-border-color: var(--seasonal-primary-hover);
+}
+
+/* --- Christmas --- */
+.season-christmas {
+  --seasonal-primary: #1a472a;
+  --seasonal-primary-rgb: 26, 71, 42;
+  --seasonal-primary-hover: #143a22;
+  --seasonal-primary-dark: #0e2d1a;
+  --seasonal-accent: #c41e3a;
+  --seasonal-accent-light: #fdf0f2;
+  --seasonal-bg: #f5f9f6;
+  --seasonal-hero-bg: #0e2d1a;
+
+  --bs-primary: var(--seasonal-primary);
+  --bs-primary-rgb: var(--seasonal-primary-rgb);
+  --bs-link-color: var(--seasonal-primary);
+  --bs-link-hover-color: var(--seasonal-primary-hover);
+}
+.season-christmas .btn-primary {
+  --bs-btn-bg: var(--seasonal-primary);
+  --bs-btn-border-color: var(--seasonal-primary);
+  --bs-btn-hover-bg: var(--seasonal-primary-hover);
+  --bs-btn-hover-border-color: var(--seasonal-primary-hover);
+}
+
+/* --- VBS --- */
+.season-vbs {
+  --seasonal-primary: #e85d26;
+  --seasonal-primary-rgb: 232, 93, 38;
+  --seasonal-primary-hover: #d04e1d;
+  --seasonal-primary-dark: #b84218;
+  --seasonal-accent: #ffc107;
+  --seasonal-accent-light: #fff8e1;
+  --seasonal-bg: #fff9f5;
+  --seasonal-hero-bg: #e85d26;
+
+  --bs-primary: var(--seasonal-primary);
+  --bs-primary-rgb: var(--seasonal-primary-rgb);
+  --bs-link-color: var(--seasonal-primary);
+  --bs-link-hover-color: var(--seasonal-primary-hover);
+}
+.season-vbs .btn-primary {
+  --bs-btn-bg: var(--seasonal-primary);
+  --bs-btn-border-color: var(--seasonal-primary);
+  --bs-btn-hover-bg: var(--seasonal-primary-hover);
+  --bs-btn-hover-border-color: var(--seasonal-primary-hover);
+}
+
+
+/* ============================================
+   2. CAMPUS COLOR SYSTEM
+   Per-campus accent colors for tags, buttons,
+   and highlights. Works with any season.
+   ============================================ */
+.campus-woodlands    { --campus-color: #ce457e; --campus-light: #fdf0f5; }
+.campus-woodforest   { --campus-color: #0095b1; --campus-light: #e6f6f9; }
+.campus-creekside    { --campus-color: #2a9d8f; --campus-light: #e8f5f3; }
+.campus-montgomery   { --campus-color: #331861; --campus-light: #f0ecf5; }
+.campus-espanol      { --campus-color: #b88f00; --campus-light: #fdf8e8; }
+
+
+/* ============================================
+   3. SEASONAL HERO
+   Extends .page-hero with seasonal colors.
+   ============================================ */
+[class*="season-"] .page-hero {
+  background-color: var(--seasonal-hero-bg);
+}
+[class*="season-"] .page-hero-overlay {
+  background: linear-gradient(180deg, transparent 40%, var(--seasonal-hero-bg) 100%);
+}
+
+/* Full-bleed seasonal hero (no breadcrumb, image-only) */
+.seasonal-hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--seasonal-hero-bg, var(--maroon));
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.seasonal-hero img {
+  max-width: 600px;
+  width: 80%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .seasonal-hero {
+    min-height: 350px;
+  }
+  .seasonal-hero img {
+    max-width: 300px;
+  }
+}
+
+
+/* ============================================
+   4. SEASONAL INTRO
+   Colored full-width intro block with white text.
+   ============================================ */
+.seasonal-intro {
+  background: var(--seasonal-primary);
+  color: #fff;
+  padding: 64px 0;
+  text-align: center;
+}
+.seasonal-intro h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 16px;
+}
+.seasonal-intro p {
+  font-family: var(--font-body);
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 680px;
+  margin: 0 auto 24px;
+}
+.seasonal-intro .highlight-box {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius);
+  padding: 16px 28px;
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+/* ============================================
+   5. ACTIVITY CARDS
+   Camp/event cards with campus tag, info grid,
+   slots counter, and registration button.
+   Built on .twmc-card patterns.
+   ============================================ */
+.activity-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-normal), box-shadow var(--duration-normal);
+}
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+/* Campus tag */
+.activity-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  background: var(--campus-light, var(--cream));
+  color: var(--campus-color, var(--maroon));
+  margin-bottom: 12px;
+}
+
+/* Card body */
+.activity-card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.activity-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--campus-color, var(--dark));
+  margin-bottom: 16px;
+}
+
+/* Info grid (age, time, cost) */
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.activity-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--text-body);
+}
+.activity-info-item i {
+  width: 18px;
+  text-align: center;
+  color: var(--campus-color, var(--text-muted));
+  font-size: 14px;
+}
+
+/* Description */
+.activity-card-body > p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-body);
+  flex: 1;
+}
+
+/* Card footer */
+.activity-card-footer {
+  padding: 0 24px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Slots counter */
+.activity-slots {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.activity-slots strong {
+  color: var(--campus-color, var(--dark));
+  font-weight: 700;
+}
+
+/* Campus-colored outline button */
+.btn-campus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--campus-color, var(--maroon));
+  background: transparent;
+  border: 1.5px solid var(--campus-color, var(--maroon));
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+.btn-campus:hover {
+  background: var(--campus-color, var(--maroon));
+  color: #fff;
+  transform: translateY(-1px);
+}
+.btn-campus:disabled,
+.btn-campus.btn-campus--closed {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-campus.btn-campus--waitlist {
+  border-style: dashed;
+}
+
+
+/* ============================================
+   6. CAMPUS SECTION HEADERS
+   Full-width colored section divider per campus.
+   ============================================ */
+.campus-section-header {
+  background: var(--campus-color, var(--maroon));
+  padding: 40px 0;
+  text-align: center;
+}
+.campus-section-header h2 {
+  font-family: var(--font-display);
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.campus-section-header p {
+  font-family: var(--font-body);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  margin: 8px 0 0;
+}
+
+
+/* ============================================
+   7. SEASONAL BACKGROUND TREATMENTS
+   Full-page seasonal background color.
+   ============================================ */
+.seasonal-page-bg {
+  background: var(--seasonal-primary);
+}
+.seasonal-page-bg .activity-card {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.seasonal-page-bg .grow-section {
+  /* GROW section needs to stand out on colored background */
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ============================================
+   8. SUMMER WATER EFFECT
+   Floating rings (ripples) + soft gradient orbs.
+   Like looking down at a pool surface with light
+   playing through the water. Scoped to .seasonal-page-bg.
+   Pure CSS, no JS. Respects reduced motion.
+   ============================================ */
+.seasonal-page-bg {
+  position: relative;
+  overflow: hidden;
+}
+.seasonal-page-bg > *:not(.summer-fx) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Container for all effects */
+.summer-fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* --- Floating rings (ripple circles) --- */
+.summer-fx .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.15);
+  animation: ring-float ease-in-out infinite alternate;
+}
+.summer-fx .ring:nth-child(1)  { width: 180px; height: 180px; top: 5%;   left: 8%;   animation-duration: 18s; }
+.summer-fx .ring:nth-child(2)  { width: 120px; height: 120px; top: 20%;  right: 10%; animation-duration: 22s; animation-delay: 3s; }
+.summer-fx .ring:nth-child(3)  { width: 280px; height: 280px; top: 40%;  left: 55%;  animation-duration: 25s; animation-delay: 1s; }
+.summer-fx .ring:nth-child(4)  { width: 90px;  height: 90px;  top: 55%;  left: 20%;  animation-duration: 20s; animation-delay: 5s; }
+.summer-fx .ring:nth-child(5)  { width: 200px; height: 200px; top: 70%;  right: 15%; animation-duration: 24s; animation-delay: 2s; }
+.summer-fx .ring:nth-child(6)  { width: 150px; height: 150px; top: 12%;  left: 42%;  animation-duration: 21s; animation-delay: 4s; }
+.summer-fx .ring:nth-child(7)  { width: 220px; height: 220px; top: 85%;  left: 5%;   animation-duration: 26s; animation-delay: 6s; }
+
+@keyframes ring-float {
+  0%   { transform: translate(0, 0) scale(1);     opacity: 0.5; }
+  50%  { opacity: 1; }
+  100% { transform: translate(40px, -30px) scale(1.1); opacity: 0.5; }
+}
+
+/* --- Soft gradient orbs --- */
+.summer-fx .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: orb-drift ease-in-out infinite alternate;
+}
+.summer-fx .orb:nth-child(8)  { width: 400px; height: 400px; top: 3%;   left: -8%;  background: rgba(1,182,222,0.18);  animation-duration: 30s; }
+.summer-fx .orb:nth-child(9)  { width: 350px; height: 350px; top: 30%;  right: -10%; background: rgba(255,255,255,0.12); animation-duration: 25s; animation-delay: 4s; }
+.summer-fx .orb:nth-child(10) { width: 450px; height: 450px; top: 60%;  left: 25%;  background: rgba(1,182,222,0.15);  animation-duration: 35s; animation-delay: 2s; }
+.summer-fx .orb:nth-child(11) { width: 300px; height: 300px; top: 80%;  right: 10%; background: rgba(255,255,255,0.10); animation-duration: 28s; animation-delay: 7s; }
+
+@keyframes orb-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, -40px) scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summer-fx .ring,
+  .summer-fx .orb {
+    animation: none;
+  }
+}
+
+
+/* ============================================
+   9. RESPONSIVE
+   ============================================ */
+@media (max-width: 767.98px) {
+  .seasonal-intro {
+    padding: 48px 0;
+  }
+  .seasonal-intro .highlight-box {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  .activity-card-body { padding: 20px; }
+  .activity-card-footer { padding: 0 20px 20px; }
+  .campus-section-header { padding: 32px 0; }
+}
