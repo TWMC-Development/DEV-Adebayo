@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quest Spring 2026</title>
+    <title>Quest Fall 2026</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -485,7 +485,7 @@
       /* !!! The rest of the CSS is located in seasonal.css */
 
       /* FEATURE BANNER */
-      #twmc-featbanner--questfall25 {
+      #twmc-featbanner--questfall25.questfall26-option-b-page {
         background-color: #212125;
         background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_mens/MEN_Quest+-+Fall+2026_Background.png");
         text-align: left;
@@ -501,7 +501,7 @@
         color: #fff;
       }
 
-      .questfall25-hero--text-wrapper {
+      .questfall26-option-b-page .questfall25-hero--text-wrapper {
         width: 83.333333%;
         max-width: 1200px;
         height: 650px;
@@ -512,22 +512,22 @@
         z-index: 2;
       }
 
-      .questfall26-hero--art-column {
+      .questfall26-option-b-page .questfall26-hero--art-column {
         height: 100%;
         position: relative;
       }
 
-      .questfall26-hero--art-column:first-child {
+      .questfall26-option-b-page .questfall26-hero--art-column:first-child {
         flex: 0 0 55%;
         width: 55%;
       }
 
-      .questfall26-hero--art-column:last-child {
+      .questfall26-option-b-page .questfall26-hero--art-column:last-child {
         flex: 0 0 45%;
         width: 45%;
       }
 
-      .questfall26-hero--text {
+      .questfall26-option-b-page .questfall26-hero--text {
         width: auto;
         max-width: none;
         height: 91%;
@@ -538,7 +538,7 @@
         transform: translateX(-38.7%);
       }
 
-      .questfall26-hero--question-mark {
+      .questfall26-option-b-page .questfall26-hero--question-mark {
         width: auto;
         max-width: none;
         height: 100%;
@@ -552,51 +552,501 @@
       }
 
       @media only screen and (max-width: 992px) {
-        #twmc-featbanner--questfall25,
-        .questfall25-hero--text-wrapper {
+        #twmc-featbanner--questfall25.questfall26-option-b-page,
+        .questfall26-option-b-page .questfall25-hero--text-wrapper {
           height: 600px;
         }
       }
 
       @media only screen and (max-width: 768px) {
-        #twmc-featbanner--questfall25,
-        .questfall25-hero--text-wrapper {
+        #twmc-featbanner--questfall25.questfall26-option-b-page,
+        .questfall26-option-b-page .questfall25-hero--text-wrapper {
           height: 550px;
         }
 
-        .questfall25-hero--text-wrapper {
+        .questfall26-option-b-page .questfall25-hero--text-wrapper {
           width: 100%;
         }
       }
 
       @media only screen and (max-width: 576px) {
-        #twmc-featbanner--questfall25,
-        .questfall25-hero--text-wrapper {
-          height: 450px;
+        #twmc-featbanner--questfall25.questfall26-option-b-page,
+        .questfall26-option-b-page .questfall25-hero--text-wrapper {
+          height: 400px;
         }
 
-        .questfall26-hero--text {
-          height: 84%;
-          bottom: 8%;
+        .questfall26-option-b-page .questfall26-hero--text {
+          height: 65%;
+          bottom: 17.5%;
+        }
+
+        .questfall26-option-b-page .questfall26-hero--question-mark {
+          height: 88%;
+          bottom: 6%;
         }
       }
 
       @media only screen and (max-width: 400px) {
-        #twmc-featbanner--questfall25,
-        .questfall25-hero--text-wrapper {
-          height: 400px;
+        #twmc-featbanner--questfall25.questfall26-option-b-page,
+        .questfall26-option-b-page .questfall25-hero--text-wrapper {
+          height: 360px;
         }
       }
 
       /* END OF FEATURE BANNER */
 
-      .max-w1440 {
+      .questfall26-option-b-page .max-w1440 {
         max-width: 1440px;
+      }
+
+      /* ===== QUEST FALL 2026 BODY THEME ("What God Asked") ===== */
+      /* Palette from banner art: ink #16181d, charcoal #1e2126,
+         sky blue #4a9ac9, light blue #7dbde4, off-white #f2f5f7 */
+
+      /* Heading accent rule (brush-stroke stand-in) */
+      #twmc-quest2024--intro-schedule.questfall26-option-b-page .twmc-h1::after,
+      #twmc-quest2024--intro-schedule.questfall26-option-b-page
+        .twmc-h2::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        background: #4a9ac9;
+        margin: 16px auto 4px;
+      }
+      #twmc-questarchives.questfall26-option-b-page .twmc-h2::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        background: #4a9ac9;
+        margin: 14px 0 0;
+      }
+
+      /* Chips / tags */
+      .questfall26-option-b-page .questfall2024-tag--tan {
+        color: #d7ebf7;
+        background-color: rgba(74, 154, 201, 0.16);
+        border: 1px solid rgba(74, 154, 201, 0.45);
+        border-radius: 4px;
+        letter-spacing: 1.5px;
+        cursor: default;
+        padding: 0.32rem 0.75rem 0.22rem;
+      }
+
+      /* LATEST MESSAGES cards */
+      .questfall26-option-b-page .twmc-quest2024-ribbon-card--wrapper {
+        background-color: #fff;
+        border: 1px solid #e2e7ec;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 12px 32px rgba(22, 32, 42, 0.08);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .questfall26-option-b-page .twmc-quest2024-ribbon-card--wrapper:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(22, 32, 42, 0.12);
+      }
+      .questfall26-option-b-page .twmc-quest2024--ribbon {
+        background-color: #1e2126;
+      }
+      .questfall26-option-b-page
+        .twmc-quest2024-ribbon-card--inner-wrapper
+        .twmc-h4 {
+        color: #16181d;
+      }
+      .questfall26-option-b-page
+        .twmc-quest2024-ribbon-card--inner-wrapper
+        .twmc-p {
+        color: #5c6b77;
+      }
+
+      /* Primary button -> deep navy from the hero */
+      .questfall26-option-b-page .twmc--btn--quest2024 {
+        border-color: #12303f;
+        background-color: #12303f;
+        color: #f2f5f7;
+      }
+      .questfall26-option-b-page .twmc--btn--quest2024:hover,
+      .questfall26-option-b-page .twmc--btn--quest2024:focus {
+        border-color: #0b2029;
+        background-color: #0b2029;
+        color: #fff;
+      }
+
+      /* ARCHIVES: light blue fading to white, mountain range above the footer */
+      #twmc-questarchives.questfall26-option-b-page {
+        background: linear-gradient(to bottom, #cfe6f3, #ffffff 55%);
+        padding-bottom: 90px !important;
+        position: relative;
+        overflow: hidden;
+      }
+      #twmc-questarchives.questfall26-option-b-page > .container-fluid {
+        position: relative;
+        z-index: 2;
+      }
+      .questfall26-option-b-page .questfall26-archives--landscape {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 90px;
+        background-color: #17304f;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .questfall26-option-b-page .questfall26-archives--landscape::before {
+        content: "";
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        pointer-events: none;
+        background: linear-gradient(
+          to bottom,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0.82) 28%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      .questfall26-option-b-page .questfall26-archives--landscape img {
+        display: block;
+        width: 100%;
+        height: 420px;
+        max-width: none;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+      @media only screen and (max-width: 768px) {
+        #twmc-questarchives.questfall26-option-b-page {
+          padding-bottom: 60px !important;
+        }
+        .questfall26-option-b-page .questfall26-archives--landscape {
+          padding-bottom: 60px;
+        }
+        .questfall26-option-b-page .questfall26-archives--landscape::before {
+          height: 100px;
+        }
+        .questfall26-option-b-page .questfall26-archives--landscape img {
+          height: 260px;
+        }
+      }
+      .questfall26-option-b-page .questfall2024-text--light {
+        color: #16181d;
+      }
+      #twmc-questarchives.questfall26-option-b-page .panel-group .panel {
+        background-color: #ffffff;
+        border: 1px solid #dbe5ec;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(22, 32, 42, 0.05);
+      }
+      #twmc-questarchives.questfall26-option-b-page .panel-heading {
+        background-color: transparent;
+        border: none;
+      }
+      #twmc-questarchives.questfall26-option-b-page
+        .twmc-panel-title__text.faq-text-link--quest2024 {
+        color: #16181d;
+      }
+      #twmc-questarchives.questfall26-option-b-page
+        .twmc-panel-title__link:hover
+        .twmc-panel-title__text,
+      #twmc-questarchives.questfall26-option-b-page
+        .twmc-panel-title__link:focus
+        .twmc-panel-title__text {
+        color: #37789f;
+      }
+      #twmc-questarchives.questfall26-option-b-page .twmc-accordion-plus-minus {
+        color: #37789f;
+      }
+      #twmc-questarchives.questfall26-option-b-page .twmc-panel-body {
+        background-color: transparent;
+        border-top: 1px solid #e8ecf0;
+        color: #3d4852;
+      }
+      #twmc-questarchives.questfall26-option-b-page .twmc-panel-body .twmc-h4 {
+        color: #16181d;
+      }
+      #twmc-questarchives.questfall26-option-b-page .twmc-panel-body .twmc-p,
+      #twmc-questarchives.questfall26-option-b-page .twmc-panel-body li {
+        color: #3d4852;
+      }
+      #twmc-questarchives.questfall26-option-b-page .faq-text-link--quest2024 {
+        color: #37789f;
+      }
+      #twmc-questarchives.questfall26-option-b-page
+        .faq-text-link--quest2024:hover,
+      #twmc-questarchives.questfall26-option-b-page
+        .faq-text-link--quest2024:focus {
+        color: #2c637f;
+        text-decoration: underline;
+      }
+      #twmc-questarchives.questfall26-option-b-page
+        .questfall2024-text--archive,
+      #twmc-questarchives.questfall26-option-b-page .twmc-icon-wrapper1 {
+        color: #3d4852;
+      }
+
+      /* Modal */
+      .questfall26-option-b-page .twmc-modal-header-quest2024 {
+        background-color: #16181d;
+        color: #f2f5f7;
+        border-bottom: 3px solid #4a9ac9;
+      }
+      .questfall26-option-b-page .twmc-modal-body-quest2024 {
+        background-color: #ffffff;
+      }
+
+      /* ---- OPTION B: DARK DESCENT (light intro, dark schedule band) ---- */
+      #twmc-quest2024--intro-schedule.questfall26-option-b-page {
+        background: #ffffff;
+      }
+      #twmc-quest2024--intro-schedule.questfall26-option-b-page
+        .questfall2024-text--dark {
+        color: #16181d;
+      }
+      #twmc-quest2024--intro-schedule.questfall26-option-b-page .twmc-p {
+        color: #3d4852;
+      }
+
+      /* FALL 2026 schedule band: blue starts just below the heading */
+      #questfall26--schedule.questfall26-option-b-page {
+        background: linear-gradient(
+          to bottom,
+          #ffffff,
+          #ffffff 20%,
+          #cfe6f3 46%,
+          #cfe6f3 70%,
+          #ffffff 100%
+        );
+      }
+      #questfall26--schedule.questfall26-option-b-page
+        .questfall2024-text--dark {
+        color: #16181d;
+      }
+      #questfall26--schedule.questfall26-option-b-page .twmc-p {
+        color: #3d4852;
+      }
+      #questfall26--schedule.questfall26-option-b-page .twmc-h2::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        background: #4a9ac9;
+        margin: 16px auto 4px;
+      }
+
+      /* Scoped schedule layout (included here so Rock does not depend on a
+         particular cached version of seasonal.css) */
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2%;
+      }
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--flex-item {
+        flex: 0 0 49%;
+        overflow: visible;
+        margin-bottom: 20px;
+      }
+      #questfall26--schedule.questfall26-option-b-page .twmc-icon-wrapper2 {
+        display: inline-block;
+        width: 22px;
+        margin-right: 6px;
+        text-align: center;
+      }
+
+      /* Schedule cards: white, blue top rule */
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--card {
+        background-color: #ffffff;
+        border: 1px solid #e2e7ec;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(22, 32, 42, 0.08);
+        padding: 1.7rem 2rem;
+      }
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--card
+        .twmc-h4 {
+        color: #16181d;
+      }
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--card
+        .twmc-p,
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--card
+        .twmc-p
+        strong {
+        color: #2f3f4b;
+      }
+      #questfall26--schedule.questfall26-option-b-page
+        .twmc-questfall2024--card
+        .twmc-p
+        em {
+        color: #55707f;
+      }
+      #questfall26--schedule.questfall26-option-b-page .questfall2024-tag--tan {
+        display: inline-block;
+        color: #0f5c8c;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: center !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        background-color: #e3eff7;
+        border-color: #bcd9ec;
+      }
+
+      @media only screen and (max-width: 992px) {
+        #questfall26--schedule.questfall26-option-b-page
+          .twmc-questfall2024--flex-item {
+          flex-basis: 100%;
+        }
+      }
+
+      /* Outline button: blue on light intro */
+      .questfall26-option-b-page .twmc--btn--quest2024-outline {
+        border-color: #37789f;
+        color: #37789f;
+      }
+      .questfall26-option-b-page .twmc--btn--quest2024-outline:hover,
+      .questfall26-option-b-page .twmc--btn--quest2024-outline:focus {
+        border-color: #2c637f;
+        background-color: rgba(55, 120, 159, 0.08);
+        color: #2c637f;
+      }
+
+      /* Messages: white deepening into light blue */
+      #twmc-quest2024--serries.questfall26-option-b-page {
+        background: linear-gradient(
+          to bottom,
+          #ffffff,
+          #ffffff 35%,
+          #cfe6f3 100%
+        );
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .twmc-quest2024--flex3col-container {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .twmc-quest2024--flex3col-item {
+        width: auto !important;
+        min-width: 0;
+        max-width: none;
+        flex: none !important;
+        overflow: visible;
+        margin-bottom: 0;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .twmc-quest2024-ribbon-card--inner-wrapper {
+        padding: 1.5rem 1.5rem 1.9rem;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .twmc-quest2024--ribbon {
+        background-color: #1e2126;
+        background-size: cover;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page .embed-container {
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+        overflow: hidden;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .embed-container
+        iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .questfall26-messages--button-wrapper {
+        padding-top: 2rem;
+      }
+      #twmc-quest2024--serries.questfall26-option-b-page
+        .questfall26-messages--swipe-hint {
+        display: none;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-container {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-container {
+          display: flex !important;
+          justify-content: flex-start;
+          gap: 16px;
+          margin-right: -15px;
+          margin-left: -15px;
+          padding: 0 15px 16px;
+          overflow-x: auto;
+          overflow-y: hidden;
+          overscroll-behavior-x: contain;
+          scroll-padding-left: 15px;
+          scroll-snap-type: x mandatory;
+          scrollbar-color: #4a9ac9 rgba(74, 154, 201, 0.16);
+          scrollbar-width: thin;
+          -webkit-overflow-scrolling: touch;
+        }
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-container::-webkit-scrollbar {
+          height: 6px;
+        }
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-container::-webkit-scrollbar-track {
+          background: rgba(74, 154, 201, 0.16);
+          border-radius: 999px;
+        }
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-container::-webkit-scrollbar-thumb {
+          background: #4a9ac9;
+          border-radius: 999px;
+        }
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .twmc-quest2024--flex3col-item {
+          width: 84% !important;
+          flex: 0 0 84% !important;
+          scroll-snap-align: start;
+        }
+        #twmc-quest2024--serries.questfall26-option-b-page
+          .questfall26-messages--swipe-hint {
+          display: block;
+          margin: -1.5rem 0 1rem;
+          color: #5c6b77;
+          font-size: 0.8rem;
+          letter-spacing: 0.04em;
+          text-align: center;
+        }
       }
     </style>
 
     <!-- Feature Banner -->
-    <section id="twmc-featbanner--questfall25">
+    <section
+      id="twmc-featbanner--questfall25"
+      class="questfall26-option-b-page"
+    >
       <div class="questfall25-hero--text-wrapper">
         <div class="questfall26-hero--art-column">
           <img
@@ -620,7 +1070,10 @@
     <!-- Content -->
     <!-- Intro + Schedule -->
 
-    <section id="twmc-quest2024--intro-schedule" class="py-6">
+    <section
+      id="twmc-quest2024--intro-schedule"
+      class="py-6 questfall26-option-b-page"
+    >
       <div class="container-fluid max-w1440">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1 text-center">
@@ -645,7 +1098,7 @@
               href="#modalQuest"
               data-toggle="modal"
               data-target="#modalQuest"
-              class="twmc--btn twmc--btn--quest2024-outline twmc--btn--small mb-4"
+              class="twmc--btn twmc--btn--quest2024 mb-4"
               target="_blank"
               referrerpolicy="origin"
               >What to expect?</a
@@ -684,8 +1137,6 @@
                     </p>
                     <p class="twmc-p">
                       Quest meets on Sunday evenings and Tuesday mornings.
-                      Registration is only required for those participating via
-                      Zoom.
                     </p>
                   </div>
                 </div>
@@ -704,8 +1155,13 @@
           </div>
         </div> -->
         <!-- End of Video -->
+      </div>
+    </section>
 
-        <div class="row mt-4">
+    <!-- Fall 2026 Schedule -->
+    <section id="questfall26--schedule" class="py-6 questfall26-option-b-page">
+      <div class="container-fluid max-w1440">
+        <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
             <h2 class="twmc-h2 questfall2024-text--dark text-center">
               FALL 2026
@@ -798,9 +1254,7 @@
                 class="twmc-questfall2024--flex-item twmc-questfall2024--card"
               >
                 <h4 class="twmc-h4 mb-0">CREEKSIDE CAMPUS</h4>
-                <p class="twmc-p mb-3">
-                  Led by Travis Humphries
-                </p>
+                <p class="twmc-p mb-3">Led by Travis Humphries</p>
 
                 <p class="questfall2024-tag--tan mb-1">
                   Beginning September 22
@@ -827,246 +1281,73 @@
         </div>
       </div>
     </section>
-    <!-- End of Intro + Schedule -->
+    <!-- End of Fall 2026 Schedule -->
 
-    <!-- Latest Messages -->
-    <section id="twmc-quest2024--serries" class="pt-4 pb-6">
+    <!-- Latest Messages: Rock RMS Content Channel -->
+    <section
+      id="twmc-quest2024--serries"
+      class="py-6 questfall26-option-b-page"
+    >
       <div class="container-fluid max-w1440">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
             <h2 class="twmc-h2 questfall2024-text--dark text-center mb-5">
               LATEST MESSAGES
             </h2>
+            <p class="questfall26-messages--swipe-hint" aria-hidden="true">
+              Swipe to see more messages &rarr;
+            </p>
 
-            <!-- Flex -->
             <div class="twmc-quest2024--flex3col-container">
+              {% assign counter = 0 %} {% for item in Items reversed %} {% if
+              counter == 9 %} {% break %} {% endif %} {% assign formattedDate =
+              item.StartDateTime | Date:'MMMM dd, yyyy' %} {% assign Speaker =
+              item | Attribute:'Speaker' %} {% assign VideoID = item |
+              Attribute:'VideoID' %}
+
               <div
                 class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
               >
-                <div class="twmc-rquest2024--ribbon">
+                <div class="twmc-quest2024--ribbon">
                   <div class="twmc-quest2024--ribbon-inner">
+                    {% if VideoID %}
                     <div class="embed-container">
                       <iframe
-                        src="https://player.vimeo.com/video/903837925?"
+                        src="https://player.vimeo.com/video/{{ VideoID }}"
                         frameborder="0"
                         webkitallowfullscreen=""
                         mozallowfullscreen=""
                         allowfullscreen=""
+                        title="{{ item.Title }}"
                       ></iframe>
                     </div>
+                    {% endif %}
                   </div>
                 </div>
+
                 <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 8</h4>
+                  <h4 class="twmc-h4 mb-0">{{ item.Title }}</h4>
                   <p class="twmc-p text-small">
-                    March 24, 2026 &verbar; Pierce Drake
+                    {{ formattedDate }} &verbar; {{ Speaker }}
                   </p>
 
+                  {% if item.Content %}
+                  <div class="twmc-p">{{ item.Content }}</div>
+                  {% endif %}
                 </div>
               </div>
 
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 7</h4>
-                  <p class="twmc-p text-small">
-                    March 17, 2026 &verbar; Daniel Lumpee
-                  </p>
-
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 6</h4>
-                  <p class="twmc-p text-small">
-                    March 10, 2026 &verbar; Mark Sorensen
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 5</h4>
-                  <p class="twmc-p text-small">
-                    March 03, 2026 &verbar; Daniel Lumpee
-                  </p>
-
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 4</h4>
-                  <p class="twmc-p text-small">
-                    February 24, 2026 &verbar; Mark Swayze
-                  </p>
-
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 3</h4>
-                  <p class="twmc-p text-small">
-                    February 17, 2026 &verbar; Pierce Drake
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 2</h4>
-                  <p class="twmc-p text-small">
-                    February 10, 2026 &verbar; Pierce Drake
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">The Crown + The Cross: Week 1</h4>
-                  <p class="twmc-p text-small">
-                    February 03, 2026 &verbar; Daniel Lumpee
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="twmc-quest2024--flex3col-item twmc-quest2024-ribbon-card--wrapper"
-              >
-                <div class="twmc-rquest2024--ribbon">
-                  <div class="twmc-quest2024--ribbon-inner">
-                    <div class="embed-container">
-                      <iframe
-                        src="https://player.vimeo.com/video/903837925?"
-                        frameborder="0"
-                        webkitallowfullscreen=""
-                        mozallowfullscreen=""
-                        allowfullscreen=""
-                      ></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="twmc-quest2024-ribbon-card--inner-wrapper">
-                  <h4 class="twmc-h4 mb-0">Week 8</h4>
-                  <p class="twmc-p text-small">November 04, 2025</p>
-                </div>
-              </div>
+              {% assign counter = counter | Plus:1 %} {% endfor %}
             </div>
-            <!-- End of Flex -->
 
-            <div class="text-center mt-4">
+            <div class="text-center questfall26-messages--button-wrapper">
               <a
                 href="/messages/Mens-Events"
                 class="twmc--btn twmc--btn--quest2024"
                 target="_blank"
+                rel="noopener"
                 referrerpolicy="origin"
-                >Watch more messages</a
+                >Watch past messages</a
               >
             </div>
           </div>
@@ -1076,7 +1357,7 @@
     <!-- End of Latest Messages -->
 
     <!-- Archives -->
-    <section id="twmc-questarchives" class="py-6">
+    <section id="twmc-questarchives" class="py-6 questfall26-option-b-page">
       <div class="container-fluid max-w1440">
         <!-- NOTES FROM PAST SESSIONS -->
         <div class="row">
@@ -3386,6 +3667,12 @@
           </div>
         </div>
         <!-- END OF PAST EVENT RECORDINGS -->
+      </div>
+      <div class="questfall26-archives--landscape" aria-hidden="true">
+        <img
+          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_mens/blue-mountain-range-sihilouette.png"
+          alt=""
+        />
       </div>
     </section>
 
