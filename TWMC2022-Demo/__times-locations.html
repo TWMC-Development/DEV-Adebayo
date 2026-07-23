@@ -225,47 +225,6 @@
       transform: translateY(0);
     }
 
-    .times-locations-page .venue-band {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      z-index: 0;
-      line-height: 0;
-      pointer-events: none;
-    }
-
-    .times-locations-page .venue-band img {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: grayscale(1) brightness(0.82) contrast(1.24);
-    }
-
-    .times-locations-page .venue-band .band-fill {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      background: var(--maroon);
-    }
-
-    .times-locations-page .venue-band .band-fill:nth-child(1) {
-      clip-path: polygon(0 76%, 100% 0, 100% 3%, 0 79%);
-    }
-
-    .times-locations-page .venue-band .band-fill:nth-child(2) {
-      clip-path: polygon(0 79%, 100% 3%, 100% 100%, 0 100%);
-      opacity: 0.62;
-      mix-blend-mode: multiply;
-    }
-
-    .times-locations-page .venue-band .band-fill:nth-child(3) {
-      display: none;
-    }
-
     @media only screen and (max-width: 768px) {
       .times-locations-page .campus-body {
         padding: 24px;
@@ -929,47 +888,6 @@
           transform: translateY(-2px);
         }
 
-        .times-locations-page .venue-band {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          width: 100%;
-          z-index: 0;
-          line-height: 0;
-          pointer-events: none;
-        }
-
-        .times-locations-page .venue-band img {
-          position: relative;
-          z-index: 1;
-          width: 100%;
-          height: auto;
-          display: block;
-          filter: grayscale(1) brightness(0.82) contrast(1.24);
-        }
-
-        .times-locations-page .venue-band .band-fill {
-          position: absolute;
-          inset: 0;
-          z-index: 2;
-          background: var(--maroon);
-        }
-
-        .times-locations-page .venue-band .band-fill:nth-child(1) {
-          clip-path: polygon(0 76%, 100% 0, 100% 3%, 0 79%);
-        }
-
-        .times-locations-page .venue-band .band-fill:nth-child(2) {
-          clip-path: polygon(0 79%, 100% 3%, 100% 100%, 0 100%);
-          opacity: 0.62;
-          mix-blend-mode: multiply;
-        }
-
-        .times-locations-page .venue-band .band-fill:nth-child(3) {
-          display: none;
-        }
-
         @media only screen and (max-width: 768px) {
           .times-locations-page .campus-body {
             padding: 24px;
@@ -982,10 +900,6 @@
           }
         }
 
-        .py-5 {
-          padding-top: unset !important;
-          padding-bottom: unset !important;
-        }
       </style>
       <div class="times-locations-page">
         <!-- Campus cards -->
@@ -1458,17 +1372,6 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Venue transition band: full-bleed layer behind the last cards -->
-          <div class="venue-band">
-            <div class="band-fill"></div>
-            <div class="band-fill"></div>
-            <div class="band-fill"></div>
-            <img
-              src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_worship/WOR_VenueTransition_Background-updated_2000x800.png"
-              alt="The Woodlands Methodist Church worship venues"
-            />
           </div>
         </section>
       </div>
