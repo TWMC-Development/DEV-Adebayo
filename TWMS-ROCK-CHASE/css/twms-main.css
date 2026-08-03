@@ -1538,6 +1538,54 @@ a.twms__footer-link:focus {
 }
 /* +++++ END OF chess Hero +++++ */
 
+/* +++++ gardening Hero+++++ */
+#twms-gardening__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/children-planting-fresh-lettuce-seedlings.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-gardening__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF gardening Hero +++++ */
+
+/* +++++ choir Hero+++++ */
+#twms-choir__hero {
+  height: 450px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/side-view-kids-singing-together-sunday-school.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: right center;
+}
+
+@media only screen and (min-width: 992px) {
+  #twms-choir__hero {
+    height: 600px;
+  }
+}
+/* +++++ END OF choir Hero +++++ */
+
 /* +++++ studentlife Hero+++++ */
 #twms-studentlife__hero {
   height: 450px;

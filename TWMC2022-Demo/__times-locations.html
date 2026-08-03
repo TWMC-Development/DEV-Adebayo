@@ -125,7 +125,7 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow-card);
-      margin-bottom: 24px;
+      margin-bottom: 14px;
     }
 
     .times-locations-page .campus-card:hover {
@@ -160,8 +160,18 @@
       margin-bottom: 1.75rem;
     }
 
+    .times-locations-page .campus-pair {
+      margin-right: -7px;
+      margin-left: -7px;
+    }
+
+    .times-locations-page .campus-pair > .col-md-6 {
+      padding-right: 7px;
+      padding-left: 7px;
+    }
+
     .times-locations-page .svc-list {
-      margin: 0;
+      margin: 0 0 0 -12px;
       padding: 0;
       list-style: none;
     }
@@ -178,6 +188,14 @@
       margin-bottom: 0.35rem;
     }
 
+    .times-locations-page .svc-list li.align-items-center {
+      align-items: flex-start !important;
+    }
+
+    .times-locations-page .svc-list li.d-flex {
+      display: flex !important;
+    }
+
     .times-locations-page .svc-list li:last-child {
       margin-bottom: 0;
     }
@@ -185,7 +203,8 @@
     .times-locations-page .svc-list i {
       color: var(--maroon);
       font-size: 0.85rem;
-      margin-top: 0.3rem;
+      margin-top: 0.35rem !important;
+      margin-right: 0;
       flex-shrink: 0;
     }
 
@@ -788,7 +807,7 @@
           border-radius: 16px;
           overflow: hidden;
           box-shadow: var(--shadow-card);
-          margin-bottom: 24px;
+          margin-bottom: 14px;
         }
 
         .times-locations-page .campus-card:hover {
@@ -823,15 +842,25 @@
           margin-bottom: 1.75rem;
         }
 
+        .times-locations-page .campus-pair {
+          margin-right: -7px;
+          margin-left: -7px;
+        }
+
+        .times-locations-page .campus-pair > .col-md-6 {
+          padding-right: 7px;
+          padding-left: 7px;
+        }
+
         .times-locations-page .svc-list {
-          margin: 0;
+          margin: 0 0 0 -12px;
           padding: 0;
           list-style: none;
         }
 
         .times-locations-page .svc-list li {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           gap: 10px;
           font-family: "Open Sans", sans-serif;
           font-weight: 500;
@@ -841,6 +870,14 @@
           margin-bottom: 0.35rem;
         }
 
+        .times-locations-page .svc-list li.align-items-center {
+          align-items: flex-start !important;
+        }
+
+        .times-locations-page .svc-list li.d-flex {
+          display: flex !important;
+        }
+
         .times-locations-page .svc-list li:last-child {
           margin-bottom: 0;
         }
@@ -848,6 +885,8 @@
         .times-locations-page .svc-list i {
           color: var(--maroon);
           font-size: 0.85rem;
+          margin-top: 0.35rem !important;
+          margin-right: 0;
           flex-shrink: 0;
         }
 
@@ -899,7 +938,6 @@
             display: block !important;
           }
         }
-
       </style>
       <div class="times-locations-page">
         <!-- Campus cards -->
@@ -989,6 +1027,24 @@
                         </li>
                       </ul>
                     </div>
+                    <div class="svc-group">
+                      <div
+                        class="section-label text-traditional text-uppercase"
+                      >
+                        House Worship
+                      </div>
+                      <ul class="svc-list">
+                        <li class="d-flex align-items-center">
+                          <i
+                            class="far fa-clock fa-regular mt-0 flex-shrink-0"
+                          ></i
+                          ><span
+                            >Tuesdays <span class="svc-sep">|</span> 7:00 p.m.
+                            <span class="svc-sep">|</span> Robb Chapel</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="col-md-6">
                     <div class="svc-group">
@@ -1004,7 +1060,8 @@
                           ></i
                           ><span
                             >Sundays <span class="svc-sep">|</span> 9:00 a.m.
-                            <span class="svc-sep">|</span> Sanctuary</span
+                            <span class="svc-sep">|</span> Harvest Worship
+                            Center</span
                           >
                         </li>
                         <li class="d-flex align-items-center">
@@ -1163,7 +1220,7 @@
             </div>
 
             <!-- Woodforest + Montgomery -->
-            <div class="row d-flex align-items-stretch">
+            <div class="row campus-pair d-flex align-items-stretch">
               <div class="col-md-6 d-flex">
                 <div class="campus-card h-100 w-100">
                   <div class="campus-head">
