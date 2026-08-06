@@ -359,9 +359,9 @@
 
               <!-- Toggle nav -->
               <div class="nav-pills--twmctoggle2">
-                <ul class="nav nav-pills mt-4 nav-pills--twmctoggle2-ul">
-                  <li class="active"><a data-toggle="pill" href="#playgroundstoggle-tab1" class="twmc--btn--toggle-nav2">The Woodlands</a></li>
-                  <li><a data-toggle="pill" href="#playgroundstoggle-tab2" class="twmc--btn--toggle-nav2">Creekside</a></li>
+                <ul class="nav nav-pills mt-4 nav-pills--twmctoggle2-ul" role="tablist">
+                  <li class="active" role="presentation"><a id="playgrounds-tab1" data-toggle="pill" href="#playgroundstoggle-tab1" class="twmc--btn--toggle-nav2" role="tab" aria-controls="playgroundstoggle-tab1" aria-selected="true">The Woodlands</a></li>
+                  <li role="presentation"><a id="playgrounds-tab2" data-toggle="pill" href="#playgroundstoggle-tab2" class="twmc--btn--toggle-nav2" role="tab" aria-controls="playgroundstoggle-tab2" aria-selected="false">Creekside</a></li>
                 </ul>
               </div>
               <!-- End of toggle nav -->
@@ -372,73 +372,101 @@
                   width: 100%;
                   object-fit: cover;
                 }
+
+                .playgrounds-treehouse-banner {
+                  align-items: center;
+                  background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_indoor_playgrounds/BUS_FeatureBanner_BKG.jpg");
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  display: flex;
+                  height: 600px;
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .playgrounds-treehouse-logo {
+                  display: block;
+                  height: auto;
+                  max-height: 80%;
+                  max-width: 80%;
+                  object-fit: contain;
+                }
+
+                @media only screen and (max-width: 768px) {
+                  .playgrounds-treehouse-banner {
+                    height: 450px;
+                  }
+                }
               </style>
 
               <!-- Tab Content -->
               <div class="tab-content tab-content--twmctoggle2">
 
                   <!-- Tab 1 -->
-                  <div id="playgroundstoggle-tab1" class="twmctoggle-tab tab-pane fade in active">
+                  <div id="playgroundstoggle-tab1" class="twmctoggle-tab tab-pane fade in active" role="tabpanel" aria-labelledby="playgrounds-tab1">
                     
-                    <div>
-                      <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/COM_Safari-Stop-Hero-Compressed.jpg" alt="" class="img-responsive playgrounds-img">
+                    <div class="playgrounds-treehouse-banner">
+                      <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_indoor_playgrounds/BUS_TreeHouse_HERO_image.png" alt="The Treehouse Indoor Playground" class="playgrounds-treehouse-logo">
                     </div>
+
+                    <div id="updates"></div>
                     
-                    <h3 class="twmc-h3 mt-5 text-uppercase">Safari Stop Indoor Playground</h3>
-                    <p class="twmc-p mb-4">Safari Stop is open to the public for free play. Safari Stop is appropriate for children ages 3 through 9.  Please do not leave children unattended.</p>
+                    <h3 class="twmc-h3 mt-5 text-uppercase">The Treehouse Indoor Playground</h3>
+                    <p class="twmc-p mb-4">The Treehouse Indoor Playground is now open! A canopy of fun awaits, giving children a safe space to learn, play and build lasting friendships, even on rainy days.</p>
                     
                     <h4 class="twmc-h4 text-uppercase mb-1">HOURS</h4>
-                    <p class="twmc-p mb-4"><strong>
-                      <span class="twmc-icon-wrapper2"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>Sunday &ndash; Thursday &verbar; Noon &ndash; 6:00 p.m.
+                    <p class="twmc-p mb-4">
+                      Monday - Friday &#124; Noon &ndash; 6:00 p.m.
                       <br>
-                      <span class="twmc-icon-wrapper2"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>Friday and Saturday &verbar; 8:00 a.m. &ndash; 6:00 p.m.
-                    </strong></p>
+                      Saturday &#124; 9:00 a.m. - 6:00 p.m.
+                      <br>
+                      Sunday &#124; Noon &ndash; 6:00 p.m.
+                    </p>
 
                     <h4 class="twmc-h4 text-uppercase mb-1">Location</h4>
-                    <p class="twmc-p mb-4">Safari Stop is located across from the Fireside Cafe at the north end of the main building.
+                    <p class="twmc-p mb-4">The Treehouse is located across from the Fireside Cafe at the north end of the main building.
                       <br>
-                      <a href="https://maps.app.goo.gl/vcTdw6MN59LXWyBG6" class="a-traditional" target="_blank">Get directions &rarr;</a>
+                      <a href="https://maps.app.goo.gl/vcTdw6MN59LXWyBG6" class="a-traditional" target="_blank" rel="noopener noreferrer">Get directions &rarr;</a>
                     </p>
 
                     <h4 class="twmc-h4 text-uppercase mb-1">Rules for Play</h4>
                     <ul class="mb-4">
                       <li>Children must be supervised by an adult at all times.</li>
-                      <li>Playscape is designed for children ages 5 - 9.</li>
-                      <li>Please remove shoes and place them in the sneaker keeper before using the play equipment.</li>
-                      <li>Adults should use caution using play equipment.  Do not place children on lap when sliding.</li>
-                      <li>Slide one at a time in a forward seated position, with your feet first.</li>
+                      <li>Playscape is designed for children ages 4&ndash;10.</li>
+                      <li>Please remove shoes, loose clothing, and jewelry before using the play equipment.</li>
+                      <li>Adults should use caution when using play equipment.</li>
+                      <li>Slide one at a time in a forward seated position, with your feet first. Do not place children on your lap when sliding.</li>
                       <li>No climbing on the outside of the play equipment.</li>
-                      <li>No running.</li>
-                      <li>No food, gum or drinks.</li>
                       <li>No climbing up the slides.</li>
+                      <li>No running or rough play allowed.</li>
+                      <li>No food, gum, or drinks.</li>
                       <li>Please do not bring toys or other items into the play equipment.</li>
-                      <li><strong>Be safe, have fun!</strong></li>
+                      <li><strong>Be safe and have fun!</strong></li>
                     </ul>
+
+                    <p class="twmc-p mb-4"><strong>The Woodlands Methodist Church is not responsible for any injury or accident resulting from the improper use of the playground equipment.</strong></p>
+
+                    <p class="twmc-p mb-4"><strong>Please notify church staff of any problems or concerns at <a href="tel:8327020769" class="a-traditional">832-702-0769</a>.</strong></p>
                             
                   </div>
                   <!-- End of Tab1 -->
 
                   <!-- Tab2 -->
-                  <div id="playgroundstoggle-tab2" class="twmctoggle-tab tab-pane fade">
+                  <div id="playgroundstoggle-tab2" class="twmctoggle-tab tab-pane fade" role="tabpanel" aria-labelledby="playgrounds-tab2">
                     <div>
                       <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/cov-indoor-playground.jpg" alt="" class="img-responsive playgrounds-img">
                     </div>
                     
                     <h3 class="twmc-h3 mt-5 text-uppercase">Covenant Church at Creekside Indoor Playground</h3>
-                    
-                    <h4 class="twmc-h4 text-uppercase mb-1 mt-4">Community Open Play Hours</h4>
-                    <p class="twmc-p mb-4"><strong>
-                      <span class="twmc-icon-wrapper2"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>Tuesday and Wednesday &verbar; 9:30 a.m. &ndash; Noon
-                    </strong></p>
-
-                    <h4 class="twmc-h4 text-uppercase mb-1 mt-4">Sunday Service Play Hours</h4>
-                    <p class="twmc-p mb-4">The indoor playground is open for play <strong>before, between and after our Sunday worship services starting at 10:15 a.m.</strong>  each week. (During service we ask that your child attend our kids' service or be in worship with you.) Parent supervision required.</p>
+                    <p>After Sunday worship, families are invited to enjoy our indoor playground as a place to connect, play and build community. The playground is available for children and families attending worship services and is not open to the public or available for weekday drop-in use at this time.</p>
+                    <br>
 
 
                     <h4 class="twmc-h4 text-uppercase mb-1">Location</h4>
                     <p class="twmc-p mb-4">Covenant Church at Creekside &verbar; 8555 Creekside Green Dr, The Woodlands, TX 77389
                       <br>
-                      <a href="https://maps.app.goo.gl/MA4jLP6Pr2eBLwD6A" class="a-traditional" target="_blank">Get directions &rarr;</a>
+                      <a href="https://maps.app.goo.gl/MA4jLP6Pr2eBLwD6A" class="a-traditional" target="_blank" rel="noopener noreferrer">Get directions &rarr;</a>
                     </p>
                     
 
