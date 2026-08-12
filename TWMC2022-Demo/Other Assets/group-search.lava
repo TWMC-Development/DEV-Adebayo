@@ -1,0 +1,296 @@
+{% comment %}
+  ============================================================
+  ENDPOINT : group-search
+  APP      : groupfinder — Woodlands MC Group Finder
+  METHOD   : GET
+  SLUG     : ^/groupfinder/group-search
+  PURPOSE  : Renders filter/search UI and serializes filters for HTMX requests.
+  PARAMS (optional, restore selected state):
+    search-text
+    group-meeting-day
+    campus
+    audience (canonical)
+    Audience (legacy single-value param)
+  ICONS  : Tabler Icons (Rock v18+)
+  STYLES : Bootstrap 3.4
+  ============================================================
+{% endcomment %}
+
+{% assign appEnabled = ConfigurationRigging.groupFinderEnabled %}
+
+{% if appEnabled == false %}
+  <div class="alert alert-warning">
+    <i class="ti ti-alert-triangle"></i>
+    Group Finder is currently unavailable.
+  </div>
+
+{% else %}
+
+  {% assign groupTypeId = ConfigurationRigging.groupTypeId | AsInteger | Default:157 %}
+  {% assign audienceKey = ConfigurationRigging.audienceAttributeKey | Default:'Audience' %}
+  {% assign audienceDefinedTypeId = ConfigurationRigging.audienceDefinedTypeId | AsInteger | Default:16 %}
+
+  {% assign currentQ = QueryString.search-text | Default:'' %}
+  {% assign currentDay = QueryString.group-meeting-day | Default:'' %}
+  {% assign currentCampus = QueryString.campus | Default:'' %}
+  {% assign currentAudience = QueryString.audience | Default:QueryString.Audience | Default:'' %}
+
+  {% assign selectedDays = currentDay | Split:',' %}
+  {% assign selectedCampuses = currentCampus | Split:',' %}
+  {% assign selectedAudiences = currentAudience | Split:',' %}
+
+  <input type="hidden" id="gf-hidden-day" value="{{ currentDay }}" />
+  <input type="hidden" id="gf-hidden-campus" value="{{ currentCampus }}" />
+  <input type="hidden" id="gf-hidden-audience" value="{{ currentAudience }}" />
+
+  {% assign campusesList = Campuses %}
+  {% if campusesList == empty %}
+    {% campus where:'IsActive == true' sort:'Order,Name' %}
+      {% assign campusesList = campusItems %}
+    {% endcampus %}
+  {% endif %}
+
+  {% comment %} Build the set of audience Guids used by at least one scoped group. {% endcomment %}
+  {% assign inUseAudienceGuids = '' %}
+  {% group where:'GroupTypeId == {{ groupTypeId }} && IsActive == true && IsPublic == true && IsArchived == false' securityenabled:'false' %}
+    {% for g in groupItems %}
+      {% assign gAuds = g | Attribute:audienceKey,'RawValue' | Split:',' %}
+      {% for a in gAuds %}
+        {% assign aTrim = a | Trim %}
+        {% if aTrim != '' %}
+          {% assign token = ',' | Append:aTrim | Append:',' %}
+          {% unless inUseAudienceGuids contains token %}
+            {% assign inUseAudienceGuids = inUseAudienceGuids | Append:token %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endgroup %}
+
+  <div class="panel panel-default" style="margin-bottom:0;">
+    <div class="panel-body">
+
+      <div class="row" style="margin-bottom:12px;">
+
+        {% comment %} GENDER FILTER — retired per v18.3 redesign. Kept for reference.
+        <div class="col-xs-12 col-sm-3">
+          <label class="control-label" style="font-weight:600; display:block;">
+            <i class="ti ti-users filter-icon"></i> Gender
+          </label>
+          {% assign genderOptions = '1^Co-Ed,2^Men,3^Women' | Split:',' %}
+          {% for opt in genderOptions %}
+            {% assign parts = opt | Split:'^' %}
+            {% assign val = parts[0] %}
+            {% assign lbl = parts[1] %}
+            <div class="checkbox" style="margin:2px 0;">
+              <label>
+                <input type="checkbox" class="gf-gender-cb" value="{{ val }}" />
+                {{ lbl }}
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+        {% endcomment %}
+
+        <div class="col-xs-12 col-sm-6">
+          <label class="control-label" style="font-weight:600; display:block;">
+            <i class="ti ti-calendar-week filter-icon"></i> Day of Week
+          </label>
+          <div class="row">
+            {% assign dayOptions = 'Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday' | Split:',' %}
+            {% for dayOption in dayOptions %}
+              <div class="col-xs-6 col-sm-4" style="padding:0 8px;">
+                <div class="checkbox" style="margin:2px 0;">
+                  <label>
+                    <input type="checkbox" class="gf-day-cb" value="{{ dayOption }}" {% if selectedDays contains dayOption %}checked="checked"{% endif %} />
+                    {{ dayOption }}
+                  </label>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+          <label class="control-label" style="font-weight:600; display:block;">
+            <i class="ti ti-map-pin filter-icon"></i> Campus
+          </label>
+          <div class="row">
+            {% for campus in campusesList %}
+              {% if campus.IsActive %}
+                {% assign cidStr = campus.Id | Append:'' %}
+                <div class="col-xs-6 col-sm-4" style="padding:0 8px;">
+                  <div class="checkbox" style="margin:2px 0;">
+                    <label>
+                      <input type="checkbox" class="gf-campus-cb" value="{{ campus.Id }}" {% if selectedCampuses contains cidStr %}checked="checked"{% endif %} />
+                      {{ campus.Name }}
+                    </label>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-bottom:12px;">
+        <div class="col-xs-12">
+          <label class="control-label" style="font-weight:600; display:block;">
+            <i class="ti ti-users-group filter-icon"></i> Audience
+          </label>
+
+          <div class="row">
+            {% definedvalue where:'DefinedTypeId == "{{ audienceDefinedTypeId }}" && IsActive == true && Filterable == "true" && Grouping != 1' sort:'Value' %}
+              {% for dv in definedvalueItems %}
+                {% assign dvToken = ',' | Append:dv.Guid | Append:',' %}
+                {% if inUseAudienceGuids contains dvToken %}
+                  <div class="col-xs-6 col-sm-4" style="padding:0 8px;">
+                    <div class="checkbox" style="margin:2px 0;">
+                      <label>
+                        <input type="checkbox" class="gf-audience-cb" value="{{ dv.Guid }}" {% if selectedAudiences contains dv.Guid %}checked="checked"{% endif %} />
+                        {{ dv.Value }}
+                      </label>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% enddefinedvalue %}
+          </div>
+
+          <div style="margin-top:8px; font-weight:600; color:{{ ConfigurationRigging.brandColor }};">NextGen Ministry</div>
+          <div class="row">
+            {% definedvalue where:'DefinedTypeId == "{{ audienceDefinedTypeId }}" && IsActive == true && Filterable == "true" && Grouping == 1' sort:'Value' %}
+              {% for dv in definedvalueItems %}
+                {% assign dvToken = ',' | Append:dv.Guid | Append:',' %}
+                {% if inUseAudienceGuids contains dvToken %}
+                  <div class="col-xs-6 col-sm-4" style="padding:0 8px;">
+                    <div class="checkbox" style="margin:2px 0;">
+                      <label>
+                        <input type="checkbox" class="gf-audience-cb" value="{{ dv.Guid }}" {% if selectedAudiences contains dv.Guid %}checked="checked"{% endif %} />
+                        {{ dv.Value }}
+                      </label>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% enddefinedvalue %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <label for="gf-search-text" style="font-weight:600; display:block;">
+            <i class="ti ti-search filter-icon"></i> Search
+          </label>
+          <input type="text"
+                 id="gf-search-text"
+                 name="search-text"
+                 class="form-control"
+                 placeholder="Search by name, description, or topic&hellip;"
+                 value="{{ currentQ }}"
+                 hx-get="^/groupfinder/grouplist"
+                 hx-target="#group-results"
+                 hx-indicator="#gf-loading"
+                 hx-trigger="keyup changed delay:400ms"
+                 hx-include="#gf-hidden-day, #gf-hidden-campus, #gf-hidden-audience" />
+          <div style="margin-top:6px; text-align:right;">
+            <button type="button"
+                    class="btn btn-xs btn-link"
+                    onclick="resetGroupFinder()"
+                    style="color:{{ ConfigurationRigging.brandColor }}">
+              <i class="ti ti-x"></i> Clear filters
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button id="gf-reset-trigger"
+          type="button"
+          hx-get="^/groupfinder/grouplist"
+          hx-target="#group-results"
+          hx-indicator="#gf-loading"
+          style="display:none;"
+          aria-hidden="true">
+  </button>
+
+  <div id="gf-loading" class="htmx-indicator text-center" style="padding:10px; font-size:12px; color:{{ ConfigurationRigging.brandColor }};">
+    <i class="ti ti-loader-2"></i> Updating&hellip;
+  </div>
+
+  <div id="gf-filter-summary"></div>
+
+{% endif %}
+
+<script>
+(function () {
+
+  function serializeFilters() {
+    var dayVals = [];
+    document.querySelectorAll('.gf-day-cb:checked').forEach(function (cb) { dayVals.push(cb.value); });
+    document.getElementById('gf-hidden-day').value = dayVals.join(',');
+
+    var campusVals = [];
+    document.querySelectorAll('.gf-campus-cb:checked').forEach(function (cb) { campusVals.push(cb.value); });
+    document.getElementById('gf-hidden-campus').value = campusVals.join(',');
+
+    var audVals = [];
+    document.querySelectorAll('.gf-audience-cb:checked').forEach(function (cb) { audVals.push(cb.value); });
+    document.getElementById('gf-hidden-audience').value = audVals.join(',');
+  }
+
+  document.body.addEventListener('change', function (evt) {
+    var t = evt.target;
+    if (!t.classList.contains('gf-day-cb') &&
+      !t.classList.contains('gf-campus-cb') &&
+      !t.classList.contains('gf-audience-cb')) { return; }
+
+    serializeFilters();
+    var q = (document.getElementById('gf-search-text') || {}).value || '';
+    var day = document.getElementById('gf-hidden-day').value;
+    var campus = document.getElementById('gf-hidden-campus').value;
+    var audience = document.getElementById('gf-hidden-audience').value;
+
+    var params = new URLSearchParams();
+    if (q) { params.set('search-text', q); }
+    if (day) { params.set('group-meeting-day', day); }
+    if (campus) { params.set('campus', campus); }
+    if (audience) { params.set('audience', audience); }
+
+    htmx.ajax('GET', '^/groupfinder/grouplist?' + params.toString(), {
+      target: '#group-results',
+      indicator: '#gf-loading'
+    });
+  });
+
+  document.body.addEventListener('htmx:configRequest', function (evt) {
+    if (!evt.detail || !evt.detail.elt) { return; }
+    if (evt.detail.elt.id !== 'gf-search-text' && evt.detail.elt.id !== 'gf-reset-trigger') { return; }
+    serializeFilters();
+    evt.detail.parameters['group-meeting-day'] = document.getElementById('gf-hidden-day').value;
+    evt.detail.parameters['campus'] = document.getElementById('gf-hidden-campus').value;
+    evt.detail.parameters['audience'] = document.getElementById('gf-hidden-audience').value;
+  });
+
+  window.resetGroupFinder = function () {
+    var textInput = document.getElementById('gf-search-text');
+    if (textInput) { textInput.value = ''; }
+
+    document.querySelectorAll('.gf-day-cb, .gf-campus-cb, .gf-audience-cb').forEach(function (cb) {
+      cb.checked = false;
+    });
+
+    document.getElementById('gf-hidden-day').value = '';
+    document.getElementById('gf-hidden-campus').value = '';
+    document.getElementById('gf-hidden-audience').value = '';
+
+    var resetTrigger = document.getElementById('gf-reset-trigger');
+    if (resetTrigger) { resetTrigger.click(); }
+  };
+
+}());
+</script>

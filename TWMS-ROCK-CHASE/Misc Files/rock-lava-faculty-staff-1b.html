@@ -1,0 +1,397 @@
+<!--
+  Faculty & Staff — Lava content channel format
+  Change vs. your current code: each photo link is now a positioned wrapper
+  (.twms-staff__photo-link) containing the <img> plus a "View Bio" overlay
+  that fades in on hover/focus. No plus badge. Overlay is semi-transparent
+  so the photo stays visible underneath.
+
+  Paste the <style> block once (top of the format section is fine), or move
+  it into your site stylesheet.
+-->
+
+<style>
+  .twms-staff__photo-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;            /* replaces the mb-3 that was on the img */
+    line-height: 0;
+  }
+  .twms-staff__photo-link .twms-staff__img {
+    margin-bottom: 0 !important;    /* mb-3 moved to the wrapper */
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .twms-staff__photo-overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(14, 125, 153, 0);   /* school teal, fully transparent at rest */
+    opacity: 0;
+    transition: opacity .18s ease, background-color .18s ease;
+    pointer-events: none;                /* clicks pass through to the link */
+  }
+  .twms-staff__photo-overlay span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 10px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+  }
+  .twms-staff__photo-link:hover .twms-staff__photo-overlay,
+  .twms-staff__photo-link:focus-visible .twms-staff__photo-overlay,
+  .twms-staff__card:hover .twms-staff__photo-overlay {
+    opacity: 1;
+    background: rgba(14, 125, 153, .55);  /* raise to .7 for more coverage, .4 for less */
+  }
+  /* Keyboard users get a visible focus ring. focus-visible (not focus) so the
+     overlay/ring do not stick on the photo after a modal is closed by mouse. */
+  .twms-staff__photo-link:focus,
+  .twms-staff__photo-link:active {
+    outline: none;
+  }
+  .twms-staff__photo-link:focus-visible {
+    outline: 3px solid #0e7d99;
+    outline-offset: 2px;
+  }
+  /* Touch devices: no hover, so show a persistent bottom bar instead */
+  @media (hover: none) {
+    .twms-staff__photo-overlay {
+      opacity: 1;
+      background: transparent;
+      align-items: flex-end;
+    }
+    .twms-staff__photo-overlay span {
+      width: 100%;
+      background: rgba(14, 125, 153, .82);
+      padding: 6px 8px;
+      font-size: 12px;
+      text-shadow: none;
+    }
+  }
+</style>
+
+<!-- Content -->
+<section class="twms__section-pymed twms__content">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-sm-12">
+
+        {% sql return:'sorted_members' %}
+          SELECT
+              [PersonId] = p.Id
+          FROM GroupMember gm
+          JOIN Person p ON p.Id = gm.PersonId
+          LEFT JOIN AttributeValue av ON av.EntityId = p.Id AND av.AttributeId = 62756
+          WHERE gm.GroupId = 221599
+          ORDER BY ISNULL(av.ValueAsNumeric, 999999999), p.LastName
+        {% endsql %}
+
+        {% assign faculty_members = '' %}
+        {% assign admin_members = '' %}
+        {% assign leadership_members = '' %}
+
+        {% for member in sorted_members %}
+        {% assign personObj = member.PersonId | PersonById %}
+        {% assign sgroup = personObj | Attribute:'StaffGroupMulti-Select' %}
+        {% assign hierarchy = personObj | Attribute:'Hierarchy' %}
+
+        {% if sgroup contains 'Faculty' %}
+        {% capture faculty_members %}
+        {{ faculty_members }}
+
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+          {% assign profphoto = personObj | Attribute:'WebsiteImage','Url' %}
+          {% if profphoto and profphoto != '' %}
+          {% assign photosrc = profphoto %}
+          {% else %}
+          {% assign photosrc = 'https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg' %}
+          {% endif %}
+
+          <a href="#" class="twms-staff__photo-link" data-toggle="modal" data-target="#facultyModal{{ forloop.index }}"
+            aria-label="View bio for {{ personObj | Property:'NickName' | Default:personObj.FirstName }} {{ personObj | Property:'LastName' }}">
+            <img src="{{ photosrc }}" alt="" class="twms-staff__img">
+            <span class="twms-staff__photo-overlay" aria-hidden="true"><span>View Bio</span></span>
+          </a>
+
+          <a href="#" class="twms-staff__card-name" data-toggle="modal" data-target="#facultyModal{{ forloop.index }}">
+            {% assign perNickName = personObj | Property:'NickName' %}
+            {% if perNickName and perNickName != '' %}
+            {{ personObj | Property:'NickName' }}
+            {% else %}
+            {{ personObj | Property:'FirstName' }}
+            {% endif %}
+            {{ personObj | Property:'LastName' }}
+          </a>
+          <p>
+            Faculty
+            <br><em>{{ personObj | Attribute:'SchoolPosition' }}</em>
+            <br><a href="mailto:{{ personObj | Attribute: 'StaffWebsiteEmail'}}">
+              {{ personObj | Attribute: 'StaffWebsiteEmail' }}
+            </a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="facultyModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="facultyModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="facultyModalLabel{{ forloop.index }}">
+                    {% assign perNickName = personObj | Property:'NickName' %}
+                    {% if perNickName and perNickName != '' %}
+                    {{ personObj | Property:'NickName' }}
+                    {% else %}
+                    {{ personObj | Property:'FirstName' }}
+                    {% endif %}
+                    {{ personObj | Property:'LastName' }}
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <img src="{{ photosrc }}" alt="" class="twms-staff__img-small">
+
+                  <h4>{{ personObj | Attribute:'SchoolPosition' }}</h4>
+                  {% assign philosophy = personObj | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = personObj | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = personObj | Attribute:'About' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ personObj | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% endif %}
+
+        {% if sgroup contains 'Admin' %}
+        {% capture admin_members %}
+        {{ admin_members }}
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+          {% assign profphoto = personObj | Attribute:'WebsiteImage','Url' %}
+          {% if profphoto and profphoto != '' %}
+          {% assign photosrc = profphoto %}
+          {% else %}
+          {% assign photosrc = 'https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg' %}
+          {% endif %}
+
+          <a href="#" class="twms-staff__photo-link" data-toggle="modal" data-target="#adminModal{{ forloop.index }}"
+            aria-label="View bio for {{ personObj | Property:'NickName' | Default:personObj.FirstName }} {{ personObj | Property:'LastName' }}">
+            <img src="{{ photosrc }}" alt="" class="twms-staff__img">
+            <span class="twms-staff__photo-overlay" aria-hidden="true"><span>View Bio</span></span>
+          </a>
+
+          <a href="#" class="twms-staff__card-name" data-toggle="modal" data-target="#adminModal{{ forloop.index }}">
+            {% assign perNickName = personObj | Property:'NickName' %}
+            {% if perNickName and perNickName != '' %}
+            {{ personObj | Property:'NickName' }}
+            {% else %}
+            {{ personObj | Property:'FirstName' }}
+            {% endif %}
+            {{ personObj | Property:'LastName' }}
+          </a>
+          <p>
+            Admin
+            <br><em>{{ personObj | Attribute:'SchoolPosition' }}</em>
+            <br><a href="mailto:{{ personObj | Attribute: 'StaffWebsiteEmail'}}">
+              {{ personObj | Attribute: 'StaffWebsiteEmail' }}</a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="adminModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="adminModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="adminModalLabel{{ forloop.index }}">
+                    {% assign perNickName = personObj | Property:'NickName' %}
+                    {% if perNickName and perNickName != '' %}
+                    {{ personObj | Property:'NickName' }}
+                    {% else %}
+                    {{ personObj | Property:'FirstName' }}
+                    {% endif %}
+                    {{ personObj | Property:'LastName' }}
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="{{ photosrc }}" alt="" class="twms-staff__img-small">
+
+                  <h4>{{ personObj | Attribute:'SchoolPosition' }}</h4>
+                  {% assign philosophy = personObj | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = personObj | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = personObj | Attribute:'About' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ personObj | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% endif %}
+
+        {% if sgroup contains 'Leadership' %}
+        {% capture leadership_members %}
+        {% assign leaders = leadership_members | OrderBy:'hierarchy' %}
+        {{ leadership_members }}
+        <div class="twms-staff__flex-item-4col twms-staff__card">
+          {% assign profphoto = personObj | Attribute:'WebsiteImage','Url' %}
+          {% if profphoto and profphoto != '' %}
+          {% assign photosrc = profphoto %}
+          {% else %}
+          {% assign photosrc = 'https://people.thewoodlandsmethodist.org/Assets/Images/person-no-photo-unknown.svg' %}
+          {% endif %}
+
+          <a href="#" class="twms-staff__photo-link" data-toggle="modal" data-target="#leadershipModal{{ forloop.index }}"
+            aria-label="View bio for {{ personObj | Property:'NickName' | Default:personObj.FirstName }} {{ personObj | Property:'LastName' }}">
+            <img src="{{ photosrc }}" alt="" class="twms-staff__img">
+            <span class="twms-staff__photo-overlay" aria-hidden="true"><span>View Bio</span></span>
+          </a>
+
+          <a href="#" class="twms-staff__card-name" data-toggle="modal"
+            data-target="#leadershipModal{{ forloop.index }}">
+            {% assign perNickName = personObj | Property:'NickName' %}
+            {% if perNickName and perNickName != '' %}
+            {{ personObj | Property:'NickName' }}
+            {% else %}
+            {{ personObj | Property:'FirstName' }}
+            {% endif %}
+            {{ personObj | Property:'LastName' }}
+          </a>
+          <p>
+            Leadership
+            <br><em>{{ personObj | Attribute:'SchoolPosition' }}</em>
+            <br><a href="mailto:{{ personObj | Attribute: 'StaffWebsiteEmail'}}">
+              {{ personObj | Attribute:'StaffWebsiteEmail' }}</a>
+          </p>
+          <div class="twms-staff-modal modal fade" id="leadershipModal{{ forloop.index }}" tabindex="-1" role="dialog"
+            aria-labelledby="leadershipModalLabel{{ forloop.index }}">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="leadershipModalLabel{{ forloop.index }}">
+                    {% assign perNickName = personObj | Property:'NickName' %}
+                    {% if perNickName and perNickName != '' %}
+                    {{ personObj | Property:'NickName' }}
+                    {% else %}
+                    {{ personObj | Property:'FirstName' }}
+                    {% endif %}
+                    {{ personObj | Property:'LastName' }}
+                  </h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="close-right">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="{{ photosrc }}" alt="" class="twms-staff__img-small">
+
+                  <h4>{{ personObj | Attribute:'SchoolPosition' }}</h4>
+                  {% assign philosophy = personObj | Attribute:'Philosophy' %}
+                  {% if philosophy != '' and philosophy != null %}
+                  <strong>Educational Philosophy</strong><br /> {{ philosophy }}<br>
+                  {% endif %}
+                  {% assign ematrix = personObj | Attribute:'Education','Object' %}
+                  {% if ematrix.AttributeMatrixItems != empty %}
+                  <p class="mb-0"><strong>Education</strong><br />
+                    {% for item in ematrix.AttributeMatrixItems %}
+                    {{ item | Attribute:'Education' }}<br>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  {% assign about = personObj | Attribute:'About' %}
+                  {% if about != '' and about != null %}
+                  <strong>About</strong>
+                  <p>{{ personObj | Attribute:'About' }}</p>
+                  {% endif %}
+                </div>
+                <div class="modal-footer">
+                  <div class="ml-auto">
+                    <button type="button"
+                      class="twms__button twms__button-outline-dark-blue custom-button-width-modal-close"
+                      data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endcapture %}
+        {% assign leadership_members = leadership_members | append: card_html | append: '||' %}
+
+        {% endif %}
+        {% endfor %}
+        {% if leadership_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">LEADERSHIP</h2>
+        <div class="twms-staff__flex-container-4col">
+          {% assign cards_array = leadership_members | Split: '||' %}
+          {% assign reversed_cards = cards_array | Reverse %}
+          {% for card in reversed_cards %}
+          {{ card }}
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if admin_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">ADMIN</h2>
+        <div class="twms-staff__flex-container-4col">
+          {{ admin_members }}
+        </div>
+        {% endif %}
+        {% if faculty_members %}
+        <h2 class="twms__subheader-blue mb-4 mt-4">FACULTY</h2>
+        <div class="twms-staff__flex-container-4col">
+          {{ faculty_members }}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>

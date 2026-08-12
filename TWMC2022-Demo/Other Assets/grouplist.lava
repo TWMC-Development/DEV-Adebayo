@@ -1,0 +1,528 @@
+{%- comment -%}
+  ============================================================
+  ENDPOINT : grouplist
+  APP      : groupfinder — Woodlands MC Group Finder
+  METHOD   : GET
+  SLUG     : ^/groupfinder/grouplist
+  PURPOSE  : Returns result cards, map, selected-filter summary, and empty state.
+
+  FILTER STRATEGY:
+    Pass 1 — {[ groupfinder ]} scopes to configured GroupTypeId.
+    Pass 2 — Lava post-filters apply day text match, search text,
+             campus intersection, and audience Guid intersection.
+
+  PARAMS (all optional):
+    search-text
+    group-meeting-day
+    campus
+    audience (canonical)
+    Audience (legacy single-value param)
+
+  ICONS    : Tabler Icons (Rock v18+) — ti ti-*
+  STYLES   : Bootstrap 3.4
+  ============================================================
+{%- endcomment -%}
+
+{% assign appEnabled = ConfigurationRigging.groupFinderEnabled %}
+{% assign groupTypeId = ConfigurationRigging.groupTypeId | AsInteger | Default:157 %}
+{% assign audienceKey = ConfigurationRigging.audienceAttributeKey | Default:'Audience' %}
+{% assign audienceDefinedTypeId = ConfigurationRigging.audienceDefinedTypeId | AsInteger | Default:16 %}
+{% assign maxResults = ConfigurationRigging.maxResults | Default:50 %}
+{% assign showCampus = ConfigurationRigging.showCampus %}
+{% assign noResultsMsg = ConfigurationRigging.defaultNoResultsMessage | Default:'No groups matched your search. Try adjusting your filters.' %}
+
+{% comment %} Restore search bar visibility when returning from group detail {% endcomment %}
+<script>
+(function () {
+    var sc = document.getElementById('gf-search-container');
+    if (sc) { sc.style.display = ''; }
+}());
+</script>
+
+{% if appEnabled == false %}
+  <div class="alert alert-warning">
+    <i class="ti ti-alert-triangle"></i>
+    Group Finder is currently unavailable. Please check back later.
+  </div>
+
+{% else %}
+
+{% assign searchText = QueryString.search-text | Trim | Default:'' %}
+{% assign dayParam = QueryString.group-meeting-day | Trim | Default:'' %}
+{% assign campusParam = QueryString.campus | Trim | Default:'' %}
+{% assign audienceParam = QueryString.audience | Default:QueryString.Audience | Trim | Default:'' %}
+{% assign searchTextLower = searchText | Downcase | Default:'' %}
+{% assign selectedDays = dayParam | Split:',' %}
+{% assign selectedCampuses = campusParam | Split:',' %}
+{% assign selectedAudiences = audienceParam | Split:',' %}
+
+{% assign campusesList = Campuses %}
+{% if campusesList == empty %}
+  {% campus where:'IsActive == true' sort:'Order,Name' %}
+    {% assign campusesList = campusItems %}
+  {% endcampus %}
+{% endif %}
+
+{% if CurrentPerson %}
+    {% assign currentPersonId = CurrentPerson.Id %}
+{% else %}
+    {% assign currentPersonId = 50687 %}
+{% endif %}
+
+{[ groupfinder origin:'{{ currentPersonId }}' grouptypeids:'{{ groupTypeId }}' maxresults:'{{ maxResults }}' include:'Group.Schedule' ]}
+
+    {% assign filteredGroups = '' | Split:'~' %}
+    {% assign resultCount = 0 %}
+
+    {% for result in MatchedGroups %}
+
+    {% assign nameLower = result.Group.Name | Downcase | Default:'' %}
+    {% assign descLower = result.Group.Description | Downcase | Default:'' %}
+
+    {% assign dayMatch = true %}
+    {% if dayParam != '' %}
+        {% assign dayMatch = false %}
+        {% assign schedText = result.Group.Schedule.FriendlyScheduleText | Default:'' | Downcase %}
+        {% for selectedDay in selectedDays %}
+            {% assign selectedDayLower = selectedDay | Trim | Downcase %}
+            {% if schedText contains selectedDayLower %}
+                {% assign dayMatch = true %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% assign textMatch = true %}
+    {% if searchTextLower != '' %}
+        {% if nameLower contains searchTextLower or descLower contains searchTextLower %}
+            {% assign textMatch = true %}
+        {% else %}
+            {% assign textMatch = false %}
+        {% endif %}
+    {% endif %}
+
+    {% assign campusMatch = true %}
+    {% if campusParam != '' %}
+      {% assign campusMatch = false %}
+      {% assign rCampusId = result.Group.CampusId | Append:'' %}
+      {% if selectedCampuses contains rCampusId %}
+        {% assign campusMatch = true %}
+      {% endif %}
+    {% endif %}
+
+    {% assign audienceMatch = true %}
+    {% if audienceParam != '' %}
+      {% assign audienceMatch = false %}
+      {% assign rAudGuids = result.Group | Attribute:audienceKey,'RawValue' | Split:',' %}
+      {% for ag in rAudGuids %}
+        {% assign agTrim = ag | Trim %}
+        {% if agTrim != '' and selectedAudiences contains agTrim %}
+          {% assign audienceMatch = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if dayMatch and textMatch and campusMatch and audienceMatch %}
+        {% assign filteredGroups = filteredGroups | AddToArray: result %}
+        {% assign resultCount = resultCount | Plus:1 %}
+    {% endif %}
+
+{% endfor %}
+
+<div id="group-results-inner">
+
+{% assign _campusChips = '' %}
+{% if campusParam != '' %}
+  {% for campus in campusesList %}
+    {% assign cId = campus.Id | Append:'' %}
+    {% if selectedCampuses contains cId %}
+      {% if _campusChips == '' %}
+        {% assign _campusChips = campus.Name %}
+      {% else %}
+        {% assign _campusChips = _campusChips | Append:', ' | Append:campus.Name %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign _audChips = '' %}
+{% if audienceParam != '' %}
+  {% definedvalue where:'DefinedTypeId == "{{ audienceDefinedTypeId }}" && IsActive == true' %}
+    {% for dv in definedvalueItems %}
+      {% if selectedAudiences contains dv.Guid %}
+        {% if _audChips == '' %}
+          {% assign _audChips = dv.Value %}
+        {% else %}
+          {% assign _audChips = _audChips | Append:', ' | Append:dv.Value %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% enddefinedvalue %}
+{% endif %}
+
+{% assign _encQ = searchText | UrlEncode %}
+{% assign _encD = dayParam | UrlEncode %}
+{% assign _encC = campusParam | UrlEncode %}
+{% assign _encA = audienceParam | UrlEncode %}
+{% assign _shareQs = '' %}
+{% if searchText != '' %}
+  {% assign _shareQs = 'search-text=' | Append:_encQ %}
+{% endif %}
+{% if dayParam != '' %}
+  {% if _shareQs != '' %}{% assign _shareQs = _shareQs | Append:'&' %}{% endif %}
+  {% assign _shareQs = _shareQs | Append:'group-meeting-day=' | Append:_encD %}
+{% endif %}
+{% if campusParam != '' %}
+  {% if _shareQs != '' %}{% assign _shareQs = _shareQs | Append:'&' %}{% endif %}
+  {% assign _shareQs = _shareQs | Append:'campus=' | Append:_encC %}
+{% endif %}
+{% if audienceParam != '' %}
+  {% if _shareQs != '' %}{% assign _shareQs = _shareQs | Append:'&' %}{% endif %}
+  {% assign _shareQs = _shareQs | Append:'audience=' | Append:_encA %}
+{% endif %}
+
+{% assign _hasFilters = false %}
+{% if searchText != '' or dayParam != '' or campusParam != '' or audienceParam != '' %}
+  {% assign _hasFilters = true %}
+{% endif %}
+
+<span id="gf-url-sync" data-share-qs="{{ _shareQs | HtmlEncode }}" style="display:none;" aria-hidden="true"></span>
+
+<div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px; margin-bottom:12px; font-size:13px; min-height:24px;">
+
+  <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px;">
+    {% if _hasFilters %}
+
+    <button type="button"
+            class="btn btn-default btn-xs"
+            data-share-qs="{{ _shareQs }}"
+            onclick="gfCopyShareUrl(this)"
+            title="Click to copy a link to these results"
+            style="padding:2px 6px; flex-shrink:0;">
+      <i class="ti ti-share"></i>
+    </button>
+
+    <span style="color:#888; flex-shrink:0;">
+      <i class="ti ti-filter" style="color:{{ ConfigurationRigging.brandColor }};"></i>
+      <strong>Filtering by:</strong>
+    </span>
+
+    {% if searchText != '' %}
+      <span class="label label-info">&ldquo;{{ searchText }}&rdquo;</span>
+    {% endif %}
+
+    {% if _campusChips != '' %}
+      <span class="label label-primary"><i class="ti ti-map-pin"></i> {{ _campusChips }}</span>
+    {% endif %}
+
+    {% if _audChips != '' %}
+      <span class="label label-primary"><i class="ti ti-users-group"></i> {{ _audChips }}</span>
+    {% endif %}
+
+    {% if dayParam != '' %}
+      {% assign _dayParts = dayParam | Split:',' %}
+      {% for _d in _dayParts %}
+        <span class="label label-primary">{{ _d | Trim }}</span>
+      {% endfor %}
+    {% endif %}
+
+    <button type="button"
+            class="btn btn-xs btn-link"
+            onclick="resetGroupFinder()"
+            style="color:#888; padding:0; margin-left:2px; flex-shrink:0;">
+      <i class="ti ti-x"></i> Clear all
+    </button>
+
+    {% endif %}
+  </div>
+
+  <div style="color:#888; flex-shrink:0;">
+    {% if resultCount > 0 %}
+      Showing {{ resultCount }}{% if resultCount == maxResults %} (max {{ maxResults }}){% endif %}
+      group{% if resultCount != 1 %}s{% endif %}
+    {% endif %}
+  </div>
+
+</div>
+
+<script>
+(function () {
+    var syncEl = document.getElementById('gf-url-sync');
+    if (!syncEl || !window.history || !window.history.replaceState) { return; }
+
+    var qs = syncEl.getAttribute('data-share-qs') || '';
+    var nextUrl = window.location.pathname + (qs ? ('?' + qs) : '') + (window.location.hash || '');
+    var currentUrl = window.location.pathname + window.location.search + (window.location.hash || '');
+
+    if (currentUrl !== nextUrl) {
+        window.history.replaceState(null, '', nextUrl);
+    }
+}());
+</script>
+
+{% assign mappableCount = 0 %}
+{% for result in filteredGroups %}
+  {% assign _lat = result.Location.Latitude | Default:'' %}
+  {% assign _lng = result.Location.Longitude | Default:'' %}
+  {% if _lat != '' and _lng != '' %}
+    {% assign mappableCount = mappableCount | Plus:1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign mappableCountInt = mappableCount | Plus:0 %}
+{% assign resultCountInt = resultCount | Plus:0 %}
+
+<div id="gf-map-data" style="display:none;" aria-hidden="true">
+  {% for result in filteredGroups %}
+    {% assign _lat = result.Location.Latitude | Default:'' %}
+    {% assign _lng = result.Location.Longitude | Default:'' %}
+    {% if _lat != '' and _lng != '' %}
+    <span class="gf-map-point"
+          data-lat="{{ _lat }}"
+          data-lng="{{ _lng }}"
+          data-id="{{ result.Group.Id }}"
+          data-name="{{ result.Group.Name | StripHtml | HtmlEncode }}"></span>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if mappableCountInt > 0 %}
+<div style="margin-bottom:20px; position:relative; overflow:hidden; max-width:100%;">
+  <div id="gf-map" style="height:320px; border-radius:4px; border:1px solid #ddd;"></div>
+</div>
+{% elsif resultCountInt > 0 %}
+<div class="alert alert-info" style="margin-bottom:20px;">
+  <i class="ti ti-map-off"></i>
+  No groups in the current results have a mappable location.
+</div>
+{% endif %}
+
+<script>
+(function () {
+  if (window._gfMap) {
+    try { window._gfMap.remove(); } catch (e) {}
+    window._gfMap = null;
+  }
+
+  var mapContainer = document.getElementById('gf-map');
+  if (!mapContainer) { return; }
+  if (typeof L === 'undefined') {
+    console.warn('GroupFinder: Leaflet not loaded.');
+    return;
+  }
+
+  var scriptEl = document.currentScript;
+  var scopeRoot = scriptEl ? scriptEl.parentElement : document;
+  var dataContainer = scopeRoot.querySelector('#gf-map-data');
+  var points = dataContainer ? dataContainer.querySelectorAll('.gf-map-point') : [];
+  if (!points.length) { return; }
+
+  function fuzzCoord(val) {
+    var fuzz = 0.008;
+    return val + (Math.random() * fuzz * 2) - fuzz;
+  }
+
+  var markers = [];
+  points.forEach(function (el) {
+    var lat = parseFloat(el.getAttribute('data-lat'));
+    var lng = parseFloat(el.getAttribute('data-lng'));
+    var name = el.getAttribute('data-name') || '';
+    var id = el.getAttribute('data-id') || '';
+    if (!isNaN(lat) && !isNaN(lng)) {
+      markers.push({ lat: fuzzCoord(lat), lng: fuzzCoord(lng), name: name, id: id });
+    }
+  });
+
+  if (!markers.length) { return; }
+
+  var avgLat = markers.reduce(function (s, m) { return s + m.lat; }, 0) / markers.length;
+  var avgLng = markers.reduce(function (s, m) { return s + m.lng; }, 0) / markers.length;
+
+  var map = L.map('gf-map', {
+    attributionControl: false,
+    minZoom: 9,
+    maxZoom: 11,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    touchZoom: true,
+    zoomAnimation: false,
+    fadeAnimation: false,
+    markerZoomAnimation: false
+  }).setView([avgLat, avgLng], 11);
+
+  window._gfMap = map;
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 13,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>'
+  }).addTo(map);
+
+  var bounds = [];
+  markers.forEach(function (m) {
+    var marker = L.circleMarker([m.lat, m.lng], {
+      radius: 9,
+      fillColor: '{{ ConfigurationRigging.brandColor }}',
+      color: '#ffffff',
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.85
+    }).addTo(map);
+
+    bounds.push([m.lat, m.lng]);
+
+    if (m.name) {
+      marker.bindPopup(
+        '<strong>' + m.name + '</strong>' +
+        (m.id
+          ? '<br><a href="#" onclick="htmx.ajax(\'GET\',' +
+            '\'^/groupfinder/groupdetail?groupId=' + m.id + '\',' +
+            '{target:\'#group-results\',indicator:\'#gf-loading\'});' +
+            'return false;">Learn More &rarr;</a>'
+          : ''),
+        { className: 'gf-map-popup', maxWidth: 300, minWidth: 220 }
+      );
+    }
+  });
+
+  if (bounds.length > 1) {
+    map.fitBounds(bounds, { padding: [30, 30], maxZoom: 13, animate: false });
+  }
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      if (window._gfMap) { window._gfMap.invalidateSize({ animate: false }); }
+    });
+  });
+
+  if (!window._gfMapSettleListenerAttached) {
+    window._gfMapSettleListenerAttached = true;
+    document.addEventListener('htmx:afterSettle', function () {
+      if (window._gfMap) { window._gfMap.invalidateSize({ animate: false }); }
+    });
+  }
+
+}());
+</script>
+
+{% if resultCount > 0 %}
+<div class="row" id="group-card-list">
+  {% for result in filteredGroups %}
+
+    {% assign descFull = result.Group.Description | StripHtml | Default:'' %}
+    {% assign descPreview = descFull | Truncate:120,'&hellip;' %}
+    {% assign scheduleText = result.Group.Schedule.FriendlyScheduleText | Default:'' %}
+    {% assign weeklyDay = result.Group.Schedule.WeeklyDayOfWeek | Default:'' %}
+    {% assign weeklyTime = result.Group.Schedule.WeeklyTimeOfDay | Date:'st' | Default:'' %}
+    {% assign ageRange = result.Group | Attribute:'AgeRange' | Default:'' %}
+    {% assign audienceNames = result.Group | Attribute:audienceKey | Split:',' %}
+
+    {% assign leaderNames = '' %}
+    {% for member in result.Group.Members %}
+      {% if member.GroupRole.IsLeader %}
+        {% if leaderNames == '' %}
+          {% assign leaderNames = member.Person.FullName %}
+        {% else %}
+          {% assign leaderNames = leaderNames | Append:', ' | Append:member.Person.FullName %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="col-sm-6 col-md-4 gf-card-col" style="margin-bottom:20px;">
+      <div class="panel panel-default group-finder-card">
+
+        <div class="gf-card-accent"></div>
+
+        <div class="panel-body gf-card-body">
+
+          <div class="gf-card-header">
+            <h4 class="gf-card-title">{{ result.Group.Name }}</h4>
+            {% if audienceNames != empty %}
+              <div class="gf-audience-tags">
+                {% for a in audienceNames %}
+                  {% assign aTrim = a | Trim %}
+                  {% if aTrim != '' %}<span class="gf-audience-tag">{{ aTrim }}</span>{% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="gf-card-details">
+
+            {% if ageRange != '' %}
+            <div class="gf-detail-row">
+              <i class="ti ti-users gf-detail-icon"></i>
+              <span>{{ ageRange }}</span>
+            </div>
+            {% endif %}
+
+            {% if leaderNames != '' %}
+            <div class="gf-detail-row">
+              <i class="ti ti-user gf-detail-icon"></i>
+              <span>Group Leaders:<br/>{{ leaderNames }}</span>
+            </div>
+            {% endif %}
+
+            {% if weeklyDay != '' %}
+            <div class="gf-detail-row">
+              <i class="ti ti-calendar gf-detail-icon"></i>
+              <span>{{ weeklyDay }}s</span>
+            </div>
+            {% endif %}
+
+            {% if weeklyTime != '' %}
+            <div class="gf-detail-row">
+              <i class="ti ti-clock gf-detail-icon"></i>
+              <span>{{ weeklyTime }}</span>
+            </div>
+            {% endif %}
+
+            {% if weeklyDay == '' and weeklyTime == '' and scheduleText != '' %}
+            <div class="gf-detail-row">
+              <i class="ti ti-clock gf-detail-icon"></i>
+              <span>{{ scheduleText }}</span>
+            </div>
+            {% endif %}
+
+          </div>
+
+          {% if descPreview != '' %}
+            <p class="gf-card-desc">{{ descPreview }}</p>
+          {% endif %}
+
+          <div class="gf-card-footer">
+            <a class="btn btn-primary gf-learn-more-btn"
+               href="#"
+               hx-get="^/groupfinder/groupdetail?groupId={{ result.Group.Id }}&search-text={{ searchText | UrlEncode }}&group-meeting-day={{ dayParam | UrlEncode }}&campus={{ campusParam | UrlEncode }}&audience={{ audienceParam | UrlEncode }}"
+               hx-target="#group-results"
+               hx-indicator="#gf-loading">
+              Details <i class="ti ti-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}
+</div>
+
+{% else %}
+
+<div class="well text-center group-finder-no-results">
+  <i class="ti ti-mood-sad" style="font-size:2em; display:block; margin-bottom:8px;"></i>
+  <p>{{ noResultsMsg }}</p>
+  <button type="button"
+          class="btn btn-default"
+          hx-get="^/groupfinder/grouplist"
+          hx-target="#group-results"
+          hx-indicator="#gf-loading">
+    <i class="ti ti-refresh"></i> Show All Groups
+  </button>
+</div>
+
+{% endif %}
+
+</div>
+
+{[ endgroupfinder ]}
+
+{% endif %}
