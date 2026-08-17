@@ -14,10 +14,12 @@
       rel="stylesheet"
     />
 
-    <!-- CSS — same files as other pages in this project -->
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/nw-main2023.css" />
+    <!-- Local mirrors of the stylesheets currently used by the live site -->
+    <link rel="stylesheet" href="./css/_LIVE_bootstrap_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_theme_1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_main_v1.1.70.css" />
+    <link rel="stylesheet" href="./css/_LIVE_nw-main2023_v1.1.70.css" />
+    <!-- Local-preview navigation helpers; not included in the Rock RMS copy region -->
     <link rel="stylesheet" href="./css/nw-navbar.css" />
     <link rel="stylesheet" href="./css/utilities-templates.css" />
 
@@ -195,45 +197,28 @@
        ================================================================ */
 
       /* Curriculum phase color tokens */
-      :root {
+      .conf27-page {
         --conf27-roots: #b08a3e; /* gold  */
         --conf27-grow: #5a8a46; /* green */
         --conf27-thrive: #3a72a8; /* blue  */
-        --conf27-trad: #862633; /* TWMC brand red — same as --color-traditional */
         --conf27-ink: #2a2320;
-        --conf27-muted: #6e6259;
         --conf27-line: #e3e0dc;
       }
 
-      /* ----------------------------------------------------------------
-       1. HERO
-       ---------------------------------------------------------------- */
+      /* Hero */
       .conf27-hero {
-        position: relative;
         min-height: 620px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-        overflow: hidden;
         isolation: isolate;
-      }
-      .conf27-hero__bg {
-        position: absolute;
-        inset: 0;
-        z-index: -2;
+        z-index: 0;
         background: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/Confirmation-2026-27/Confirmation+Banner-Web_2026.png")
           center / cover no-repeat;
-        background-position: center center;
         background-color: #1a0a10;
-        filter: saturate(1.05);
       }
       .conf27-hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        z-index: -1;
+        z-index: 0;
         background:
           radial-gradient(
             ellipse at center,
@@ -248,13 +233,12 @@
           );
       }
       .conf27-hero__content {
+        position: relative;
+        z-index: 1;
         padding: 7rem 1.5rem 6rem;
         max-width: 780px;
-        margin: 0 auto;
       }
       .conf27-hero__eyebrow {
-        display: inline-flex;
-        align-items: center;
         gap: 0.75rem;
         font-family: "Montserrat", sans-serif;
         font-size: 0.78rem;
@@ -276,7 +260,7 @@
         font-size: clamp(2.5rem, 6vw, 5rem);
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: #fff;
+        color: var(--color-white);
         line-height: 1;
         margin: 0 0 1.3rem;
         text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
@@ -299,24 +283,19 @@
         font-weight: 500;
       }
       .conf27-hero__btns {
-        display: flex;
         gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
       }
       .conf27-scroll {
         position: absolute;
         bottom: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 1;
         color: rgba(255, 255, 255, 0.7);
         font-size: 0.7rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 0.5rem;
         animation: conf27bob 2.4s ease-in-out infinite;
       }
@@ -330,16 +309,14 @@
         }
       }
 
-      /* ----------------------------------------------------------------
-       2. EYEBROW LABEL  (red line + small-caps label above section titles)
-       ---------------------------------------------------------------- */
+      /* Section eyebrow label */
       .conf27-eyebrow {
         display: block;
         font-family: "Montserrat", sans-serif;
         font-size: 0.78rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
         font-weight: 700;
         margin-bottom: 1rem;
       }
@@ -348,27 +325,23 @@
         display: inline-block;
         width: 28px;
         height: 2px;
-        background: var(--conf27-trad);
+        background: var(--color-traditional);
         vertical-align: middle;
         margin-right: 0.8rem;
         transform: translateY(-3px);
       }
 
-      /* ----------------------------------------------------------------
-       3. SECTION WRAPPERS  (padding + background for each section)
-       ---------------------------------------------------------------- */
+      /* Section wrappers */
       .conf27-section-white {
         padding: 6rem 0;
-        background: #fff;
+        background: var(--color-white);
       }
       .conf27-section-grey {
         padding: 6rem 0;
         background: #f6f3f0;
       }
 
-      /* ----------------------------------------------------------------
-       4. PHOTO TILE  (asymmetric 2×2 grid, col 1 spans both rows)
-       ---------------------------------------------------------------- */
+      /* Asymmetric photo tile */
       .conf27-photo-tile {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -395,9 +368,7 @@
         }
       }
 
-      /* ----------------------------------------------------------------
-       5. PILLAR ITEMS  (icon + label + text, "What is Confirmation")
-       ---------------------------------------------------------------- */
+      /* Program pillars */
       .conf27-pillars {
         margin-top: 1.8rem;
       }
@@ -416,7 +387,7 @@
         align-items: center;
         justify-content: center;
         background: #f4e8ea;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
         font-size: 0.95rem;
       }
       .conf27-pillar__label {
@@ -425,7 +396,7 @@
         letter-spacing: 1.5px;
         text-transform: uppercase;
         font-weight: 700;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
         margin-bottom: 0.1rem;
       }
       .conf27-pillar__text {
@@ -435,11 +406,9 @@
         font-weight: 500;
       }
 
-      /* ----------------------------------------------------------------
-       6. CURRICULUM CARDS  (Roots / Grow / Thrive)
-       ---------------------------------------------------------------- */
+      /* Curriculum cards */
       .conf27-curr-card {
-        background: #fff;
+        background: var(--color-white);
         border: 1px solid var(--conf27-line);
         border-radius: 6px;
         padding: 2.5rem 2rem 2rem;
@@ -499,14 +468,14 @@
       .conf27-curr-card__dates {
         font-family: "Montserrat", sans-serif;
         font-size: 0.75rem;
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-weight: 600;
         margin-bottom: 1.25rem;
         letter-spacing: 1px;
         /* text-transform: uppercase; */
       }
       .conf27-curr-card__desc {
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-size: 1rem;
         line-height: 1.7;
         font-weight: 500;
@@ -542,11 +511,9 @@
         color: var(--conf27-thrive);
       }
 
-      /* ----------------------------------------------------------------
-       7. CAMPUS CARDS
-       ---------------------------------------------------------------- */
+      /* Campus cards */
       .conf27-camp-card {
-        background: #fff;
+        background: var(--color-white);
         border: 1px solid var(--conf27-line);
         border-radius: 6px;
         padding: 1.75rem;
@@ -559,11 +526,12 @@
           box-shadow 0.25s ease;
       }
       .conf27-camp-card:hover {
-        border-color: var(--conf27-trad);
+        border-color: var(--color-traditional);
         box-shadow: 0 10px 28px rgba(42, 35, 32, 0.08);
       }
       .conf27-camp-card__head {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-between;
         gap: 1rem;
@@ -582,7 +550,7 @@
       }
       .conf27-camp-card__place {
         font-size: 0.78rem;
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-weight: 500;
         margin-top: 0.2rem;
       }
@@ -596,14 +564,14 @@
         letter-spacing: 1.5px;
         text-transform: uppercase;
         font-weight: 700;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
         background: #f4e8ea;
         padding: 0.3rem 0.6rem;
         border-radius: 3px;
         white-space: nowrap;
       }
       .conf27-camp-badge--muted {
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         background: #ece7e1;
       }
       .conf27-camp-meta {
@@ -613,13 +581,15 @@
         font-size: 0.9rem;
         margin-bottom: 1.1rem;
       }
-      .conf27-camp-meta dt {
+      .conf27-camp-card dl.conf27-camp-meta dt {
         font-family: "Montserrat", sans-serif;
         font-size: 0.68rem;
         letter-spacing: 1.5px;
         text-transform: uppercase;
         font-weight: 700;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
+        margin-top: 0;
+        margin-bottom: 0;
         padding-top: 0.15rem;
       }
       .conf27-camp-meta dd {
@@ -630,12 +600,12 @@
       }
       .conf27-camp-meta dd .sub {
         display: block;
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-weight: 400;
         font-size: 0.82rem;
       }
       .conf27-camp-card__note {
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-size: 0.92rem;
         line-height: 1.65;
         font-weight: 500;
@@ -669,14 +639,9 @@
         }
       }
 
-      /* ----------------------------------------------------------------
-       8. TESTIMONIAL SECTION  (dark stained-glass background)
-       ---------------------------------------------------------------- */
+      /* Testimonial */
       .conf27-testimony {
         padding: 6rem 0;
-        position: relative;
-        color: #fff;
-        overflow: hidden;
         background-color: #1a0a10;
         isolation: isolate;
       }
@@ -702,12 +667,11 @@
         );
       }
       .conf27-testimony__kicker {
-        display: inline-block;
         font-family: "Montserrat", sans-serif;
         font-size: 0.72rem;
         letter-spacing: 0.3em;
         text-transform: uppercase;
-        color: #fff;
+        color: var(--color-white);
         font-weight: 700;
         padding: 0.35rem 0.75rem;
         background: rgba(255, 255, 255, 0.15);
@@ -716,7 +680,7 @@
         margin-bottom: 1.2rem;
       }
       .conf27-testimony h2 {
-        color: #fff;
+        color: var(--color-white);
         font-size: 2rem;
         margin-bottom: 1.2rem;
         text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
@@ -732,34 +696,20 @@
         margin-bottom: 1.5rem;
       }
       .conf27-embed {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
         border-radius: 8px;
         background: #000;
         box-shadow:
           0 30px 60px -20px rgba(0, 0, 0, 0.55),
           0 0 0 1px rgba(255, 255, 255, 0.08);
       }
-      .conf27-embed iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      /* ----------------------------------------------------------------
-       9. FOOTER CTA SECTION  (red gradient, centered)
-       ---------------------------------------------------------------- */
+      /* Footer CTA */
       .conf27-footer-cta {
-        background: linear-gradient(135deg, #862633 0%, #5e1b24 100%);
-        color: #fff;
+        background: linear-gradient(
+          135deg,
+          var(--color-traditional) 0%,
+          var(--color-traditional2) 100%
+        );
         padding: 5rem 0;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
       }
       .conf27-footer-cta::before {
         content: "";
@@ -767,15 +717,26 @@
         inset: 0;
         opacity: 0.08;
         background-image:
-          radial-gradient(circle at 20% 30%, #fff 0%, transparent 40%),
-          radial-gradient(circle at 80% 70%, #fff 0%, transparent 40%);
+          radial-gradient(
+            circle at 20% 30%,
+            var(--color-white) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            var(--color-white) 0%,
+            transparent 40%
+          );
       }
-      .conf27-footer-cta .container {
-        position: relative;
+      .conf27-footer-cta .conf27-footer-cta__inner {
+        max-width: 720px;
         z-index: 1;
       }
+      .conf27-cta-actions {
+        gap: 1rem;
+      }
       .conf27-footer-cta h2 {
-        color: #fff;
+        color: var(--color-white);
         font-size: 2rem;
         text-transform: uppercase;
         letter-spacing: 3px;
@@ -795,20 +756,12 @@
 
       .conf27-faq-inner {
         max-width: 900px;
-        margin: 0 auto;
       }
-      .conf27-faq-head {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-
       #faq .faq-list {
-        display: flex;
-        flex-direction: column;
         gap: 10px;
       }
       #faq .faq-item {
-        background: #fff;
+        background: var(--color-white);
         border: 1px solid var(--conf27-line);
         border-radius: 4px;
         overflow: hidden;
@@ -817,7 +770,7 @@
           box-shadow 0.25s ease;
       }
       #faq .faq-item.open {
-        border-color: var(--conf27-trad);
+        border-color: var(--color-traditional);
         box-shadow: 0 10px 28px -18px rgba(134, 38, 51, 0.3);
       }
       #faq .faq-q {
@@ -838,17 +791,17 @@
         transition: color 0.25s ease;
       }
       #faq .faq-q:hover {
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
       }
       #faq .faq-item.open .faq-q {
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
       }
       #faq .faq-icon {
         width: 24px;
         height: 24px;
         position: relative;
         flex-shrink: 0;
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
       }
       #faq .faq-icon::before,
       #faq .faq-icon::after {
@@ -879,7 +832,7 @@
       }
       #faq .faq-a__inner {
         padding: 0 1.6rem 1.4rem;
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-size: 0.95rem;
         line-height: 1.7;
         font-weight: 500;
@@ -892,19 +845,16 @@
       }
       #faq .faq-foot {
         margin-top: 2.5rem;
-        text-align: center;
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         font-size: 0.95rem;
       }
       #faq .faq-foot a {
-        color: var(--conf27-trad);
+        color: var(--color-traditional);
       }
 
-      /* ----------------------------------------------------------------
-       Misc helpers for this page
-       ---------------------------------------------------------------- */
+      /* Page helpers */
       .conf27-lead {
-        color: var(--conf27-muted);
+        color: var(--color-traditional3);
         margin-bottom: 1.2rem;
       }
       .conf27-sec-title {
@@ -913,7 +863,6 @@
       }
       .conf27-wrap {
         max-width: 1200px;
-        margin: 0 auto;
         padding: 0 2rem;
       }
 
@@ -936,17 +885,23 @@
     <!-- ================================================================
        SECTION 1: HERO
        ================================================================ -->
-    <section class="conf27-hero">
-      <div class="conf27-hero__bg"></div>
-      <div class="conf27-hero__content">
-        <div class="conf27-hero__eyebrow">2026&ndash;2027</div>
+    <main class="conf27-page">
+    <section
+      class="conf27-hero position-relative d-flex align-items-center justify-content-center text-center text-white overflow-hidden"
+    >
+      <div class="conf27-hero__content mx-auto">
+        <div class="conf27-hero__eyebrow d-inline-flex align-items-center">
+          2026&ndash;2027
+        </div>
         <h1 class="conf27-hero__title">Confirmation</h1>
         <p class="conf27-hero__sub">
           A year-long journey for sixth-grade students to build a biblical
           foundation, grow in personal faith, and make their faith in Christ
           their own.
         </p>
-        <div class="conf27-hero__btns">
+        <div
+          class="conf27-hero__btns d-flex flex-wrap justify-content-center"
+        >
           <a class="twmc--btn twmc--btn--traditional" href="#register">
             <i class="fa-solid fa-user-plus mr-1"></i> Register
           </a>
@@ -955,7 +910,10 @@
           </a>
         </div>
       </div>
-      <div class="conf27-scroll" aria-hidden="true">
+      <div
+        class="conf27-scroll d-flex flex-column align-items-center"
+        aria-hidden="true"
+      >
         <span>Scroll</span>
         <i class="fa-solid fa-angle-down"></i>
       </div>
@@ -1089,10 +1047,7 @@
                 alt=""
               />
               <div class="conf27-curr-card__phase">
-                <span
-                  class="cdot"
-                  style="background: var(--conf27-roots)"
-                ></span
+                <span class="cdot"></span
                 >Phase 01
               </div>
               <h3 class="conf27-curr-card__name">Roots</h3>
@@ -1113,7 +1068,7 @@
                 alt=""
               />
               <div class="conf27-curr-card__phase">
-                <span class="cdot" style="background: var(--conf27-grow)"></span
+                <span class="cdot"></span
                 >Phase 02
               </div>
               <h3 class="conf27-curr-card__name">Grow</h3>
@@ -1134,10 +1089,7 @@
                 alt=""
               />
               <div class="conf27-curr-card__phase">
-                <span
-                  class="cdot"
-                  style="background: var(--conf27-thrive)"
-                ></span
+                <span class="cdot"></span
                 >Phase 03
               </div>
               <h3 class="conf27-curr-card__name">Thrive</h3>
@@ -1272,16 +1224,25 @@
                     Covenant Church at Creekside
                   </div>
                 </div>
+                <span class="conf27-camp-badge conf27-camp-badge--muted">
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Via The
+                  Woodlands
+                </span>
               </div>
+              <p class="conf27-camp-card__note">
+                Confirmation is not offered at the Creekside campus this year.
+                However, Creekside families are invited to join The Woodlands
+                program on Sunday mornings.
+              </p>
               <dl class="conf27-camp-meta">
                 <dt>When</dt>
                 <dd>
-                  Sundays, 4:00&ndash;5:30 p.m.<span class="sub"
+                  Sundays, 9:00&ndash;10:15 a.m.<span class="sub"
                     >Starts Sunday, Aug. 16</span
                   >
                 </dd>
                 <dt>Where</dt>
-                <dd>Creekside Campus</dd>
+                <dd>The Woodlands Campus, Wesley Hall</dd>
                 <dt>Fee</dt>
                 <dd>
                   $55 per student<span class="sub"
@@ -1292,7 +1253,7 @@
               <div class="conf27-camp-card__foot">
                 <a
                   class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7260"
+                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7259"
                   >Register Student</a
                 >
               </div>
@@ -1353,7 +1314,7 @@
                 Creekside.
               </h4>
               <p class="conf27-camp-card__note">
-                <span lang="es" style="display: block; margin-top: 0.3rem">
+                <span lang="es" class="d-block mt-1">
                   <em
                     >El programa de Confirmación está disponible en español en
                     la Iglesia Covenant en Creekside.</em
@@ -1363,7 +1324,7 @@
 
               <!---  <p class="conf27-camp-card__note">
                 Unfortunately, Confirmation is not available in Spanish this year. Students are welcome to register for the English-language program at The Woodlands or Creekside.
-                <span lang="es" style="display: block; margin-top: 0.3rem">
+                <span lang="es" class="d-block mt-1">
                   <em
                     >Desafortunadamente, la Confirmación no está disponible en español este año. Los estudiantes pueden inscribirse en el programa en inglés en The Woodlands o Creekside.</em
                   >
@@ -1388,7 +1349,9 @@
     <!-- ================================================================
        SECTION 5: TESTIMONIAL  (stained-glass background + video)
        ================================================================ -->
-    <section class="conf27-testimony">
+    <section
+      class="conf27-testimony position-relative text-white overflow-hidden"
+    >
       <div class="container conf27-wrap">
         <div class="row">
           <!-- Text column -->
@@ -1415,10 +1378,12 @@
 
           <!-- Video column -->
           <div class="col-sm-12 col-md-7">
-            <div class="conf27-embed">
+            <div
+              class="conf27-embed embed-responsive embed-responsive-16by9"
+            >
               <iframe
+                class="embed-responsive-item"
                 src="https://player.vimeo.com/video/985158847"
-                frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
                 title="Confirmation stories"
@@ -1436,13 +1401,13 @@
        ================================================================ -->
     <section class="conf27-section-grey" id="faq">
       <div class="conf27-wrap">
-        <div class="conf27-faq-inner">
-          <div class="conf27-faq-head">
+        <div class="conf27-faq-inner mx-auto">
+          <div class="conf27-faq-head text-center mb-5">
             <span class="conf27-eyebrow">Questions, Answered</span>
             <h2 class="conf27-sec-title">Confirmation FAQ</h2>
           </div>
 
-          <div class="faq-list" id="faq-list">
+          <div class="faq-list d-flex flex-column" id="faq-list">
             <div class="faq-item open">
               <button class="faq-q" type="button">
                 What is a house group?<span
@@ -1656,7 +1621,7 @@
             </div>
           </div>
 
-          <p class="faq-foot">
+          <p class="faq-foot text-center">
             Still have questions?
             <a href="mailto:confirmation@twmc.org" class="a-traditional"
               >Contact our Confirmation team &rarr;</a
@@ -1670,24 +1635,19 @@
     <!-- ================================================================
        SECTION 7: FOOTER CTA / REGISTRATION
        ================================================================ -->
-    <section class="conf27-footer-cta" id="register">
+    <section
+      class="conf27-footer-cta position-relative text-center text-white overflow-hidden"
+      id="register"
+    >
       <div
-        class="container conf27-wrap"
-        style="max-width: 720px; text-align: center"
+        class="container conf27-wrap conf27-footer-cta__inner position-relative"
       >
         <h2>Ready to begin the journey?</h2>
         <p>
           Registration is now open for the 2026–2027 Confirmation class.
           Register your student today or sign up to serve as a parent leader.
         </p>
-        <div
-          style="
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-          "
-        >
+        <div class="conf27-cta-actions d-flex flex-wrap justify-content-center">
           <a class="twmc--btn twmc--btn--outline-white" href="#find-your-campus"
             >Register Student</a
           >
@@ -1701,6 +1661,7 @@
       </div>
     </section>
     <!-- END SECTION 7: FOOTER CTA -->
+    </main>
 
     <!-- FAQ accordion -->
     <script>
