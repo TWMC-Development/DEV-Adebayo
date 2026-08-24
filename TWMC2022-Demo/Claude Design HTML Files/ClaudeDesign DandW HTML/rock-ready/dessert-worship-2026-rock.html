@@ -19,8 +19,25 @@ a:hover{color:#321729}
 summary::-webkit-details-marker{display:none}
 .dw-mobile-gallery-photo{display:none!important}
 .dw-mobile-sticky-cta{display:none!important}
+#dw2026 .dw-btn{transition:color .3s ease-in-out,background .3s ease-in-out,border-color .3s ease-in-out,box-shadow .3s ease-in-out,transform .3s ease-in-out;transform-origin:center;text-decoration:none}
+#dw2026 .dw-btn:hover,#dw2026 .dw-btn:focus-visible{transform:scale(1.02)!important;text-decoration:none}
+#dw2026 .dw-btn-gold:hover,#dw2026 .dw-btn-gold:focus-visible{background:linear-gradient(100deg,#f5c978,#eab75e)!important;color:#321729!important;box-shadow:0 9px 24px rgba(50,23,41,.22)}
+#dw2026 .dw-btn-dark:hover,#dw2026 .dw-btn-dark:focus-visible{background:#773f57!important;border-color:#773f57!important;color:#fffbda!important}
+#dw2026 .dw-btn-outline-gold:hover,#dw2026 .dw-btn-outline-gold:focus-visible{background:#f5c978!important;border-color:#f5c978!important;color:#321729!important}
+#dw2026 .dw-btn-outline-dark:hover,#dw2026 .dw-btn-outline-dark:focus-visible{background:#321729!important;border-color:#321729!important;color:#fffbda!important}
+#dw2026 .dw-btn-lightbox:hover,#dw2026 .dw-btn-lightbox:focus-visible{background:rgba(255,251,218,.14)!important;color:#fffbda!important}
+#dw2026 .dw-btn:focus-visible{outline:3px solid #f5c978;outline-offset:3px}
+#dw2026 [onclick^="dwFaq"]{transition:background-color .15s ease-in-out}
+#dw2026 [onclick^="dwFaq"]:hover{background:#f7f1f4}
 #dw2026 [data-gallery-open]{cursor:pointer}
 #dw2026 [data-gallery-open]:focus-visible{outline:3px solid #f5c978;outline-offset:3px}
+#dw2026 .dw-ticket-row{position:relative}
+#dw2026 .dw-info{display:inline-flex;vertical-align:middle;margin-left:5px}
+#dw2026 .dw-info-trigger{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;padding:0;border:1px solid #773f57;border-radius:50%;background:transparent;color:#773f57;font-family:Georgia,serif;font-size:12px;font-weight:700;line-height:1;cursor:help}
+#dw2026 .dw-info-trigger:focus-visible{outline:2px solid #773f57;outline-offset:2px}
+#dw2026 .dw-info-tip{position:absolute;z-index:20;top:calc(100% + 7px);right:0;left:0;padding:10px 12px;border-radius:4px;background:#773f57;box-shadow:0 6px 18px rgba(50,23,41,.24);color:#fffbda;font-size:12px;font-weight:500;line-height:1.55;text-align:left;opacity:0;visibility:hidden;transform:translateY(-3px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;pointer-events:none}
+#dw2026 .dw-info:hover .dw-info-tip,#dw2026 .dw-info:focus-within .dw-info-tip{opacity:1;visibility:visible;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){#dw2026 .dw-btn{transition:none}#dw2026 .dw-btn:hover,#dw2026 .dw-btn:focus-visible{transform:none!important}}
 
 /* Mobile layout — modeled after the approved 1E wireframe. */
 @media (max-width:767px){
@@ -38,7 +55,7 @@ summary::-webkit-details-marker{display:none}
 #dw2026>.dw-mobile-sticky-cta{display:block!important;box-sizing:border-box;position:fixed;z-index:1000;right:14px;bottom:env(safe-area-inset-bottom,0px);left:14px;background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729!important;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:17px 20px;border-radius:0;text-align:center;box-shadow:0 -4px 18px rgba(0,0,0,.18)}
 
 #dw2026 [data-screen-label="Event details"]{padding:10px 20px!important}
-#dw2026 [data-screen-label="Event details"]>div{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+#dw2026 [data-screen-label="Event details"]>div{display:grid!important;grid-template-columns:1fr!important;gap:0!important;width:100%;max-width:320px!important;margin:0 auto!important}
 #dw2026 [data-screen-label="Event details"]>div>div{display:grid!important;grid-template-columns:30% 70%!important;align-items:center!important;justify-content:stretch!important;min-width:0;padding:10px 0!important;border:0!important;border-bottom:1px solid rgba(255,251,218,.18)!important}
 #dw2026 [data-screen-label="Event details"]>div>div:last-child{border-bottom:0!important}
 #dw2026 [data-screen-label="Event details"] img{display:block!important;justify-self:center!important;width:26px!important;height:26px!important}
@@ -139,7 +156,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 </div>
 
-<a href="#tickets" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Save the Date</a>
+<a class="dw-btn dw-btn-gold" href="#tickets" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both">Save the Date</a>
 </section>
 
 <section data-screen-label="Event details" style="background:#773f57;border-top:2px solid #f5c978;padding:26px 24px">
@@ -161,8 +178,8 @@ summary::-webkit-details-marker{display:none}
 
 <section data-screen-label="Intro" style="background:#faf8f5;padding:72px 24px 64px">
 <div style="max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px">
-<span style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#773f57">Women's Ministry</span>
-<p style="margin:0;font-size:18px;line-height:1.75;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<span style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#773f57">About Dessert and Worship</span>
+<p style="margin:0;font-size:18px;line-height:1.75;color:#333">Celebrate the arrival of the Christmas season on Thursday, December 3, with an uplifting evening of fellowship, decadent desserts, powerful worship, and an inspiring message from author, speaker, and Bible study teacher Kristi McLelland. Join TWMC Women’s Ministry as we begin the Advent season together.</p>
 </div>
 </section>
 
@@ -179,8 +196,8 @@ summary::-webkit-details-marker{display:none}
 
 <div style="display:flex;flex-direction:column;background:#fff;border:1px solid #e8e5e1;border-radius:4px;box-shadow:0 2px 20px rgba(0,0,0,.1);overflow:hidden">
 <div style="background:#321729;padding:20px 28px">
-<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Dessert and Worship</div>
-<div style="font-size:13px;color:#c9a6b4;margin-top:3px">The full evening — dessert, worship and the message</div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Dessert, Worship, &amp; Speaker</div>
+<div style="font-size:13px;color:#c9a6b4;margin-top:3px">The entire evening is included with this ticket.</div>
 </div>
 <div style="padding:24px 28px;border-bottom:1px dashed #e8e5e1;display:flex;flex-direction:column;gap:11px">
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#e56b62;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#333">Dessert at 6:00 p.m. throughout the main building</span></div>
@@ -188,25 +205,25 @@ summary::-webkit-details-marker{display:none}
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#e56b62;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#333">Book signing to follow at 9:15 p.m. in the Atrium</span></div>
 </div>
 <div style="padding:22px 28px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>VIP — Table of 8</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$525</b></div>
+<div class="dw-ticket-row" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>VIP — Table of 8<span class="dw-info"><button class="dw-info-trigger" type="button" aria-label="VIP Table of 8 benefits" aria-describedby="dw-vip-table-tip">i</button><span class="dw-info-tip" id="dw-vip-table-tip" role="tooltip">Includes a meet-and-greet with Kristi McLelland, a signed book, a photo opportunity, and reserved Sanctuary seating.</span></span></span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$525</b></div>
 <div style="height:1px;background:#f0edea"></div>
-<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>VIP — Individual</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$75</b></div>
+<div class="dw-ticket-row" style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>VIP — Individual<span class="dw-info"><button class="dw-info-trigger" type="button" aria-label="VIP Individual benefits" aria-describedby="dw-vip-individual-tip">i</button><span class="dw-info-tip" id="dw-vip-individual-tip" role="tooltip">Includes a meet-and-greet with Kristi McLelland, a signed book, a photo opportunity, and reserved Sanctuary seating.</span></span></span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$75</b></div>
 <div style="height:1px;background:#f0edea"></div>
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>Dessert &amp; Worship — Table of 8</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$350</b></div>
 <div style="height:1px;background:#f0edea"></div>
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>Dessert &amp; Worship — Individual</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$50</b></div>
 <div style="font-size:13px;line-height:1.6;color:#5c5c5c;margin-top:2px">Child care is included in the price of registration.</div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:18px">
-<a href="#" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">VIP Tickets</a>
-<a href="#" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px);color:#fffbda">Dessert and Worship</a>
+<a class="dw-btn dw-btn-gold" href="#" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">VIP Tickets</a>
+<a class="dw-btn dw-btn-dark" href="#" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Dessert and Worship</a>
 </div>
 </div>
 </div>
 
 <div style="display:flex;flex-direction:column;background:#fff;border:1px solid #e8e5e1;border-radius:4px;box-shadow:0 2px 20px rgba(0,0,0,.1);overflow:hidden">
 <div style="background:#773f57;padding:20px 28px">
-<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Worship &amp; Speaker</div>
-<div style="font-size:13px;color:#e8c9d2;margin-top:3px">The Sanctuary portion of the evening only</div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Worship &amp; Speaker Only</div>
+<div style="font-size:13px;color:#e8c9d2;margin-top:3px">Dessert is not included with this ticket.</div>
 </div>
 <div style="padding:24px 28px;border-bottom:1px dashed #e8e5e1;display:flex;flex-direction:column;gap:11px">
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#e56b62;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#333">Sanctuary doors open at 7:00 p.m.</span></div>
@@ -219,7 +236,7 @@ summary::-webkit-details-marker{display:none}
 <p style="margin:0;font-size:14px;line-height:1.7;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 <div style="font-size:13px;line-height:1.6;color:#5c5c5c">Does not include dessert seating or child care. Available for purchase up until the event begins.</div>
 <div style="margin-top:auto;padding-top:18px">
-<a href="#" style="display:inline-block;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px);color:#fffbda">Worship &amp; Speaker Tickets</a>
+<a class="dw-btn dw-btn-dark" href="#" style="display:inline-block;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Worship &amp; Speaker Tickets</a>
 </div>
 </div>
 </div>
@@ -239,7 +256,7 @@ summary::-webkit-details-marker{display:none}
 <p style="margin:0;font-size:16px;line-height:1.8;color:#e8dcd2;max-width:620px">Since completing her Masters of Arts in Christian Education at Dallas Theological Seminary, she has dedicated her life to discipleship, to teaching people how to study the Bible for themselves, and to writing about how God is better than we ever knew by explaining the Bible through a Middle Eastern lens.</p>
 <p style="margin:0;font-size:16px;line-height:1.8;color:#e8dcd2;max-width:620px">Her great desire for people to truly experience the love of God birthed a ministry in which she leads biblical study trips to Israel, Turkey, Greece, and Italy.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px">
-<a href="https://www.lifeway.com/en/contributors/kristi-mclelland" style="border:1.5px solid #f5c978;color:#f5c978;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px;transition:background .3s cubic-bezier(.16,1,.3,1)" style-hover="background:#f5c978;color:#321729">Full Bio</a>
+<a class="dw-btn dw-btn-outline-gold" href="https://www.lifeway.com/en/contributors/kristi-mclelland" style="border:1.5px solid #f5c978;color:#f5c978;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px">Full Bio</a>
 </div>
 </div>
 </section>
@@ -268,8 +285,8 @@ summary::-webkit-details-marker{display:none}
 <p style="margin:0;font-size:15px;line-height:1.75;color:#333">Lots B, C, D, E, F and G on the east side of the church are closest to the Sanctuary. Follow the signage posted in the parking lots.</p>
 </div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:2px">
-<a href="https://maps.google.com/?q=2200+Lake+Woodlands+Drive+The+Woodlands+TX+77380" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px);color:#fffbda">Get Directions</a>
-<a href="https://www.thewoodlandsmethodist.org/facilities" style="border:1.5px solid #321729;color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px;transition:background .3s cubic-bezier(.16,1,.3,1)" style-hover="background:#321729;color:#fffbda">View Map</a>
+<a class="dw-btn dw-btn-dark" href="https://maps.google.com/?q=2200+Lake+Woodlands+Drive+The+Woodlands+TX+77380" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Get Directions</a>
+<a class="dw-btn dw-btn-outline-dark" href="https://www.thewoodlandsmethodist.org/facilities" style="border:1.5px solid #321729;color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px">View Map</a>
 </div>
 </div>
 </div>
@@ -296,7 +313,7 @@ summary::-webkit-details-marker{display:none}
 <img class="dw-mobile-gallery-photo" src="/Content/Women/gallery/2025-9.jpg" alt="Dessert and Worship 2025, photo 9" data-gallery-open="8" role="button" tabindex="0" style="width:100%;height:100%;object-fit:cover;border-radius:4px">
 </div>
 <div style="display:flex;justify-content:center;margin-top:32px">
-<button type="button" onclick="lbOpen()" style="border:none;cursor:pointer;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:14px 30px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">View All Photos</button>
+<button class="dw-btn dw-btn-dark" type="button" onclick="lbOpen()" style="border:none;cursor:pointer;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:14px 30px;border-radius:4px">View All Photos</button>
 </div>
 </div>
 </section>
@@ -378,20 +395,19 @@ summary::-webkit-details-marker{display:none}
 </div>
 
 </div>
-<div style="text-align:center;margin-top:34px;font-size:15px;color:#333">Still have questions? <a href="#" style="font-weight:600;border-bottom:1px solid rgba(119,63,87,.35)">Contact the Women's Ministry office</a></div>
 </div>
 </section>
 
-<a class="dw-mobile-sticky-cta" href="#tickets">Save the Date</a>
+<a class="dw-mobile-sticky-cta dw-btn dw-btn-gold" href="#tickets">Save the Date</a>
 
 <div id="lightbox" hidden>
 <div style="position:fixed;top:0;right:0;bottom:0;left:0;z-index:1100;background:rgba(24,9,18,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
 <div style="width:100%;max-width:1040px;display:flex;align-items:center;justify-content:space-between;gap:20px">
 <div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">Dessert and Worship 2025</div>
-<button type="button" onclick="lbClose()" style="border:1px solid rgba(255,251,218,.4);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">Close</button>
+<button class="dw-btn dw-btn-lightbox" type="button" onclick="lbClose()" style="border:1px solid rgba(255,251,218,.4);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:4px">Close</button>
 </div>
 <div style="width:100%;max-width:1040px;display:flex;align-items:center;gap:16px">
-<button type="button" onclick="lbStep(-1)" aria-label="Previous photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">&#8249;</button>
+<button class="dw-btn dw-btn-lightbox" type="button" onclick="lbStep(-1)" aria-label="Previous photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px">&#8249;</button>
 <img src="/Content/Women/gallery/2025-1.jpg" alt="Dessert and Worship 2025, photo 1" data-lb="0" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
 <img src="/Content/Women/gallery/2025-2.jpg" alt="Dessert and Worship 2025, photo 2" data-lb="1" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
 <img src="/Content/Women/gallery/2025-3.jpg" alt="Dessert and Worship 2025, photo 3" data-lb="2" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
@@ -402,7 +418,7 @@ summary::-webkit-details-marker{display:none}
 <img src="/Content/Women/gallery/2025-8.jpg" alt="Dessert and Worship 2025, photo 8" data-lb="7" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
 <img src="/Content/Women/gallery/2025-9.jpg" alt="Dessert and Worship 2025, photo 9" data-lb="8" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
 <img src="/Content/Women/gallery/2025-10.jpg" alt="Dessert and Worship 2025, photo 10" data-lb="9" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<button type="button" onclick="lbStep(1)" aria-label="Next photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">&#8250;</button>
+<button class="dw-btn dw-btn-lightbox" type="button" onclick="lbStep(1)" aria-label="Next photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px">&#8250;</button>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
 <div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#e8c9d2"><i id="lbCount" style="font-style:normal">1 of 10</i></div>
@@ -443,10 +459,10 @@ document.querySelectorAll("[data-gallery-open]").forEach(function(el){
 
 // ---- scroll-driven flower reveals (works in every browser) ----
 var FX={
- TR:{from:[300,-200,14],to:[240,-160,-14],op:.55,hold:[.34,.66]},
- BL:{from:[-300,200,-14],to:[-240,160,14],op:.5,hold:[.30,.72]},
- BR:{from:[300,200,14],to:[240,160,-14],op:.5,hold:[.30,.72]},
- BRS:{from:[320,215,15],to:[256,172,-15],op:1,hold:[.30,.72]},
+ TR:{from:[300,-200,14],to:[240,-160,-14],op:.55,hold:[.34,1]},
+ BL:{from:[-300,200,-14],to:[-240,160,14],op:.5,hold:[.30,1]},
+ BR:{from:[300,200,14],to:[240,160,-14],op:.5,hold:[.30,1]},
+ BRS:{from:[320,215,15],to:[256,172,-15],op:1,hold:[.30,1]},
  INBL:{from:[-300,200,-14],to:null,op:.5,hold:[1,1]},
  INBR:{from:[300,200,14],to:null,op:.5,hold:[1,1]}};
 var flowers=[].slice.call(document.querySelectorAll("[data-fx]")).map(function(el){
