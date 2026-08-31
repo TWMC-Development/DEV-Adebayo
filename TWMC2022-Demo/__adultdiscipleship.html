@@ -612,6 +612,190 @@
       <!-- End of Hero -->
       <!-- END Adult Discipleship: Hero Block -->
 
+      <!-- START Discipleship Expo: Compact Post-Event Banner -->
+      <!-- Scoped Banner CSS -->
+      <style>
+        .disexpo-banner {
+          background-color: #1f4332;
+          background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_adultdiscipleship-expo-2026/DIS_Expo_FeatureBanner_BG.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          overflow: hidden;
+          padding: 0.84375rem 0;
+        }
+
+        .disexpo-banner .disexpo-banner__row {
+          align-items: center;
+          display: flex;
+          gap: 12rem;
+          justify-content: center;
+          min-height: 126px;
+        }
+
+        .disexpo-banner .disexpo-banner__visual {
+          align-items: center;
+          display: flex;
+          flex: 0 1 auto;
+          gap: 10px;
+          min-width: 0;
+        }
+
+        .disexpo-banner .disexpo-banner__content {
+          flex: 0 1 234px;
+          max-width: 234px;
+        }
+
+        .disexpo-banner .disexpo-banner__title {
+          filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.24));
+          height: auto;
+          max-width: 234px;
+          width: 100%;
+        }
+
+        .disexpo-banner .disexpo-banner__details {
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 210px;
+          flex-direction: column;
+        }
+
+        .disexpo-banner .disexpo-banner__button {
+          align-items: center;
+          background: transparent;
+          border: 2px solid rgba(255, 255, 255, 0.8);
+          border-radius: 6px;
+          color: #fff;
+          display: inline-flex;
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.75rem;
+          font-weight: 700;
+          height: 44px;
+          justify-content: center;
+          letter-spacing: 1px;
+          min-width: 140px;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .disexpo-banner .disexpo-banner__button:hover,
+        .disexpo-banner .disexpo-banner__button:focus {
+          background-color: #fff;
+          border-color: #fff;
+          color: #163325;
+          text-decoration: none;
+        }
+
+        .disexpo-banner .disexpo-banner__art {
+          flex: 0 1 170px;
+          text-align: center;
+        }
+
+        .disexpo-banner .disexpo-banner__art img {
+          filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.3));
+          height: auto;
+          max-height: 117px;
+          max-width: 100%;
+          width: auto;
+        }
+
+        @media (max-width: 767px) {
+          .disexpo-banner {
+            padding: 0.7875rem 0;
+          }
+
+          .disexpo-banner .disexpo-banner__row {
+            gap: 6rem;
+            min-height: 108px;
+          }
+
+          .disexpo-banner .disexpo-banner__visual {
+            flex-basis: 68%;
+          }
+
+          .disexpo-banner .disexpo-banner__title {
+            max-width: 189px;
+          }
+
+          .disexpo-banner .disexpo-banner__art {
+            flex: 0 1 40%;
+          }
+
+          .disexpo-banner .disexpo-banner__art img {
+            max-height: 90px;
+          }
+
+          .disexpo-banner .disexpo-banner__details {
+            flex-basis: 30%;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .disexpo-banner .disexpo-banner__row {
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          .disexpo-banner .disexpo-banner__visual {
+            flex: 0 0 100%;
+            justify-content: center;
+          }
+
+          .disexpo-banner .disexpo-banner__art {
+            flex: 0 0 28%;
+          }
+
+          .disexpo-banner .disexpo-banner__details {
+            align-items: center;
+            flex: 0 0 100%;
+            flex-direction: row;
+            gap: 0.75rem;
+            justify-content: center;
+          }
+
+          .disexpo-banner .disexpo-banner__button {
+            font-size: 0.65rem;
+            height: 44px;
+            min-width: 120px;
+            padding: 0.4rem 0.75rem;
+          }
+        }
+      </style>
+      <!-- End Scoped Banner CSS -->
+
+      <section class="disexpo-banner" aria-label="Discipleship Expo 2026">
+        <div class="container">
+          <div class="disexpo-banner__row">
+            <div class="disexpo-banner__visual">
+              <div class="disexpo-banner__art" aria-hidden="true">
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_adultdiscipleship-expo-2026/DIS_Expo_FeatureBanner_IMAGES.png"
+                  alt=""
+                />
+              </div>
+
+              <div class="disexpo-banner__content">
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_adultdiscipleship-expo-2026/DIS_Expo_FeatureBanner_TITLE.png"
+                  alt="Find your place at the Discipleship Expo"
+                  class="disexpo-banner__title"
+                />
+              </div>
+            </div>
+
+            <div class="disexpo-banner__details">
+              <a href="/expo" class="disexpo-banner__button"
+                >Learn more</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END Discipleship Expo: Compact Post-Event Banner -->
+
       <!-- START Adult Discipleship: Intro Block -->
       <!-- Intro -->
       <section id="twmc-adultdisc--hero" class="adultdisc-hero">

@@ -27,6 +27,9 @@ summary::-webkit-details-marker{display:none}
 #dw2026 .dw-btn-outline-dark:hover,#dw2026 .dw-btn-outline-dark:focus-visible{background:#321729!important;border-color:#321729!important;color:#fffbda!important}
 #dw2026 .dw-btn-lightbox:hover,#dw2026 .dw-btn-lightbox:focus-visible{background:rgba(255,251,218,.14)!important;color:#fffbda!important}
 #dw2026 .dw-btn:focus-visible{outline:3px solid #f5c978;outline-offset:3px}
+#dw2026 .dw-ticket-btn[aria-disabled="true"]{cursor:not-allowed;transform:none!important;box-shadow:none!important}
+#dw2026 .dw-ticket-btn.dw-btn-gold[aria-disabled="true"],#dw2026 .dw-ticket-btn.dw-btn-gold[aria-disabled="true"]:hover,#dw2026 .dw-ticket-btn.dw-btn-gold[aria-disabled="true"]:focus-visible{background:#d7cba7!important;color:#5f5445!important}
+#dw2026 .dw-ticket-btn.dw-btn-dark[aria-disabled="true"],#dw2026 .dw-ticket-btn.dw-btn-dark[aria-disabled="true"]:hover,#dw2026 .dw-ticket-btn.dw-btn-dark[aria-disabled="true"]:focus-visible{background:#8b7a82!important;color:#f4edf0!important}
 #dw2026 [onclick^="dwFaq"]{transition:background-color .15s ease-in-out}
 #dw2026 [onclick^="dwFaq"]:hover{background:#f7f1f4}
 #dw2026 [data-gallery-open]{cursor:pointer}
@@ -37,6 +40,11 @@ summary::-webkit-details-marker{display:none}
 #dw2026 .dw-info-trigger:focus-visible{outline:2px solid #773f57;outline-offset:2px}
 #dw2026 .dw-info-tip{position:absolute;z-index:20;top:calc(100% + 7px);right:0;left:0;padding:10px 12px;border-radius:4px;background:#773f57;box-shadow:0 6px 18px rgba(50,23,41,.24);color:#fffbda;font-size:12px;font-weight:500;line-height:1.55;text-align:left;opacity:0;visibility:hidden;transform:translateY(-3px);transition:opacity .15s ease,transform .15s ease,visibility .15s ease;pointer-events:none}
 #dw2026 .dw-info:hover .dw-info-tip,#dw2026 .dw-info:focus-within .dw-info-tip{opacity:1;visibility:visible;transform:translateY(0)}
+#dw2026 #dwCalendar[hidden]{display:none!important}
+#dw2026 .dw-calendar-backdrop{position:fixed;z-index:1200;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(24,9,18,.84)}
+#dw2026 .dw-calendar-card{box-sizing:border-box;width:100%;max-width:460px;padding:28px;border:1px solid rgba(245,201,120,.5);border-radius:5px;background:#773f57;box-shadow:0 18px 48px rgba(24,9,18,.38);color:#fffbda}
+#dw2026 .dw-calendar-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+#dw2026 .dw-calendar-actions .dw-btn{box-sizing:border-box;width:100%;border:1px solid #f5c978;cursor:pointer;text-align:center}
 @media (prefers-reduced-motion:reduce){#dw2026 .dw-btn{transition:none}#dw2026 .dw-btn:hover,#dw2026 .dw-btn:focus-visible{transform:none!important}}
 
 /* Mobile layout — modeled after the approved 1E wireframe. */
@@ -156,7 +164,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 </div>
 
-<a class="dw-btn dw-btn-gold" href="#tickets" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both">Save the Date</a>
+<a class="dw-btn dw-btn-gold" data-event-cta href="#tickets" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both">Save the Date</a>
 </section>
 
 <section data-screen-label="Event details" style="background:#773f57;border-top:2px solid #f5c978;padding:26px 24px">
@@ -214,8 +222,8 @@ summary::-webkit-details-marker{display:none}
 <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#333"><span>Dessert &amp; Worship — Individual</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#321729">$50</b></div>
 <div style="font-size:13px;line-height:1.6;color:#5c5c5c;margin-top:2px">Child care is included in the price of registration.</div>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:18px">
-<a class="dw-btn dw-btn-gold" href="#" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">VIP Tickets</a>
-<a class="dw-btn dw-btn-dark" href="#" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Dessert and Worship</a>
+<a class="dw-btn dw-btn-gold dw-ticket-btn" role="link" aria-disabled="true" tabindex="0" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7548" data-ticket-label="VIP Tickets" data-presale-label="VIP — Available Oct. 4" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">VIP — Available Oct. 4</a>
+<a class="dw-btn dw-btn-dark dw-ticket-btn" role="link" aria-disabled="true" tabindex="0" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7547" data-ticket-label="Dessert and Worship" data-presale-label="Dessert &amp; Worship — Available Oct. 4" style="background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Dessert &amp; Worship — Available Oct. 4</a>
 </div>
 </div>
 </div>
@@ -236,7 +244,7 @@ summary::-webkit-details-marker{display:none}
 <p style="margin:0;font-size:14px;line-height:1.7;color:#333">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 <div style="font-size:13px;line-height:1.6;color:#5c5c5c">Does not include dessert seating or child care. Available for purchase up until the event begins.</div>
 <div style="margin-top:auto;padding-top:18px">
-<a class="dw-btn dw-btn-dark" href="#" style="display:inline-block;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Worship &amp; Speaker Tickets</a>
+<a class="dw-btn dw-btn-dark dw-ticket-btn" role="link" aria-disabled="true" tabindex="0" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7546" data-ticket-label="Worship &amp; Speaker Tickets" data-presale-label="Worship &amp; Speaker — Available Oct. 4" style="display:inline-block;background:#321729;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px">Worship &amp; Speaker — Available Oct. 4</a>
 </div>
 </div>
 </div>
@@ -398,7 +406,22 @@ summary::-webkit-details-marker{display:none}
 </div>
 </section>
 
-<a class="dw-mobile-sticky-cta dw-btn dw-btn-gold" href="#tickets">Save the Date</a>
+<a class="dw-mobile-sticky-cta dw-btn dw-btn-gold" data-event-cta href="#tickets">Save the Date</a>
+
+<div id="dwCalendar" hidden aria-hidden="true">
+<div class="dw-calendar-backdrop" onclick="if(event.target===this)dwCalendarClose()">
+<div class="dw-calendar-card" role="dialog" aria-modal="true" aria-labelledby="dwCalendarTitle">
+<h2 id="dwCalendarTitle" style="margin:0;font-family:'Montserrat',sans-serif;font-size:24px;line-height:1.25;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Add to Calendar</h2>
+<p style="margin:9px 0 0;font-size:14px;line-height:1.65;color:#e8c9d2">Christmas Dessert and Worship<br>Thursday, December 3, 2026 · 6:00 p.m.<br>The Woodlands Campus</p>
+<div class="dw-calendar-actions">
+<a class="dw-btn dw-btn-gold" id="dwGoogleCalendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Christmas%20Dessert%20and%20Worship%202026&amp;dates=20261204T000000Z%2F20261204T033000Z&amp;details=Dessert%20at%206%3A00%20p.m.%3B%20worship%20and%20speaker%20at%207%3A30%20p.m.%2C%20featuring%20Kristi%20McLelland.&amp;location=The%20Woodlands%20Methodist%20Church%2C%202200%20Lake%20Woodlands%20Drive%2C%20The%20Woodlands%2C%20TX" target="_blank" rel="noopener" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:12px 18px;border-radius:4px">Google Calendar</a>
+<a class="dw-btn dw-btn-outline-gold" href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Christmas%20Dessert%20and%20Worship%202026&amp;startdt=2026-12-04T00%3A00%3A00Z&amp;enddt=2026-12-04T03%3A30%3A00Z&amp;body=Dessert%20at%206%3A00%20p.m.%3B%20worship%20and%20speaker%20at%207%3A30%20p.m.%2C%20featuring%20Kristi%20McLelland.&amp;location=The%20Woodlands%20Methodist%20Church%2C%202200%20Lake%20Woodlands%20Drive%2C%20The%20Woodlands%2C%20TX" target="_blank" rel="noopener" style="background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:12px 18px;border-radius:4px">Outlook Calendar</a>
+<button class="dw-btn dw-btn-outline-gold" type="button" onclick="dwCalendarDownload()" style="background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:12px 18px;border-radius:4px">Apple / iCal (.ics)</button>
+<button class="dw-btn dw-btn-lightbox" type="button" onclick="dwCalendarClose()" style="margin-top:4px;border-color:rgba(255,251,218,.4);background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:10px 18px;border-radius:4px">Close</button>
+</div>
+</div>
+</div>
+</div>
 
 <div id="lightbox" hidden>
 <div style="position:fixed;top:0;right:0;bottom:0;left:0;z-index:1100;background:rgba(24,9,18,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
@@ -431,12 +454,27 @@ summary::-webkit-details-marker{display:none}
 <script>
 var TICKETS_OPEN=new Date("2026-10-04T17:00:00-05:00").getTime();
 function pad(n){return String(n).padStart(2,"0");}
+function updateEventCtas(){var open=Date.now()>=TICKETS_OPEN;
+ document.querySelectorAll("[data-event-cta]").forEach(function(el){el.textContent=open?"View Tickets":"Save the Date";});
+ document.querySelectorAll("[data-registration-url]").forEach(function(el){el.textContent=open?el.dataset.ticketLabel:el.dataset.presaleLabel;
+  if(open){el.href=el.dataset.registrationUrl;el.removeAttribute("aria-disabled");el.removeAttribute("tabindex");}
+  else{el.removeAttribute("href");el.setAttribute("aria-disabled","true");el.setAttribute("tabindex","0");}});}
 function tick(){var ms=Math.max(0,TICKETS_OPEN-Date.now());
  var d=Math.floor(ms/86400000);ms-=d*86400000;var h=Math.floor(ms/3600000);ms-=h*3600000;
  var m=Math.floor(ms/60000);ms-=m*60000;var sec=Math.floor(ms/1000);
  var set=function(i,v){var e=document.getElementById(i);if(e)e.textContent=v;};
- set("cdD",String(d));set("cdH",pad(h));set("cdM",pad(m));set("cdS",pad(sec));}
+ set("cdD",String(d));set("cdH",pad(h));set("cdM",pad(m));set("cdS",pad(sec));updateEventCtas();}
 tick();setInterval(tick,1000);
+
+var dwCalendarReturn=null;
+function dwCalendarOpen(){var el=document.getElementById("dwCalendar");dwCalendarReturn=document.activeElement;el.hidden=false;el.setAttribute("aria-hidden","false");
+ var first=document.getElementById("dwGoogleCalendar");if(first)first.focus();}
+function dwCalendarClose(){var el=document.getElementById("dwCalendar");el.hidden=true;el.setAttribute("aria-hidden","true");if(dwCalendarReturn)dwCalendarReturn.focus();}
+function dwCalendarDownload(){var lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//The Woodlands Methodist Church//Dessert and Worship 2026//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH","BEGIN:VEVENT","UID:dessert-worship-2026@thewoodlandsmethodist.org","DTSTAMP:20260825T000000Z","DTSTART:20261204T000000Z","DTEND:20261204T033000Z","SUMMARY:Christmas Dessert and Worship 2026","DESCRIPTION:Dessert at 6:00 p.m.; worship and speaker at 7:30 p.m.\\, featuring Kristi McLelland.","LOCATION:The Woodlands Methodist Church\\, 2200 Lake Woodlands Drive\\, The Woodlands\\, TX","END:VEVENT","END:VCALENDAR"];
+ var url=URL.createObjectURL(new Blob([lines.join("\r\n")],{type:"text/calendar;charset=utf-8"}));var a=document.createElement("a");a.href=url;a.download="christmas-dessert-and-worship-2026.ics";document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);}
+document.querySelectorAll("[data-event-cta]").forEach(function(el){el.addEventListener("click",function(e){if(Date.now()<TICKETS_OPEN){e.preventDefault();dwCalendarOpen();}});});
+document.querySelectorAll("[data-registration-url]").forEach(function(el){el.addEventListener("click",function(e){if(Date.now()<TICKETS_OPEN)e.preventDefault();});});
+document.addEventListener("keydown",function(e){var el=document.getElementById("dwCalendar");if(e.key==="Escape"&&!el.hidden)dwCalendarClose();});
 
 var faqOpen=0;
 function dwFaq(i){faqOpen=(faqOpen===i)?-1:i;
