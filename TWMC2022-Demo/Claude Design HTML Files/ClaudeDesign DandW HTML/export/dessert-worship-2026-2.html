@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#faf8f5;font-family:'Open Sans',sans-serif;font-size:16px;font-weight:500;line-height:1.7;color:#333;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+@keyframes dwInL{from{opacity:0;transform:translateX(-54px)}to{opacity:1;transform:translateX(0)}}
+@keyframes dwInR{from{opacity:0;transform:translateX(54px)}to{opacity:1;transform:translateX(0)}}
+@keyframes dwInT{from{opacity:0;transform:translateY(-46px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dwInB{from{opacity:0;transform:translateY(46px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dwRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+a{color:#f5c978;text-decoration:none}
+a:hover{color:#fdedc0}
+summary::-webkit-details-marker{display:none}
+</style></helmet>
+
+<div style="overflow-x:clip">
+
+<section data-screen-label="Hero" style="position:relative;overflow:clip;background:#321729 url('TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_FeatureBanner_Background.png') center/cover no-repeat;min-height:640px;padding:104px 24px 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;text-align:center">
+
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_FeatureBanner_Lock%20up.png" alt="Women's Ministry Christmas Dessert and Worship, featuring Kristi McLelland" style="position:relative;z-index:2;width:100%;max-width:660px;height:auto;display:block;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .1s both">
+
+<div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:16px;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .28s both">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f5c978">Tickets on sale October 4 at 5:00 p.m.</div>
+<div style="display:flex;align-items:flex-start;gap:20px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:74px"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:48px;line-height:1;color:#fffbda">{{ cdD }}</div><div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c9a6b4">Days</div></div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:32px;line-height:1.35;color:#8d5a72">:</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:74px"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:48px;line-height:1;color:#fffbda">{{ cdH }}</div><div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c9a6b4">Hours</div></div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:32px;line-height:1.35;color:#8d5a72">:</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:74px"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:48px;line-height:1;color:#fffbda">{{ cdM }}</div><div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c9a6b4">Minutes</div></div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:32px;line-height:1.35;color:#8d5a72">:</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:74px"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:48px;line-height:1;color:#fffbda">{{ cdS }}</div><div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c9a6b4">Seconds</div></div>
+</div>
+</div>
+
+<a href="#tickets" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Save the Date</a>
+</section>
+
+<div style="position:relative;background:#2b1122 url('TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_WebBackground.png') center center/cover no-repeat fixed">
+<section data-screen-label="Event details" style="background:rgba(24,8,18,.52);border-top:2px solid #f5c978;border-bottom:1px solid rgba(245,201,120,.28);padding:26px 24px">
+<div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_calander%20icon.png" alt="" style="width:30px;height:30px;flex:none;object-fit:contain">
+<div style="text-align:left"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;line-height:1.35;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Thurs. December 3, 2026</div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px;border-left:1px solid rgba(255,251,218,.22);border-right:1px solid rgba(255,251,218,.22)">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_Clock%20icon.png" alt="" style="width:30px;height:30px;flex:none;object-fit:contain">
+<div style="text-align:left"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;line-height:1.35;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Dessert 6:00 p.m.</div><div style="font-size:13px;color:#e8c9d2">Worship &amp; speaker 7:30 p.m.</div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_Location%20icon.png" alt="" style="width:26px;height:30px;flex:none;object-fit:contain">
+<div style="text-align:left"><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;line-height:1.35;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">The Woodlands Campus</div><div style="font-size:13px;color:#e8c9d2">2200 Lake Woodlands Drive</div></div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Intro" style="background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);padding:60px 24px 64px">
+<div style="max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px">
+<span style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">About Dessert and Worship</span>
+<p style="margin:0;font-size:18px;line-height:1.75;color:#eddfd6">Celebrate the arrival of the Christmas season on Thursday, December 3, with an uplifting evening of fellowship, decadent desserts, powerful worship, and an inspiring message from author, speaker, and Bible study teacher Kristi McLelland. Join TWMC Women’s Ministry as we begin the Advent season together.</p>
+</div>
+</section>
+
+<section data-screen-label="Tickets" id="tickets" style="position:relative;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);padding:76px 24px 84px;overflow:clip">
+<div style="position:absolute;top:50%;left:0;transform:translateY(-50%);pointer-events:none">
+<img src="assets/flowers/flower-1.png" alt="" style="display:block;width:clamp(230px,24vw,349px);opacity:0" data-fx="SL" data-sub="parent" data-a="0.28" data-b="1">
+</div>
+<div style="position:absolute;top:50%;right:0;transform:translateY(-50%);pointer-events:none">
+<img src="assets/flowers/flower-2.png" alt="" style="display:block;width:clamp(251px,26vw,380px);opacity:0" data-fx="SR" data-sub="parent" data-a="0.28" data-b="1">
+</div>
+<div style="position:relative;max-width:1120px;margin:0 auto">
+<div style="text-align:center;margin-bottom:44px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978;margin-bottom:12px">Registration</div>
+<h2 style="margin:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:34px;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:#fffbda">Join Us for the Evening</h2>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch">
+
+<div style="display:flex;flex-direction:column;background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.3);border-radius:4px;box-shadow:0 20px 46px rgba(0,0,0,.3);overflow:hidden">
+<div style="background:linear-gradient(100deg,#fdedc0,#f5c978);padding:20px 28px">
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#321729">Dessert, Worship, &amp; Speaker</div>
+<div style="font-size:13px;color:rgba(50,23,41,.75);margin-top:3px">The entire evening is included with this ticket.</div>
+</div>
+<div style="padding:24px 28px;border-bottom:1px dashed rgba(245,201,120,.26);display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Dessert at 6:00 p.m. throughout the main building</span></div>
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Worship and speaker at 7:30 p.m. in the Sanctuary</span></div>
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Book signing to follow at 9:15 p.m. in the Atrium</span></div>
+</div>
+<div style="padding:22px 28px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+<div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#eddfd6"><span>VIP — Table of 8<button type="button" aria-label="VIP Table of 8 benefits" aria-describedby="dw-vip-table-tip" onMouseEnter="{{ tipTableOn }}" onMouseLeave="{{ tipOff }}" onFocus="{{ tipTableOn }}" onBlur="{{ tipOff }}" style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:6px;padding:0;border:1px solid #f5c978;border-radius:50%;background:transparent;color:#f5c978;font-family:Georgia,serif;font-size:12px;font-weight:700;line-height:1;cursor:help;vertical-align:middle" style-hover="background:#f5c978;color:#321729">i</button></span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#fffbda">$525</b><div id="dw-vip-table-tip" role="tooltip" hidden="{{ tipTableHidden }}" style="position:absolute;z-index:20;top:calc(100% + 7px);right:0;left:0;padding:10px 12px;border-radius:4px;background:#773f57;box-shadow:0 6px 18px rgba(50,23,41,.3);color:#fffbda;font-size:12px;font-weight:500;line-height:1.55;text-align:left">Includes a meet-and-greet with Kristi McLelland, a signed book, a photo opportunity, and reserved Sanctuary seating.</div></div>
+<div style="height:1px;background:rgba(245,201,120,.2)"></div>
+<div style="position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#eddfd6"><span>VIP — Individual<button type="button" aria-label="VIP Individual benefits" aria-describedby="dw-vip-individual-tip" onMouseEnter="{{ tipIndivOn }}" onMouseLeave="{{ tipOff }}" onFocus="{{ tipIndivOn }}" onBlur="{{ tipOff }}" style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:6px;padding:0;border:1px solid #f5c978;border-radius:50%;background:transparent;color:#f5c978;font-family:Georgia,serif;font-size:12px;font-weight:700;line-height:1;cursor:help;vertical-align:middle" style-hover="background:#f5c978;color:#321729">i</button></span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#fffbda">$75</b><div id="dw-vip-individual-tip" role="tooltip" hidden="{{ tipIndivHidden }}" style="position:absolute;z-index:20;top:calc(100% + 7px);right:0;left:0;padding:10px 12px;border-radius:4px;background:#773f57;box-shadow:0 6px 18px rgba(50,23,41,.3);color:#fffbda;font-size:12px;font-weight:500;line-height:1.55;text-align:left">Includes a meet-and-greet with Kristi McLelland, a signed book, a photo opportunity, and reserved Sanctuary seating.</div></div>
+<div style="height:1px;background:rgba(245,201,120,.2)"></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#eddfd6"><span>Dessert &amp; Worship — Table of 8</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#fffbda">$350</b></div>
+<div style="height:1px;background:rgba(245,201,120,.2)"></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#eddfd6"><span>Dessert &amp; Worship — Individual</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#fffbda">$50</b></div>
+<div style="font-size:13px;line-height:1.6;color:#c9a6b4;margin-top:2px">Child care is included in the price of registration.</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:18px">
+<a href="#" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">VIP Tickets</a>
+<a href="#" style="border:1.5px solid rgba(255,251,218,.5);color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px;transition:background .3s cubic-bezier(.16,1,.3,1),border-color .3s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,251,218,.12);border-color:#fffbda;color:#fffbda">Dessert and Worship</a>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.3);border-radius:4px;box-shadow:0 20px 46px rgba(0,0,0,.3);overflow:hidden">
+<div style="background:rgba(255,251,218,.08);border-bottom:1px solid rgba(245,201,120,.22);padding:20px 28px">
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;line-height:1.3;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Worship &amp; Speaker Only</div>
+<div style="font-size:13px;color:#e8c9d2;margin-top:3px">Dessert is not included with this ticket.</div>
+</div>
+<div style="padding:24px 28px;border-bottom:1px dashed rgba(245,201,120,.26);display:flex;flex-direction:column;gap:11px">
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Sanctuary doors open at 7:00 p.m.</span></div>
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Worship and speaker at 7:30 p.m., concluding at 9:00 p.m.</span></div>
+<div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Book signing to follow at 9:15 p.m. in the Atrium</span></div>
+</div>
+<div style="padding:22px 28px 26px;display:flex;flex-direction:column;gap:12px;flex:1">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:15px;color:#eddfd6"><span>Worship &amp; Speaker — Individual</span><b style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:700;color:#fffbda">$35</b></div>
+<div style="height:1px;background:rgba(245,201,120,.2)"></div>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#eddfd6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div style="font-size:13px;line-height:1.6;color:#c9a6b4">Does not include dessert seating or child care. Available for purchase up until the event begins.</div>
+<div style="margin-top:auto;padding-top:18px">
+<a href="#" style="display:inline-block;background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px);color:#321729">Worship &amp; Speaker Tickets</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section data-screen-label="Meet the speaker" style="position:relative;overflow:clip;background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);display:grid;grid-template-columns:minmax(300px,42%) 1fr">
+<div style="position:absolute;top:50%;right:0;transform:translateY(-50%);pointer-events:none">
+<img src="assets/flowers/flower-7.png" alt="" style="display:block;width:clamp(251px,26vw,380px);opacity:0" data-fx="SRS" data-sub="parent" data-a="0.28" data-b="1">
+</div>
+<div style="min-height:520px;background:url('TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/WOM_DessertandWorship_WebPortrait.png') center top/cover no-repeat"></div>
+<div style="position:relative;z-index:2;padding:76px 60px 76px 56px;display:flex;flex-direction:column;justify-content:center;gap:18px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">Meet the speaker</div>
+<h2 style="margin:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:34px;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:#fffbda">Kristi McLelland</h2>
+<div style="font-size:14px;letter-spacing:.4px;color:#e8c9d2">Speaker · Author · Teacher · College Professor</div>
+<div style="width:60px;height:2px;background:#f5c978;margin:4px 0 2px"></div>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#e8dcd2;max-width:620px">Since completing her Masters of Arts in Christian Education at Dallas Theological Seminary, she has dedicated her life to discipleship, to teaching people how to study the Bible for themselves, and to writing about how God is better than we ever knew by explaining the Bible through a Middle Eastern lens.</p>
+<p style="margin:0;font-size:16px;line-height:1.8;color:#e8dcd2;max-width:620px">Her great desire for people to truly experience the love of God birthed a ministry in which she leads biblical study trips to Israel, Turkey, Greece, and Italy.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px">
+<a href="https://www.lifeway.com/en/contributors/kristi-mclelland" style="border:1.5px solid #f5c978;color:#f5c978;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px;transition:background .3s cubic-bezier(.16,1,.3,1)" style-hover="background:#f5c978;color:#321729">Full Bio</a>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Location" style="position:relative;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);padding:64px 24px 84px;overflow:clip">
+<div style="position:absolute;top:50%;left:0;transform:translateY(-50%);pointer-events:none">
+<img src="assets/flowers/flower-5.png" alt="" style="display:block;width:clamp(320px,34vw,485px);opacity:0" data-fx="SL" data-sub="parent" data-a="0.28" data-b="1">
+</div>
+<div style="position:relative;max-width:1120px;margin:0 auto">
+<div style="text-align:center;margin-bottom:40px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978;margin-bottom:12px">How to find us</div>
+<h2 style="margin:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:34px;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:#fffbda">2200 Lake Woodlands Drive</h2>
+</div>
+<div style="display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:center">
+<div style="border:2px dashed rgba(245,201,120,.45);border-radius:4px;background:rgba(40,15,31,.96);min-height:330px;display:grid;place-items:center;text-align:center;padding:28px">
+<div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;letter-spacing:2px;text-transform:uppercase;color:#f5c978;margin-bottom:8px">Room Map</div>
+<div style="font-size:14px;line-height:1.7;color:#c9a6b4">Interior diagram — dessert rooms,<br>Sanctuary, Atrium information desk<br><span style="font-size:12.5px;color:#b596a4">placeholder, artwork to come</span></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda;margin-bottom:6px">Dessert rooms</div>
+<p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Dessert takes place throughout our main building, including Wesley Hall, Hayes Hall, Room 204 (A&amp;B) on the second floor, Asbury Hall, Harvest Foyer, Jones Library and Aldersgate Hall for VIP.</p>
+</div>
+<div>
+<div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda;margin-bottom:6px">Parking</div>
+<p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Lots B, C, D, E, F and G on the east side of the church are closest to the Sanctuary. Follow the signage posted in the parking lots.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:2px">
+<a href="https://maps.google.com/?q=2200+Lake+Woodlands+Drive+The+Woodlands+TX+77380" style="background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px);color:#321729">Get Directions</a>
+<a href="https://www.thewoodlandsmethodist.org/facilities" style="border:1.5px solid rgba(255,251,218,.5);color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 24px;border-radius:4px;transition:background .3s cubic-bezier(.16,1,.3,1),border-color .3s cubic-bezier(.16,1,.3,1)" style-hover="background:rgba(255,251,218,.12);border-color:#fffbda;color:#fffbda">View Map</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section data-screen-label="Gallery" style="position:relative;overflow:clip;background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);padding:76px 24px 84px">
+<div style="position:absolute;top:50%;right:0;transform:translateY(-50%);pointer-events:none">
+<img src="assets/flowers/flower-4.png" alt="" style="display:block;width:clamp(207px,22vw,313px);opacity:0" data-fx="SR" data-sub="parent" data-a="0.28" data-b="1">
+</div>
+<div style="position:relative;max-width:1120px;margin:0 auto">
+<div style="text-align:center;margin-bottom:36px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978;margin-bottom:12px">Last year's event — 2025</div>
+<h2 style="margin:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:34px;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:#fffbda">An Evening Together</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:172px;gap:14px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-2.jpg" alt="Guests at the dessert table" style="grid-column:span 2;grid-row:span 2;width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;border:1px solid rgba(245,201,120,.28)">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-3.jpg" alt="Friends seated at a decorated table" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;border:1px solid rgba(245,201,120,.28)">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-10.jpg" alt="Worship in the Sanctuary" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;border:1px solid rgba(245,201,120,.28)">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-6.jpg" alt="Candlelight and Christmas desserts" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;border:1px solid rgba(245,201,120,.28)">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-8.jpg" alt="Women gathered in the Atrium" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;border:1px solid rgba(245,201,120,.28)">
+</div>
+<div style="display:flex;justify-content:center;margin-top:32px">
+<button type="button" onClick="{{ lbOpen }}" style="border:none;cursor:pointer;background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:13px 24px;border-radius:4px;transition:transform .3s cubic-bezier(.16,1,.3,1);padding:14px 30px" style-hover="transform:translateY(-2px)">View All Photos</button>
+</div>
+</div>
+</section>
+
+<section data-screen-label="FAQ" style="position:relative;overflow:clip;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);padding:64px 24px 90px">
+<div style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
+<div style="position:absolute;bottom:34%;left:0;pointer-events:none">
+<img src="assets/flowers/flower-6.png" alt="" style="display:block;width:clamp(268px,28vw,406px);opacity:0" data-fx="SLI" data-sub="parent" data-a="0.15" data-b="0.55">
+</div>
+<div style="position:absolute;bottom:34%;right:0;pointer-events:none">
+<img src="assets/flowers/flower-3.png" alt="" style="display:block;width:clamp(158px,17vw,240px);opacity:0" data-fx="SRI" data-sub="parent" data-a="0.15" data-b="0.55">
+</div>
+</div>
+<div style="position:relative;z-index:2;max-width:860px;margin:0 auto">
+<div style="text-align:center;margin-bottom:38px">
+<h2 style="margin:0;font-family:'Montserrat',sans-serif;font-weight:700;font-size:34px;line-height:1.2;letter-spacing:3px;text-transform:uppercase;color:#fffbda">Frequently Asked Questions</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t0 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">What is the date/time of the event?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s0 }}</span></div>
+<div hidden="{{ h0 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Dessert and Worship is on Thursday, December 3. Dessert is at 6:00 p.m., and Worship with a special message from guest Kristi McLelland begins at 7:30 p.m. The event will conclude at 9:00 p.m. with a book signing to follow in the Atrium.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t1 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Where do I check in?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s1 }}</span></div>
+<div hidden="{{ h1 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">No check in needed. For any questions, please refer to the information desk in the Atrium.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t2 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Do I need a ticket?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s2 }}</span></div>
+<div hidden="{{ h2 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">No, you do not need a ticket for the dessert and speaker event portions of the evening.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t3 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">How do I find the room and my table number for dessert?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s3 }}</span></div>
+<div hidden="{{ h3 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">We will send an email the Monday before the event that includes your room name and table assignment.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t4 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Where do I park?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s4 }}</span></div>
+<div hidden="{{ h4 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Parking lots B, C, D, E, F, and G on the east side of the church are closest to the Sanctuary, where Kristi McLelland will be speaking. Simply follow the signage posted in the parking lots.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t5 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Where do I go for Dessert?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s5 }}</span></div>
+<div hidden="{{ h5 }}" style="padding:0 24px 22px"><p style="margin:0 0 12px;font-size:15px;line-height:1.75;color:#eddfd6">Dessert takes place throughout our main building, including Wesley Hall, Hayes Hall, Room 204 (A&amp;B) on the second floor, Asbury Hall, Harvest Foyer and Jones Library and Aldersgate Hall (VIP).</p><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">You will receive an email the Monday before the event with your room name and table number. If you have questions the night of, simply stop by the Atrium information desk the evening of Dessert and Worship to gather these details.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t6 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Where do I go if I only signed up for the Worship and speaker event?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s6 }}</span></div>
+<div hidden="{{ h6 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Kristi McLelland will speak in the Sanctuary. Doors open at 7:00 p.m. Worship begins at 7:30 p.m.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t7 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Where do I go if I have a VIP ticket?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s7 }}</span></div>
+<div hidden="{{ h7 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">If you have a VIP ticket, please enter Aldersgate Hall, just inside Entrance Four. Please arrive before 6:15 pm to be there when Kristi joins the group for a private talk.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t8 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">What do I get with the VIP ticket?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s8 }}</span></div>
+<div hidden="{{ h8 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">VIP attendees receive a meet-and-greet with Kristi McLelland, which includes a signed book and a photo op. Kristi will also join the group at 6:15 p.m.to share insights into the evening's talk and answer questions. Additionally, you will have reserved seating in the Sanctuary for the Worship and speaker event.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t9 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">When does the Sanctuary open?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s9 }}</span></div>
+<div hidden="{{ h9 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Doors to the Sanctuary open at 7:00 p.m. Worship and the speaker event begin at 7:30 p.m.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t10 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">What will Kristi McLelland be talking about?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s10 }}</span></div>
+<div hidden="{{ h10 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">We do not review a speaker's topic or content, but typically, they touch on any recently published books with an advent theme.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t11 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Will there be a book signing?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s11 }}</span></div>
+<div hidden="{{ h11 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Yes, Kristi McLelland's books will be available for purchase in the Atrium, and there will be a brief book signing period beginning at 9:15 p.m.</p></div>
+</div>
+
+<div style="background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.22);border-radius:4px;overflow:hidden">
+<div onClick="{{ t12 }}" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 24px;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;line-height:1.5;color:#fffbda">Can I purchase tickets the night of the event?<span style="font-size:22px;font-weight:400;line-height:.9;color:#f5c978;flex:none">{{ s12 }}</span></div>
+<div hidden="{{ h12 }}" style="padding:0 24px 22px"><p style="margin:0;font-size:15px;line-height:1.75;color:#eddfd6">Yes, you can purchase speaker only tickets up until the event begins by clicking the register link above.</p></div>
+</div>
+
+</div>
+</div>
+</section>
+</div>
+
+
+<sc-if value="{{ lbShown }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;top:0;right:0;bottom:0;left:0;z-index:80;background:rgba(24,9,18,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
+<div style="width:100%;max-width:1040px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+<div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">Dessert and Worship 2025</div>
+<button type="button" onClick="{{ lbClose }}" style="border:1px solid rgba(255,251,218,.4);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">Close</button>
+</div>
+<div style="width:100%;max-width:1040px;display:flex;align-items:center;gap:16px">
+<button type="button" onClick="{{ lbPrev }}" aria-label="Previous photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">&#8249;</button>
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-1.jpg" alt="Dessert and Worship 2025, photo 1" hidden="{{ lbH0 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-2.jpg" alt="Dessert and Worship 2025, photo 2" hidden="{{ lbH1 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-3.jpg" alt="Dessert and Worship 2025, photo 3" hidden="{{ lbH2 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-4.jpg" alt="Dessert and Worship 2025, photo 4" hidden="{{ lbH3 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-5.jpg" alt="Dessert and Worship 2025, photo 5" hidden="{{ lbH4 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-6.jpg" alt="Dessert and Worship 2025, photo 6" hidden="{{ lbH5 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-7.jpg" alt="Dessert and Worship 2025, photo 7" hidden="{{ lbH6 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-8.jpg" alt="Dessert and Worship 2025, photo 8" hidden="{{ lbH7 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-9.jpg" alt="Dessert and Worship 2025, photo 9" hidden="{{ lbH8 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-10.jpg" alt="Dessert and Worship 2025, photo 10" hidden="{{ lbH9 }}" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<button type="button" onClick="{{ lbNext }}" aria-label="Next photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" style-hover="background:rgba(255,251,218,.14)">&#8250;</button>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#e8c9d2">{{ lbCount }}</div>
+<div style="font-size:12.5px;color:#a88c98">Use the arrow keys to move through the gallery · Esc to close</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280},&quot;ticketsOpenISO&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2026-10-04T17:00:00-05:00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Event&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, lb: -1, tip: null };
+  photos = Array.from({ length: 10 }, (_, i) =>
+    "TWMC2022-Demo/images/Dessert%20and%20Worship%20Assets/2025%20DW%20Photos/dessert-and-worship-2025-img-" + (i + 1) + ".jpg");
+  // Scroll-driven flower reveals. Hand-rolled rather than CSS scroll timelines
+  // (animation-timeline: view()) because those only ship in Chromium — this runs
+  // everywhere. Each flower declares its curve via data-fx / data-a / data-b.
+  // Side-mounted flowers: each sits against a vertical edge, turned 90deg so the
+  // arrangement runs with the edge, and slides in horizontally off that edge.
+  // rest = settled offset (partly off-canvas), from = entry, to = exit.
+  // rot0 is the standing rotation; wob is the extra tilt that unwinds as it settles.
+  static FX = {
+    SL:  { side: -1, peek: 0.24, rot0:  90, wob:  7, op: 0.6,  exit: true,  hold: [0.30, 0.72] },
+    SR:  { side:  1, peek: 0.24, rot0: -90, wob: -7, op: 0.6,  exit: true,  hold: [0.30, 0.72] },
+    SRS: { side:  1, peek: 0.22, rot0: -90, wob: -7, op: 0.85, exit: true,  hold: [0.30, 0.72] },
+    SLI: { side: -1, peek: 0.34, rot0:  90, wob:  7, op: 0.6,  exit: false, hold: [0.55, 1] },
+    SRI: { side:  1, peek: 0.36, rot0: -90, wob: -7, op: 0.6,  exit: false, hold: [0.55, 1] }
+  };
+  // Re-query rather than trusting a cached list: the countdown re-renders the
+  // template every second, which can replace these nodes and strand stale refs.
+  collectFlowers() {
+    this.flowers = [...document.querySelectorAll("[data-fx]")].map(el => ({
+      el,
+      subject: el.dataset.sub === "parent" ? el.parentElement : el.closest("section"),
+      fx: Component.FX[el.dataset.fx],
+      a: parseFloat(el.dataset.a),
+      b: parseFloat(el.dataset.b)
+    })).filter(x => x.fx && x.subject);
+  }
+  paintFlowers() {
+    const live = document.querySelectorAll("[data-fx]").length;
+    if (!this.flowers || this.flowers.length !== live ||
+        (this.flowers[0] && !this.flowers[0].el.isConnected)) this.collectFlowers();
+    // Flowers sit still — no scroll-driven motion. Each is placed once at its
+    // settled offset. Still computed from the element's own size because, turned
+    // 90deg, the on-screen width is the art's layout HEIGHT, so the amount that
+    // sits past the edge has to scale with the art at any viewport width.
+    this.flowers.forEach(({ el, fx }) => {
+      const w = el.offsetWidth, h = el.offsetHeight;
+      const rest = fx.side * (fx.peek * h + (w - h) / 2);
+      el.style.opacity = fx.op.toFixed(3);
+      // translate first so x stays in screen space, then the standing rotation
+      el.style.transform = `translate(${rest.toFixed(1)}px,0px) rotate(${fx.rot0}deg)`;
+    });
+  }
+  componentDidMount(){
+    this.t = setInterval(() => this.forceUpdate(), 1000);
+    this.collectFlowers();
+    // re-apply after every re-render (the countdown ticks once a second)
+    this.pulse = setInterval(() => this.paintFlowers(), 1000);
+    this.onScroll = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => { this.raf = 0; this.paintFlowers(); });
+    };
+    window.addEventListener("scroll", this.onScroll, { passive: true });
+    window.addEventListener("resize", this.onScroll);
+    if (this.pulseClear) clearInterval(this.pulseClear);
+    this.paintFlowers();
+    this.onKey = e => {
+      if (this.state.lb < 0) return;
+      if (e.key === "Escape") this.setState({ lb: -1 });
+      else if (e.key === "ArrowRight") this.step(1);
+      else if (e.key === "ArrowLeft") this.step(-1);
+    };
+    window.addEventListener("keydown", this.onKey);
+  }
+  componentWillUnmount(){
+    clearInterval(this.t);
+    window.removeEventListener("keydown", this.onKey);
+    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("resize", this.onScroll);
+  }
+  step(n){
+    this.setState(s => ({ lb: (s.lb + n + this.photos.length) % this.photos.length }));
+  }
+  renderVals(){
+    const target = new Date(this.props.ticketsOpenISO ?? "2026-10-04T17:00:00-05:00").getTime();
+    let ms = Math.max(0, target - Date.now());
+    const d = Math.floor(ms/86400000); ms -= d*86400000;
+    const h = Math.floor(ms/3600000); ms -= h*3600000;
+    const m = Math.floor(ms/60000); ms -= m*60000;
+    const sec = Math.floor(ms/1000);
+    const p = n => String(n).padStart(2,"0");
+    const lb = this.state.lb;
+    const vals = {
+      cdD: String(d), cdH: p(h), cdM: p(m), cdS: p(sec),
+      // VIP benefit tooltips — hover and keyboard focus both drive them
+      tipTableHidden: this.state.tip !== "table",
+      tipIndivHidden: this.state.tip !== "indiv",
+      tipTableOn: () => this.setState({ tip: "table" }),
+      tipIndivOn: () => this.setState({ tip: "indiv" }),
+      tipOff: () => this.setState({ tip: null }),
+      lbShown: lb >= 0,
+      lbCount: ((lb < 0 ? 0 : lb) + 1) + " of " + this.photos.length,
+      lbOpen: () => this.setState({ lb: 0 }),
+      lbClose: () => this.setState({ lb: -1 }),
+      lbPrev: () => this.step(-1),
+      lbNext: () => this.step(1),
+    };
+    for (let i = 0; i < 10; i++) vals["lbH" + i] = lb !== i;
+    for (let i = 0; i < 13; i++) {
+      const isOpen = this.state.open === i;
+      vals["t" + i] = () => this.setState(s => ({ open: s.open === i ? -1 : i }));
+      vals["h" + i] = !isOpen;
+      vals["s" + i] = isOpen ? "\u2013" : "+";
+    }
+    return vals;
+  }
+}
+</script>
+</body>
+</html>
