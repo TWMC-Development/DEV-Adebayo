@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Montgomery Fall Festival | The Woodlands Methodist Church</title>
+    <style>
+      /* Preview-page reset. Copy the banner styles and section into Rock. */
+      body { margin: 0; }
+
+      .montgomery-fall-hero {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        gap: clamp(20px, 3vw, 40px);
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        aspect-ratio: 1270 / 600;
+        padding: 6%;
+        overflow: hidden;
+        background-color: #ef8212;
+        background-image: url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cam-montgomery/CAM_FallFestival_Feature+Banner_BG.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .montgomery-fall-hero__heading {
+        width: min(100%, 1040px);
+        margin: 0;
+        line-height: 1;
+      }
+
+      .montgomery-fall-hero__logo {
+        display: block;
+        width: 100%;
+        height: auto;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .montgomery-fall-hero__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 48px;
+        padding: 14px 28px;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        background: #fff;
+        color: #87320b;
+        font: 700 16px/1.25 Arial, sans-serif;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .montgomery-fall-hero__button:hover {
+        background: #fff3df;
+        color: #682508;
+      }
+
+      .montgomery-fall-hero__button:focus-visible {
+        outline: 3px solid #682508;
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 600px) {
+        .montgomery-fall-hero {
+          /* Crop decorative leaves while keeping the entire logo visible. */
+          aspect-ratio: auto;
+          min-height: 300px;
+          padding: 48px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- START BANNER: use this section and its scoped styles in a Rock HTML block. -->
+      <section class="montgomery-fall-hero" aria-labelledby="montgomery-fall-title">
+        <h1 class="montgomery-fall-hero__heading" id="montgomery-fall-title">
+          <img
+            class="montgomery-fall-hero__logo"
+            src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cam-montgomery/CAM_FallFestival_Feature+Banner_TEXT.png"
+            alt="The Church at Montgomery presents Fall Festival, Saturday, October 31, 2:00–4:00 p.m."
+            width="1048"
+            height="439"
+            fetchpriority="high"
+          />
+        </h1>
+        <a
+          class="montgomery-fall-hero__button"
+          href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3405"
+        >View Event Details</a>
+      </section>
+      <!-- END BANNER -->
+    </main>
+  </body>
+</html>
