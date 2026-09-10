@@ -18,7 +18,7 @@ The URLs begin with `/Content/Women/` and resolve on the same website as the Roc
 | `/Content/Women/decor/` | `flower-1.png` through `flower-7.png`, `hero-left.png`, `hero-right.png`, `hero-top.png`, `hero-bottom.png` |
 | `/Content/Women/gallery/` | `2025-1.jpg` through `2025-10.jpg` |
 | `/Content/Women/icons/` | `icon-calendar.png`, `icon-clock.png`, `icon-location.png` |
-| `/Content/Women/` | `hero-background.png`, `speaker-portrait.png`, `title-lockup.png` |
+| `/Content/Women/` | `campus-map.png`, `hero-background.png`, `speaker-portrait.png`, `title-lockup.png` |
 
 This bundle uses the current export's PNG background and portrait. An existing `speaker-portrait.jpg` does not satisfy the `speaker-portrait.png` path; upload the supplied PNG. The existing reference page uses some of these same asset paths, so replacing an image at a shared path also changes it on that page.
 

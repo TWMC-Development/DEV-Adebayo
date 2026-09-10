@@ -1,0 +1,385 @@
+<!-- Missions Gala 2026: upload the supplied images to /Content/Missions%20Gala/ before publishing. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;600;700;800&amp;family=Open+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+<style>
+#mg2026 {
+  --mg-detail-cols:repeat(4,1fr);
+  --mg-intro-image-order:0;
+  --mg-intro-cols:repeat(2,minmax(0,1fr));
+  --mg-impact-display:grid;
+  --mg-impact-overflow:visible;
+  --mg-impact-snap:none;
+  --mg-impact-flex:0 1 auto;
+  --mg-impact-gap:40px 28px;
+  --mg-impact-pad:52px 0 0;
+  --mg-cant-attend-pad:80px 48px;
+  --mg-cant-attend-min-height:500px;
+  --mg-cant-attend-image:linear-gradient(to right,rgba(252,239,213,.7),rgba(252,239,213,.3),rgba(252,239,213,.1)),url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/missionsgala-2025/MIS_Serve+it+Up+BG+Yellow.png');
+  --mg-tier-display:grid;
+  --mg-tier-overflow:visible;
+  --mg-tier-snap:none;
+  --mg-tier-flex:1 1 0;
+  --mg-tier-pad:4px 0 8px;
+  --mg-sponsor-pad:80px 48px;
+  --mg-sponsor-gap:40px;
+  --mg-card-pad:32px;
+  --mg-card-gap:18px;
+  --mg-card-heading-gap:8px;
+  --mg-card-title-size:26px;
+  --mg-card-price-size:32px;
+  --mg-benefit-gap:12px;
+  --mg-benefit-font-size:15px;
+  --mg-benefit-line-height:1.6;
+  --mg-card-button-pad:15px;
+  width:100%;
+  overflow-x:hidden;
+  color:#1a1a1a;
+  background:#fff;
+  font-family:'DM Sans',Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+}
+#mg2026,#mg2026 *,#mg2026 *::before,#mg2026 *::after{box-sizing:border-box}
+#mg2026 img{max-width:100%}
+#mg2026 a{text-decoration:none}
+#mg2026 .mg-mobile-only{display:none}
+#mg2026 .mg-impact-dot{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:#c8d1cd;cursor:pointer;transition:width .3s ease,background .3s ease}
+#mg2026 .mg-impact-dot.is-active{width:24px;background:#1f4032}
+#mg2026 #mg-impact-scroller,#mg2026 #mg-tier-scroller{scrollbar-width:thin;scrollbar-color:#c9b8bb transparent}
+@media(max-width:899px){
+  #mg2026{
+    --mg-detail-cols:1fr;
+    --mg-intro-image-order:-1;
+    --mg-intro-cols:1fr;
+    --mg-impact-display:flex;
+    --mg-impact-overflow:auto;
+    --mg-impact-snap:x mandatory;
+    --mg-impact-flex:0 0 78%;
+    --mg-impact-gap:20px;
+    --mg-impact-pad:40px 11% 12px;
+    --mg-cant-attend-pad:56px 24px;
+    --mg-cant-attend-min-height:0;
+    --mg-cant-attend-image:none;
+    --mg-tier-display:flex;
+    --mg-tier-overflow:auto;
+    --mg-tier-snap:x mandatory;
+    --mg-tier-flex:0 0 calc(100% - 32px);
+    --mg-tier-pad:4px 16px 8px;
+    --mg-sponsor-pad:64px 16px;
+    --mg-sponsor-gap:28px;
+    --mg-card-pad:24px 20px;
+    --mg-card-gap:13px;
+    --mg-card-heading-gap:3px;
+    --mg-card-title-size:23px;
+    --mg-card-price-size:28px;
+    --mg-benefit-gap:8px;
+    --mg-benefit-font-size:14px;
+    --mg-benefit-line-height:1.45;
+    --mg-card-button-pad:12px;
+  }
+  #mg2026 .mg-wide-only{display:none}
+  #mg2026 .mg-mobile-only{display:block}
+}
+</style>
+<div id="mg2026">
+<div style="display:flex;flex-direction:column;background:#fff">
+
+  <div style="position:relative;width:100%;overflow:hidden;background:#1c3b26 url(&quot;/Content/Missions%20Gala/MIS_Missions%20Gala_FeatureBannerBG.png&quot;) center/cover no-repeat;min-height:clamp(400px,47vw,600px);display:flex;align-items:center;justify-content:center">
+    <img src="/Content/Missions%20Gala/MIS_Missions%20Gala_FeatureBannerLEAVES.png" alt="" style="position:absolute;top:0;left:0;width:clamp(200px,26vw,378px);height:auto;pointer-events:none">
+    <img src="/Content/Missions%20Gala/MIS_Missions%20Gala_FeatureBannerLAMB.png" alt="" style="position:absolute;right:0;bottom:0;width:100%;min-width:760px;height:auto;pointer-events:none">
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:22px;padding:72px 24px 180px;text-align:center">
+      <img src="/Content/Missions%20Gala/MIS_Missions%20Gala_FeatureBannerTITLE.png" alt="Finding the One" style="width:clamp(250px,44vw,600px);height:auto;display:block">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;margin-top:6px">
+        <a href="#" style="background:#c5a258;color:#16301f;padding:16px 40px;border-radius:999px;font-size:15px;font-weight:700;letter-spacing:0.3px;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Purchase Now</a>
+        <a href="#sponsor" style="border:1px solid rgba(245,241,230,0.55);color:#f5f1e6;padding:15px 40px;border-radius:999px;font-size:15px;font-weight:600;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Sponsor a Table</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:0 48px;margin-top:-36px;position:relative;z-index:4">
+    <div style="max-width:1180px;margin:0 auto;background:#fff;border:1px solid #e8e5e1;border-radius:24px;box-shadow:0 18px 44px rgba(26,26,26,0.14);padding:26px 40px;display:grid;grid-template-columns:var(--mg-detail-cols);gap:28px;align-items:stretch">
+      <div style="display:flex;align-items:center;gap:18px">
+        <i class="fa-solid fa-location-dot" style="font-size:40px;color:#c5a258;flex:none"></i>
+        <div style="font-size:16px;line-height:1.6;color:#1a1a1a">Wesley Hall<br>2200 Lake Woodlands Drive</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="mg-wide-only"><div style="width:1.2px;height:68%;min-height:37px;background:#c5a258;flex:none;align-self:center;margin-right:16px"></div></div>
+        <i class="fa-solid fa-calendar-day" style="font-size:40px;color:#c5a258;flex:none"></i>
+        <div style="font-size:16px;line-height:1.6;color:#1a1a1a">Friday, November 20, 2026</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="mg-wide-only"><div style="width:1.2px;height:68%;min-height:37px;background:#c5a258;flex:none;align-self:center;margin-right:16px"></div></div>
+        <i class="fa-solid fa-clock" style="font-size:40px;color:#c5a258;flex:none"></i>
+        <div style="font-size:16px;line-height:1.6;color:#1a1a1a">Event begins 6:00 p.m.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px">
+        <div class="mg-wide-only"><div style="width:1.2px;height:68%;min-height:37px;background:#c5a258;flex:none;align-self:center;margin-right:16px"></div></div>
+        <i class="fa-solid fa-user-tie" style="font-size:40px;color:#c5a258;flex:none"></i>
+        <div style="font-size:16px;line-height:1.6;color:#1a1a1a">Dressy Evening Attire is requested.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;padding:80px 48px">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:var(--mg-intro-cols);gap:56px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a6a2f;font-weight:600">Missions Gala 2026</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-size:clamp(30px,3.4vw,44px);line-height:1.15;font-weight:700;color:#1f4032;text-wrap:pretty">Gather. Celebrate. <em style="color:#8a6a2f">An Evening Dedicated to Finding the One.</em></h2>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:#4a4640;max-width:58ch">Join us on Friday, November 20, for our annual Missions Gala. Enjoy a catered dinner, live entertainment and silent and live auctions while connecting with a community passionate about changing lives. Your presence and partnership help us follow the heart of the Good Shepherd, sending the gospel forth and bringing real hope where it is needed most.</p>
+      </div>
+      <div style="border-radius:24px;overflow:hidden;border:1px solid #e8e5e1;min-height:380px;order:var(--mg-intro-image-order)">
+        <img src="/Content/Missions%20Gala/660A0578.png" alt="Guests at last year's Missions Gala in Wesley Hall" style="width:100%;height:100%;min-height:380px;object-fit:cover;display:block">
+      </div>
+    </div>
+    <div style="width:60%;max-width:708px;height:1px;background:#e8e5e1;margin:64px auto 0"></div>
+    <div id="mg-impact-scroller" style="max-width:1180px;margin:0 auto;padding:var(--mg-impact-pad);display:var(--mg-impact-display);grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:var(--mg-impact-gap);overflow-x:var(--mg-impact-overflow);scroll-snap-type:var(--mg-impact-snap);-webkit-overflow-scrolling:touch">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-earth-americas" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">190</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Countries Impacted</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-handshake" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">88</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Global Ministry Partners</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-school" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">21</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Theological Institutions Worldwide Directly Supported</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-church" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">1200+</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Pastors Trained Worldwide</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-user-group" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">396</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Mission Trip Participants</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;justify-content:flex-start;flex:var(--mg-impact-flex);scroll-snap-align:center">
+        <i class="fa-solid fa-hand-holding-heart" style="font-size:38px;color:#1f4032"></i>
+        <div style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#1f4032;line-height:1">7000+</div>
+        <div style="font-size:15px;line-height:1.45;color:#4a4640;font-weight:600">Society of St. Stephen Volunteer Hours Served</div>
+      </div>
+    </div>
+    <div class="mg-mobile-only">
+      <div role="navigation" aria-label="Impact statistics" style="display:flex;align-items:center;justify-content:center;gap:9px;margin-top:14px">
+        <button type="button" data-impact-index="0" aria-label="Show impact statistic 1 of 6" class="mg-impact-dot is-active"></button>
+        <button type="button" data-impact-index="1" aria-label="Show impact statistic 2 of 6" class="mg-impact-dot"></button>
+        <button type="button" data-impact-index="2" aria-label="Show impact statistic 3 of 6" class="mg-impact-dot"></button>
+        <button type="button" data-impact-index="3" aria-label="Show impact statistic 4 of 6" class="mg-impact-dot"></button>
+        <button type="button" data-impact-index="4" aria-label="Show impact statistic 5 of 6" class="mg-impact-dot"></button>
+        <button type="button" data-impact-index="5" aria-label="Show impact statistic 6 of 6" class="mg-impact-dot"></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="sponsor" style="background:#faf8f5;padding:var(--mg-sponsor-pad);border-top:1px solid #e8e5e1">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:var(--mg-sponsor-gap)">
+      <div style="display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center">
+        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a6a2f;font-weight:600">Sponsorship</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-size:clamp(30px,3.2vw,42px);font-weight:700;color:#1f4032">Support Our Gala</h2>
+      </div>
+      <div id="mg-tier-scroller" style="display:var(--mg-tier-display);grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;align-items:stretch;overflow-x:var(--mg-tier-overflow);scroll-snap-type:var(--mg-tier-snap);-webkit-overflow-scrolling:touch;padding:var(--mg-tier-pad)">
+
+        <div style="background:#fff;border:1px solid #e8e5e1;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(26,26,26,0.05);flex:var(--mg-tier-flex);scroll-snap-align:center;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),box-shadow 0.5s cubic-bezier(0.16,1,0.3,1),border-color 0.5s cubic-bezier(0.16,1,0.3,1)">
+          <div style="padding:var(--mg-card-pad);display:flex;flex-direction:column;gap:var(--mg-card-gap);flex:1">
+            <div style="display:flex;flex-direction:column;gap:var(--mg-card-heading-gap)">
+              <div style="font-family:'Playfair Display',serif;font-size:var(--mg-card-title-size);font-weight:700;color:#1f4032">The Shepherd</div>
+              <div style="font-size:var(--mg-card-price-size);font-weight:700;color:#8a6a2f">$10,000</div>
+            </div>
+            <div style="height:1px;background:#e8e5e1"></div>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--mg-benefit-gap);font-size:var(--mg-benefit-font-size);line-height:var(--mg-benefit-line-height);color:#4a4640">
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Premier VIP table for 8 guests</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Choose an existing ministry partner to receive $1,000 of your sponsorship</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Program listing and visual credit that highlights your chosen ministry partner</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Exclusive thank you gift from the mission field</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Individual gifts for each of your table guests</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Private reception hour before the event with keynote speakers and pastors</span></li>
+            </ul>
+            <a href="#" style="margin-top:auto;background:#1f4032;color:#fff;padding:var(--mg-card-button-pad);border-radius:999px;font-size:15px;font-weight:600;text-align:center;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Purchase Now</a>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e8e5e1;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(26,26,26,0.05);flex:var(--mg-tier-flex);scroll-snap-align:center;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),box-shadow 0.5s cubic-bezier(0.16,1,0.3,1),border-color 0.5s cubic-bezier(0.16,1,0.3,1)">
+          <div style="padding:var(--mg-card-pad);display:flex;flex-direction:column;gap:var(--mg-card-gap);flex:1">
+            <div style="display:flex;flex-direction:column;gap:var(--mg-card-heading-gap)">
+              <div style="font-family:'Playfair Display',serif;font-size:var(--mg-card-title-size);font-weight:700;color:#1f4032">The Seeker</div>
+              <div style="font-size:var(--mg-card-price-size);font-weight:700;color:#8a6a2f">$5,000</div>
+            </div>
+            <div style="height:1px;background:#e8e5e1"></div>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--mg-benefit-gap);font-size:var(--mg-benefit-font-size);line-height:var(--mg-benefit-line-height);color:#4a4640">
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Preferred seating for 8 guests</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Choose an existing ministry partner to receive $500 of your sponsorship</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Program listing</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Exclusive thank you gift from the mission field</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Handwritten thank-you card from mission partner</span></li>
+            </ul>
+            <a href="#" style="margin-top:auto;background:#1f4032;color:#fff;padding:var(--mg-card-button-pad);border-radius:999px;font-size:15px;font-weight:600;text-align:center;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Purchase Now</a>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #e8e5e1;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(26,26,26,0.05);flex:var(--mg-tier-flex);scroll-snap-align:center;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),box-shadow 0.5s cubic-bezier(0.16,1,0.3,1),border-color 0.5s cubic-bezier(0.16,1,0.3,1)">
+          <div style="padding:var(--mg-card-pad);display:flex;flex-direction:column;gap:var(--mg-card-gap);flex:1">
+            <div style="display:flex;flex-direction:column;gap:var(--mg-card-heading-gap)">
+              <div style="font-family:'Playfair Display',serif;font-size:var(--mg-card-title-size);font-weight:700;color:#1f4032">The One</div>
+              <div style="font-size:var(--mg-card-price-size);font-weight:700;color:#8a6a2f">$2,000</div>
+            </div>
+            <div style="height:1px;background:#e8e5e1"></div>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:var(--mg-benefit-gap);font-size:var(--mg-benefit-font-size);line-height:var(--mg-benefit-line-height);color:#4a4640">
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Reserved seating for 8 guests</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Exclusive thank you gift from the mission field</span></li>
+              <li style="display:flex;gap:12px"><i class="fa-solid fa-check" style="color:#c5a258;margin-top:5px;font-size:12px"></i><span>Program listing</span></li>
+            </ul>
+            <a href="#" style="margin-top:auto;background:#1f4032;color:#fff;padding:var(--mg-card-button-pad);border-radius:999px;font-size:15px;font-weight:600;text-align:center;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Purchase Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="mg-mobile-only">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+          <div style="display:flex;align-items:center;gap:20px">
+            <button type="button" data-tier-action="previous" aria-label="Previous sponsorship level" style="width:52px;height:52px;border-radius:999px;border:2px solid #1f4032;background:#fff;color:#1f4032;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="fa-solid fa-chevron-left"></i></button>
+            <div style="font-size:16px;font-weight:700;color:#1f4032;min-width:112px;text-align:center"><span id="mg-tier-label">1 of 3</span></div>
+            <button type="button" data-tier-action="next" aria-label="Next sponsorship level" style="width:52px;height:52px;border-radius:999px;border:2px solid #1f4032;background:#1f4032;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#7a746c;text-align:center;font-style:italic">No childcare is provided for this event.</div>
+    </div>
+  </div>
+
+  <div style="background:#16301f;padding:56px 48px">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+          <div style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#f5f1e6">Gala Single Ticket</div>
+          <div style="font-size:30px;font-weight:700;color:#c5a258">$100</div>
+        </div>
+        <div style="font-size:16px;line-height:1.7;color:rgba(245,241,230,0.85);max-width:56ch">Each ticket provides entrance and seating at the gala. Dinner is included.</div>
+      </div>
+      <a href="#" style="background:#c5a258;color:#16301f;padding:16px 40px;border-radius:999px;font-size:15px;font-weight:700;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Purchase Now</a>
+    </div>
+  </div>
+
+  <div style="background-color:rgb(252,239,213);background-image:var(--mg-cant-attend-image);background-position:right center;background-size:cover;background-repeat:no-repeat;min-height:var(--mg-cant-attend-min-height);display:flex;align-items:center;padding:var(--mg-cant-attend-pad)">
+    <div style="max-width:1180px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:24px;align-items:flex-start;text-align:left">
+      <h2 style="margin:0;font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,38px);font-weight:700;color:#1f4032;max-width:16ch">Can’t Attend the Gala?</h2>
+      <p style="margin:0;font-size:17px;line-height:1.7;color:#4a4640;max-width:44ch">You can still support the work of our Missions Ministry and partners through your generous giving. Every gift helps share Christ’s love in our communities and around the world.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start;max-width:52ch;margin-top:6px">
+        <a href="https://thewoodlandsmethodist.org/givetoMissions" style="border:1px solid #1f4032;color:#1f4032;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Give to Missions</a>
+        <a href="https://thewoodlandsmethodist.org/givetodisasterrelief" style="border:1px solid #1f4032;color:#1f4032;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Give to Disaster Relief</a>
+        <a href="https://thewoodlandsmethodist.org/missions-donation-items" style="border:1px solid #1f4032;color:#1f4032;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Donation Items Needed</a>
+        <a href="https://thewoodlandsmethodist.org/mission-partners" style="border:1px solid #1f4032;color:#1f4032;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Local Partners</a>
+        <a href="https://thewoodlandsmethodist.org/global-partners" style="border:1px solid #1f4032;color:#1f4032;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:600;white-space:nowrap;display:inline-block;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1),box-shadow 0.3s cubic-bezier(0.16,1,0.3,1),background 0.3s cubic-bezier(0.16,1,0.3,1)">Global Partners</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mg-mobile-only">
+    <div style="height:240px;background-color:rgb(252,239,213);background-image:linear-gradient(to bottom,rgba(252,239,213,1) 0%,rgba(252,239,213,0.4) 5%,rgba(252,239,213,0) 12%),url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/missionsgala-2025/MIS_Serve+it+Up+BG+Yellow.png');background-position:center top,100% 56%;background-size:100% 100%,190% auto;background-repeat:no-repeat,no-repeat;border-bottom:1px solid #e8e5e1"></div>
+  </div>
+
+  <div style="background:#fff;padding:80px 48px">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a6a2f;font-weight:600">Connect</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,38px);font-weight:700;color:#1f4032">Have Questions?</h2>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:#4a4640;max-width:52ch">If you would like more information about the Missions Gala, our ministry, sponsorship opportunities, or how to support missions, our team is here to help.</p>
+      </div>
+      <div style="background:#faf8f5;border:1px solid #e8e5e1;border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+        <div style="display:flex;align-items:center;gap:12px;font-size:17px;line-height:1.7;color:#4a4640"><i class="fa-solid fa-envelope" style="font-size:18px;color:#c5a258;flex:none"></i><span>Message <a href="mailto:lburnham@twmc.org" style="color:#1f4032;font-weight:600;text-decoration:underline">Lauren Burnham</a> with any questions.</span></div>
+        <div style="display:flex;align-items:center;gap:12px;font-size:17px;color:#4a4640">
+          <i class="fa-solid fa-phone" style="font-size:18px;color:#c5a258"></i>
+          <a href="tel:+12812975900" style="color:#1f4032;font-weight:600;text-decoration:underline">(281) 297-5900</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById('mg2026');
+  if (!root) return;
+
+  function centerItem(scroller, item) {
+    if (!scroller || !item) return;
+    scroller.scrollTo({
+      left: item.offsetLeft - scroller.offsetLeft - (scroller.clientWidth - item.clientWidth) / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  function closestIndex(scroller) {
+    var items = Array.prototype.slice.call(scroller.children);
+    var best = 0;
+    var bestDistance = Infinity;
+    items.forEach(function (item, index) {
+      var target = item.offsetLeft - scroller.offsetLeft - (scroller.clientWidth - item.clientWidth) / 2;
+      var distance = Math.abs(target - scroller.scrollLeft);
+      if (distance < bestDistance) {
+        best = index;
+        bestDistance = distance;
+      }
+    });
+    return best;
+  }
+
+  var impactScroller = root.querySelector('#mg-impact-scroller');
+  var impactDots = Array.prototype.slice.call(root.querySelectorAll('.mg-impact-dot'));
+  function updateImpact() {
+    if (!impactScroller || window.innerWidth >= 900) return;
+    var active = closestIndex(impactScroller);
+    impactDots.forEach(function (dot, index) {
+      dot.classList.toggle('is-active', index === active);
+      dot.setAttribute('aria-current', index === active ? 'true' : 'false');
+    });
+  }
+  impactDots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      var index = Number(dot.getAttribute('data-impact-index'));
+      centerItem(impactScroller, impactScroller.children[index]);
+    });
+  });
+  if (impactScroller) impactScroller.addEventListener('scroll', updateImpact, { passive: true });
+
+  var tierScroller = root.querySelector('#mg-tier-scroller');
+  var tierLabel = root.querySelector('#mg-tier-label');
+  function updateTier() {
+    if (!tierScroller || window.innerWidth >= 900) return;
+    var active = closestIndex(tierScroller);
+    if (tierLabel) tierLabel.textContent = (active + 1) + ' of ' + tierScroller.children.length;
+  }
+  if (tierScroller) tierScroller.addEventListener('scroll', updateTier, { passive: true });
+  root.querySelectorAll('[data-tier-action]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var active = closestIndex(tierScroller);
+      var direction = button.getAttribute('data-tier-action') === 'next' ? 1 : -1;
+      var target = Math.max(0, Math.min(tierScroller.children.length - 1, active + direction));
+      centerItem(tierScroller, tierScroller.children[target]);
+    });
+  });
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      updateImpact();
+      updateTier();
+      ticking = false;
+    });
+  }
+  if (impactScroller) impactScroller.addEventListener('scroll', onScroll, { passive: true });
+  if (tierScroller) tierScroller.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateImpact();
+  updateTier();
+})();
+</script>
