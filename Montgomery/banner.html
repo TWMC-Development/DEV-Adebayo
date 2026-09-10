@@ -26,8 +26,12 @@
         background-size: cover;
       }
 
-      .montgomery-fall-hero__heading {
+      .montgomery-fall-hero__content {
+        position: relative;
         width: min(100%, 1040px);
+      }
+
+      .montgomery-fall-hero__heading {
         margin: 0;
         line-height: 1;
       }
@@ -42,17 +46,22 @@
       }
 
       .montgomery-fall-hero__button {
+        position: absolute;
+        top: 78%;
+        left: 74%;
+        transform: translateX(-50%);
         display: inline-flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        min-height: 48px;
-        padding: 14px 28px;
+        min-height: 56px;
+        max-width: 48%;
+        padding: 16px 32px;
         border: 2px solid #fff;
         border-radius: 4px;
         background: #fff;
         color: #87320b;
-        font: 700 16px/1.25 Arial, sans-serif;
+        font: 700 18px/1.25 Arial, sans-serif;
         text-align: center;
         text-decoration: none;
       }
@@ -74,6 +83,26 @@
           min-height: 300px;
           padding: 48px 20px;
         }
+
+        .montgomery-fall-hero__content {
+          display: grid;
+          grid-template-columns: 48% 52%;
+          row-gap: 32px;
+        }
+
+        .montgomery-fall-hero__heading {
+          grid-column: 1 / -1;
+        }
+
+        .montgomery-fall-hero__button {
+          position: static;
+          transform: none;
+          grid-column: 2;
+          justify-self: center;
+          max-width: 100%;
+          padding: 12px 16px;
+          font-size: 16px;
+        }
       }
     </style>
   </head>
@@ -81,6 +110,7 @@
     <main>
       <!-- START BANNER: use this section and its scoped styles in a Rock HTML block. -->
       <section class="montgomery-fall-hero" aria-labelledby="montgomery-fall-title">
+        <div class="montgomery-fall-hero__content">
         <h1 class="montgomery-fall-hero__heading" id="montgomery-fall-title">
           <img
             class="montgomery-fall-hero__logo"
@@ -95,6 +125,7 @@
           class="montgomery-fall-hero__button"
           href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3405"
         >View Event Details</a>
+        </div>
       </section>
       <!-- END BANNER -->
     </main>

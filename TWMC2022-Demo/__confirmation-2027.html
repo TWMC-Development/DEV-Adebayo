@@ -309,6 +309,43 @@
         }
       }
 
+      /* Closed registration: readable status and natively disabled controls. */
+      .conf27-registration-notice {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border: 1px solid #d6cec5;
+        border-left: 4px solid var(--color-traditional);
+        border-radius: 4px;
+        background: #f6f3f0;
+        color: var(--conf27-ink);
+      }
+      .conf27-registration-notice strong {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+      }
+      .conf27-registration-notice p {
+        margin: 0 0 0.75rem;
+      }
+      .conf27-camp-card__status {
+        flex-basis: 100%;
+        margin: 0 0 0.25rem;
+        color: var(--conf27-ink);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+      .conf27-camp-card__foot .twmc--btn.conf27-registration-disabled:disabled {
+        background: #e8e4df !important; /* Override shared button hover styles. */
+        border: 1px solid #c4bcb3;
+        color: #59514a;
+        opacity: 1;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+        text-decoration: none;
+      }
+
       /* Section eyebrow label */
       .conf27-eyebrow {
         display: block;
@@ -1122,12 +1159,23 @@
               One churchwide confirmation journey, three meeting locations
             </h2>
             <p class="twmc-p conf27-lead">
-              Confirmation is open to sixth-grade students from all four
+              Confirmation brings together sixth-grade students from all four
               campuses of The Woodlands Methodist Church. Wherever students
               attend, they share the same curriculum, retreat experience and
               Confirmation Sunday in May.
             </p>
           </div>
+        </div>
+
+        <div class="conf27-registration-notice" id="campus-registration-closed">
+          <strong>Registration is closed</strong>
+          <p>
+            This event has ended. Student and parent leader registration is
+            closed at all campuses. Program details below are for reference.
+          </p>
+          <a href="mailto:confirmation@twmc.org" class="a-traditional"
+            >Contact the Confirmation team</a
+          >
         </div>
 
         <!-- Campus Cards -->
@@ -1158,16 +1206,23 @@
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
-                <a
-                  class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7259"
-                  >Register Student</a
+                <p class="conf27-camp-card__status">Registration is closed</p>
+                <button
+                  type="button"
+                  class="twmc--btn twmc--btn--traditional conf27-registration-disabled"
+                  disabled
+                  aria-describedby="campus-registration-closed"
                 >
-                <a
-                  class="twmc--btn twmc--btn--outline-dark-grey"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7431"
-                  >Register as Parent Leader</a
+                  Register Student
+                </button>
+                <button
+                  type="button"
+                  class="twmc--btn twmc--btn--outline-dark-grey conf27-registration-disabled"
+                  disabled
+                  aria-describedby="campus-registration-closed"
                 >
+                  Register as Parent Leader
+                </button>
               </div>
             </div>
           </div>
@@ -1200,16 +1255,23 @@
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
-                <a
-                  class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7258"
-                  >Register Student</a
+                <p class="conf27-camp-card__status">Registration is closed</p>
+                <button
+                  type="button"
+                  class="twmc--btn twmc--btn--traditional conf27-registration-disabled"
+                  disabled
+                  aria-describedby="campus-registration-closed"
                 >
-                <a
-                  class="twmc--btn twmc--btn--outline-dark-grey"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7433"
-                  >Register as Parent Leader</a
+                  Register Student
+                </button>
+                <button
+                  type="button"
+                  class="twmc--btn twmc--btn--outline-dark-grey conf27-registration-disabled"
+                  disabled
+                  aria-describedby="campus-registration-closed"
                 >
+                  Register as Parent Leader
+                </button>
               </div>
             </div>
           </div>
@@ -1224,25 +1286,16 @@
                     Covenant Church at Creekside
                   </div>
                 </div>
-                <span class="conf27-camp-badge conf27-camp-badge--muted">
-                  <i class="fa-solid fa-arrow-right-arrow-left"></i> Via The
-                  Woodlands
-                </span>
               </div>
-              <p class="conf27-camp-card__note">
-                Confirmation is not offered at the Creekside campus this year.
-                However, Creekside families are invited to join The Woodlands
-                program on Sunday mornings.
-              </p>
               <dl class="conf27-camp-meta">
                 <dt>When</dt>
                 <dd>
-                  Sundays, 9:00&ndash;10:15 a.m.<span class="sub"
+                  Sundays, 4:00&ndash;5:30 p.m.<span class="sub"
                     >Starts Sunday, Aug. 16</span
                   >
                 </dd>
                 <dt>Where</dt>
-                <dd>The Woodlands Campus, Wesley Hall</dd>
+                <dd>Creekside Campus</dd>
                 <dt>Fee</dt>
                 <dd>
                   $55 per student<span class="sub"
@@ -1251,11 +1304,15 @@
                 </dd>
               </dl>
               <div class="conf27-camp-card__foot">
-                <a
-                  class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7259"
-                  >Register Student</a
+                <p class="conf27-camp-card__status">Registration is closed</p>
+                <button
+                  type="button"
+                  class="twmc--btn twmc--btn--traditional conf27-registration-disabled"
+                  disabled
+                  aria-describedby="campus-registration-closed"
                 >
+                  Register Student
+                </button>
               </div>
             </div>
           </div>
@@ -1281,14 +1338,6 @@
                 program on Sundays, 12:30-1:45 p.m., as it is the next campus
                 closest to Montgomery.
               </p>
-
-              <div class="conf27-camp-card__foot">
-                <a
-                  class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7261"
-                  >Register Student</a
-                >
-              </div>
             </div>
           </div>
 
@@ -1314,30 +1363,13 @@
                 Creekside.
               </h4>
               <p class="conf27-camp-card__note">
-                <span lang="es" class="d-block mt-1">
+                <span lang="es" style="display: block; margin-top: 0.3rem">
                   <em
                     >El programa de Confirmación está disponible en español en
                     la Iglesia Covenant en Creekside.</em
                   >
                 </span>
               </p>
-
-              <!---  <p class="conf27-camp-card__note">
-                Unfortunately, Confirmation is not available in Spanish this year. Students are welcome to register for the English-language program at The Woodlands or Creekside.
-                <span lang="es" class="d-block mt-1">
-                  <em
-                    >Desafortunadamente, la Confirmación no está disponible en español este año. Los estudiantes pueden inscribirse en el programa en inglés en The Woodlands o Creekside.</em
-                  >
-                </span>
-              </p>--->
-
-              <div class="conf27-camp-card__foot">
-                <a
-                  class="twmc--btn twmc--btn--traditional"
-                  href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7262"
-                  >Register Student</a
-                >
-              </div>
             </div>
           </div>
         </div>

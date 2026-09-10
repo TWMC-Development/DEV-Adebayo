@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen Sports - V3</title>
+    <title>NextGen Sports</title>
 
      <!-- Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -354,12 +354,168 @@
 </section>
 <!-- End of Intro -->
 
-<!-- Toggle -->
+<!-- Campus selector and programs -->
 <style>
+  #twmc-nextgensports--programs [hidden] {
+    display: none !important;
+  }
+
+  .ngs-campus-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 24px 0;
+  }
+
+  .ngs-campus-tab {
+    min-height: 64px;
+    padding: 12px;
+    border: 1px solid #c6c8cd;
+    border-bottom: 4px solid var(--campus-color);
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .ngs-campus-tab:hover {
+    background: #f0f1f4;
+  }
+
+  .ngs-campus-tab[aria-selected="true"] {
+    background: var(--campus-color);
+    border-color: var(--campus-color);
+    color: #fff;
+  }
+
+  .ngs-campus-tab:focus-visible,
+  .ngs-campus-panel:focus-visible,
+  .twmc-nextgensports--campus-creekside a:focus-visible {
+    outline: 3px solid #242a38;
+    outline-offset: 4px;
+  }
+
+  .ngs-new-badge {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: #e8f3ee;
+    color: #245b48;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1.3;
+    vertical-align: middle;
+  }
+
   .twmc-nextgensports--campus-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 30px;
+  }
+
+  .twmc-nextgensports--campus-box > h3,
+  .ngs-campus-wide {
+    grid-column: 1 / -1;
+  }
+
+  .twmc-nextgensports--campus-box > h3 {
+    margin-bottom: 0 !important;
+  }
+
+  .twmc-nextgensports--campus-box .twmc-nextgensports--card {
+    min-width: 0;
+    margin-bottom: 0 !important;
+    background: #fff;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+  }
+
+  .twmc-nextgensports--campus-box .twmc-nextgensports--card .twmc--btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    max-width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .twmc-nextgensports--campus-creekside {
+    background: #eef5f1;
+    border-top: 4px solid #245b48;
+  }
+
+  .ngs-camp-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+    margin: 24px 0 0;
+  }
+
+  .ngs-camp-details dt {
+    color: #245b48;
+  }
+
+  .ngs-camp-details dd {
+    margin: 4px 0 0;
+  }
+
+  .twmc-nextgensports--campus-creekside .ngs-camp-register {
+    background: #245b48;
+    border-color: #245b48;
+    color: #fff;
+  }
+
+  .twmc-nextgensports--campus-creekside .ngs-camp-register:hover,
+  .twmc-nextgensports--campus-creekside .ngs-camp-register:focus {
+    background: #183f32;
+    border-color: #183f32;
+    color: #fff;
+  }
+
+  .ngs-camp-contact a {
+    color: #245b48;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 767px) {
+    .twmc-nextgensports--campus-box {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 20px 16px;
+    }
+
+    .ngs-campus-tab {
+      padding: 10px 5px;
+      font-size: 14px;
+    }
+
+    .ngs-new-badge {
+      display: table;
+      margin: 4px auto 0;
+    }
+
+    .ngs-camp-details {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .twmc-nextgensports--campus-box .twmc-nextgensports--card {
+      transition: none;
+      transform: none !important;
+    }
   }
 
   .twmc-nextgensports--campus-woodlands {
@@ -388,6 +544,12 @@
     transform: translateY(-2px);
   }
 
+  .twmc-nextgensports--campus-creekside .twmc-nextgensports--card:hover,
+  .twmc-nextgensports--campus-creekside .twmc-nextgensports--card:focus-within {
+    box-shadow: 0 0 0 1px rgba(36, 91, 72, 0.08), 0 10px 28px rgba(36, 91, 72, 0.18);
+    transform: translateY(-2px);
+  }
+
   .twmc-nextgensports--campus-woodforest .twmc--btn,
   .twmc-nextgensports--campus-woodforest .twmc--btn--traditional {
     background: #403A63 !important;
@@ -407,11 +569,19 @@
 <!-- Campus Programs -->
 <section id="twmc-nextgensports--programs" class="py-6">
   <div class="container">
+    <h2 class="twmc-h2 text-center text-uppercase" id="ngs-programs-heading">Find Your Program</h2>
+    <p class="twmc-p text-center">Explore sports and camps at your campus.</p>
+
+    <div class="ngs-campus-tabs" role="tablist" aria-label="Sports campus" hidden>
+      <button class="ngs-campus-tab" id="ngs-tab-woodlands" type="button" role="tab" aria-controls="ngs-campus-woodlands" aria-selected="true" style="--campus-color: #84002A;">The Woodlands</button>
+      <button class="ngs-campus-tab" id="ngs-tab-woodforest" type="button" role="tab" aria-controls="ngs-campus-woodforest" aria-selected="false" tabindex="-1" style="--campus-color: #403A63;">Woodforest</button>
+      <button class="ngs-campus-tab" id="ngs-tab-creekside" type="button" role="tab" aria-controls="ngs-campus-creekside" aria-selected="false" tabindex="-1" style="--campus-color: #245b48;">Creekside <span class="ngs-new-badge">New</span></button>
+    </div>
 
     <div class="row">
       
       <!-- The Woodlands -->
-      <div class="col-md-6 col-sm-12">
+      <div class="col-sm-12 ngs-campus-panel" id="ngs-campus-woodlands">
         <div class="twmc-nextgensports--campus-box twmc-nextgensports--campus-woodlands">
           <h3 class="twmc-h3 mt-2 mb-4 text-uppercase text-center" style="color: #84002A;">The Woodlands Campus</h3>
 
@@ -511,11 +681,11 @@
       </div>
 
       <!-- Woodforest -->
-      <div class="col-md-6 col-sm-12">
+      <div class="col-sm-12 ngs-campus-panel" id="ngs-campus-woodforest">
         <div class="twmc-nextgensports--campus-box twmc-nextgensports--campus-woodforest">
           <h3 class="twmc-h3 mt-2 mb-4 text-uppercase text-center" style="color: #403A63;">Woodforest Campus</h3>
 
-          <div class="twmc-nextgensports--card text-center">
+          <div class="twmc-nextgensports--card text-center ngs-campus-wide">
             <h3 class="twmc-h3 text-uppercase mb-3">No Programs Currently Available</h3>
             <p class="twmc-p mb-0">Please check back for future seasons and registration opportunities.</p>
           </div>
@@ -605,11 +775,97 @@
         </div>
       </div>
 
+      <!-- Creekside -->
+      <div class="col-sm-12 ngs-campus-panel" id="ngs-campus-creekside">
+        <div class="twmc-nextgensports--campus-box twmc-nextgensports--campus-creekside">
+          <h3 class="twmc-h3 mt-2 text-uppercase text-center" style="color: #245b48;">Creekside Campus</h3>
+
+          <div class="ngs-campus-wide">
+            <h4 class="twmc-h4 mt-0">Brand New! Thanksgiving Break Camps</h4>
+            <p class="twmc-p">Calling all Pre-K 4 &ndash; 4th graders! Join us for our 1st Annual NextGen Sports Thanksgiving Break camps at our Covenant at Creekside campus. Choose soccer or cheer, drop your kids off, and we will take care of the rest!</p>
+            <dl class="ngs-camp-details twmc-p">
+              <div>
+                <dt>Dates</dt>
+                <dd>Monday, November 23 &ndash; Tuesday, November 24</dd>
+              </div>
+              <div>
+                <dt>Time</dt>
+                <dd>9:00 a.m. &ndash; 2:00 p.m. each day</dd>
+              </div>
+              <div>
+                <dt>Who</dt>
+                <dd>Pre-K 4 &ndash; 4th grade</dd>
+              </div>
+              <div>
+                <dt>Location &amp; lunch</dt>
+                <dd>Covenant at Creekside campus<br>Chick-fil-A lunch provided</dd>
+              </div>
+            </dl>
+          </div>
+
+          <article class="twmc-nextgensports--card">
+            <h4 class="twmc-h4 text-uppercase mt-0">Soccer Camp</h4>
+            <p class="twmc-p">Join us for soccer this Thanksgiving break.</p>
+            <a href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7670" class="twmc--btn twmc--btn--small ngs-camp-register" target="_blank" rel="noopener noreferrer">Register for Soccer Camp</a>
+          </article>
+
+          <article class="twmc-nextgensports--card">
+            <h4 class="twmc-h4 text-uppercase mt-0">Cheer Camp</h4>
+            <p class="twmc-p">Join us for cheer this Thanksgiving break.</p>
+            <a href="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7671" class="twmc--btn twmc--btn--small ngs-camp-register" target="_blank" rel="noopener noreferrer">Register for Cheer Camp</a>
+          </article>
+
+          <p class="twmc-p mb-0 ngs-campus-wide ngs-camp-contact">Questions about Creekside camps? Contact <a href="mailto:cdale@twmc.org">Caitlin Dale</a> at <a href="mailto:cdale@twmc.org">cdale@twmc.org</a>.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+<script>
+  (function () {
+    var programs = document.getElementById('twmc-nextgensports--programs');
+    var tablist = programs.querySelector('[role="tablist"]');
+    var tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+
+    function selectCampus(selectedTab) {
+      tabs.forEach(function (tab) {
+        var selected = tab === selectedTab;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+      });
+    }
+
+    tabs.forEach(function (tab, index) {
+      var panel = document.getElementById(tab.getAttribute('aria-controls'));
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('aria-labelledby', tab.id);
+      panel.tabIndex = 0;
+
+      tab.addEventListener('click', function () {
+        selectCampus(tab);
+      });
+
+      tab.addEventListener('keydown', function (event) {
+        var nextIndex;
+        if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') nextIndex = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = tabs.length - 1;
+        else return;
+
+        event.preventDefault();
+        selectCampus(tabs[nextIndex]);
+        tabs[nextIndex].focus();
+      });
+    });
+
+    selectCampus(tabs[0]);
+    tablist.hidden = false;
+  }());
+</script>
 <!-- End Campus Programs -->
-<!-- End of Toggle -->
 
 
 <!-- Important Dates -->
