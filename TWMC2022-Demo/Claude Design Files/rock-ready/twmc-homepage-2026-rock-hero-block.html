@@ -1,0 +1,213 @@
+<!-- Homepage hero: paste this entire file into its own full-width Rock HTML block. -->
+<link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+<link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+<style>
+/* ===== 2026 MULTI-CAMPUS HERO (redesign) — self-contained ===== */
+      .tw26-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: min(88vh, 760px);
+        display: flex;
+        align-items: flex-end;
+        background: #1a1a1a;
+      }
+      .tw26-hero__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 122%; /* overscan to clip baked-in letterbox bars in the source video */
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+      }
+      .tw26-hero__scrim {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background:
+          linear-gradient(to top, rgba(26, 26, 26, 0.92) 0%, rgba(26, 26, 26, 0.35) 42%, rgba(26, 26, 26, 0.15) 70%, rgba(26, 26, 26, 0.45) 100%),
+          linear-gradient(105deg, rgba(82, 36, 47, 0.55) 0%, rgba(82, 36, 47, 0) 55%);
+      }
+      .tw26-hero__content {
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1320px;
+        /* Preserve the desktop offset without moving beyond the hero edge. */
+        margin: 0 auto 0 max(0px, calc((100% - 1320px) / 2 - 100px));
+        padding: 120px 24px 94px;
+      }
+      .tw26-hero__title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        color: #fff;
+        font-size: clamp(38px, 5vw, 66px);
+        line-height: 1.08;
+        letter-spacing: -0.5px;
+        text-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+        margin: 0 0 26px;
+        max-width: 18ch;
+      }
+      .tw26-hero__title em {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-style: italic;
+        color: #d4b87a;
+      }
+      .tw26-hero__sub {
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: clamp(16px, 1.5vw, 19px);
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 56ch;
+        margin: 0 0 30px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      }
+      .tw26-hero__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .tw26-hero__chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+        border-radius: 999px;
+        color: #fff;
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        text-decoration: none;
+        white-space: nowrap;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.07);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .tw26-hero__chip--solid {
+        background: #6e3140;
+        border-color: #6e3140;
+      }
+      .tw26-hero__chip:hover,
+      .tw26-hero__chip:focus {
+        transform: scale(1.04);
+        text-decoration: none;
+      }
+      /* Keep hero button labels and icons white against theme link states. */
+      .tw26-hero a.tw26-hero__chip,
+      .tw26-hero a.tw26-hero__chip:visited,
+      .tw26-hero a.tw26-hero__chip:hover,
+      .tw26-hero a.tw26-hero__chip:focus,
+      .tw26-hero a.tw26-hero__chip:active {
+        color: #fff !important;
+      }
+      .tw26-hero a.tw26-hero__chip .tw26-hero__play,
+      .tw26-hero a.tw26-hero__chip .tw26-hero__play path {
+        color: #fff !important;
+        fill: #fff !important;
+      }
+      .tw26-hero__scroll {
+        display: none !important;
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(0, 0, 0, 0.25);
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: tw26HeroBob 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+      }
+      @keyframes tw26HeroBob {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(6px); }
+      }
+      @media (max-width: 991px) {
+        .tw26-hero { min-height: clamp(520px, 80vh, 720px); }
+        .tw26-hero__content { padding: 96px 24px 52px; margin: 0 auto; }
+        .tw26-hero__scroll { display: none; }
+      }
+      @media (max-width: 576px) {
+        /* Match the reference's phone height; allow wrapped text to grow. */
+        .tw26-hero { min-height: 520px; }
+        .tw26-hero__content { padding: 48px 24px; }
+        .tw26-hero__title { margin-bottom: 20px; }
+        .tw26-hero__sub { margin-bottom: 24px; }
+      }
+      .tw26-hero a.tw26-hero__chip .tw26-hero__play {
+        display: inline-block !important;
+        box-sizing: border-box;
+        width: 12px !important;
+        height: 14px !important;
+        padding: 0;
+        border: 0 !important;
+        background: #fff;
+        /* Round each vertex with a quadratic curve. */
+        clip-path: path("M 2 1 Q 0 0 0 2 L 0 12 Q 0 14 2 13 L 11 8 Q 13 7 11 6 Z");
+        margin-right: 9px;
+        flex: 0 0 auto;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .tw26-hero__scroll { animation: none; }
+      }
+      /* ===== END HOMEPAGE 2026 CUSTOM CSS ===== */
+    
+#twmc-homepage-2026-hero .tw26-icon{display:inline-block;width:1em;height:1em;flex-shrink:0;vertical-align:-0.125em}
+
+#twmc-homepage-2026-hero [hidden]{display:none!important}
+@media(max-width:430px){#twmc-homepage-2026-hero .container-fluid{padding-left:18px;padding-right:18px}}
+
+</style>
+<div id="twmc-homepage-2026-hero">
+<section class="tw26-hero">
+      <video
+        class="tw26-hero__video"
+        playsinline
+        autoplay
+        muted
+        loop
+        poster="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/FND_TextOverlay_BKG2.png"
+      >
+        <source
+          src="https://player.vimeo.com/progressive_redirect/playback/1184955692/rendition/720p/file.mp4%20%28720p%29.mp4?loc=external&amp;signature=77ffdc605f222accf2a247b6b6e243b467121c37921f498e32cd62f4f6d88515"
+          type="video/mp4"
+        />
+      </video>
+      <div class="tw26-hero__scrim"></div>
+      <div class="tw26-hero__content">
+        <h1 class="tw26-hero__title">Hope Lives <em>Here</em></h1>
+        <p class="tw26-hero__sub">
+          Church doesn't just happen on Sunday. Find your people across Montgomery County — in person or online, every day of the week.
+        </p>
+        <div class="tw26-hero__chips">
+          <a href="https://thewoodlandsmethodist.org/media" class="tw26-hero__chip tw26-hero__chip--solid"><span class="tw26-hero__play" aria-hidden="true"></span>Watch &amp; Listen</a>
+          <a href="https://thewoodlandsmethodist.org/page/5072" class="tw26-hero__chip">Find Your Place</a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="tw26-hero__scroll"
+        aria-label="Scroll to content"
+        onclick="window.scrollBy({ top: Math.round(window.innerHeight * 0.85), behavior: 'smooth' });"
+      >
+        <svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 9 7 7 7-7"/></svg>
+      </button>
+    </section>
+</div>

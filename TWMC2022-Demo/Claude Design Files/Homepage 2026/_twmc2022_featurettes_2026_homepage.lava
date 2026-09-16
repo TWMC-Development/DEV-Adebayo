@@ -1,0 +1,97 @@
+<!-- Homepage featured events. Items is supplied by the Rock content channel. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;display=swap" />
+<style>
+  .tw26-featurettes {
+    padding: 28px 0;
+    background: #faf8f5;
+  }
+  .tw26-featurettes *,
+  .tw26-featurettes *::before,
+  .tw26-featurettes *::after { box-sizing: border-box; }
+  .tw26-featurettes__container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    /* Match the hero's left text edge and mirror that inset on the right. */
+    padding: 0 max(24px, calc((100% - 1320px) / 2 - 76px));
+  }
+  .tw26-featurettes__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(13px, 1.62vw, 19.5px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin: 0 0 28px;
+  }
+  .tw26-featurettes__title em {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+  .tw26-featurettes__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .tw26-featurettes .twmc-home-cta-feat__link {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    padding: 18px;
+    border-radius: 6px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.25s ease, color 0.25s ease;
+  }
+  .tw26-featurettes .twmc-home-cta-adv__img {
+    display: block;
+    width: 88px;
+    max-width: 100%;
+    height: auto;
+  }
+  .tw26-featurettes .twmc-home-cta-adv__text { min-width: 0; }
+  .tw26-featurettes .twmc-h4 { margin: 0 0 8px; }
+  .tw26-featurettes .twmc-p-small { margin: 0; }
+  .tw26-featurettes .twmc-home-cta-feat__link:hover,
+  .tw26-featurettes .twmc-home-cta-feat__link:focus {
+    background-color: #fff;
+    color: var(--color-dark-orange, #a64b2a);
+    text-decoration: none;
+    transform: scale(1.04);
+  }
+  @media (max-width: 991px) {
+    .tw26-featurettes__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 767px) {
+    .tw26-featurettes { padding: 22px 0; }
+    .tw26-featurettes__grid { grid-template-columns: 1fr; gap: 16px; }
+    .tw26-featurettes .twmc-home-cta-feat__link { grid-template-columns: 70px minmax(0, 1fr); }
+    .tw26-featurettes .twmc-home-cta-adv__img { width: 70px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tw26-featurettes .twmc-home-cta-feat__link { transition: none; }
+    .tw26-featurettes .twmc-home-cta-feat__link:hover,
+    .tw26-featurettes .twmc-home-cta-feat__link:focus { transform: none; }
+  }
+</style>
+
+<section class="tw26-featurettes">
+  <div class="tw26-featurettes__container">
+    <h2 class="tw26-featurettes__title">Featured <em>Events</em></h2>
+    <div class="tw26-featurettes__grid">
+      {% for item in Items %}
+        <a href="{{ item | Attribute:'Link' }}" class="twmc-home-cta-feat__link">
+          <img src="/GetImage.ashx?guid={{ item | Attribute:'Image','RawValue' }}" alt="" class="twmc-home-cta-adv__img" loading="lazy" />
+          <div class="twmc-home-cta-adv__text">
+            <h4 class="twmc-h4">{{ item.Title | Escape }}</h4>
+            <p class="twmc-p-small">{{ item | Attribute:'Summary' | StripHtml | Truncate:120,'...' | Escape }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

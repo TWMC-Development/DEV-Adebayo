@@ -6,7 +6,7 @@ import shutil
 from zipfile import ZipFile, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "export/dessert-worship-2026.html"
+SOURCE = ROOT / "Dessert and Worship 2026/export/dessert-worship-2026.html"
 OUTPUT = ROOT / "rock-ready"
 ASSET_FOLDER = "Women"
 WEB_ROOT = "/Content/Women"

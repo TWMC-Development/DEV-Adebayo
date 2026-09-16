@@ -1,0 +1,105 @@
+<!--
+  Homepage 2026: dynamic Senior Pastor Blog for Rock's content channel.
+  Paste this entire fragment into the channel's Format field, or replace the
+  contents of the Lava file already included by that field. Keep the existing
+  channel, filters, sorting, and item-count settings (three items match the preview).
+  Requires the Items collection supplied by the content-channel block.
+  Replace the static homepage blog section when installing this dynamic version.
+  This is a Lava template: open the main homepage HTML for a static local preview.
+-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" />
+<style>
+.tw26-blog{--maroon:#6e3140;--gold:#c5a258;--cream:#faf8f5;--warm-white:#fff;--warm-gray:#f5f3f0;--warm-gray-2:#eae7e3;--dark:#1a1a1a;--text-body:#555;--text-muted:#767676;--border-light:#e8e5e1;--ease-out:cubic-bezier(0.16,1,0.3,1);padding:88px 0;background:var(--warm-white);font-family:"DM Sans",system-ui,sans-serif;color:var(--text-body)}
+      .tw26-blog *,.tw26-blog *::before,.tw26-blog *::after{box-sizing:border-box}
+      .tw26-blog__container{box-sizing:border-box;width:100%;max-width:1320px;margin:0 auto;padding:0 24px}
+      .tw26-blog__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+      .tw26-blog__title{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.24vw,39px);font-weight:800;color:var(--dark);margin:0;line-height:1.15}
+      .tw26-blog__title em{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;color:var(--maroon)}
+      .tw26-blog__all{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border:1.5px solid var(--maroon);border-radius:999px;background:transparent;color:var(--maroon);font-size:14px;font-weight:600;letter-spacing:.3px;text-decoration:none;transition:transform .3s var(--ease-out)}
+      .tw26-blog__all:hover{transform:scale(1.04);color:var(--maroon);text-decoration:none}
+      .tw26-blog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+      .tw26-blog__card{display:flex;flex-direction:column;height:100%;background:var(--warm-white);border:1px solid var(--border-light);border-radius:14px;overflow:hidden;text-decoration:none;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),border-color .5s var(--ease-out)}
+      .tw26-blog__card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 4px 12px rgba(0,0,0,.06),0 16px 40px rgba(0,0,0,.1);text-decoration:none}
+      .tw26-blog__img{height:200px;overflow:hidden;background:linear-gradient(135deg,var(--warm-gray),var(--warm-gray-2))}
+      .tw26-blog__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease-out)}
+      .tw26-blog__card:hover .tw26-blog__img img{transform:scale(1.05)}
+      .tw26-blog__body{padding:24px;flex:1}
+      .tw26-blog__body h3{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:600;color:var(--dark);line-height:1.3;margin:0 0 10px}
+      .tw26-blog__body p{margin:0;font-size:14px;line-height:1.6;color:var(--text-body);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+      .tw26-blog__meta{display:flex;align-items:center;gap:12px;padding:16px 24px;border-top:1px solid var(--border-light)}
+      .tw26-blog__meta img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+      .tw26-blog__meta-text{font-size:13px;line-height:1.35}
+      .tw26-blog__meta-text strong{display:block;color:var(--dark);font-weight:600}
+      .tw26-blog__meta-text span{color:var(--text-muted)}
+      @media (max-width:991px){.tw26-blog__grid{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:767px) {
+        .tw26-blog { padding:56px 0; }
+        .tw26-blog__head { flex-direction:column;align-items:flex-start;gap:16px; }
+        .tw26-blog__grid {
+          grid-template-columns:none;
+          grid-auto-flow:column;
+          grid-auto-columns:86%;
+          gap:16px;
+          overflow-x:auto;
+          scroll-snap-type:x proximity;
+          scroll-padding-inline:24px;
+          margin-inline:-24px;
+          padding:8px 24px 24px;
+        }
+        .tw26-blog__card { min-width:0;scroll-snap-align:start; }
+        .tw26-blog__card:focus-visible { outline:2px solid var(--maroon);outline-offset:3px; }
+      }
+      .tw26-blog__meta-text span{display:block}
+      .tw26-blog__all-icon{display:inline-block;width:1em;height:1em;flex-shrink:0}
+      .tw26-blog__empty{margin:0;color:var(--text-body)}
+
+</style>
+
+<!-- Blog -->
+<section class="tw26-blog" id="blog">
+  <div class="tw26-blog__container">
+    <div class="tw26-blog__head">
+      <h2 class="tw26-blog__title">Latest from our <em>Senior Pastor</em></h2>
+      <a class="tw26-blog__all" href="/blog">
+        View All Posts
+        <svg class="tw26-blog__all-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7" /></svg>
+      </a>
+    </div>
+
+    {% assign itemCount = Items | Size %}
+    {% if itemCount > 0 %}
+      <div class="tw26-blog__grid">
+        {% for item in Items %}
+          {% assign image = item | Attribute:'Image','object' %}
+          {% assign author = item | Attribute:'Author','object' %}
+          <a class="tw26-blog__card" href="/blog/{{ item.PrimarySlug }}">
+            <div class="tw26-blog__img">
+              {% if image.Id %}
+                <img src="/GetImage.ashx?id={{ image.Id }}&amp;Width=600" alt="" loading="lazy" />
+              {% endif %}
+            </div>
+            <div class="tw26-blog__body">
+              <h3>{{ item.Title | Escape }}</h3>
+              <p>{{ item | Attribute:'Excerpt' | StripHtml | Truncate:360,'...' | Escape }}</p>
+            </div>
+            <div class="tw26-blog__meta">
+              {% if author.PhotoId %}
+                <img src="/GetImage.ashx?id={{ author.PhotoId }}&amp;Width=200" alt="" loading="lazy" />
+              {% endif %}
+              <div class="tw26-blog__meta-text">
+                {% if author.FullName %}
+                  <strong>{{ author.TitleValue.Value | Escape }} {{ author.FullName | Escape }}</strong>
+                {% endif %}
+                <span>{{ item.StartDateTime | Date:'MMMM d, yyyy' }}</span>
+                <span>{{ item.Content | ReadTime }}</span>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="tw26-blog__empty">There are no blog posts.</p>
+    {% endif %}
+  </div>
+</section>
+<!-- End of Blog -->
