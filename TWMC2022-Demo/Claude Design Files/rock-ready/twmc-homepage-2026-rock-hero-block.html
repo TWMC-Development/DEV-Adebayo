@@ -4,7 +4,7 @@
       rel="stylesheet"
     />
 <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap"
       rel="stylesheet"
     />
 <style>
@@ -34,7 +34,7 @@
         z-index: 1;
         background:
           linear-gradient(to top, rgba(26, 26, 26, 0.92) 0%, rgba(26, 26, 26, 0.35) 42%, rgba(26, 26, 26, 0.15) 70%, rgba(26, 26, 26, 0.45) 100%),
-          linear-gradient(105deg, rgba(82, 36, 47, 0.55) 0%, rgba(82, 36, 47, 0) 55%);
+          linear-gradient(105deg, color-mix(in srgb, var(--color-traditional-dark, #5e1b24) 55%, transparent) 0%, transparent 55%);
       }
       .tw26-hero__content {
         position: relative;
@@ -63,7 +63,7 @@
         color: #d4b87a;
       }
       .tw26-hero__sub {
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: inherit;
         font-size: clamp(16px, 1.5vw, 19px);
         line-height: 1.65;
         color: rgba(255, 255, 255, 0.9);
@@ -83,7 +83,7 @@
         border: 1.5px solid rgba(255, 255, 255, 0.35);
         border-radius: 999px;
         color: #fff;
-        font-family: 'DM Sans', system-ui, sans-serif;
+        font-family: inherit;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 0.2px;
@@ -95,8 +95,8 @@
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .tw26-hero__chip--solid {
-        background: #6e3140;
-        border-color: #6e3140;
+        background: var(--color-traditional, #862633);
+        border-color: var(--color-traditional, #862633);
       }
       .tw26-hero__chip:hover,
       .tw26-hero__chip:focus {

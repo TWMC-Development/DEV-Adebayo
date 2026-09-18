@@ -4,7 +4,7 @@
       rel="stylesheet"
     />
 <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap"
       rel="stylesheet"
     />
 <style>
@@ -12,7 +12,7 @@
       .blog-section{background:#faf8f5}
       .tw26-min__inner{box-sizing:border-box;width:100%;max-width:1320px;margin:0 auto;padding:0 24px}
       .tw26-min__title{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.24vw,39px);font-weight:800;color:#1a1a1a;margin:0}
-      .tw26-min__title em{font-style:italic;font-weight:700;color:#6e3140;font-family:Georgia,'Times New Roman',serif}
+      .tw26-min__title em{font-style:italic;font-weight:700;color:var(--color-traditional, #862633);font-family:Georgia,'Times New Roman',serif}
       .tw26-min__grid{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
       .tw26-min__tile{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border-radius:14px;text-decoration:none;background:#f5f3f0;transition:transform .5s cubic-bezier(0.16,1,0.3,1),box-shadow .5s cubic-bezier(0.16,1,0.3,1)}
       .tw26-min__tile:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(26,26,26,0.16)}
@@ -28,8 +28,8 @@
 
       .tw26-campus {
         /* scoped brand tokens */
-        --maroon: #6e3140;
-        --maroon-dark: #52242f;
+        --maroon: var(--color-traditional, #862633);
+        --maroon-dark: var(--color-traditional-dark, #5e1b24);
         --gold: #c5a258;
         --gold-light: #d4b87a;
         --cream: #faf8f5;
@@ -44,7 +44,6 @@
         --radius-lg: 24px;
         --radius-pill: 999px;
         --font-display: "Playfair Display", Georgia, serif;
-        --font-body: "DM Sans", system-ui, sans-serif;
         --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.06);
         --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 16px 40px rgba(0, 0, 0, 0.1);
         --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -53,7 +52,7 @@
 
         padding: 112px 0;
         background: var(--cream);
-        font-family: var(--font-body);
+        font-family: inherit;
         color: var(--text-body);
       }
       .tw26-campus *,
@@ -129,7 +128,7 @@
         border: 1.5px solid var(--border-light);
         background: var(--warm-white);
         color: var(--text-body);
-        font-family: var(--font-body);
+        font-family: inherit;
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
@@ -142,7 +141,7 @@
         background: var(--maroon);
         border-color: var(--maroon);
         color: #fff;
-        box-shadow: 0 6px 18px rgba(110, 49, 64, 0.22);
+        box-shadow: 0 6px 18px color-mix(in srgb, var(--maroon) 22%, transparent);
       }
 
       /* ---- panel ---- */
@@ -289,7 +288,7 @@
         gap: 8px;
         padding: 13px 26px;
         border-radius: var(--radius-pill);
-        font-family: var(--font-body);
+        font-family: inherit;
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -352,7 +351,7 @@
       }
     
 
-      .tw26-blog{--maroon:#6e3140;--gold:#c5a258;--cream:#faf8f5;--warm-white:#fff;--warm-gray:#f5f3f0;--warm-gray-2:#eae7e3;--dark:#1a1a1a;--text-body:#555;--text-muted:#767676;--border-light:#e8e5e1;--ease-out:cubic-bezier(0.16,1,0.3,1);padding:88px 0;background:var(--warm-white);font-family:"DM Sans",system-ui,sans-serif;color:var(--text-body)}
+      .tw26-blog{--maroon:var(--color-traditional, #862633);--gold:#c5a258;--cream:#faf8f5;--warm-white:#fff;--warm-gray:#f5f3f0;--warm-gray-2:#eae7e3;--dark:#1a1a1a;--text-body:#555;--text-muted:#767676;--border-light:#e8e5e1;--ease-out:cubic-bezier(0.16,1,0.3,1);padding:88px 0;background:var(--warm-white);font-family:inherit;color:var(--text-body)}
       .tw26-blog *,.tw26-blog *::before,.tw26-blog *::after{box-sizing:border-box}
       .tw26-blog__container{box-sizing:border-box;width:100%;max-width:1320px;margin:0 auto;padding:0 24px}
       .tw26-blog__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
@@ -406,16 +405,16 @@
             <h2 class="tw26-min__title">Get <em>Connected</em></h2>
             <div class="tw26-min__grid">
                         <a href="https://thewoodlandsmethodist.org/women" class="tw26-min__tile">
-              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOM_HeaderBanner.png" alt="Women's" loading="lazy" />
-              <span class="tw26-min__label">Women's<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/WOM_HeaderBanner.png" alt="Women" loading="lazy" />
+              <span class="tw26-min__label">Women<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
             <a href="https://people.thewoodlandsmethodist.org/children" class="tw26-min__tile">
-              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20241007-CHI-24-2500w.jpg" alt="Children's" loading="lazy" />
-              <span class="tw26-min__label">Children's<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20241007-CHI-24-2500w.jpg" alt="Children" loading="lazy" />
+              <span class="tw26-min__label">Children<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
             <a href="https://thewoodlandsmethodist.org/men" class="tw26-min__tile">
-              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=f855241d-6987-4152-abab-a496b2dc01b9" alt="Men's" loading="lazy" />
-              <span class="tw26-min__label">Men's<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
+              <img src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=f855241d-6987-4152-abab-a496b2dc01b9" alt="Men" loading="lazy" />
+              <span class="tw26-min__label">Men<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
             <!-- TODO: replace with the real Español ministry photo -->
             <a href="https://thewoodlandsmethodist.org/espanol" class="tw26-min__tile">
@@ -426,7 +425,7 @@
               <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_missions/MIS_GlobalTrips+COSTA+RICA+Feb.jpeg" alt="Missions" loading="lazy" />
               <span class="tw26-min__label">Missions<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
-            <a href="https://thewoodlandsmethodist.org/singles" class="tw26-min__tile">
+            <a href="https://thewoodlandsmethodist.org/students" class="tw26-min__tile">
               <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_forge/forge-2026/Forge_20240224_Forge+Youth+Conference_0285_1000x1500.jpg" alt="Students" loading="lazy" />
               <span class="tw26-min__label">Students<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
@@ -435,8 +434,8 @@
               <span class="tw26-min__label">Caring &amp; Prayer<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
             <a href="https://thewoodlandsmethodist.org/adults55" class="tw26-min__tile">
-              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_adults55/centre-for-ageing-better-GJaWV0YoBeU-unsplash.jpg" alt="Adult 55+" loading="lazy" />
-              <span class="tw26-min__label">Adult 55+<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
+              <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_adults55/centre-for-ageing-better-GJaWV0YoBeU-unsplash.jpg" alt="Adults 55+" loading="lazy" />
+              <span class="tw26-min__label">Adults 55+<svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></span>
             </a>
             </div>
           </div>
@@ -448,15 +447,14 @@
         <div class="tw26-campus__head">
           <h2 class="tw26-campus__title">Find your campus, <em>near you</em></h2>
           <p class="tw26-campus__intro">
-            The Woodlands Methodist Church gathers across four campuses throughout
-            Montgomery County — each with its own personality, and all part of one
+            The Woodlands Methodist Church gathers across four campuses — each with its own personality, and all part of one
             family. Wherever you are, there's a place for you this Sunday.
           </p>
         </div>
 
         <!-- TAB BAR -->
         <div class="tw26-campus__tabbar" role="tablist">
-          <button class="tw26-campus__tab is-active" role="tab" aria-selected="true" data-campus="woodlands">Woodlands</button>
+          <button class="tw26-campus__tab is-active" role="tab" aria-selected="true" data-campus="woodlands">The Woodlands</button>
           <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="woodforest">Woodforest</button>
           <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="montgomery">Montgomery</button>
           <button class="tw26-campus__tab" role="tab" aria-selected="false" data-campus="creekside">Creekside</button>
@@ -480,11 +478,11 @@
             <p class="tw26-campus__addr"><svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> <a href="https://www.google.com/maps/search/?api=1&amp;query=2200+Lake+Woodlands+Drive%2C+The+Woodlands%2C+TX+77380" target="_blank" rel="noopener">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a></p>
             <div class="tw26-campus__services">
               <div class="tw26-campus__services-label"><svg class="tw26-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg> Service Times</div>
-              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Traditional</span><span class="tw26-campus__service-time">Sundays · 9:30 &amp; 11:00 a.m.</span></div>
-              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Harvest</span><span class="tw26-campus__service-time">Sundays · 9:00 &amp; 11:00 a.m.</span></div>
-              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Loft</span><span class="tw26-campus__service-time">Sundays · 9:30 &amp; 11:00 a.m.</span></div>
-              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Chapel</span><span class="tw26-campus__service-time">Sundays · 8:00 a.m.</span></div>
-              <div class="tw26-campus__service"><span class="tw26-campus__service-style">House</span><span class="tw26-campus__service-time">Tuesdays · 7:00 p.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Traditional</span><span class="tw26-campus__service-time">Sundays · 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Harvest (Contemporary)</span><span class="tw26-campus__service-time">Sundays · 9:00 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Loft (Modern)</span><span class="tw26-campus__service-time">Sundays · 9:30 &amp; 11:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">Chapel</span><span class="tw26-campus__service-time">Sundays · 7:45 &amp; 9:00 a.m.</span></div>
+              <div class="tw26-campus__service"><span class="tw26-campus__service-style">House (Young Adults)</span><span class="tw26-campus__service-time">Tuesdays · 7:00 p.m.</span></div>
               <div class="tw26-campus__service"><span class="tw26-campus__service-style">Adoración Español</span><span class="tw26-campus__service-time">Domingos · 10:00 a.m.</span></div>
             </div>
             <div class="tw26-campus__actions">

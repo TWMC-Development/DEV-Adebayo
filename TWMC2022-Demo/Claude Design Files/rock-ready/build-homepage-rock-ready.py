@@ -53,7 +53,8 @@ def main():
         r'<i class="fa-(?:solid|regular) fa-([\w-]+)"></i>', inline_icon, content)
     assert icon_count > 0
     assert not re.search(r'class="[^"]*\bfa-', content)
-    block = ("<!-- Paste into one full-width HTML block on the TWMC Rock layout.\n"
+    # Assemble in memory for validation only; export the two split blocks below.
+    block = ("<!-- Homepage content validation.\n"
              "     The layout supplies navigation, footer and theme CSS. Icons are inline SVG. -->\n"
              + fonts + "\n<style>\n" + css + "\n</style>\n"
              + '<div id="twmc-homepage-2026">\n' + content + "\n</div>\n")
@@ -89,7 +90,6 @@ def main():
     assert block.count('role="tab"') == 4
     assert block.count('class="tw26-campus__panel"') == 4
     assert block.count('<svg class="tw26-icon"') == icon_count
-    (OUTPUT / "twmc-homepage-2026-rock-block.html").write_text(block)
 
     # Each split export is a complete fragment; no wrapper spans Rock blocks.
     split_at = content.index('<div class="tw26-home-content">')
@@ -116,7 +116,7 @@ def main():
     assert len(split_ids) == len(set(split_ids)), "Duplicate IDs across split blocks"
     assert hero_content + lower_content == content
     assert SOURCE.read_text() == source
-    print("Built homepage Rock block; verified sections, tab/panel counts, unique IDs, and no local asset paths or duplicate theme scripts. Source unchanged.")
+    print("Verified homepage sections, tab/panel counts, unique IDs, and no local asset paths or duplicate theme scripts. Source unchanged.")
     print(f"Verified {icon_count} inline SVG icons; no icon font required.")
     print("Built separate hero and content blocks; verified balanced HTML and unique IDs across both blocks.")
 

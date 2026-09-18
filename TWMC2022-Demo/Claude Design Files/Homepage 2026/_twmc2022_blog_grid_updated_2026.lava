@@ -7,9 +7,9 @@
   Replace the static homepage blog section when installing this dynamic version.
   This is a Lava template: open the main homepage HTML for a static local preview.
 -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Open+Sans:wght@400;500;600;700&amp;display=swap" />
 <style>
-.tw26-blog{--maroon:#6e3140;--gold:#c5a258;--cream:#faf8f5;--warm-white:#fff;--warm-gray:#f5f3f0;--warm-gray-2:#eae7e3;--dark:#1a1a1a;--text-body:#555;--text-muted:#767676;--border-light:#e8e5e1;--ease-out:cubic-bezier(0.16,1,0.3,1);padding:88px 0;background:var(--warm-white);font-family:"DM Sans",system-ui,sans-serif;color:var(--text-body)}
+.tw26-blog{--maroon:var(--color-traditional, #862633);--gold:#c5a258;--cream:#faf8f5;--warm-white:#fff;--warm-gray:#f5f3f0;--warm-gray-2:#eae7e3;--dark:#1a1a1a;--text-body:#555;--text-muted:#767676;--border-light:#e8e5e1;--ease-out:cubic-bezier(0.16,1,0.3,1);padding:88px 0;background:var(--warm-white);font-family:inherit;color:var(--text-body)}
       .tw26-blog *,.tw26-blog *::before,.tw26-blog *::after{box-sizing:border-box}
       .tw26-blog__container{box-sizing:border-box;width:100%;max-width:1320px;margin:0 auto;padding:0 24px}
       .tw26-blog__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
