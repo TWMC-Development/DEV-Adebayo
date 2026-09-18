@@ -10,7 +10,7 @@
 4. Paste it into one Rock HTML content block using the block's HTML/source editor.
 5. Save and test the page at desktop and mobile widths.
 
-The five **Purchase Now** links are still `href="#"` because final registration or payment URLs were not present in the source design. Replace those URLs before publishing the page publicly.
+All five **Register** buttons link to https://thewoodlandsmethodist.ejoinme.org/registration.
 
 ## Rebuild after source changes
 
