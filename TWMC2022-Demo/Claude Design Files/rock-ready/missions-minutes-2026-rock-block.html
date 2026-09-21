@@ -1,0 +1,271 @@
+<!-- Missions Minutes: paste this entire file into ONE full-width Rock HTML Content block.
+     The TWMC page theme supplies the live global CSS, header, and footer.
+     Use HTML/source mode and preserve the style, script, and inline SVG elements. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Missions Minutes — Rock HTML Content block
+   Page-specific classes use the mm- prefix. Shared body/heading
+   fonts and the maroon brand token come from _LIVE_main.
+   Keep the custom geometry and campaign palette: the global
+   containers, cards and buttons do not match this design.
+   In Rock RMS, use the site's existing live stylesheet link.
+   Page chrome (navbar, footer) intentionally omitted.
+   ============================================================ */
+.mm-root{
+  --mm-green:#75907A;
+  --mm-green-mid:#5e7460;
+  --mm-green-dark:#47594a;
+  --mm-cream:#f5e8dc;
+  --mm-maroon:var(--color-traditional,#862633);
+  --mm-ease:cubic-bezier(0.16,1,0.3,1);
+  --mm-banner:url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_seasonal/_missions/MIS_Conference_FeatureBanner_BG.png");
+  font-family:inherit;
+  /* Preserve standalone metrics against the live body defaults (300 / 1.7). */
+  font-size:16px;font-weight:400;line-height:normal;
+  color:#555;
+  -webkit-font-smoothing:antialiased;
+}
+.mm-root *{box-sizing:border-box}
+.mm-container{width:100%;max-width:1320px;margin:0 auto;padding-left:24px;padding-right:24px}
+
+/* ---- Hero ---- */
+.mm-hero{
+  position:relative;height:700px;
+  background-color:#7CA082;background-image:var(--mm-banner);
+  background-position:top center;background-size:cover;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+}
+.mm-hero-scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to bottom,rgba(26,26,26,.5) 0%,rgba(26,26,26,.34) 55%,rgba(26,26,26,.1) 100%)}
+.mm-hero::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:230px;z-index:2;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(117,144,122,0) 0%,rgba(117,144,122,.22) 32%,rgba(117,144,122,.58) 60%,rgba(117,144,122,.88) 82%,var(--mm-green) 100%)}
+.mm-hero-inner{position:relative;z-index:3}
+.mm-hero h1{
+  font-size:clamp(40px,6vw,64px);font-weight:700;line-height:1.1;
+  color:var(--mm-cream);margin:0 0 14px;text-transform:lowercase;text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.mm-hero h1 em{display:block;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;
+  font-size:.62em;letter-spacing:.5px;margin-top:6px;color:var(--mm-cream)}
+.mm-hero-lede{font-size:18px;line-height:1.6;color:rgba(255,255,255,.92);max-width:600px;margin:0 auto;
+  text-shadow:0 1px 12px rgba(0,0,0,.5)}
+
+/* ---- Scroll cue ---- */
+@keyframes mmPulse{
+  0%{transform:translateY(0);box-shadow:0 0 0 0 rgba(245,232,220,.45)}
+  60%{transform:translateY(6px);box-shadow:0 0 0 16px rgba(245,232,220,0)}
+  100%{transform:translateY(0);box-shadow:0 0 0 0 rgba(245,232,220,0)}
+}
+.mm-scroll-cue{margin:80px auto 0;width:52px;height:52px;border-radius:999px;
+  padding:1px 6px; /* Preserve the original browser button padding after the live reset. */
+  border:1.5px solid rgba(245,232,220,.55);background:rgba(245,232,220,.12);color:var(--mm-cream);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  animation:mmPulse 2.4s var(--mm-ease) infinite;transition:background .3s,border-color .3s}
+.mm-scroll-cue:hover{background:rgba(245,232,220,.26);border-color:var(--mm-cream)}
+@media (prefers-reduced-motion:reduce){.mm-scroll-cue{animation:none}}
+
+/* ---- Body / colour bleed + texture bands ---- */
+.mm-bleed{position:relative;
+  background:linear-gradient(to bottom,var(--mm-green) 0%,var(--mm-green) 68%,var(--mm-green-mid) 86%,var(--mm-green-dark) 100%)}
+.mm-bleed > *{position:relative;z-index:1}
+.mm-bleed::before,.mm-bleed::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  -webkit-mask-image:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,1) 45vh,rgba(0,0,0,1) 120vh,rgba(0,0,0,0) 165vh,rgba(0,0,0,0) 195vh);
+  mask-image:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,1) 45vh,rgba(0,0,0,1) 120vh,rgba(0,0,0,0) 165vh,rgba(0,0,0,0) 195vh)}
+.mm-bleed::before{background-image:var(--mm-banner);background-size:cover;background-position:center;
+  background-attachment:fixed;opacity:.95;mix-blend-mode:overlay}
+.mm-bleed::after{background:rgba(71,89,74,.46)}
+
+/* ---- Section ---- */
+.mm-section-inner{padding-top:4px;padding-bottom:48px}
+.mm-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.mm-section-head h2{font-size:clamp(28px,3.2vw,40px);font-weight:700;
+  line-height:1.14;letter-spacing:1.5px;text-transform:uppercase;margin:0;color:var(--mm-cream);
+  text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.mm-count{font-size:13px;font-weight:500;color:rgba(245,232,220,.75)}
+
+/* ---- Cards ---- */
+.mm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:28px}
+.mm-card{background:#fff;border:none;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+  cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.04),0 6px 16px rgba(0,0,0,.06);
+  transition:transform .5s var(--mm-ease),box-shadow .5s var(--mm-ease)}
+.mm-card:hover{transform:translateY(-6px);box-shadow:0 4px 12px rgba(0,0,0,.06),0 16px 40px rgba(0,0,0,.10)}
+.mm-card-media{position:relative;aspect-ratio:16/9;overflow:hidden;background-color:#20262c;
+  background-size:cover;background-position:center;transition:transform .5s var(--mm-ease)}
+.mm-card:hover .mm-card-media{transform:scale(1.04)}
+.mm-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:999px;
+  background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 24px rgba(0,0,0,.32);transition:background .3s var(--mm-ease),transform .3s var(--mm-ease)}
+.mm-card:hover .mm-play{background:#fff;transform:translate(-50%,-50%) scale(1.08)}
+.mm-play svg{width:20px;height:20px;fill:var(--mm-maroon);margin-left:4px}
+.mm-badge{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:999px;font-size:11px;
+  font-weight:700;letter-spacing:.5px;text-transform:uppercase;background:rgba(26,26,26,.6);color:#fff}
+.mm-card-body{padding:18px 22px 20px;flex:1}
+.mm-card-body h3{font-size:20px;font-weight:600;line-height:1.3;
+  color:#1a1a1a;margin:0}
+
+/* ---- Modal ---- */
+@keyframes mmFade{from{opacity:0}to{opacity:1}}
+@keyframes mmRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.mm-modal{position:fixed;inset:0;z-index:1080;background:rgba(10,12,14,.84);backdrop-filter:blur(6px);
+  display:grid;grid-template-rows:minmax(0,1fr);justify-items:center;align-items:start;padding:28px;
+  overflow:auto;animation:mmFade .25s ease both}
+.mm-modal[hidden]{display:none}
+.mm-modal-inner{width:min(1020px,94vw);margin:auto 0;animation:mmRise .4s var(--mm-ease) both}
+.mm-modal-bar{display:flex;justify-content:flex-end;margin-bottom:12px}
+.mm-close{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;background:#3c5242;
+  border:1.5px solid #536f59;border-radius:999px;color:#fff;font-family:inherit;
+  font-size:13px;font-weight:600;cursor:pointer;transition:background .3s var(--mm-ease)}
+.mm-close:hover{background:#536f59}
+.mm-frame{aspect-ratio:16/9;background:#000;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.mm-frame iframe{width:100%;height:100%;border:0;display:block}
+.mm-modal-meta{padding:22px 4px 8px}
+.mm-modal-meta h3{font-size:26px;font-weight:600;margin:0 0 6px;color:#fff}
+.mm-modal-partner{font-size:13px;font-weight:600;letter-spacing:.5px;color:#d4b87a;margin-bottom:10px}
+.mm-modal-blurb{margin:0;font-size:15px;line-height:1.7;color:rgba(255,255,255,.8);max-width:820px}
+
+/* ---- Responsive ---- */
+@media (max-width:768px){
+  .mm-hero{height:525px}
+  .mm-hero::after{height:180px}
+  .mm-bleed::before{background-attachment:scroll}
+  .mm-scroll-cue{margin-top:44px;width:48px;height:48px}
+  .mm-grid{gap:20px}
+  .mm-section-inner{padding-bottom:56px}
+  .mm-modal{padding:16px}
+  .mm-modal-inner{width:100%}
+}
+@media (max-width:575.98px){
+  .mm-hero{height:460px}
+  .mm-scroll-cue{margin-top:32px}
+  .mm-hero-lede{font-size:16px}
+}
+
+/* Rock/Bootstrap compatibility; intentionally scoped to this block. */
+.mm-scroll-cue,.mm-close{line-height:normal;text-transform:none}
+.mm-modal-meta h3{line-height:normal}
+</style>
+<div class="mm-root">
+
+  <header class="mm-hero">
+    <div class="mm-hero-scrim"></div>
+    <div class="mm-container mm-hero-inner">
+      <h1>Missions Minutes<em>Video Archive</em></h1>
+      <p class="mm-hero-lede">Each week we share a short story from the mission field — from our own church family and the partners we serve alongside, near and far. Watch them all here, any time.</p>
+      <button class="mm-scroll-cue" type="button" id="mm-cue" aria-label="View the videos below">
+        <svg viewBox="0 0 320 512" width="17" height="17" aria-hidden="true" style="fill:currentColor"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mm-bleed">
+    <div id="mm-videos"></div>
+
+    <section class="mm-section">
+      <div class="mm-container mm-section-inner">
+        <div class="mm-section-head">
+          <h2>Archive</h2>
+          <div class="mm-count" id="mm-count"></div>
+        </div>
+        <div class="mm-grid" id="mm-grid"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="mm-modal" id="mm-modal" hidden>
+    <div class="mm-modal-inner" id="mm-modal-inner">
+      <div class="mm-modal-bar">
+        <button class="mm-close" type="button" id="mm-close">
+          Close
+          <svg viewBox="0 0 384 512" width="13" height="13" aria-hidden="true" style="fill:currentColor"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        </button>
+      </div>
+      <div class="mm-frame"><iframe id="mm-iframe" src="" title="Missions Minute" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="mm-modal-meta">
+        <h3 id="mm-modal-title"></h3>
+        <div class="mm-modal-partner" id="mm-modal-partner"></div>
+        <p class="mm-modal-blurb" id="mm-modal-blurb"></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var VIDEOS = [
+    { id: "1227419022", title: "Reaching People in Honduras", partner: "John Agee", blurb: "John Agee\u2019s path to faith began in the mission field, where a call to Honduras took root in his heart even before he became a believer. Seeing how the locals view arriving missionaries as a direct answer to prayer, John experiences the presence of the Holy Spirit through the people he goes to serve." },
+    { id: "1184964051", title: "Dennis Woodley", partner: "The Champion Project", blurb: "Dennis Woodley spent years working in the prison system, witnessing firsthand the tragic pipeline from foster care to incarceration. Moved to intervene and guided by James 1:27, he now volunteers with The Champion Project to mentor youths and run The Book Bus. By giving vulnerable children a safe space to just be kids and sharing essentials like a Bible and journal, Dennis reflects the unconditional love of Jesus \u2014 reminding them that they are deeply valued and loved." },
+    { id: "1007014439", title: "Rock Bottom Hope", partner: "Rock Bottom Hope", blurb: "", archive: true },
+    { id: "871986283", title: "Middle East", partner: "International Partners", blurb: "", archive: true },
+    { id: "1217053186", title: "Discipling International Families", partner: "Ana Vargas \u00b7 ConNEXT Steps", blurb: "Ana Vargas believes that as followers of Jesus, we are called to serve our neighbors with the love of Christ, no matter where they are from. As the program director at ConNEXT Steps, she welcomes families from around the world to the Creekside community, using language classes as a bridge to share the life-changing truth of the gospel." },
+    { id: "1057908414", title: "SAT-7", partner: "SAT-7", blurb: "", archive: true },
+    { id: "1013295483", title: "Favor International", partner: "Carol Ward", blurb: "", archive: true },
+    { id: "1223779276", title: "Helping Through Finances", partner: "Libby Pike \u00b7 Society of St. Stephen", blurb: "As a case manager with the Society of St. Stephen, Libby Pike steps in to help individuals and families navigating financial crises. Rather than simply give them money, she empowers them to better manage their resources, witnessing firsthand how God uses moments of hardship to deepen the faith of both the recipient and the giver." },
+    { id: "1194728359", title: "Helping Through Service", partner: "Gary Hill \u00b7 Geezer Squad", blurb: "Gary Hill and the Geezer Squad give up their time each week to build wheelchair ramps and handle home safety projects for those in need. Driven by a shared commitment to service above self, these men allow God to move their hearts to step in wherever help is needed, leaving both them and the families with a powerful sense of His goodness at work." },
+    { id: "964854106", title: "Helping Through Building", partner: "Quest Men\u2019s Fellowship", blurb: "", archive: true },
+    { id: "964840781", title: "Helping Through Healing", partner: "Women\u2019s Medical Trip", blurb: "", archive: true },
+    { id: "1015376382", title: "Lauren and Brayden", partner: "TWMC", blurb: "", archive: true },
+    { id: "871919447", title: "Habitat for Humanity", partner: "Brenda", blurb: "", archive: true }
+  ];
+
+  var PLAY_SVG = '<svg viewBox="0 0 384 512" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.3-23-41L73 39z"/></svg>';
+
+  var grid = document.getElementById("mm-grid");
+  var modal = document.getElementById("mm-modal");
+  var iframe = document.getElementById("mm-iframe");
+  var mTitle = document.getElementById("mm-modal-title");
+  var mPartner = document.getElementById("mm-modal-partner");
+  var mBlurb = document.getElementById("mm-modal-blurb");
+  var prevOverflow = "";
+
+  document.getElementById("mm-count").textContent = VIDEOS.length + " videos";
+
+  VIDEOS.forEach(function (v) {
+    var card = document.createElement("div");
+    card.className = "mm-card";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
+    card.innerHTML =
+      '<div class="mm-card-media" style="background-image:url(https://vumbnail.com/' + v.id + '.jpg)">' +
+        (v.archive ? '<div class="mm-badge">From the Archive</div>' : '') +
+        '<div class="mm-play">' + PLAY_SVG + '</div>' +
+      '</div>' +
+      '<div class="mm-card-body"><h3></h3></div>';
+    card.querySelector("h3").textContent = v.title;
+    card.addEventListener("click", function () { open(v); });
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(v); }
+    });
+    grid.appendChild(card);
+  });
+
+  function open(v) {
+    mTitle.textContent = v.title;
+    mPartner.textContent = v.partner || "";
+    mBlurb.textContent = v.blurb || "";
+    iframe.src = "https://player.vimeo.com/video/" + v.id + "?autoplay=1";
+    modal.hidden = false;
+    prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+  }
+
+  function close() {
+    modal.hidden = true;
+    iframe.src = "";
+    document.body.style.overflow = prevOverflow;
+  }
+
+  document.getElementById("mm-close").addEventListener("click", close);
+  modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  document.getElementById("mm-modal-inner").addEventListener("click", function (e) { e.stopPropagation(); });
+  window.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) close(); });
+
+  document.getElementById("mm-cue").addEventListener("click", function () {
+    var el = document.getElementById("mm-videos");
+    var y = el.getBoundingClientRect().top + window.scrollY - 84;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  });
+})();
+</script>
