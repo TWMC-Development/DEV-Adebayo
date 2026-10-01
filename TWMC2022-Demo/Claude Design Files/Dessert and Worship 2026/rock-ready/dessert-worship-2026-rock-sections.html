@@ -1,13 +1,18 @@
-<!-- Upload the contents of the ZIP's Women folder into /Content/Women/ first. -->
+<!-- DESSERT AND WORSHIP 2026: ROCK RMS SECTION BLOCKS -->
+<!-- Copy each START/END region into its own Rock HTML Content block, in the numbered order below. -->
+<!-- Keep the SHARED STYLES before the HERO and INTERACTIONS after the FAQ. -->
+<!-- Every section has its own wrapper, so Rock can render the blocks separately. -->
+
+<!-- START: 00 SHARED STYLES — paste once into the first Rock HTML Content block -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-#dw2026{margin:0;background:#faf8f5;font-family:'Open Sans',sans-serif;font-size:16px;font-weight:500;line-height:1.7;color:#333;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+.dw2026{margin:0;background:#faf8f5;font-family:'Open Sans',sans-serif;font-size:16px;font-weight:500;line-height:1.7;color:#333;-webkit-font-smoothing:antialiased;text-wrap:pretty}
 @keyframes dwRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-#dw2026 a{color:#f5c978;text-decoration:none}
-#dw2026 a:hover{color:#fdedc0}
-#dw2026 img{max-width:100%}
+.dw2026 a{color:#f5c978;text-decoration:none}
+.dw2026 a:hover{color:#fdedc0}
+.dw2026 img{max-width:100%}
 .dw-section-flower{display:block;width:clamp(301.2px,31.2vw,456px);height:auto;opacity:.85}
 .dw-registration-flower-right{width:clamp(331.32px,34.32vw,501.6px)}
 .dw-faq-flower-left{width:clamp(331.32px,34.32vw,501.6px)}
@@ -28,7 +33,7 @@
 .dw-ticket-card-footer{margin-top:auto;padding:20px 24px 24px;border-top:1px dashed rgba(245,201,120,.26);display:flex;flex-direction:column;gap:12px}
 .dw-ticket-card-footer>div{display:flex;justify-content:center;width:100%}
 .dw-ticket-card-footer .dw-ticket-button{display:flex;align-items:center;justify-content:center;width:300px;max-width:100%;height:62px;min-height:62px;padding:9px 18px;text-align:center}
-#dwCalendar{box-sizing:border-box;width:calc(100% - 32px);max-width:460px;max-height:calc(100dvh - 32px);padding:28px;border:1px solid rgba(245,201,120,.5);border-radius:5px;background:#773f57;box-shadow:0 18px 48px rgba(24,9,18,.38);color:#fffbda}
+#dwCalendar{box-sizing:border-box;position:fixed;inset:0;margin:auto !important;width:calc(100% - 32px);max-width:460px;max-height:calc(100dvh - 32px);padding:28px;border:1px solid rgba(245,201,120,.5);border-radius:5px;background:#773f57;box-shadow:0 18px 48px rgba(24,9,18,.38);color:#fffbda}
 #dwCalendar::backdrop{background:rgba(24,9,18,.84)}
 .dw-calendar-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
 .dw-calendar-actions .dw-btn{box-sizing:border-box;width:100%;border:1px solid #f5c978;cursor:pointer;text-align:center;line-height:1.7}
@@ -68,11 +73,12 @@
   #dw-event-details .dw-3up>div>div{text-align:left !important}
 }
 
-#dw2026 [hidden]{display:none!important}
+.dw2026 [hidden],.dw2026[hidden]{display:none!important}
 </style>
-<div id="dw2026">
-<div style="overflow-x:clip">
+<!-- END: 00 SHARED STYLES -->
 
+<!-- START: 01 HERO — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip">
 <section id="dw-hero" data-screen-label="Hero" style="position:relative;overflow:clip;background:#3a1830 url('/Content/Women/hero-background.png') center/cover no-repeat;min-height:640px;padding:104px 24px 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;text-align:center">
 
 <div style="position:absolute;inset:0;z-index:1;pointer-events:none;overflow:clip">
@@ -99,8 +105,11 @@
 
 <button type="button" id="dw-save-date" aria-haspopup="dialog" aria-controls="dwCalendar" style="border:0;cursor:pointer;line-height:inherit;background:linear-gradient(100deg,#fdedc0,#f5c978);color:#321729;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:15px 38px;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.28);position:relative;z-index:2;animation:dwRise 1s cubic-bezier(.16,1,.3,1) .4s both;transition:transform .3s cubic-bezier(.16,1,.3,1)" data-hover="transform:translateY(-2px)">Add to Calendar</button>
 </section>
+</div>
+<!-- END: 01 HERO -->
 
-<div style="position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
+<!-- START: 02 EVENT DETAILS — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section id="dw-event-details" data-screen-label="Event details" style="background:rgba(24,8,18,.52);border-top:2px solid #f5c978;border-bottom:1px solid rgba(245,201,120,.28);padding:26px 24px">
 <div class="dw-3up" style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
 <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px">
@@ -117,7 +126,11 @@
 </div>
 </div>
 </section>
+</div>
+<!-- END: 02 EVENT DETAILS -->
 
+<!-- START: 03 ABOUT THE EVENT — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section data-screen-label="Intro" style="background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);padding:60px 24px 64px">
 <div style="max-width:720px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px">
 <div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">About the Event</div>
@@ -125,7 +138,11 @@
 <p style="margin:0;font-size:18px;line-height:1.75;color:#eddfd6">Celebrate the arrival of the Christmas season on Thursday, December 3, with an uplifting evening of fellowship, decadent desserts, powerful worship and an inspiring message from author, speaker and Bible study teacher Kristi McLelland.</p>
 </div>
 </section>
+</div>
+<!-- END: 03 ABOUT THE EVENT -->
 
+<!-- START: 04 MEET THE SPEAKER — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section class="dw-split" data-screen-label="Meet the speaker" style="position:relative;overflow:clip;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);display:grid;grid-template-columns:minmax(300px,42%) 1fr">
 <div style="position:absolute;bottom:-15px;right:0;pointer-events:none">
 <img src="/Content/Women/decor/flower-7.png" alt="" class="dw-section-flower" data-fx="SRS" data-align="bottom" data-overhang="0.25" data-rotation="-55" data-sub="parent" data-a="0.28" data-b="1">
@@ -144,7 +161,11 @@
 </div>
 </div>
 </section>
+</div>
+<!-- END: 04 MEET THE SPEAKER -->
 
+<!-- START: 05 TICKETS — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section data-screen-label="Tickets" id="tickets" style="position:relative;background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);padding:76px 24px 84px;overflow:clip">
 <div style="position:absolute;top:-40px;left:-10px;pointer-events:none">
 <img src="/Content/Women/decor/flower-1.png" alt="" class="dw-section-flower" data-fx="SL" data-align="top" data-overhang="0.25" data-rotation="125" data-sub="parent" data-a="0.28" data-b="1">
@@ -170,7 +191,7 @@
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Childcare is available with this ticket.</span></div>
 </div>
 <div class="dw-ticket-card-footer">
-<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7547" data-ticket-label="Dessert and Worship Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
+<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7546" data-ticket-label="Dessert and Worship Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
 </div>
 </article>
 
@@ -201,13 +222,17 @@
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Childcare is <strong>not</strong> available with this ticket.</span></div>
 </div>
 <div class="dw-ticket-card-footer">
-<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7546" data-ticket-label="Speaker-Only Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
+<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7547" data-ticket-label="Speaker-Only Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
 </div>
 </article>
 </div>
 </div>
 </section>
+</div>
+<!-- END: 05 TICKETS -->
 
+<!-- START: 06 LAST YEAR'S GALLERY — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section data-screen-label="Gallery" style="position:relative;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);padding:64px 24px 84px;overflow:clip">
 <div style="position:absolute;bottom:-40px;left:50px;pointer-events:none">
 <img src="/Content/Women/decor/flower-5.png" alt="" class="dw-section-flower" data-fx="SL" data-peek="0.49" data-align="bottom" data-overhang="0.25" data-rotation="55" data-sub="parent" data-a="0.28" data-b="1">
@@ -229,7 +254,36 @@
 </div>
 </div>
 </section>
+</div>
 
+<div id="dw-lb" class="dw2026" hidden>
+<div style="position:fixed;top:0;right:0;bottom:0;left:0;z-index:80;background:rgba(24,9,18,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
+<div style="width:100%;max-width:1040px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+<div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">Dessert and Worship 2025</div>
+<button type="button" id="dw-lb-close" style="border:1px solid rgba(255,251,218,.4);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">Close</button>
+</div>
+<div style="width:100%;max-width:1040px;display:flex;align-items:center;gap:16px">
+<button type="button" id="dw-lb-prev" aria-label="Previous photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">&#8249;</button>
+<img src="/Content/Women/gallery/2025-1.jpg" alt="Dessert and Worship 2025, photo 1" data-lb="0" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-2.jpg" alt="Dessert and Worship 2025, photo 2" data-lb="1" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-5.jpg" alt="Dessert and Worship 2025, photo 3" data-lb="2" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-6.jpg" alt="Dessert and Worship 2025, photo 4" data-lb="3" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-7.jpg" alt="Dessert and Worship 2025, photo 5" data-lb="4" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-8.jpg" alt="Dessert and Worship 2025, photo 6" data-lb="5" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-9.jpg" alt="Dessert and Worship 2025, photo 7" data-lb="6" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<img src="/Content/Women/gallery/2025-10.jpg" alt="Dessert and Worship 2025, photo 8" data-lb="7" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
+<button type="button" id="dw-lb-next" aria-label="Next photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">&#8250;</button>
+</div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#e8c9d2"><span id="dw-lb-count">1 of 8</span></div>
+<div style="font-size:12.5px;color:#a88c98">Use the arrow keys to move through the gallery · Esc to close</div>
+</div>
+</div>
+</div>
+<!-- END: 06 LAST YEAR'S GALLERY -->
+
+<!-- START: 07 LOCATION — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section data-screen-label="Location" style="position:relative;overflow:clip;background:rgba(150,80,110,.15);border-bottom:1px solid rgba(245,201,120,.28);padding:76px 24px 84px">
 <div style="position:absolute;top:0;right:0;pointer-events:none">
 <img src="/Content/Women/decor/flower-4.png" alt="" class="dw-section-flower" data-fx="SR" data-align="top" data-overhang="0.25" data-rotation="235" data-sub="parent" data-a="0.28" data-b="1">
@@ -267,7 +321,11 @@
 </div>
 </div>
 </section>
+</div>
+<!-- END: 07 LOCATION -->
 
+<!-- START: 08 FREQUENTLY ASKED QUESTIONS — paste into one Rock HTML Content block -->
+<div class="dw2026" style="overflow-x:clip;position:relative;background:#2b1122 url('/Content/Women/hero-background.png') center center/cover no-repeat fixed">
 <section data-screen-label="FAQ" style="position:relative;overflow:clip;background:rgba(24,8,18,.52);border-bottom:1px solid rgba(245,201,120,.28);padding:64px 24px 90px">
 <div style="position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none">
 <div style="position:absolute;bottom:-20px;left:20px;pointer-events:none">
@@ -352,36 +410,10 @@
 </div>
 </section>
 </div>
+<!-- END: 08 FREQUENTLY ASKED QUESTIONS -->
 
-
-<div id="dw-lb" hidden>
-<div style="position:fixed;top:0;right:0;bottom:0;left:0;z-index:80;background:rgba(24,9,18,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:30px 24px">
-<div style="width:100%;max-width:1040px;display:flex;align-items:center;justify-content:space-between;gap:20px">
-<div style="font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c978">Dessert and Worship 2025</div>
-<button type="button" id="dw-lb-close" style="border:1px solid rgba(255,251,218,.4);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:9px 18px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">Close</button>
-</div>
-<div style="width:100%;max-width:1040px;display:flex;align-items:center;gap:16px">
-<button type="button" id="dw-lb-prev" aria-label="Previous photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">&#8249;</button>
-<img src="/Content/Women/gallery/2025-1.jpg" alt="Dessert and Worship 2025, photo 1" data-lb="0" style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-2.jpg" alt="Dessert and Worship 2025, photo 2" data-lb="1" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-5.jpg" alt="Dessert and Worship 2025, photo 3" data-lb="2" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-6.jpg" alt="Dessert and Worship 2025, photo 4" data-lb="3" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-7.jpg" alt="Dessert and Worship 2025, photo 5" data-lb="4" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-8.jpg" alt="Dessert and Worship 2025, photo 6" data-lb="5" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-9.jpg" alt="Dessert and Worship 2025, photo 7" data-lb="6" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<img src="/Content/Women/gallery/2025-10.jpg" alt="Dessert and Worship 2025, photo 8" data-lb="7" hidden style="flex:1;min-width:0;width:100%;max-height:66vh;object-fit:contain;border-radius:4px">
-<button type="button" id="dw-lb-next" aria-label="Next photo" style="flex:none;border:1px solid rgba(255,251,218,.35);cursor:pointer;background:transparent;color:#fffbda;font-family:'Montserrat',sans-serif;font-size:26px;font-weight:400;line-height:1;width:52px;height:52px;border-radius:4px" data-hover="background:rgba(255,251,218,.14)">&#8250;</button>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:8px">
-<div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;color:#e8c9d2"><span id="dw-lb-count">1 of 8</span></div>
-<div style="font-size:12.5px;color:#a88c98">Use the arrow keys to move through the gallery · Esc to close</div>
-</div>
-</div>
-</div>
-
-</div>
-
-<dialog id="dwCalendar" aria-labelledby="dwCalendarTitle">
+<!-- START: 09 INTERACTIONS — paste once after the FAQ block -->
+<dialog class="dw2026" id="dwCalendar" aria-labelledby="dwCalendarTitle">
 <h2 id="dwCalendarTitle" style="margin:0;font-family:'Montserrat',sans-serif;font-size:24px;line-height:1.25;letter-spacing:1.5px;text-transform:uppercase;color:#fffbda">Add to Calendar</h2>
 <p style="margin:9px 0 0;font-size:14px;line-height:1.65;color:#e8c9d2">Christmas Dessert and Worship<br>Thursday, December 3, 2026<br><span style="display:inline-block">Dessert: 6:00 p.m.</span> / <span style="display:inline-block">Worship and Speaker: 7:30 p.m.</span><br>The Woodlands Campus</p>
 <div class="dw-calendar-actions">
@@ -394,7 +426,7 @@
 
 <script>
 (function(){
-  var root=document.getElementById('dw2026');
+  var root={querySelectorAll:function(selector){return document.querySelectorAll('.dw2026 '+selector);}};
   // ---- hover styles (data-hover) ----
   root.querySelectorAll('[data-hover]').forEach(function(el){
     var prev=null;
@@ -546,4 +578,4 @@ function dwCalendarDownload(){var lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID
   flowers.forEach(function(el){ el.addEventListener('load',paintFlowers); });
 })();
 </script>
-</div>
+<!-- END: 09 INTERACTIONS -->

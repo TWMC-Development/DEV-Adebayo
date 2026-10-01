@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Missions Minutes Video Archive | The Woodlands Methodist Church</title>
+<!-- Archive data comes from the separate Rock Content Channel View.
+     Without that rendered data, a local preview will not contain video cards. -->
 <!-- Shared typography and brand tokens; keep before the page-specific styles. -->
 <link href="../../css/_LIVE_main_v1.1.70.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,8 +107,6 @@
   box-shadow:0 6px 24px rgba(0,0,0,.32);transition:background .3s var(--mm-ease),transform .3s var(--mm-ease)}
 .mm-card:hover .mm-play{background:#fff;transform:translate(-50%,-50%) scale(1.08)}
 .mm-play svg{width:20px;height:20px;fill:var(--mm-maroon);margin-left:4px}
-.mm-badge{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:999px;font-size:11px;
-  font-weight:700;letter-spacing:.5px;text-transform:uppercase;background:rgba(26,26,26,.6);color:#fff}
 .mm-card-body{padding:18px 22px 20px;flex:1}
 .mm-card-body h3{font-size:20px;font-weight:600;line-height:1.3;
   color:#1a1a1a;margin:0}
@@ -147,6 +147,10 @@
   .mm-scroll-cue{margin-top:32px}
   .mm-hero-lede{font-size:16px}
 }
+/* Match the existing Rock page's Bootstrap compatibility rules. */
+.mm-scroll-cue,.mm-close{line-height:normal;text-transform:none}
+.mm-modal-meta h3{line-height:normal}
+.mm-modal-blurb{white-space:pre-line}
 </style>
 </head>
 <body style="margin:0">
@@ -179,7 +183,7 @@
 
   </div>
 
-  <div class="mm-modal" id="mm-modal" hidden>
+  <div class="mm-modal" id="mm-modal" role="dialog" aria-modal="true" aria-labelledby="mm-modal-title" hidden>
     <div class="mm-modal-inner" id="mm-modal-inner">
       <div class="mm-modal-bar">
         <button class="mm-close" type="button" id="mm-close">
@@ -200,21 +204,58 @@
 
 <script>
 (function () {
-  var VIDEOS = [
-    { id: "1227419022", title: "Reaching People in Honduras", partner: "John Agee", blurb: "John Agee\u2019s path to faith began in the mission field, where a call to Honduras took root in his heart even before he became a believer. Seeing how the locals view arriving missionaries as a direct answer to prayer, John experiences the presence of the Holy Spirit through the people he goes to serve." },
-    { id: "1184964051", title: "Dennis Woodley", partner: "The Champion Project", blurb: "Dennis Woodley spent years working in the prison system, witnessing firsthand the tragic pipeline from foster care to incarceration. Moved to intervene and guided by James 1:27, he now volunteers with The Champion Project to mentor youths and run The Book Bus. By giving vulnerable children a safe space to just be kids and sharing essentials like a Bible and journal, Dennis reflects the unconditional love of Jesus \u2014 reminding them that they are deeply valued and loved." },
-    { id: "1007014439", title: "Rock Bottom Hope", partner: "Rock Bottom Hope", blurb: "", archive: true },
-    { id: "871986283", title: "Middle East", partner: "International Partners", blurb: "", archive: true },
-    { id: "1217053186", title: "Discipling International Families", partner: "Ana Vargas \u00b7 ConNEXT Steps", blurb: "Ana Vargas believes that as followers of Jesus, we are called to serve our neighbors with the love of Christ, no matter where they are from. As the program director at ConNEXT Steps, she welcomes families from around the world to the Creekside community, using language classes as a bridge to share the life-changing truth of the gospel." },
-    { id: "1057908414", title: "SAT-7", partner: "SAT-7", blurb: "", archive: true },
-    { id: "1013295483", title: "Favor International", partner: "Carol Ward", blurb: "", archive: true },
-    { id: "1223779276", title: "Helping Through Finances", partner: "Libby Pike \u00b7 Society of St. Stephen", blurb: "As a case manager with the Society of St. Stephen, Libby Pike steps in to help individuals and families navigating financial crises. Rather than simply give them money, she empowers them to better manage their resources, witnessing firsthand how God uses moments of hardship to deepen the faith of both the recipient and the giver." },
-    { id: "1194728359", title: "Helping Through Service", partner: "Gary Hill \u00b7 Geezer Squad", blurb: "Gary Hill and the Geezer Squad give up their time each week to build wheelchair ramps and handle home safety projects for those in need. Driven by a shared commitment to service above self, these men allow God to move their hearts to step in wherever help is needed, leaving both them and the families with a powerful sense of His goodness at work." },
-    { id: "964854106", title: "Helping Through Building", partner: "Quest Men\u2019s Fellowship", blurb: "", archive: true },
-    { id: "964840781", title: "Helping Through Healing", partner: "Women\u2019s Medical Trip", blurb: "", archive: true },
-    { id: "1015376382", title: "Lauren and Brayden", partner: "TWMC", blurb: "", archive: true },
-    { id: "871919447", title: "Habitat for Humanity", partner: "Brenda", blurb: "", archive: true }
-  ];
+  function parseVideo(value) {
+    var raw = (value || "").trim();
+    if (/^\d+$/.test(raw)) raw = "https://vimeo.com/" + raw;
+    if (/^(www\.)?(vimeo\.com|youtube\.com|youtu\.be)\//i.test(raw)) raw = "https://" + raw;
+    try {
+      var url = new URL(raw);
+      if (url.protocol !== "https:" && url.protocol !== "http:") return null;
+      var host = url.hostname.toLowerCase().replace(/^www\./, "");
+      var parts = url.pathname.split("/").filter(Boolean);
+      var id, hash, player;
+      if (host === "vimeo.com" || host === "player.vimeo.com") {
+        var index = parts.findIndex(function (part) { return /^\d+$/.test(part); });
+        if (index < 0) return null;
+        id = parts[index];
+        hash = url.searchParams.get("h") || parts[index + 1] || "";
+        player = new URL("https://player.vimeo.com/video/" + id);
+        if (hash) player.searchParams.set("h", hash);
+        player.searchParams.set("autoplay", "1");
+        return { src: player.href, thumbnail: "https://vumbnail.com/" + id + ".jpg" };
+      }
+      if (host === "youtu.be") id = parts[0];
+      else if (host === "youtube.com" || host === "m.youtube.com" || host === "youtube-nocookie.com") {
+        id = url.searchParams.get("v");
+        if (!id && /^(embed|shorts|live)$/.test(parts[0])) id = parts[1];
+      }
+      if (id && /^[A-Za-z0-9_-]{11}$/.test(id)) {
+        return { src: "https://www.youtube.com/embed/" + id + "?autoplay=1",
+          thumbnail: "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg" };
+      }
+    } catch (error) { /* Invalid URLs are omitted from the archive. */ }
+    return null;
+  }
+
+  function init() {
+  var source = document.getElementById("mm-channel-data");
+  if (!source) {
+    document.getElementById("mm-count").textContent = "Videos are currently unavailable.";
+    console.warn("Missions Minutes: the Content Channel View must render #mm-channel-data.");
+    return;
+  }
+  var VIDEOS = Array.from(source.querySelectorAll(".mm-channel-item")).map(function (item) {
+    var video = parseVideo(item.getAttribute("data-video"));
+    if (!video) {
+      console.warn("Missions Minutes: skipped an invalid video link for", item.getAttribute("data-title"));
+      return null;
+    }
+    video.title = item.getAttribute("data-title") || "Missions Minute";
+    video.partner = item.getAttribute("data-partner") || "";
+    video.blurb = item.getAttribute("data-blurb") || "";
+    return video;
+  }).filter(Boolean);
+
 
   var PLAY_SVG = '<svg viewBox="0 0 384 512" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.3-23-41L73 39z"/></svg>';
 
@@ -225,8 +266,10 @@
   var mPartner = document.getElementById("mm-modal-partner");
   var mBlurb = document.getElementById("mm-modal-blurb");
   var prevOverflow = "";
+  var previousFocus = null;
 
-  document.getElementById("mm-count").textContent = VIDEOS.length + " videos";
+  grid.replaceChildren();
+  document.getElementById("mm-count").textContent = VIDEOS.length + (VIDEOS.length === 1 ? " video" : " videos");
 
   VIDEOS.forEach(function (v) {
     var card = document.createElement("div");
@@ -234,11 +277,11 @@
     card.setAttribute("role", "button");
     card.setAttribute("tabindex", "0");
     card.innerHTML =
-      '<div class="mm-card-media" style="background-image:url(https://vumbnail.com/' + v.id + '.jpg)">' +
-        (v.archive ? '<div class="mm-badge">From the Archive</div>' : '') +
+      '<div class="mm-card-media">' +
         '<div class="mm-play">' + PLAY_SVG + '</div>' +
       '</div>' +
       '<div class="mm-card-body"><h3></h3></div>';
+    card.querySelector(".mm-card-media").style.backgroundImage = 'url("' + v.thumbnail + '")';
     card.querySelector("h3").textContent = v.title;
     card.addEventListener("click", function () { open(v); });
     card.addEventListener("keydown", function (e) {
@@ -251,8 +294,11 @@
     mTitle.textContent = v.title;
     mPartner.textContent = v.partner || "";
     mBlurb.textContent = v.blurb || "";
-    iframe.src = "https://player.vimeo.com/video/" + v.id + "?autoplay=1";
+    iframe.src = v.src;
+    iframe.title = v.title;
+    previousFocus = document.activeElement;
     modal.hidden = false;
+    document.getElementById("mm-close").focus();
     prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
   }
@@ -261,6 +307,7 @@
     modal.hidden = true;
     iframe.src = "";
     document.body.style.overflow = prevOverflow;
+    if (previousFocus) previousFocus.focus();
   }
 
   document.getElementById("mm-close").addEventListener("click", close);
@@ -273,6 +320,13 @@
     var y = el.getBoundingClientRect().top + window.scrollY - 84;
     window.scrollTo({ top: y, behavior: "smooth" });
   });
+  }
+  // The channel block can appear after this HTML block in Rock's page layout.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
 })();
 </script>
 </body>
