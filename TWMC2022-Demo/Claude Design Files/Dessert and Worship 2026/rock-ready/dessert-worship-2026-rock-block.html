@@ -15,6 +15,8 @@
 .dw-ticket-outline:not(.dw-ticket-presale){background:transparent;border-color:rgba(255,251,218,.5);color:#fffbda}
 .dw-ticket-presale{background:#49353f;border-color:#70545f;color:#d8cbd0}
 .dw-ticket-presale:hover{background:#5a404e;border-color:#a78392;color:#fffbda}
+#dw2026 .dw-ticket-button.dw-ticket-sold-out,#dw2026 .dw-ticket-button.dw-ticket-sold-out:hover{background:#49353f;border-color:#70545f;color:#d8cbd0;cursor:not-allowed;filter:none;transform:none;box-shadow:none}
+#dw2026 .dw-ticket-sold-out .dw-sold-out-label{color:#ff7b83;margin-left:4px}
 .dw-ticket-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
 .dw-ticket-card{display:flex;flex-direction:column;background:rgba(40,15,31,.96);border:1px solid rgba(245,201,120,.3);border-radius:4px;box-shadow:0 20px 46px rgba(0,0,0,.3);overflow:hidden}
 .dw-ticket-card-header{box-sizing:border-box;min-height:132px;padding:20px;border-bottom:1px solid rgba(245,201,120,.22);background:rgba(255,251,218,.08);display:flex;flex-direction:column;justify-content:flex-start}
@@ -170,7 +172,11 @@
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Childcare is available with this ticket.</span></div>
 </div>
 <div class="dw-ticket-card-footer">
-<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7546" data-ticket-label="Dessert and Worship Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
+<div style="margin-top:auto;padding-top:12px">
+<button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7546" data-ticket-label="Dessert and Worship Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button>
+<!-- SOLD-OUT OPTION: Comment out the active button above, then uncomment this button. -->
+<!-- <button type="button" class="dw-ticket-button dw-ticket-sold-out" disabled>Dessert &amp; Worship Tickets <span class="dw-sold-out-label">SOLD OUT</span></button> -->
+</div>
 </div>
 </article>
 
@@ -186,7 +192,11 @@
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Childcare is available with this ticket.</span></div>
 </div>
 <div class="dw-ticket-card-footer">
-<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7548" data-ticket-label="VIP Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
+<div style="margin-top:auto;padding-top:12px">
+<button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7548" data-ticket-label="VIP Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button>
+<!-- SOLD-OUT OPTION: Comment out the active button above, then uncomment this button. -->
+<!-- <button type="button" class="dw-ticket-button dw-ticket-sold-out" disabled>VIP Tickets <span class="dw-sold-out-label">SOLD OUT</span></button> -->
+</div>
 </div>
 </article>
 
@@ -201,7 +211,11 @@
 <div style="display:flex;gap:11px;align-items:baseline"><span style="color:#f5c978;font-size:11px;line-height:1.5;flex:none">&#9679;</span><span style="font-size:14px;line-height:1.55;color:#eddfd6">Childcare is <strong>not</strong> available with this ticket.</span></div>
 </div>
 <div class="dw-ticket-card-footer">
-<div style="margin-top:auto;padding-top:12px"><button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7547" data-ticket-label="Speaker-Only Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button></div>
+<div style="margin-top:auto;padding-top:12px">
+<button type="button" class="dw-ticket-button dw-ticket-presale" data-registration-url="https://thewoodlandsmethodist.org/Registration?RegistrationInstanceId=7547" data-ticket-label="Speaker-Only Tickets" data-presale-label="Tickets Available October 4">Tickets Available October 4</button>
+<!-- SOLD-OUT OPTION: Comment out the active button above, then uncomment this button. -->
+<!-- <button type="button" class="dw-ticket-button dw-ticket-sold-out" disabled>Speaker Only Tickets <span class="dw-sold-out-label">SOLD OUT</span></button> -->
+</div>
 </div>
 </article>
 </div>

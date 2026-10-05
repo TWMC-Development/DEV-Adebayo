@@ -153,7 +153,8 @@
 }
 /* ---- Archive pagination ---- */
 .mm-card[hidden],.mm-view-more[hidden]{display:none !important}
-.mm-view-more{display:block;margin:32px auto 0;padding:12px 28px;
+.mm-archive-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:32px}
+.mm-view-more{display:block;margin:0;padding:12px 28px;
   border:1.5px solid rgba(245,232,220,.55);border-radius:999px;
   background:var(--mm-green-dark);color:var(--mm-cream);font-family:inherit;
   font-size:16px;font-weight:600;line-height:1.4;text-transform:none;cursor:pointer}
@@ -184,7 +185,10 @@
           <div class="mm-count" id="mm-count"></div>
         </div>
         <div class="mm-grid" id="mm-grid"></div>
-        <button class="mm-view-more" id="mm-view-more" type="button" aria-controls="mm-grid" hidden>View more</button>
+        <div class="mm-archive-actions">
+          <button class="mm-view-more" id="mm-view-more" type="button" aria-controls="mm-grid" hidden>View more</button>
+          <button class="mm-view-more" id="mm-show-less" type="button" aria-controls="mm-grid" hidden>Show less</button>
+        </div>
       </div>
     </section>
 
@@ -310,16 +314,26 @@ partner.hidden = !v.partner;
   });
 
   var moreButton = document.getElementById("mm-view-more");
-  moreButton.hidden = VIDEOS.length <= visibleCount;
-  moreButton.addEventListener("click", function () {
-    var cards = grid.querySelectorAll(".mm-card");
-    var firstNewIndex = visibleCount;
-    visibleCount = Math.min(visibleCount + PAGE_SIZE, cards.length);
-    cards.forEach(function (card, index) {
+  var lessButton = document.getElementById("mm-show-less");
+  function updateArchive() {
+    grid.querySelectorAll(".mm-card").forEach(function (card, index) {
       card.hidden = index >= visibleCount;
     });
-    if (cards[firstNewIndex]) cards[firstNewIndex].focus();
-    moreButton.hidden = visibleCount >= cards.length;
+    moreButton.hidden = visibleCount >= VIDEOS.length;
+    lessButton.hidden = visibleCount <= PAGE_SIZE;
+  }
+  updateArchive();
+  moreButton.addEventListener("click", function () {
+    var firstNewIndex = visibleCount;
+    visibleCount = Math.min(visibleCount + PAGE_SIZE, VIDEOS.length);
+    updateArchive();
+    var firstNewCard = grid.querySelectorAll(".mm-card")[firstNewIndex];
+    if (firstNewCard) firstNewCard.focus();
+  });
+  lessButton.addEventListener("click", function () {
+    visibleCount = PAGE_SIZE;
+    updateArchive();
+    moreButton.focus();
   });
 
   function open(v) {
