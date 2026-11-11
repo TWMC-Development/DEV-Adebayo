@@ -1,0 +1,1096 @@
+<!--
+  ESPAÑOL LANDING PAGE — ROCK DEMO
+  Copy this ENTIRE file into ONE HTML Content block using its HTML/source editor.
+  Use a full-width content zone on a TWMC2022 page for the intended hero width.
+
+  The existing Rock theme supplies Bootstrap, fonts, TWMC typography and Font Awesome.
+  Do not add another copy of those libraries.
+  Rock supplies the navigation and footer; this fragment contains page content only.
+  All custom CSS and JavaScript are limited to #espanol-rock-demo.
+  Element IDs are namespaced for this demo, including the hero foundation.
+
+  Add the live Connect block separately, below this HTML Content block.
+  This demo matches the campus content in espanol-landing2025.html.
+-->
+
+<style>
+  #espanol-rock-demo {
+    color: #3b3f47;
+    background: #fff;
+  }
+
+  /* Hero foundation, scoped below instead of importing the shared global resets. */
+  #espanol-rock-demo .twmc26-campus-hero {
+    position: relative;
+    overflow: hidden;
+    background: #1a0505;
+  }
+
+  #espanol-rock-demo .twmc26-campus-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.05);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #espanol-rock-demo .twmc26-campus-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 2, 2, var(--overlay-top, 0.45)) 0%,
+      rgba(10, 2, 2, var(--overlay-mid, 0.3)) 45%,
+      rgba(10, 2, 2, var(--overlay-bot, 0.78)) 100%
+    );
+    z-index: 1;
+  }
+
+  #espanol-rock-demo .twmc26-campus-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #espanol-rock-demo .twmc26-campus-hero h1 {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+
+  #espanol-rock-demo .twmc26-campus-hero h1 em {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #e2c97e;
+    letter-spacing: 0;
+  }
+
+  /* Layout and spacing use the existing Bootstrap grid and theme utilities. */
+
+  /* Welcome and shared photo treatment. */
+
+  #espanol-rock-demo .espanol-media {
+    border-radius: 20px;
+    box-shadow: 16px 16px 0 #f1ebe6;
+  }
+
+  #espanol-rock-demo .espanol-intro__photo img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  /* Campus photo stacks: Bootstrap supplies the grid and spacing. */
+  #espanol-rock-demo .espanol-campus-title > span {
+    font-size: clamp(40px, 4.5vw, 2em);
+    text-wrap: balance;
+  }
+  #espanol-rock-demo .espanol-campus-section + .espanol-campus-section {
+    position: relative;
+  }
+  #espanol-rock-demo .espanol-campus-section + .espanol-campus-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    border-top: 1px solid rgba(134, 38, 51, 0.12);
+  }
+  #espanol-rock-demo .espanol-campus-name {
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0.12em;
+  }
+  #espanol-rock-demo .espanol-campus-gallery [hidden] {
+    display: none !important;
+  }
+  #espanol-rock-demo .espanol-card-stack {
+    aspect-ratio: 8 / 5;
+    isolation: isolate;
+  }
+  #espanol-rock-demo .espanol-card-stack:focus-visible,
+  #espanol-rock-demo .espanol-gallery-arrow:focus-visible {
+    outline: 3px solid #862633;
+    outline-offset: 6px;
+  }
+  #espanol-rock-demo .espanol-photo-card {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: #f1ebe6;
+    box-shadow: 0 8px 22px rgba(49, 25, 28, 0.14);
+    transform-origin: 50% 80%;
+    transition: transform 0.32s ease;
+    pointer-events: none;
+  }
+  #espanol-rock-demo .espanol-photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
+  #espanol-rock-demo .espanol-photo-card[data-position="0"] {
+    z-index: 5;
+    transform: none;
+  }
+  #espanol-rock-demo .espanol-photo-card[data-position="1"] {
+    z-index: 4;
+    transform: translate(-7px, 7px) rotate(-3deg);
+  }
+  #espanol-rock-demo .espanol-photo-card[data-position="2"] {
+    z-index: 3;
+    transform: translate(10px, 12px) rotate(3deg);
+  }
+  #espanol-rock-demo .espanol-photo-card[data-position="3"] {
+    z-index: 2;
+    transform: translate(-6px, 17px) rotate(-5deg);
+  }
+  #espanol-rock-demo .espanol-photo-card[data-position="4"] {
+    z-index: 1;
+    transform: translate(12px, 21px) rotate(5deg);
+  }
+  #espanol-rock-demo .espanol-campus-gallery[data-espanol-gallery-ready] .espanol-card-stack {
+    touch-action: pan-y;
+    cursor: grab;
+  }
+  #espanol-rock-demo .espanol-campus-gallery[data-espanol-gallery-ready] .espanol-card-stack:active {
+    cursor: grabbing;
+  }
+  #espanol-rock-demo .espanol-gallery-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(134, 38, 51, 0.25);
+    border-radius: 50%;
+    color: #862633;
+    background: #fff;
+  }
+  #espanol-rock-demo .espanol-gallery-arrow:hover {
+    color: #fff;
+    background: #862633;
+  }
+  #espanol-rock-demo .espanol-gallery-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 575px) {
+    #espanol-rock-demo .espanol-photo-card {
+      border-radius: 14px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #espanol-rock-demo .espanol-photo-card {
+      transition: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #espanol-rock-demo .espanol-intro__photo img {
+      aspect-ratio: 3 / 2;
+    }
+  }
+  @media (max-width: 575px) {
+    #espanol-rock-demo .espanol-media {
+      border-radius: 14px;
+    }
+  }
+  /* Hero: retain the designed overlap, gradients, and responsive campus panel. */
+  #espanol-rock-demo .espanol-hero-layout {
+    isolation: isolate;
+  }
+
+  #espanol-rock-demo #espanol-demo-esplanding25-hero.espanol-hero {
+    height: auto;
+    min-height: clamp(640px, 80vh, 840px);
+  }
+
+  #espanol-rock-demo #espanol-demo-esplanding25-hero .twmc26-campus-hero-content {
+    height: auto;
+    max-width: 1080px;
+    transform: translateY(20px);
+  }
+
+  #espanol-rock-demo #espanol-demo-esplanding25-hero h1 {
+    font-size: clamp(40px, 5.2vw, 72px);
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__lead {
+    max-width: 660px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 17px;
+    line-height: 1.7;
+    text-wrap: pretty;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__bridge {
+    z-index: 3;
+    margin-top: -146px;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__campuses {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 880px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 22px;
+    background: rgba(112, 27, 40, 0.738);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(26, 5, 5, 0.2);
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__campus + .espanol-hero__campus {
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__campus h2 {
+    font-size: 27px;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__service-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__time,
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location,
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location,
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.35);
+    text-underline-offset: 4px;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location:hover,
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__details svg,
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__button svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__button {
+    min-height: 46px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1.4;
+    transition:
+      transform 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(26, 5, 5, 0.2);
+  }
+
+  #espanol-rock-demo .espanol-hero-layout a:focus-visible {
+    outline: 3px solid #e2c97e;
+    outline-offset: 5px;
+  }
+
+  @media (max-width: 600px) {
+    #espanol-rock-demo #espanol-demo-esplanding25-hero.espanol-hero {
+      min-height: 540px;
+    }
+
+    #espanol-rock-demo #espanol-demo-esplanding25-hero .twmc26-campus-hero-content {
+      align-self: flex-start;
+    }
+
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__lead {
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__bridge {
+      margin-top: -180px;
+    }
+
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__campuses {
+      grid-template-columns: 1fr;
+      border-radius: 18px;
+    }
+
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__campus + .espanol-hero__campus {
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      border-left: 0;
+    }
+
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__campus h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #espanol-rock-demo .espanol-hero-layout .espanol-hero__button {
+      transition: none;
+    }
+  }
+  #espanol-rock-demo .espanol-hero__details svg {
+    color: #e2c97e;
+  }
+
+  #espanol-rock-demo .espanol-intro__rule {
+    flex: 0 0 30px;
+    height: 2px;
+    background: currentColor;
+  }
+</style>
+
+<div id="espanol-rock-demo" lang="es">
+  <div class="espanol-hero-layout position-relative">
+    <section
+      id="espanol-demo-esplanding25-hero"
+      class="twmc26-campus-hero espanol-hero d-flex align-items-center justify-content-center py-5 px-3 px-md-4"
+      lang="es"
+      aria-labelledby="espanol-demo-esplanding25-hero-title"
+      style="--overlay-top: 0.35; --overlay-mid: 0.25; --overlay-bot: 0.6"
+    >
+      <div
+        class="twmc26-campus-hero-img"
+        role="img"
+        aria-label="Comunidad del Ministerio en Español en adoración"
+        style="
+          background-image: url(&quot;https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg&quot;);
+        "
+      ></div>
+
+      <div class="twmc26-campus-hero-content align-items-center justify-content-center text-center p-0 mx-auto">
+        <h1 id="espanol-demo-esplanding25-hero-title" class="m-0 mb-3">Ministerio <em>en Español</em></h1>
+        <p class="espanol-hero__lead m-0" lang="la">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae neque at metus posuere facilisis.
+          Donec euismod, augue ac viverra consequat, lectus lorem luctus justo, vitae feugiat ipsum magna.
+        </p>
+      </div>
+    </section>
+
+    <div class="espanol-hero__bridge position-relative d-flex justify-content-center px-3 px-md-4" lang="es">
+      <div class="espanol-hero__campuses w-100" aria-label="Nuestros campus">
+        <section
+          class="espanol-hero__campus d-flex flex-column align-items-center text-center text-white p-4"
+          aria-labelledby="espanol-demo-espanol-hero-woodlands"
+        >
+          <h2 id="espanol-demo-espanol-hero-woodlands" class="text-white mt-0 mb-2">The Woodlands</h2>
+          <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
+          <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
+            <p
+              class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="mr-2"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="12 7 12 12 15 14" />
+              </svg>
+              Domingos · 10:00 a.m.
+            </p>
+            <a
+              class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-0"
+              href="https://maps.app.goo.gl/fGCkojFhmMMvEb2y9"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="mr-2"
+              >
+                <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              Centro de Recreación
+            </a>
+          </div>
+          <a
+            class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
+            href="/woodlands-espanol"
+            aria-label="Conoce el campus de The Woodlands"
+          >
+            Conoce el campus
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              class="ml-2"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="14 7 19 12 14 17" />
+            </svg>
+          </a>
+        </section>
+
+        <section
+          class="espanol-hero__campus d-flex flex-column align-items-center text-center text-white p-4"
+          aria-labelledby="espanol-demo-espanol-hero-creekside"
+        >
+          <h2 id="espanol-demo-espanol-hero-creekside" class="text-white mt-0 mb-2">Creekside</h2>
+          <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
+          <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
+            <p
+              class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="mr-2"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="12 7 12 12 15 14" />
+              </svg>
+              Domingos · 1:00 p.m.
+            </p>
+            <a
+              class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-2"
+              href="https://maps.app.goo.gl/WdgZNss2ZMHR69F69"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="mr-2"
+              >
+                <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              Centro de Adoración
+            </a>
+            <a
+              class="espanol-hero__stream d-inline-flex align-items-center justify-content-center mb-0"
+              href="https://www.youtube.com/@covenantespanol"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="mr-2"
+              >
+                <rect x="3" y="4" width="18" height="12" rx="2" />
+                <line x1="12" y1="16" x2="12" y2="20" />
+                <line x1="8" y1="20" x2="16" y2="20" />
+              </svg>
+              En vivo en YouTube
+            </a>
+          </div>
+          <a
+            class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
+            href="/creekside-espanol"
+            aria-label="Conoce el campus de Creekside"
+          >
+            Conoce el campus
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              class="ml-2"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="14 7 19 12 14 17" />
+            </svg>
+          </a>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- End of Hero -->
+
+  <!-- Intro -->
+  <section
+    id="espanol-demo-espanol-intro"
+    class="espanol-intro bg-white py-5 d-none"
+    hidden
+    lang="es"
+    aria-labelledby="espanol-demo-espanol-intro-title"
+  >
+    <div class="container-fluid py-md-4">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="row align-items-center d-md-flex">
+            <div class="col-xs-12 col-md-6 mb-4 mb-md-0">
+              <figure class="espanol-intro__photo m-0 mr-3 mb-3">
+                <img
+                  src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-14+1.jpg"
+                  class="img-responsive w-100 espanol-media"
+                  alt="Un miembro del Ministerio en Español sonríe durante una actividad de la iglesia."
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <p
+                class="twmc-p twmc-p-small text-uppercase espanol-intro__eyebrow d-flex align-items-center text-traditional mt-0 mb-3"
+              >
+                <span class="espanol-intro__rule mr-2" aria-hidden="true"></span>
+                Bienvenido a casa
+              </p>
+              <h2 id="espanol-demo-espanol-intro-title" class="twmc-h2 text-uppercase mt-0 mb-4">Qué esperar</h2>
+              <p class="twmc-p mt-0 mb-3">Bienvenido a The Woodlands Methodist Church en español.</p>
+              <p class="twmc-p mb-0">
+                Todos fuimos creados para adorar y glorificar a Dios, y esa es nuestra misión en cada servicio, en cada
+                campus. Ya sea que estés en el campus de The Woodlands o en el campus de Creekside, esperamos que venga
+                listo para cantar alabanzas, regocijarse en Su presencia, orar juntos, aprender de Su Palabra, y crecer
+                más cerca de Cristo cada día.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Intro -->
+
+  <!-- What to expect: campus photo galleries -->
+  <section class="espanol-campuses pt-5" lang="es" aria-labelledby="espanol-demo-espanol-campuses-title">
+    <header class="container-fluid pt-4 pt-md-5">
+      <div class="row pt-5">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h2
+            id="espanol-demo-espanol-campuses-title"
+            class="twmc-h2 text-uppercase espanol-campus-title text-center m-0"
+          >
+            <span class="d-block">Qué Esperar</span>
+          </h2>
+        </div>
+      </div>
+    </header>
+    <!-- Campus: The Woodlands -->
+    <section
+      id="espanol-demo-espanol-campus-woodlands"
+      class="espanol-campus-section py-5"
+      aria-labelledby="espanol-demo-espanol-campus-woodlands-title"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="row align-items-center d-md-flex">
+              <div class="col-xs-12 col-md-6 mb-4 mb-md-0">
+                <h3
+                  id="espanol-demo-espanol-campus-woodlands-title"
+                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                >
+                  The Woodlands
+                </h3>
+                <p class="twmc-p mb-4">
+                  En The Woodlands, encontrarás una comunidad que te recibe con los brazos abiertos. Nos reunimos para
+                  adorar en español, compartir en oración y crecer en nuestra fe. Ven con tu familia y descubre un lugar
+                  donde puedes sentirte en casa.
+                </p>
+                <a href="/woodlands-espanol" class="btn btn-traditional"
+                  >Conoce el campus <span class="ml-2" aria-hidden="true">&rarr;</span></a
+                >
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div
+                  class="espanol-campus-gallery p-3"
+                  data-espanol-gallery
+                  role="region"
+                  aria-roledescription="carrusel"
+                  aria-label="Fotos del campus de The Woodlands"
+                >
+                  <div
+                    id="espanol-demo-espanol-woodlands-photos"
+                    class="espanol-card-stack position-relative mb-5"
+                    data-gallery-stack
+                    role="group"
+                    aria-label="Fotos de The Woodlands. Usa las flechas izquierda y derecha para cambiar de foto."
+                    aria-describedby="espanol-demo-espanol-woodlands-gallery-hint"
+                  >
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="0"
+                      data-caption="Adoramos juntos"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="1 de 5"
+                      aria-hidden="false"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_esp-ivi/ESP_Worship+Hero_1270x600.jpg"
+                        alt="Una persona levanta la mano durante la adoración en The Woodlands."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="1"
+                      data-caption="Una comunidad que te recibe"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="2 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-14+1.jpg"
+                        alt="Un voluntario del Ministerio en Español da la bienvenida en The Woodlands."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="2"
+                      data-caption="Compartimos en oración"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="3 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg"
+                        alt="Personas oran juntas durante un servicio del Ministerio en Español."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="3"
+                      data-caption="Hay un lugar para ti"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="4 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/ESP_Worship+Flags+1800x1800.jpg"
+                        alt="Bandera de Adoración en Español en el campus de The Woodlands."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="4"
+                      data-caption="Crecemos en la fe"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="5 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9ce8659f-9cd5-4d24-afbb-5aacfa14394e"
+                        alt="Personas con sus Biblias abiertas durante un tiempo de estudio."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between" data-gallery-controls hidden>
+                    <button
+                      type="button"
+                      class="espanol-gallery-arrow p-0"
+                      data-gallery-previous
+                      aria-label="Foto anterior de The Woodlands"
+                      aria-controls="espanol-demo-espanol-woodlands-photos"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <polyline points="14,6 8,12 14,18"></polyline>
+                      </svg>
+                    </button>
+                    <p class="twmc-p twmc-p-small text-center mx-3 my-0">
+                      <span data-gallery-caption>Adoramos juntos</span>
+                      <span class="d-block text-muted" data-gallery-count>1 / 5</span>
+                    </p>
+                    <button
+                      type="button"
+                      class="espanol-gallery-arrow p-0"
+                      data-gallery-next
+                      aria-label="Siguiente foto de The Woodlands"
+                      aria-controls="espanol-demo-espanol-woodlands-photos"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <polyline points="10,6 16,12 10,18"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <p
+                    id="espanol-demo-espanol-woodlands-gallery-hint"
+                    class="twmc-p twmc-p-small text-center text-muted mt-3 mb-0"
+                    data-gallery-hint
+                    hidden
+                  >
+                    Usa las flechas o desliza para ver más.
+                  </p>
+                  <p class="sr-only" data-gallery-status role="status" aria-live="polite" aria-atomic="true"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Campus: Creekside -->
+    <section
+      id="espanol-demo-espanol-campus-creekside"
+      class="espanol-campus-section py-5"
+      aria-labelledby="espanol-demo-espanol-campus-creekside-title"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="row align-items-center d-md-flex">
+              <div class="col-xs-12 col-md-6 col-md-push-6 mb-4 mb-md-0">
+                <h3
+                  id="espanol-demo-espanol-campus-creekside-title"
+                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                >
+                  Creekside
+                </h3>
+                <p class="twmc-p mb-4">
+                  En Creekside, te invitamos a ser parte de una comunidad que camina contigo. Juntos adoramos en
+                  español, escuchamos la Palabra de Dios y compartimos la vida. Conoce nuestro campus y descubre nuevas
+                  formas de conectar y crecer en tu fe.
+                </p>
+                <a href="/creekside-espanol" class="btn btn-traditional"
+                  >Conoce el campus <span class="ml-2" aria-hidden="true">&rarr;</span></a
+                >
+              </div>
+              <div class="col-xs-12 col-md-6 col-md-pull-6">
+                <div
+                  class="espanol-campus-gallery p-3"
+                  data-espanol-gallery
+                  role="region"
+                  aria-roledescription="carrusel"
+                  aria-label="Fotos del campus de Creekside"
+                >
+                  <div
+                    id="espanol-demo-espanol-creekside-photos"
+                    class="espanol-card-stack position-relative mb-5"
+                    data-gallery-stack
+                    role="group"
+                    aria-label="Fotos de Creekside. Usa las flechas izquierda y derecha para cambiar de foto."
+                    aria-describedby="espanol-demo-espanol-creekside-gallery-hint"
+                  >
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="0"
+                      data-caption="Compartimos en oración"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="1 de 5"
+                      aria-hidden="false"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/altar+blessing-edit.jpg"
+                        alt="La comunidad de Creekside se reúne al frente del santuario para orar."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="1"
+                      data-caption="Escuchamos Su Palabra"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="2 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/span-worship-dario2.jpg"
+                        alt="Un pastor comparte un mensaje en el campus de Creekside."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="2"
+                      data-caption="Adoramos juntos"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="3 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/20250209-CAC-Edited-39-cropped-1200x800.jpg"
+                        alt="La congregación se reúne para adorar en el santuario de Creekside."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="3"
+                      data-caption="Celebramos en comunidad"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="4 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/worship-confirmation.jpg"
+                        alt="Un grupo de jóvenes participa en una celebración en el santuario de Creekside."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                    <figure
+                      class="espanol-photo-card m-0"
+                      data-gallery-card
+                      data-position="4"
+                      data-caption="Crecemos en la fe"
+                      role="group"
+                      aria-roledescription="diapositiva"
+                      aria-label="5 de 5"
+                      aria-hidden="true"
+                    >
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8c1ef136-38a4-4277-95eb-cd3598baca71"
+                        alt="Una Biblia abierta durante un tiempo de lectura y estudio."
+                        loading="lazy"
+                        decoding="async"
+                        draggable="false"
+                      />
+                    </figure>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between" data-gallery-controls hidden>
+                    <button
+                      type="button"
+                      class="espanol-gallery-arrow p-0"
+                      data-gallery-previous
+                      aria-label="Foto anterior de Creekside"
+                      aria-controls="espanol-demo-espanol-creekside-photos"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <polyline points="14,6 8,12 14,18"></polyline>
+                      </svg>
+                    </button>
+                    <p class="twmc-p twmc-p-small text-center mx-3 my-0">
+                      <span data-gallery-caption>Compartimos en oración</span>
+                      <span class="d-block text-muted" data-gallery-count>1 / 5</span>
+                    </p>
+                    <button
+                      type="button"
+                      class="espanol-gallery-arrow p-0"
+                      data-gallery-next
+                      aria-label="Siguiente foto de Creekside"
+                      aria-controls="espanol-demo-espanol-creekside-photos"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <polyline points="10,6 16,12 10,18"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <p
+                    id="espanol-demo-espanol-creekside-gallery-hint"
+                    class="twmc-p twmc-p-small text-center text-muted mt-3 mb-0"
+                    data-gallery-hint
+                    hidden
+                  >
+                    Usa las flechas o desliza para ver más.
+                  </p>
+                  <p class="sr-only" data-gallery-status role="status" aria-live="polite" aria-atomic="true"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- End of campus photo galleries -->
+  <script data-espanol-gallery-script>
+    (function () {
+      "use strict";
+      var root = document.getElementById("espanol-rock-demo");
+      if (!root) return;
+      root.querySelectorAll("[data-espanol-gallery]").forEach(function (gallery) {
+        if (gallery.hasAttribute("data-espanol-gallery-ready")) return;
+        var stack = gallery.querySelector("[data-gallery-stack]");
+        var cards = Array.from(stack.querySelectorAll("[data-gallery-card]"));
+        var previous = gallery.querySelector("[data-gallery-previous]");
+        var next = gallery.querySelector("[data-gallery-next]");
+        var count = gallery.querySelector("[data-gallery-count]");
+        var caption = gallery.querySelector("[data-gallery-caption]");
+        var status = gallery.querySelector("[data-gallery-status]");
+        var current = 0;
+        var busy = false;
+        var gesture = null;
+        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        function render(announce) {
+          cards.forEach(function (card, index) {
+            var position = (index - current + cards.length) % cards.length;
+            card.dataset.position = String(position);
+            card.setAttribute("aria-hidden", position === 0 ? "false" : "true");
+          });
+          count.textContent = current + 1 + " / " + cards.length;
+          caption.textContent = cards[current].dataset.caption;
+          if (announce) {
+            status.textContent =
+              "Foto " + (current + 1) + " de " + cards.length + ". " + cards[current].querySelector("img").alt;
+          }
+        }
+
+        async function move(direction) {
+          if (busy) return;
+          busy = true;
+          var front = cards[current];
+          var animation;
+          if (!reducedMotion.matches && typeof front.animate === "function") {
+            animation = front.animate(
+              [
+                { transform: "translateX(0) rotate(0deg)", opacity: 1 },
+                { transform: "translateX(" + -direction * 35 + "%) rotate(" + -direction * 12 + "deg)", opacity: 0 },
+              ],
+              { duration: 260, easing: "ease-in", fill: "forwards" },
+            );
+            try {
+              await animation.finished;
+            } catch (error) {
+              /* Finish a cancelled flip in a stable state. */
+            }
+          }
+          current = (current + direction + cards.length) % cards.length;
+          render(true);
+          if (animation) animation.cancel();
+          busy = false;
+        }
+
+        previous.addEventListener("click", function () {
+          move(-1);
+        });
+        next.addEventListener("click", function () {
+          move(1);
+        });
+        stack.addEventListener("keydown", function (event) {
+          if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+          event.preventDefault();
+          move(event.key === "ArrowRight" ? 1 : -1);
+        });
+        stack.addEventListener("pointerdown", function (event) {
+          if (!event.isPrimary || event.button !== 0) return;
+          gesture = { x: event.clientX, y: event.clientY, pointer: event.pointerId };
+          stack.setPointerCapture(event.pointerId);
+        });
+        stack.addEventListener("pointerup", function (event) {
+          if (!gesture || gesture.pointer !== event.pointerId) return;
+          var dx = event.clientX - gesture.x;
+          var dy = event.clientY - gesture.y;
+          gesture = null;
+          if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.25) move(dx < 0 ? 1 : -1);
+        });
+        stack.addEventListener("pointercancel", function () {
+          gesture = null;
+        });
+        stack.addEventListener("lostpointercapture", function () {
+          gesture = null;
+        });
+
+        render(false);
+        stack.tabIndex = 0;
+        gallery.querySelector("[data-gallery-controls]").hidden = false;
+        gallery.querySelector("[data-gallery-hint]").hidden = false;
+        gallery.setAttribute("data-espanol-gallery-ready", "");
+      });
+    })();
+  </script>
+</div>

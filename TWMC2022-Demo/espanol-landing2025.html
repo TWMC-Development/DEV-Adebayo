@@ -1,39 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Español Landing Page 2025</title>
 
-     <!-- Fonts -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
- 
-     <!-- CSS -->
-     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60">
-     <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60">
-     <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60">
-     
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-main2023.css">
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-navbar.css">
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-grow.css">
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/seasonal.css">
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/sparkle.css">
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/utilities-templates.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
 
-     <!-- Shared CampusHero.lava stylesheet -->
-     <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/_css26/twmc26-styles.css?v1.1.72">
- 
-     <!-- Script -->
-     <script src="/js/script2023.js"></script>
-     
-     <!-- fontawesome v6 -->
-     <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script> 
-</head>
-<body>
-  <!-- on Lava: {[mainnav2023]} -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/bootstrap.css?v1.0.60" />
+    <link rel="stylesheet" href="https://www.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/theme.css?1.0.60" />
+    <link rel="stylesheet" href="https://people.thewoodlandsmethodist.org/Themes/TWMC2022/Styles/main.css?v1.0.60" />
+
+    <link
+      rel="stylesheet"
+      href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-main2023.css"
+    />
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-navbar.css" />
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/woodforest-demo/css/nw-grow.css" />
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/seasonal.css" />
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/sparkle.css" />
+    <link
+      rel="stylesheet"
+      href="https://rockrms-assets.s3.us-east-2.amazonaws.com/theme-demo/css/utilities-templates.css"
+    />
+
+    <!-- Shared CampusHero.lava stylesheet -->
+    <link rel="stylesheet" href="https://rockrms-assets.s3.us-east-2.amazonaws.com/_css26/twmc26-styles.css?v1.1.72" />
+
+    <!-- Local design rules; Bootstrap and TWMC styles are loaded via URL above. -->
+    <style>
+      /* Layout and spacing use the existing Bootstrap grid and theme utilities. */
+
+      /* Welcome and shared photo treatment. */
+
+      .espanol-media {
+        border-radius: 20px;
+        box-shadow: 16px 16px 0 #f1ebe6;
+      }
+
+      .espanol-intro__photo img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      /* Campus photo stacks: Bootstrap supplies the grid and spacing. */
+      .espanol-campus-title > span {
+        font-size: clamp(40px, 4.5vw, 2em);
+        text-wrap: balance;
+      }
+      .espanol-campus-section + .espanol-campus-section {
+        position: relative;
+      }
+      .espanol-campus-section + .espanol-campus-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 25%;
+        width: 50%;
+        border-top: 1px solid rgba(134, 38, 51, 0.12);
+      }
+      .espanol-campus-name {
+        font-size: 24px;
+        line-height: 1.5;
+        letter-spacing: 0.12em;
+      }
+      .espanol-campus-gallery [hidden] {
+        display: none !important;
+      }
+      .espanol-card-stack {
+        aspect-ratio: 8 / 5;
+        isolation: isolate;
+      }
+      .espanol-card-stack:focus-visible,
+      .espanol-gallery-arrow:focus-visible {
+        outline: 3px solid #862633;
+        outline-offset: 6px;
+      }
+      .espanol-photo-card {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        border: 5px solid #fff;
+        border-radius: 20px;
+        background: #f1ebe6;
+        box-shadow: 0 8px 22px rgba(49, 25, 28, 0.14);
+        transform-origin: 50% 80%;
+        transition: transform 0.32s ease;
+        pointer-events: none;
+      }
+      .espanol-photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        user-select: none;
+      }
+      .espanol-photo-card[data-position="0"] {
+        z-index: 5;
+        transform: none;
+      }
+      .espanol-photo-card[data-position="1"] {
+        z-index: 4;
+        transform: translate(-7px, 7px) rotate(-3deg);
+      }
+      .espanol-photo-card[data-position="2"] {
+        z-index: 3;
+        transform: translate(10px, 12px) rotate(3deg);
+      }
+      .espanol-photo-card[data-position="3"] {
+        z-index: 2;
+        transform: translate(-6px, 17px) rotate(-5deg);
+      }
+      .espanol-photo-card[data-position="4"] {
+        z-index: 1;
+        transform: translate(12px, 21px) rotate(5deg);
+      }
+      .espanol-campus-gallery[data-espanol-gallery-ready] .espanol-card-stack {
+        touch-action: pan-y;
+        cursor: grab;
+      }
+      .espanol-campus-gallery[data-espanol-gallery-ready] .espanol-card-stack:active {
+        cursor: grabbing;
+      }
+      .espanol-gallery-arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(134, 38, 51, 0.25);
+        border-radius: 50%;
+        color: #862633;
+        background: #fff;
+      }
+      .espanol-gallery-arrow:hover {
+        color: #fff;
+        background: #862633;
+      }
+      .espanol-gallery-arrow svg {
+        width: 20px;
+        height: 20px;
+      }
+      @media (max-width: 575px) {
+        .espanol-photo-card {
+          border-radius: 14px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .espanol-photo-card {
+          transition: none;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .espanol-intro__photo img {
+          aspect-ratio: 3 / 2;
+        }
+      }
+      @media (max-width: 575px) {
+        .espanol-media {
+          border-radius: 14px;
+        }
+      }
+      /* Hero: retain the designed overlap, gradients, and responsive campus panel. */
+      .espanol-hero-layout {
+        isolation: isolate;
+      }
+
+      #esplanding25-hero.espanol-hero {
+        height: auto;
+        min-height: clamp(640px, 80vh, 840px);
+      }
+
+      #esplanding25-hero .twmc26-campus-hero-content {
+        height: auto;
+        max-width: 1080px;
+        transform: translateY(20px);
+      }
+
+      #esplanding25-hero h1 {
+        font-size: clamp(40px, 5.2vw, 72px);
+        line-height: 1.08;
+        text-wrap: balance;
+      }
+
+      .espanol-hero-layout .espanol-hero__lead {
+        max-width: 660px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 17px;
+        line-height: 1.7;
+        text-wrap: pretty;
+      }
+
+      .espanol-hero-layout .espanol-hero__bridge {
+        z-index: 3;
+        margin-top: -146px;
+      }
+
+      .espanol-hero-layout .espanol-hero__campuses {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 880px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 22px;
+        background: rgba(112, 27, 40, 0.738);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 60px rgba(26, 5, 5, 0.2);
+      }
+
+      .espanol-hero-layout .espanol-hero__campus + .espanol-hero__campus {
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .espanol-hero-layout .espanol-hero__campus h2 {
+        font-size: 27px;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+      }
+
+      .espanol-hero-layout .espanol-hero__service-label {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .espanol-hero-layout .espanol-hero__time,
+      .espanol-hero-layout .espanol-hero__location,
+      .espanol-hero-layout .espanol-hero__stream {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .espanol-hero-layout .espanol-hero__location,
+      .espanol-hero-layout .espanol-hero__stream {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 14px;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.35);
+        text-underline-offset: 4px;
+      }
+
+      .espanol-hero-layout .espanol-hero__location:hover,
+      .espanol-hero-layout .espanol-hero__stream:hover {
+        color: #fff;
+        text-decoration-color: #fff;
+      }
+
+      .espanol-hero-layout .espanol-hero__details svg,
+      .espanol-hero-layout .espanol-hero__button svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .espanol-hero-layout .espanol-hero__button {
+        min-height: 46px;
+        border: 1px solid #fff;
+        border-radius: 999px;
+        font-size: 14px;
+        line-height: 1.4;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      .espanol-hero-layout .espanol-hero__button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(26, 5, 5, 0.2);
+      }
+
+      .espanol-hero-layout a:focus-visible {
+        outline: 3px solid #e2c97e;
+        outline-offset: 5px;
+      }
+
+      @media (max-width: 600px) {
+        #esplanding25-hero.espanol-hero {
+          min-height: 540px;
+        }
+
+        #esplanding25-hero .twmc26-campus-hero-content {
+          align-self: flex-start;
+        }
+
+        .espanol-hero-layout .espanol-hero__lead {
+          font-size: 16px;
+          line-height: 1.65;
+        }
+
+        .espanol-hero-layout .espanol-hero__bridge {
+          margin-top: -180px;
+        }
+
+        .espanol-hero-layout .espanol-hero__campuses {
+          grid-template-columns: 1fr;
+          border-radius: 18px;
+        }
+
+        .espanol-hero-layout .espanol-hero__campus + .espanol-hero__campus {
+          border-top: 1px solid rgba(255, 255, 255, 0.25);
+          border-left: 0;
+        }
+
+        .espanol-hero-layout .espanol-hero__campus h2 {
+          font-size: 24px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .espanol-hero-layout .espanol-hero__button {
+          transition: none;
+        }
+      }
+      .espanol-hero__details svg {
+        color: #e2c97e;
+      }
+
+      /* Connect: retain the live 4/3/2 card-to-row breakpoints and video modal. */
+      :root {
+        --c26-maroon: #862633;
+        --c26-maroon-dark: #6e1d28;
+        --c26-maroon-deep: #5c1a23;
+        --c26-loc: #8a5a62;
+        --c26-rule: #cdc8c4;
+        --c26-ink: #4d4e48;
+        --c26-ink-soft: #6b6c64;
+        --c26-imgbg: #e8e6e3;
+      }
+
+      .connect26 .twmc-section-title--light {
+        color: #333;
+      }
+
+      .connect26-card {
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow:
+          0 4px 12px rgba(0, 0, 0, 0.12),
+          0 12px 32px rgba(0, 0, 0, 0.16);
+      }
+
+      .connect26-btn {
+        min-height: 44px;
+        border: 1.5px solid var(--c26-maroon);
+        border-radius: 999px;
+        color: #fff;
+        background: var(--c26-maroon);
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.2px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .connect26-btn:hover,
+      .connect26-btn:focus {
+        background: var(--c26-maroon-dark);
+        border-color: var(--c26-maroon-dark);
+        color: #fff;
+        transform: scale(1.04);
+      }
+
+      .connect26-loc {
+        font-family: Montserrat, sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 0.2px;
+        line-height: 1.45;
+        color: var(--c26-loc);
+      }
+
+      .connect26-loc .connect26-pin {
+        fill: currentColor;
+        width: 0.82rem;
+        height: 0.82rem;
+        vertical-align: -0.12em;
+      }
+
+      .connect26-card__body .connect26-loc {
+        font-size: 0.74rem;
+      }
+
+      .connect26-feat {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .connect26-card__img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        background: var(--c26-imgbg);
+      }
+
+      .connect26-card__body h3 {
+        font-size: 1.12rem;
+        color: var(--c26-maroon-deep);
+      }
+
+      .connect26-card__body p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--c26-ink);
+      }
+
+      .connect26-divider {
+        border: 0;
+        border-top: 1px solid var(--c26-rule);
+      }
+
+      .connect26-rows > li {
+        display: block;
+      }
+
+      .connect26-row {
+        border-bottom: 1px solid var(--c26-rule);
+        transition: all 0.2s ease-in-out;
+        background: none;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        font: inherit;
+        color: inherit;
+      }
+
+      .connect26-row:hover .connect26-row__t,
+      .connect26-row:focus .connect26-row__t {
+        color: var(--c26-maroon);
+      }
+
+      .connect26-row:hover .connect26-row__go,
+      .connect26-row:focus .connect26-row__go {
+        transform: translateX(3px);
+      }
+
+      .connect26-row__thumb {
+        width: 64px;
+        height: 64px;
+        aspect-ratio: 1/1;
+        border-radius: 8px;
+        object-fit: cover;
+        background: var(--c26-imgbg);
+      }
+
+      .connect26-row__txt {
+        min-width: 0;
+      }
+
+      .connect26-row__t {
+        font-family: Montserrat, sans-serif;
+        font-size: 0.95rem;
+        color: var(--c26-maroon-deep);
+        line-height: 1.3;
+      }
+
+      .connect26-row__d {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.84rem;
+        color: var(--c26-ink-soft);
+        line-height: 1.4;
+      }
+
+      .connect26-row__go {
+        color: var(--c26-maroon);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .connect26-rows > li.connect26-rowitem--demoted {
+        display: none;
+      }
+
+      @media only screen and (max-width: 1500px) {
+        .connect26-feat {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .connect26-feat__item--4 {
+          display: none;
+        }
+
+        .connect26-rows > li.connect26-rowitem--4 {
+          display: block;
+        }
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .connect26-feat {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .connect26-feat__item--3 {
+          display: none;
+        }
+
+        .connect26-rows > li.connect26-rowitem--3 {
+          display: block;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .connect26-row__d {
+          font-size: 0.78rem;
+        }
+      }
+      @media only screen and (max-width: 650px) {
+        .connect26-feat {
+          grid-template-columns: 1fr;
+        }
+      }
+      .connect26-video-modal {
+        align-items: center;
+        background: rgba(20, 20, 20, 0.82);
+        display: none;
+        inset: 0;
+        justify-content: center;
+        position: fixed;
+        z-index: 11000;
+      }
+
+      .connect26-video-modal.is-open {
+        display: flex;
+      }
+
+      .connect26-video-modal__dialog {
+        background: #111;
+        border-radius: 8px;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.42);
+        max-width: 960px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      .connect26-video-modal__close {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        font-size: 1.65rem;
+        height: 2.6rem;
+        justify-content: center;
+        line-height: 1;
+        position: absolute;
+        right: 0.85rem;
+        top: 0.85rem;
+        width: 2.6rem;
+        z-index: 1;
+      }
+
+      .connect26-video-modal__close:hover,
+      .connect26-video-modal__close:focus-visible {
+        background: var(--c26-maroon);
+      }
+
+      .connect26-video-modal__frame {
+        aspect-ratio: 16 / 9;
+        background: #000;
+        width: 100%;
+      }
+
+      .connect26-video-modal__frame iframe {
+        border: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 360px) {
+        .connect26 .twmc-h1 {
+          letter-spacing: 3px;
+        }
+      }
+      /* sparkle.css translates SVG paths globally. */
+      .connect26 .connect26-pin path {
+        transform: none;
+      }
+
+      /* Footer-specific branding and narrow-screen layout. */
+      .footer-logo2 {
+        height: 50px;
+      }
+
+      .footer-logo-gmc {
+        height: 30px;
+      }
+
+      .footer-text-gmc {
+        font-size: 0.7rem;
+      }
+
+      .footer-gmc-div {
+        border-left: 1px solid white;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .footer-logo2 {
+          border-bottom: 1px solid white;
+        }
+
+        .footer-gmc-div {
+          border-left: none;
+        }
+
+        .footer-logo-gmc {
+          height: 25px;
+        }
+      }
+
+      .espanol-intro__rule {
+        flex: 0 0 30px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      .connect26-feat::before,
+      .connect26-feat::after,
+      .connect26-rows::before,
+      .connect26-rows::after {
+        display: none;
+      }
+    </style>
+
+    <!-- Script -->
+    <script src="/js/script2023.js"></script>
+  </head>
+  <body>
+    <!-- on Lava: {[mainnav2023]} -->
 
     <!-- ===== NAVBAR ===== -->
     <!-- Navbar top-->
@@ -42,18 +646,25 @@
         <a href="/home" class="navbar-top-flex-item navbar-top-link">The Woodlands</a>
         <a href="/woodforest" class="navbar-top-flex-item navbar-top-link">Woodforest</a>
         <a href="/montgomery" class="navbar-top-flex-item navbar-top-link">Montgomery</a>
-        <a href="/creekside" class="navbar-top-flex-item navbar-top-link">Creekside</a>   
-        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>    
+        <a href="/creekside" class="navbar-top-flex-item navbar-top-link">Creekside</a>
+        <a href="/espanol" class="navbar-top-flex-item navbar-top-link">Español</a>
       </div>
 
       <div class="mobile-dropdown-menu navbar-top-flex-container">
         <div class="dropdown navbar-top-flex-item">
-          <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <button
+            class="btn btn-white dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+          >
             Locations
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li> <a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
+            <li><a href="/home" class="navbar-top-flex-item">The Woodlands</a></li>
             <!-- <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li> -->
             <li><a href="/woodforest" class="navbar-top-flex-item">Woodforest</a></li>
             <li><a href="/montgomery" class="navbar-top-flex-item">Montgomery</a></li>
@@ -62,7 +673,6 @@
           </ul>
         </div>
       </div>
-      
     </div>
 
     <!-- Navbar bottom -->
@@ -70,128 +680,171 @@
       <div class="navbar-container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed navbar-bottom-hamburger" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button
+            type="button"
+            class="navbar-toggle collapsed navbar-bottom-hamburger"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar navbar-bottom-icon-bar"></span>
             <span class="icon-bar navbar-bottom-icon-bar"></span>
             <span class="icon-bar navbar-bottom-icon-bar"></span>
           </button>
           <a href="/home">
-              <!-- color logo -->
-              <img src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png" alt="TWMC logo" class="navbar-bottom-logo">
+            <!-- color logo -->
+            <img
+              src="https://www.thewoodlandsmethodist.org/Content/web/twumc-logo-fullcolor.png"
+              alt="TWMC logo"
+              class="navbar-bottom-logo"
+            />
           </a>
         </div>
-    
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-bottom-collapse" id="bs-example-navbar-collapse-1">
-
           <!-- Nav desktop -->
           <div class="nav navbar-nav navbar-right navbar-bottom-right">
-              <a href="/times-locations" class="navbar-bottom-link"><b>Times &amp; Locations</b></a>
-              <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
-              <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
-              <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
-              <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
-              <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
+            <a href="/times-locations" class="navbar-bottom-link"><b>Times &amp; Locations</b></a>
+            <a href="/im-new" class="navbar-bottom-link"><b>Visit</b></a>
+            <a href="/gather" class="navbar-bottom-link"><b>Grow</b></a>
+            <a href="/messages" class="navbar-bottom-link"><b>Messages</b></a>
+            <a href="/outward" class="navbar-bottom-link"><b>Serve</b></a>
+            <a href="/give" class="navbar-bottom-link"><b>Give</b></a>
 
-              <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
-              
-              <!-- dropdown -->
-              <a href="#" class="dropdown-toggle navbar-bottom-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></a>
+            <a href="https://twmc.org/login" class="btn btn-outline-lightgrey mx-2">Login</a>
 
-              <div class="dropdown-menu navbar-bottom-dropdownmenu">
-                <!-- Mega menu -->
-                <div class="nav navbar-nav navbar-bottom-megamenu">
-                  <!--  buttons -->
-                  <div class="megamenu-main-menu">
-                    <h3 class="megamenu-h3 mt-0">Main Menu</h3>
-                    <a href="/times-locations" class="megamenu-link">Times &amp; Locations</a>
-                    <a href="/im-new" class="megamenu-link">Visit</a>
-                    <a href="/gather" class="megamenu-link">Grow</a>
-                    <a href="/messages" class="megamenu-link">Messages</a>
-                    <a href="/outward" class="megamenu-link">Serve</a>
-                    <a href="/give" class="megamenu-link">Give</a>
-                    <a href="/login" class="megamenu-link">Login</a>
-                    <a href="/Find" class="megamenu-link">Search</a>
+            <!-- dropdown -->
+            <a
+              href="#"
+              class="dropdown-toggle navbar-bottom-link"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><i class="fas fa-bars"></i
+            ></a>
 
-                    <!-- Services -->
-                    <h3 class="megamenu-h3">Services</h3>
-                    <a href="/chapel" class="megamenu-link mt-3"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
-                    <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
-                    <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
-                    <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
-                     
-                    <!-- Socmed -->
-                    <div class="megamenu-socmed">
-                       <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
-                       <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
-                       <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
-                       <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
-                     </div>
+            <div class="dropdown-menu navbar-bottom-dropdownmenu">
+              <!-- Mega menu -->
+              <div class="nav navbar-nav navbar-bottom-megamenu">
+                <!--  buttons -->
+                <div class="megamenu-main-menu">
+                  <h3 class="megamenu-h3 mt-0">Main Menu</h3>
+                  <a href="/times-locations" class="megamenu-link">Times &amp; Locations</a>
+                  <a href="/im-new" class="megamenu-link">Visit</a>
+                  <a href="/gather" class="megamenu-link">Grow</a>
+                  <a href="/messages" class="megamenu-link">Messages</a>
+                  <a href="/outward" class="megamenu-link">Serve</a>
+                  <a href="/give" class="megamenu-link">Give</a>
+                  <a href="/login" class="megamenu-link">Login</a>
+                  <a href="/Find" class="megamenu-link">Search</a>
+
+                  <!-- Services -->
+                  <h3 class="megamenu-h3">Services</h3>
+                  <a href="/chapel" class="megamenu-link mt-3"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Chapel</span></a
+                  >
+                  <a href="/harvest" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Harvest</span></a
+                  >
+                  <a href="/loft" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Loft</span></a
+                  >
+                  <a href="/traditional" class="megamenu-link"
+                    ><img
+                      src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                      alt=""
+                      class="navbar-bottom--service-icon"
+                    /><span class="ml-2">Traditional</span></a
+                  >
+
+                  <!-- Socmed -->
+                  <div class="megamenu-socmed">
+                    <a href="https://www.instagram.com/woodlandsmethodistchurch/"
+                      ><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i
+                    ></a>
+                    <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                      ><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i
+                    ></a>
+                    <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                      ><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i
+                    ></a>
+                    <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
                   </div>
-    
-    
-                  <!-- About -->
-                  <div class="megamenu-about">
-                    <h3 class="megamenu-h3">About</h3>
-                    <a href="/baptism" class="megamenu-link">Baptism</a>
-                    <a href="/our-story" class="megamenu-link">Our Stories</a>
-                    <a href="/membership" class="megamenu-link">Membership</a>
-                    <a href="/staff" class="megamenu-link">Staff</a>
-                    <a href="/venues" class="megamenu-link">Venues and Bookings</a>
-                    <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
-                    <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
-                    <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
-                    <a href="/live" class="megamenu-link">Church Online</a>
-                  </div>
-                  <!-- End of About -->
-    
-                    <!-- Connect Nextgen -->
-                  <div class="megamenu-services">
-                    <!-- Connect -->
-                    <h3 class="megamenu-h3">Connect</h3>
-                    <a href="/grow" class="megamenu-link">G.R.O.W.</a>
-                    <a href="/events" class="megamenu-link">Events</a>
-                    <a href="/homegroups" class="megamenu-link">Home Groups</a>
-                    <a href="/support-groups" class="megamenu-link">Support Groups</a>
-                    <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
-
-
-                    <!-- NextGen -->
-                    <h3 class="megamenu-h3">NextGen</h3>
-                    <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
-                    <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
-                    <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
-                    <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
-                    <p> NextGen College (Ages 18-23)</p>
-                    <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
-                  </div>
-                  <!-- End of Services Connect -->
-    
-                  <!-- Ministries -->
-                  <div class="megamenu-ministries">
-                    <h3 class="megamenu-h3">Ministries</h3>
-                    <a href="/adults55" class="megamenu-link">Adults 55+</a>
-                    <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
-                    <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
-                    <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
-                    <a href="/help" class="megamenu-link">Caring and Prayer</a>
-                    <a href="/marriage" class="megamenu-link">Marriage</a>
-                    <a href="/men" class="megamenu-link">Men</a>
-                    <a href="/missions" class="megamenu-link">Missions</a>
-                    <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
-                    <a href="/recreation" class="megamenu-link">Recreation</a>
-                    <a href="/singles" class="megamenu-link">Singles</a>
-                    <a href="/special-needs" class="megamenu-link">Special Needs</a>
-                    <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
-                    <a href="/women" class="megamenu-link">Women</a>
-                    <a href="/youngadults" class="megamenu-link">Young Adults</a>
-                  </div>
-                  <!-- End of Ministries -->
-    
                 </div>
+
+                <!-- About -->
+                <div class="megamenu-about">
+                  <h3 class="megamenu-h3">About</h3>
+                  <a href="/baptism" class="megamenu-link">Baptism</a>
+                  <a href="/our-story" class="megamenu-link">Our Stories</a>
+                  <a href="/membership" class="megamenu-link">Membership</a>
+                  <a href="/staff" class="megamenu-link">Staff</a>
+                  <a href="/venues" class="megamenu-link">Venues and Bookings</a>
+                  <a href="/foundation" class="megamenu-link">TWMC Foundation</a>
+                  <a href="/gracegarden" class="megamenu-link">Grace Garden - Columbarium</a>
+                  <a href="/seminary-scholarship" class="megamenu-link">Seminary Scholarship Program</a>
+                  <a href="/live" class="megamenu-link">Church Online</a>
+                </div>
+                <!-- End of About -->
+
+                <!-- Connect Nextgen -->
+                <div class="megamenu-services">
+                  <!-- Connect -->
+                  <h3 class="megamenu-h3">Connect</h3>
+                  <a href="/grow" class="megamenu-link">G.R.O.W.</a>
+                  <a href="/events" class="megamenu-link">Events</a>
+                  <a href="/homegroups" class="megamenu-link">Home Groups</a>
+                  <a href="/support-groups" class="megamenu-link">Support Groups</a>
+                  <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
+
+                  <!-- NextGen -->
+                  <h3 class="megamenu-h3">NextGen</h3>
+                  <a href="/children" class="megamenu-link">NextGen Kids (Ages 3–9)</a>
+                  <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
+                  <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
+                  <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
+                  <p>NextGen College (Ages 18-23)</p>
+                  <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
+                </div>
+                <!-- End of Services Connect -->
+
+                <!-- Ministries -->
+                <div class="megamenu-ministries">
+                  <h3 class="megamenu-h3">Ministries</h3>
+                  <a href="/adults55" class="megamenu-link">Adults 55+</a>
+                  <a href="/adult-discipleship" class="megamenu-link">Adult Discipleship</a>
+                  <a href="https://www.bristolhousemusic.org/" class="megamenu-link">Bristol House Music</a>
+                  <a href="http://www.childrenofthewoodlands.org/" class="megamenu-link">Children of the Woodlands</a>
+                  <a href="/help" class="megamenu-link">Caring and Prayer</a>
+                  <a href="/marriage" class="megamenu-link">Marriage</a>
+                  <a href="/men" class="megamenu-link">Men</a>
+                  <a href="/missions" class="megamenu-link">Missions</a>
+                  <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
+                  <a href="/recreation" class="megamenu-link">Recreation</a>
+                  <a href="/singles" class="megamenu-link">Singles</a>
+                  <a href="/special-needs" class="megamenu-link">Special Needs</a>
+                  <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
+                  <a href="/women" class="megamenu-link">Women</a>
+                  <a href="/youngadults" class="megamenu-link">Young Adults</a>
+                </div>
+                <!-- End of Ministries -->
               </div>
-              
+            </div>
           </div>
           <!-- End of nav desktop -->
 
@@ -210,16 +863,46 @@
               <a href="/Find" class="megamenu-link">Search</a>
 
               <h3 class="megamenu-h3">Services</h3>
-              <a href="/chapel" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb" alt="" class="navbar-bottom--service-icon" class="megamenu-link"><span class="ml-2">Chapel</span></a>
-              <a href="/harvest" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Harvest</span></a>
-              <a href="/loft" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Loft</span></a>
-              <a href="/traditional" class="megamenu-link"><img src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9" alt="" class="navbar-bottom--service-icon"><span class="ml-2">Traditional</span></a>
+              <a href="/chapel" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=7ba9c700-5a40-4ac5-8ac5-5fe9123f29cb"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Chapel</span></a
+              >
+              <a href="/harvest" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=53de5c72-663e-4e56-b36a-762879e7f384"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Harvest</span></a
+              >
+              <a href="/loft" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=ff0df8c2-0e5f-4c5e-9b0b-57955f2700b0"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Loft</span></a
+              >
+              <a href="/traditional" class="megamenu-link"
+                ><img
+                  src="https://www.thewoodlandsmethodist.org/GetImage.ashx?guid=da94408d-d673-4974-8237-b2aa561020e9"
+                  alt=""
+                  class="navbar-bottom--service-icon"
+                /><span class="ml-2">Traditional</span></a
+              >
 
               <div class="navbar-bottom-mobile--socmed">
-                  <a href="https://www.instagram.com/woodlandsmethodistchurch/"><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i></a>
-                  <a href="https://www.facebook.com/TheWoodlandsMethodist"><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i></a>
-                  <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i></a>
-                  <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
+                <a href="https://www.instagram.com/woodlandsmethodistchurch/"
+                  ><i class="fab fa-instagram fa-2x navbar-bottom--socmed-icon"></i
+                ></a>
+                <a href="https://www.facebook.com/TheWoodlandsMethodist"
+                  ><i class="fab fa-facebook fa-2x navbar-bottom--socmed-icon"></i
+                ></a>
+                <a href="https://www.youtube.com/channel/UClYsncuu6rBhsh2lYYb0zdQ"
+                  ><i class="fab fa-youtube fa-2x navbar-bottom--socmed-icon"></i
+                ></a>
+                <a href="/podcast"><i class="fas fa-podcast fa-2x navbar-bottom--socmed-icon"></i></a>
               </div>
             </div>
             <!--  End of Buttons -->
@@ -247,7 +930,6 @@
               <a href="/homegroups" class="megamenu-link">Home Groups</a>
               <a href="/support-groups" class="megamenu-link">Support Groups</a>
               <a href="/recovery-groups" class="megamenu-link">Recovery Groups</a>
-              
 
               <!-- NextGen -->
               <h3 class="megamenu-h3">NextGen</h3>
@@ -255,7 +937,7 @@
               <a href="/56" class="megamenu-link">NextGen 56 (Ages 10-11)</a>
               <a href="/students" class="megamenu-link">NextGen Students (Ages 12-18)</a>
               <!-- <a href="#" class="megamenu-link">NextGen College</a> -->
-              <p> NextGen College (Ages 18-23)</p>
+              <p>NextGen College (Ages 18-23)</p>
               <a href="/nextgen-sports" class="megamenu-link">NextGen Sports</a>
             </div>
             <!-- End of Services Connect -->
@@ -272,7 +954,7 @@
               <a href="/men" class="megamenu-link">Men</a>
               <a href="/missions" class="megamenu-link">Missions</a>
               <a href="/music-fine-arts" class="megamenu-link">Music and Fine Arts</a>
-              <a href="/recreation" class="megamenu-link">Recreation</a>              
+              <a href="/recreation" class="megamenu-link">Recreation</a>
               <a href="/singles" class="megamenu-link">Singles</a>
               <a href="/special-needs" class="megamenu-link">Special Needs</a>
               <a href="https://www.twmschool.org/" class="megamenu-link">The Woodlands Methodist School</a>
@@ -280,7 +962,6 @@
               <a href="/youngadults" class="megamenu-link">Young Adults</a>
             </div>
             <!-- End of Ministries -->
-
           </div>
           <!-- End of Nav mobile -->
         </div>
@@ -293,705 +974,1825 @@
     <!-- Add margin below navbar, remove if needed -->
     <section class="margin-below-navbar"></section>
 
-    
-    <!-- Page-specific CSS: live /espanol, Section A HTML Content block (bid_9211).
-         In Rock: Block Configuration > Edit Content; search for .esplanding-msg-videos. -->
-    <style>
-    /* Icon */
-    .twmc-icon-wrapper3 {
-        width: 20px;
-        display: inline-block;
-        text-align: center;
-        margin-right: 6px;
-    }
-    /* End of Icon */
-
-
-
-
-    /* Intro */
-    .twmc-home-intro__services-time {
-        font-size: 16px;
-        line-height: 1.4;
-      }
-      
-       @media screen and (max-width: 576px) {
-        .twmc-home-intro__services-button-container {
-          display: flex;
-          justify-content: center;
-        }
-        .twmc-home-intro__socmed-container {
-          text-align: center;
-        }}
-
-        .twmc-intro-h2  {
-            text-transform: uppercase;
-            color: #333;
-            margin-top: 0 !important;
-        }
-
-        @media only screen and (max-width: 576px) {
-            .twmc-intro-h2 {
-                margin-top: 0 !important;
-            }
-            
-        }
-
-       /* Flex */
-       
-       .twmc-home-flex--container--serv {
-        display: flex;
-        flex-direction: row;
-        gap: 2%;
-        justify-content: space-between;
-       }
-
-       .twmc-home-flex-item--serv {
-          flex-basis: 49%;
-        }
-
-        @media only screen and (max-width: 576px) {
-          .twmc-home-flex--container--serv {
-            flex-direction: column;
-            gap: 0;
-          }
-          .twmc-home-flex-item--serv {
-            flex-basis: 100%;
-          }
-
-          .twmc-home-flex-item--serv:nth-child(2) {
-            margin-top: 0rem;
-          }
-
-          p.twmc-home-intro__services-time.twmc-text-long.mb-2.twmc-home-intro-1stchild {
-            margin-bottom: 0 !important;
-          }
-        }
-
-        .twmc-btn-wrapper--fullwidth {
-          width: 100%;
-        }
-
-        .twmc-btn-intro--fullwidth {
-          width: 100%;
-          margin-top: 1rem;
-        }
-
-    /* End of Intro */
-
-
-    /* Messages */
-    #esplanding25-messsages {
-        background-color: #000;
-        padding: 4.5rem 0 5rem;
-        background-image: linear-gradient( to bottom, rgba(0, 0, 0, .85), rgba(0, 0, 0, .8), rgba(0, 0, 0, .7) ), url("https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/lampos-aritonang-9BHvgvzGAbI-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-
-    @media only screen and (max-width: 575px) {
-        .latest-message-section,
-        #esplanding25-messsages {
-            padding: 4.2rem 0 4.5rem;
-        }
-    }
-
-    .section-title-large-white2 {
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: 700;
-        letter-spacing: 1px;
-        /* text-align: left; */
-        margin-bottom: 1rem;
-    }
-
-    /* Flex */
-    .esplanding-msg-container {
-      display: flex;
-      flex-direction: row;
-      gap: 1%;
-      justify-content: space-between;
-    }
-
-    .esplanding-msg-item {
-      flex-basis: 32%;
-    }
-
-    @media only screen and (max-width: 1200px) {
-      .esplanding-msg-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-      }
-
-      .esplanding-msg-item {
-        flex-basis: 100%;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    @media only screen and (max-width: 992px) {
-      .esplanding-msg-item {
-        width: 80%;
-      }
-    }
-
-    @media only screen and (max-width: 768px) {
-      .esplanding-msg-item {
-        width: 100%;
-      }
-    }
-
-    /* End of Flex */
-    .esplanding-msg-videos {
-      border: 1px solid #fff;
-      border-radius: 8px;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.2);
-
-      background-size: cover;
-
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .esplanding-msg--title > a {
-        color: var(--color-white);
-        cursor: pointer;
-    }
-
-    .esplanding-msg--title > a:hover {
-        color: var(--color-light-orange);
-    }
-
-    .esplanding-msg-details {
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-    }
-    /* End of Messages */
-
-    
-    </style>
-
     <!-- Rock renders {[cta-announcement-esp]} before CampusHero.lava.
          The announcement is currently hidden on the live page. -->
 
-    <!-- Español hero redesign: page-specific overrides of the shared hero styles. -->
-    <style>
-      #esplanding25-hero.espanol-hero {
-        display: grid;
-        place-items: center;
-        height: auto;
-        min-height: clamp(640px, 80vh, 840px);
-        padding: 72px 32px;
-      }
+    <div class="espanol-hero-layout position-relative">
+      <section
+        id="esplanding25-hero"
+        class="twmc26-campus-hero espanol-hero d-flex align-items-center justify-content-center py-5 px-3 px-md-4"
+        lang="es"
+        aria-labelledby="esplanding25-hero-title"
+        style="--overlay-top: 0.35; --overlay-mid: 0.25; --overlay-bot: 0.6"
+      >
+        <div
+          class="twmc26-campus-hero-img"
+          role="img"
+          aria-label="Comunidad del Ministerio en Español en adoración"
+          style="
+            background-image: url(&#x27;https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg&#x27;);
+          "
+        ></div>
 
-      #esplanding25-hero .twmc26-campus-hero-content {
-        height: auto;
-        max-width: 1080px;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-        gap: 36px;
-        text-align: center;
-      }
+        <div class="twmc26-campus-hero-content align-items-center justify-content-center text-center p-0 mx-auto">
+          <h1 id="esplanding25-hero-title" class="m-0 mb-3">Ministerio <em>en Español</em></h1>
+          <p class="espanol-hero__lead m-0" lang="la">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae neque at metus posuere facilisis.
+            Donec euismod, augue ac viverra consequat, lectus lorem luctus justo, vitae feugiat ipsum magna.
+          </p>
+        </div>
+      </section>
 
-      #esplanding25-hero h1 {
-        margin: 0;
-        font-size: clamp(40px, 5.2vw, 72px);
-        line-height: 1.08;
-        text-wrap: balance;
-      }
-
-      #esplanding25-hero .espanol-hero__campuses {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 100%;
-        max-width: 880px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 22px;
-        background: rgba(112, 27, 40, 0.738);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 20px 60px rgba(26, 5, 5, 0.2);
-      }
-
-      #esplanding25-hero .espanol-hero__campus {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 34px 32px;
-        color: #fff;
-      }
-
-      #esplanding25-hero .espanol-hero__campus + .espanol-hero__campus {
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-      }
-
-      #esplanding25-hero .espanol-hero__campus h2 {
-        margin: 0 0 18px;
-        color: #fff;
-        font-size: 27px;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: -0.025em;
-        text-transform: none;
-      }
-
-      #esplanding25-hero .espanol-hero__details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        margin: 0 0 26px;
-      }
-
-      #esplanding25-hero .espanol-hero__time,
-      #esplanding25-hero .espanol-hero__location {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin: 0;
-        color: #fff;
-        font-size: 15px;
-        line-height: 1.5;
-      }
-
-      #esplanding25-hero .espanol-hero__time {
-        font-weight: 600;
-      }
-
-      #esplanding25-hero .espanol-hero__location {
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 14px;
-        text-decoration: underline;
-        text-decoration-color: rgba(255, 255, 255, 0.35);
-        text-underline-offset: 4px;
-      }
-
-      #esplanding25-hero .espanol-hero__location:hover {
-        color: #fff;
-        text-decoration-color: #fff;
-      }
-
-      #esplanding25-hero .espanol-hero__details svg {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        color: #e2c97e;
-      }
-
-      #esplanding25-hero .espanol-hero__button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        min-height: 46px;
-        margin-top: auto;
-        padding: 12px 22px;
-        border: 1px solid #fff;
-        border-radius: 999px;
-        background: #fff;
-        color: #862633;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.4;
-        text-decoration: none;
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
-      }
-
-      #esplanding25-hero .espanol-hero__button svg {
-        width: 16px;
-        height: 16px;
-      }
-
-      #esplanding25-hero .espanol-hero__button:hover {
-        color: #862633;
-        text-decoration: none;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(26, 5, 5, 0.2);
-      }
-
-      #esplanding25-hero a:focus-visible {
-        outline: 3px solid #e2c97e;
-        outline-offset: 5px;
-      }
-
-      @media (max-width: 600px) {
-        #esplanding25-hero.espanol-hero {
-          min-height: 0;
-          padding: 44px 20px;
-        }
-
-        #esplanding25-hero .twmc26-campus-hero-content {
-          gap: 28px;
-        }
-
-        #esplanding25-hero .espanol-hero__campuses {
-          grid-template-columns: 1fr;
-          border-radius: 18px;
-        }
-
-        #esplanding25-hero .espanol-hero__campus {
-          padding: 24px 20px;
-        }
-
-        #esplanding25-hero .espanol-hero__campus + .espanol-hero__campus {
-          border-top: 1px solid rgba(255, 255, 255, 0.25);
-          border-left: 0;
-        }
-
-        #esplanding25-hero .espanol-hero__campus h2 {
-          margin-bottom: 12px;
-          font-size: 24px;
-        }
-
-        #esplanding25-hero .espanol-hero__details {
-          gap: 6px;
-          margin-bottom: 20px;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        #esplanding25-hero .espanol-hero__button {
-          transition: none;
-        }
-      }
-    </style>
-
-    <section id="esplanding25-hero" class="twmc26-campus-hero espanol-hero" lang="es"
-      aria-labelledby="esplanding25-hero-title"
-      style="--overlay-top:0.35; --overlay-mid:0.25; --overlay-bot:0.60;">
-      <div class="twmc26-campus-hero-img" role="img"
-        aria-label="Comunidad del Ministerio en Español en adoración"
-        style="background-image: url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg');">
-      </div>
-
-      <div class="twmc26-campus-hero-content">
-        <h1 id="esplanding25-hero-title">Ministerio <em>en Español</em></h1>
-
-        <div class="espanol-hero__campuses" aria-label="Nuestros campus">
-          <section class="espanol-hero__campus" aria-labelledby="espanol-hero-woodlands">
-            <h2 id="espanol-hero-woodlands">The Woodlands</h2>
-            <div class="espanol-hero__details">
-              <p class="espanol-hero__time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/>
+      <div class="espanol-hero__bridge position-relative d-flex justify-content-center px-3 px-md-4" lang="es">
+        <div class="espanol-hero__campuses w-100" aria-label="Nuestros campus">
+          <section
+            class="espanol-hero__campus d-flex flex-column align-items-center text-center text-white p-4"
+            aria-labelledby="espanol-hero-woodlands"
+          >
+            <h2 id="espanol-hero-woodlands" class="text-white mt-0 mb-2">The Woodlands</h2>
+            <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
+            <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
+              <p
+                class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="mr-2"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <polyline points="12 7 12 12 15 14" />
                 </svg>
                 Domingos · 10:00 a.m.
               </p>
-              <a class="espanol-hero__location" href="https://maps.app.goo.gl/fGCkojFhmMMvEb2y9">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5"/><circle cx="12" cy="10" r="2.5"/>
+              <a
+                class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-0"
+                href="https://maps.app.goo.gl/fGCkojFhmMMvEb2y9"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="mr-2"
+                >
+                  <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
+                  <circle cx="12" cy="10" r="2.5" />
                 </svg>
                 Centro de Recreación
               </a>
             </div>
-            <a class="espanol-hero__button" href="/woodlands-espanol" aria-label="Conoce el campus de The Woodlands">
+            <a
+              class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
+              href="/woodlands-espanol"
+              aria-label="Conoce el campus de The Woodlands"
+            >
               Conoce el campus
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="ml-2"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="14 7 19 12 14 17" />
               </svg>
             </a>
           </section>
 
-          <section class="espanol-hero__campus" aria-labelledby="espanol-hero-creekside">
-            <h2 id="espanol-hero-creekside">Creekside</h2>
-            <div class="espanol-hero__details">
-              <p class="espanol-hero__time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/>
+          <section
+            class="espanol-hero__campus d-flex flex-column align-items-center text-center text-white p-4"
+            aria-labelledby="espanol-hero-creekside"
+          >
+            <h2 id="espanol-hero-creekside" class="text-white mt-0 mb-2">Creekside</h2>
+            <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
+            <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
+              <p
+                class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="mr-2"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <polyline points="12 7 12 12 15 14" />
                 </svg>
                 Domingos · 1:00 p.m.
               </p>
-              <a class="espanol-hero__location" href="https://maps.app.goo.gl/WdgZNss2ZMHR69F69">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5"/><circle cx="12" cy="10" r="2.5"/>
+              <a
+                class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-2"
+                href="https://maps.app.goo.gl/WdgZNss2ZMHR69F69"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="mr-2"
+                >
+                  <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
+                  <circle cx="12" cy="10" r="2.5" />
                 </svg>
                 Centro de Adoración
               </a>
+              <a
+                class="espanol-hero__stream d-inline-flex align-items-center justify-content-center mb-0"
+                href="https://www.youtube.com/@covenantespanol"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="mr-2"
+                >
+                  <rect x="3" y="4" width="18" height="12" rx="2" />
+                  <line x1="12" y1="16" x2="12" y2="20" />
+                  <line x1="8" y1="20" x2="16" y2="20" />
+                </svg>
+                En vivo en YouTube
+              </a>
             </div>
-            <a class="espanol-hero__button" href="/creekside-espanol" aria-label="Conoce el campus de Creekside">
+            <a
+              class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
+              href="/creekside-espanol"
+              aria-label="Conoce el campus de Creekside"
+            >
               Conoce el campus
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="ml-2"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="14 7 19 12 14 17" />
               </svg>
             </a>
           </section>
         </div>
       </div>
-    </section>
+    </div>
     <!-- End of Hero -->
 
     <!-- Intro -->
-    <section class="twmc-section__pymed-white">
-      <div class="container-fluid">
+    <section
+      id="espanol-intro"
+      class="espanol-intro bg-white py-5 d-none"
+      hidden
+      lang="es"
+      aria-labelledby="espanol-intro-title"
+    >
+      <div class="container-fluid py-md-4">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-            <div class="row">
-              <!-- Intro video -->
-            <div class="col-md-6">
-            <!-- <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
-
-            <div class='embed-container'><iframe src='https://player.vimeo.com/video/755253246' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div> -->
-            <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-14+1.jpg" alt="" class="img-responsive nw-intro-img">
-          </div>
-  
-             <!-- Intro description -->   
-             <div class="col-md-6 twmc-intro__description-bootstrap">
-               <h2 class="twmc-h2 twmc-intro-h2">Qué Esperar</h2>
-               <p class="twmc-p mb-3">Bienvenido a The Woodlands Methodist Church en español. Todos fuimos creados para adorar y glorificar a Dios, y esa es nuestra misión en cada servicio, en cada campus. Ya sea que estés en el campus de The Woodlands o en el campus de Creekside, esperamos que venga listo para cantar alabanzas, regocijarse en Su presencia, orar juntos, aprender de Su Palabra, y crecer más cerca de Cristo cada día.</p>
-  
-               <!-- Service Times -->
-               <div>
-                <!-- <h4 class="twmc-h4 text-uppercase mt-4 mb-0">Horarios de servicio</h4> -->
-                 <div class="twmc-home-flex--container--serv">
-                   <div class="twmc-intro__services twmc-home-flex-item--serv">
-                     <h4 class="twmc-h4 mb-0 text-uppercase">The Woodlands</h4>
-                     <h5 class="twmc-h5 mb-1">Horarios de servicio</h5>
-                     <p class="twmc-p twmc-p-small twmc-home-intro__services-time twmc-text-long mb-2 twmc-home-intro-1stchild"><span class="twmc-icon-wrapper3"><i class="fa-solid fa-calendar-clock" aria-hidden="true"></i></span>Domingo a las 10:00 a.m.
-                      <br><span class="twmc-icon-wrapper3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><a href="https://maps.app.goo.gl/fGCkojFhmMMvEb2y9" class="a-traditional">Centro de Recreación</a>
-                     </p>
-                     <p class="twmc-p">
-                      <a href="/woodlands-espanol" class="btn btn-traditional" target="_blank"><i class="fa-solid fa-globe-pointer" aria-hidden="true"></i> Aprende más</a>
-                    </p>
-                   </div>
-
-                   <div class="twmc-intro__services twmc-home-flex-item--serv">
-                    <h4 class="twmc-h4 mb-0 text-uppercase">Creekside</h4>
-                     <h5 class="twmc-h5 mb-1">Horarios de servicio</h5>
-                    <p class="twmc-p twmc-p-small twmc-home-intro__services-time twmc-text-long mb-2 twmc-home-intro-1stchild"><span class="twmc-icon-wrapper3"><i class="fa-solid fa-calendar-clock" aria-hidden="true"></i></span>Domingo a las 1:00 p.m.
-                    <br><span class="twmc-icon-wrapper3"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><a href="https://maps.app.goo.gl/WdgZNss2ZMHR69F69" class="a-traditional">Centro de Adoración</a>
-                    <br><span class="twmc-icon-wrapper3"><i class="fa-solid fa-laptop-mobile" aria-hidden="true"></i></span><a href="http://www.youtube.com/@covenantespanol" class="a-traditional">En vivo en YouTube</a>
-                    </p>
-                    <p class="twmc-p">
-                      <a href="/creekside-espanol" class="btn btn-traditional" target="_blank"><i class="fa-solid fa-globe-pointer" aria-hidden="true"></i> Aprende más</a>
-                    </p>
-                   </div>
-                 </div>
-               </div>
-               <!-- End of Service Times -->
-
-            </div>
-          </div>
-
-          </div>                 
-        
-      </div>
-    </div>
-  </section>     
-  <!-- End of Intro -->
-
-  <!-- Messages -->
-  <section id="esplanding25-messsages" class="esplanding-messages">
-    <div class="twmc-container">
-      <div class="row">
-        <div class="col-sm-12 esplanding-msg-container">
-          <div class="esplanding-msg-item">
-            <!-- <h3 class="twmc-h3 text-uppercase text-white">Messages</h3> -->
-            <h2 class="section-title-large-white2 mt-0">Mensajes</h2>
-            <p class="twmc-p text-white">Nos reunimos cada domingo en los campus de The Woodlands y Creekside para adorar a Dios y aprender de Su Palabra. Cada mensaje es una oportunidad para hacer una pausa, reflexionar y volver a conectar con la verdad de Dios de una manera que inspira y eleva. Tómese un momento para escuchar y ver cómo Dios podría hablar a su corazón esta semana.</p>
-          </div>
-
-          <!-- The Woodlands -->
-          <div class="esplanding-msg-item esplanding-msg-videos text-white text-center" style="background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.7), rgba(134, 38, 51, 0.7)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_esp-ivi/ESP_Worship+Hero_1270x600.jpg');">
-
-            <h3 class="twmc-h3 text-center text-uppercase mt-3">The Woodlands</h3>
-            <!-- <p class="twmc-p text-white">Domingo a las 10:00 a.m.</p> -->
-
-            <div class="mt-2 mb-4">
-              <a href="https://thewoodlandsmethodist.org/messages?ContentFilter=Espanol" class="btn btn-white d-inline-flex justify-content-center align-items-center" target="_blank"><i class="fas fa-headphones twmc-icon-listen mr-2"></i>Escucha</a>
-            </div>
-
-          </div>
-
-          <!-- Creekside -->
-          <div class="esplanding-msg-item esplanding-msg-videos text-white text-center" style="background-image: linear-gradient(to bottom, rgba(134, 38, 51, 0.7), rgba(134, 38, 51, 0.7)), url('https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/altar+blessing-edit.jpg');">
-            <h3 class="twmc-h3 text-center text-uppercase mt-3">Creekside</h3>
-            <!-- <p class="twmc-p text-white">Escuche el último mensaje en nuestro canal de YouTube, Covenant en Español.</p> -->
-
-            <div class="mt-2 mb-4">
-              <a href="https://www.youtube.com/channel/UCB_rb_y3Pd7ev1ygI2qU6cA" class="btn btn-white d-inline-flex justify-content-center align-items-center" target="_blank"><i class="far fa-play-circle twmc-icon-listen mr-2"></i>ver video</a>
+            <div class="row align-items-center d-md-flex">
+              <div class="col-xs-12 col-md-6 mb-4 mb-md-0">
+                <figure class="espanol-intro__photo m-0 mr-3 mb-3">
+                  <img
+                    src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-14+1.jpg"
+                    class="img-responsive w-100 espanol-media"
+                    alt="Un miembro del Ministerio en Español sonríe durante una actividad de la iglesia."
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <p
+                  class="twmc-p twmc-p-small text-uppercase espanol-intro__eyebrow d-flex align-items-center text-traditional mt-0 mb-3"
+                >
+                  <span class="espanol-intro__rule mr-2" aria-hidden="true"></span>
+                  Bienvenido a casa
+                </p>
+                <h2 id="espanol-intro-title" class="twmc-h2 text-uppercase mt-0 mb-4">Qué esperar</h2>
+                <p class="twmc-p mt-0 mb-3">Bienvenido a The Woodlands Methodist Church en español.</p>
+                <p class="twmc-p mb-0">
+                  Todos fuimos creados para adorar y glorificar a Dios, y esa es nuestra misión en cada servicio, en
+                  cada campus. Ya sea que estés en el campus de The Woodlands o en el campus de Creekside, esperamos que
+                  venga listo para cantar alabanzas, regocijarse en Su presencia, orar juntos, aprender de Su Palabra, y
+                  crecer más cerca de Cristo cada día.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
+    <!-- End of Intro -->
 
-    </div>
-  </section>
-  <!-- End of Latest Message -->
-
-  <!-- Connect -->
-  <section id="section-toggle-template" class="py-6">
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 text-center">
-            <h1 class="twmc-h1 twmc-section-title--light mb-3">Connect</h1>
+    <!-- What to expect: campus photo galleries -->
+    <section class="espanol-campuses pt-5" lang="es" aria-labelledby="espanol-campuses-title">
+      <header class="container-fluid pt-4 pt-md-5">
+        <div class="row pt-5">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h2 id="espanol-campuses-title" class="twmc-h2 text-uppercase espanol-campus-title text-center m-0">
+              <span class="d-block">Qué Esperar</span>
+            </h2>
           </div>
-
         </div>
-      </div>
-  </section>
-  <!-- End of Connect -->
-
-
-
-  <!-- Footer -->
-  <style>
-    .footer-logo2 {
-        height: 50px;
-        margin-right: 10px;
-        max-width: 100%;
-    }
-
-    .footer-logo-gmc {
-        height: 30px;
-    }
-
-    .footer-text-gmc {
-        font-size: 0.7rem;
-    }
-
-    .footer-newlogo-wrapper {
-      display: flex;
-      flex-direction: row;
-      width: 60%;
-      align-items: center;
-    }
-
-    .footer-gmc-div {
-      border-left: 1px solid white;
-      padding-left: 14px;
-    }
-
-    .footer-infos-wrapper {
-      margin-top: 1.8rem;
-    }
-
-    @media only screen and (max-width: 768px) {
-      .footer-infos-wrapper {
-        margin-left: 0;
-      }
-    }
-
-    @media only screen and (max-width: 500px) {
-      .footer-newlogo-wrapper {
-        flex-direction: column;
-        gap: 0;
-        width: 100%;
-        align-items: flex-start;
-      }
-
-      .footer-logo2 {
-        height: 50px;
-        width: auto;
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-        border-bottom: 1px solid white;
-        padding-bottom: 10px;
-      }
-
-      .footer-gmc-div {
-        padding-left: 0;
-        border-left: none;
-      }
-
-      .footer-logo-gmc {
-        height: 25px;
-      }
-    }
-  </style>
-
-  <section class="footer-wrapper-twmc py-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
+      </header>
+      <!-- Campus: The Woodlands -->
+      <section
+        id="espanol-campus-woodlands"
+        class="espanol-campus-section py-5"
+        aria-labelledby="espanol-campus-woodlands-title"
+      >
+        <div class="container-fluid">
           <div class="row">
-            <!-- Left -->
-            <div class="col-sm-7 footer-info-wrapper">
-              <!-- Footer logo wrapper -->
-              <div class="footer-newlogo-wrapper">
-                <img src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png" alt="" class="footer-logo2">
-                
-                <div class="mt-0 footer-gmc-div">
-                  <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
-                  <img src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png" alt="" class="footer-logo-gmc mb-1">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+              <div class="row align-items-center d-md-flex">
+                <div class="col-xs-12 col-md-6 mb-4 mb-md-0">
+                  <h3
+                    id="espanol-campus-woodlands-title"
+                    class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                  >
+                    The Woodlands
+                  </h3>
+                  <p class="twmc-p mb-4">
+                    En The Woodlands, encontrarás una comunidad que te recibe con los brazos abiertos. Nos reunimos para
+                    adorar en español, compartir en oración y crecer en nuestra fe. Ven con tu familia y descubre un
+                    lugar donde puedes sentirte en casa.
+                  </p>
+                  <a href="/woodlands-espanol" class="btn btn-traditional"
+                    >Conoce el campus <span class="ml-2" aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <div
+                    class="espanol-campus-gallery p-3"
+                    data-espanol-gallery
+                    role="region"
+                    aria-roledescription="carrusel"
+                    aria-label="Fotos del campus de The Woodlands"
+                  >
+                    <div
+                      id="espanol-woodlands-photos"
+                      class="espanol-card-stack position-relative mb-5"
+                      data-gallery-stack
+                      role="group"
+                      aria-label="Fotos de The Woodlands. Usa las flechas izquierda y derecha para cambiar de foto."
+                      aria-describedby="espanol-woodlands-gallery-hint"
+                    >
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="0"
+                        data-caption="Adoramos juntos"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="1 de 5"
+                        aria-hidden="false"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_esp-ivi/ESP_Worship+Hero_1270x600.jpg"
+                          alt="Una persona levanta la mano durante la adoración en The Woodlands."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="1"
+                        data-caption="Una comunidad que te recibe"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="2 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-14+1.jpg"
+                          alt="Un voluntario del Ministerio en Español da la bienvenida en The Woodlands."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="2"
+                        data-caption="Compartimos en oración"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="3 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_header-banner/20231009-ESP-Launch-3+1.jpg"
+                          alt="Personas oran juntas durante un servicio del Ministerio en Español."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="3"
+                        data-caption="Hay un lugar para ti"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="4 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_day0/ESP_Worship+Flags+1800x1800.jpg"
+                          alt="Bandera de Adoración en Español en el campus de The Woodlands."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="4"
+                        data-caption="Crecemos en la fe"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="5 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9ce8659f-9cd5-4d24-afbb-5aacfa14394e"
+                          alt="Personas con sus Biblias abiertas durante un tiempo de estudio."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between" data-gallery-controls hidden>
+                      <button
+                        type="button"
+                        class="espanol-gallery-arrow p-0"
+                        data-gallery-previous
+                        aria-label="Foto anterior de The Woodlands"
+                        aria-controls="espanol-woodlands-photos"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <polyline points="14,6 8,12 14,18"></polyline>
+                        </svg>
+                      </button>
+                      <p class="twmc-p twmc-p-small text-center mx-3 my-0">
+                        <span data-gallery-caption>Adoramos juntos</span>
+                        <span class="d-block text-muted" data-gallery-count>1 / 5</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="espanol-gallery-arrow p-0"
+                        data-gallery-next
+                        aria-label="Siguiente foto de The Woodlands"
+                        aria-controls="espanol-woodlands-photos"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <polyline points="10,6 16,12 10,18"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                    <p
+                      id="espanol-woodlands-gallery-hint"
+                      class="twmc-p twmc-p-small text-center text-muted mt-3 mb-0"
+                      data-gallery-hint
+                      hidden
+                    >
+                      Usa las flechas o desliza para ver más.
+                    </p>
+                    <p class="sr-only" data-gallery-status role="status" aria-live="polite" aria-atomic="true"></p>
+                  </div>
                 </div>
               </div>
-              <!-- End of footer logo wrapper -->
-
-              <div class="footer-infos-wrapper">
-                <p class="footer-info align-center">
-                  <i class="fas fa-church mr-1"></i>
-                  <a href="https://goo.gl/maps/v9urcNcJGxLDrvNH8" class="nw-a-white" target="
-                    _blank">2200 Lake Woodlands Drive, The Woodlands, TX 77380</a>
-                </p>
-                <p class="footer-info">
-                  <i class="fas fa-phone mr-1" aria-hidden="true"></i>
-                  <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
-                </p>
-              </div>
-
-              <div class="my-3">
-                <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i></a>
-                <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"><i class="fab fa-facebook  footer-socmed-icon" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i></a>
-                <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i></a>
-              </div>
-              
-
             </div>
-
-            <div class="col-sm-1"></div>
-
-            <!-- Right -->
-            <div class="col-sm-4 footer-flex-container">
-              <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
-              <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
-              <a href="/employment" class="footer-flex-item footer-link">Employment</a>
-              <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
-              <a href="/indoor-playgrounds" class="footer-flex-item footer-link">Indoor Playgrounds</a>
-              <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
-
-              <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
-              <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
-            </div>
-
           </div>
         </div>
+      </section>
+      <!-- Campus: Creekside -->
+      <section
+        id="espanol-campus-creekside"
+        class="espanol-campus-section py-5"
+        aria-labelledby="espanol-campus-creekside-title"
+      >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+              <div class="row align-items-center d-md-flex">
+                <div class="col-xs-12 col-md-6 col-md-push-6 mb-4 mb-md-0">
+                  <h3
+                    id="espanol-campus-creekside-title"
+                    class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                  >
+                    Creekside
+                  </h3>
+                  <p class="twmc-p mb-4">
+                    En Creekside, te invitamos a ser parte de una comunidad que camina contigo. Juntos adoramos en
+                    español, escuchamos la Palabra de Dios y compartimos la vida. Conoce nuestro campus y descubre
+                    nuevas formas de conectar y crecer en tu fe.
+                  </p>
+                  <a href="/creekside-espanol" class="btn btn-traditional"
+                    >Conoce el campus <span class="ml-2" aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+                <div class="col-xs-12 col-md-6 col-md-pull-6">
+                  <div
+                    class="espanol-campus-gallery p-3"
+                    data-espanol-gallery
+                    role="region"
+                    aria-roledescription="carrusel"
+                    aria-label="Fotos del campus de Creekside"
+                  >
+                    <div
+                      id="espanol-creekside-photos"
+                      class="espanol-card-stack position-relative mb-5"
+                      data-gallery-stack
+                      role="group"
+                      aria-label="Fotos de Creekside. Usa las flechas izquierda y derecha para cambiar de foto."
+                      aria-describedby="espanol-creekside-gallery-hint"
+                    >
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="0"
+                        data-caption="Compartimos en oración"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="1 de 5"
+                        aria-hidden="false"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/altar+blessing-edit.jpg"
+                          alt="La comunidad de Creekside se reúne al frente del santuario para orar."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="1"
+                        data-caption="Escuchamos Su Palabra"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="2 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/span-worship-dario2.jpg"
+                          alt="Un pastor comparte un mensaje en el campus de Creekside."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="2"
+                        data-caption="Adoramos juntos"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="3 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/20250209-CAC-Edited-39-cropped-1200x800.jpg"
+                          alt="La congregación se reúne para adorar en el santuario de Creekside."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="3"
+                        data-caption="Celebramos en comunidad"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="4 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/worship-confirmation.jpg"
+                          alt="Un grupo de jóvenes participa en una celebración en el santuario de Creekside."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                      <figure
+                        class="espanol-photo-card m-0"
+                        data-gallery-card
+                        data-position="4"
+                        data-caption="Crecemos en la fe"
+                        role="group"
+                        aria-roledescription="diapositiva"
+                        aria-label="5 de 5"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8c1ef136-38a4-4277-95eb-cd3598baca71"
+                          alt="Una Biblia abierta durante un tiempo de lectura y estudio."
+                          loading="lazy"
+                          decoding="async"
+                          draggable="false"
+                        />
+                      </figure>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between" data-gallery-controls hidden>
+                      <button
+                        type="button"
+                        class="espanol-gallery-arrow p-0"
+                        data-gallery-previous
+                        aria-label="Foto anterior de Creekside"
+                        aria-controls="espanol-creekside-photos"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <polyline points="14,6 8,12 14,18"></polyline>
+                        </svg>
+                      </button>
+                      <p class="twmc-p twmc-p-small text-center mx-3 my-0">
+                        <span data-gallery-caption>Compartimos en oración</span>
+                        <span class="d-block text-muted" data-gallery-count>1 / 5</span>
+                      </p>
+                      <button
+                        type="button"
+                        class="espanol-gallery-arrow p-0"
+                        data-gallery-next
+                        aria-label="Siguiente foto de Creekside"
+                        aria-controls="espanol-creekside-photos"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <polyline points="10,6 16,12 10,18"></polyline>
+                        </svg>
+                      </button>
+                    </div>
+                    <p
+                      id="espanol-creekside-gallery-hint"
+                      class="twmc-p twmc-p-small text-center text-muted mt-3 mb-0"
+                      data-gallery-hint
+                      hidden
+                    >
+                      Usa las flechas o desliza para ver más.
+                    </p>
+                    <p class="sr-only" data-gallery-status role="status" aria-live="polite" aria-atomic="true"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- End of campus photo galleries -->
+    <script data-espanol-gallery-script>
+      (function () {
+        "use strict";
+        document.querySelectorAll("[data-espanol-gallery]").forEach(function (gallery) {
+          if (gallery.hasAttribute("data-espanol-gallery-ready")) return;
+          var stack = gallery.querySelector("[data-gallery-stack]");
+          var cards = Array.from(stack.querySelectorAll("[data-gallery-card]"));
+          var previous = gallery.querySelector("[data-gallery-previous]");
+          var next = gallery.querySelector("[data-gallery-next]");
+          var count = gallery.querySelector("[data-gallery-count]");
+          var caption = gallery.querySelector("[data-gallery-caption]");
+          var status = gallery.querySelector("[data-gallery-status]");
+          var current = 0;
+          var busy = false;
+          var gesture = null;
+          var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+          function render(announce) {
+            cards.forEach(function (card, index) {
+              var position = (index - current + cards.length) % cards.length;
+              card.dataset.position = String(position);
+              card.setAttribute("aria-hidden", position === 0 ? "false" : "true");
+            });
+            count.textContent = current + 1 + " / " + cards.length;
+            caption.textContent = cards[current].dataset.caption;
+            if (announce) {
+              status.textContent =
+                "Foto " + (current + 1) + " de " + cards.length + ". " + cards[current].querySelector("img").alt;
+            }
+          }
+
+          async function move(direction) {
+            if (busy) return;
+            busy = true;
+            var front = cards[current];
+            var animation;
+            if (!reducedMotion.matches && typeof front.animate === "function") {
+              animation = front.animate(
+                [
+                  { transform: "translateX(0) rotate(0deg)", opacity: 1 },
+                  { transform: "translateX(" + -direction * 35 + "%) rotate(" + -direction * 12 + "deg)", opacity: 0 },
+                ],
+                { duration: 260, easing: "ease-in", fill: "forwards" },
+              );
+              try {
+                await animation.finished;
+              } catch (error) {
+                /* Finish a cancelled flip in a stable state. */
+              }
+            }
+            current = (current + direction + cards.length) % cards.length;
+            render(true);
+            if (animation) animation.cancel();
+            busy = false;
+          }
+
+          previous.addEventListener("click", function () {
+            move(-1);
+          });
+          next.addEventListener("click", function () {
+            move(1);
+          });
+          stack.addEventListener("keydown", function (event) {
+            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+            event.preventDefault();
+            move(event.key === "ArrowRight" ? 1 : -1);
+          });
+          stack.addEventListener("pointerdown", function (event) {
+            if (!event.isPrimary || event.button !== 0) return;
+            gesture = { x: event.clientX, y: event.clientY, pointer: event.pointerId };
+            stack.setPointerCapture(event.pointerId);
+          });
+          stack.addEventListener("pointerup", function (event) {
+            if (!gesture || gesture.pointer !== event.pointerId) return;
+            var dx = event.clientX - gesture.x;
+            var dy = event.clientY - gesture.y;
+            gesture = null;
+            if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.25) move(dx < 0 ? 1 : -1);
+          });
+          stack.addEventListener("pointercancel", function () {
+            gesture = null;
+          });
+          stack.addEventListener("lostpointercapture", function () {
+            gesture = null;
+          });
+
+          render(false);
+          stack.tabIndex = 0;
+          gallery.querySelector("[data-gallery-controls]").hidden = false;
+          gallery.querySelector("[data-gallery-hint]").hidden = false;
+          gallery.setAttribute("data-espanol-gallery-ready", "");
+        });
+      })();
+    </script>
+
+    <!-- Connect: connect-block-2026-v1-tabs-esp.lava.
+       Static snapshot of https://www.thewoodlandsmethodist.org/espanol (2026-11-05).
+       Rock populates Items from _Connect Blocks (2025) - V1, filtered by TabsEsp:
+       1 = The Woodlands Español; 2 = Creekside Español. Sort Priority ascending;
+       Items Per Page = 0. This local HTML does not automatically sync channel edits.
+       Based on the supplied 2026 Lava template, with local Bootstrap utility cleanup;
+       utilities-templates.css is already loaded via URL in the page head. -->
+    <section id="connect26" class="connect26 py-6" lang="es">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="text-center mb-2">
+              <h1 class="twmc-h1 twmc-section-title--light mb-3">Conéctate</h1>
+            </div>
+            <!-- Toggle nav — unchanged from the 2025 block -->
+            <div class="nav-pills--twmctoggle-connectblock3">
+              <ul class="nav nav-pills mt-4 mb-0 nav-pills--twmctoggle-connectblock3-ul">
+                <li class="active">
+                  <a data-toggle="pill" href="#twmctoggleconnect-tab1" class="twmc--btn--toggle-navtab3"
+                    >The Woodlands Español</a
+                  >
+                </li>
+                <li>
+                  <a data-toggle="pill" href="#twmctoggleconnect-tab2" class="twmc--btn--toggle-navtab3"
+                    >Creekside Español</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- End of toggle nav -->
+            <!-- Tab content -->
+            <div class="tab-content tab-content--twmctoggle-connectblock3">
+              <div id="twmctoggleconnect-tab1" class="twmctoggleconnect-tab tab-pane fade in active">
+                <div class="connect26-feat row">
+                  <div class="col-xs-12 mb-4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=21243aaa-a699-4ae2-b5c2-213003a1636a"
+                        alt="Mañana de Oración"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Mañana de Oración</h3>
+                        <p class="mb-3">
+                          Únete a nosotros cada sábado a las 6:00 a.m. en el campus de The Woodlands, mientras clamamos
+                          por cada ministerio, los miembros y un avivamiento sobrenatural en nuestra iglesia.
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/group-detail/332833"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Aprende Más</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=9ce8659f-9cd5-4d24-afbb-5aacfa14394e"
+                        alt="Estudio Bíblico"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Estudio Bíblico</h3>
+                        <p class="mb-3">
+                          Todos los miércoles a las 7:30 p.m. en el campus de The Woodlands, nos reunimos para estudiar
+                          un tema bíblico que nos ayuda en nuestro caminar con el Señor.
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/page/1751?GroupGuid=3e2316f2-8261-404c-83fc-49f2023c97b4"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Aprende Más</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4 connect26-feat__item--3">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=0ea08bc8-947f-4063-9b97-ecf6d79fa20b"
+                        alt="Noche de Jóvenes"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Noche de Jóvenes</h3>
+                        <p class="mb-3">
+                          Conoce a una generación de jóvenes apasionados por conocer a Cristo y experimentar el poder
+                          del Espíritu Santo. Viernes a las 7 en el Hangar en el campus de The Woodlands.
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/group-detail/332859"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Aprende Más</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4 connect26-feat__item--4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=bed23311-30b6-46c5-9e84-7eb8c7f0a34a"
+                        alt="The Woodlands Academy of Fine Arts"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">The Woodlands Academy of Fine Arts</h3>
+                        <p class="mb-3">
+                          The Woodlands Academy of Fine Arts offers private lessons on piano, guitar, organ, drums, and
+                          voice. Other instruments are available on request.
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/event/3106"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Learn More</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="connect26-divider mt-5 mb-4" />
+                <ul class="connect26-rows list-unstyled p-0 connect26-reset row d-flex flex-wrap my-0">
+                  <li class="connect26-rowitem--demoted connect26-rowitem--3 col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/group-detail/332859"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=0ea08bc8-947f-4063-9b97-ecf6d79fa20b"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Noche de Jóvenes</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        ><span class="connect26-row__d mt-1"
+                          >Conoce a una generación de jóvenes apasionados por conocer a Cristo y experimentar el poder
+                          del Espíritu Santo. Viernes a las 7 en el Han...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="connect26-rowitem--demoted connect26-rowitem--4 col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event/3106"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=bed23311-30b6-46c5-9e84-7eb8c7f0a34a"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold"
+                          >The Woodlands Academy of Fine Arts</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        ><span class="connect26-row__d mt-1"
+                          >The Woodlands Academy of Fine Arts offers private lessons on piano, guitar, organ, drums, and
+                          voice. Other instruments are available on r...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://connextsteps.org/clase-de-idiomas-2/"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8336603e-4522-4d64-bee0-9883a52da6ac"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Clases de Idiomas</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Aprende un idioma y conecta con otras personas a través de nuestras clases de inglés, español
+                          o chino como segundo idioma. Las clases se ...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://www.giveblood.org/woodlandsmethodist/"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=511ffc82-29c7-452c-be4e-03a8b5da48c1"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Blood Drive</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        ><span class="connect26-row__d mt-1"
+                          >Give the gift of life through the Gulf Coast Regional Blood Center. Blood donors are needed
+                          to give now, and in the future, consistently....</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div id="twmctoggleconnect-tab2" class="twmctoggleconnect-tab tab-pane fade">
+                <div class="connect26-feat row">
+                  <div class="col-xs-12 mb-4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=cb7603ec-ce59-4a49-9d9c-dbebbc6006b4"
+                        alt="Noche de Parrillada"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside, Off-Campus</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Noche de Parrillada</h3>
+                        <p class="mb-3">
+                          Hombres, acompáñennos a nuestra Parrillada para Hombres mensual el sábado 7 de noviembre, de
+                          6:00 a 8:00 p.m. Disfruten de buena comida, conversaciones significativas y una velada
+                          relajad...
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/Registration/mensmeatupnov2026"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Regístrate</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=f3626a71-8797-43c0-9def-1ea5df138b83"
+                        alt="Día de Chicas Brunch"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside, Off-Campus</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Día de Chicas Brunch</h3>
+                        <p class="mb-3">
+                          ¡Únete al Ministerio de Mujeres de Creekside para disfrutar de una mañana divertida de
+                          compañerismo y un delicioso brunch en First Watch! Conéctate con otras hermanas en Cristo,
+                          disfruta ...
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/page/1751?GroupGuid=56deb8be-04c8-42b2-a5d1-2901884fed89"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Más Información</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4 connect26-feat__item--3">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=c8a26c73-60e6-48cd-bf29-837a3fdd1705"
+                        alt="Caravana de Villancicos"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside, Off-Campus</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">Caravana de Villancicos</h3>
+                        <p class="mb-3">
+                          Acompáñanos el domingo, 13 de diciembre, de 5:00 a 7:30 p.m., para nuestra Caravana de
+                          Villancicos. Nos reuniremos en Covenant para decorar tu auto y organizarnos para un alegre
+                          desfile d...
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3465"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Regístrate</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 mb-4 connect26-feat__item--4">
+                    <div class="connect26-card bg-white flex-column h-100">
+                      <img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=94948f8d-e7ca-4b8f-9d57-c26a9fc48e60"
+                        alt="COVkids: Noche Navideña para Padres"
+                        class="connect26-card__img d-block w-100"
+                        loading="lazy"
+                      />
+                      <div class="connect26-card__body d-flex flex-column flex-fill p-4">
+                        <span class="connect26-loc d-block font-weight-bold mb-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        >
+                        <h3 class="twmc-h3 mt-1 mb-2">COVkids: Noche Navideña para Padres</h3>
+                        <p class="mb-3">
+                          Papás, disfruten de una noche libre para salir a cenar o hacer las últimas compras navideñas
+                          mientras sus hijos celebran la Navidad en Creekside. El sábado 12 de diciembre, de 5:30 a
+                          8:00...
+                        </p>
+                        <div class="mt-auto">
+                          <a
+                            href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3458"
+                            class="connect26-btn d-inline-flex align-items-center font-weight-semibold text-nowrap text-decoration-none px-3 py-2"
+                            target="_blank"
+                            rel="noopener"
+                            >Inscríbanse</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="connect26-divider mt-5 mb-4" />
+                <ul class="connect26-rows list-unstyled p-0 connect26-reset row d-flex flex-wrap my-0">
+                  <li class="connect26-rowitem--demoted connect26-rowitem--3 col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3465"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=c8a26c73-60e6-48cd-bf29-837a3fdd1705"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Caravana de Villancicos</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside, Off-Campus</span
+                        ><span class="connect26-row__d mt-1"
+                          >Acompáñanos el domingo, 13 de diciembre, de 5:00 a 7:30 p.m., para nuestra Caravana de
+                          Villancicos. Nos reuniremos en Covenant para decor...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="connect26-rowitem--demoted connect26-rowitem--4 col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3458"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=94948f8d-e7ca-4b8f-9d57-c26a9fc48e60"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold"
+                          >COVkids: Noche Navideña para Padres</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Papás, disfruten de una noche libre para salir a cenar o hacer las últimas compras navideñas
+                          mientras sus hijos celebran la Navidad en Cr...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/nextgen-sports"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=0ceac3ed-e717-443e-905d-c916813f2f1d"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Winter 2027 Indoor Soccer</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >The Woodlands</span
+                        ><span class="connect26-row__d mt-1"
+                          >Join us for a fun season of indoor soccer this winter! An indoor soccer league for pre-K3
+                          through kindergarten, January 23 - March 6.</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/page/1751?GroupGuid=ebe321cd-a4c6-4c5c-80de-5c422dd8a53a"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=73c90a36-08b0-4ec6-8925-c7e3e077171c"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Adults 55+ Game Night</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Enjoy a fun evening of games, food and meaningful connection the first Friday of each month,
+                          from 6:00 to 8:00 p.m. in the Gathering Room...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3472"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=7e15a9b4-d0d4-4d7b-87b5-2cd85f66ffa9"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Más Allá de los Regalos</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Después del Servicio de Navidad en el 23 de diciembre,, acompáñanos a disfrutar de una obra
+                          de Navidad presentada por nuestros niños y jó...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3432"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=58e2c083-6fcf-44ea-9a95-8c07b739afab"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">NextGen Sports Thanksgiving Camp</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Looking for a fun way to keep your kids active during the holiday break? Sign them up for
+                          NextGen Sports Thanksgiving Camp on November 23...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/group-detail/396597"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=77017b79-ee0a-48bf-a47c-c6f8d47a8c45"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Job Search Ministry en Español</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Únase a Job Search Ministry en Español los jueves, comenzando el 11 de junio, de 6:30 a 8:30
+                          p.m. Reciba apoyo práctico y acompañamiento ...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/page/1751?GroupGuid=d90ee817-0d5b-4127-9c1c-bbfc10ee6092"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8c1ef136-38a4-4277-95eb-cd3598baca71"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Estudio Bíblico de Mujeres</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Mujeres, acompáñennos al Estudio Bíblico de Mujeres los jueves, del 17 de septiembre al 3 de
+                          diciembre, de 8:30-10:00 a.m., en el Gatheri...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3429"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=af5d2f01-75a8-4541-a24d-eeb7c7542992"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Celebración Mensual de Cumpleaños</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Disfruta de un tiempo informal de convivencia mientras celebramos juntos los cumpleaños del
+                          mes. ¡Ven a compartir, conectar y festejar en...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event/3386"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=0205042b-bb7d-4892-bfb7-2640710dab58"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Sala de Oración</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Acompáñanos cada miercoles para un tiempo especial de oración y adoración de 12:00 a 1:00
+                          p.m. en el Santuario.</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://thewoodlandsmethodist.org/event?EventOccurrenceId=3471"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=96261570-7c52-4a0c-b83f-aec30989d679"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Casas de Paz</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside, Off-Campus</span
+                        ><span class="connect26-row__d mt-1"
+                          >¡Queremos llevar un tiempo de oración y esperanza a tu hogar! Nuestro equipo de Casas de Paz
+                          te acompañará a ti y a tu familia para compa...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://connextsteps.org/clase-de-idiomas-2/"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8336603e-4522-4d64-bee0-9883a52da6ac"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">Clases de Idiomas</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >Aprende un idioma y conecta con otras personas a través de nuestras clases de inglés, español
+                          o chino como segundo idioma. Las clases se ...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                  <li class="col-xs-12 col-lg-6">
+                    <a
+                      href="https://connextsteps.org/"
+                      class="connect26-row d-flex align-items-center w-100 h-100 text-left text-decoration-none py-3"
+                      target="_blank"
+                      rel="noopener"
+                      ><img
+                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=a9fe0c0b-be1b-4d21-994a-780d666a0c71"
+                        alt=""
+                        class="connect26-row__thumb flex-shrink-0 mr-3"
+                        loading="lazy"
+                      /><span class="connect26-row__txt flex-fill"
+                        ><span class="connect26-row__t d-block font-weight-bold">ConNEXT Steps</span
+                        ><span class="connect26-loc d-block font-weight-bold mt-1"
+                          ><svg
+                            class="connect26-pin d-inline-block mr-1"
+                            viewBox="0 0 16 16"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              d="M8 1a5 5 0 0 0-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                            /></svg
+                          >Creekside</span
+                        ><span class="connect26-row__d mt-1"
+                          >ConNEXT Steps helps community newcomers connect with language classes, life skills and local
+                          resources. For more information email info@c...</span
+                        ></span
+                      ><span class="connect26-row__go flex-shrink-0 font-weight-bold ml-3" aria-hidden="true"
+                        >&rarr;</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End of tab content -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="connect26-video-modal p-3" id="connect26-video-modal" aria-hidden="true">
+      <div class="connect26-video-modal__dialog" role="dialog" aria-modal="true" aria-label="Video">
+        <button
+          class="connect26-video-modal__close p-0"
+          type="button"
+          data-connect26-video-close
+          aria-label="Cerrar video"
+        >
+          &times;
+        </button>
+        <div class="connect26-video-modal__frame">
+          <iframe title="Video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </section>
-  <!-- End of Footer -->
 
+    <script>
+      /* Video modal. Player-agnostic - it only appends autoplay params to
+       whatever URL the trigger carries, so a YouTube /embed/ url behaves like a
+       Vimeo one. Inline on purpose: Rock does not strip inline scripts. */
+      (function () {
+        var modal = document.getElementById("connect26-video-modal");
+        if (!modal) {
+          return;
+        }
 
+        var frame = modal.querySelector("iframe");
+        var closeButton = modal.querySelector("[data-connect26-video-close]");
+        var lastTrigger = null;
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  <!-- fontawesome v6 -->
-  <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
-</body>
+        function withAutoplay(src) {
+          return src + (src.indexOf("?") === -1 ? "?" : "&") + "autoplay=1&title=0&byline=0&portrait=0";
+        }
+
+        function closeVideo() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+          /* Removing src is what actually stops playback — hiding the modal
+           alone leaves the audio running. */
+          frame.removeAttribute("src");
+          if (lastTrigger) {
+            lastTrigger.focus();
+          }
+        }
+
+        /* Delegated off document so it survives Rock re-rendering the block,
+         and so it does not care how many video items there are. */
+        document.addEventListener("click", function (event) {
+          var trigger = event.target.closest("[data-connect26-video-open]");
+          if (trigger) {
+            var src = trigger.getAttribute("data-video-src");
+            if (!src) {
+              return;
+            }
+            lastTrigger = trigger;
+            frame.src = withAutoplay(src);
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            closeButton.focus();
+            return;
+          }
+          if (event.target === modal || event.target.closest("[data-connect26-video-close]")) {
+            closeVideo();
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeVideo();
+          }
+        });
+      })();
+    </script>
+    <!-- End of Connect -->
+
+    <!-- Footer -->
+    <section class="footer-wrapper-twmc py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="row">
+              <!-- Left -->
+              <div class="col-sm-7 footer-info-wrapper">
+                <!-- Footer logo wrapper -->
+                <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center w-100">
+                  <img
+                    src="https://www.thewoodlandsumc.org/Content/web/twumc-logo.png"
+                    alt=""
+                    class="footer-logo2 mw-100 mr-0 mr-sm-2 mb-2 mb-sm-0 pb-2 pb-sm-0"
+                  />
+
+                  <div class="mt-0 footer-gmc-div pl-0 pl-sm-3">
+                    <p class="text-white footer-text-gmc mb-1"><strong>Member of the</strong></p>
+                    <img
+                      src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/GMC_logo.png"
+                      alt=""
+                      class="footer-logo-gmc mb-1"
+                    />
+                  </div>
+                </div>
+                <!-- End of footer logo wrapper -->
+
+                <div class="mt-4">
+                  <p class="footer-info align-center">
+                    <i class="fas fa-church mr-1"></i>
+                    <a
+                      href="https://goo.gl/maps/v9urcNcJGxLDrvNH8"
+                      class="nw-a-white"
+                      target="
+                    _blank"
+                      >2200 Lake Woodlands Drive, The Woodlands, TX 77380</a
+                    >
+                  </p>
+                  <p class="footer-info">
+                    <i class="fas fa-phone mr-1" aria-hidden="true"></i>
+                    <a href="tel:(281)297-5900" class="nw-a-white">(281) 297-5900</a>
+                  </p>
+                </div>
+
+                <div class="my-3">
+                  <a href="https://www.instagram.com/woodlandsmethodistchurch/" target="_blank"
+                    ><i class="fab fa-instagram footer-socmed-icon" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://www.facebook.com/TheWoodlandsMethodist" target="_blank"
+                    ><i class="fab fa-facebook footer-socmed-icon" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://www.youtube.com/c/TheWoodlandsMethodistChurch" target="_blank"
+                    ><i class="fab fa-youtube footer-socmed-icon" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://www.thewoodlandsmethodist.org/podcast" target="_blank"
+                    ><i class="fas fa-podcast footer-socmed-icon" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="col-sm-1"></div>
+
+              <!-- Right -->
+              <div class="col-sm-4 footer-flex-container">
+                <a href="/what-we-believe" class="footer-flex-item footer-link">What We Believe</a>
+                <a href="/facilities" class="footer-flex-item footer-link">Facilities</a>
+                <a href="/employment" class="footer-flex-item footer-link">Employment</a>
+                <a href="/cafe" class="footer-flex-item footer-link">Fireside Cafe</a>
+                <a href="/indoor-playgrounds" class="footer-flex-item footer-link">Indoor Playgrounds</a>
+                <a href="/funerals" class="footer-flex-item footer-link">Funerals &amp; Memorial Services</a>
+
+                <a href="/help" class="footer-flex-item footer-link">Find Help &amp; Support</a>
+                <a href="/myaccount" class="footer-flex-item footer-link">My Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Footer -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome v6 -->
+    <script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
+  </body>
 </html>
