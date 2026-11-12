@@ -236,13 +236,13 @@
 
   #espanol-rock-demo .espanol-hero-layout .espanol-hero__bridge {
     z-index: 3;
-    margin-top: -146px;
+    margin-top: -120px;
   }
 
   #espanol-rock-demo .espanol-hero-layout .espanol-hero__campuses {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 880px;
+    max-width: 1100px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 22px;
@@ -262,35 +262,12 @@
     letter-spacing: -0.025em;
   }
 
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__service-label {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 12px;
-    line-height: 1.5;
+  #espanol-rock-demo .espanol-hero-layout .espanol-hero__service-type {
+    color: #e2c97e;
+    font-size: 13px;
+    line-height: 1.4;
   }
 
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__time,
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location,
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location,
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 14px;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.35);
-    text-underline-offset: 4px;
-  }
-
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__location:hover,
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__stream:hover {
-    color: #fff;
-    text-decoration-color: #fff;
-  }
-
-  #espanol-rock-demo .espanol-hero-layout .espanol-hero__details svg,
   #espanol-rock-demo .espanol-hero-layout .espanol-hero__button svg {
     width: 16px;
     height: 16px;
@@ -333,7 +310,7 @@
     }
 
     #espanol-rock-demo .espanol-hero-layout .espanol-hero__bridge {
-      margin-top: -180px;
+      margin-top: -224px;
     }
 
     #espanol-rock-demo .espanol-hero-layout .espanol-hero__campuses {
@@ -355,9 +332,6 @@
     #espanol-rock-demo .espanol-hero-layout .espanol-hero__button {
       transition: none;
     }
-  }
-  #espanol-rock-demo .espanol-hero__details svg {
-    color: #e2c97e;
   }
 
   #espanol-rock-demo .espanol-intro__rule {
@@ -389,7 +363,6 @@
         <h1 id="espanol-demo-esplanding25-hero-title" class="m-0 mb-3">Ministerio <em>en Español</em></h1>
         <p class="espanol-hero__lead m-0" lang="la">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae neque at metus posuere facilisis.
-          Donec euismod, augue ac viverra consequat, lectus lorem luctus justo, vitae feugiat ipsum magna.
         </p>
       </div>
     </section>
@@ -401,46 +374,10 @@
           aria-labelledby="espanol-demo-espanol-hero-woodlands"
         >
           <h2 id="espanol-demo-espanol-hero-woodlands" class="text-white mt-0 mb-2">The Woodlands</h2>
-          <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
-          <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
-            <p
-              class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                class="mr-2"
-              >
-                <circle cx="12" cy="12" r="9" />
-                <polyline points="12 7 12 12 15 14" />
-              </svg>
-              Domingos · 10:00 a.m.
-            </p>
-            <a
-              class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-0"
-              href="https://maps.app.goo.gl/fGCkojFhmMMvEb2y9"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                class="mr-2"
-              >
-                <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-              Centro de Recreación
-            </a>
-          </div>
+          <h3 class="espanol-hero__service-type font-weight-semibold mt-0 mb-2" lang="es">Estilo de servicio</h3>
+          <p class="twmc-p twmc-p-small text-white w-75 mt-0 mb-4" lang="la">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.
+          </p>
           <a
             class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
             href="/woodlands-espanol"
@@ -468,66 +405,10 @@
           aria-labelledby="espanol-demo-espanol-hero-creekside"
         >
           <h2 id="espanol-demo-espanol-hero-creekside" class="text-white mt-0 mb-2">Creekside</h2>
-          <p class="espanol-hero__service-label font-weight-semibold mt-0 mb-3">Horarios de servicio</p>
-          <div class="espanol-hero__details d-flex flex-column align-items-center mb-4">
-            <p
-              class="espanol-hero__time d-inline-flex align-items-center justify-content-center text-white font-weight-semibold m-0 mb-2"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                class="mr-2"
-              >
-                <circle cx="12" cy="12" r="9" />
-                <polyline points="12 7 12 12 15 14" />
-              </svg>
-              Domingos · 1:00 p.m.
-            </p>
-            <a
-              class="espanol-hero__location d-inline-flex align-items-center justify-content-center mb-2"
-              href="https://maps.app.goo.gl/WdgZNss2ZMHR69F69"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                class="mr-2"
-              >
-                <polygon points="12 3 17 5 20 10 18 16 12 22 6 16 4 10 7 5" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-              Centro de Adoración
-            </a>
-            <a
-              class="espanol-hero__stream d-inline-flex align-items-center justify-content-center mb-0"
-              href="https://www.youtube.com/@covenantespanol"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                class="mr-2"
-              >
-                <rect x="3" y="4" width="18" height="12" rx="2" />
-                <line x1="12" y1="16" x2="12" y2="20" />
-                <line x1="8" y1="20" x2="16" y2="20" />
-              </svg>
-              En vivo en YouTube
-            </a>
-          </div>
+          <h3 class="espanol-hero__service-type font-weight-semibold mt-0 mb-2" lang="es">Estilo de servicio</h3>
+          <p class="twmc-p twmc-p-small text-white w-75 mt-0 mb-4" lang="la">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.
+          </p>
           <a
             class="espanol-hero__button btn bg-white text-traditional d-inline-flex align-items-center justify-content-center font-weight-bold text-decoration-none mt-auto px-4 py-2"
             href="/creekside-espanol"
@@ -626,10 +507,31 @@
               <div class="col-xs-12 col-md-6 mb-4 mb-md-0">
                 <h3
                   id="espanol-demo-espanol-campus-woodlands-title"
-                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-2"
                 >
                   The Woodlands
                 </h3>
+                <p
+                  class="twmc-p text-black font-weight-semibold d-flex align-items-center mt-0 mb-4"
+                  data-campus-service
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#862633"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    class="mr-2 flex-shrink-0"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <polyline points="12 7 12 12 15 14" />
+                  </svg>
+                  Domingos · 10:00 a.m.
+                </p>
                 <p class="twmc-p mb-4">
                   En The Woodlands, encontrarás una comunidad que te recibe con los brazos abiertos. Nos reunimos para
                   adorar en español, compartir en oración y crecer en nuestra fe. Ven con tu familia y descubre un lugar
@@ -817,10 +719,31 @@
               <div class="col-xs-12 col-md-6 col-md-push-6 mb-4 mb-md-0">
                 <h3
                   id="espanol-demo-espanol-campus-creekside-title"
-                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-3"
+                  class="espanol-campus-name text-traditional text-uppercase mt-0 mb-2"
                 >
                   Creekside
                 </h3>
+                <p
+                  class="twmc-p text-black font-weight-semibold d-flex align-items-center mt-0 mb-4"
+                  data-campus-service
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#862633"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    class="mr-2 flex-shrink-0"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <polyline points="12 7 12 12 15 14" />
+                  </svg>
+                  Domingos · 1:00 p.m.
+                </p>
                 <p class="twmc-p mb-4">
                   En Creekside, te invitamos a ser parte de una comunidad que camina contigo. Juntos adoramos en
                   español, escuchamos la Palabra de Dios y compartimos la vida. Conoce nuestro campus y descubre nuevas
@@ -850,15 +773,15 @@
                       class="espanol-photo-card m-0"
                       data-gallery-card
                       data-position="0"
-                      data-caption="Compartimos en oración"
+                      data-caption="Una comunidad que te recibe"
                       role="group"
                       aria-roledescription="diapositiva"
                       aria-label="1 de 5"
                       aria-hidden="false"
                     >
                       <img
-                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/altar+blessing-edit.jpg"
-                        alt="La comunidad de Creekside se reúne al frente del santuario para orar."
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/ESP/creekside-congregation-during-worship.webp"
+                        alt="Personas de la congregación de Creekside sonríen durante un servicio."
                         loading="lazy"
                         decoding="async"
                         draggable="false"
@@ -868,15 +791,15 @@
                       class="espanol-photo-card m-0"
                       data-gallery-card
                       data-position="1"
-                      data-caption="Escuchamos Su Palabra"
+                      data-caption="Celebramos juntos"
                       role="group"
                       aria-roledescription="diapositiva"
                       aria-label="2 de 5"
                       aria-hidden="true"
                     >
                       <img
-                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/span-worship-dario2.jpg"
-                        alt="Un pastor comparte un mensaje en el campus de Creekside."
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/ESP/creekside-childrens-nativity-celebration.webp"
+                        alt="Niños y jóvenes participan en una celebración de la Natividad en Creekside."
                         loading="lazy"
                         decoding="async"
                         draggable="false"
@@ -886,15 +809,15 @@
                       class="espanol-photo-card m-0"
                       data-gallery-card
                       data-position="2"
-                      data-caption="Adoramos juntos"
+                      data-caption="La Biblia nos guía"
                       role="group"
                       aria-roledescription="diapositiva"
                       aria-label="3 de 5"
                       aria-hidden="true"
                     >
                       <img
-                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/20250209-CAC-Edited-39-cropped-1200x800.jpg"
-                        alt="La congregación se reúne para adorar en el santuario de Creekside."
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/ESP/creekside-scripture-reading-on-stage.webp"
+                        alt="Una mujer lee de la Biblia junto a un hombre en el escenario de Creekside."
                         loading="lazy"
                         decoding="async"
                         draggable="false"
@@ -904,15 +827,15 @@
                       class="espanol-photo-card m-0"
                       data-gallery-card
                       data-position="3"
-                      data-caption="Celebramos en comunidad"
+                      data-caption="Escuchamos Su Palabra"
                       role="group"
                       aria-roledescription="diapositiva"
                       aria-label="4 de 5"
                       aria-hidden="true"
                     >
                       <img
-                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/images/_cov/worship-confirmation.jpg"
-                        alt="Un grupo de jóvenes participa en una celebración en el santuario de Creekside."
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/ESP/creekside-sermon-at-lectern.webp"
+                        alt="Un pastor predica desde un atril en el santuario de Creekside."
                         loading="lazy"
                         decoding="async"
                         draggable="false"
@@ -922,15 +845,15 @@
                       class="espanol-photo-card m-0"
                       data-gallery-card
                       data-position="4"
-                      data-caption="Crecemos en la fe"
+                      data-caption="Adoramos en familia"
                       role="group"
                       aria-roledescription="diapositiva"
                       aria-label="5 de 5"
                       aria-hidden="true"
                     >
                       <img
-                        src="https://thewoodlandsmethodist.org/GetFile.ashx?guid=8c1ef136-38a4-4277-95eb-cd3598baca71"
-                        alt="Una Biblia abierta durante un tiempo de lectura y estudio."
+                        src="https://rockrms-assets.s3.us-east-2.amazonaws.com/twms-images/ESP/creekside-childrens-worship-dance.webp"
+                        alt="Niños participan en una danza de adoración en el escenario de Creekside."
                         loading="lazy"
                         decoding="async"
                         draggable="false"
@@ -957,7 +880,7 @@
                       </svg>
                     </button>
                     <p class="twmc-p twmc-p-small text-center mx-3 my-0">
-                      <span data-gallery-caption>Compartimos en oración</span>
+                      <span data-gallery-caption>Una comunidad que te recibe</span>
                       <span class="d-block text-muted" data-gallery-count>1 / 5</span>
                     </p>
                     <button
