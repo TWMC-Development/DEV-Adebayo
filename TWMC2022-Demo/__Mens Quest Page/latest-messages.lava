@@ -1,0 +1,80 @@
+<!-- Latest Messages: Rock RMS Content Channel -->
+    <section
+      id="quest2027-messages"
+      class="py-6 quest2027-page"
+    >
+      <div class="container-fluid max-w1440">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="twmc-h2 quest2027-text--dark text-center mb-5">
+              LATEST MESSAGES
+            </h2>
+            <p class="quest2027-messages--swipe-hint" aria-hidden="true">
+              Swipe to see more messages &rarr;
+            </p>
+
+            <div class="row quest2027-message-grid">
+              {% assign counter = 0 %}
+              {% for item in Items reversed %}
+                {% if counter == 9 %}
+                  {% break %}
+                {% endif %}
+                {% assign formattedDate = item.StartDateTime | Date:'MMMM dd, yyyy' %}
+                {% assign Speaker = item | Attribute:'Speaker' %}
+                {% assign VideoID = item | Attribute:'VideoID' %}
+
+              <div
+                class="col-xs-12 col-sm-6 col-lg-4 quest2027-message-item"
+              >
+                  <div class="panel panel-default quest2027-message-card">
+                <div class="quest2027-message-video">
+                  <div class="quest2027-message-video-inner">
+                    {% if VideoID %}
+                    <div class="embed-responsive embed-responsive-16by9 quest2027-video-embed">
+                      <iframe
+                        loading="lazy"
+                        src="https://player.vimeo.com/video/{{ VideoID }}"
+                        frameborder="0"
+                        webkitallowfullscreen=""
+                        mozallowfullscreen=""
+                        allowfullscreen=""
+                        title="{{ item.Title }}"
+                       class="embed-responsive-item"></iframe>
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="panel-body quest2027-message-body">
+                  <h4 class="twmc-h4 mb-0">{{ item.Title }}</h4>
+                  <p class="twmc-p text-small">
+                    {{ formattedDate }} &verbar; {{ Speaker }}
+                  </p>
+
+                  {% if item.Content %}
+                  <div class="twmc-p">{{ item.Content }}</div>
+                  {% endif %}
+                </div>
+              
+                  </div>
+                </div>
+
+              {% assign counter = counter | Plus:1 %}
+              {% endfor %}
+            </div>
+
+            <div class="text-center quest2027-messages--button-wrapper">
+              <a
+                href="/messages/Mens-Events"
+                class="btn btn-primary quest2027-button"
+                target="_blank"
+                rel="noopener"
+                referrerpolicy="origin"
+                >Watch past messages</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Latest Messages -->
