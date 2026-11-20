@@ -8,13 +8,14 @@ HTML Content block. Use the following order:
 3. INTRO - includes the What to expect modal.
 4. SPRING 2027 SCHEDULE
 5. QUEST ARCHIVES
-6. SHARED JAVASCRIPT - paste the complete script element once, after the archives.
+6. SHARED JAVASCRIPT - paste the Font Awesome kit and Quest script once, after the archives.
 
 Latest Messages remains in its separate Content Channel block. It can sit between
 blocks 4 and 5; its shared Quest styles are included in block 1. No channel markup
 or Lava template is included in this file.
 
-Rock's theme supplies Bootstrap 3 CSS/JS, jQuery, fonts, icons, navigation, and footer.
+Rock's theme supplies Bootstrap 3 CSS/JS, jQuery, fonts, navigation, and footer.
+Block 6 includes the Font Awesome kit used by the calendar and recording icons.
 Both hero images already use public S3 URLs. Each section has its own Quest scope,
 so no HTML wrapper needs to span multiple Rock blocks.
 -->
@@ -549,11 +550,10 @@ so no HTML wrapper needs to span multiple Rock blocks.
         margin: 1.5rem 0 1rem;
         color: var(--quest-ink);
       }
-      /* Inline SVG recording icons do not depend on a Font Awesome kit or font. */
+      /* Font Awesome recording icons share the Quest link color and spacing. */
       #quest2027-archives .quest2027-resource-icon {
         display: inline-block;
         margin-right: 0.5rem;
-        vertical-align: -0.15em;
         color: var(--quest-link);
       }
       #quest2027-archives .quest2027-archive-resource-body .twmc-p {
@@ -781,12 +781,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                 </p>
                 <p class="twmc-p mb-0">
                   <strong>
-                    <span class="quest2027-calendar-icon"
-                      ><i
-                        class="fa-solid fa-calendar-days"
-                        aria-hidden="true"
-                      ></i></span
-                    >Sundays<sup>*</sup> &verbar; 7:00 p.m. &verbar; Wesley Hall
+                    <span class="quest2027-calendar-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></span>Sundays<sup>*</sup> &verbar; 7:00 p.m. &verbar; Wesley Hall
                   </strong>
                 </p>
 
@@ -795,12 +790,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                 </p>
                 <p class="twmc-p mb-0">
                   <strong>
-                    <span class="quest2027-calendar-icon"
-                      ><i
-                        class="fa-solid fa-calendar-days"
-                        aria-hidden="true"
-                      ></i></span
-                    >Tuesdays<sup>*</sup> &verbar; 6:00 a.m. &verbar; Wesley
+                    <span class="quest2027-calendar-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></span>Tuesdays<sup>*</sup> &verbar; 6:00 a.m. &verbar; Wesley
                     Hall
                   </strong>
                 </p>
@@ -827,12 +817,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                 </p>
                 <p class="twmc-p mb-0">
                   <strong>
-                    <span class="quest2027-calendar-icon"
-                      ><i
-                        class="fa-solid fa-calendar-days"
-                        aria-hidden="true"
-                      ></i></span
-                    >Tuesdays<sup>*</sup> &verbar; 6:30 a.m. &verbar; Gymnasium
+                    <span class="quest2027-calendar-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></span>Tuesdays<sup>*</sup> &verbar; 6:30 a.m. &verbar; Gymnasium
                   </strong>
                 </p>
                 <p class="twmc-p text-small twmc-letspac-1 mb-1 mt-2">
@@ -858,12 +843,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                 </p>
                 <p class="twmc-p mb-0">
                   <strong>
-                    <span class="quest2027-calendar-icon"
-                      ><i
-                        class="fa-solid fa-calendar-days"
-                        aria-hidden="true"
-                      ></i></span
-                    >Tuesdays<sup>*</sup> &verbar; 6:00 a.m. &verbar; Gathering
+                    <span class="quest2027-calendar-icon"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i></span>Tuesdays<sup>*</sup> &verbar; 6:00 a.m. &verbar; Gathering
                     Room
                   </strong>
                 </p>
@@ -1465,7 +1445,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/the-heart-of-the-warrior/"
                           class="quest2027-resource-link"
@@ -1630,7 +1610,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/encore/"
                           class="quest2027-resource-link"
@@ -1796,7 +1776,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/the-last-hurrah/"
                           class="quest2027-resource-link"
@@ -1961,7 +1941,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/blueprint-gods-design-for-manhood"
                           class="quest2027-resource-link"
@@ -2065,7 +2045,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/change-your-story"
                           class="quest2027-resource-link"
@@ -2174,7 +2154,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/one-time"
                           class="quest2027-resource-link"
@@ -2196,7 +2176,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/the-rules-and-when-to-break-them"
                           class="quest2027-resource-link"
@@ -2219,7 +2199,7 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 22h8M12 18v4"></path><path d="m10 8 5 3-5 3Z"></path></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://www.thewoodlandsmethodist.org/series/the-complaint-department"
                           class="quest2027-resource-link"
@@ -2241,49 +2221,49 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190305q.mp3"
                           class="quest2027-resource-link"
                           >Courageous</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190226q.mp3"
                           class="quest2027-resource-link"
                           >Leading Like Jesus</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190219q.mp3"
                           class="quest2027-resource-link"
                           >Truth Teller</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190212q.mp3"
                           class="quest2027-resource-link"
                           >A Friend of Sinners</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190205q.mp3"
                           class="quest2027-resource-link"
                           >Man With a Mission</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190127q.mp3"
                           class="quest2027-resource-link"
                           >The Nature of Reality</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190120q.mp3"
                           class="quest2027-resource-link"
                           >What Are You Living For?</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20190113q.mp3"
                           class="quest2027-resource-link"
@@ -2305,53 +2285,53 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181104q.mp3"
                           class="quest2027-resource-link"
                           >Find Your Life by Giving it Away</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181028q.mp3"
                           class="quest2027-resource-link"
                           >Lies Men Believe: Breaking Shame and Patterns of
                           Sin</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181021q.mp3"
                           class="quest2027-resource-link"
                           >When You Have Everything and It's Not Working</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181014q.mp3"
                           class="quest2027-resource-link"
                           >Making Every Day Count: Working for an Audience of
                           One</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181007q.mp3"
                           class="quest2027-resource-link"
                           >Porn Again Christian: Out of the Shadows and Into the
                           Light</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20181002q.mp3"
                           class="quest2027-resource-link"
                           >What Happens When a Journalist Sets Out to Disprove
                           Christianity</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180924q.mp3"
                           class="quest2027-resource-link"
                           >All Things Are Possible: A Second Chance God</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180918q.mp3"
                           class="quest2027-resource-link"
@@ -2373,49 +2353,49 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180306q.mp3"
                           class="quest2027-resource-link"
                           >Paul: Jesus Changes Everything</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180227q.mp3"
                           class="quest2027-resource-link"
                           >John: Jesus Is the Son of God</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180220q.mp3"
                           class="quest2027-resource-link"
                           >Jude: Contend for the Faith</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180213q.mp3"
                           class="quest2027-resource-link"
                           >Luke: Savior for All</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180206q.mp3"
                           class="quest2027-resource-link"
                           >James: Faith Changes How We Live</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180130q.mp3"
                           class="quest2027-resource-link"
                           >Matthew: Messiah King</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180123q.mp3"
                           class="quest2027-resource-link"
                           >Peter: Be Who You Are</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="http://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20180115q.mp3"
                           class="quest2027-resource-link"
@@ -2437,50 +2417,50 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20171031q.mp3"
                           class="quest2027-resource-link"
                           >It’s Just Sex</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20171024q.mp3"
                           class="quest2027-resource-link"
                           >The More You Get the More You Are</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20171017q.mp3"
                           class="quest2027-resource-link"
                           >All We Need Is Love</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20171010q.mp3"
                           class="quest2027-resource-link"
                           >We Can Be Human without God</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20171003q.mp3"
                           class="quest2027-resource-link"
                           >Being a Man Is Probably Bad</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170926q.mp3"
                           class="quest2027-resource-link"
                           >Christianity is Intolerant, Judgmental and
                           Narrow-minded</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170919q.mp3"
                           class="quest2027-resource-link"
                           >You Should Be Happy</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170912q.mp3"
                           class="quest2027-resource-link"
@@ -2502,49 +2482,49 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170307q.mp3"
                           class="quest2027-resource-link"
                           >You Can Be Saved</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170228q.mp3"
                           class="quest2027-resource-link"
                           >My Grace Will Be Sufficient for You</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170221q.mp3"
                           class="quest2027-resource-link"
                           >You Can Be Changed</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170214q.mp3"
                           class="quest2027-resource-link"
                           >He Will Direct Your Paths</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170207q.mp3"
                           class="quest2027-resource-link"
                           >I Am with You Always</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170131q.mp3"
                           class="quest2027-resource-link"
                           >I Will Give You Rest</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170124q.mp3"
                           class="quest2027-resource-link"
                           >There Is Now No Condemnation</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20170117q.mp3"
                           class="quest2027-resource-link"
@@ -2566,49 +2546,49 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20161101q.mp3"
                           class="quest2027-resource-link"
                           >A Righteous Man and a Worthy Father</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20161025q.mp3"
                           class="quest2027-resource-link"
                           >There’s Never Plenty of Time</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20161018q.mp3"
                           class="quest2027-resource-link"
                           >Learning to Be Content</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20161011q.mp3"
                           class="quest2027-resource-link"
                           >Leaving a Gap that Matters</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20161004q.mp3"
                           class="quest2027-resource-link"
                           >Living Large</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160927q.mp3"
                           class="quest2027-resource-link"
                           >No Better Way to Fail</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160920q.mp3"
                           class="quest2027-resource-link"
                           >A Man for Others</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160913q.mp3"
                           class="quest2027-resource-link"
@@ -2630,49 +2610,49 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160301q.mp3"
                           class="quest2027-resource-link"
                           >The Most Important Decision You Will Ever Make</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160223q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Be Sexually Pure</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160216q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Be a Man With Friends</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160209q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Be an Invested Father</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160202q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Be a Devoted Husband</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160126q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Grow</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160119q.mp3"
                           class="quest2027-resource-link"
                           >The Decision to Be Successful</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20160112q.mp3"
                           class="quest2027-resource-link"
@@ -2694,19 +2674,19 @@ so no HTML wrapper needs to span multiple Rock blocks.
                   <div class="quest2027-archive-resource-body">
 <p class="twmc-p quest2027-archive-text">
                       <strong>
-                        <svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20151103q.mp3"
                           class="quest2027-resource-link"
                           >Trust Us with Your Story</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20151027q.mp3"
                           class="quest2027-resource-link"
                           >The Men Who Will Break the Wave</a
                         >
-                        <br /><svg class="quest2027-resource-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 14v-3a9 9 0 0 1 18 0v3"></path><rect x="3" y="12" width="4" height="9" rx="2"></rect><rect x="17" y="12" width="4" height="9" rx="2"></rect></svg><a
+                        <br /><span class="quest2027-resource-icon"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span><a
                           target="_blank"
                           href="https://twumc-podcast.s3.us-east-2.amazonaws.com/mp3s/podcasts/20151020q.mp3"
                           class="quest2027-resource-link"
@@ -2726,6 +2706,8 @@ so no HTML wrapper needs to span multiple Rock blocks.
 <!-- ==================== ROCK BLOCK 5 END: QUEST ARCHIVES ==================== -->
 
 <!-- ==================== ROCK BLOCK 6 START: SHARED JAVASCRIPT ==================== -->
+<!-- Font Awesome: include this kit once per page; omit this tag if the theme already loads it. -->
+<script src="https://kit.fontawesome.com/0283da34b5.js" crossorigin="anonymous"></script>
 <script id="quest2027-script">
     (() => {
       'use strict';

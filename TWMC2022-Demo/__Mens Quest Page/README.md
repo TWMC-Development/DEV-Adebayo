@@ -11,7 +11,7 @@ Use `__mens-quest-2027-ROCK-READY.html` for separate HTML Content blocks. Copy t
 3. **INTRO**: includes the What to expect modal.
 4. **SPRING 2027 SCHEDULE**.
 5. **QUEST ARCHIVES**.
-6. **SHARED JAVASCRIPT**: paste the complete `<script id="quest2027-script">` once after the archives.
+6. **SHARED JAVASCRIPT**: paste the Font Awesome kit script and the complete `<script id="quest2027-script">` once after the archives.
 
 The Rock-ready file omits the document wrapper, preview navigation/footer, framework imports, and channel markup. Both hero images already use their public S3 URLs. The existing Latest Messages Content Channel block can sit between the schedule and archives; its shared styles are in block 1. Its Format code is available in `latest-messages.lava` and inside `<template id="quest2027-rock-channel-format">` in the full preview. Copy that template's inner section, without its `<template>` tags, into Channel Configuration > Format. Rock supplies `Items` and renders the Lava loop there.
 
@@ -19,9 +19,11 @@ The full preview retains its own `ROCK COPY` markers, while the Rock-ready file 
 
 Each section has its own `.quest2027-page` scope, so these regions can live in separate Rock blocks. The custom archive JavaScript waits for the DOM and avoids duplicate initialization. The What to expect dialog uses Bootstrap 3's modal markup and data attributes; Rock's existing Bootstrap JavaScript and jQuery handle opening, closing, focus, Escape, and the backdrop.
 
-Rock's theme supplies Bootstrap 3 CSS and JavaScript, jQuery, navigation, footer, fonts, and icons. Skip the document head, local preview header/footer, static message preview, and local preview dependency scripts; use the framework already loaded by Rock. All Quest-specific styles are inline; the new page does not load `seasonal.css`.
+Rock's theme supplies Bootstrap 3 CSS and JavaScript, jQuery, navigation, footer, and fonts. Skip the document head, local preview header/footer, static message preview, and local preview dependency scripts; use the framework already loaded by Rock. All Quest-specific styles are inline; the new page does not load `seasonal.css`.
 
-Archive video and audio recording icons use inline SVGs, so they work independently of the site's Font Awesome version, kit configuration, and icon font downloads. To apply this icon fix to an existing Rock page, replace block 1 (Shared CSS) and block 5 (Quest Archives) with the updated regions from the Rock-ready file.
+Campus calendar icons and archive recording icons use Font Awesome solid styles: `fa-solid fa-calendar-days`, `fa-solid fa-tv`, and `fa-solid fa-headphones`. The kit URL is `https://kit.fontawesome.com/0283da34b5.js`. The full preview loads it in the document head; Rock-ready block 6 includes it before the Quest archive script. Include this kit once per page; if the theme already loads the same kit, omit the extra kit tag from block 6.
+
+To restore Font Awesome icons on an existing Rock page, replace blocks 1 (Shared CSS), 4 (Spring 2027 Schedule), 5 (Quest Archives), and 6 (Shared JavaScript) with the updated regions from the Rock-ready file.
 
 The page uses Bootstrap rows and responsive columns for campus, message, and archive layouts; panels and panel bodies for cards; `btn` variants for actions; `form-inline`, `form-group`, and `form-control` for the year filter; labels for start dates; responsive embeds for video; and the Bootstrap modal. Scoped CSS supplies the Quest palette, typography, equal-height panel enhancements, and mobile message swiping. TWMC spacing helpers such as `mb-3` and `py-6` remain scoped because Bootstrap 3 does not provide those utilities.
 
